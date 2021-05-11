@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **companyId** | **String** | Company Id |  [optional]
+**useOAuth** | **Boolean** | Use OAuth for authentication |  [optional]
 **enabled** | **Boolean** | Enabled |  [optional]
 **estimatedMinutesForDelivery** | **Integer** | Estimated minutes for delivery |  [optional]
 **estimatedMinutesForCollection** | **Integer** | Estimated minutes for collection |  [optional]
@@ -15,6 +16,12 @@ Name | Type | Description | Notes
 **processingFeeId** | **String** | The Lightspeed processing fee identifier to map with our |  [optional]
 **priceType** | [**PriceTypeEnum**](#PriceTypeEnum) | Which price to choose from Lightspeed menu |  [optional]
 **menuId** | **Integer** | The menu id of the store |  [optional]
+**collectionTableId** | **Integer** | Collection Table ID to send orders |  [optional]
+**deliveryTableId** | **Integer** | Delivery Table ID to send orders |  [optional]
+**collectionTableIds** | **Map&lt;String, String&gt;** | Collection Table IDs to send orders to |  [optional]
+**deliveryTableIds** | **Map&lt;String, String&gt;** | Delivery Table IDs to send orders to |  [optional]
+**useTaxInclusivePrices** | **Boolean** | Exclude tax |  [optional]
+**skipStatusCheckAndAcceptOrderAfterSending** | **Boolean** | WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud! |  [optional]
 
 
 <a name="PriceTypeEnum"></a>

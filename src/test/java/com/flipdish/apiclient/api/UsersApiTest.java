@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
+import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -34,6 +35,23 @@ public class UsersApiTest {
 
     private final UsersApi api = new UsersApi();
 
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPreviousOrderCountForStoreTest() throws ApiException {
+        Integer userId = null;
+        Integer storeId = null;
+        RestApiStringResult response = api.getPreviousOrderCountForStore(userId, storeId);
+
+        // TODO: test validations
+    }
     
     /**
      * Get role names

@@ -45,10 +45,11 @@ public class AuthorizationTokensApiTest {
      */
     @Test
     public void getAuthorizationTokensTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
+        String appId = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultOAuthTokenModel response = api.getAuthorizationTokens(clientId, page, limit);
+        RestApiPaginationResultOAuthTokenModel response = api.getAuthorizationTokens(oauthAppId, appId, page, limit);
 
         // TODO: test validations
     }
@@ -64,7 +65,8 @@ public class AuthorizationTokensApiTest {
     @Test
     public void revokeTokenTest() throws ApiException {
         String key = null;
-        api.revokeToken(key);
+        String appId = null;
+        api.revokeToken(key, appId);
 
         // TODO: test validations
     }

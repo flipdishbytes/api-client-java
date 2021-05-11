@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -37,7 +38,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
 Integer id = 56; // Integer | Order identifier
-Accept acceptObject = new Accept(); // Accept | 
+Accept acceptObject = new Accept(); // Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
 try {
     apiInstance.acceptOrder(id, acceptObject);
 } catch (ApiException e) {
@@ -51,7 +52,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| Order identifier |
- **acceptObject** | [**Accept**](Accept.md)|  |
+ **acceptObject** | [**Accept**](Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) |
 
 ### Return type
 
@@ -64,6 +65,58 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="dispatchOrder"></a>
+# **dispatchOrder**
+> dispatchOrder(id)
+
+Dispatch order
+
+To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OrdersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OrdersApi apiInstance = new OrdersApi();
+Integer id = 56; // Integer | Order identifier
+try {
+    apiInstance.dispatchOrder(id);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrdersApi#dispatchOrder");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| Order identifier |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getOrderById"></a>
@@ -119,7 +172,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrders"></a>
 # **getOrders**
-> RestApiPaginationResultOrder getOrders(physicalRestaurantId, state, page, limit)
+> RestApiPaginationResultOrder getOrders(physicalRestaurantId, state, from, to, page, limit)
 
 Get orders by filter
 
@@ -141,10 +194,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 OrdersApi apiInstance = new OrdersApi();
 List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | Physical restaurant identifiers
 List<String> state = Arrays.asList("state_example"); // List<String> | Order states
+OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | Order has been placed after this parameter value
+OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Order has been placed before this parameter value
 Integer page = 56; // Integer | Requested page number
 Integer limit = 56; // Integer | Requested page limit
 try {
-    RestApiPaginationResultOrder result = apiInstance.getOrders(physicalRestaurantId, state, page, limit);
+    RestApiPaginationResultOrder result = apiInstance.getOrders(physicalRestaurantId, state, from, to, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrdersApi#getOrders");
@@ -158,6 +213,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)| Physical restaurant identifiers | [optional]
  **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **from** | **OffsetDateTime**| Order has been placed after this parameter value | [optional]
+ **to** | **OffsetDateTime**| Order has been placed before this parameter value | [optional]
  **page** | **Integer**| Requested page number | [optional]
  **limit** | **Integer**| Requested page limit | [optional]
 
@@ -176,7 +233,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrdersSummary"></a>
 # **getOrdersSummary**
-> RestApiPaginationResultOrderSummary getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit)
+> RestApiPaginationResultOrderSummary getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -202,8 +259,9 @@ List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | Physi
 List<String> state = Arrays.asList("state_example"); // List<String> | Order states
 Integer page = 56; // Integer | Requested page number
 Integer limit = 56; // Integer | Requested page limit
+Boolean orderByRequestedForTime = true; // Boolean | 
 try {
-    RestApiPaginationResultOrderSummary result = apiInstance.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+    RestApiPaginationResultOrderSummary result = apiInstance.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrdersApi#getOrdersSummary");
@@ -221,6 +279,7 @@ Name | Type | Description  | Notes
  **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
  **page** | **Integer**| Requested page number | [optional]
  **limit** | **Integer**| Requested page limit | [optional]
+ **orderByRequestedForTime** | **Boolean**|  | [optional]
 
 ### Return type
 

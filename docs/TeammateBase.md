@@ -15,10 +15,10 @@ Name | Value
 ---- | -----
 NONE | &quot;None&quot;
 OWNER | &quot;Owner&quot;
+STOREOWNER | &quot;StoreOwner&quot;
 MANAGEDOWNER | &quot;ManagedOwner&quot;
 STOREMANAGER | &quot;StoreManager&quot;
 STORESTAFF | &quot;StoreStaff&quot;
-STOREREADWRITEACCESS | &quot;StoreReadWriteAccess&quot;
 STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
 FINANCEMANGER | &quot;FinanceManger&quot;
 

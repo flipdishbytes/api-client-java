@@ -107,7 +107,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * 
+     * Redeem one-time code from invitation
      *
      * 
      *

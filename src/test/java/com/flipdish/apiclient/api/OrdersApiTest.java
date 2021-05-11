@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Accept;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -58,6 +59,22 @@ public class OrdersApiTest {
     }
     
     /**
+     * Dispatch order
+     *
+     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void dispatchOrderTest() throws ApiException {
+        Integer id = null;
+        api.dispatchOrder(id);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get order by ID
      *
      * 
@@ -85,9 +102,11 @@ public class OrdersApiTest {
     public void getOrdersTest() throws ApiException {
         List<Integer> physicalRestaurantId = null;
         List<String> state = null;
+        OffsetDateTime from = null;
+        OffsetDateTime to = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultOrder response = api.getOrders(physicalRestaurantId, state, page, limit);
+        RestApiPaginationResultOrder response = api.getOrders(physicalRestaurantId, state, from, to, page, limit);
 
         // TODO: test validations
     }
@@ -108,7 +127,8 @@ public class OrdersApiTest {
         List<String> state = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+        Boolean orderByRequestedForTime = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime);
 
         // TODO: test validations
     }

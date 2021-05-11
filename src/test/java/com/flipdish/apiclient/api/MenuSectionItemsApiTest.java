@@ -147,6 +147,44 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
+     * [PRIVATE API]Move an Item within a menu
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void moveMenuItemTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        Integer menuSectionItemId = null;
+        Integer destinationDisplayOrder = null;
+        api.moveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * [PRIVATE API]Move an Item within a menu
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setSectionItemTaxTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        Integer menuSectionItemId = null;
+        Integer taxRateId = null;
+        api.setSectionItemTax(menuId, menuSectionId, menuSectionItemId, taxRateId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Update menu section item
      *
      * 

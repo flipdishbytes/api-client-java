@@ -15,7 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.EventSearchResult;
-import java.time.OffsetDateTime;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiEventSearchPaginationResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -53,8 +53,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getCustomerEvents(customerId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -69,15 +77,22 @@ public class EventsApiTest {
      */
     @Test
     public void getEventsTest() throws ApiException {
-        Integer storeId = null;
         Integer whiteLabelId = null;
         Integer customerId = null;
         Integer limit = null;
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -113,8 +128,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getMenuEvents(menuId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -134,8 +157,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getOrderEvents(orderId, limit, page, start, end, name);
+        Integer orderId2 = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -155,8 +186,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getOrderEventsByCustomer(customerId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -176,8 +215,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getStoreEvents(storeId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId2 = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -197,8 +244,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getUserEvents(userId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId2 = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }
@@ -218,8 +273,16 @@ public class EventsApiTest {
         Integer page = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
-        List<String> name = null;
-        RestApiEventSearchPaginationResult response = api.getWhiteLabelEvents(whitelabelId, limit, page, start, end, name);
+        Integer orderId = null;
+        Integer storeId = null;
+        Integer storeGroupId = null;
+        Integer userId = null;
+        String userEmail = null;
+        String userName = null;
+        String voucherCode = null;
+        List<String> eventType = null;
+        String flipdishEventId = null;
+        RestApiEventSearchPaginationResult response = api.getWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
 
         // TODO: test validations
     }

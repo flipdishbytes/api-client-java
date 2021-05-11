@@ -14,9 +14,17 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.AppConfigUpdateModel;
+import java.io.File;
+import com.flipdish.apiclient.model.Language;
+import com.flipdish.apiclient.model.RestApiArrayResultSupportedCountry;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultApp;
+import com.flipdish.apiclient.model.RestApiResultApp;
+import com.flipdish.apiclient.model.RestApiResultAppCompliance;
+import com.flipdish.apiclient.model.RestApiResultDnsRecordInformation;
+import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -36,6 +44,38 @@ public class AppsApiTest {
 
     
     /**
+     * Get the application configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppTest() throws ApiException {
+        String appId = null;
+        RestApiResultApp response = api.getApp(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the application hostname DNS delegation states for A and CNAME records.
+     *
+     * A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppHostnameStatusTest() throws ApiException {
+        String appId = null;
+        RestApiResultDnsRecordInformation response = api.getAppHostnameStatus(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get Apps
      *
      * 
@@ -49,6 +89,173 @@ public class AppsApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultApp response = api.getApps(nameFilter, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the application compliance configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getComplianceTest() throws ApiException {
+        String appId = null;
+        RestApiResultAppCompliance response = api.getCompliance(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPanaceaVanityUrlTest() throws ApiException {
+        String appId = null;
+        RestApiStringResult response = api.getPanaceaVanityUrl(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all supported countries.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getSupportedCountriesTest() throws ApiException {
+        RestApiArrayResultSupportedCountry response = api.getSupportedCountries();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Is panacea vanity url available
+     *
+     * Minimum length of 3 characters
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void isPanaceaVanityUrlAvailableTest() throws ApiException {
+        String vanityUrl = null;
+        String appId = null;
+        RestApiStringResult response = api.isPanaceaVanityUrlAvailable(vanityUrl, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the application configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setAppConfigTest() throws ApiException {
+        String appId = null;
+        AppConfigUpdateModel appConfigUpdate = null;
+        RestApiResultApp response = api.setAppConfig(appId, appConfigUpdate);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the application hostname.
+     *
+     * If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setAppHostnameTest() throws ApiException {
+        String appId = null;
+        String hostname = null;
+        Boolean isEmbed = null;
+        RestApiStringResult response = api.setAppHostname(appId, hostname, isEmbed);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the application languages
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setAppLanguagesTest() throws ApiException {
+        String appId = null;
+        List<Language> languages = null;
+        RestApiResultApp response = api.setAppLanguages(appId, languages);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the application compliance configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setComplianceTest() throws ApiException {
+        String appId = null;
+        String complianceType = null;
+        RestApiResultAppCompliance response = api.setCompliance(appId, complianceType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set panacea vanity url
+     *
+     * Minimum length of 3 characters
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setPanaceaVanityUrlTest() throws ApiException {
+        String appId = null;
+        String vanityUrl = null;
+        RestApiStringResult response = api.setPanaceaVanityUrl(appId, vanityUrl);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the application logo \\ icon
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadAppLogoTest() throws ApiException {
+        String appId = null;
+        File image = null;
+        api.uploadAppLogo(appId, image);
 
         // TODO: test validations
     }
