@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**deleteMenuSectionItemImage**](MenuSectionItemsApi.md#deleteMenuSectionItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**getMenuItemById**](MenuSectionItemsApi.md#getMenuItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**getMenuItems**](MenuSectionItemsApi.md#getMenuItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
+[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
+[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | [PRIVATE API]Move an Item within a menu
 [**updateMenuSectionItem**](MenuSectionItemsApi.md#updateMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**uploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadMenuSectionItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
@@ -330,6 +332,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultMenuSectionItem**](RestApiArrayResultMenuSectionItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="moveMenuItem"></a>
+# **moveMenuItem**
+> moveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder)
+
+[PRIVATE API]Move an Item within a menu
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuSectionItemsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuSectionItemsApi apiInstance = new MenuSectionItemsApi();
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Section to put item in (will usually be original section)
+Integer menuSectionItemId = 56; // Integer | ID of Item to be moved
+Integer destinationDisplayOrder = 56; // Integer | New Display Order of item
+try {
+    apiInstance.moveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuSectionItemsApi#moveMenuItem");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Section to put item in (will usually be original section) |
+ **menuSectionItemId** | **Integer**| ID of Item to be moved |
+ **destinationDisplayOrder** | **Integer**| New Display Order of item |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setSectionItemTax"></a>
+# **setSectionItemTax**
+> setSectionItemTax(menuId, menuSectionId, menuSectionItemId, taxRateId)
+
+[PRIVATE API]Move an Item within a menu
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuSectionItemsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuSectionItemsApi apiInstance = new MenuSectionItemsApi();
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Section to put item in (will usually be original section)
+Integer menuSectionItemId = 56; // Integer | ID of Item to be moved
+Integer taxRateId = 56; // Integer | tax rate to be set against item
+try {
+    apiInstance.setSectionItemTax(menuId, menuSectionId, menuSectionItemId, taxRateId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuSectionItemsApi#setSectionItemTax");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Section to put item in (will usually be original section) |
+ **menuSectionItemId** | **Integer**| ID of Item to be moved |
+ **taxRateId** | **Integer**| tax rate to be set against item |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

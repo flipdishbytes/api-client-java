@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
+**storeGroupId** | **Integer** | Store group Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which deleted delivery zone for this store |  [optional]
 **description** | **String** | Description |  [optional]
 **businessHoursOverride** | [**BusinessHoursOverride**](BusinessHoursOverride.md) | Business Hours Override |  [optional]

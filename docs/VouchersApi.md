@@ -4,11 +4,65 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createVoucher**](VouchersApi.md#createVoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
 [**getVoucherById**](VouchersApi.md#getVoucherById) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
 [**getVoucherStatsById**](VouchersApi.md#getVoucherStatsById) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
 [**getVouchers**](VouchersApi.md#getVouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
 [**updateVoucher**](VouchersApi.md#updateVoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
 
+
+<a name="createVoucher"></a>
+# **createVoucher**
+> RestApiResultVoucherWithStats createVoucher(appId, voucher)
+
+[PRIVATE API] Create voucher
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.VouchersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+VouchersApi apiInstance = new VouchersApi();
+String appId = "appId_example"; // String | App Name Id
+CreateVoucher voucher = new CreateVoucher(); // CreateVoucher | Voucher Details
+try {
+    RestApiResultVoucherWithStats result = apiInstance.createVoucher(appId, voucher);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VouchersApi#createVoucher");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| App Name Id |
+ **voucher** | [**CreateVoucher**](CreateVoucher.md)| Voucher Details |
+
+### Return type
+
+[**RestApiResultVoucherWithStats**](RestApiResultVoucherWithStats.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getVoucherById"></a>
 # **getVoucherById**
@@ -183,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="updateVoucher"></a>
 # **updateVoucher**
-> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher)
+> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId)
 
 [PRIVATE API] Updates voucher
 
@@ -205,8 +259,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 VouchersApi apiInstance = new VouchersApi();
 Integer voucherId = 56; // Integer | Id of the voucher
 VoucherBase voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
+Integer percentValue = 56; // Integer | Percent voucher value (can have 1 of 3)
+Double lumpValue = 3.4D; // Double | Lump voucher value (can have 1 of 3)
+Integer freeItemId = 56; // Integer | Free Item Id (can have 1 of 3)
 try {
-    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher);
+    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VouchersApi#updateVoucher");
@@ -220,6 +278,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **Integer**| Id of the voucher |
  **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher |
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **percentValue** | **Integer**| Percent voucher value (can have 1 of 3) | [optional]
+ **lumpValue** | **Double**| Lump voucher value (can have 1 of 3) | [optional]
+ **freeItemId** | **Integer**| Free Item Id (can have 1 of 3) | [optional]
 
 ### Return type
 

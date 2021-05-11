@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
+**storeGroupId** | **Integer** | Store group Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which created delivery zone for this store |  [optional]
 **description** | **String** | Description |  [optional]
 **deliveryZone** | [**DeliveryZone**](DeliveryZone.md) | Created Delivery Zone |  [optional]

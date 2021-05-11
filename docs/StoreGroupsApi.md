@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 [**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 [**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
+[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
 [**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 [**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
 
@@ -162,6 +163,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultStoreGroup**](RestApiPaginationResultStoreGroup.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getStoreGroupsExtended"></a>
+# **getStoreGroupsExtended**
+> RestApiPaginationResultStoreGroupExtended getStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius)
+
+[PRIVATE API] Returns a paginated list of Extended Store Groups
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoreGroupsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoreGroupsApi apiInstance = new StoreGroupsApi();
+String appNameId = "appNameId_example"; // String | App Name Id
+String searchQuery = "searchQuery_example"; // String | Search query
+Integer page = 56; // Integer | Requested page index
+Integer limit = 56; // Integer | Requested page limit
+Integer groupingRadius = 56; // Integer | 
+try {
+    RestApiPaginationResultStoreGroupExtended result = apiInstance.getStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoreGroupsApi#getStoreGroupsExtended");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appNameId** | **String**| App Name Id |
+ **searchQuery** | **String**| Search query | [optional]
+ **page** | **Integer**| Requested page index | [optional]
+ **limit** | **Integer**| Requested page limit | [optional]
+ **groupingRadius** | **Integer**|  | [optional]
+
+### Return type
+
+[**RestApiPaginationResultStoreGroupExtended**](RestApiPaginationResultStoreGroupExtended.md)
 
 ### Authorization
 

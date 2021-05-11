@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **isAvailable** | **Boolean** | Is available |  [optional]
 **displayOrder** | **Integer** | Display order. Displayed in ascending order. |  [optional]
 **cellLayoutType** | [**CellLayoutTypeEnum**](#CellLayoutTypeEnum) | Small | Medium | Large  Affects the layout of the menu. |  [optional]
+**imageUrl** | **String** | Image url |  [optional]
 
 
 <a name="CellLayoutTypeEnum"></a>

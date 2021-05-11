@@ -4,22 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**craeteWebhookSubscription**](WebhooksApi.md#craeteWebhookSubscription) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions | Create a webhook subscription for you Oauth client
-[**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-[**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-[**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-[**getWebhookEventNames**](WebhooksApi.md#getWebhookEventNames) | **GET** /api/v1.0/webhooks/events | Get all webhook subscription event names
-[**getWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getWebhookEventNamesBySubscriptionId) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-[**getWebhookLogs**](WebhooksApi.md#getWebhookLogs) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-[**getWebhookSubscriptions**](WebhooksApi.md#getWebhookSubscriptions) | **GET** /api/v1.0/webhooks/{clientId}/subscriptions | Get all webhook subscriptions by your Oauth client id
-[**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/webhooks/{clientId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+[**craeteWebhookSubscription**](WebhooksApi.md#craeteWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
+[**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
+[**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
+[**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
+[**getWebhookEventNames**](WebhooksApi.md#getWebhookEventNames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
+[**getWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getWebhookEventNamesBySubscriptionId) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
+[**getWebhookEventSample**](WebhooksApi.md#getWebhookEventSample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
+[**getWebhookLogs**](WebhooksApi.md#getWebhookLogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
+[**getWebhookSubscriptions**](WebhooksApi.md#getWebhookSubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
+[**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
 <a name="craeteWebhookSubscription"></a>
 # **craeteWebhookSubscription**
-> RestApiIntegerResult craeteWebhookSubscription(clientId, webhookSubscription)
+> RestApiIntegerResult craeteWebhookSubscription(oauthAppId, webhookSubscription, appId)
 
-Create a webhook subscription for you Oauth client
+Create a webhook subscription for you Oauth App
 
 ### Example
 ```java
@@ -37,10 +38,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 WebhookSubscription webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
+String appId = "appId_example"; // String | 
 try {
-    RestApiIntegerResult result = apiInstance.craeteWebhookSubscription(clientId, webhookSubscription);
+    RestApiIntegerResult result = apiInstance.craeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#craeteWebhookSubscription");
@@ -52,8 +54,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -70,7 +73,7 @@ Name | Type | Description  | Notes
 
 <a name="createWebhookSubscriptionEventNames"></a>
 # **createWebhookSubscriptionEventNames**
-> createWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName)
+> createWebhookSubscriptionEventNames(oauthAppId, webhookSubscriptionId, eventName, appId)
 
 Add event name to your webhook subscription
 
@@ -90,11 +93,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
 String eventName = "eventName_example"; // String | Webhook subscription event name
+String appId = "appId_example"; // String | 
 try {
-    apiInstance.createWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName);
+    apiInstance.createWebhookSubscriptionEventNames(oauthAppId, webhookSubscriptionId, eventName, appId);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#createWebhookSubscriptionEventNames");
     e.printStackTrace();
@@ -105,9 +109,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
  **eventName** | **String**| Webhook subscription event name |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -124,7 +129,7 @@ null (empty response body)
 
 <a name="deleteWebhookSubscription"></a>
 # **deleteWebhookSubscription**
-> deleteWebhookSubscription(clientId, webhookSubscriptionId)
+> deleteWebhookSubscription(oauthAppId, webhookSubscriptionId, appId)
 
 Delete you webhook subscription
 
@@ -144,10 +149,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
+String appId = "appId_example"; // String | 
 try {
-    apiInstance.deleteWebhookSubscription(clientId, webhookSubscriptionId);
+    apiInstance.deleteWebhookSubscription(oauthAppId, webhookSubscriptionId, appId);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#deleteWebhookSubscription");
     e.printStackTrace();
@@ -158,8 +164,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -176,7 +183,7 @@ null (empty response body)
 
 <a name="deleteWebhookSubscriptionEventName"></a>
 # **deleteWebhookSubscriptionEventName**
-> deleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName)
+> deleteWebhookSubscriptionEventName(oauthAppId, webhookSubscriptionId, eventName, appId)
 
 Remove event name to your webhook subscription
 
@@ -196,11 +203,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
 String eventName = "eventName_example"; // String | Webhook subscription event name
+String appId = "appId_example"; // String | 
 try {
-    apiInstance.deleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName);
+    apiInstance.deleteWebhookSubscriptionEventName(oauthAppId, webhookSubscriptionId, eventName, appId);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#deleteWebhookSubscriptionEventName");
     e.printStackTrace();
@@ -211,9 +219,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
  **eventName** | **String**| Webhook subscription event name |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -230,7 +239,7 @@ null (empty response body)
 
 <a name="getWebhookEventNames"></a>
 # **getWebhookEventNames**
-> RestApiStringArrayResult getWebhookEventNames()
+> RestApiStringArrayResult getWebhookEventNames(appId)
 
 Get all webhook subscription event names
 
@@ -250,8 +259,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
+String appId = "appId_example"; // String | 
 try {
-    RestApiStringArrayResult result = apiInstance.getWebhookEventNames();
+    RestApiStringArrayResult result = apiInstance.getWebhookEventNames(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#getWebhookEventNames");
@@ -260,7 +270,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -277,7 +290,7 @@ This endpoint does not need any parameter.
 
 <a name="getWebhookEventNamesBySubscriptionId"></a>
 # **getWebhookEventNamesBySubscriptionId**
-> RestApiStringArrayResult getWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId)
+> RestApiStringArrayResult getWebhookEventNamesBySubscriptionId(oauthAppId, webhookSubscriptionId, appId)
 
 Get your webhook subscriptions selected event names
 
@@ -297,10 +310,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
+String appId = "appId_example"; // String | 
 try {
-    RestApiStringArrayResult result = apiInstance.getWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
+    RestApiStringArrayResult result = apiInstance.getWebhookEventNamesBySubscriptionId(oauthAppId, webhookSubscriptionId, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#getWebhookEventNamesBySubscriptionId");
@@ -312,8 +326,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -328,9 +343,68 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="getWebhookEventSample"></a>
+# **getWebhookEventSample**
+> WebhookEventSample getWebhookEventSample(eventName, appId, oauthAppId, webhookSubscriptionId, version)
+
+Get a sample event from a webhook subscription
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.WebhooksApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WebhooksApi apiInstance = new WebhooksApi();
+String eventName = "eventName_example"; // String | 
+String appId = "appId_example"; // String | 
+String oauthAppId = "oauthAppId_example"; // String | 
+String webhookSubscriptionId = "webhookSubscriptionId_example"; // String | 
+String version = "version_example"; // String | 
+try {
+    WebhookEventSample result = apiInstance.getWebhookEventSample(eventName, appId, oauthAppId, webhookSubscriptionId, version);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WebhooksApi#getWebhookEventSample");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventName** | **String**|  |
+ **appId** | **String**|  |
+ **oauthAppId** | **String**|  |
+ **webhookSubscriptionId** | **String**|  |
+ **version** | **String**|  | [optional]
+
+### Return type
+
+[**WebhookEventSample**](WebhookEventSample.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getWebhookLogs"></a>
 # **getWebhookLogs**
-> RestApiPaginationResultWebhookLog getWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit)
+> RestApiPaginationResultWebhookLog getWebhookLogs(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit)
 
 Get logs for your webhook subscription
 
@@ -350,14 +424,15 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start time
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End time
+String appId = "appId_example"; // String | 
 Integer page = 56; // Integer | Page number
 Integer limit = 56; // Integer | Page size
 try {
-    RestApiPaginationResultWebhookLog result = apiInstance.getWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit);
+    RestApiPaginationResultWebhookLog result = apiInstance.getWebhookLogs(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#getWebhookLogs");
@@ -369,10 +444,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
  **start** | **OffsetDateTime**| Start time |
  **end** | **OffsetDateTime**| End time |
+ **appId** | **String**|  |
  **page** | **Integer**| Page number | [optional]
  **limit** | **Integer**| Page size | [optional]
 
@@ -391,9 +467,9 @@ Name | Type | Description  | Notes
 
 <a name="getWebhookSubscriptions"></a>
 # **getWebhookSubscriptions**
-> RestApiArrayResultWebhookSubscription getWebhookSubscriptions(clientId)
+> RestApiPaginationResultWebhookSubscription getWebhookSubscriptions(oauthAppId, appId, page, limit)
 
-Get all webhook subscriptions by your Oauth client id
+Get all webhook subscriptions by your Oauth App id
 
 ### Example
 ```java
@@ -411,9 +487,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
+String appId = "appId_example"; // String | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 try {
-    RestApiArrayResultWebhookSubscription result = apiInstance.getWebhookSubscriptions(clientId);
+    RestApiPaginationResultWebhookSubscription result = apiInstance.getWebhookSubscriptions(oauthAppId, appId, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#getWebhookSubscriptions");
@@ -425,11 +504,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
+ **appId** | **String**|  |
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
 
 ### Return type
 
-[**RestApiArrayResultWebhookSubscription**](RestApiArrayResultWebhookSubscription.md)
+[**RestApiPaginationResultWebhookSubscription**](RestApiPaginationResultWebhookSubscription.md)
 
 ### Authorization
 
@@ -442,7 +524,7 @@ Name | Type | Description  | Notes
 
 <a name="updateWebhookSubscription"></a>
 # **updateWebhookSubscription**
-> updateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription)
+> updateWebhookSubscription(oauthAppId, webhookSubscriptionId, webhookSubscription, appId)
 
 Update a webhook subscription object
 
@@ -462,11 +544,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebhooksApi apiInstance = new WebhooksApi();
-String clientId = "clientId_example"; // String | Oauth client identifier
+String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 Integer webhookSubscriptionId = 56; // Integer | Webhook subscription identifier
 WebhookSubscription webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
+String appId = "appId_example"; // String | 
 try {
-    apiInstance.updateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription);
+    apiInstance.updateWebhookSubscription(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
 } catch (ApiException e) {
     System.err.println("Exception when calling WebhooksApi#updateWebhookSubscription");
     e.printStackTrace();
@@ -477,9 +560,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Oauth client identifier |
+ **oauthAppId** | **String**| Oauth App identifier |
  **webhookSubscriptionId** | **Integer**| Webhook subscription identifier |
  **webhookSubscription** | [**WebhookSubscription**](WebhookSubscription.md)| Webhook subscription object |
+ **appId** | **String**|  |
 
 ### Return type
 

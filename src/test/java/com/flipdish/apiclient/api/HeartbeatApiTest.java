@@ -44,6 +44,51 @@ public class HeartbeatApiTest {
      *          if the Api call fails
      */
     @Test
+    public void headHostnameTest() throws ApiException {
+        Object response = api.headHostname();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void headPingTest() throws ApiException {
+        RestApiStringResult response = api.headPing();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void hostnameTest() throws ApiException {
+        Object response = api.hostname();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void pingTest() throws ApiException {
         RestApiStringResult response = api.ping();
 

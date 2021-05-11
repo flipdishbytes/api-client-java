@@ -14,14 +14,15 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import java.time.OffsetDateTime;
-import com.flipdish.apiclient.model.RestApiArrayResultWebhookSubscription;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiIntegerResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultWebhookLog;
+import com.flipdish.apiclient.model.RestApiPaginationResultWebhookSubscription;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.WebhookEventSample;
 import com.flipdish.apiclient.model.WebhookSubscription;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -41,7 +42,7 @@ public class WebhooksApiTest {
 
     
     /**
-     * Create a webhook subscription for you Oauth client
+     * Create a webhook subscription for you Oauth App
      *
      * 
      *
@@ -50,9 +51,10 @@ public class WebhooksApiTest {
      */
     @Test
     public void craeteWebhookSubscriptionTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         WebhookSubscription webhookSubscription = null;
-        RestApiIntegerResult response = api.craeteWebhookSubscription(clientId, webhookSubscription);
+        String appId = null;
+        RestApiIntegerResult response = api.craeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
 
         // TODO: test validations
     }
@@ -67,10 +69,11 @@ public class WebhooksApiTest {
      */
     @Test
     public void createWebhookSubscriptionEventNamesTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String eventName = null;
-        api.createWebhookSubscriptionEventNames(clientId, webhookSubscriptionId, eventName);
+        String appId = null;
+        api.createWebhookSubscriptionEventNames(oauthAppId, webhookSubscriptionId, eventName, appId);
 
         // TODO: test validations
     }
@@ -85,9 +88,10 @@ public class WebhooksApiTest {
      */
     @Test
     public void deleteWebhookSubscriptionTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
-        api.deleteWebhookSubscription(clientId, webhookSubscriptionId);
+        String appId = null;
+        api.deleteWebhookSubscription(oauthAppId, webhookSubscriptionId, appId);
 
         // TODO: test validations
     }
@@ -102,10 +106,11 @@ public class WebhooksApiTest {
      */
     @Test
     public void deleteWebhookSubscriptionEventNameTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String eventName = null;
-        api.deleteWebhookSubscriptionEventName(clientId, webhookSubscriptionId, eventName);
+        String appId = null;
+        api.deleteWebhookSubscriptionEventName(oauthAppId, webhookSubscriptionId, eventName, appId);
 
         // TODO: test validations
     }
@@ -120,7 +125,8 @@ public class WebhooksApiTest {
      */
     @Test
     public void getWebhookEventNamesTest() throws ApiException {
-        RestApiStringArrayResult response = api.getWebhookEventNames();
+        String appId = null;
+        RestApiStringArrayResult response = api.getWebhookEventNames(appId);
 
         // TODO: test validations
     }
@@ -135,9 +141,30 @@ public class WebhooksApiTest {
      */
     @Test
     public void getWebhookEventNamesBySubscriptionIdTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
-        RestApiStringArrayResult response = api.getWebhookEventNamesBySubscriptionId(clientId, webhookSubscriptionId);
+        String appId = null;
+        RestApiStringArrayResult response = api.getWebhookEventNamesBySubscriptionId(oauthAppId, webhookSubscriptionId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get a sample event from a webhook subscription
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getWebhookEventSampleTest() throws ApiException {
+        String eventName = null;
+        String appId = null;
+        String oauthAppId = null;
+        String webhookSubscriptionId = null;
+        String version = null;
+        WebhookEventSample response = api.getWebhookEventSample(eventName, appId, oauthAppId, webhookSubscriptionId, version);
 
         // TODO: test validations
     }
@@ -152,19 +179,20 @@ public class WebhooksApiTest {
      */
     @Test
     public void getWebhookLogsTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         OffsetDateTime start = null;
         OffsetDateTime end = null;
+        String appId = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultWebhookLog response = api.getWebhookLogs(clientId, webhookSubscriptionId, start, end, page, limit);
+        RestApiPaginationResultWebhookLog response = api.getWebhookLogs(oauthAppId, webhookSubscriptionId, start, end, appId, page, limit);
 
         // TODO: test validations
     }
     
     /**
-     * Get all webhook subscriptions by your Oauth client id
+     * Get all webhook subscriptions by your Oauth App id
      *
      * 
      *
@@ -173,8 +201,11 @@ public class WebhooksApiTest {
      */
     @Test
     public void getWebhookSubscriptionsTest() throws ApiException {
-        String clientId = null;
-        RestApiArrayResultWebhookSubscription response = api.getWebhookSubscriptions(clientId);
+        String oauthAppId = null;
+        String appId = null;
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultWebhookSubscription response = api.getWebhookSubscriptions(oauthAppId, appId, page, limit);
 
         // TODO: test validations
     }
@@ -189,10 +220,11 @@ public class WebhooksApiTest {
      */
     @Test
     public void updateWebhookSubscriptionTest() throws ApiException {
-        String clientId = null;
+        String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         WebhookSubscription webhookSubscription = null;
-        api.updateWebhookSubscription(clientId, webhookSubscriptionId, webhookSubscription);
+        String appId = null;
+        api.updateWebhookSubscription(oauthAppId, webhookSubscriptionId, webhookSubscription, appId);
 
         // TODO: test validations
     }

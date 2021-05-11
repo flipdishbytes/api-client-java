@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **language** | **String** | Language Id |  [optional]
 **timeZoneInfoId** | **String** | Time Zone Info Id |  [optional]
 **displayTimesInUserLocalTimeZone** | **Boolean** | Display the time in time zone local to the user |  [optional]
+**showHiddenFeatures** | **Boolean** | Show hidden features |  [optional]
 
 
 

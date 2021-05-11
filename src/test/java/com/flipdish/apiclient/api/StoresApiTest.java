@@ -17,20 +17,27 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BusinessHoursOverrideBase;
 import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import com.flipdish.apiclient.model.Coordinates;
-import java.time.OffsetDateTime;
+import org.threeten.bp.OffsetDateTime;
+import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
+import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
 import com.flipdish.apiclient.model.RestApiArrayResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultRestApiDefaultResponse;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiPaginationResultStore;
+import com.flipdish.apiclient.model.RestApiPaginationResultStoreHeader;
+import com.flipdish.apiclient.model.RestApiResultAssignedBankAccount;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
+import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
+import com.flipdish.apiclient.model.RestApiResultStoreEndOfDayReport;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StoreAddressBase;
 import com.flipdish.apiclient.model.StoreBase;
@@ -52,6 +59,39 @@ public class StoresApiTest {
 
     private final StoresApi api = new StoresApi();
 
+    
+    /**
+     * Archive store
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void archiveStoreTest() throws ApiException {
+        Integer storeId = null;
+        api.archiveStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Assign Menu to Store
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void assignMenuTest() throws ApiException {
+        Integer storeId = null;
+        Integer menuId = null;
+        RestApiArrayResultRestApiDefaultResponse response = api.assignMenu(storeId, menuId);
+
+        // TODO: test validations
+    }
     
     /**
      * Clone store with store clone settings
@@ -122,7 +162,23 @@ public class StoresApiTest {
     }
     
     /**
-     * Get Bussiness hours
+     * Get Stores Bank Account Id
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getBankAccountForStoreTest() throws ApiException {
+        Integer storeId = null;
+        RestApiResultAssignedBankAccount response = api.getBankAccountForStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get Business hours
      *
      * 
      *
@@ -153,6 +209,67 @@ public class StoresApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultBusinessHoursOverride response = api.getBusinessHoursOverrideByStoreId(storeId, after, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get store end of day report
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getEndOfDayReportTest() throws ApiException {
+        Integer storeId = null;
+        OffsetDateTime date = null;
+        RestApiResultStoreEndOfDayReport response = api.getEndOfDayReport(storeId, date);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the pre order config for a store, by type
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPreOrderConfigTest() throws ApiException {
+        Integer storeId = null;
+        String deliveryType = null;
+        RestApiResultPreOrderConfig response = api.getPreOrderConfig(storeId, deliveryType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the Preview times of the pre-order configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPreOrderPreviewTest() throws ApiException {
+        Integer storeId = null;
+        String deliveryType = null;
+        Integer preOrderConfigLeadTimeMinutes = null;
+        Integer preOrderConfigIntervalMinutes = null;
+        Integer preOrderConfigMaxOrderAheadDays = null;
+        Boolean preOrderConfigIncludeAsap = null;
+        Boolean preOrderConfigIncludeMoreGranularInitialTime = null;
+        String preOrderConfigCutOffTimePreviousDayBasic = null;
+        String preOrderConfigCutOffTimeCurrentDayBasic = null;
+        String preOrderConfigPreOrderTimeDisplayType = null;
+        Boolean preOrderConfigAlwaysAppearOpen = null;
+        Boolean preOrderConfigRequireExplicitSelectAlways = null;
+        RestApiArrayResultPreOrderTime response = api.getPreOrderPreview(storeId, deliveryType, preOrderConfigLeadTimeMinutes, preOrderConfigIntervalMinutes, preOrderConfigMaxOrderAheadDays, preOrderConfigIncludeAsap, preOrderConfigIncludeMoreGranularInitialTime, preOrderConfigCutOffTimePreviousDayBasic, preOrderConfigCutOffTimeCurrentDayBasic, preOrderConfigPreOrderTimeDisplayType, preOrderConfigAlwaysAppearOpen, preOrderConfigRequireExplicitSelectAlways);
 
         // TODO: test validations
     }
@@ -209,7 +326,43 @@ public class StoresApiTest {
     }
     
     /**
-     * Get all stores
+     * Get all stores by app name id
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoreHeadersByAppIdTest() throws ApiException {
+        String appId = null;
+        String storeNameQuery = null;
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultStoreHeader response = api.getStoreHeadersByAppId(appId, storeNameQuery, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get stores statistics by app name id and storeIds
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoreNetSalesTest() throws ApiException {
+        String appId = null;
+        List<Integer> storeId = null;
+        RestApiArrayResultStoreStatistics response = api.getStoreNetSales(appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all stores, excluding archived ones
      *
      * 
      *
@@ -247,7 +400,23 @@ public class StoresApiTest {
     }
     
     /**
-     * Set Bussiness hours
+     * Publish store
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void publishStoreTest() throws ApiException {
+        Integer storeId = null;
+        api.publishStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set Business hours
      *
      * 
      *
@@ -260,6 +429,58 @@ public class StoresApiTest {
         String deliveryType = null;
         BusinessHoursPeriodBase businessHoursPeriod = null;
         RestApiResultBusinessHoursPeriod response = api.setBusinessHours(storeId, deliveryType, businessHoursPeriod);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * UPDATE pre order config for a store, by type
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setPreOrdeEnabledTest() throws ApiException {
+        Integer storeId = null;
+        String deliveryType = null;
+        Boolean enabled = null;
+        RestApiArrayResultRestApiDefaultResponse response = api.setPreOrdeEnabled(storeId, deliveryType, enabled);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Unpublish store
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void unpublishStoreTest() throws ApiException {
+        Integer storeId = null;
+        api.unpublishStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * UPDATE pre order config for a store, by type
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updatePreOrderConfigTest() throws ApiException {
+        Integer storeId = null;
+        String deliveryType = null;
+        PreOrderConfig preOrderConfig = null;
+        RestApiArrayResultRestApiDefaultResponse response = api.updatePreOrderConfig(storeId, deliveryType, preOrderConfig);
 
         // TODO: test validations
     }

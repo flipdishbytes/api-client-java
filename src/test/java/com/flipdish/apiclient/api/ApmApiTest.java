@@ -21,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPhoneCall;
 import com.flipdish.apiclient.model.RestApiResultApmStatistics;
+import com.flipdish.apiclient.model.RestApiResultApmStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -38,6 +39,22 @@ public class ApmApiTest {
 
     private final ApmApi api = new ApmApi();
 
+    
+    /**
+     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getApmStatusTest() throws ApiException {
+        String appId = null;
+        RestApiResultApmStatus response = api.getApmStatus(appId);
+
+        // TODO: test validations
+    }
     
     /**
      * [PRIVATE API] Get Basic Statistics

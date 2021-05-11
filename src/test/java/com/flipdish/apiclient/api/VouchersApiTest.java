@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CreateVoucher;
 import com.flipdish.apiclient.model.RestApiArrayResultVoucherDataPoint;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -37,6 +38,23 @@ public class VouchersApiTest {
 
     private final VouchersApi api = new VouchersApi();
 
+    
+    /**
+     * [PRIVATE API] Create voucher
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createVoucherTest() throws ApiException {
+        String appId = null;
+        CreateVoucher voucher = null;
+        RestApiResultVoucherWithStats response = api.createVoucher(appId, voucher);
+
+        // TODO: test validations
+    }
     
     /**
      * [PRIVATE API] Get voucher by identifier
@@ -107,7 +125,11 @@ public class VouchersApiTest {
     public void updateVoucherTest() throws ApiException {
         Integer voucherId = null;
         VoucherBase voucher = null;
-        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher);
+        List<Integer> storeId = null;
+        Integer percentValue = null;
+        Double lumpValue = null;
+        Integer freeItemId = null;
+        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
 
         // TODO: test validations
     }

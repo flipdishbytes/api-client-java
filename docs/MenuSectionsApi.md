@@ -5,13 +5,14 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cloneMenuSection**](MenuSectionsApi.md#cloneMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
-[**createMenuAvailabilityForDay**](MenuSectionsApi.md#createMenuAvailabilityForDay) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Create menu section
+[**createMenuAvailabilityForDay**](MenuSectionsApi.md#createMenuAvailabilityForDay) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 [**createMenuSection**](MenuSectionsApi.md#createMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
-[**createMenuSectionAvailability**](MenuSectionsApi.md#createMenuSectionAvailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu section
+[**createMenuSectionAvailability**](MenuSectionsApi.md#createMenuSectionAvailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
 [**deleteMenuSection**](MenuSectionsApi.md#deleteMenuSection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
 [**deleteMenuSectionImage**](MenuSectionsApi.md#deleteMenuSectionImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 [**getMenuSectionById**](MenuSectionsApi.md#getMenuSectionById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 [**getMenuSections**](MenuSectionsApi.md#getMenuSections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
+[**menuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menuSectionsSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 [**updateMenuSection**](MenuSectionsApi.md#updateMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 [**uploadMenuSectionImage**](MenuSectionsApi.md#uploadMenuSectionImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 
@@ -73,7 +74,7 @@ Name | Type | Description  | Notes
 # **createMenuAvailabilityForDay**
 > Object createMenuAvailabilityForDay(menuId, menuSectionId, dayOfWeek, businessHoursPeriod)
 
-Create menu section
+Set/update menu section availability hours.
 
 ### Example
 ```java
@@ -93,8 +94,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MenuSectionsApi apiInstance = new MenuSectionsApi();
 Integer menuId = 56; // Integer | Menu identifier
 Integer menuSectionId = 56; // Integer | Menu section identifier
-String dayOfWeek = "dayOfWeek_example"; // String | 
-BusinessHoursPeriodBase businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | 
+String dayOfWeek = "dayOfWeek_example"; // String | Day of the  week
+BusinessHoursPeriodBase businessHoursPeriod = new BusinessHoursPeriodBase(); // BusinessHoursPeriodBase | Menu section active hours, note: DayOfWeek property will be overriden by the path parameter.
 try {
     Object result = apiInstance.createMenuAvailabilityForDay(menuId, menuSectionId, dayOfWeek, businessHoursPeriod);
     System.out.println(result);
@@ -110,8 +111,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **Integer**| Menu identifier |
  **menuSectionId** | **Integer**| Menu section identifier |
- **dayOfWeek** | **String**|  | [enum: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
- **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)|  |
+ **dayOfWeek** | **String**| Day of the  week | [enum: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+ **businessHoursPeriod** | [**BusinessHoursPeriodBase**](BusinessHoursPeriodBase.md)| Menu section active hours, note: DayOfWeek property will be overriden by the path parameter. |
 
 ### Return type
 
@@ -183,7 +184,7 @@ Name | Type | Description  | Notes
 # **createMenuSectionAvailability**
 > Object createMenuSectionAvailability(menuId, menuSectionId, menuSectionAvailability)
 
-Create menu section
+Create menu availability type
 
 ### Example
 ```java
@@ -203,7 +204,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MenuSectionsApi apiInstance = new MenuSectionsApi();
 Integer menuId = 56; // Integer | Menu identifier
 Integer menuSectionId = 56; // Integer | Menu section identifier
-MenuSectionAvailabilityBase menuSectionAvailability = new MenuSectionAvailabilityBase(); // MenuSectionAvailabilityBase | 
+MenuSectionAvailabilityBase menuSectionAvailability = new MenuSectionAvailabilityBase(); // MenuSectionAvailabilityBase | DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes
 try {
     Object result = apiInstance.createMenuSectionAvailability(menuId, menuSectionId, menuSectionAvailability);
     System.out.println(result);
@@ -219,7 +220,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **Integer**| Menu identifier |
  **menuSectionId** | **Integer**| Menu section identifier |
- **menuSectionAvailability** | [**MenuSectionAvailabilityBase**](MenuSectionAvailabilityBase.md)|  |
+ **menuSectionAvailability** | [**MenuSectionAvailabilityBase**](MenuSectionAvailabilityBase.md)| DisplayAlways, DisplayBasedOnTimes, DisplayAlwaysStartCollapsed, DisplayAlwaysStartCollapsedBasedOnTimes |
 
 ### Return type
 
@@ -442,6 +443,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="menuSectionsSetItemDisplayOrders"></a>
+# **menuSectionsSetItemDisplayOrders**
+> menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders)
+
+Re-arrange Items within a Section
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuSectionsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuSectionsApi apiInstance = new MenuSectionsApi();
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+MenuObjectDisplayOrders displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | Item Ids and their new display order
+try {
+    apiInstance.menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuSectionsApi#menuSectionsSetItemDisplayOrders");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)| Item Ids and their new display order |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="updateMenuSection"></a>
 # **updateMenuSection**
 > updateMenuSection(menuId, menuSectionId, menuSection, undoAfter)
@@ -467,7 +522,7 @@ MenuSectionsApi apiInstance = new MenuSectionsApi();
 Integer menuId = 56; // Integer | Menu identifier
 Integer menuSectionId = 56; // Integer | Menu section identifier
 MenuSectionBase menuSection = new MenuSectionBase(); // MenuSectionBase | Menu section changes (delta)
-Double undoAfter = 3.4D; // Double | An optional time period, in hours, after which the hide-section operaton will be undone.
+Double undoAfter = 3.4D; // Double | An optional time period, in hours, after which the hide-section operation will be undone.
 try {
     apiInstance.updateMenuSection(menuId, menuSectionId, menuSection, undoAfter);
 } catch (ApiException e) {
@@ -483,7 +538,7 @@ Name | Type | Description  | Notes
  **menuId** | **Integer**| Menu identifier |
  **menuSectionId** | **Integer**| Menu section identifier |
  **menuSection** | [**MenuSectionBase**](MenuSectionBase.md)| Menu section changes (delta) |
- **undoAfter** | **Double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
+ **undoAfter** | **Double**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional]
 
 ### Return type
 

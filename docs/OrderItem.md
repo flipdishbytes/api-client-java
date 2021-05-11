@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **orderItemOptions** | [**List&lt;OrderItemOption&gt;**](OrderItemOption.md) | Option list |  [optional]
 **metadata** | **Map&lt;String, String&gt;** | Metadata |  [optional]
+**menuItemPublicId** | [**UUID**](UUID.md) | Public id of the Menu Item |  [optional]
 **menuSectionName** | **String** | Menu section name |  [optional]
 **menuSectionDisplayOrder** | **Integer** | Menu section display order |  [optional]
 **name** | **String** | Name |  [optional]

@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **metadata** | **Map&lt;String, String&gt;** | Store metadata |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency which used by the Store |  [optional]
 **coordinates** | [**Coordinates**](Coordinates.md) | Latitude and longitude of the store |  [optional]
+**storeTimezone** | **String** | Timezone of store |  [optional]
+**storeGroupId** | **Integer** | Store group id of store |  [optional]
 
 
 <a name="CurrencyEnum"></a>
@@ -128,6 +130,7 @@ UZS | &quot;UZS&quot;
 VND | &quot;VND&quot;
 MOP | &quot;MOP&quot;
 TWD | &quot;TWD&quot;
+BMD | &quot;BMD&quot;
 
 
 

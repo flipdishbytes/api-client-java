@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getCustomerEvents"></a>
 # **getCustomerEvents**
-> RestApiEventSearchPaginationResult getCustomerEvents(customerId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -42,9 +42,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getCustomerEvents(customerId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getCustomerEvents(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getCustomerEvents");
@@ -61,7 +69,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -78,7 +94,7 @@ Name | Type | Description  | Notes
 
 <a name="getEvents"></a>
 # **getEvents**
-> RestApiEventSearchPaginationResult getEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -98,16 +114,23 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
-Integer storeId = 56; // Integer | Store Id
 Integer whiteLabelId = 56; // Integer | White Label Id
 Integer customerId = 56; // Integer | Customer Id
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getEvents(storeId, whiteLabelId, customerId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getEvents(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getEvents");
@@ -119,14 +142,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id | [optional]
  **whiteLabelId** | **Integer**| White Label Id | [optional]
  **customerId** | **Integer**| Customer Id | [optional]
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -194,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="getMenuEvents"></a>
 # **getMenuEvents**
-> RestApiEventSearchPaginationResult getMenuEvents(menuId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -219,9 +249,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getMenuEvents(menuId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getMenuEvents(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getMenuEvents");
@@ -238,7 +276,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -255,7 +301,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrderEvents"></a>
 # **getOrderEvents**
-> RestApiEventSearchPaginationResult getOrderEvents(orderId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -280,9 +326,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId2 = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getOrderEvents(orderId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getOrderEvents(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getOrderEvents");
@@ -299,7 +353,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId2** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -316,7 +378,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrderEventsByCustomer"></a>
 # **getOrderEventsByCustomer**
-> RestApiEventSearchPaginationResult getOrderEventsByCustomer(customerId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -341,9 +403,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getOrderEventsByCustomer(customerId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getOrderEventsByCustomer(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getOrderEventsByCustomer");
@@ -360,7 +430,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -377,7 +455,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoreEvents"></a>
 # **getStoreEvents**
-> RestApiEventSearchPaginationResult getStoreEvents(storeId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -402,9 +480,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId2 = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getStoreEvents(storeId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getStoreEvents(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getStoreEvents");
@@ -421,7 +507,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId2** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -438,7 +532,7 @@ Name | Type | Description  | Notes
 
 <a name="getUserEvents"></a>
 # **getUserEvents**
-> RestApiEventSearchPaginationResult getUserEvents(userId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -463,9 +557,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId2 = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getUserEvents(userId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getUserEvents(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getUserEvents");
@@ -482,7 +584,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId2** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
@@ -499,7 +609,7 @@ Name | Type | Description  | Notes
 
 <a name="getWhiteLabelEvents"></a>
 # **getWhiteLabelEvents**
-> RestApiEventSearchPaginationResult getWhiteLabelEvents(whitelabelId, limit, page, start, end, name)
+> RestApiEventSearchPaginationResult getWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -524,9 +634,17 @@ Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
 OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date
-List<String> name = Arrays.asList("name_example"); // List<String> | Event names to filter in
+Integer orderId = 56; // Integer | Events that have Order Id
+Integer storeId = 56; // Integer | Events that have Store Id
+Integer storeGroupId = 56; // Integer | Events that have Store Group Id
+Integer userId = 56; // Integer | Events that have User Id
+String userEmail = "userEmail_example"; // String | Events that have User Email
+String userName = "userName_example"; // String | Events that have User Name
+String voucherCode = "voucherCode_example"; // String | Events that have voucher code
+List<String> eventType = Arrays.asList("eventType_example"); // List<String> | Events that have event type\\s
+String flipdishEventId = "flipdishEventId_example"; // String | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 try {
-    RestApiEventSearchPaginationResult result = apiInstance.getWhiteLabelEvents(whitelabelId, limit, page, start, end, name);
+    RestApiEventSearchPaginationResult result = apiInstance.getWhiteLabelEvents(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#getWhiteLabelEvents");
@@ -543,7 +661,15 @@ Name | Type | Description  | Notes
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
  **end** | **OffsetDateTime**| End date | [optional]
- **name** | [**List&lt;String&gt;**](String.md)| Event names to filter in | [optional]
+ **orderId** | **Integer**| Events that have Order Id | [optional]
+ **storeId** | **Integer**| Events that have Store Id | [optional]
+ **storeGroupId** | **Integer**| Events that have Store Group Id | [optional]
+ **userId** | **Integer**| Events that have User Id | [optional]
+ **userEmail** | **String**| Events that have User Email | [optional]
+ **userName** | **String**| Events that have User Name | [optional]
+ **voucherCode** | **String**| Events that have voucher code | [optional]
+ **eventType** | [**List&lt;String&gt;**](String.md)| Events that have event type\\s | [optional]
+ **flipdishEventId** | **String**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 

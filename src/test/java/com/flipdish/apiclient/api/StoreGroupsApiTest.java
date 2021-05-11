@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreGroup;
+import com.flipdish.apiclient.model.RestApiPaginationResultStoreGroupExtended;
 import com.flipdish.apiclient.model.RestApiResultStoreGroup;
 import com.flipdish.apiclient.model.RestApiResultStoreGroupBase;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -86,6 +87,26 @@ public class StoreGroupsApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultStoreGroup response = api.getStoreGroups(appNameId, searchQuery, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * [PRIVATE API] Returns a paginated list of Extended Store Groups
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoreGroupsExtendedTest() throws ApiException {
+        String appNameId = null;
+        String searchQuery = null;
+        Integer page = null;
+        Integer limit = null;
+        Integer groupingRadius = null;
+        RestApiPaginationResultStoreGroupExtended response = api.getStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius);
 
         // TODO: test validations
     }

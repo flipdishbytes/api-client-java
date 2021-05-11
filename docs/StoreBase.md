@@ -25,11 +25,14 @@ Name | Type | Description | Notes
 **requireCustomerNameForPickup** | **Boolean** | True if customer name required for pickup orders |  [optional]
 **gdprCustomerPhoneNumbers** | **Boolean** | Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed. |  [optional]
 **requireCustomerNameForDelivery** | **Boolean** | True if customer name required for delivery orders |  [optional]
+**allowChefNotes** | **Boolean** | True if the customer is allowed enter custom notes with their orders |  [optional]
 **etaInPickupConfirmationSmsEnabled** | **Boolean** | True if order confirmation sms includes estimated time when order will be ready for collection |  [optional]
 **etaInDeliveryConfirmationSmsEnabled** | **Boolean** | True if order confirmation sms includes estimated time when order will delivered |  [optional]
+**isArchived** | **Boolean** | Is the Store Archived |  [optional]
+**isPublished** | **Boolean** | Is the Store Published |  [optional]
 **name** | **String** | Name |  [optional]
 **emailAddress** | **String** | Email address (visible to customers) |  [optional]
-**staffLanguage** | **String** | Staff Language (used for communcation with the staff)  Emails, Printouts etc |  [optional]
+**staffLanguage** | **String** | Staff Language (used for communication with the staff)  Emails, Printouts etc |  [optional]
 
 
 

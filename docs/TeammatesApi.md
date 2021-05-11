@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
@@ -34,8 +34,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 TeammatesApi apiInstance = new TeammatesApi();
-String appId = "appId_example"; // String | 
-CreateTeammate teammate = new CreateTeammate(); // CreateTeammate | 
+String appId = "appId_example"; // String | Application identifier
+CreateTeammate teammate = new CreateTeammate(); // CreateTeammate | teammate model
 try {
     RestApiResultTeammate result = apiInstance.createTeammate(appId, teammate);
     System.out.println(result);
@@ -49,8 +49,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **teammate** | [**CreateTeammate**](CreateTeammate.md)|  |
+ **appId** | **String**| Application identifier |
+ **teammate** | [**CreateTeammate**](CreateTeammate.md)| teammate model |
 
 ### Return type
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 # **redeemInvitation**
 > RestApiResultRedeemInvitationResult redeemInvitation(otc, appId)
 
-
+Redeem one-time code from invitation
 
 ### Example
 ```java
@@ -296,9 +296,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 TeammatesApi apiInstance = new TeammatesApi();
-String appId = "appId_example"; // String | 
-String id = "id_example"; // String | 
-TeammateBase teammate = new TeammateBase(); // TeammateBase | 
+String appId = "appId_example"; // String | Application identifier
+String id = "id_example"; // String | teammate identifier
+TeammateBase teammate = new TeammateBase(); // TeammateBase | teammate model
 try {
     RestApiResultTeammate result = apiInstance.updateTeammate(appId, id, teammate);
     System.out.println(result);
@@ -312,9 +312,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **id** | **String**|  |
- **teammate** | [**TeammateBase**](TeammateBase.md)|  |
+ **appId** | **String**| Application identifier |
+ **id** | **String**| teammate identifier |
+ **teammate** | [**TeammateBase**](TeammateBase.md)| teammate model |
 
 ### Return type
 

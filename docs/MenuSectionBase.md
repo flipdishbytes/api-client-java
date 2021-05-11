@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **displayOrder** | **Integer** | Display order |  [optional]
 **isAvailable** | **Boolean** | Is available |  [optional]
 **isHiddenFromCustomers** | **Boolean** | Is hidden from customer. Perhaps when the item is out of stock. |  [optional]
+**imageUrl** | **String** | Image url |  [optional]
 
 
 
