@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**getMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
 [**removeMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removeMenuItemOptionSetItem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+[**setOptionSetItemTax**](MenuOptionSetItemsApi.md#setOptionSetItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | [Private API] Set Tax Rate on OptionSetItem
 [**updateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updateMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
 [**uploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadOptionSetItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
@@ -290,6 +291,66 @@ Name | Type | Description  | Notes
  **menuSectionItemId** | **Integer**| Menu section item identifier |
  **optionSetId** | **Integer**| Option set identifier |
  **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setOptionSetItemTax"></a>
+# **setOptionSetItemTax**
+> setOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId)
+
+[Private API] Set Tax Rate on OptionSetItem
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuOptionSetItemsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | 
+Integer menuSectionItemId = 56; // Integer | 
+Integer optionSetId = 56; // Integer | 
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
+Integer taxRateId = 56; // Integer | Tax Rate to use
+try {
+    apiInstance.setOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuOptionSetItemsApi#setOptionSetItemTax");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**|  |
+ **menuSectionItemId** | **Integer**|  |
+ **optionSetId** | **Integer**|  |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
+ **taxRateId** | **Integer**| Tax Rate to use |
 
 ### Return type
 

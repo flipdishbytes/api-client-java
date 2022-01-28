@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
+**storeGroupId** | **Integer** | Store group Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which deleted this store |  [optional]
 **description** | **String** | Description |  [optional]
 **store** | [**Store**](Store.md) | Deleted Store |  [optional]

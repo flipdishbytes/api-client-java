@@ -14,11 +14,14 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CreateMenuSectionItemFromCatalogItems;
+import com.flipdish.apiclient.model.CreateMenuSectionItemFromProducts;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuSectionItemBase;
 import com.flipdish.apiclient.model.RestApiArrayResultMenuSectionItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultCreatedMenuSectionItems;
 import com.flipdish.apiclient.model.RestApiResultMenuSectionItem;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -71,6 +74,42 @@ public class MenuSectionItemsApiTest {
         Integer menuSectionId = null;
         MenuSectionItemBase menuSectionItem = null;
         Object response = api.createMenuSectionItem(menuId, menuSectionId, menuSectionItem);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Create menu section items from a list of Catalog Items
+     *
+     * BETA - this endpoint is under development, do not use it in your production system
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createMenuSectionItemFromCatalogItemsTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        CreateMenuSectionItemFromCatalogItems createFromCatalogItems = null;
+        Object response = api.createMenuSectionItemFromCatalogItems(menuId, menuSectionId, createFromCatalogItems);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Create menu section items from a list of Products
+     *
+     * BETA - this endpoint is under development, do not use it in your production system
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createMenuSectionItemFromProductsTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        CreateMenuSectionItemFromProducts createFromProducts = null;
+        Object response = api.createMenuSectionItemFromProducts(menuId, menuSectionId, createFromProducts);
 
         // TODO: test validations
     }
@@ -142,6 +181,44 @@ public class MenuSectionItemsApiTest {
         Integer menuId = null;
         Integer menuSectionId = null;
         RestApiArrayResultMenuSectionItem response = api.getMenuItems(menuId, menuSectionId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * [PRIVATE API]Move an Item within a menu
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void moveMenuItemTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        Integer menuSectionItemId = null;
+        Integer destinationDisplayOrder = null;
+        api.moveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * [PRIVATE API]Move an Item within a menu
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setSectionItemTaxTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        Integer menuSectionItemId = null;
+        Integer taxRateId = null;
+        api.setSectionItemTax(menuId, menuSectionId, menuSectionItemId, taxRateId);
 
         // TODO: test validations
     }

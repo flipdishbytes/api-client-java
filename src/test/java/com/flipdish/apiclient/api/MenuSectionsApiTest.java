@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import java.io.File;
+import com.flipdish.apiclient.model.MenuObjectDisplayOrders;
 import com.flipdish.apiclient.model.MenuSectionAvailabilityBase;
 import com.flipdish.apiclient.model.MenuSectionBase;
 import com.flipdish.apiclient.model.RestApiArrayResultMenuSection;
@@ -61,7 +62,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Create menu section
+     * Set/update menu section availability hours.
      *
      * 
      *
@@ -97,7 +98,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Create menu section
+     * Create menu availability type
      *
      * 
      *
@@ -177,6 +178,24 @@ public class MenuSectionsApiTest {
     public void getMenuSectionsTest() throws ApiException {
         Integer menuId = null;
         RestApiArrayResultMenuSection response = api.getMenuSections(menuId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Re-arrange Items within a Section
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void menuSectionsSetItemDisplayOrdersTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        MenuObjectDisplayOrders displayOrders = null;
+        api.menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
 
         // TODO: test validations
     }

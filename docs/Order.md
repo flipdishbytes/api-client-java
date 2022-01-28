@@ -11,9 +11,22 @@ Name | Type | Description | Notes
 **orderItems** | [**List&lt;OrderItem&gt;**](OrderItem.md) | Ordered items |  [optional]
 **deliveryLocation** | [**DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders |  [optional]
 **customerLocation** | [**Coordinates**](Coordinates.md) | Customer location |  [optional]
+**maskedPhoneNumber** | [**MaskedPhoneNumber**](MaskedPhoneNumber.md) | Represents customers masked phone number |  [optional]
+**dropOffLocationId** | **Integer** | Represents table service drop off location |  [optional]
+**dropOffLocation** | **String** | Represents table service drop off location |  [optional]
+**acceptedFor** | [**OffsetDateTime**](OffsetDateTime.md) | Time store has accepted the order for |  [optional]
+**inFraudZone** | **Boolean** | Was order made within a fraud zone |  [optional]
+**unusualHighValueOrder** | **Boolean** | Is order of unusually high value |  [optional]
+**rejectedByUserId** | **Integer** | Id of user who rejected order, if available |  [optional]
+**channelOrderId** | **String** | ChannelOrderId from external channel |  [optional]
+**channelOrderDisplayId** | **String** | ChannelOrderDisplayId from external channel |  [optional]
+**channel** | [**Channel**](Channel.md) | Channel where the Order comes from |  [optional]
+**receiptCode** | **String** | Generated receipt code for an order |  [optional]
 **orderId** | **Integer** | Order identifier |  [optional]
+**localOrderId** | **String** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) |  [optional]
 **deliveryType** | [**DeliveryTypeEnum**](#DeliveryTypeEnum) | Delivery type |  [optional]
 **pickupLocationType** | [**PickupLocationTypeEnum**](#PickupLocationTypeEnum) | Pickup location type |  [optional]
+**tableServiceCatagory** | [**TableServiceCatagoryEnum**](#TableServiceCatagoryEnum) | Pickup location type |  [optional]
 **tipAmount** | **Double** | Tip amount |  [optional]
 **deliveryAmount** | **Double** | Delivery amount |  [optional]
 **orderItemsAmount** | **Double** | Ordered items amount |  [optional]
@@ -30,6 +43,11 @@ Name | Type | Description | Notes
 **userRating** | **Integer** | User rating |  [optional]
 **paymentStatus** | [**PaymentStatusEnum**](#PaymentStatusEnum) | Status of the payment |  [optional]
 **rejectionReason** | [**RejectionReasonEnum**](#RejectionReasonEnum) | Rejection reason. Can have value if the order is rejected. |  [optional]
+**refundedAmount** | **Double** | Amount refunded to customer. |  [optional]
+**deliveryTrackingStatus** | [**DeliveryTrackingStatusEnum**](#DeliveryTrackingStatusEnum) | Delivery tracking status |  [optional]
+**driverId** | **Integer** | Assigned driver identifier |  [optional]
+**totalTax** | **Double** | Total tax applied to order |  [optional]
+**orderTrackingCode** | **String** | Unique, 6 character long alpha numeric code for tracking. |  [optional]
 
 
 <a name="DeliveryTypeEnum"></a>
@@ -49,6 +67,21 @@ TABLESERVICE | &quot;TableService&quot;
 DINEIN | &quot;DineIn&quot;
 
 
+<a name="TableServiceCatagoryEnum"></a>
+## Enum: TableServiceCatagoryEnum
+Name | Value
+---- | -----
+GENERIC | &quot;Generic&quot;
+VILLA | &quot;Villa&quot;
+HOUSE | &quot;House&quot;
+ROOM | &quot;Room&quot;
+AREA | &quot;Area&quot;
+TABLE | &quot;Table&quot;
+PARKINGBAY | &quot;ParkingBay&quot;
+GATE | &quot;Gate&quot;
+DRIVETHROUGH | &quot;DriveThrough&quot;
+
+
 <a name="PaymentAccountTypeEnum"></a>
 ## Enum: PaymentAccountTypeEnum
 Name | Value
@@ -59,6 +92,8 @@ IDEAL | &quot;Ideal&quot;
 BANCONTACT | &quot;Bancontact&quot;
 GIROPAY | &quot;Giropay&quot;
 EPS | &quot;Eps&quot;
+EMV | &quot;Emv&quot;
+PAYPAL | &quot;PayPal&quot;
 
 
 <a name="OrderStateEnum"></a>
@@ -94,6 +129,7 @@ TELEPHONECALL | &quot;TelephoneCall&quot;
 SMS | &quot;Sms&quot;
 PWAANDROID | &quot;PwaAndroid&quot;
 PWAIOS | &quot;PwaIos&quot;
+GOOGLE | &quot;Google&quot;
 
 
 <a name="PaymentStatusEnum"></a>
@@ -120,6 +156,20 @@ TOOSOON | &quot;TooSoon&quot;
 TIMEUNAVAILABLE | &quot;TimeUnavailable&quot;
 DONTDELIVERTOAREA | &quot;DontDeliverToArea&quot;
 STOREUNCONTACTABLE | &quot;StoreUncontactable&quot;
+
+
+<a name="DeliveryTrackingStatusEnum"></a>
+## Enum: DeliveryTrackingStatusEnum
+Name | Value
+---- | -----
+UNASSIGNED | &quot;Unassigned&quot;
+UNACCEPTED | &quot;Unaccepted&quot;
+ACCEPTED | &quot;Accepted&quot;
+CARRYING | &quot;Carrying&quot;
+ONTHEWAY | &quot;OnTheWay&quot;
+ARRIVEDATLOCATION | &quot;ArrivedAtLocation&quot;
+DELIVERED | &quot;Delivered&quot;
+CANNOTDELIVER | &quot;CannotDeliver&quot;
 
 
 

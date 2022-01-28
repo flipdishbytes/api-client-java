@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
-[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
+[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
 
 
 <a name="getAuthorizationTokens"></a>
 # **getAuthorizationTokens**
-> RestApiPaginationResultOAuthTokenModel getAuthorizationTokens(clientId, page, limit)
+> RestApiPaginationResultOAuthTokenModel getAuthorizationTokens(oauthAppId, appId, page, limit)
 
 Get authorization tokens
 
@@ -32,11 +32,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthorizationTokensApi apiInstance = new AuthorizationTokensApi();
-String clientId = "clientId_example"; // String | Client identifier
+String oauthAppId = "oauthAppId_example"; // String | Client identifier
+String appId = "appId_example"; // String | 
 Integer page = 56; // Integer | Requested page number
 Integer limit = 56; // Integer | Requested page limit
 try {
-    RestApiPaginationResultOAuthTokenModel result = apiInstance.getAuthorizationTokens(clientId, page, limit);
+    RestApiPaginationResultOAuthTokenModel result = apiInstance.getAuthorizationTokens(oauthAppId, appId, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthorizationTokensApi#getAuthorizationTokens");
@@ -48,7 +49,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **String**| Client identifier |
+ **oauthAppId** | **String**| Client identifier |
+ **appId** | **String**|  |
  **page** | **Integer**| Requested page number | [optional]
  **limit** | **Integer**| Requested page limit | [optional]
 
@@ -67,7 +69,7 @@ Name | Type | Description  | Notes
 
 <a name="revokeToken"></a>
 # **revokeToken**
-> revokeToken(key)
+> revokeToken(key, appId)
 
 Revoke token
 
@@ -88,8 +90,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthorizationTokensApi apiInstance = new AuthorizationTokensApi();
 String key = "key_example"; // String | Token identifier key
+String appId = "appId_example"; // String | 
 try {
-    apiInstance.revokeToken(key);
+    apiInstance.revokeToken(key, appId);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthorizationTokensApi#revokeToken");
     e.printStackTrace();
@@ -101,6 +104,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **String**| Token identifier key |
+ **appId** | **String**|  |
 
 ### Return type
 

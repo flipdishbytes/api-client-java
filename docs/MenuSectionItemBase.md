@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **isAvailable** | **Boolean** | True if we accept orders for this item still |  [optional]
 **cellLayoutType** | [**CellLayoutTypeEnum**](#CellLayoutTypeEnum) | Small | Medium | Large  Affects the layout of the menu. |  [optional]
 **disableVouchers** | **Boolean** | If true, then vouchers won&#39;t be applied for this item |  [optional]
+**imageName** | **String** | Image url |  [optional]
+**imageUrl** | **String** | Image url |  [optional]
+**menuItemId** | **Integer** | Menu Item Id |  [optional]
 
 
 <a name="SpicinessRatingEnum"></a>

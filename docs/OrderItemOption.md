@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | **Map&lt;String, String&gt;** | Metadata |  [optional]
+**menuItemOptionPublicId** | [**UUID**](UUID.md) | Public id of the Menu Item Option |  [optional]
 **menuItemOptionId** | **Integer** | Menu item option identifier |  [optional]
 **isMasterOptionSetItem** | **Boolean** | Is master option set item |  [optional]
 **name** | **String** | Name |  [optional]

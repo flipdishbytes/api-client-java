@@ -6,15 +6,29 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **orderId** | **Integer** | Order identifier |  [optional]
 **deliveryType** | [**DeliveryTypeEnum**](#DeliveryTypeEnum) | Delivery type |  [optional]
+**pickupLocationType** | [**PickupLocationTypeEnum**](#PickupLocationTypeEnum) | Pickup location type |  [optional]
+**tableServiceCatagory** | [**TableServiceCatagoryEnum**](#TableServiceCatagoryEnum) | Table service category |  [optional]
 **orderState** | [**OrderStateEnum**](#OrderStateEnum) | Order state |  [optional]
 **requestedForTime** | [**OffsetDateTime**](OffsetDateTime.md) | Order requested for |  [optional]
 **storeName** | **String** | Name of the store |  [optional]
 **storeIanaTimeZone** | **String** | Store IANA time zone |  [optional]
 **customerName** | **String** | Name of the customer |  [optional]
 **customerPhoneNumber** | **String** | Phone number of customer |  [optional]
-**amount** | **Double** | This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer. |  [optional]
+**amount** | **Double** | This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee  It does include the OnlineOrderingFee |  [optional]
+**refundedAmount** | **Double** | Refunded amount |  [optional]
+**paymentAccountType** | [**PaymentAccountTypeEnum**](#PaymentAccountTypeEnum) | Payment Account |  [optional]
 **paymentStatus** | [**PaymentStatusEnum**](#PaymentStatusEnum) | Status of the payment |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency of payment |  [optional]
+**appType** | [**AppTypeEnum**](#AppTypeEnum) | Type of app end user is on |  [optional]
+**localOrderId** | **String** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) |  [optional]
+**dropOffLocationId** | **Integer** | id of the collection/drop off location |  [optional]
+**dropOffLocation** | **String** | Represents table service drop off location |  [optional]
+**acceptedFor** | [**OffsetDateTime**](OffsetDateTime.md) | Time store has accepted the order for |  [optional]
+**channel** | [**Channel**](Channel.md) | Channel where the Order comes from |  [optional]
+**inFraudZone** | **Boolean** | Was order made within a fraud zone |  [optional]
+**unusualHighValueOrder** | **Boolean** | Is order of unusually high value |  [optional]
+**channelOrderId** | **String** | ChannelOrderId from external channel |  [optional]
+**channelOrderDisplayId** | **String** | ChannelOrderDisplayId from external channel |  [optional]
 
 
 <a name="DeliveryTypeEnum"></a>
@@ -23,6 +37,30 @@ Name | Value
 ---- | -----
 DELIVERY | &quot;Delivery&quot;
 PICKUP | &quot;Pickup&quot;
+
+
+<a name="PickupLocationTypeEnum"></a>
+## Enum: PickupLocationTypeEnum
+Name | Value
+---- | -----
+TAKEOUT | &quot;TakeOut&quot;
+TABLESERVICE | &quot;TableService&quot;
+DINEIN | &quot;DineIn&quot;
+
+
+<a name="TableServiceCatagoryEnum"></a>
+## Enum: TableServiceCatagoryEnum
+Name | Value
+---- | -----
+GENERIC | &quot;Generic&quot;
+VILLA | &quot;Villa&quot;
+HOUSE | &quot;House&quot;
+ROOM | &quot;Room&quot;
+AREA | &quot;Area&quot;
+TABLE | &quot;Table&quot;
+PARKINGBAY | &quot;ParkingBay&quot;
+GATE | &quot;Gate&quot;
+DRIVETHROUGH | &quot;DriveThrough&quot;
 
 
 <a name="OrderStateEnum"></a>
@@ -42,6 +80,20 @@ REJECTEDBYFLIPDISH | &quot;RejectedByFlipdish&quot;
 REJECTEDAUTOMATICALLY | &quot;RejectedAutomatically&quot;
 REJECTEDAFTERBEINGACCEPTED | &quot;RejectedAfterBeingAccepted&quot;
 ACCEPTEDANDREFUNDED | &quot;AcceptedAndRefunded&quot;
+
+
+<a name="PaymentAccountTypeEnum"></a>
+## Enum: PaymentAccountTypeEnum
+Name | Value
+---- | -----
+CARD | &quot;Card&quot;
+CASH | &quot;Cash&quot;
+IDEAL | &quot;Ideal&quot;
+BANCONTACT | &quot;Bancontact&quot;
+GIROPAY | &quot;Giropay&quot;
+EPS | &quot;Eps&quot;
+EMV | &quot;Emv&quot;
+PAYPAL | &quot;PayPal&quot;
 
 
 <a name="PaymentStatusEnum"></a>
@@ -171,6 +223,24 @@ UZS | &quot;UZS&quot;
 VND | &quot;VND&quot;
 MOP | &quot;MOP&quot;
 TWD | &quot;TWD&quot;
+BMD | &quot;BMD&quot;
+
+
+<a name="AppTypeEnum"></a>
+## Enum: AppTypeEnum
+Name | Value
+---- | -----
+UNKNOWN | &quot;Unknown&quot;
+IOS | &quot;Ios&quot;
+ANDROID | &quot;Android&quot;
+WEB | &quot;Web&quot;
+KIOSK | &quot;Kiosk&quot;
+POS | &quot;Pos&quot;
+TELEPHONECALL | &quot;TelephoneCall&quot;
+SMS | &quot;Sms&quot;
+PWAANDROID | &quot;PwaAndroid&quot;
+PWAIOS | &quot;PwaIos&quot;
+GOOGLE | &quot;Google&quot;
 
 
 

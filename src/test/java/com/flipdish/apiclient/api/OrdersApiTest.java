@@ -15,6 +15,8 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Accept;
+import org.threeten.bp.OffsetDateTime;
+import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -22,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultOrder;
 import com.flipdish.apiclient.model.RestApiPaginationResultOrderSummary;
 import com.flipdish.apiclient.model.RestApiResultOrder;
+import com.flipdish.apiclient.model.RestApiResultOrderDeliveryInformation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -58,6 +61,38 @@ public class OrdersApiTest {
     }
     
     /**
+     * Dispatch order
+     *
+     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void dispatchOrderTest() throws ApiException {
+        Integer id = null;
+        api.dispatchOrder(id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get order delivery information
+     *
+     * Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getDeliveryInformationTest() throws ApiException {
+        Integer orderId = null;
+        RestApiResultOrderDeliveryInformation response = api.getDeliveryInformation(orderId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get order by ID
      *
      * 
@@ -85,9 +120,11 @@ public class OrdersApiTest {
     public void getOrdersTest() throws ApiException {
         List<Integer> physicalRestaurantId = null;
         List<String> state = null;
+        OffsetDateTime from = null;
+        OffsetDateTime to = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultOrder response = api.getOrders(physicalRestaurantId, state, page, limit);
+        RestApiPaginationResultOrder response = api.getOrders(physicalRestaurantId, state, from, to, page, limit);
 
         // TODO: test validations
     }
@@ -108,7 +145,9 @@ public class OrdersApiTest {
         List<String> state = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit);
+        Boolean orderByRequestedForTime = null;
+        List<String> channels = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels);
 
         // TODO: test validations
     }
@@ -143,6 +182,23 @@ public class OrdersApiTest {
         Integer id = null;
         Reject rejectObject = null;
         api.rejectOrder(id, rejectObject);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Add/update delivery-related information to an order
+     *
+     * Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateDeliveryInformationTest() throws ApiException {
+        Integer orderId = null;
+        OrderDeliveryInformationBase deliveryInformation = null;
+        api.updateDeliveryInformation(orderId, deliveryInformation);
 
         // TODO: test validations
     }

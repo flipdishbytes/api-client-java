@@ -124,6 +124,7 @@ UZS | &quot;UZS&quot;
 VND | &quot;VND&quot;
 MOP | &quot;MOP&quot;
 TWD | &quot;TWD&quot;
+BMD | &quot;BMD&quot;
 
 
 

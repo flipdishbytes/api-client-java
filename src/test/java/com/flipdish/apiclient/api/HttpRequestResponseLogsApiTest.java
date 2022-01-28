@@ -14,7 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import java.time.OffsetDateTime;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultHttpRequestAndResponseLog;
@@ -48,10 +48,12 @@ public class HttpRequestResponseLogsApiTest {
     public void getLogsTest() throws ApiException {
         OffsetDateTime start = null;
         OffsetDateTime end = null;
+        String appId = null;
         Integer filterByUserId = null;
+        String guid = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultHttpRequestAndResponseLog response = api.getLogs(start, end, filterByUserId, page, limit);
+        RestApiPaginationResultHttpRequestAndResponseLog response = api.getLogs(start, end, appId, filterByUserId, guid, page, limit);
 
         // TODO: test validations
     }

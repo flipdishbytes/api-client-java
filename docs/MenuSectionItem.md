@@ -4,12 +4,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**menuItemId** | **Integer** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a perminant reference to the item. |  [optional]
+**menuItemId** | **Integer** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item. |  [optional]
 **actualPrice** | **Double** | Actual price - the minimum price possible when all required option set items prices are included. |  [optional]
-**imageUrl** | **String** | Image url |  [optional]
 **menuItemOptionSets** | [**List&lt;MenuItemOptionSet&gt;**](MenuItemOptionSet.md) | Menu item option sets |  [optional]
 **dailySpecialHours** | [**List&lt;BusinessHoursPeriod&gt;**](BusinessHoursPeriod.md) | Daily special hours |  [optional]
 **publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
+**taxRateName** | **String** | Tax rate name |  [optional]
+**taxRateId** | **Integer** |  |  [optional]
+**taxValue** | **Double** |  |  [optional]
+**metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata |  [optional]
+**productId** | **String** | Product Id when the Item is associated to a Product |  [optional]
 **name** | **String** | Menu item name (like \&quot;Korma\&quot;) |  [optional]
 **description** | **String** | Description (like \&quot;A lovely dish from the east\&quot;) |  [optional]
 **spicinessRating** | [**SpicinessRatingEnum**](#SpicinessRatingEnum) | Spiciness rating |  [optional]
@@ -19,6 +23,8 @@ Name | Type | Description | Notes
 **isAvailable** | **Boolean** | True if we accept orders for this item still |  [optional]
 **cellLayoutType** | [**CellLayoutTypeEnum**](#CellLayoutTypeEnum) | Small | Medium | Large  Affects the layout of the menu. |  [optional]
 **disableVouchers** | **Boolean** | If true, then vouchers won&#39;t be applied for this item |  [optional]
+**imageName** | **String** | Image url |  [optional]
+**imageUrl** | **String** | Image url |  [optional]
 
 
 <a name="SpicinessRatingEnum"></a>

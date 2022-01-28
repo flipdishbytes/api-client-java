@@ -139,6 +139,27 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
+     * [Private API] Set Tax Rate on OptionSetItem
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setOptionSetItemTaxTest() throws ApiException {
+        Integer menuId = null;
+        Integer menuSectionId = null;
+        Integer menuSectionItemId = null;
+        Integer optionSetId = null;
+        Integer menuItemOptionSetItemId = null;
+        Integer taxRateId = null;
+        api.setOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Update menu item option set item
      *
      * 
