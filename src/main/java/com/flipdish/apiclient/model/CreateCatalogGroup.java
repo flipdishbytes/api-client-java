@@ -16,6 +16,7 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.CreateCatalogItemReference;
+import com.flipdish.apiclient.model.Metafield;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +32,7 @@ import java.util.List;
  * Create a Catalog Group
  */
 @ApiModel(description = "Create a Catalog Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-28T15:45:40.404Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-31T15:06:05.506Z")
 public class CreateCatalogGroup {
   @SerializedName("MinSelectCount")
   private Integer minSelectCount = null;
@@ -41,6 +42,9 @@ public class CreateCatalogGroup {
 
   @SerializedName("Items")
   private List<CreateCatalogItemReference> items = null;
+
+  @SerializedName("Metafields")
+  private List<Metafield> metafields = null;
 
   /**
    * Type of group (ModifierGroup, etc)
@@ -161,6 +165,32 @@ public class CreateCatalogGroup {
     this.items = items;
   }
 
+  public CreateCatalogGroup metafields(List<Metafield> metafields) {
+    this.metafields = metafields;
+    return this;
+  }
+
+  public CreateCatalogGroup addMetafieldsItem(Metafield metafieldsItem) {
+    if (this.metafields == null) {
+      this.metafields = new ArrayList<Metafield>();
+    }
+    this.metafields.add(metafieldsItem);
+    return this;
+  }
+
+   /**
+   * Collection of metafields
+   * @return metafields
+  **/
+  @ApiModelProperty(value = "Collection of metafields")
+  public List<Metafield> getMetafields() {
+    return metafields;
+  }
+
+  public void setMetafields(List<Metafield> metafields) {
+    this.metafields = metafields;
+  }
+
   public CreateCatalogGroup groupType(GroupTypeEnum groupType) {
     this.groupType = groupType;
     return this;
@@ -246,6 +276,7 @@ public class CreateCatalogGroup {
     return Objects.equals(this.minSelectCount, createCatalogGroup.minSelectCount) &&
         Objects.equals(this.maxSelectCount, createCatalogGroup.maxSelectCount) &&
         Objects.equals(this.items, createCatalogGroup.items) &&
+        Objects.equals(this.metafields, createCatalogGroup.metafields) &&
         Objects.equals(this.groupType, createCatalogGroup.groupType) &&
         Objects.equals(this.sku, createCatalogGroup.sku) &&
         Objects.equals(this.name, createCatalogGroup.name) &&
@@ -254,7 +285,7 @@ public class CreateCatalogGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(minSelectCount, maxSelectCount, items, groupType, sku, name, imageFileName);
+    return Objects.hash(minSelectCount, maxSelectCount, items, metafields, groupType, sku, name, imageFileName);
   }
 
 
@@ -266,6 +297,7 @@ public class CreateCatalogGroup {
     sb.append("    minSelectCount: ").append(toIndentedString(minSelectCount)).append("\n");
     sb.append("    maxSelectCount: ").append(toIndentedString(maxSelectCount)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    metafields: ").append(toIndentedString(metafields)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **minSelectCount** | **Integer** | Minimum number of items that the user has to select |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items that the user has to select |  [optional]
 **items** | [**List&lt;UpdateCatalogItemReference&gt;**](UpdateCatalogItemReference.md) | Collection of items associated with this group |  [optional]
+**metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields |  [optional]
 
 
 

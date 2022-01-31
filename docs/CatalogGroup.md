@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **minSelectCount** | **Integer** | Minimum number of items that the user has to select |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items that the user has to select |  [optional]
 **items** | [**List&lt;CatalogItemReference&gt;**](CatalogItemReference.md) | Collection of items associated with this product |  [optional]
+**metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields |  [optional]
 **groupType** | [**GroupTypeEnum**](#GroupTypeEnum) | Type of group (ModifierGroup, etc) | 
 **sku** | **String** | Stock Keeping Unit (SKU) | 
 **name** | **String** | Group name | 

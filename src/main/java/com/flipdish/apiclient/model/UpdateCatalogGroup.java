@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.Metafield;
 import com.flipdish.apiclient.model.UpdateCatalogItemReference;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -31,7 +32,7 @@ import java.util.List;
  * Update Catalog Group
  */
 @ApiModel(description = "Update Catalog Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-28T15:45:40.404Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-31T15:06:05.506Z")
 public class UpdateCatalogGroup {
   @SerializedName("Sku")
   private String sku = null;
@@ -50,6 +51,9 @@ public class UpdateCatalogGroup {
 
   @SerializedName("Items")
   private List<UpdateCatalogItemReference> items = null;
+
+  @SerializedName("Metafields")
+  private List<Metafield> metafields = null;
 
   public UpdateCatalogGroup sku(String sku) {
     this.sku = sku;
@@ -167,6 +171,32 @@ public class UpdateCatalogGroup {
     this.items = items;
   }
 
+  public UpdateCatalogGroup metafields(List<Metafield> metafields) {
+    this.metafields = metafields;
+    return this;
+  }
+
+  public UpdateCatalogGroup addMetafieldsItem(Metafield metafieldsItem) {
+    if (this.metafields == null) {
+      this.metafields = new ArrayList<Metafield>();
+    }
+    this.metafields.add(metafieldsItem);
+    return this;
+  }
+
+   /**
+   * Collection of metafields
+   * @return metafields
+  **/
+  @ApiModelProperty(value = "Collection of metafields")
+  public List<Metafield> getMetafields() {
+    return metafields;
+  }
+
+  public void setMetafields(List<Metafield> metafields) {
+    this.metafields = metafields;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -182,12 +212,13 @@ public class UpdateCatalogGroup {
         Objects.equals(this.imageFileName, updateCatalogGroup.imageFileName) &&
         Objects.equals(this.minSelectCount, updateCatalogGroup.minSelectCount) &&
         Objects.equals(this.maxSelectCount, updateCatalogGroup.maxSelectCount) &&
-        Objects.equals(this.items, updateCatalogGroup.items);
+        Objects.equals(this.items, updateCatalogGroup.items) &&
+        Objects.equals(this.metafields, updateCatalogGroup.metafields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sku, name, imageFileName, minSelectCount, maxSelectCount, items);
+    return Objects.hash(sku, name, imageFileName, minSelectCount, maxSelectCount, items, metafields);
   }
 
 
@@ -202,6 +233,7 @@ public class UpdateCatalogGroup {
     sb.append("    minSelectCount: ").append(toIndentedString(minSelectCount)).append("\n");
     sb.append("    maxSelectCount: ").append(toIndentedString(maxSelectCount)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    metafields: ").append(toIndentedString(metafields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
