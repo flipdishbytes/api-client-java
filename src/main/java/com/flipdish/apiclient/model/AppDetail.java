@@ -31,7 +31,7 @@ import java.util.List;
  * Application
  */
 @ApiModel(description = "Application")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-31T15:06:05.506Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-31T16:07:26.328Z")
 public class AppDetail {
   @SerializedName("Id")
   private String id = null;
