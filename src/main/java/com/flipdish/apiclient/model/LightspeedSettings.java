@@ -31,7 +31,7 @@ import java.util.Map;
  * Ligthspeed store settings
  */
 @ApiModel(description = "Ligthspeed store settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-01-31T16:07:26.328Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-01T15:06:31.856Z")
 public class LightspeedSettings {
   @SerializedName("CompanyId")
   private String companyId = null;
@@ -138,6 +138,15 @@ public class LightspeedSettings {
 
   @SerializedName("SendTableNumberToTableId")
   private Boolean sendTableNumberToTableId = null;
+
+  @SerializedName("AddChefNoteToProduct")
+  private Boolean addChefNoteToProduct = null;
+
+  @SerializedName("ChefNoteItemId")
+  private String chefNoteItemId = null;
+
+  @SerializedName("ChefNoteModifierId")
+  private String chefNoteModifierId = null;
 
   public LightspeedSettings companyId(String companyId) {
     this.companyId = companyId;
@@ -497,6 +506,60 @@ public class LightspeedSettings {
     this.sendTableNumberToTableId = sendTableNumberToTableId;
   }
 
+  public LightspeedSettings addChefNoteToProduct(Boolean addChefNoteToProduct) {
+    this.addChefNoteToProduct = addChefNoteToProduct;
+    return this;
+  }
+
+   /**
+   * Add ChefNote To Product
+   * @return addChefNoteToProduct
+  **/
+  @ApiModelProperty(value = "Add ChefNote To Product")
+  public Boolean isAddChefNoteToProduct() {
+    return addChefNoteToProduct;
+  }
+
+  public void setAddChefNoteToProduct(Boolean addChefNoteToProduct) {
+    this.addChefNoteToProduct = addChefNoteToProduct;
+  }
+
+  public LightspeedSettings chefNoteItemId(String chefNoteItemId) {
+    this.chefNoteItemId = chefNoteItemId;
+    return this;
+  }
+
+   /**
+   * The Lightspeed Chef Note Item Id to map
+   * @return chefNoteItemId
+  **/
+  @ApiModelProperty(value = "The Lightspeed Chef Note Item Id to map")
+  public String getChefNoteItemId() {
+    return chefNoteItemId;
+  }
+
+  public void setChefNoteItemId(String chefNoteItemId) {
+    this.chefNoteItemId = chefNoteItemId;
+  }
+
+  public LightspeedSettings chefNoteModifierId(String chefNoteModifierId) {
+    this.chefNoteModifierId = chefNoteModifierId;
+    return this;
+  }
+
+   /**
+   * The Lightspeed Chef Note Modifier Id to map
+   * @return chefNoteModifierId
+  **/
+  @ApiModelProperty(value = "The Lightspeed Chef Note Modifier Id to map")
+  public String getChefNoteModifierId() {
+    return chefNoteModifierId;
+  }
+
+  public void setChefNoteModifierId(String chefNoteModifierId) {
+    this.chefNoteModifierId = chefNoteModifierId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -525,12 +588,15 @@ public class LightspeedSettings {
         Objects.equals(this.deliveryTableIds, lightspeedSettings.deliveryTableIds) &&
         Objects.equals(this.useTaxInclusivePrices, lightspeedSettings.useTaxInclusivePrices) &&
         Objects.equals(this.skipStatusCheckAndAcceptOrderAfterSending, lightspeedSettings.skipStatusCheckAndAcceptOrderAfterSending) &&
-        Objects.equals(this.sendTableNumberToTableId, lightspeedSettings.sendTableNumberToTableId);
+        Objects.equals(this.sendTableNumberToTableId, lightspeedSettings.sendTableNumberToTableId) &&
+        Objects.equals(this.addChefNoteToProduct, lightspeedSettings.addChefNoteToProduct) &&
+        Objects.equals(this.chefNoteItemId, lightspeedSettings.chefNoteItemId) &&
+        Objects.equals(this.chefNoteModifierId, lightspeedSettings.chefNoteModifierId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(companyId, useOAuth, enabled, estimatedMinutesForDelivery, estimatedMinutesForCollection, geographicLocation, establishment, voucherId, deliveryFeeId, processingFeeId, priceType, menuId, collectionTableId, deliveryTableId, collectionTableIds, deliveryTableIds, useTaxInclusivePrices, skipStatusCheckAndAcceptOrderAfterSending, sendTableNumberToTableId);
+    return Objects.hash(companyId, useOAuth, enabled, estimatedMinutesForDelivery, estimatedMinutesForCollection, geographicLocation, establishment, voucherId, deliveryFeeId, processingFeeId, priceType, menuId, collectionTableId, deliveryTableId, collectionTableIds, deliveryTableIds, useTaxInclusivePrices, skipStatusCheckAndAcceptOrderAfterSending, sendTableNumberToTableId, addChefNoteToProduct, chefNoteItemId, chefNoteModifierId);
   }
 
 
@@ -558,6 +624,9 @@ public class LightspeedSettings {
     sb.append("    useTaxInclusivePrices: ").append(toIndentedString(useTaxInclusivePrices)).append("\n");
     sb.append("    skipStatusCheckAndAcceptOrderAfterSending: ").append(toIndentedString(skipStatusCheckAndAcceptOrderAfterSending)).append("\n");
     sb.append("    sendTableNumberToTableId: ").append(toIndentedString(sendTableNumberToTableId)).append("\n");
+    sb.append("    addChefNoteToProduct: ").append(toIndentedString(addChefNoteToProduct)).append("\n");
+    sb.append("    chefNoteItemId: ").append(toIndentedString(chefNoteItemId)).append("\n");
+    sb.append("    chefNoteModifierId: ").append(toIndentedString(chefNoteModifierId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
