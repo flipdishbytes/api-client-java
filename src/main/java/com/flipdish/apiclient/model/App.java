@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-01T15:06:31.856Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T10:11:10.086Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -293,6 +293,16 @@ public class App {
     VIEWCATALOGELEMENTS("ViewCatalogElements"),
     
     DELETECATALOGELEMENTS("DeleteCatalogElements"),
+    
+    VIEWMETAFIELDDEFINITIONS("ViewMetafieldDefinitions"),
+    
+    CREATEMETAFIELDDEFINITIONS("CreateMetafieldDefinitions"),
+    
+    UPDATEMETAFIELDDEFINITIONS("UpdateMetafieldDefinitions"),
+    
+    DELETEMETAFIELDDEFINITIONS("DeleteMetafieldDefinitions"),
+    
+    UPDATEMETAFIELDS("UpdateMetafields"),
     
     VIEWAPPSTATISTICS("ViewAppStatistics"),
     

@@ -14,10 +14,14 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CreateMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinition;
+import com.flipdish.apiclient.model.RestApiPaginationResultOwnerEntityConfigurations;
+import com.flipdish.apiclient.model.RestApiResultMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -36,7 +40,25 @@ public class MetafieldDefinitionsApiTest {
 
     
     /**
-     * Get paginated groups by app name id filtered by types
+     * Create a Metafield Definition
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createMetafieldDefinitionTest() throws ApiException {
+        String appId = null;
+        String ownerEntity = null;
+        CreateMetafieldDefinition createMetafieldDefinition = null;
+        RestApiResultMetafieldDefinition response = api.createMetafieldDefinition(appId, ownerEntity, createMetafieldDefinition);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -51,6 +73,41 @@ public class MetafieldDefinitionsApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultMetafieldDefinition response = api.getMetafieldDefinitions(appId, ownerEntity, searchTerm, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOwnerEntityConfigurationsTest() throws ApiException {
+        String appId = null;
+        RestApiPaginationResultOwnerEntityConfigurations response = api.getOwnerEntityConfigurations(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a Metafield Definition
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateMetafieldDefinitionTest() throws ApiException {
+        String appId = null;
+        String ownerEntity = null;
+        String key = null;
+        UpdateMetafieldDefinition updateMetafieldDefinition = null;
+        RestApiResultMetafieldDefinition response = api.updateMetafieldDefinition(appId, ownerEntity, key, updateMetafieldDefinition);
 
         // TODO: test validations
     }

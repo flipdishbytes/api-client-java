@@ -27,10 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.flipdish.apiclient.model.CreateMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinition;
+import com.flipdish.apiclient.model.RestApiPaginationResultOwnerEntityConfigurations;
+import com.flipdish.apiclient.model.RestApiResultMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -57,6 +61,148 @@ public class MetafieldDefinitionsApi {
         this.apiClient = apiClient;
     }
 
+    /**
+     * Build call for createMetafieldDefinition
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param createMetafieldDefinition  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call createMetafieldDefinitionCall(String appId, String ownerEntity, CreateMetafieldDefinition createMetafieldDefinition, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = createMetafieldDefinition;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "ownerEntity" + "\\}", apiClient.escapeString(ownerEntity.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call createMetafieldDefinitionValidateBeforeCall(String appId, String ownerEntity, CreateMetafieldDefinition createMetafieldDefinition, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling createMetafieldDefinition(Async)");
+        }
+        
+        // verify the required parameter 'ownerEntity' is set
+        if (ownerEntity == null) {
+            throw new ApiException("Missing the required parameter 'ownerEntity' when calling createMetafieldDefinition(Async)");
+        }
+        
+        // verify the required parameter 'createMetafieldDefinition' is set
+        if (createMetafieldDefinition == null) {
+            throw new ApiException("Missing the required parameter 'createMetafieldDefinition' when calling createMetafieldDefinition(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = createMetafieldDefinitionCall(appId, ownerEntity, createMetafieldDefinition, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Create a Metafield Definition
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param createMetafieldDefinition  (required)
+     * @return RestApiResultMetafieldDefinition
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultMetafieldDefinition createMetafieldDefinition(String appId, String ownerEntity, CreateMetafieldDefinition createMetafieldDefinition) throws ApiException {
+        ApiResponse<RestApiResultMetafieldDefinition> resp = createMetafieldDefinitionWithHttpInfo(appId, ownerEntity, createMetafieldDefinition);
+        return resp.getData();
+    }
+
+    /**
+     * Create a Metafield Definition
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param createMetafieldDefinition  (required)
+     * @return ApiResponse&lt;RestApiResultMetafieldDefinition&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultMetafieldDefinition> createMetafieldDefinitionWithHttpInfo(String appId, String ownerEntity, CreateMetafieldDefinition createMetafieldDefinition) throws ApiException {
+        com.squareup.okhttp.Call call = createMetafieldDefinitionValidateBeforeCall(appId, ownerEntity, createMetafieldDefinition, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultMetafieldDefinition>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Create a Metafield Definition (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param createMetafieldDefinition  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call createMetafieldDefinitionAsync(String appId, String ownerEntity, CreateMetafieldDefinition createMetafieldDefinition, final ApiCallback<RestApiResultMetafieldDefinition> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = createMetafieldDefinitionValidateBeforeCall(appId, ownerEntity, createMetafieldDefinition, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultMetafieldDefinition>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
     /**
      * Build call for getMetafieldDefinitions
      * @param appId  (required)
@@ -138,7 +284,7 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param ownerEntity  (required)
@@ -154,7 +300,7 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param ownerEntity  (required)
@@ -171,7 +317,7 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get paginated groups by app name id filtered by types (asynchronously)
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity} (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param ownerEntity  (required)
@@ -205,6 +351,281 @@ public class MetafieldDefinitionsApi {
 
         com.squareup.okhttp.Call call = getMetafieldDefinitionsValidateBeforeCall(appId, ownerEntity, searchTerm, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultMetafieldDefinition>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getOwnerEntityConfigurations
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getOwnerEntityConfigurationsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/metafields/definitions"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getOwnerEntityConfigurationsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getOwnerEntityConfigurations(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getOwnerEntityConfigurationsCall(appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @return RestApiPaginationResultOwnerEntityConfigurations
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiPaginationResultOwnerEntityConfigurations getOwnerEntityConfigurations(String appId) throws ApiException {
+        ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> resp = getOwnerEntityConfigurationsWithHttpInfo(appId);
+        return resp.getData();
+    }
+
+    /**
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiPaginationResultOwnerEntityConfigurations&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> getOwnerEntityConfigurationsWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getOwnerEntityConfigurationsValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultOwnerEntityConfigurations>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getOwnerEntityConfigurationsAsync(String appId, final ApiCallback<RestApiPaginationResultOwnerEntityConfigurations> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getOwnerEntityConfigurationsValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultOwnerEntityConfigurations>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for updateMetafieldDefinition
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param key  (required)
+     * @param updateMetafieldDefinition  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call updateMetafieldDefinitionCall(String appId, String ownerEntity, String key, UpdateMetafieldDefinition updateMetafieldDefinition, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateMetafieldDefinition;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "ownerEntity" + "\\}", apiClient.escapeString(ownerEntity.toString()))
+            .replaceAll("\\{" + "key" + "\\}", apiClient.escapeString(key.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call updateMetafieldDefinitionValidateBeforeCall(String appId, String ownerEntity, String key, UpdateMetafieldDefinition updateMetafieldDefinition, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling updateMetafieldDefinition(Async)");
+        }
+        
+        // verify the required parameter 'ownerEntity' is set
+        if (ownerEntity == null) {
+            throw new ApiException("Missing the required parameter 'ownerEntity' when calling updateMetafieldDefinition(Async)");
+        }
+        
+        // verify the required parameter 'key' is set
+        if (key == null) {
+            throw new ApiException("Missing the required parameter 'key' when calling updateMetafieldDefinition(Async)");
+        }
+        
+        // verify the required parameter 'updateMetafieldDefinition' is set
+        if (updateMetafieldDefinition == null) {
+            throw new ApiException("Missing the required parameter 'updateMetafieldDefinition' when calling updateMetafieldDefinition(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = updateMetafieldDefinitionCall(appId, ownerEntity, key, updateMetafieldDefinition, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Create a Metafield Definition
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param key  (required)
+     * @param updateMetafieldDefinition  (required)
+     * @return RestApiResultMetafieldDefinition
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultMetafieldDefinition updateMetafieldDefinition(String appId, String ownerEntity, String key, UpdateMetafieldDefinition updateMetafieldDefinition) throws ApiException {
+        ApiResponse<RestApiResultMetafieldDefinition> resp = updateMetafieldDefinitionWithHttpInfo(appId, ownerEntity, key, updateMetafieldDefinition);
+        return resp.getData();
+    }
+
+    /**
+     * Create a Metafield Definition
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param key  (required)
+     * @param updateMetafieldDefinition  (required)
+     * @return ApiResponse&lt;RestApiResultMetafieldDefinition&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultMetafieldDefinition> updateMetafieldDefinitionWithHttpInfo(String appId, String ownerEntity, String key, UpdateMetafieldDefinition updateMetafieldDefinition) throws ApiException {
+        com.squareup.okhttp.Call call = updateMetafieldDefinitionValidateBeforeCall(appId, ownerEntity, key, updateMetafieldDefinition, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultMetafieldDefinition>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Create a Metafield Definition (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param ownerEntity  (required)
+     * @param key  (required)
+     * @param updateMetafieldDefinition  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call updateMetafieldDefinitionAsync(String appId, String ownerEntity, String key, UpdateMetafieldDefinition updateMetafieldDefinition, final ApiCallback<RestApiResultMetafieldDefinition> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = updateMetafieldDefinitionValidateBeforeCall(appId, ownerEntity, key, updateMetafieldDefinition, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultMetafieldDefinition>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
