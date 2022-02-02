@@ -28,7 +28,7 @@ import java.io.IOException;
  * Configured physical restaurants
  */
 @ApiModel(description = "Configured physical restaurants")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T10:11:10.086Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T14:38:39.416Z")
 public class ConfiguredPhysicalRestaurant {
   @SerializedName("StoreId")
   private Integer storeId = null;

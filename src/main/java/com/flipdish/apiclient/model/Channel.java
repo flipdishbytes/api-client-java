@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Channel
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T10:11:10.086Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T14:38:39.416Z")
 public class Channel {
   @SerializedName("ChannelId")
   private Integer channelId = null;

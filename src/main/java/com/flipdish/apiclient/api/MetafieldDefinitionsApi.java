@@ -28,10 +28,10 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.CreateMetafieldDefinition;
+import com.flipdish.apiclient.model.OwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinition;
-import com.flipdish.apiclient.model.RestApiPaginationResultOwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiResultMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
@@ -422,11 +422,11 @@ public class MetafieldDefinitionsApi {
      * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @return RestApiPaginationResultOwnerEntityConfigurations
+     * @return OwnerEntityConfigurations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultOwnerEntityConfigurations getOwnerEntityConfigurations(String appId) throws ApiException {
-        ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> resp = getOwnerEntityConfigurationsWithHttpInfo(appId);
+    public OwnerEntityConfigurations getOwnerEntityConfigurations(String appId) throws ApiException {
+        ApiResponse<OwnerEntityConfigurations> resp = getOwnerEntityConfigurationsWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -434,12 +434,12 @@ public class MetafieldDefinitionsApi {
      * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @return ApiResponse&lt;RestApiPaginationResultOwnerEntityConfigurations&gt;
+     * @return ApiResponse&lt;OwnerEntityConfigurations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultOwnerEntityConfigurations> getOwnerEntityConfigurationsWithHttpInfo(String appId) throws ApiException {
+    public ApiResponse<OwnerEntityConfigurations> getOwnerEntityConfigurationsWithHttpInfo(String appId) throws ApiException {
         com.squareup.okhttp.Call call = getOwnerEntityConfigurationsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultOwnerEntityConfigurations>(){}.getType();
+        Type localVarReturnType = new TypeToken<OwnerEntityConfigurations>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -451,7 +451,7 @@ public class MetafieldDefinitionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOwnerEntityConfigurationsAsync(String appId, final ApiCallback<RestApiPaginationResultOwnerEntityConfigurations> callback) throws ApiException {
+    public com.squareup.okhttp.Call getOwnerEntityConfigurationsAsync(String appId, final ApiCallback<OwnerEntityConfigurations> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -473,7 +473,7 @@ public class MetafieldDefinitionsApi {
         }
 
         com.squareup.okhttp.Call call = getOwnerEntityConfigurationsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultOwnerEntityConfigurations>(){}.getType();
+        Type localVarReturnType = new TypeToken<OwnerEntityConfigurations>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

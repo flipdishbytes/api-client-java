@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 <a name="getOwnerEntityConfigurations"></a>
 # **getOwnerEntityConfigurations**
-> RestApiPaginationResultOwnerEntityConfigurations getOwnerEntityConfigurations(appId)
+> OwnerEntityConfigurations getOwnerEntityConfigurations(appId)
 
 Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
@@ -154,7 +154,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MetafieldDefinitionsApi apiInstance = new MetafieldDefinitionsApi();
 String appId = "appId_example"; // String | 
 try {
-    RestApiPaginationResultOwnerEntityConfigurations result = apiInstance.getOwnerEntityConfigurations(appId);
+    OwnerEntityConfigurations result = apiInstance.getOwnerEntityConfigurations(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MetafieldDefinitionsApi#getOwnerEntityConfigurations");
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultOwnerEntityConfigurations**](RestApiPaginationResultOwnerEntityConfigurations.md)
+[**OwnerEntityConfigurations**](OwnerEntityConfigurations.md)
 
 ### Authorization
 

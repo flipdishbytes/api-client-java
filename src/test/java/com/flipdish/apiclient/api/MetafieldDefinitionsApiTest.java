@@ -15,10 +15,10 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateMetafieldDefinition;
+import com.flipdish.apiclient.model.OwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinition;
-import com.flipdish.apiclient.model.RestApiPaginationResultOwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiResultMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
@@ -88,7 +88,7 @@ public class MetafieldDefinitionsApiTest {
     @Test
     public void getOwnerEntityConfigurationsTest() throws ApiException {
         String appId = null;
-        RestApiPaginationResultOwnerEntityConfigurations response = api.getOwnerEntityConfigurations(appId);
+        OwnerEntityConfigurations response = api.getOwnerEntityConfigurations(appId);
 
         // TODO: test validations
     }
