@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ownerEntity** | [**OwnerEntityEnum**](#OwnerEntityEnum) | The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity} |  [optional]
-**key** | **String** | Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot | 
 **isReadOnly** | **Boolean** | Indicates if a definition can be edited or not |  [optional]
+**ownerEntity** | [**OwnerEntityEnum**](#OwnerEntityEnum) | The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity} |  [optional]
+**key** | **String** | Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot | 
 **valueType** | [**ValueTypeEnum**](#ValueTypeEnum) | The excepted type for the Value field |  [optional]
 **name** | **String** | Field Name | 
 **description** | **String** | Field Description |  [optional]

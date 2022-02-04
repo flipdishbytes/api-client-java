@@ -30,10 +30,13 @@ import java.util.List;
  * Metafield Definition
  */
 @ApiModel(description = "Metafield Definition")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T14:38:39.416Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-04T12:13:53.469Z")
 public class MetafieldDefinition {
+  @SerializedName("IsReadOnly")
+  private Boolean isReadOnly = null;
+
   /**
-   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity}
+   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
    */
   @JsonAdapter(OwnerEntityEnum.Adapter.class)
   public enum OwnerEntityEnum {
@@ -86,9 +89,6 @@ public class MetafieldDefinition {
 
   @SerializedName("Key")
   private String key = null;
-
-  @SerializedName("IsReadOnly")
-  private Boolean isReadOnly = null;
 
   /**
    * The excepted type for the Value field
@@ -198,16 +198,34 @@ public class MetafieldDefinition {
   @SerializedName("Behaviors")
   private List<BehaviorsEnum> behaviors = null;
 
+  public MetafieldDefinition isReadOnly(Boolean isReadOnly) {
+    this.isReadOnly = isReadOnly;
+    return this;
+  }
+
+   /**
+   * Indicates if a definition can be edited or not
+   * @return isReadOnly
+  **/
+  @ApiModelProperty(value = "Indicates if a definition can be edited or not")
+  public Boolean isIsReadOnly() {
+    return isReadOnly;
+  }
+
+  public void setIsReadOnly(Boolean isReadOnly) {
+    this.isReadOnly = isReadOnly;
+  }
+
   public MetafieldDefinition ownerEntity(OwnerEntityEnum ownerEntity) {
     this.ownerEntity = ownerEntity;
     return this;
   }
 
    /**
-   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity}
+   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
    * @return ownerEntity
   **/
-  @ApiModelProperty(value = "The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity}")
+  @ApiModelProperty(value = "The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}")
   public OwnerEntityEnum getOwnerEntity() {
     return ownerEntity;
   }
@@ -232,24 +250,6 @@ public class MetafieldDefinition {
 
   public void setKey(String key) {
     this.key = key;
-  }
-
-  public MetafieldDefinition isReadOnly(Boolean isReadOnly) {
-    this.isReadOnly = isReadOnly;
-    return this;
-  }
-
-   /**
-   * Indicates if a definition can be edited or not
-   * @return isReadOnly
-  **/
-  @ApiModelProperty(value = "Indicates if a definition can be edited or not")
-  public Boolean isIsReadOnly() {
-    return isReadOnly;
-  }
-
-  public void setIsReadOnly(Boolean isReadOnly) {
-    this.isReadOnly = isReadOnly;
   }
 
   public MetafieldDefinition valueType(ValueTypeEnum valueType) {
@@ -342,9 +342,9 @@ public class MetafieldDefinition {
       return false;
     }
     MetafieldDefinition metafieldDefinition = (MetafieldDefinition) o;
-    return Objects.equals(this.ownerEntity, metafieldDefinition.ownerEntity) &&
+    return Objects.equals(this.isReadOnly, metafieldDefinition.isReadOnly) &&
+        Objects.equals(this.ownerEntity, metafieldDefinition.ownerEntity) &&
         Objects.equals(this.key, metafieldDefinition.key) &&
-        Objects.equals(this.isReadOnly, metafieldDefinition.isReadOnly) &&
         Objects.equals(this.valueType, metafieldDefinition.valueType) &&
         Objects.equals(this.name, metafieldDefinition.name) &&
         Objects.equals(this.description, metafieldDefinition.description) &&
@@ -353,7 +353,7 @@ public class MetafieldDefinition {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ownerEntity, key, isReadOnly, valueType, name, description, behaviors);
+    return Objects.hash(isReadOnly, ownerEntity, key, valueType, name, description, behaviors);
   }
 
 
@@ -362,9 +362,9 @@ public class MetafieldDefinition {
     StringBuilder sb = new StringBuilder();
     sb.append("class MetafieldDefinition {\n");
     
+    sb.append("    isReadOnly: ").append(toIndentedString(isReadOnly)).append("\n");
     sb.append("    ownerEntity: ").append(toIndentedString(ownerEntity)).append("\n");
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
-    sb.append("    isReadOnly: ").append(toIndentedString(isReadOnly)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

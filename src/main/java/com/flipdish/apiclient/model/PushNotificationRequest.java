@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Push Notification Details
  */
 @ApiModel(description = "Push Notification Details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-02T14:38:39.416Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-04T12:13:53.469Z")
 public class PushNotificationRequest {
   @SerializedName("ScheduledTime")
   private OffsetDateTime scheduledTime = null;

@@ -19,6 +19,7 @@ import com.flipdish.apiclient.model.OwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinition;
+import com.flipdish.apiclient.model.RestApiPaginationResultMetafieldDefinitionRecommendation;
 import com.flipdish.apiclient.model.RestApiResultMetafieldDefinition;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
@@ -58,7 +59,25 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+     * Get a Metafield Definition for the specified owner entity and key.
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getMetafieldDefinitionByKeyTest() throws ApiException {
+        String appId = null;
+        String ownerEntity = null;
+        String key = null;
+        RestApiResultMetafieldDefinition response = api.getMetafieldDefinitionByKey(appId, ownerEntity, key);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get Metafield Definitions for the specified owner entity.
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -94,7 +113,27 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Create a Metafield Definition
+     * Get OwnerEntity Definition Recommendations
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOwnerEntityRecommendationsTest() throws ApiException {
+        String appId = null;
+        String ownerEntity = null;
+        String searchTerm = null;
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultMetafieldDefinitionRecommendation response = api.getOwnerEntityRecommendations(appId, ownerEntity, searchTerm, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update a Metafield Definition
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
