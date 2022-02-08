@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-04T12:13:53.469Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-08T14:18:50.949Z")
 public class MenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
@@ -48,6 +48,15 @@ public class MenuItemOptionSetItem {
 
   @SerializedName("ProductId")
   private String productId = null;
+
+  @SerializedName("TaxRateName")
+  private String taxRateName = null;
+
+  @SerializedName("TaxRateId")
+  private Integer taxRateId = null;
+
+  @SerializedName("TaxValue")
+  private Double taxValue = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -216,6 +225,60 @@ public class MenuItemOptionSetItem {
     this.productId = productId;
   }
 
+  public MenuItemOptionSetItem taxRateName(String taxRateName) {
+    this.taxRateName = taxRateName;
+    return this;
+  }
+
+   /**
+   * Tax rate name
+   * @return taxRateName
+  **/
+  @ApiModelProperty(value = "Tax rate name")
+  public String getTaxRateName() {
+    return taxRateName;
+  }
+
+  public void setTaxRateName(String taxRateName) {
+    this.taxRateName = taxRateName;
+  }
+
+  public MenuItemOptionSetItem taxRateId(Integer taxRateId) {
+    this.taxRateId = taxRateId;
+    return this;
+  }
+
+   /**
+   * Get taxRateId
+   * @return taxRateId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTaxRateId() {
+    return taxRateId;
+  }
+
+  public void setTaxRateId(Integer taxRateId) {
+    this.taxRateId = taxRateId;
+  }
+
+  public MenuItemOptionSetItem taxValue(Double taxValue) {
+    this.taxValue = taxValue;
+    return this;
+  }
+
+   /**
+   * Get taxValue
+   * @return taxValue
+  **/
+  @ApiModelProperty(value = "")
+  public Double getTaxValue() {
+    return taxValue;
+  }
+
+  public void setTaxValue(Double taxValue) {
+    this.taxValue = taxValue;
+  }
+
   public MenuItemOptionSetItem name(String name) {
     this.name = name;
     return this;
@@ -339,6 +402,9 @@ public class MenuItemOptionSetItem {
         Objects.equals(this.metadata, menuItemOptionSetItem.metadata) &&
         Objects.equals(this.nextMenuItemOptionSetId, menuItemOptionSetItem.nextMenuItemOptionSetId) &&
         Objects.equals(this.productId, menuItemOptionSetItem.productId) &&
+        Objects.equals(this.taxRateName, menuItemOptionSetItem.taxRateName) &&
+        Objects.equals(this.taxRateId, menuItemOptionSetItem.taxRateId) &&
+        Objects.equals(this.taxValue, menuItemOptionSetItem.taxValue) &&
         Objects.equals(this.name, menuItemOptionSetItem.name) &&
         Objects.equals(this.price, menuItemOptionSetItem.price) &&
         Objects.equals(this.isAvailable, menuItemOptionSetItem.isAvailable) &&
@@ -349,7 +415,7 @@ public class MenuItemOptionSetItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, productId, name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, productId, taxRateName, taxRateId, taxValue, name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
   }
 
 
@@ -363,6 +429,9 @@ public class MenuItemOptionSetItem {
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    nextMenuItemOptionSetId: ").append(toIndentedString(nextMenuItemOptionSetId)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    taxRateName: ").append(toIndentedString(taxRateName)).append("\n");
+    sb.append("    taxRateId: ").append(toIndentedString(taxRateId)).append("\n");
+    sb.append("    taxValue: ").append(toIndentedString(taxValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");
