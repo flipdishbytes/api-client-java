@@ -28,7 +28,7 @@ import java.io.IOException;
  * Metafield
  */
 @ApiModel(description = "Metafield")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-08T14:18:50.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-10T10:37:16.412Z")
 public class Metafield {
   @SerializedName("Key")
   private String key = null;
@@ -45,7 +45,7 @@ public class Metafield {
    * Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
    * @return key
   **/
-  @ApiModelProperty(value = "Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot")
+  @ApiModelProperty(required = true, value = "Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot")
   public String getKey() {
     return key;
   }
@@ -63,7 +63,7 @@ public class Metafield {
    * Value of the metafield.
    * @return value
   **/
-  @ApiModelProperty(value = "Value of the metafield.")
+  @ApiModelProperty(required = true, value = "Value of the metafield.")
   public String getValue() {
     return value;
   }

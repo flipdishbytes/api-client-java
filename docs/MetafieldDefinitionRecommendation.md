@@ -5,11 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ownerEntity** | [**OwnerEntityEnum**](#OwnerEntityEnum) | The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity} |  [optional]
-**key** | **String** | Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot | 
+**key** | **String** | Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore | 
 **valueType** | [**ValueTypeEnum**](#ValueTypeEnum) | The excepted type for the Value field |  [optional]
 **name** | **String** | Field Name | 
 **description** | **String** | Field Description |  [optional]
 **behaviors** | [**List&lt;BehaviorsEnum&gt;**](#List&lt;BehaviorsEnum&gt;) | Enable Metafield Behaviors |  [optional]
+**metafieldDefinitionRecommendationId** | **Integer** | Metafield Recommendation Id |  [optional]
 
 
 <a name="OwnerEntityEnum"></a>

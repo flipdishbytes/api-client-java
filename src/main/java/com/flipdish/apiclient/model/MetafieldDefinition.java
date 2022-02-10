@@ -30,7 +30,7 @@ import java.util.List;
  * Metafield Definition
  */
 @ApiModel(description = "Metafield Definition")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-08T14:18:50.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-10T10:37:16.412Z")
 public class MetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;
@@ -198,6 +198,9 @@ public class MetafieldDefinition {
   @SerializedName("Behaviors")
   private List<BehaviorsEnum> behaviors = null;
 
+  @SerializedName("MetafieldDefinitionRecommendationId")
+  private Integer metafieldDefinitionRecommendationId = null;
+
   public MetafieldDefinition isReadOnly(Boolean isReadOnly) {
     this.isReadOnly = isReadOnly;
     return this;
@@ -240,10 +243,10 @@ public class MetafieldDefinition {
   }
 
    /**
-   * Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
+   * Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore
    * @return key
   **/
-  @ApiModelProperty(required = true, value = "Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot")
+  @ApiModelProperty(required = true, value = "Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore")
   public String getKey() {
     return key;
   }
@@ -332,6 +335,24 @@ public class MetafieldDefinition {
     this.behaviors = behaviors;
   }
 
+  public MetafieldDefinition metafieldDefinitionRecommendationId(Integer metafieldDefinitionRecommendationId) {
+    this.metafieldDefinitionRecommendationId = metafieldDefinitionRecommendationId;
+    return this;
+  }
+
+   /**
+   * Metafield Recommendation Id
+   * @return metafieldDefinitionRecommendationId
+  **/
+  @ApiModelProperty(value = "Metafield Recommendation Id")
+  public Integer getMetafieldDefinitionRecommendationId() {
+    return metafieldDefinitionRecommendationId;
+  }
+
+  public void setMetafieldDefinitionRecommendationId(Integer metafieldDefinitionRecommendationId) {
+    this.metafieldDefinitionRecommendationId = metafieldDefinitionRecommendationId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -348,12 +369,13 @@ public class MetafieldDefinition {
         Objects.equals(this.valueType, metafieldDefinition.valueType) &&
         Objects.equals(this.name, metafieldDefinition.name) &&
         Objects.equals(this.description, metafieldDefinition.description) &&
-        Objects.equals(this.behaviors, metafieldDefinition.behaviors);
+        Objects.equals(this.behaviors, metafieldDefinition.behaviors) &&
+        Objects.equals(this.metafieldDefinitionRecommendationId, metafieldDefinition.metafieldDefinitionRecommendationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isReadOnly, ownerEntity, key, valueType, name, description, behaviors);
+    return Objects.hash(isReadOnly, ownerEntity, key, valueType, name, description, behaviors, metafieldDefinitionRecommendationId);
   }
 
 
@@ -369,6 +391,7 @@ public class MetafieldDefinition {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    behaviors: ").append(toIndentedString(behaviors)).append("\n");
+    sb.append("    metafieldDefinitionRecommendationId: ").append(toIndentedString(metafieldDefinitionRecommendationId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Configured app item for list
  */
 @ApiModel(description = "Configured app item for list")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-08T14:18:50.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-10T10:37:16.412Z")
 public class AppConfigurationHeader {
   @SerializedName("AppStoreAppId")
   private String appStoreAppId = null;

@@ -30,7 +30,7 @@ import java.util.List;
  * OwnerEntity Metafield Definition Recommendation
  */
 @ApiModel(description = "OwnerEntity Metafield Definition Recommendation")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-08T14:18:50.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-10T10:37:16.412Z")
 public class MetafieldDefinitionRecommendation {
   /**
    * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
@@ -195,6 +195,9 @@ public class MetafieldDefinitionRecommendation {
   @SerializedName("Behaviors")
   private List<BehaviorsEnum> behaviors = null;
 
+  @SerializedName("MetafieldDefinitionRecommendationId")
+  private Integer metafieldDefinitionRecommendationId = null;
+
   public MetafieldDefinitionRecommendation ownerEntity(OwnerEntityEnum ownerEntity) {
     this.ownerEntity = ownerEntity;
     return this;
@@ -219,10 +222,10 @@ public class MetafieldDefinitionRecommendation {
   }
 
    /**
-   * Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
+   * Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore
    * @return key
   **/
-  @ApiModelProperty(required = true, value = "Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot")
+  @ApiModelProperty(required = true, value = "Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore")
   public String getKey() {
     return key;
   }
@@ -311,6 +314,24 @@ public class MetafieldDefinitionRecommendation {
     this.behaviors = behaviors;
   }
 
+  public MetafieldDefinitionRecommendation metafieldDefinitionRecommendationId(Integer metafieldDefinitionRecommendationId) {
+    this.metafieldDefinitionRecommendationId = metafieldDefinitionRecommendationId;
+    return this;
+  }
+
+   /**
+   * Metafield Recommendation Id
+   * @return metafieldDefinitionRecommendationId
+  **/
+  @ApiModelProperty(value = "Metafield Recommendation Id")
+  public Integer getMetafieldDefinitionRecommendationId() {
+    return metafieldDefinitionRecommendationId;
+  }
+
+  public void setMetafieldDefinitionRecommendationId(Integer metafieldDefinitionRecommendationId) {
+    this.metafieldDefinitionRecommendationId = metafieldDefinitionRecommendationId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -326,12 +347,13 @@ public class MetafieldDefinitionRecommendation {
         Objects.equals(this.valueType, metafieldDefinitionRecommendation.valueType) &&
         Objects.equals(this.name, metafieldDefinitionRecommendation.name) &&
         Objects.equals(this.description, metafieldDefinitionRecommendation.description) &&
-        Objects.equals(this.behaviors, metafieldDefinitionRecommendation.behaviors);
+        Objects.equals(this.behaviors, metafieldDefinitionRecommendation.behaviors) &&
+        Objects.equals(this.metafieldDefinitionRecommendationId, metafieldDefinitionRecommendation.metafieldDefinitionRecommendationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ownerEntity, key, valueType, name, description, behaviors);
+    return Objects.hash(ownerEntity, key, valueType, name, description, behaviors, metafieldDefinitionRecommendationId);
   }
 
 
@@ -346,6 +368,7 @@ public class MetafieldDefinitionRecommendation {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    behaviors: ").append(toIndentedString(behaviors)).append("\n");
+    sb.append("    metafieldDefinitionRecommendationId: ").append(toIndentedString(metafieldDefinitionRecommendationId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
