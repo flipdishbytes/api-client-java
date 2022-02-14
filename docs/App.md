@@ -38,6 +38,7 @@ STOREMANAGER | &quot;StoreManager&quot;
 STORESTAFF | &quot;StoreStaff&quot;
 STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
 FINANCEMANGER | &quot;FinanceManger&quot;
+SUPPORT | &quot;Support&quot;
 
 
 <a name="List<AppResourceSetEnum>"></a>
