@@ -90,6 +90,22 @@ public class ChannelsApiTest {
     }
     
     /**
+     * Returns a list of sales channels that are assigned to a given whitelabel
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAssignedChannelsTest() throws ApiException {
+        String appId = null;
+        Object response = api.getAssignedChannels(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * 
      *
      * 
@@ -118,6 +134,39 @@ public class ChannelsApiTest {
     public void getChannelsTest() throws ApiException {
         String appId = null;
         RestApiPaginationResultChannel response = api.getChannels(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Returns a list of sales channels that are not yet assigned to a given whitelabel
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getNotAssignedChannelsTest() throws ApiException {
+        String appId = null;
+        Object response = api.getNotAssignedChannels(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Returns a list of store that are assigned to the given sales channel.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoresAssignedToChannelTest() throws ApiException {
+        String appId = null;
+        Integer channelId = null;
+        Object response = api.getStoresAssignedToChannel(appId, channelId);
 
         // TODO: test validations
     }
