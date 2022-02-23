@@ -30,7 +30,7 @@ import java.util.List;
  * Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
  */
 @ApiModel(description = "Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-21T10:22:24.124Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-02-23T15:18:17.126Z")
 public class UpdateMetafieldDefinition {
   @SerializedName("Name")
   private String name = null;

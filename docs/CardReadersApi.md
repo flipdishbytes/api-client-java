@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authorizeStripeTerminal**](CardReadersApi.md#authorizeStripeTerminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelCurrentlyInitiatedBluetoothDeviceUpdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
+[**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
 [**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
+[**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
 [**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
 [**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 [**initiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiateKioskBluetoothUpdateInstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
@@ -122,6 +124,59 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="generateStripeTerminalLocation"></a>
+# **generateStripeTerminalLocation**
+> RestApiResultStripeTerminalLocation generateStripeTerminalLocation(appId)
+
+Get Location ID for Stripe Terminal
+
+Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CardReadersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CardReadersApi apiInstance = new CardReadersApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultStripeTerminalLocation result = apiInstance.generateStripeTerminalLocation(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CardReadersApi#generateStripeTerminalLocation");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultStripeTerminalLocation**](RestApiResultStripeTerminalLocation.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getBluetoothTerminalStatus"></a>
 # **getBluetoothTerminalStatus**
 > RestApiResultBluetoothTerminalStatus getBluetoothTerminalStatus(appId, deviceId)
@@ -167,6 +222,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultBluetoothTerminalStatus**](RestApiResultBluetoothTerminalStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getStripeConnectionToken"></a>
+# **getStripeConnectionToken**
+> RestApiResultStripeTerminalConnectionToken getStripeConnectionToken(appId)
+
+Get Connection Token For a Stripe Terminal
+
+Can only be called by Kiosk
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CardReadersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CardReadersApi apiInstance = new CardReadersApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultStripeTerminalConnectionToken result = apiInstance.getStripeConnectionToken(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CardReadersApi#getStripeConnectionToken");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultStripeTerminalConnectionToken**](RestApiResultStripeTerminalConnectionToken.md)
 
 ### Authorization
 

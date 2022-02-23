@@ -17,6 +17,8 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
+import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
+import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalPrivateKey;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -71,6 +73,22 @@ public class CardReadersApiTest {
     }
     
     /**
+     * Get Location ID for Stripe Terminal
+     *
+     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void generateStripeTerminalLocationTest() throws ApiException {
+        String appId = null;
+        RestApiResultStripeTerminalLocation response = api.generateStripeTerminalLocation(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get the status of the bluetooth terminal
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
@@ -83,6 +101,22 @@ public class CardReadersApiTest {
         String appId = null;
         String deviceId = null;
         RestApiResultBluetoothTerminalStatus response = api.getBluetoothTerminalStatus(appId, deviceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get Connection Token For a Stripe Terminal
+     *
+     * Can only be called by Kiosk
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStripeConnectionTokenTest() throws ApiException {
+        String appId = null;
+        RestApiResultStripeTerminalConnectionToken response = api.getStripeConnectionToken(appId);
 
         // TODO: test validations
     }
