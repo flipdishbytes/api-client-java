@@ -37,6 +37,23 @@ public class ChannelsApiTest {
 
     
     /**
+     * Assign a given AppId to a Sales Channel
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void assignAppIdToSalesChannelTest() throws ApiException {
+        String appId = null;
+        Integer channelId = null;
+        Object response = api.assignAppIdToSalesChannel(appId, channelId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Attachs the specified store to the given sales channel.
      *
      * 
