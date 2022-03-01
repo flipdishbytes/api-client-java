@@ -181,7 +181,7 @@ ASSIGNDRIVERTOORDER | &quot;AssignDriverToOrder&quot;
 UNASSIGNDRIVERFROMORDER | &quot;UnassignDriverFromOrder&quot;
 UPDATEORDERSDELIVERYTRACKINGSTATUS | &quot;UpdateOrdersDeliveryTrackingStatus&quot;
 VIEWPAYOUTS | &quot;ViewPayouts&quot;
-CHANNELS | &quot;Channels&quot;
+VIEWCHANNELS | &quot;ViewChannels&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>
