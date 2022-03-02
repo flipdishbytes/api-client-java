@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 <a name="updateAppStoreConfig"></a>
 # **updateAppStoreConfig**
-> updateAppStoreConfig(appId, appStoreAppId, configId, appConfigurationBase)
+> updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase)
 
 Update app store app configuration
 
@@ -316,9 +316,9 @@ AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
 String appId = "appId_example"; // String | App Id
 String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
 String configId = "configId_example"; // String | App Store Configuration Id
-AppConfiguration appConfigurationBase = new AppConfiguration(); // AppConfiguration | App Store Configuration Base
+UpdateAppConfiguration updateAppConfigurationBase = new UpdateAppConfiguration(); // UpdateAppConfiguration | App Store Configuration Base
 try {
-    apiInstance.updateAppStoreConfig(appId, appStoreAppId, configId, appConfigurationBase);
+    apiInstance.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#updateAppStoreConfig");
     e.printStackTrace();
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **appId** | **String**| App Id |
  **appStoreAppId** | **String**| App Store App Id |
  **configId** | **String**| App Store Configuration Id |
- **appConfigurationBase** | [**AppConfiguration**](AppConfiguration.md)| App Store Configuration Base |
+ **updateAppConfigurationBase** | [**UpdateAppConfiguration**](UpdateAppConfiguration.md)| App Store Configuration Base |
 
 ### Return type
 

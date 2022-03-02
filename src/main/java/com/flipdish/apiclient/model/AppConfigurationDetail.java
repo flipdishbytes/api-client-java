@@ -32,7 +32,7 @@ import java.util.List;
  * Application configuration detail
  */
 @ApiModel(description = "Application configuration detail")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T12:21:08.098Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T15:41:59.208Z")
 public class AppConfigurationDetail {
   @SerializedName("Id")
   private String id = null;
@@ -165,6 +165,116 @@ public class AppConfigurationDetail {
 
   @SerializedName("OAuthAppId")
   private String oauthAppId = null;
+
+  /**
+   * Teammate App Access Level
+   */
+  @JsonAdapter(TeammateAppAccessLevelEnum.Adapter.class)
+  public enum TeammateAppAccessLevelEnum {
+    OWNER("Owner"),
+    
+    STOREOWNER("StoreOwner"),
+    
+    MANAGEDOWNER("ManagedOwner"),
+    
+    INTEGRATOR("Integrator"),
+    
+    STOREMANAGER("StoreManager"),
+    
+    STORESTAFF("StoreStaff"),
+    
+    STOREREADONLYACCESS("StoreReadOnlyAccess"),
+    
+    FINANCEMANGER("FinanceManger");
+
+    private String value;
+
+    TeammateAppAccessLevelEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static TeammateAppAccessLevelEnum fromValue(String text) {
+      for (TeammateAppAccessLevelEnum b : TeammateAppAccessLevelEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<TeammateAppAccessLevelEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final TeammateAppAccessLevelEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public TeammateAppAccessLevelEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return TeammateAppAccessLevelEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("TeammateAppAccessLevel")
+  private TeammateAppAccessLevelEnum teammateAppAccessLevel = null;
+
+  /**
+   * Permissions Type
+   */
+  @JsonAdapter(PermissionsTypeEnum.Adapter.class)
+  public enum PermissionsTypeEnum {
+    TEAMMATE("Teammate");
+
+    private String value;
+
+    PermissionsTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static PermissionsTypeEnum fromValue(String text) {
+      for (PermissionsTypeEnum b : PermissionsTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<PermissionsTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final PermissionsTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public PermissionsTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return PermissionsTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("PermissionsType")
+  private PermissionsTypeEnum permissionsType = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -476,6 +586,42 @@ public class AppConfigurationDetail {
     this.oauthAppId = oauthAppId;
   }
 
+  public AppConfigurationDetail teammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
+    this.teammateAppAccessLevel = teammateAppAccessLevel;
+    return this;
+  }
+
+   /**
+   * Teammate App Access Level
+   * @return teammateAppAccessLevel
+  **/
+  @ApiModelProperty(value = "Teammate App Access Level")
+  public TeammateAppAccessLevelEnum getTeammateAppAccessLevel() {
+    return teammateAppAccessLevel;
+  }
+
+  public void setTeammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
+    this.teammateAppAccessLevel = teammateAppAccessLevel;
+  }
+
+  public AppConfigurationDetail permissionsType(PermissionsTypeEnum permissionsType) {
+    this.permissionsType = permissionsType;
+    return this;
+  }
+
+   /**
+   * Permissions Type
+   * @return permissionsType
+  **/
+  @ApiModelProperty(required = true, value = "Permissions Type")
+  public PermissionsTypeEnum getPermissionsType() {
+    return permissionsType;
+  }
+
+  public void setPermissionsType(PermissionsTypeEnum permissionsType) {
+    this.permissionsType = permissionsType;
+  }
+
   public AppConfigurationDetail name(String name) {
     this.name = name;
     return this;
@@ -634,6 +780,8 @@ public class AppConfigurationDetail {
         Objects.equals(this.setupInstructions, appConfigurationDetail.setupInstructions) &&
         Objects.equals(this.externalSetupLink, appConfigurationDetail.externalSetupLink) &&
         Objects.equals(this.oauthAppId, appConfigurationDetail.oauthAppId) &&
+        Objects.equals(this.teammateAppAccessLevel, appConfigurationDetail.teammateAppAccessLevel) &&
+        Objects.equals(this.permissionsType, appConfigurationDetail.permissionsType) &&
         Objects.equals(this.name, appConfigurationDetail.name) &&
         Objects.equals(this.description, appConfigurationDetail.description) &&
         Objects.equals(this.logo, appConfigurationDetail.logo) &&
@@ -645,7 +793,7 @@ public class AppConfigurationDetail {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, name, description, logo, verificationStatus, tags, regions, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, logo, verificationStatus, tags, regions, developerName);
   }
 
 
@@ -666,6 +814,8 @@ public class AppConfigurationDetail {
     sb.append("    setupInstructions: ").append(toIndentedString(setupInstructions)).append("\n");
     sb.append("    externalSetupLink: ").append(toIndentedString(externalSetupLink)).append("\n");
     sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
+    sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
+    sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");

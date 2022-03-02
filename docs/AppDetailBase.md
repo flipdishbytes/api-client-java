@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **setupInstructions** | **String** | Setup Instructions |  [optional]
 **externalSetupLink** | **String** | External Setup Link |  [optional]
 **oauthAppId** | **String** | OAuth App Id | 
+**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate App Access Level |  [optional]
+**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions Type | 
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **logo** | **String** | Logo |  [optional]
@@ -35,6 +37,27 @@ Name | Value
 NONE | &quot;None&quot;
 SINGLE | &quot;Single&quot;
 MULTIPLE | &quot;Multiple&quot;
+
+
+<a name="TeammateAppAccessLevelEnum"></a>
+## Enum: TeammateAppAccessLevelEnum
+Name | Value
+---- | -----
+OWNER | &quot;Owner&quot;
+STOREOWNER | &quot;StoreOwner&quot;
+MANAGEDOWNER | &quot;ManagedOwner&quot;
+INTEGRATOR | &quot;Integrator&quot;
+STOREMANAGER | &quot;StoreManager&quot;
+STORESTAFF | &quot;StoreStaff&quot;
+STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
+FINANCEMANGER | &quot;FinanceManger&quot;
+
+
+<a name="PermissionsTypeEnum"></a>
+## Enum: PermissionsTypeEnum
+Name | Value
+---- | -----
+TEAMMATE | &quot;Teammate&quot;
 
 
 <a name="VerificationStatusEnum"></a>

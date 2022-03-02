@@ -14,7 +14,6 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppConfiguration;
 import com.flipdish.apiclient.model.AppConfigurationDetail;
 import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationHeader;
 import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationSummary;
@@ -23,6 +22,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateAppConfiguration;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -139,8 +139,8 @@ public class AppStoreConfigurationsApiTest {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
-        AppConfiguration appConfigurationBase = null;
-        api.updateAppStoreConfig(appId, appStoreAppId, configId, appConfigurationBase);
+        UpdateAppConfiguration updateAppConfigurationBase = null;
+        api.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
 
         // TODO: test validations
     }

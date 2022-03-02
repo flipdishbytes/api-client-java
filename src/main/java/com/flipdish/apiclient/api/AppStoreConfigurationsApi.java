@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.AppConfiguration;
 import com.flipdish.apiclient.model.AppConfigurationDetail;
 import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationHeader;
 import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationSummary;
@@ -36,6 +35,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateAppConfiguration;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -742,14 +742,14 @@ public class AppStoreConfigurationsApi {
      * @param appId App Id (required)
      * @param appStoreAppId App Store App Id (required)
      * @param configId App Store Configuration Id (required)
-     * @param appConfigurationBase App Store Configuration Base (required)
+     * @param updateAppConfigurationBase App Store Configuration Base (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreConfigCall(String appId, String appStoreAppId, String configId, AppConfiguration appConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = appConfigurationBase;
+    public com.squareup.okhttp.Call updateAppStoreConfigCall(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateAppConfigurationBase;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}"
@@ -793,7 +793,7 @@ public class AppStoreConfigurationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateAppStoreConfigValidateBeforeCall(String appId, String appStoreAppId, String configId, AppConfiguration appConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateAppStoreConfigValidateBeforeCall(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -810,13 +810,13 @@ public class AppStoreConfigurationsApi {
             throw new ApiException("Missing the required parameter 'configId' when calling updateAppStoreConfig(Async)");
         }
         
-        // verify the required parameter 'appConfigurationBase' is set
-        if (appConfigurationBase == null) {
-            throw new ApiException("Missing the required parameter 'appConfigurationBase' when calling updateAppStoreConfig(Async)");
+        // verify the required parameter 'updateAppConfigurationBase' is set
+        if (updateAppConfigurationBase == null) {
+            throw new ApiException("Missing the required parameter 'updateAppConfigurationBase' when calling updateAppStoreConfig(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateAppStoreConfigCall(appId, appStoreAppId, configId, appConfigurationBase, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreConfigCall(appId, appStoreAppId, configId, updateAppConfigurationBase, progressListener, progressRequestListener);
         return call;
 
     }
@@ -827,11 +827,11 @@ public class AppStoreConfigurationsApi {
      * @param appId App Id (required)
      * @param appStoreAppId App Store App Id (required)
      * @param configId App Store Configuration Id (required)
-     * @param appConfigurationBase App Store Configuration Base (required)
+     * @param updateAppConfigurationBase App Store Configuration Base (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateAppStoreConfig(String appId, String appStoreAppId, String configId, AppConfiguration appConfigurationBase) throws ApiException {
-        updateAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId, appConfigurationBase);
+    public void updateAppStoreConfig(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase) throws ApiException {
+        updateAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId, updateAppConfigurationBase);
     }
 
     /**
@@ -840,12 +840,12 @@ public class AppStoreConfigurationsApi {
      * @param appId App Id (required)
      * @param appStoreAppId App Store App Id (required)
      * @param configId App Store Configuration Id (required)
-     * @param appConfigurationBase App Store Configuration Base (required)
+     * @param updateAppConfigurationBase App Store Configuration Base (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId, AppConfiguration appConfigurationBase) throws ApiException {
-        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, appConfigurationBase, null, null);
+    public ApiResponse<Void> updateAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase) throws ApiException {
+        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppConfigurationBase, null, null);
         return apiClient.execute(call);
     }
 
@@ -855,12 +855,12 @@ public class AppStoreConfigurationsApi {
      * @param appId App Id (required)
      * @param appStoreAppId App Store App Id (required)
      * @param configId App Store Configuration Id (required)
-     * @param appConfigurationBase App Store Configuration Base (required)
+     * @param updateAppConfigurationBase App Store Configuration Base (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreConfigAsync(String appId, String appStoreAppId, String configId, AppConfiguration appConfigurationBase, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateAppStoreConfigAsync(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -881,7 +881,7 @@ public class AppStoreConfigurationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, appConfigurationBase, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppConfigurationBase, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

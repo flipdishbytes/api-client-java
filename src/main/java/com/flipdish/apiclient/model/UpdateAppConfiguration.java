@@ -28,10 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AppConfiguration
+ * UpdateAppConfiguration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T12:21:08.098Z")
-public class AppConfiguration {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T15:41:59.208Z")
+public class UpdateAppConfiguration {
   @SerializedName("Id")
   private String id = null;
 
@@ -44,7 +44,7 @@ public class AppConfiguration {
   @SerializedName("Settings")
   private List<AppConfigurationSetting> settings = null;
 
-  public AppConfiguration id(String id) {
+  public UpdateAppConfiguration id(String id) {
     this.id = id;
     return this;
   }
@@ -62,12 +62,12 @@ public class AppConfiguration {
     this.id = id;
   }
 
-  public AppConfiguration physicalRestaurants(List<Integer> physicalRestaurants) {
+  public UpdateAppConfiguration physicalRestaurants(List<Integer> physicalRestaurants) {
     this.physicalRestaurants = physicalRestaurants;
     return this;
   }
 
-  public AppConfiguration addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
+  public UpdateAppConfiguration addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
     if (this.physicalRestaurants == null) {
       this.physicalRestaurants = new ArrayList<Integer>();
     }
@@ -88,7 +88,7 @@ public class AppConfiguration {
     this.physicalRestaurants = physicalRestaurants;
   }
 
-  public AppConfiguration isEnabled(Boolean isEnabled) {
+  public UpdateAppConfiguration isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
@@ -106,12 +106,12 @@ public class AppConfiguration {
     this.isEnabled = isEnabled;
   }
 
-  public AppConfiguration settings(List<AppConfigurationSetting> settings) {
+  public UpdateAppConfiguration settings(List<AppConfigurationSetting> settings) {
     this.settings = settings;
     return this;
   }
 
-  public AppConfiguration addSettingsItem(AppConfigurationSetting settingsItem) {
+  public UpdateAppConfiguration addSettingsItem(AppConfigurationSetting settingsItem) {
     if (this.settings == null) {
       this.settings = new ArrayList<AppConfigurationSetting>();
     }
@@ -141,11 +141,11 @@ public class AppConfiguration {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppConfiguration appConfiguration = (AppConfiguration) o;
-    return Objects.equals(this.id, appConfiguration.id) &&
-        Objects.equals(this.physicalRestaurants, appConfiguration.physicalRestaurants) &&
-        Objects.equals(this.isEnabled, appConfiguration.isEnabled) &&
-        Objects.equals(this.settings, appConfiguration.settings);
+    UpdateAppConfiguration updateAppConfiguration = (UpdateAppConfiguration) o;
+    return Objects.equals(this.id, updateAppConfiguration.id) &&
+        Objects.equals(this.physicalRestaurants, updateAppConfiguration.physicalRestaurants) &&
+        Objects.equals(this.isEnabled, updateAppConfiguration.isEnabled) &&
+        Objects.equals(this.settings, updateAppConfiguration.settings);
   }
 
   @Override
@@ -157,7 +157,7 @@ public class AppConfiguration {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppConfiguration {\n");
+    sb.append("class UpdateAppConfiguration {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
