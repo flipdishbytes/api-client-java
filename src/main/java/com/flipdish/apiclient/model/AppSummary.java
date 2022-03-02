@@ -30,7 +30,7 @@ import java.util.List;
  * Application Summary  &lt;remarks&gt;Header information for display in lists, like list of apps&lt;/remarks&gt;
  */
 @ApiModel(description = "Application Summary  <remarks>Header information for display in lists, like list of apps</remarks>")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-01T15:57:33.745Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T12:21:08.098Z")
 public class AppSummary {
   @SerializedName("Id")
   private String id = null;

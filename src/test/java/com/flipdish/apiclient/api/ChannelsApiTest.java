@@ -14,7 +14,9 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.ChannelStoreMapping;
 import com.flipdish.apiclient.model.Response;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelStoreMapping;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultChannel;
@@ -72,6 +74,24 @@ public class ChannelsApiTest {
     }
     
     /**
+     * Unassign a Store from a Sales Channel
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void assignStoreToChannel_0Test() throws ApiException {
+        Integer storeId = null;
+        String appId = null;
+        Integer channelId = null;
+        Object response = api.assignStoreToChannel_0(storeId, appId, channelId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Attachs the specified store to the given sales channel.
      *
      * 
@@ -85,6 +105,41 @@ public class ChannelsApiTest {
         Integer channelId = null;
         Integer storeId = null;
         Object response = api.attachStoreToSalesChannel(appId, channelId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void channelsGetStoreChannelStoreMappingTest() throws ApiException {
+        String appId = null;
+        Integer channelId = null;
+        RestApiArrayResultStoreChannelStoreMapping response = api.channelsGetStoreChannelStoreMapping(appId, channelId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void channelsSetStoreChannelStoreMappingTest() throws ApiException {
+        String appId = null;
+        Integer channelId = null;
+        List<ChannelStoreMapping> stores = null;
+        RestApiArrayResultStoreChannelStoreMapping response = api.channelsSetStoreChannelStoreMapping(appId, channelId, stores);
 
         // TODO: test validations
     }

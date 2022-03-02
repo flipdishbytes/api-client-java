@@ -6,7 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 [**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
+[**assignStoreToChannel_0**](ChannelsApi.md#assignStoreToChannel_0) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 [**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
+[**channelsGetStoreChannelStoreMapping**](ChannelsApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/channelstores | 
+[**channelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 [**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 [**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
 [**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
@@ -125,6 +128,61 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="assignStoreToChannel_0"></a>
+# **assignStoreToChannel_0**
+> Object assignStoreToChannel_0(storeId, appId, channelId)
+
+Unassign a Store from a Sales Channel
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+Integer storeId = 56; // Integer | Store Id (123, 456)
+String appId = "appId_example"; // String | AppId (AppNameIdxxx)
+Integer channelId = 56; // Integer | Channel Id (123, 456)
+try {
+    Object result = apiInstance.assignStoreToChannel_0(storeId, appId, channelId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#assignStoreToChannel_0");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**| Store Id (123, 456) |
+ **appId** | **String**| AppId (AppNameIdxxx) |
+ **channelId** | **Integer**| Channel Id (123, 456) |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="attachStoreToSalesChannel"></a>
 # **attachStoreToSalesChannel**
 > Object attachStoreToSalesChannel(appId, channelId, storeId)
@@ -178,6 +236,114 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="channelsGetStoreChannelStoreMapping"></a>
+# **channelsGetStoreChannelStoreMapping**
+> RestApiArrayResultStoreChannelStoreMapping channelsGetStoreChannelStoreMapping(appId, channelId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
+try {
+    RestApiArrayResultStoreChannelStoreMapping result = apiInstance.channelsGetStoreChannelStoreMapping(appId, channelId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#channelsGetStoreChannelStoreMapping");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
+
+### Return type
+
+[**RestApiArrayResultStoreChannelStoreMapping**](RestApiArrayResultStoreChannelStoreMapping.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="channelsSetStoreChannelStoreMapping"></a>
+# **channelsSetStoreChannelStoreMapping**
+> RestApiArrayResultStoreChannelStoreMapping channelsSetStoreChannelStoreMapping(appId, channelId, stores)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
+List<ChannelStoreMapping> stores = Arrays.asList(new ChannelStoreMapping()); // List<ChannelStoreMapping> | 
+try {
+    RestApiArrayResultStoreChannelStoreMapping result = apiInstance.channelsSetStoreChannelStoreMapping(appId, channelId, stores);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#channelsSetStoreChannelStoreMapping");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
+ **stores** | [**List&lt;ChannelStoreMapping&gt;**](ChannelStoreMapping.md)|  |
+
+### Return type
+
+[**RestApiArrayResultStoreChannelStoreMapping**](RestApiArrayResultStoreChannelStoreMapping.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="detachAllStoresFromSalesChannel"></a>

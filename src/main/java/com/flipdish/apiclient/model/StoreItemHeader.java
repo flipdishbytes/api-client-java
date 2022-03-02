@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * StoreItemHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-01T15:57:33.745Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-02T12:21:08.098Z")
 public class StoreItemHeader {
   @SerializedName("StoreId")
   private Integer storeId = null;
