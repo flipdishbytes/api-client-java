@@ -74,24 +74,6 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Unassign a Store from a Sales Channel
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void assignStoreToChannel_0Test() throws ApiException {
-        Integer storeId = null;
-        String appId = null;
-        Integer channelId = null;
-        Object response = api.assignStoreToChannel_0(storeId, appId, channelId);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Attachs the specified store to the given sales channel.
      *
      * 
@@ -274,6 +256,24 @@ public class ChannelsApiTest {
         String appId = null;
         Integer channelId = null;
         Response response = api.getStoresBySalesChannel(appId, channelId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Unassign a Store from a Sales Channel
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void unassignStoreFromChannelTest() throws ApiException {
+        Integer storeId = null;
+        String appId = null;
+        Integer channelId = null;
+        Object response = api.unassignStoreFromChannel(storeId, appId, channelId);
 
         // TODO: test validations
     }

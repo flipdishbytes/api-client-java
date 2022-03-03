@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 [**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-[**assignStoreToChannel_0**](ChannelsApi.md#assignStoreToChannel_0) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 [**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 [**channelsGetStoreChannelStoreMapping**](ChannelsApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/channelstores | 
 [**channelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
@@ -18,6 +17,7 @@ Method | HTTP request | Description
 [**getNotAssignedChannels**](ChannelsApi.md#getNotAssignedChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
 [**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 [**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
+[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 
 
 <a name="assignAppIdToSalesChannel"></a>
@@ -103,61 +103,6 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#assignStoreToChannel");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id (123, 456) |
- **appId** | **String**| AppId (AppNameIdxxx) |
- **channelId** | **Integer**| Channel Id (123, 456) |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="assignStoreToChannel_0"></a>
-# **assignStoreToChannel_0**
-> Object assignStoreToChannel_0(storeId, appId, channelId)
-
-Unassign a Store from a Sales Channel
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.ChannelsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-ChannelsApi apiInstance = new ChannelsApi();
-Integer storeId = 56; // Integer | Store Id (123, 456)
-String appId = "appId_example"; // String | AppId (AppNameIdxxx)
-Integer channelId = 56; // Integer | Channel Id (123, 456)
-try {
-    Object result = apiInstance.assignStoreToChannel_0(storeId, appId, channelId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ChannelsApi#assignStoreToChannel_0");
     e.printStackTrace();
 }
 ```
@@ -756,6 +701,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Response**](Response.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="unassignStoreFromChannel"></a>
+# **unassignStoreFromChannel**
+> Object unassignStoreFromChannel(storeId, appId, channelId)
+
+Unassign a Store from a Sales Channel
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+Integer storeId = 56; // Integer | Store Id (123, 456)
+String appId = "appId_example"; // String | AppId (AppNameIdxxx)
+Integer channelId = 56; // Integer | Channel Id (123, 456)
+try {
+    Object result = apiInstance.unassignStoreFromChannel(storeId, appId, channelId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#unassignStoreFromChannel");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**| Store Id (123, 456) |
+ **appId** | **String**| AppId (AppNameIdxxx) |
+ **channelId** | **Integer**| Channel Id (123, 456) |
+
+### Return type
+
+**Object**
 
 ### Authorization
 
