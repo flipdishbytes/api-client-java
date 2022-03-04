@@ -182,6 +182,8 @@ UNASSIGNDRIVERFROMORDER | &quot;UnassignDriverFromOrder&quot;
 UPDATEORDERSDELIVERYTRACKINGSTATUS | &quot;UpdateOrdersDeliveryTrackingStatus&quot;
 VIEWPAYOUTS | &quot;ViewPayouts&quot;
 VIEWCHANNELS | &quot;ViewChannels&quot;
+VIEWONBOARDING | &quot;ViewOnboarding&quot;
+UPDATEONBOARDING | &quot;UpdateOnboarding&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>
