@@ -28,16 +28,71 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Application
+ * App store app
  */
-@ApiModel(description = "Application")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppDetail {
+@ApiModel(description = "App store app")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
 
   /**
-   * Configuration Type  &lt;example&gt;ExternalLink&lt;/example&gt;&lt;example&gt;FlipdishHosted&lt;/example&gt;
+   * Application verification status
+   */
+  @JsonAdapter(VerificationStatusEnum.Adapter.class)
+  public enum VerificationStatusEnum {
+    DRAFT("Draft"),
+    
+    SUBMITTED("Submitted"),
+    
+    VERIFIED("Verified");
+
+    private String value;
+
+    VerificationStatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static VerificationStatusEnum fromValue(String text) {
+      for (VerificationStatusEnum b : VerificationStatusEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<VerificationStatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final VerificationStatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public VerificationStatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return VerificationStatusEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("VerificationStatus")
+  private VerificationStatusEnum verificationStatus = null;
+
+  @SerializedName("Logo")
+  private String logo = null;
+
+  /**
+   * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
    */
   @JsonAdapter(ConfigurationTypeEnum.Adapter.class)
   public enum ConfigurationTypeEnum {
@@ -87,7 +142,7 @@ public class AppDetail {
   private ConfigurationTypeEnum configurationType = null;
 
   /**
-   * Store Selector Type
+   * Store selector type
    */
   @JsonAdapter(StoreSelectorTypeEnum.Adapter.class)
   public enum StoreSelectorTypeEnum {
@@ -151,7 +206,7 @@ public class AppDetail {
   private String oauthAppId = null;
 
   /**
-   * Teammate App Access Level
+   * Teammate app access level
    */
   @JsonAdapter(TeammateAppAccessLevelEnum.Adapter.class)
   public enum TeammateAppAccessLevelEnum {
@@ -213,7 +268,7 @@ public class AppDetail {
   private TeammateAppAccessLevelEnum teammateAppAccessLevel = null;
 
   /**
-   * Permissions Type
+   * Permissions type
    */
   @JsonAdapter(PermissionsTypeEnum.Adapter.class)
   public enum PermissionsTypeEnum {
@@ -266,63 +321,8 @@ public class AppDetail {
   @SerializedName("Description")
   private String description = null;
 
-  @SerializedName("Logo")
-  private String logo = null;
-
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
-
-  /**
-   * Application verification status
-   */
-  @JsonAdapter(VerificationStatusEnum.Adapter.class)
-  public enum VerificationStatusEnum {
-    DRAFT("Draft"),
-    
-    SUBMITTED("Submitted"),
-    
-    VERIFIED("Verified");
-
-    private String value;
-
-    VerificationStatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static VerificationStatusEnum fromValue(String text) {
-      for (VerificationStatusEnum b : VerificationStatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<VerificationStatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final VerificationStatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public VerificationStatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return VerificationStatusEnum.fromValue(String.valueOf(value));
-      }
-    }
-  }
-
-  @SerializedName("VerificationStatus")
-  private VerificationStatusEnum verificationStatus = null;
 
   @SerializedName("Tags")
   private List<String> tags = new ArrayList<String>();
@@ -333,16 +333,16 @@ public class AppDetail {
   @SerializedName("DeveloperName")
   private String developerName = null;
 
-  public AppDetail id(String id) {
+  public AppStoreApp id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Integration Public Id
+   * Unique App store app id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Integration Public Id")
+  @ApiModelProperty(required = true, value = "Unique App store app id")
   public String getId() {
     return id;
   }
@@ -351,231 +351,7 @@ public class AppDetail {
     this.id = id;
   }
 
-  public AppDetail configurationType(ConfigurationTypeEnum configurationType) {
-    this.configurationType = configurationType;
-    return this;
-  }
-
-   /**
-   * Configuration Type  &lt;example&gt;ExternalLink&lt;/example&gt;&lt;example&gt;FlipdishHosted&lt;/example&gt;
-   * @return configurationType
-  **/
-  @ApiModelProperty(required = true, value = "Configuration Type  <example>ExternalLink</example><example>FlipdishHosted</example>")
-  public ConfigurationTypeEnum getConfigurationType() {
-    return configurationType;
-  }
-
-  public void setConfigurationType(ConfigurationTypeEnum configurationType) {
-    this.configurationType = configurationType;
-  }
-
-  public AppDetail storeSelectorType(StoreSelectorTypeEnum storeSelectorType) {
-    this.storeSelectorType = storeSelectorType;
-    return this;
-  }
-
-   /**
-   * Store Selector Type
-   * @return storeSelectorType
-  **/
-  @ApiModelProperty(required = true, value = "Store Selector Type")
-  public StoreSelectorTypeEnum getStoreSelectorType() {
-    return storeSelectorType;
-  }
-
-  public void setStoreSelectorType(StoreSelectorTypeEnum storeSelectorType) {
-    this.storeSelectorType = storeSelectorType;
-  }
-
-  public AppDetail fieldGroups(List<FieldGroup> fieldGroups) {
-    this.fieldGroups = fieldGroups;
-    return this;
-  }
-
-  public AppDetail addFieldGroupsItem(FieldGroup fieldGroupsItem) {
-    if (this.fieldGroups == null) {
-      this.fieldGroups = new ArrayList<FieldGroup>();
-    }
-    this.fieldGroups.add(fieldGroupsItem);
-    return this;
-  }
-
-   /**
-   * Field Groups
-   * @return fieldGroups
-  **/
-  @ApiModelProperty(value = "Field Groups")
-  public List<FieldGroup> getFieldGroups() {
-    return fieldGroups;
-  }
-
-  public void setFieldGroups(List<FieldGroup> fieldGroups) {
-    this.fieldGroups = fieldGroups;
-  }
-
-  public AppDetail setupInstructions(String setupInstructions) {
-    this.setupInstructions = setupInstructions;
-    return this;
-  }
-
-   /**
-   * Setup Instructions
-   * @return setupInstructions
-  **/
-  @ApiModelProperty(value = "Setup Instructions")
-  public String getSetupInstructions() {
-    return setupInstructions;
-  }
-
-  public void setSetupInstructions(String setupInstructions) {
-    this.setupInstructions = setupInstructions;
-  }
-
-  public AppDetail externalSetupLink(String externalSetupLink) {
-    this.externalSetupLink = externalSetupLink;
-    return this;
-  }
-
-   /**
-   * External Setup Link
-   * @return externalSetupLink
-  **/
-  @ApiModelProperty(value = "External Setup Link")
-  public String getExternalSetupLink() {
-    return externalSetupLink;
-  }
-
-  public void setExternalSetupLink(String externalSetupLink) {
-    this.externalSetupLink = externalSetupLink;
-  }
-
-  public AppDetail oauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
-    return this;
-  }
-
-   /**
-   * OAuth App Id
-   * @return oauthAppId
-  **/
-  @ApiModelProperty(required = true, value = "OAuth App Id")
-  public String getOauthAppId() {
-    return oauthAppId;
-  }
-
-  public void setOauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
-  }
-
-  public AppDetail teammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
-    this.teammateAppAccessLevel = teammateAppAccessLevel;
-    return this;
-  }
-
-   /**
-   * Teammate App Access Level
-   * @return teammateAppAccessLevel
-  **/
-  @ApiModelProperty(value = "Teammate App Access Level")
-  public TeammateAppAccessLevelEnum getTeammateAppAccessLevel() {
-    return teammateAppAccessLevel;
-  }
-
-  public void setTeammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
-    this.teammateAppAccessLevel = teammateAppAccessLevel;
-  }
-
-  public AppDetail permissionsType(PermissionsTypeEnum permissionsType) {
-    this.permissionsType = permissionsType;
-    return this;
-  }
-
-   /**
-   * Permissions Type
-   * @return permissionsType
-  **/
-  @ApiModelProperty(required = true, value = "Permissions Type")
-  public PermissionsTypeEnum getPermissionsType() {
-    return permissionsType;
-  }
-
-  public void setPermissionsType(PermissionsTypeEnum permissionsType) {
-    this.permissionsType = permissionsType;
-  }
-
-  public AppDetail name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name
-   * @return name
-  **/
-  @ApiModelProperty(required = true, value = "Name")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public AppDetail description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Description
-   * @return description
-  **/
-  @ApiModelProperty(required = true, value = "Description")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public AppDetail logo(String logo) {
-    this.logo = logo;
-    return this;
-  }
-
-   /**
-   * Logo
-   * @return logo
-  **/
-  @ApiModelProperty(value = "Logo")
-  public String getLogo() {
-    return logo;
-  }
-
-  public void setLogo(String logo) {
-    this.logo = logo;
-  }
-
-  public AppDetail isEnabled(Boolean isEnabled) {
-    this.isEnabled = isEnabled;
-    return this;
-  }
-
-   /**
-   * Is application enabled
-   * @return isEnabled
-  **/
-  @ApiModelProperty(value = "Is application enabled")
-  public Boolean isIsEnabled() {
-    return isEnabled;
-  }
-
-  public void setIsEnabled(Boolean isEnabled) {
-    this.isEnabled = isEnabled;
-  }
-
-  public AppDetail verificationStatus(VerificationStatusEnum verificationStatus) {
+  public AppStoreApp verificationStatus(VerificationStatusEnum verificationStatus) {
     this.verificationStatus = verificationStatus;
     return this;
   }
@@ -593,12 +369,236 @@ public class AppDetail {
     this.verificationStatus = verificationStatus;
   }
 
-  public AppDetail tags(List<String> tags) {
+  public AppStoreApp logo(String logo) {
+    this.logo = logo;
+    return this;
+  }
+
+   /**
+   * Logo
+   * @return logo
+  **/
+  @ApiModelProperty(value = "Logo")
+  public String getLogo() {
+    return logo;
+  }
+
+  public void setLogo(String logo) {
+    this.logo = logo;
+  }
+
+  public AppStoreApp configurationType(ConfigurationTypeEnum configurationType) {
+    this.configurationType = configurationType;
+    return this;
+  }
+
+   /**
+   * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
+   * @return configurationType
+  **/
+  @ApiModelProperty(required = true, value = "Configuration type  <example>External link</example><example>Flipdish hosted</example>")
+  public ConfigurationTypeEnum getConfigurationType() {
+    return configurationType;
+  }
+
+  public void setConfigurationType(ConfigurationTypeEnum configurationType) {
+    this.configurationType = configurationType;
+  }
+
+  public AppStoreApp storeSelectorType(StoreSelectorTypeEnum storeSelectorType) {
+    this.storeSelectorType = storeSelectorType;
+    return this;
+  }
+
+   /**
+   * Store selector type
+   * @return storeSelectorType
+  **/
+  @ApiModelProperty(required = true, value = "Store selector type")
+  public StoreSelectorTypeEnum getStoreSelectorType() {
+    return storeSelectorType;
+  }
+
+  public void setStoreSelectorType(StoreSelectorTypeEnum storeSelectorType) {
+    this.storeSelectorType = storeSelectorType;
+  }
+
+  public AppStoreApp fieldGroups(List<FieldGroup> fieldGroups) {
+    this.fieldGroups = fieldGroups;
+    return this;
+  }
+
+  public AppStoreApp addFieldGroupsItem(FieldGroup fieldGroupsItem) {
+    if (this.fieldGroups == null) {
+      this.fieldGroups = new ArrayList<FieldGroup>();
+    }
+    this.fieldGroups.add(fieldGroupsItem);
+    return this;
+  }
+
+   /**
+   * Field groups
+   * @return fieldGroups
+  **/
+  @ApiModelProperty(value = "Field groups")
+  public List<FieldGroup> getFieldGroups() {
+    return fieldGroups;
+  }
+
+  public void setFieldGroups(List<FieldGroup> fieldGroups) {
+    this.fieldGroups = fieldGroups;
+  }
+
+  public AppStoreApp setupInstructions(String setupInstructions) {
+    this.setupInstructions = setupInstructions;
+    return this;
+  }
+
+   /**
+   * Setup instructions
+   * @return setupInstructions
+  **/
+  @ApiModelProperty(value = "Setup instructions")
+  public String getSetupInstructions() {
+    return setupInstructions;
+  }
+
+  public void setSetupInstructions(String setupInstructions) {
+    this.setupInstructions = setupInstructions;
+  }
+
+  public AppStoreApp externalSetupLink(String externalSetupLink) {
+    this.externalSetupLink = externalSetupLink;
+    return this;
+  }
+
+   /**
+   * External setup link
+   * @return externalSetupLink
+  **/
+  @ApiModelProperty(value = "External setup link")
+  public String getExternalSetupLink() {
+    return externalSetupLink;
+  }
+
+  public void setExternalSetupLink(String externalSetupLink) {
+    this.externalSetupLink = externalSetupLink;
+  }
+
+  public AppStoreApp oauthAppId(String oauthAppId) {
+    this.oauthAppId = oauthAppId;
+    return this;
+  }
+
+   /**
+   * OAuth app id
+   * @return oauthAppId
+  **/
+  @ApiModelProperty(required = true, value = "OAuth app id")
+  public String getOauthAppId() {
+    return oauthAppId;
+  }
+
+  public void setOauthAppId(String oauthAppId) {
+    this.oauthAppId = oauthAppId;
+  }
+
+  public AppStoreApp teammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
+    this.teammateAppAccessLevel = teammateAppAccessLevel;
+    return this;
+  }
+
+   /**
+   * Teammate app access level
+   * @return teammateAppAccessLevel
+  **/
+  @ApiModelProperty(value = "Teammate app access level")
+  public TeammateAppAccessLevelEnum getTeammateAppAccessLevel() {
+    return teammateAppAccessLevel;
+  }
+
+  public void setTeammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
+    this.teammateAppAccessLevel = teammateAppAccessLevel;
+  }
+
+  public AppStoreApp permissionsType(PermissionsTypeEnum permissionsType) {
+    this.permissionsType = permissionsType;
+    return this;
+  }
+
+   /**
+   * Permissions type
+   * @return permissionsType
+  **/
+  @ApiModelProperty(required = true, value = "Permissions type")
+  public PermissionsTypeEnum getPermissionsType() {
+    return permissionsType;
+  }
+
+  public void setPermissionsType(PermissionsTypeEnum permissionsType) {
+    this.permissionsType = permissionsType;
+  }
+
+  public AppStoreApp name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Name
+   * @return name
+  **/
+  @ApiModelProperty(required = true, value = "Name")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public AppStoreApp description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Description
+   * @return description
+  **/
+  @ApiModelProperty(required = true, value = "Description")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public AppStoreApp isEnabled(Boolean isEnabled) {
+    this.isEnabled = isEnabled;
+    return this;
+  }
+
+   /**
+   * Is application enabled
+   * @return isEnabled
+  **/
+  @ApiModelProperty(value = "Is application enabled")
+  public Boolean isIsEnabled() {
+    return isEnabled;
+  }
+
+  public void setIsEnabled(Boolean isEnabled) {
+    this.isEnabled = isEnabled;
+  }
+
+  public AppStoreApp tags(List<String> tags) {
     this.tags = tags;
     return this;
   }
 
-  public AppDetail addTagsItem(String tagsItem) {
+  public AppStoreApp addTagsItem(String tagsItem) {
     this.tags.add(tagsItem);
     return this;
   }
@@ -616,12 +616,12 @@ public class AppDetail {
     this.tags = tags;
   }
 
-  public AppDetail regions(List<String> regions) {
+  public AppStoreApp regions(List<String> regions) {
     this.regions = regions;
     return this;
   }
 
-  public AppDetail addRegionsItem(String regionsItem) {
+  public AppStoreApp addRegionsItem(String regionsItem) {
     this.regions.add(regionsItem);
     return this;
   }
@@ -639,7 +639,7 @@ public class AppDetail {
     this.regions = regions;
   }
 
-  public AppDetail developerName(String developerName) {
+  public AppStoreApp developerName(String developerName) {
     this.developerName = developerName;
     return this;
   }
@@ -666,38 +666,40 @@ public class AppDetail {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppDetail appDetail = (AppDetail) o;
-    return Objects.equals(this.id, appDetail.id) &&
-        Objects.equals(this.configurationType, appDetail.configurationType) &&
-        Objects.equals(this.storeSelectorType, appDetail.storeSelectorType) &&
-        Objects.equals(this.fieldGroups, appDetail.fieldGroups) &&
-        Objects.equals(this.setupInstructions, appDetail.setupInstructions) &&
-        Objects.equals(this.externalSetupLink, appDetail.externalSetupLink) &&
-        Objects.equals(this.oauthAppId, appDetail.oauthAppId) &&
-        Objects.equals(this.teammateAppAccessLevel, appDetail.teammateAppAccessLevel) &&
-        Objects.equals(this.permissionsType, appDetail.permissionsType) &&
-        Objects.equals(this.name, appDetail.name) &&
-        Objects.equals(this.description, appDetail.description) &&
-        Objects.equals(this.logo, appDetail.logo) &&
-        Objects.equals(this.isEnabled, appDetail.isEnabled) &&
-        Objects.equals(this.verificationStatus, appDetail.verificationStatus) &&
-        Objects.equals(this.tags, appDetail.tags) &&
-        Objects.equals(this.regions, appDetail.regions) &&
-        Objects.equals(this.developerName, appDetail.developerName);
+    AppStoreApp appStoreApp = (AppStoreApp) o;
+    return Objects.equals(this.id, appStoreApp.id) &&
+        Objects.equals(this.verificationStatus, appStoreApp.verificationStatus) &&
+        Objects.equals(this.logo, appStoreApp.logo) &&
+        Objects.equals(this.configurationType, appStoreApp.configurationType) &&
+        Objects.equals(this.storeSelectorType, appStoreApp.storeSelectorType) &&
+        Objects.equals(this.fieldGroups, appStoreApp.fieldGroups) &&
+        Objects.equals(this.setupInstructions, appStoreApp.setupInstructions) &&
+        Objects.equals(this.externalSetupLink, appStoreApp.externalSetupLink) &&
+        Objects.equals(this.oauthAppId, appStoreApp.oauthAppId) &&
+        Objects.equals(this.teammateAppAccessLevel, appStoreApp.teammateAppAccessLevel) &&
+        Objects.equals(this.permissionsType, appStoreApp.permissionsType) &&
+        Objects.equals(this.name, appStoreApp.name) &&
+        Objects.equals(this.description, appStoreApp.description) &&
+        Objects.equals(this.isEnabled, appStoreApp.isEnabled) &&
+        Objects.equals(this.tags, appStoreApp.tags) &&
+        Objects.equals(this.regions, appStoreApp.regions) &&
+        Objects.equals(this.developerName, appStoreApp.developerName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, logo, isEnabled, verificationStatus, tags, regions, developerName);
+    return Objects.hash(id, verificationStatus, logo, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppDetail {\n");
+    sb.append("class AppStoreApp {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
+    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");
@@ -708,9 +710,7 @@ public class AppDetail {
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
     sb.append("    developerName: ").append(toIndentedString(developerName)).append("\n");

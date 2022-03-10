@@ -27,15 +27,15 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.AppConfigurationDetail;
-import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationHeader;
-import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationSummary;
+import com.flipdish.apiclient.model.AppStoreAppConfiguration;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationHeader;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultAppConfigurationSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.UpdateAppConfiguration;
+import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,8 +64,8 @@ public class AppStoreConfigurationsApi {
 
     /**
      * Build call for createAppStoreConfig
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -134,42 +134,42 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Create app store app configuration
+     * Create App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @return RestApiResultAppConfigurationSummary
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @return RestApiResultAppStoreAppConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppConfigurationSummary createAppStoreConfig(String appId, String appStoreAppId) throws ApiException {
-        ApiResponse<RestApiResultAppConfigurationSummary> resp = createAppStoreConfigWithHttpInfo(appId, appStoreAppId);
+    public RestApiResultAppStoreAppConfiguration createAppStoreConfig(String appId, String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreAppConfiguration> resp = createAppStoreConfigWithHttpInfo(appId, appStoreAppId);
         return resp.getData();
     }
 
     /**
-     * Create app store app configuration
+     * Create App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @return ApiResponse&lt;RestApiResultAppConfigurationSummary&gt;
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @return ApiResponse&lt;RestApiResultAppStoreAppConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppConfigurationSummary> createAppStoreConfigWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
+    public ApiResponse<RestApiResultAppStoreAppConfiguration> createAppStoreConfigWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = createAppStoreConfigValidateBeforeCall(appId, appStoreAppId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultAppConfigurationSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Create app store app configuration (asynchronously)
+     * Create App store app configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createAppStoreConfigAsync(String appId, String appStoreAppId, final ApiCallback<RestApiResultAppConfigurationSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call createAppStoreConfigAsync(String appId, String appStoreAppId, final ApiCallback<RestApiResultAppStoreAppConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -191,15 +191,15 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = createAppStoreConfigValidateBeforeCall(appId, appStoreAppId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultAppConfigurationSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for deleteAppStoreConfig
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -274,11 +274,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete app store app configuration
+     * Delete App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -288,11 +288,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete app store app configuration
+     * Delete App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -303,11 +303,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete app store app configuration (asynchronously)
+     * Delete App store app configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -340,9 +340,9 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for getAppStoreConfig
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -417,45 +417,45 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get app store app configuration
+     * Get App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @return AppConfigurationDetail
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @return AppStoreAppConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AppConfigurationDetail getAppStoreConfig(String appId, String appStoreAppId, String configId) throws ApiException {
-        ApiResponse<AppConfigurationDetail> resp = getAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
+    public AppStoreAppConfiguration getAppStoreConfig(String appId, String appStoreAppId, String configId) throws ApiException {
+        ApiResponse<AppStoreAppConfiguration> resp = getAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
         return resp.getData();
     }
 
     /**
-     * Get app store app configuration
+     * Get App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @return ApiResponse&lt;AppConfigurationDetail&gt;
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @return ApiResponse&lt;AppStoreAppConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AppConfigurationDetail> getAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId) throws ApiException {
+    public ApiResponse<AppStoreAppConfiguration> getAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId) throws ApiException {
         com.squareup.okhttp.Call call = getAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, null, null);
-        Type localVarReturnType = new TypeToken<AppConfigurationDetail>(){}.getType();
+        Type localVarReturnType = new TypeToken<AppStoreAppConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get app store app configuration (asynchronously)
+     * Get App store app configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreConfigAsync(String appId, String appStoreAppId, String configId, final ApiCallback<AppConfigurationDetail> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreConfigAsync(String appId, String appStoreAppId, String configId, final ApiCallback<AppStoreAppConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -477,14 +477,14 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = getAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AppConfigurationDetail>(){}.getType();
+        Type localVarReturnType = new TypeToken<AppStoreAppConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getConfiguredAppSingleApp
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -553,42 +553,42 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @return RestApiArrayResultAppConfigurationSummary
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @return RestApiArrayResultAppStoreAppConfigurationSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultAppConfigurationSummary getConfiguredAppSingleApp(String appId, String appStoreAppId) throws ApiException {
-        ApiResponse<RestApiArrayResultAppConfigurationSummary> resp = getConfiguredAppSingleAppWithHttpInfo(appId, appStoreAppId);
+    public RestApiArrayResultAppStoreAppConfigurationSummary getConfiguredAppSingleApp(String appId, String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary> resp = getConfiguredAppSingleAppWithHttpInfo(appId, appStoreAppId);
         return resp.getData();
     }
 
     /**
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @return ApiResponse&lt;RestApiArrayResultAppConfigurationSummary&gt;
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @return ApiResponse&lt;RestApiArrayResultAppStoreAppConfigurationSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultAppConfigurationSummary> getConfiguredAppSingleAppWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
+    public ApiResponse<RestApiArrayResultAppStoreAppConfigurationSummary> getConfiguredAppSingleAppWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = getConfiguredAppSingleAppValidateBeforeCall(appId, appStoreAppId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultAppConfigurationSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreAppConfigurationSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get list of app store app configurations for one app store app (asynchronously)
+     * Get list of App store app configurations for one App store app (asynchronously)
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getConfiguredAppSingleAppAsync(String appId, String appStoreAppId, final ApiCallback<RestApiArrayResultAppConfigurationSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getConfiguredAppSingleAppAsync(String appId, String appStoreAppId, final ApiCallback<RestApiArrayResultAppStoreAppConfigurationSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -610,13 +610,13 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = getConfiguredAppSingleAppValidateBeforeCall(appId, appStoreAppId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultAppConfigurationSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreAppConfigurationSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getConfiguredApps
-     * @param appId App Id (required)
+     * @param appId App id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -679,39 +679,39 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
-     * @return RestApiArrayResultAppConfigurationHeader
+     * @param appId App id (required)
+     * @return RestApiArrayResultAppStoreAppConfigurationHeader
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultAppConfigurationHeader getConfiguredApps(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultAppConfigurationHeader> resp = getConfiguredAppsWithHttpInfo(appId);
+    public RestApiArrayResultAppStoreAppConfigurationHeader getConfiguredApps(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader> resp = getConfiguredAppsWithHttpInfo(appId);
         return resp.getData();
     }
 
     /**
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
-     * @return ApiResponse&lt;RestApiArrayResultAppConfigurationHeader&gt;
+     * @param appId App id (required)
+     * @return ApiResponse&lt;RestApiArrayResultAppStoreAppConfigurationHeader&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultAppConfigurationHeader> getConfiguredAppsWithHttpInfo(String appId) throws ApiException {
+    public ApiResponse<RestApiArrayResultAppStoreAppConfigurationHeader> getConfiguredAppsWithHttpInfo(String appId) throws ApiException {
         com.squareup.okhttp.Call call = getConfiguredAppsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultAppConfigurationHeader>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreAppConfigurationHeader>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get list of app store apps which have been configured (asynchronously)
+     * Get list of App store apps which have been configured (asynchronously)
      * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App Id (required)
+     * @param appId App id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getConfiguredAppsAsync(String appId, final ApiCallback<RestApiArrayResultAppConfigurationHeader> callback) throws ApiException {
+    public com.squareup.okhttp.Call getConfiguredAppsAsync(String appId, final ApiCallback<RestApiArrayResultAppStoreAppConfigurationHeader> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -733,23 +733,23 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = getConfiguredAppsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultAppConfigurationHeader>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreAppConfigurationHeader>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for updateAppStoreConfig
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @param updateAppConfigurationBase App Store Configuration Base (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreConfigCall(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = updateAppConfigurationBase;
+    public com.squareup.okhttp.Call updateAppStoreConfigCall(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateAppStoreAppConfiguration;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}"
@@ -793,7 +793,7 @@ public class AppStoreConfigurationsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateAppStoreConfigValidateBeforeCall(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateAppStoreConfigValidateBeforeCall(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -810,57 +810,57 @@ public class AppStoreConfigurationsApi {
             throw new ApiException("Missing the required parameter 'configId' when calling updateAppStoreConfig(Async)");
         }
         
-        // verify the required parameter 'updateAppConfigurationBase' is set
-        if (updateAppConfigurationBase == null) {
-            throw new ApiException("Missing the required parameter 'updateAppConfigurationBase' when calling updateAppStoreConfig(Async)");
+        // verify the required parameter 'updateAppStoreAppConfiguration' is set
+        if (updateAppStoreAppConfiguration == null) {
+            throw new ApiException("Missing the required parameter 'updateAppStoreAppConfiguration' when calling updateAppStoreConfig(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateAppStoreConfigCall(appId, appStoreAppId, configId, updateAppConfigurationBase, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreConfigCall(appId, appStoreAppId, configId, updateAppStoreAppConfiguration, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * Update app store app configuration
+     * Update App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @param updateAppConfigurationBase App Store Configuration Base (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateAppStoreConfig(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase) throws ApiException {
-        updateAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId, updateAppConfigurationBase);
+    public void updateAppStoreConfig(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration) throws ApiException {
+        updateAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
     }
 
     /**
-     * Update app store app configuration
+     * Update App store app configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @param updateAppConfigurationBase App Store Configuration Base (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase) throws ApiException {
-        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppConfigurationBase, null, null);
+    public ApiResponse<Void> updateAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration) throws ApiException {
+        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppStoreAppConfiguration, null, null);
         return apiClient.execute(call);
     }
 
     /**
-     * Update app store app configuration (asynchronously)
+     * Update App store app configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param appStoreAppId App Store App Id (required)
-     * @param configId App Store Configuration Id (required)
-     * @param updateAppConfigurationBase App Store Configuration Base (required)
+     * @param appId App id (required)
+     * @param appStoreAppId App store app id (required)
+     * @param configId App store app configuration id (required)
+     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreConfigAsync(String appId, String appStoreAppId, String configId, UpdateAppConfiguration updateAppConfigurationBase, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateAppStoreConfigAsync(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -881,7 +881,7 @@ public class AppStoreConfigurationsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppConfigurationBase, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, updateAppStoreAppConfiguration, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

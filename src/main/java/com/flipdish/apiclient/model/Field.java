@@ -31,7 +31,7 @@ import java.util.List;
  * Field
  */
 @ApiModel(description = "Field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
 public class Field {
   @SerializedName("Name")
   private String name = null;
@@ -199,12 +199,12 @@ public class Field {
   }
 
    /**
-   * Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt;
+   * Position
    * minimum: 1
    * maximum: 1000
    * @return position
   **/
-  @ApiModelProperty(required = true, value = "Position  <remarks>Position order in the fields list to display</remarks>")
+  @ApiModelProperty(required = true, value = "Position")
   public Integer getPosition() {
     return position;
   }
@@ -219,10 +219,10 @@ public class Field {
   }
 
    /**
-   * Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt;
+   * Default Value
    * @return defaultValue
   **/
-  @ApiModelProperty(value = "Default Value  <example>10</example><example>true</example>")
+  @ApiModelProperty(value = "Default Value")
   public String getDefaultValue() {
     return defaultValue;
   }

@@ -1,11 +1,10 @@
 
-# AppConfigurationSetting
+# RestApiResultAppStoreApp
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **String** |  |  [optional]
-**value** | **String** |  |  [optional]
+**data** | [**AppStoreApp**](AppStoreApp.md) | Generic data object. | 
 
 
 

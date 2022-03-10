@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create app store app configuration
-[**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete app store app configuration
-[**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get app store app configuration
-[**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of app store app configurations for one app store app
-[**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of app store apps which have been configured
-[**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update app store app configuration
+[**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
+[**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+[**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
+[**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
+[**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
+[**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
 
 
 <a name="createAppStoreConfig"></a>
 # **createAppStoreConfig**
-> RestApiResultAppConfigurationSummary createAppStoreConfig(appId, appStoreAppId)
+> RestApiResultAppStoreAppConfiguration createAppStoreConfig(appId, appStoreAppId)
 
-Create app store app configuration
+Create App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
 
@@ -36,10 +36,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
+String appId = "appId_example"; // String | App id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
 try {
-    RestApiResultAppConfigurationSummary result = apiInstance.createAppStoreConfig(appId, appStoreAppId);
+    RestApiResultAppStoreAppConfiguration result = apiInstance.createAppStoreConfig(appId, appStoreAppId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#createAppStoreConfig");
@@ -51,12 +51,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **appStoreAppId** | **String**| App Store App Id |
+ **appId** | **String**| App id |
+ **appStoreAppId** | **String**| App store app id |
 
 ### Return type
 
-[**RestApiResultAppConfigurationSummary**](RestApiResultAppConfigurationSummary.md)
+[**RestApiResultAppStoreAppConfiguration**](RestApiResultAppStoreAppConfiguration.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **deleteAppStoreConfig**
 > RestApiStringResult deleteAppStoreConfig(appId, appStoreAppId, configId)
 
-Delete app store app configuration
+Delete App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -91,9 +91,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
-String configId = "configId_example"; // String | App Store Configuration Id
+String appId = "appId_example"; // String | App id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String configId = "configId_example"; // String | App store app configuration id
 try {
     RestApiStringResult result = apiInstance.deleteAppStoreConfig(appId, appStoreAppId, configId);
     System.out.println(result);
@@ -107,9 +107,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **appStoreAppId** | **String**| App Store App Id |
- **configId** | **String**| App Store Configuration Id |
+ **appId** | **String**| App id |
+ **appStoreAppId** | **String**| App store app id |
+ **configId** | **String**| App store app configuration id |
 
 ### Return type
 
@@ -126,9 +126,9 @@ Name | Type | Description  | Notes
 
 <a name="getAppStoreConfig"></a>
 # **getAppStoreConfig**
-> AppConfigurationDetail getAppStoreConfig(appId, appStoreAppId, configId)
+> AppStoreAppConfiguration getAppStoreConfig(appId, appStoreAppId, configId)
 
-Get app store app configuration
+Get App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -148,11 +148,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
-String configId = "configId_example"; // String | App Store Configuration Id
+String appId = "appId_example"; // String | App id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String configId = "configId_example"; // String | App store app configuration id
 try {
-    AppConfigurationDetail result = apiInstance.getAppStoreConfig(appId, appStoreAppId, configId);
+    AppStoreAppConfiguration result = apiInstance.getAppStoreConfig(appId, appStoreAppId, configId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#getAppStoreConfig");
@@ -164,13 +164,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **appStoreAppId** | **String**| App Store App Id |
- **configId** | **String**| App Store Configuration Id |
+ **appId** | **String**| App id |
+ **appStoreAppId** | **String**| App store app id |
+ **configId** | **String**| App store app configuration id |
 
 ### Return type
 
-[**AppConfigurationDetail**](AppConfigurationDetail.md)
+[**AppStoreAppConfiguration**](AppStoreAppConfiguration.md)
 
 ### Authorization
 
@@ -183,9 +183,9 @@ Name | Type | Description  | Notes
 
 <a name="getConfiguredAppSingleApp"></a>
 # **getConfiguredAppSingleApp**
-> RestApiArrayResultAppConfigurationSummary getConfiguredAppSingleApp(appId, appStoreAppId)
+> RestApiArrayResultAppStoreAppConfigurationSummary getConfiguredAppSingleApp(appId, appStoreAppId)
 
-Get list of app store app configurations for one app store app
+Get list of App store app configurations for one App store app
 
 [ALPHA - this endpoint is not ready to be consumed]
 
@@ -205,10 +205,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
+String appId = "appId_example"; // String | App id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
 try {
-    RestApiArrayResultAppConfigurationSummary result = apiInstance.getConfiguredAppSingleApp(appId, appStoreAppId);
+    RestApiArrayResultAppStoreAppConfigurationSummary result = apiInstance.getConfiguredAppSingleApp(appId, appStoreAppId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#getConfiguredAppSingleApp");
@@ -220,12 +220,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **appStoreAppId** | **String**| App Store App Id |
+ **appId** | **String**| App id |
+ **appStoreAppId** | **String**| App store app id |
 
 ### Return type
 
-[**RestApiArrayResultAppConfigurationSummary**](RestApiArrayResultAppConfigurationSummary.md)
+[**RestApiArrayResultAppStoreAppConfigurationSummary**](RestApiArrayResultAppStoreAppConfigurationSummary.md)
 
 ### Authorization
 
@@ -238,9 +238,9 @@ Name | Type | Description  | Notes
 
 <a name="getConfiguredApps"></a>
 # **getConfiguredApps**
-> RestApiArrayResultAppConfigurationHeader getConfiguredApps(appId)
+> RestApiArrayResultAppStoreAppConfigurationHeader getConfiguredApps(appId)
 
-Get list of app store apps which have been configured
+Get list of App store apps which have been configured
 
 [ALPHA - this endpoint is not ready to be consumed]
 
@@ -260,9 +260,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
+String appId = "appId_example"; // String | App id
 try {
-    RestApiArrayResultAppConfigurationHeader result = apiInstance.getConfiguredApps(appId);
+    RestApiArrayResultAppStoreAppConfigurationHeader result = apiInstance.getConfiguredApps(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#getConfiguredApps");
@@ -274,11 +274,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
+ **appId** | **String**| App id |
 
 ### Return type
 
-[**RestApiArrayResultAppConfigurationHeader**](RestApiArrayResultAppConfigurationHeader.md)
+[**RestApiArrayResultAppStoreAppConfigurationHeader**](RestApiArrayResultAppStoreAppConfigurationHeader.md)
 
 ### Authorization
 
@@ -291,9 +291,9 @@ Name | Type | Description  | Notes
 
 <a name="updateAppStoreConfig"></a>
 # **updateAppStoreConfig**
-> updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase)
+> updateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration)
 
-Update app store app configuration
+Update App store app configuration
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -313,12 +313,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | App Id
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
-String configId = "configId_example"; // String | App Store Configuration Id
-UpdateAppConfiguration updateAppConfigurationBase = new UpdateAppConfiguration(); // UpdateAppConfiguration | App Store Configuration Base
+String appId = "appId_example"; // String | App id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String configId = "configId_example"; // String | App store app configuration id
+UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration = new UpdateAppStoreAppConfiguration(); // UpdateAppStoreAppConfiguration | Update App store app configuration
 try {
-    apiInstance.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
+    apiInstance.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#updateAppStoreConfig");
     e.printStackTrace();
@@ -329,10 +329,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **appStoreAppId** | **String**| App Store App Id |
- **configId** | **String**| App Store Configuration Id |
- **updateAppConfigurationBase** | [**UpdateAppConfiguration**](UpdateAppConfiguration.md)| App Store Configuration Base |
+ **appId** | **String**| App id |
+ **appStoreAppId** | **String**| App store app id |
+ **configId** | **String**| App store app configuration id |
+ **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)| Update App store app configuration |
 
 ### Return type
 

@@ -25,11 +25,11 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Configured app item for list
+ * App store app configuration header information
  */
-@ApiModel(description = "Configured app item for list")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppConfigurationHeader {
+@ApiModel(description = "App store app configuration header information")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class AppStoreAppConfigurationHeader {
   @SerializedName("AppStoreAppId")
   private String appStoreAppId = null;
 
@@ -45,16 +45,16 @@ public class AppConfigurationHeader {
   @SerializedName("DeveloperName")
   private String developerName = null;
 
-  public AppConfigurationHeader appStoreAppId(String appStoreAppId) {
+  public AppStoreAppConfigurationHeader appStoreAppId(String appStoreAppId) {
     this.appStoreAppId = appStoreAppId;
     return this;
   }
 
    /**
-   * AppStore App Id
+   * Unique App store app id
    * @return appStoreAppId
   **/
-  @ApiModelProperty(required = true, value = "AppStore App Id")
+  @ApiModelProperty(required = true, value = "Unique App store app id")
   public String getAppStoreAppId() {
     return appStoreAppId;
   }
@@ -63,16 +63,16 @@ public class AppConfigurationHeader {
     this.appStoreAppId = appStoreAppId;
   }
 
-  public AppConfigurationHeader name(String name) {
+  public AppStoreAppConfigurationHeader name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Name
+   * Name of Appstore app
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "Name of Appstore app")
   public String getName() {
     return name;
   }
@@ -81,7 +81,7 @@ public class AppConfigurationHeader {
     this.name = name;
   }
 
-  public AppConfigurationHeader description(String description) {
+  public AppStoreAppConfigurationHeader description(String description) {
     this.description = description;
     return this;
   }
@@ -99,7 +99,7 @@ public class AppConfigurationHeader {
     this.description = description;
   }
 
-  public AppConfigurationHeader logo(String logo) {
+  public AppStoreAppConfigurationHeader logo(String logo) {
     this.logo = logo;
     return this;
   }
@@ -117,16 +117,16 @@ public class AppConfigurationHeader {
     this.logo = logo;
   }
 
-  public AppConfigurationHeader developerName(String developerName) {
+  public AppStoreAppConfigurationHeader developerName(String developerName) {
     this.developerName = developerName;
     return this;
   }
 
    /**
-   * Developer Name
+   * Developer name
    * @return developerName
   **/
-  @ApiModelProperty(value = "Developer Name")
+  @ApiModelProperty(value = "Developer name")
   public String getDeveloperName() {
     return developerName;
   }
@@ -144,12 +144,12 @@ public class AppConfigurationHeader {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppConfigurationHeader appConfigurationHeader = (AppConfigurationHeader) o;
-    return Objects.equals(this.appStoreAppId, appConfigurationHeader.appStoreAppId) &&
-        Objects.equals(this.name, appConfigurationHeader.name) &&
-        Objects.equals(this.description, appConfigurationHeader.description) &&
-        Objects.equals(this.logo, appConfigurationHeader.logo) &&
-        Objects.equals(this.developerName, appConfigurationHeader.developerName);
+    AppStoreAppConfigurationHeader appStoreAppConfigurationHeader = (AppStoreAppConfigurationHeader) o;
+    return Objects.equals(this.appStoreAppId, appStoreAppConfigurationHeader.appStoreAppId) &&
+        Objects.equals(this.name, appStoreAppConfigurationHeader.name) &&
+        Objects.equals(this.description, appStoreAppConfigurationHeader.description) &&
+        Objects.equals(this.logo, appStoreAppConfigurationHeader.logo) &&
+        Objects.equals(this.developerName, appStoreAppConfigurationHeader.developerName);
   }
 
   @Override
@@ -161,7 +161,7 @@ public class AppConfigurationHeader {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppConfigurationHeader {\n");
+    sb.append("class AppStoreAppConfigurationHeader {\n");
     
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

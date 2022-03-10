@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AppConfigurationSetting;
+import com.flipdish.apiclient.model.Setting;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,76 +28,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * UpdateAppConfiguration
+ * Update App store app configuration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class UpdateAppConfiguration {
-  @SerializedName("Id")
-  private String id = null;
+@ApiModel(description = "Update App store app configuration")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class UpdateAppStoreAppConfiguration {
+  @SerializedName("IsEnabled")
+  private Boolean isEnabled = null;
 
   @SerializedName("PhysicalRestaurants")
   private List<Integer> physicalRestaurants = null;
 
-  @SerializedName("IsEnabled")
-  private Boolean isEnabled = null;
-
   @SerializedName("Settings")
-  private List<AppConfigurationSetting> settings = null;
+  private List<Setting> settings = null;
 
-  public UpdateAppConfiguration id(String id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  public UpdateAppConfiguration physicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
-    return this;
-  }
-
-  public UpdateAppConfiguration addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
-    if (this.physicalRestaurants == null) {
-      this.physicalRestaurants = new ArrayList<Integer>();
-    }
-    this.physicalRestaurants.add(physicalRestaurantsItem);
-    return this;
-  }
-
-   /**
-   * Get physicalRestaurants
-   * @return physicalRestaurants
-  **/
-  @ApiModelProperty(value = "")
-  public List<Integer> getPhysicalRestaurants() {
-    return physicalRestaurants;
-  }
-
-  public void setPhysicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
-  }
-
-  public UpdateAppConfiguration isEnabled(Boolean isEnabled) {
+  public UpdateAppStoreAppConfiguration isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
 
    /**
-   * Get isEnabled
+   * Is enabled
    * @return isEnabled
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "Is enabled")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -106,29 +60,55 @@ public class UpdateAppConfiguration {
     this.isEnabled = isEnabled;
   }
 
-  public UpdateAppConfiguration settings(List<AppConfigurationSetting> settings) {
+  public UpdateAppStoreAppConfiguration physicalRestaurants(List<Integer> physicalRestaurants) {
+    this.physicalRestaurants = physicalRestaurants;
+    return this;
+  }
+
+  public UpdateAppStoreAppConfiguration addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
+    if (this.physicalRestaurants == null) {
+      this.physicalRestaurants = new ArrayList<Integer>();
+    }
+    this.physicalRestaurants.add(physicalRestaurantsItem);
+    return this;
+  }
+
+   /**
+   * Stores id&#39;s
+   * @return physicalRestaurants
+  **/
+  @ApiModelProperty(value = "Stores id's")
+  public List<Integer> getPhysicalRestaurants() {
+    return physicalRestaurants;
+  }
+
+  public void setPhysicalRestaurants(List<Integer> physicalRestaurants) {
+    this.physicalRestaurants = physicalRestaurants;
+  }
+
+  public UpdateAppStoreAppConfiguration settings(List<Setting> settings) {
     this.settings = settings;
     return this;
   }
 
-  public UpdateAppConfiguration addSettingsItem(AppConfigurationSetting settingsItem) {
+  public UpdateAppStoreAppConfiguration addSettingsItem(Setting settingsItem) {
     if (this.settings == null) {
-      this.settings = new ArrayList<AppConfigurationSetting>();
+      this.settings = new ArrayList<Setting>();
     }
     this.settings.add(settingsItem);
     return this;
   }
 
    /**
-   * Get settings
+   * Settings
    * @return settings
   **/
-  @ApiModelProperty(value = "")
-  public List<AppConfigurationSetting> getSettings() {
+  @ApiModelProperty(value = "Settings")
+  public List<Setting> getSettings() {
     return settings;
   }
 
-  public void setSettings(List<AppConfigurationSetting> settings) {
+  public void setSettings(List<Setting> settings) {
     this.settings = settings;
   }
 
@@ -141,27 +121,25 @@ public class UpdateAppConfiguration {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateAppConfiguration updateAppConfiguration = (UpdateAppConfiguration) o;
-    return Objects.equals(this.id, updateAppConfiguration.id) &&
-        Objects.equals(this.physicalRestaurants, updateAppConfiguration.physicalRestaurants) &&
-        Objects.equals(this.isEnabled, updateAppConfiguration.isEnabled) &&
-        Objects.equals(this.settings, updateAppConfiguration.settings);
+    UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration = (UpdateAppStoreAppConfiguration) o;
+    return Objects.equals(this.isEnabled, updateAppStoreAppConfiguration.isEnabled) &&
+        Objects.equals(this.physicalRestaurants, updateAppStoreAppConfiguration.physicalRestaurants) &&
+        Objects.equals(this.settings, updateAppStoreAppConfiguration.settings);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, physicalRestaurants, isEnabled, settings);
+    return Objects.hash(isEnabled, physicalRestaurants, settings);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateAppConfiguration {\n");
+    sb.append("class UpdateAppStoreAppConfiguration {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
+    sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("}");
     return sb.toString();

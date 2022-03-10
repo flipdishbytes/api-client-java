@@ -1,15 +1,15 @@
 
-# AppSummary
+# AppStoreAppSummary
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Integration Public Id |  [optional]
+**id** | **String** | Unique App store app id |  [optional]
+**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
+**logo** | **String** | Logo |  [optional]
 **name** | **String** | Name | 
 **description** | **String** | Description | 
-**logo** | **String** | Logo |  [optional]
 **isEnabled** | **Boolean** | Is application enabled |  [optional]
-**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **tags** | **List&lt;String&gt;** | Tags | 
 **regions** | **List&lt;String&gt;** | Regions | 
 **developerName** | **String** | Developer Name |  [optional]

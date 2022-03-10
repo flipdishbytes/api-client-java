@@ -31,7 +31,7 @@ import java.util.List;
  * Store Kiosk Settings
  */
 @ApiModel(description = "Store Kiosk Settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
 public class StoreKioskSettings {
   @SerializedName("KioskStoreSettings")
   private List<StoreKioskSettingModel> kioskStoreSettings = null;

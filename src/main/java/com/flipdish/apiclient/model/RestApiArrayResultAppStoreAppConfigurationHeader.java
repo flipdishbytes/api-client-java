@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AppConfigurationHeader;
+import com.flipdish.apiclient.model.AppStoreAppConfigurationHeader;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,17 +31,17 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class RestApiArrayResultAppConfigurationHeader {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class RestApiArrayResultAppStoreAppConfigurationHeader {
   @SerializedName("Data")
-  private List<AppConfigurationHeader> data = new ArrayList<AppConfigurationHeader>();
+  private List<AppStoreAppConfigurationHeader> data = new ArrayList<AppStoreAppConfigurationHeader>();
 
-  public RestApiArrayResultAppConfigurationHeader data(List<AppConfigurationHeader> data) {
+  public RestApiArrayResultAppStoreAppConfigurationHeader data(List<AppStoreAppConfigurationHeader> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiArrayResultAppConfigurationHeader addDataItem(AppConfigurationHeader dataItem) {
+  public RestApiArrayResultAppStoreAppConfigurationHeader addDataItem(AppStoreAppConfigurationHeader dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -51,11 +51,11 @@ public class RestApiArrayResultAppConfigurationHeader {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<AppConfigurationHeader> getData() {
+  public List<AppStoreAppConfigurationHeader> getData() {
     return data;
   }
 
-  public void setData(List<AppConfigurationHeader> data) {
+  public void setData(List<AppStoreAppConfigurationHeader> data) {
     this.data = data;
   }
 
@@ -68,8 +68,8 @@ public class RestApiArrayResultAppConfigurationHeader {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiArrayResultAppConfigurationHeader restApiArrayResultAppConfigurationHeader = (RestApiArrayResultAppConfigurationHeader) o;
-    return Objects.equals(this.data, restApiArrayResultAppConfigurationHeader.data);
+    RestApiArrayResultAppStoreAppConfigurationHeader restApiArrayResultAppStoreAppConfigurationHeader = (RestApiArrayResultAppStoreAppConfigurationHeader) o;
+    return Objects.equals(this.data, restApiArrayResultAppStoreAppConfigurationHeader.data);
   }
 
   @Override
@@ -81,7 +81,7 @@ public class RestApiArrayResultAppConfigurationHeader {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiArrayResultAppConfigurationHeader {\n");
+    sb.append("class RestApiArrayResultAppStoreAppConfigurationHeader {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

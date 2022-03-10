@@ -25,10 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Configured physical restaurants
+ * Configured stores
  */
-@ApiModel(description = "Configured physical restaurants")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
+@ApiModel(description = "Configured stores")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
 public class ConfiguredPhysicalRestaurant {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -42,10 +42,10 @@ public class ConfiguredPhysicalRestaurant {
   }
 
    /**
-   * Store Id
+   * Store id
    * @return storeId
   **/
-  @ApiModelProperty(value = "Store Id")
+  @ApiModelProperty(value = "Store id")
   public Integer getStoreId() {
     return storeId;
   }

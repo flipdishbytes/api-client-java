@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AppConfigurationSummary;
+import com.flipdish.apiclient.model.AppStoreAppConfiguration;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,25 +24,18 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Rest api array result
+ * Rest api result
  */
-@ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class RestApiArrayResultAppConfigurationSummary {
+@ApiModel(description = "Rest api result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class RestApiResultAppStoreAppConfiguration {
   @SerializedName("Data")
-  private List<AppConfigurationSummary> data = new ArrayList<AppConfigurationSummary>();
+  private AppStoreAppConfiguration data = null;
 
-  public RestApiArrayResultAppConfigurationSummary data(List<AppConfigurationSummary> data) {
+  public RestApiResultAppStoreAppConfiguration data(AppStoreAppConfiguration data) {
     this.data = data;
-    return this;
-  }
-
-  public RestApiArrayResultAppConfigurationSummary addDataItem(AppConfigurationSummary dataItem) {
-    this.data.add(dataItem);
     return this;
   }
 
@@ -51,11 +44,11 @@ public class RestApiArrayResultAppConfigurationSummary {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<AppConfigurationSummary> getData() {
+  public AppStoreAppConfiguration getData() {
     return data;
   }
 
-  public void setData(List<AppConfigurationSummary> data) {
+  public void setData(AppStoreAppConfiguration data) {
     this.data = data;
   }
 
@@ -68,8 +61,8 @@ public class RestApiArrayResultAppConfigurationSummary {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiArrayResultAppConfigurationSummary restApiArrayResultAppConfigurationSummary = (RestApiArrayResultAppConfigurationSummary) o;
-    return Objects.equals(this.data, restApiArrayResultAppConfigurationSummary.data);
+    RestApiResultAppStoreAppConfiguration restApiResultAppStoreAppConfiguration = (RestApiResultAppStoreAppConfiguration) o;
+    return Objects.equals(this.data, restApiResultAppStoreAppConfiguration.data);
   }
 
   @Override
@@ -81,7 +74,7 @@ public class RestApiArrayResultAppConfigurationSummary {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiArrayResultAppConfigurationSummary {\n");
+    sb.append("class RestApiResultAppStoreAppConfiguration {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

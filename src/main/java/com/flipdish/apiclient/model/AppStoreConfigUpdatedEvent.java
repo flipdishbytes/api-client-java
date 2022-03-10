@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AppConfigurationBase;
+import com.flipdish.apiclient.model.UpdateAppStoreAppConfigurationWebhookDTO;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * AppStore Config Updated event
  */
 @ApiModel(description = "AppStore Config Updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
 public class AppStoreConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -39,8 +39,8 @@ public class AppStoreConfigUpdatedEvent {
   @SerializedName("AppStoreAppId")
   private String appStoreAppId = null;
 
-  @SerializedName("AppStoreAppConfiguration")
-  private AppConfigurationBase appStoreAppConfiguration = null;
+  @SerializedName("UpdateAppStoreAppStoreAppStoreAppConfiguration")
+  private UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppStoreAppStoreAppConfiguration = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -90,22 +90,22 @@ public class AppStoreConfigUpdatedEvent {
     this.appStoreAppId = appStoreAppId;
   }
 
-  public AppStoreConfigUpdatedEvent appStoreAppConfiguration(AppConfigurationBase appStoreAppConfiguration) {
-    this.appStoreAppConfiguration = appStoreAppConfiguration;
+  public AppStoreConfigUpdatedEvent updateAppStoreAppStoreAppStoreAppConfiguration(UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppStoreAppStoreAppConfiguration) {
+    this.updateAppStoreAppStoreAppStoreAppConfiguration = updateAppStoreAppStoreAppStoreAppConfiguration;
     return this;
   }
 
    /**
    * App Configuration
-   * @return appStoreAppConfiguration
+   * @return updateAppStoreAppStoreAppStoreAppConfiguration
   **/
   @ApiModelProperty(value = "App Configuration")
-  public AppConfigurationBase getAppStoreAppConfiguration() {
-    return appStoreAppConfiguration;
+  public UpdateAppStoreAppConfigurationWebhookDTO getUpdateAppStoreAppStoreAppStoreAppConfiguration() {
+    return updateAppStoreAppStoreAppStoreAppConfiguration;
   }
 
-  public void setAppStoreAppConfiguration(AppConfigurationBase appStoreAppConfiguration) {
-    this.appStoreAppConfiguration = appStoreAppConfiguration;
+  public void setUpdateAppStoreAppStoreAppStoreAppConfiguration(UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppStoreAppStoreAppConfiguration) {
+    this.updateAppStoreAppStoreAppStoreAppConfiguration = updateAppStoreAppStoreAppStoreAppConfiguration;
   }
 
   public AppStoreConfigUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -192,7 +192,7 @@ public class AppStoreConfigUpdatedEvent {
     AppStoreConfigUpdatedEvent appStoreConfigUpdatedEvent = (AppStoreConfigUpdatedEvent) o;
     return Objects.equals(this.eventName, appStoreConfigUpdatedEvent.eventName) &&
         Objects.equals(this.appStoreAppId, appStoreConfigUpdatedEvent.appStoreAppId) &&
-        Objects.equals(this.appStoreAppConfiguration, appStoreConfigUpdatedEvent.appStoreAppConfiguration) &&
+        Objects.equals(this.updateAppStoreAppStoreAppStoreAppConfiguration, appStoreConfigUpdatedEvent.updateAppStoreAppStoreAppStoreAppConfiguration) &&
         Objects.equals(this.flipdishEventId, appStoreConfigUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appStoreConfigUpdatedEvent.createTime) &&
         Objects.equals(this.position, appStoreConfigUpdatedEvent.position) &&
@@ -201,7 +201,7 @@ public class AppStoreConfigUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, appStoreAppId, appStoreAppConfiguration, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, appStoreAppId, updateAppStoreAppStoreAppStoreAppConfiguration, flipdishEventId, createTime, position, appId);
   }
 
 
@@ -212,7 +212,7 @@ public class AppStoreConfigUpdatedEvent {
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
-    sb.append("    appStoreAppConfiguration: ").append(toIndentedString(appStoreAppConfiguration)).append("\n");
+    sb.append("    updateAppStoreAppStoreAppStoreAppConfiguration: ").append(toIndentedString(updateAppStoreAppStoreAppStoreAppConfiguration)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AppSummary;
+import com.flipdish.apiclient.model.AppStoreAppSummary;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,8 +31,8 @@ import java.util.List;
  * Rest api pagination result
  */
 @ApiModel(description = "Rest api pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class RestApiPaginationResultAppSummary {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class RestApiPaginationResultAppStoreAppSummary {
   @SerializedName("Page")
   private Integer page = null;
 
@@ -43,9 +43,9 @@ public class RestApiPaginationResultAppSummary {
   private Integer totalRecordCount = null;
 
   @SerializedName("Data")
-  private List<AppSummary> data = new ArrayList<AppSummary>();
+  private List<AppStoreAppSummary> data = new ArrayList<AppStoreAppSummary>();
 
-  public RestApiPaginationResultAppSummary page(Integer page) {
+  public RestApiPaginationResultAppStoreAppSummary page(Integer page) {
     this.page = page;
     return this;
   }
@@ -63,7 +63,7 @@ public class RestApiPaginationResultAppSummary {
     this.page = page;
   }
 
-  public RestApiPaginationResultAppSummary limit(Integer limit) {
+  public RestApiPaginationResultAppStoreAppSummary limit(Integer limit) {
     this.limit = limit;
     return this;
   }
@@ -81,7 +81,7 @@ public class RestApiPaginationResultAppSummary {
     this.limit = limit;
   }
 
-  public RestApiPaginationResultAppSummary totalRecordCount(Integer totalRecordCount) {
+  public RestApiPaginationResultAppStoreAppSummary totalRecordCount(Integer totalRecordCount) {
     this.totalRecordCount = totalRecordCount;
     return this;
   }
@@ -99,12 +99,12 @@ public class RestApiPaginationResultAppSummary {
     this.totalRecordCount = totalRecordCount;
   }
 
-  public RestApiPaginationResultAppSummary data(List<AppSummary> data) {
+  public RestApiPaginationResultAppStoreAppSummary data(List<AppStoreAppSummary> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiPaginationResultAppSummary addDataItem(AppSummary dataItem) {
+  public RestApiPaginationResultAppStoreAppSummary addDataItem(AppStoreAppSummary dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -114,11 +114,11 @@ public class RestApiPaginationResultAppSummary {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<AppSummary> getData() {
+  public List<AppStoreAppSummary> getData() {
     return data;
   }
 
-  public void setData(List<AppSummary> data) {
+  public void setData(List<AppStoreAppSummary> data) {
     this.data = data;
   }
 
@@ -131,11 +131,11 @@ public class RestApiPaginationResultAppSummary {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiPaginationResultAppSummary restApiPaginationResultAppSummary = (RestApiPaginationResultAppSummary) o;
-    return Objects.equals(this.page, restApiPaginationResultAppSummary.page) &&
-        Objects.equals(this.limit, restApiPaginationResultAppSummary.limit) &&
-        Objects.equals(this.totalRecordCount, restApiPaginationResultAppSummary.totalRecordCount) &&
-        Objects.equals(this.data, restApiPaginationResultAppSummary.data);
+    RestApiPaginationResultAppStoreAppSummary restApiPaginationResultAppStoreAppSummary = (RestApiPaginationResultAppStoreAppSummary) o;
+    return Objects.equals(this.page, restApiPaginationResultAppStoreAppSummary.page) &&
+        Objects.equals(this.limit, restApiPaginationResultAppStoreAppSummary.limit) &&
+        Objects.equals(this.totalRecordCount, restApiPaginationResultAppStoreAppSummary.totalRecordCount) &&
+        Objects.equals(this.data, restApiPaginationResultAppStoreAppSummary.data);
   }
 
   @Override
@@ -147,7 +147,7 @@ public class RestApiPaginationResultAppSummary {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiPaginationResultAppSummary {\n");
+    sb.append("class RestApiPaginationResultAppStoreAppSummary {\n");
     
     sb.append("    page: ").append(toIndentedString(page)).append("\n");
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");

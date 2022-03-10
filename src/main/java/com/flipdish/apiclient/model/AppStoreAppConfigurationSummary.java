@@ -28,11 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Application Configuration Summary  &lt;remarks&gt;Header information for display in lists, like list of apps&lt;/remarks&gt;
+ * App store app configuration summary information
  */
-@ApiModel(description = "Application Configuration Summary  <remarks>Header information for display in lists, like list of apps</remarks>")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppConfigurationSummary {
+@ApiModel(description = "App store app configuration summary information")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class AppStoreAppConfigurationSummary {
   @SerializedName("Id")
   private String id = null;
 
@@ -46,7 +46,7 @@ public class AppConfigurationSummary {
   private List<ConfiguredPhysicalRestaurant> physicalRestaurants = new ArrayList<ConfiguredPhysicalRestaurant>();
 
   /**
-   * Configuration Type
+   * Configuration type
    */
   @JsonAdapter(ConfigurationTypeEnum.Adapter.class)
   public enum ConfigurationTypeEnum {
@@ -96,7 +96,7 @@ public class AppConfigurationSummary {
   private ConfigurationTypeEnum configurationType = null;
 
   /**
-   * Store Selector Type
+   * Store selector type
    */
   @JsonAdapter(StoreSelectorTypeEnum.Adapter.class)
   public enum StoreSelectorTypeEnum {
@@ -162,16 +162,16 @@ public class AppConfigurationSummary {
   @SerializedName("DeveloperName")
   private String developerName = null;
 
-  public AppConfigurationSummary id(String id) {
+  public AppStoreAppConfigurationSummary id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Application Configuration Public Id
+   * Unique App store app configuration id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Application Configuration Public Id")
+  @ApiModelProperty(required = true, value = "Unique App store app configuration id")
   public String getId() {
     return id;
   }
@@ -180,16 +180,16 @@ public class AppConfigurationSummary {
     this.id = id;
   }
 
-  public AppConfigurationSummary appId(String appId) {
+  public AppStoreAppConfigurationSummary appId(String appId) {
     this.appId = appId;
     return this;
   }
 
    /**
-   * Whitelabel App Id
+   * App Id
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "Whitelabel App Id")
+  @ApiModelProperty(required = true, value = "App Id")
   public String getAppId() {
     return appId;
   }
@@ -198,16 +198,16 @@ public class AppConfigurationSummary {
     this.appId = appId;
   }
 
-  public AppConfigurationSummary isEnabled(Boolean isEnabled) {
+  public AppStoreAppConfigurationSummary isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
 
    /**
-   * Is Enabled
+   * Is enabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is Enabled")
+  @ApiModelProperty(required = true, value = "Is enabled")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -216,21 +216,21 @@ public class AppConfigurationSummary {
     this.isEnabled = isEnabled;
   }
 
-  public AppConfigurationSummary physicalRestaurants(List<ConfiguredPhysicalRestaurant> physicalRestaurants) {
+  public AppStoreAppConfigurationSummary physicalRestaurants(List<ConfiguredPhysicalRestaurant> physicalRestaurants) {
     this.physicalRestaurants = physicalRestaurants;
     return this;
   }
 
-  public AppConfigurationSummary addPhysicalRestaurantsItem(ConfiguredPhysicalRestaurant physicalRestaurantsItem) {
+  public AppStoreAppConfigurationSummary addPhysicalRestaurantsItem(ConfiguredPhysicalRestaurant physicalRestaurantsItem) {
     this.physicalRestaurants.add(physicalRestaurantsItem);
     return this;
   }
 
    /**
-   * List of restaurants
+   * List of stores
    * @return physicalRestaurants
   **/
-  @ApiModelProperty(required = true, value = "List of restaurants")
+  @ApiModelProperty(required = true, value = "List of stores")
   public List<ConfiguredPhysicalRestaurant> getPhysicalRestaurants() {
     return physicalRestaurants;
   }
@@ -239,16 +239,16 @@ public class AppConfigurationSummary {
     this.physicalRestaurants = physicalRestaurants;
   }
 
-  public AppConfigurationSummary configurationType(ConfigurationTypeEnum configurationType) {
+  public AppStoreAppConfigurationSummary configurationType(ConfigurationTypeEnum configurationType) {
     this.configurationType = configurationType;
     return this;
   }
 
    /**
-   * Configuration Type
+   * Configuration type
    * @return configurationType
   **/
-  @ApiModelProperty(value = "Configuration Type")
+  @ApiModelProperty(value = "Configuration type")
   public ConfigurationTypeEnum getConfigurationType() {
     return configurationType;
   }
@@ -257,16 +257,16 @@ public class AppConfigurationSummary {
     this.configurationType = configurationType;
   }
 
-  public AppConfigurationSummary storeSelectorType(StoreSelectorTypeEnum storeSelectorType) {
+  public AppStoreAppConfigurationSummary storeSelectorType(StoreSelectorTypeEnum storeSelectorType) {
     this.storeSelectorType = storeSelectorType;
     return this;
   }
 
    /**
-   * Store Selector Type
+   * Store selector type
    * @return storeSelectorType
   **/
-  @ApiModelProperty(value = "Store Selector Type")
+  @ApiModelProperty(value = "Store selector type")
   public StoreSelectorTypeEnum getStoreSelectorType() {
     return storeSelectorType;
   }
@@ -275,16 +275,16 @@ public class AppConfigurationSummary {
     this.storeSelectorType = storeSelectorType;
   }
 
-  public AppConfigurationSummary appStoreAppId(String appStoreAppId) {
+  public AppStoreAppConfigurationSummary appStoreAppId(String appStoreAppId) {
     this.appStoreAppId = appStoreAppId;
     return this;
   }
 
    /**
-   * AppStore App Id
+   * Unique App store app id
    * @return appStoreAppId
   **/
-  @ApiModelProperty(required = true, value = "AppStore App Id")
+  @ApiModelProperty(required = true, value = "Unique App store app id")
   public String getAppStoreAppId() {
     return appStoreAppId;
   }
@@ -293,16 +293,16 @@ public class AppConfigurationSummary {
     this.appStoreAppId = appStoreAppId;
   }
 
-  public AppConfigurationSummary name(String name) {
+  public AppStoreAppConfigurationSummary name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Name
+   * Name of Appstore app
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "Name of Appstore app")
   public String getName() {
     return name;
   }
@@ -311,7 +311,7 @@ public class AppConfigurationSummary {
     this.name = name;
   }
 
-  public AppConfigurationSummary description(String description) {
+  public AppStoreAppConfigurationSummary description(String description) {
     this.description = description;
     return this;
   }
@@ -329,7 +329,7 @@ public class AppConfigurationSummary {
     this.description = description;
   }
 
-  public AppConfigurationSummary logo(String logo) {
+  public AppStoreAppConfigurationSummary logo(String logo) {
     this.logo = logo;
     return this;
   }
@@ -347,16 +347,16 @@ public class AppConfigurationSummary {
     this.logo = logo;
   }
 
-  public AppConfigurationSummary developerName(String developerName) {
+  public AppStoreAppConfigurationSummary developerName(String developerName) {
     this.developerName = developerName;
     return this;
   }
 
    /**
-   * Developer Name
+   * Developer name
    * @return developerName
   **/
-  @ApiModelProperty(value = "Developer Name")
+  @ApiModelProperty(value = "Developer name")
   public String getDeveloperName() {
     return developerName;
   }
@@ -374,18 +374,18 @@ public class AppConfigurationSummary {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppConfigurationSummary appConfigurationSummary = (AppConfigurationSummary) o;
-    return Objects.equals(this.id, appConfigurationSummary.id) &&
-        Objects.equals(this.appId, appConfigurationSummary.appId) &&
-        Objects.equals(this.isEnabled, appConfigurationSummary.isEnabled) &&
-        Objects.equals(this.physicalRestaurants, appConfigurationSummary.physicalRestaurants) &&
-        Objects.equals(this.configurationType, appConfigurationSummary.configurationType) &&
-        Objects.equals(this.storeSelectorType, appConfigurationSummary.storeSelectorType) &&
-        Objects.equals(this.appStoreAppId, appConfigurationSummary.appStoreAppId) &&
-        Objects.equals(this.name, appConfigurationSummary.name) &&
-        Objects.equals(this.description, appConfigurationSummary.description) &&
-        Objects.equals(this.logo, appConfigurationSummary.logo) &&
-        Objects.equals(this.developerName, appConfigurationSummary.developerName);
+    AppStoreAppConfigurationSummary appStoreAppConfigurationSummary = (AppStoreAppConfigurationSummary) o;
+    return Objects.equals(this.id, appStoreAppConfigurationSummary.id) &&
+        Objects.equals(this.appId, appStoreAppConfigurationSummary.appId) &&
+        Objects.equals(this.isEnabled, appStoreAppConfigurationSummary.isEnabled) &&
+        Objects.equals(this.physicalRestaurants, appStoreAppConfigurationSummary.physicalRestaurants) &&
+        Objects.equals(this.configurationType, appStoreAppConfigurationSummary.configurationType) &&
+        Objects.equals(this.storeSelectorType, appStoreAppConfigurationSummary.storeSelectorType) &&
+        Objects.equals(this.appStoreAppId, appStoreAppConfigurationSummary.appStoreAppId) &&
+        Objects.equals(this.name, appStoreAppConfigurationSummary.name) &&
+        Objects.equals(this.description, appStoreAppConfigurationSummary.description) &&
+        Objects.equals(this.logo, appStoreAppConfigurationSummary.logo) &&
+        Objects.equals(this.developerName, appStoreAppConfigurationSummary.developerName);
   }
 
   @Override
@@ -397,7 +397,7 @@ public class AppConfigurationSummary {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppConfigurationSummary {\n");
+    sb.append("class AppStoreAppConfigurationSummary {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");

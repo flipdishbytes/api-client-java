@@ -27,15 +27,16 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.AppDetail;
-import com.flipdish.apiclient.model.AppDetailBase;
+import com.flipdish.apiclient.model.AppStoreApp;
+import com.flipdish.apiclient.model.CreateAppStoreApp;
 import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultAppSummary;
-import com.flipdish.apiclient.model.RestApiResultAppDetail;
+import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateAppStoreApp;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,8 +65,8 @@ public class AppStoreApi {
 
     /**
      * Build call for appVerificationUpdate
-     * @param appStoreAppId App Store App Id (required)
-     * @param verificationStatus New Verification Status (required)
+     * @param appStoreAppId App store app id (required)
+     * @param verificationStatus New verification status (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -133,10 +134,10 @@ public class AppStoreApi {
     }
 
     /**
-     * Update app store app verification
+     * Update App store app verification
      * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param appStoreAppId App Store App Id (required)
-     * @param verificationStatus New Verification Status (required)
+     * @param appStoreAppId App store app id (required)
+     * @param verificationStatus New verification status (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void appVerificationUpdate(String appStoreAppId, String verificationStatus) throws ApiException {
@@ -144,10 +145,10 @@ public class AppStoreApi {
     }
 
     /**
-     * Update app store app verification
+     * Update App store app verification
      * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param appStoreAppId App Store App Id (required)
-     * @param verificationStatus New Verification Status (required)
+     * @param appStoreAppId App store app id (required)
+     * @param verificationStatus New verification status (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -157,10 +158,10 @@ public class AppStoreApi {
     }
 
     /**
-     * Update app store app verification (asynchronously)
+     * Update App store app verification (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param appStoreAppId App Store App Id (required)
-     * @param verificationStatus New Verification Status (required)
+     * @param appStoreAppId App store app id (required)
+     * @param verificationStatus New verification status (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -192,14 +193,14 @@ public class AppStoreApi {
     }
     /**
      * Build call for createAppStoreApp
-     * @param appDetailBase App Store App Detail Base (required)
+     * @param createAppStoreApp App store app (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createAppStoreAppCall(AppDetailBase appDetailBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = appDetailBase;
+    public com.squareup.okhttp.Call createAppStoreAppCall(CreateAppStoreApp createAppStoreApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = createAppStoreApp;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/appstore/apps";
@@ -240,53 +241,53 @@ public class AppStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createAppStoreAppValidateBeforeCall(AppDetailBase appDetailBase, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createAppStoreAppValidateBeforeCall(CreateAppStoreApp createAppStoreApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'appDetailBase' is set
-        if (appDetailBase == null) {
-            throw new ApiException("Missing the required parameter 'appDetailBase' when calling createAppStoreApp(Async)");
+        // verify the required parameter 'createAppStoreApp' is set
+        if (createAppStoreApp == null) {
+            throw new ApiException("Missing the required parameter 'createAppStoreApp' when calling createAppStoreApp(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = createAppStoreAppCall(appDetailBase, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createAppStoreAppCall(createAppStoreApp, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * Create app store app
+     * Create App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appDetailBase App Store App Detail Base (required)
-     * @return RestApiResultAppDetail
+     * @param createAppStoreApp App store app (required)
+     * @return RestApiResultAppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppDetail createAppStoreApp(AppDetailBase appDetailBase) throws ApiException {
-        ApiResponse<RestApiResultAppDetail> resp = createAppStoreAppWithHttpInfo(appDetailBase);
+    public RestApiResultAppStoreApp createAppStoreApp(CreateAppStoreApp createAppStoreApp) throws ApiException {
+        ApiResponse<RestApiResultAppStoreApp> resp = createAppStoreAppWithHttpInfo(createAppStoreApp);
         return resp.getData();
     }
 
     /**
-     * Create app store app
+     * Create App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appDetailBase App Store App Detail Base (required)
-     * @return ApiResponse&lt;RestApiResultAppDetail&gt;
+     * @param createAppStoreApp App store app (required)
+     * @return ApiResponse&lt;RestApiResultAppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppDetail> createAppStoreAppWithHttpInfo(AppDetailBase appDetailBase) throws ApiException {
-        com.squareup.okhttp.Call call = createAppStoreAppValidateBeforeCall(appDetailBase, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultAppDetail>(){}.getType();
+    public ApiResponse<RestApiResultAppStoreApp> createAppStoreAppWithHttpInfo(CreateAppStoreApp createAppStoreApp) throws ApiException {
+        com.squareup.okhttp.Call call = createAppStoreAppValidateBeforeCall(createAppStoreApp, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Create app store app (asynchronously)
+     * Create App store app (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appDetailBase App Store App Detail Base (required)
+     * @param createAppStoreApp App store app (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createAppStoreAppAsync(AppDetailBase appDetailBase, final ApiCallback<RestApiResultAppDetail> callback) throws ApiException {
+    public com.squareup.okhttp.Call createAppStoreAppAsync(CreateAppStoreApp createAppStoreApp, final ApiCallback<RestApiResultAppStoreApp> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -307,14 +308,14 @@ public class AppStoreApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createAppStoreAppValidateBeforeCall(appDetailBase, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultAppDetail>(){}.getType();
+        com.squareup.okhttp.Call call = createAppStoreAppValidateBeforeCall(createAppStoreApp, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for deleteAppStoreApp
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -377,9 +378,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Delete app store app
+     * Delete App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -389,9 +390,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Delete app store app
+     * Delete App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -402,9 +403,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Delete app store app (asynchronously)
+     * Delete App store app (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -437,7 +438,7 @@ public class AppStoreApi {
     }
     /**
      * Build call for getAppStoreApp
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -500,39 +501,39 @@ public class AppStoreApi {
     }
 
     /**
-     * Get app store app details
+     * Get App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
-     * @return AppDetail
+     * @param appStoreAppId App store app id (required)
+     * @return AppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AppDetail getAppStoreApp(String appStoreAppId) throws ApiException {
-        ApiResponse<AppDetail> resp = getAppStoreAppWithHttpInfo(appStoreAppId);
+    public AppStoreApp getAppStoreApp(String appStoreAppId) throws ApiException {
+        ApiResponse<AppStoreApp> resp = getAppStoreAppWithHttpInfo(appStoreAppId);
         return resp.getData();
     }
 
     /**
-     * Get app store app details
+     * Get App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
-     * @return ApiResponse&lt;AppDetail&gt;
+     * @param appStoreAppId App store app id (required)
+     * @return ApiResponse&lt;AppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AppDetail> getAppStoreAppWithHttpInfo(String appStoreAppId) throws ApiException {
+    public ApiResponse<AppStoreApp> getAppStoreAppWithHttpInfo(String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, null, null);
-        Type localVarReturnType = new TypeToken<AppDetail>(){}.getType();
+        Type localVarReturnType = new TypeToken<AppStoreApp>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get app store app details (asynchronously)
+     * Get App store app (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, final ApiCallback<AppDetail> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, final ApiCallback<AppStoreApp> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -554,16 +555,16 @@ public class AppStoreApi {
         }
 
         com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AppDetail>(){}.getType();
+        Type localVarReturnType = new TypeToken<AppStoreApp>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getAppStoreApps
-     * @param search Query app store app name (required)
+     * @param search Query App store app name (required)
      * @param page Requested page index (optional)
      * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude app store apps that user is not the owner off (optional)
+     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -633,48 +634,48 @@ public class AppStoreApi {
     }
 
     /**
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query app store app name (required)
+     * @param search Query App store app name (required)
      * @param page Requested page index (optional)
      * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude app store apps that user is not the owner off (optional)
-     * @return RestApiPaginationResultAppSummary
+     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     * @return RestApiPaginationResultAppStoreAppSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultAppSummary getAppStoreApps(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
-        ApiResponse<RestApiPaginationResultAppSummary> resp = getAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
+    public RestApiPaginationResultAppStoreAppSummary getAppStoreApps(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
+        ApiResponse<RestApiPaginationResultAppStoreAppSummary> resp = getAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
         return resp.getData();
     }
 
     /**
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query app store app name (required)
+     * @param search Query App store app name (required)
      * @param page Requested page index (optional)
      * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude app store apps that user is not the owner off (optional)
-     * @return ApiResponse&lt;RestApiPaginationResultAppSummary&gt;
+     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     * @return ApiResponse&lt;RestApiPaginationResultAppStoreAppSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultAppSummary> getAppStoreAppsWithHttpInfo(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
+    public ApiResponse<RestApiPaginationResultAppStoreAppSummary> getAppStoreAppsWithHttpInfo(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
         com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultAppSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultAppStoreAppSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get list of app store app summaries (asynchronously)
+     * Get list of App store app summaries (asynchronously)
      * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query app store app name (required)
+     * @param search Query App store app name (required)
      * @param page Requested page index (optional)
      * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude app store apps that user is not the owner off (optional)
+     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppsAsync(String search, Integer page, Integer limit, Boolean excludeNotOwned, final ApiCallback<RestApiPaginationResultAppSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppsAsync(String search, Integer page, Integer limit, Boolean excludeNotOwned, final ApiCallback<RestApiPaginationResultAppStoreAppSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -696,21 +697,21 @@ public class AppStoreApi {
         }
 
         com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultAppSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultAppStoreAppSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for updateAppStoreApp
-     * @param appStoreAppId App Store App Id (required)
-     * @param appDetail App Store App Detail (required)
+     * @param appStoreAppId App store app id (required)
+     * @param appStoreApp Update App store app (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreAppCall(String appStoreAppId, AppDetail appDetail, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = appDetail;
+    public com.squareup.okhttp.Call updateAppStoreAppCall(String appStoreAppId, UpdateAppStoreApp appStoreApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = appStoreApp;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/appstore/apps/{appStoreAppId}"
@@ -752,58 +753,58 @@ public class AppStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateAppStoreAppValidateBeforeCall(String appStoreAppId, AppDetail appDetail, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateAppStoreAppValidateBeforeCall(String appStoreAppId, UpdateAppStoreApp appStoreApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appStoreAppId' is set
         if (appStoreAppId == null) {
             throw new ApiException("Missing the required parameter 'appStoreAppId' when calling updateAppStoreApp(Async)");
         }
         
-        // verify the required parameter 'appDetail' is set
-        if (appDetail == null) {
-            throw new ApiException("Missing the required parameter 'appDetail' when calling updateAppStoreApp(Async)");
+        // verify the required parameter 'appStoreApp' is set
+        if (appStoreApp == null) {
+            throw new ApiException("Missing the required parameter 'appStoreApp' when calling updateAppStoreApp(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateAppStoreAppCall(appStoreAppId, appDetail, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreAppCall(appStoreAppId, appStoreApp, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * Update app store app
+     * Update App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
-     * @param appDetail App Store App Detail (required)
+     * @param appStoreAppId App store app id (required)
+     * @param appStoreApp Update App store app (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateAppStoreApp(String appStoreAppId, AppDetail appDetail) throws ApiException {
-        updateAppStoreAppWithHttpInfo(appStoreAppId, appDetail);
+    public void updateAppStoreApp(String appStoreAppId, UpdateAppStoreApp appStoreApp) throws ApiException {
+        updateAppStoreAppWithHttpInfo(appStoreAppId, appStoreApp);
     }
 
     /**
-     * Update app store app
+     * Update App store app
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
-     * @param appDetail App Store App Detail (required)
+     * @param appStoreAppId App store app id (required)
+     * @param appStoreApp Update App store app (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateAppStoreAppWithHttpInfo(String appStoreAppId, AppDetail appDetail) throws ApiException {
-        com.squareup.okhttp.Call call = updateAppStoreAppValidateBeforeCall(appStoreAppId, appDetail, null, null);
+    public ApiResponse<Void> updateAppStoreAppWithHttpInfo(String appStoreAppId, UpdateAppStoreApp appStoreApp) throws ApiException {
+        com.squareup.okhttp.Call call = updateAppStoreAppValidateBeforeCall(appStoreAppId, appStoreApp, null, null);
         return apiClient.execute(call);
     }
 
     /**
-     * Update app store app (asynchronously)
+     * Update App store app (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App Store App Id (required)
-     * @param appDetail App Store App Detail (required)
+     * @param appStoreAppId App store app id (required)
+     * @param appStoreApp Update App store app (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateAppStoreAppAsync(String appStoreAppId, AppDetail appDetail, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateAppStoreAppAsync(String appStoreAppId, UpdateAppStoreApp appStoreApp, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -824,13 +825,13 @@ public class AppStoreApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateAppStoreAppValidateBeforeCall(appStoreAppId, appDetail, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateAppStoreAppValidateBeforeCall(appStoreAppId, appStoreApp, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for uploadAppStoreAppLogo
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param image App Store App Logo (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -901,9 +902,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      * 
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param image App Store App Logo (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -912,9 +913,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      * 
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param image App Store App Logo (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -925,9 +926,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Upload the app store app logo \\ icon (asynchronously)
+     * Upload the App store app logo \\ icon (asynchronously)
      * 
-     * @param appStoreAppId App Store App Id (required)
+     * @param appStoreAppId App store app id (required)
      * @param image App Store App Logo (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

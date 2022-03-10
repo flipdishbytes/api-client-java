@@ -14,15 +14,15 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppConfigurationDetail;
-import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationHeader;
-import com.flipdish.apiclient.model.RestApiArrayResultAppConfigurationSummary;
+import com.flipdish.apiclient.model.AppStoreAppConfiguration;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationHeader;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultAppConfigurationSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.UpdateAppConfiguration;
+import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -41,7 +41,7 @@ public class AppStoreConfigurationsApiTest {
 
     
     /**
-     * Create app store app configuration
+     * Create App store app configuration
      *
      * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
      *
@@ -52,13 +52,13 @@ public class AppStoreConfigurationsApiTest {
     public void createAppStoreConfigTest() throws ApiException {
         String appId = null;
         String appStoreAppId = null;
-        RestApiResultAppConfigurationSummary response = api.createAppStoreConfig(appId, appStoreAppId);
+        RestApiResultAppStoreAppConfiguration response = api.createAppStoreConfig(appId, appStoreAppId);
 
         // TODO: test validations
     }
     
     /**
-     * Delete app store app configuration
+     * Delete App store app configuration
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -76,7 +76,7 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Get app store app configuration
+     * Get App store app configuration
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -88,13 +88,13 @@ public class AppStoreConfigurationsApiTest {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
-        AppConfigurationDetail response = api.getAppStoreConfig(appId, appStoreAppId, configId);
+        AppStoreAppConfiguration response = api.getAppStoreConfig(appId, appStoreAppId, configId);
 
         // TODO: test validations
     }
     
     /**
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      *
      * [ALPHA - this endpoint is not ready to be consumed]
      *
@@ -105,13 +105,13 @@ public class AppStoreConfigurationsApiTest {
     public void getConfiguredAppSingleAppTest() throws ApiException {
         String appId = null;
         String appStoreAppId = null;
-        RestApiArrayResultAppConfigurationSummary response = api.getConfiguredAppSingleApp(appId, appStoreAppId);
+        RestApiArrayResultAppStoreAppConfigurationSummary response = api.getConfiguredAppSingleApp(appId, appStoreAppId);
 
         // TODO: test validations
     }
     
     /**
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      *
      * [ALPHA - this endpoint is not ready to be consumed]
      *
@@ -121,13 +121,13 @@ public class AppStoreConfigurationsApiTest {
     @Test
     public void getConfiguredAppsTest() throws ApiException {
         String appId = null;
-        RestApiArrayResultAppConfigurationHeader response = api.getConfiguredApps(appId);
+        RestApiArrayResultAppStoreAppConfigurationHeader response = api.getConfiguredApps(appId);
 
         // TODO: test validations
     }
     
     /**
-     * Update app store app configuration
+     * Update App store app configuration
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -139,8 +139,8 @@ public class AppStoreConfigurationsApiTest {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
-        UpdateAppConfiguration updateAppConfigurationBase = null;
-        api.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppConfigurationBase);
+        UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration = null;
+        api.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
 
         // TODO: test validations
     }

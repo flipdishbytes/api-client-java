@@ -27,25 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Application Summary  &lt;remarks&gt;Header information for display in lists, like list of apps&lt;/remarks&gt;
+ * App store app summary information
  */
-@ApiModel(description = "Application Summary  <remarks>Header information for display in lists, like list of apps</remarks>")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppSummary {
+@ApiModel(description = "App store app summary information")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class AppStoreAppSummary {
   @SerializedName("Id")
   private String id = null;
-
-  @SerializedName("Name")
-  private String name = null;
-
-  @SerializedName("Description")
-  private String description = null;
-
-  @SerializedName("Logo")
-  private String logo = null;
-
-  @SerializedName("IsEnabled")
-  private Boolean isEnabled = null;
 
   /**
    * Application verification status
@@ -99,6 +87,18 @@ public class AppSummary {
   @SerializedName("VerificationStatus")
   private VerificationStatusEnum verificationStatus = null;
 
+  @SerializedName("Logo")
+  private String logo = null;
+
+  @SerializedName("Name")
+  private String name = null;
+
+  @SerializedName("Description")
+  private String description = null;
+
+  @SerializedName("IsEnabled")
+  private Boolean isEnabled = null;
+
   @SerializedName("Tags")
   private List<String> tags = new ArrayList<String>();
 
@@ -108,16 +108,16 @@ public class AppSummary {
   @SerializedName("DeveloperName")
   private String developerName = null;
 
-  public AppSummary id(String id) {
+  public AppStoreAppSummary id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Integration Public Id
+   * Unique App store app id
    * @return id
   **/
-  @ApiModelProperty(value = "Integration Public Id")
+  @ApiModelProperty(value = "Unique App store app id")
   public String getId() {
     return id;
   }
@@ -126,79 +126,7 @@ public class AppSummary {
     this.id = id;
   }
 
-  public AppSummary name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name
-   * @return name
-  **/
-  @ApiModelProperty(required = true, value = "Name")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public AppSummary description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Description
-   * @return description
-  **/
-  @ApiModelProperty(required = true, value = "Description")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public AppSummary logo(String logo) {
-    this.logo = logo;
-    return this;
-  }
-
-   /**
-   * Logo
-   * @return logo
-  **/
-  @ApiModelProperty(value = "Logo")
-  public String getLogo() {
-    return logo;
-  }
-
-  public void setLogo(String logo) {
-    this.logo = logo;
-  }
-
-  public AppSummary isEnabled(Boolean isEnabled) {
-    this.isEnabled = isEnabled;
-    return this;
-  }
-
-   /**
-   * Is application enabled
-   * @return isEnabled
-  **/
-  @ApiModelProperty(value = "Is application enabled")
-  public Boolean isIsEnabled() {
-    return isEnabled;
-  }
-
-  public void setIsEnabled(Boolean isEnabled) {
-    this.isEnabled = isEnabled;
-  }
-
-  public AppSummary verificationStatus(VerificationStatusEnum verificationStatus) {
+  public AppStoreAppSummary verificationStatus(VerificationStatusEnum verificationStatus) {
     this.verificationStatus = verificationStatus;
     return this;
   }
@@ -216,12 +144,84 @@ public class AppSummary {
     this.verificationStatus = verificationStatus;
   }
 
-  public AppSummary tags(List<String> tags) {
+  public AppStoreAppSummary logo(String logo) {
+    this.logo = logo;
+    return this;
+  }
+
+   /**
+   * Logo
+   * @return logo
+  **/
+  @ApiModelProperty(value = "Logo")
+  public String getLogo() {
+    return logo;
+  }
+
+  public void setLogo(String logo) {
+    this.logo = logo;
+  }
+
+  public AppStoreAppSummary name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Name
+   * @return name
+  **/
+  @ApiModelProperty(required = true, value = "Name")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public AppStoreAppSummary description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Description
+   * @return description
+  **/
+  @ApiModelProperty(required = true, value = "Description")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public AppStoreAppSummary isEnabled(Boolean isEnabled) {
+    this.isEnabled = isEnabled;
+    return this;
+  }
+
+   /**
+   * Is application enabled
+   * @return isEnabled
+  **/
+  @ApiModelProperty(value = "Is application enabled")
+  public Boolean isIsEnabled() {
+    return isEnabled;
+  }
+
+  public void setIsEnabled(Boolean isEnabled) {
+    this.isEnabled = isEnabled;
+  }
+
+  public AppStoreAppSummary tags(List<String> tags) {
     this.tags = tags;
     return this;
   }
 
-  public AppSummary addTagsItem(String tagsItem) {
+  public AppStoreAppSummary addTagsItem(String tagsItem) {
     this.tags.add(tagsItem);
     return this;
   }
@@ -239,12 +239,12 @@ public class AppSummary {
     this.tags = tags;
   }
 
-  public AppSummary regions(List<String> regions) {
+  public AppStoreAppSummary regions(List<String> regions) {
     this.regions = regions;
     return this;
   }
 
-  public AppSummary addRegionsItem(String regionsItem) {
+  public AppStoreAppSummary addRegionsItem(String regionsItem) {
     this.regions.add(regionsItem);
     return this;
   }
@@ -262,7 +262,7 @@ public class AppSummary {
     this.regions = regions;
   }
 
-  public AppSummary developerName(String developerName) {
+  public AppStoreAppSummary developerName(String developerName) {
     this.developerName = developerName;
     return this;
   }
@@ -289,35 +289,35 @@ public class AppSummary {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppSummary appSummary = (AppSummary) o;
-    return Objects.equals(this.id, appSummary.id) &&
-        Objects.equals(this.name, appSummary.name) &&
-        Objects.equals(this.description, appSummary.description) &&
-        Objects.equals(this.logo, appSummary.logo) &&
-        Objects.equals(this.isEnabled, appSummary.isEnabled) &&
-        Objects.equals(this.verificationStatus, appSummary.verificationStatus) &&
-        Objects.equals(this.tags, appSummary.tags) &&
-        Objects.equals(this.regions, appSummary.regions) &&
-        Objects.equals(this.developerName, appSummary.developerName);
+    AppStoreAppSummary appStoreAppSummary = (AppStoreAppSummary) o;
+    return Objects.equals(this.id, appStoreAppSummary.id) &&
+        Objects.equals(this.verificationStatus, appStoreAppSummary.verificationStatus) &&
+        Objects.equals(this.logo, appStoreAppSummary.logo) &&
+        Objects.equals(this.name, appStoreAppSummary.name) &&
+        Objects.equals(this.description, appStoreAppSummary.description) &&
+        Objects.equals(this.isEnabled, appStoreAppSummary.isEnabled) &&
+        Objects.equals(this.tags, appStoreAppSummary.tags) &&
+        Objects.equals(this.regions, appStoreAppSummary.regions) &&
+        Objects.equals(this.developerName, appStoreAppSummary.developerName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, description, logo, isEnabled, verificationStatus, tags, regions, developerName);
+    return Objects.hash(id, verificationStatus, logo, name, description, isEnabled, tags, regions, developerName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppSummary {\n");
+    sb.append("class AppStoreAppSummary {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
+    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
     sb.append("    developerName: ").append(toIndentedString(developerName)).append("\n");

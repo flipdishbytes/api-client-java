@@ -28,11 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Application Configuration Base
+ * App store app configuration webhook event
  */
-@ApiModel(description = "Application Configuration Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppConfigurationBase {
+@ApiModel(description = "App store app configuration webhook event")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class UpdateAppStoreAppConfigurationWebhookDTO {
   @SerializedName("Id")
   private String id = null;
 
@@ -45,16 +45,16 @@ public class AppConfigurationBase {
   @SerializedName("Settings")
   private List<Setting> settings = null;
 
-  public AppConfigurationBase id(String id) {
+  public UpdateAppStoreAppConfigurationWebhookDTO id(String id) {
     this.id = id;
     return this;
   }
 
    /**
-   * Application Configuration Public Id
+   * Unique App store app configuration id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Application Configuration Public Id")
+  @ApiModelProperty(required = true, value = "Unique App store app configuration id")
   public String getId() {
     return id;
   }
@@ -63,16 +63,16 @@ public class AppConfigurationBase {
     this.id = id;
   }
 
-  public AppConfigurationBase isEnabled(Boolean isEnabled) {
+  public UpdateAppStoreAppConfigurationWebhookDTO isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
 
    /**
-   * Is Enabled
+   * Is enabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is Enabled")
+  @ApiModelProperty(required = true, value = "Is enabled")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -81,12 +81,12 @@ public class AppConfigurationBase {
     this.isEnabled = isEnabled;
   }
 
-  public AppConfigurationBase physicalRestaurants(List<Integer> physicalRestaurants) {
+  public UpdateAppStoreAppConfigurationWebhookDTO physicalRestaurants(List<Integer> physicalRestaurants) {
     this.physicalRestaurants = physicalRestaurants;
     return this;
   }
 
-  public AppConfigurationBase addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
+  public UpdateAppStoreAppConfigurationWebhookDTO addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
     if (this.physicalRestaurants == null) {
       this.physicalRestaurants = new ArrayList<Integer>();
     }
@@ -95,10 +95,10 @@ public class AppConfigurationBase {
   }
 
    /**
-   * Physical Restaurant Id&#39;s
+   * Store id&#39;s
    * @return physicalRestaurants
   **/
-  @ApiModelProperty(value = "Physical Restaurant Id's")
+  @ApiModelProperty(value = "Store id's")
   public List<Integer> getPhysicalRestaurants() {
     return physicalRestaurants;
   }
@@ -107,12 +107,12 @@ public class AppConfigurationBase {
     this.physicalRestaurants = physicalRestaurants;
   }
 
-  public AppConfigurationBase settings(List<Setting> settings) {
+  public UpdateAppStoreAppConfigurationWebhookDTO settings(List<Setting> settings) {
     this.settings = settings;
     return this;
   }
 
-  public AppConfigurationBase addSettingsItem(Setting settingsItem) {
+  public UpdateAppStoreAppConfigurationWebhookDTO addSettingsItem(Setting settingsItem) {
     if (this.settings == null) {
       this.settings = new ArrayList<Setting>();
     }
@@ -142,11 +142,11 @@ public class AppConfigurationBase {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppConfigurationBase appConfigurationBase = (AppConfigurationBase) o;
-    return Objects.equals(this.id, appConfigurationBase.id) &&
-        Objects.equals(this.isEnabled, appConfigurationBase.isEnabled) &&
-        Objects.equals(this.physicalRestaurants, appConfigurationBase.physicalRestaurants) &&
-        Objects.equals(this.settings, appConfigurationBase.settings);
+    UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppConfigurationWebhookDTO = (UpdateAppStoreAppConfigurationWebhookDTO) o;
+    return Objects.equals(this.id, updateAppStoreAppConfigurationWebhookDTO.id) &&
+        Objects.equals(this.isEnabled, updateAppStoreAppConfigurationWebhookDTO.isEnabled) &&
+        Objects.equals(this.physicalRestaurants, updateAppStoreAppConfigurationWebhookDTO.physicalRestaurants) &&
+        Objects.equals(this.settings, updateAppStoreAppConfigurationWebhookDTO.settings);
   }
 
   @Override
@@ -158,7 +158,7 @@ public class AppConfigurationBase {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppConfigurationBase {\n");
+    sb.append("class UpdateAppStoreAppConfigurationWebhookDTO {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

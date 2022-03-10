@@ -1,14 +1,14 @@
 
-# AppConfigurationHeader
+# AppStoreAppConfigurationHeader
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**appStoreAppId** | **String** | AppStore App Id | 
-**name** | **String** | Name | 
+**appStoreAppId** | **String** | Unique App store app id | 
+**name** | **String** | Name of Appstore app | 
 **description** | **String** | Description | 
 **logo** | **String** | Logo |  [optional]
-**developerName** | **String** | Developer Name |  [optional]
+**developerName** | **String** | Developer name |  [optional]
 
 
 

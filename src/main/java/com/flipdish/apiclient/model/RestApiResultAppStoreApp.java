@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.AppStoreApp;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,50 +26,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * AppConfigurationSetting
+ * Rest api result
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
-public class AppConfigurationSetting {
-  @SerializedName("Key")
-  private String key = null;
+@ApiModel(description = "Rest api result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:48:55.375Z")
+public class RestApiResultAppStoreApp {
+  @SerializedName("Data")
+  private AppStoreApp data = null;
 
-  @SerializedName("Value")
-  private String value = null;
-
-  public AppConfigurationSetting key(String key) {
-    this.key = key;
+  public RestApiResultAppStoreApp data(AppStoreApp data) {
+    this.data = data;
     return this;
   }
 
    /**
-   * Get key
-   * @return key
+   * Generic data object.
+   * @return data
   **/
-  @ApiModelProperty(value = "")
-  public String getKey() {
-    return key;
+  @ApiModelProperty(required = true, value = "Generic data object.")
+  public AppStoreApp getData() {
+    return data;
   }
 
-  public void setKey(String key) {
-    this.key = key;
-  }
-
-  public AppConfigurationSetting value(String value) {
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Get value
-   * @return value
-  **/
-  @ApiModelProperty(value = "")
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
+  public void setData(AppStoreApp data) {
+    this.data = data;
   }
 
 
@@ -80,24 +61,22 @@ public class AppConfigurationSetting {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppConfigurationSetting appConfigurationSetting = (AppConfigurationSetting) o;
-    return Objects.equals(this.key, appConfigurationSetting.key) &&
-        Objects.equals(this.value, appConfigurationSetting.value);
+    RestApiResultAppStoreApp restApiResultAppStoreApp = (RestApiResultAppStoreApp) o;
+    return Objects.equals(this.data, restApiResultAppStoreApp.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(key, value);
+    return Objects.hash(data);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppConfigurationSetting {\n");
+    sb.append("class RestApiResultAppStoreApp {\n");
     
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

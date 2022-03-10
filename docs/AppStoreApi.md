@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appVerificationUpdate**](AppStoreApi.md#appVerificationUpdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update app store app verification
-[**createAppStoreApp**](AppStoreApi.md#createAppStoreApp) | **POST** /api/v1.0/appstore/apps | Create app store app
-[**deleteAppStoreApp**](AppStoreApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete app store app
-[**getAppStoreApp**](AppStoreApi.md#getAppStoreApp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
-[**getAppStoreApps**](AppStoreApi.md#getAppStoreApps) | **GET** /api/v1.0/appstore/apps | Get list of app store app summaries
-[**updateAppStoreApp**](AppStoreApi.md#updateAppStoreApp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
-[**uploadAppStoreAppLogo**](AppStoreApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the app store app logo \\ icon
+[**appVerificationUpdate**](AppStoreApi.md#appVerificationUpdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update App store app verification
+[**createAppStoreApp**](AppStoreApi.md#createAppStoreApp) | **POST** /api/v1.0/appstore/apps | Create App store app
+[**deleteAppStoreApp**](AppStoreApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete App store app
+[**getAppStoreApp**](AppStoreApi.md#getAppStoreApp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
+[**getAppStoreApps**](AppStoreApi.md#getAppStoreApps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+[**updateAppStoreApp**](AppStoreApi.md#updateAppStoreApp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update App store app
+[**uploadAppStoreAppLogo**](AppStoreApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 
 
 <a name="appVerificationUpdate"></a>
 # **appVerificationUpdate**
 > appVerificationUpdate(appStoreAppId, verificationStatus)
 
-Update app store app verification
+Update App store app verification
 
 [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
@@ -37,8 +37,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
-String verificationStatus = "verificationStatus_example"; // String | New Verification Status
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String verificationStatus = "verificationStatus_example"; // String | New verification status
 try {
     apiInstance.appVerificationUpdate(appStoreAppId, verificationStatus);
 } catch (ApiException e) {
@@ -51,8 +51,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **String**| App Store App Id |
- **verificationStatus** | **String**| New Verification Status |
+ **appStoreAppId** | **String**| App store app id |
+ **verificationStatus** | **String**| New verification status |
 
 ### Return type
 
@@ -69,9 +69,9 @@ null (empty response body)
 
 <a name="createAppStoreApp"></a>
 # **createAppStoreApp**
-> RestApiResultAppDetail createAppStoreApp(appDetailBase)
+> RestApiResultAppStoreApp createAppStoreApp(createAppStoreApp)
 
-Create app store app
+Create App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -91,9 +91,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-AppDetailBase appDetailBase = new AppDetailBase(); // AppDetailBase | App Store App Detail Base
+CreateAppStoreApp createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | App store app
 try {
-    RestApiResultAppDetail result = apiInstance.createAppStoreApp(appDetailBase);
+    RestApiResultAppStoreApp result = apiInstance.createAppStoreApp(createAppStoreApp);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#createAppStoreApp");
@@ -105,11 +105,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appDetailBase** | [**AppDetailBase**](AppDetailBase.md)| App Store App Detail Base |
+ **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)| App store app |
 
 ### Return type
 
-[**RestApiResultAppDetail**](RestApiResultAppDetail.md)
+[**RestApiResultAppStoreApp**](RestApiResultAppStoreApp.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 # **deleteAppStoreApp**
 > RestApiStringResult deleteAppStoreApp(appStoreAppId)
 
-Delete app store app
+Delete App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -144,7 +144,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
 try {
     RestApiStringResult result = apiInstance.deleteAppStoreApp(appStoreAppId);
     System.out.println(result);
@@ -158,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **String**| App Store App Id |
+ **appStoreAppId** | **String**| App store app id |
 
 ### Return type
 
@@ -175,9 +175,9 @@ Name | Type | Description  | Notes
 
 <a name="getAppStoreApp"></a>
 # **getAppStoreApp**
-> AppDetail getAppStoreApp(appStoreAppId)
+> AppStoreApp getAppStoreApp(appStoreAppId)
 
-Get app store app details
+Get App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -197,9 +197,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
 try {
-    AppDetail result = apiInstance.getAppStoreApp(appStoreAppId);
+    AppStoreApp result = apiInstance.getAppStoreApp(appStoreAppId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#getAppStoreApp");
@@ -211,11 +211,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **String**| App Store App Id |
+ **appStoreAppId** | **String**| App store app id |
 
 ### Return type
 
-[**AppDetail**](AppDetail.md)
+[**AppStoreApp**](AppStoreApp.md)
 
 ### Authorization
 
@@ -228,9 +228,9 @@ Name | Type | Description  | Notes
 
 <a name="getAppStoreApps"></a>
 # **getAppStoreApps**
-> RestApiPaginationResultAppSummary getAppStoreApps(search, page, limit, excludeNotOwned)
+> RestApiPaginationResultAppStoreAppSummary getAppStoreApps(search, page, limit, excludeNotOwned)
 
-Get list of app store app summaries
+Get list of App store app summaries
 
 Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -250,12 +250,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String search = "search_example"; // String | Query app store app name
+String search = "search_example"; // String | Query App store app name
 Integer page = 56; // Integer | Requested page index
 Integer limit = 56; // Integer | Requested page limit
-Boolean excludeNotOwned = true; // Boolean | Exclude app store apps that user is not the owner off
+Boolean excludeNotOwned = true; // Boolean | Exclude App store apps that user is not the owner off
 try {
-    RestApiPaginationResultAppSummary result = apiInstance.getAppStoreApps(search, page, limit, excludeNotOwned);
+    RestApiPaginationResultAppStoreAppSummary result = apiInstance.getAppStoreApps(search, page, limit, excludeNotOwned);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#getAppStoreApps");
@@ -267,14 +267,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **String**| Query app store app name |
+ **search** | **String**| Query App store app name |
  **page** | **Integer**| Requested page index | [optional]
  **limit** | **Integer**| Requested page limit | [optional]
- **excludeNotOwned** | **Boolean**| Exclude app store apps that user is not the owner off | [optional]
+ **excludeNotOwned** | **Boolean**| Exclude App store apps that user is not the owner off | [optional]
 
 ### Return type
 
-[**RestApiPaginationResultAppSummary**](RestApiPaginationResultAppSummary.md)
+[**RestApiPaginationResultAppStoreAppSummary**](RestApiPaginationResultAppStoreAppSummary.md)
 
 ### Authorization
 
@@ -287,9 +287,9 @@ Name | Type | Description  | Notes
 
 <a name="updateAppStoreApp"></a>
 # **updateAppStoreApp**
-> updateAppStoreApp(appStoreAppId, appDetail)
+> updateAppStoreApp(appStoreAppId, appStoreApp)
 
-Update app store app
+Update App store app
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -309,10 +309,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
-AppDetail appDetail = new AppDetail(); // AppDetail | App Store App Detail
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+UpdateAppStoreApp appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | Update App store app
 try {
-    apiInstance.updateAppStoreApp(appStoreAppId, appDetail);
+    apiInstance.updateAppStoreApp(appStoreAppId, appStoreApp);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#updateAppStoreApp");
     e.printStackTrace();
@@ -323,8 +323,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **String**| App Store App Id |
- **appDetail** | [**AppDetail**](AppDetail.md)| App Store App Detail |
+ **appStoreAppId** | **String**| App store app id |
+ **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)| Update App store app |
 
 ### Return type
 
@@ -343,7 +343,7 @@ null (empty response body)
 # **uploadAppStoreAppLogo**
 > uploadAppStoreAppLogo(appStoreAppId, image)
 
-Upload the app store app logo \\ icon
+Upload the App store app logo \\ icon
 
 ### Example
 ```java
@@ -361,7 +361,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
-String appStoreAppId = "appStoreAppId_example"; // String | App Store App Id
+String appStoreAppId = "appStoreAppId_example"; // String | App store app id
 File image = new File("/path/to/file.txt"); // File | App Store App Logo
 try {
     apiInstance.uploadAppStoreAppLogo(appStoreAppId, image);
@@ -375,7 +375,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appStoreAppId** | **String**| App Store App Id |
+ **appStoreAppId** | **String**| App store app id |
  **image** | **File**| App Store App Logo |
 
 ### Return type

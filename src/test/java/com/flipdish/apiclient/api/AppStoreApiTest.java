@@ -14,15 +14,16 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppDetail;
-import com.flipdish.apiclient.model.AppDetailBase;
+import com.flipdish.apiclient.model.AppStoreApp;
+import com.flipdish.apiclient.model.CreateAppStoreApp;
 import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultAppSummary;
-import com.flipdish.apiclient.model.RestApiResultAppDetail;
+import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateAppStoreApp;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -41,7 +42,7 @@ public class AppStoreApiTest {
 
     
     /**
-     * Update app store app verification
+     * Update App store app verification
      *
      * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
      *
@@ -58,7 +59,7 @@ public class AppStoreApiTest {
     }
     
     /**
-     * Create app store app
+     * Create App store app
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -67,14 +68,14 @@ public class AppStoreApiTest {
      */
     @Test
     public void createAppStoreAppTest() throws ApiException {
-        AppDetailBase appDetailBase = null;
-        RestApiResultAppDetail response = api.createAppStoreApp(appDetailBase);
+        CreateAppStoreApp createAppStoreApp = null;
+        RestApiResultAppStoreApp response = api.createAppStoreApp(createAppStoreApp);
 
         // TODO: test validations
     }
     
     /**
-     * Delete app store app
+     * Delete App store app
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -90,7 +91,7 @@ public class AppStoreApiTest {
     }
     
     /**
-     * Get app store app details
+     * Get App store app
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -100,13 +101,13 @@ public class AppStoreApiTest {
     @Test
     public void getAppStoreAppTest() throws ApiException {
         String appStoreAppId = null;
-        AppDetail response = api.getAppStoreApp(appStoreAppId);
+        AppStoreApp response = api.getAppStoreApp(appStoreAppId);
 
         // TODO: test validations
     }
     
     /**
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      *
      * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -119,13 +120,13 @@ public class AppStoreApiTest {
         Integer page = null;
         Integer limit = null;
         Boolean excludeNotOwned = null;
-        RestApiPaginationResultAppSummary response = api.getAppStoreApps(search, page, limit, excludeNotOwned);
+        RestApiPaginationResultAppStoreAppSummary response = api.getAppStoreApps(search, page, limit, excludeNotOwned);
 
         // TODO: test validations
     }
     
     /**
-     * Update app store app
+     * Update App store app
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -135,14 +136,14 @@ public class AppStoreApiTest {
     @Test
     public void updateAppStoreAppTest() throws ApiException {
         String appStoreAppId = null;
-        AppDetail appDetail = null;
-        api.updateAppStoreApp(appStoreAppId, appDetail);
+        UpdateAppStoreApp appStoreApp = null;
+        api.updateAppStoreApp(appStoreAppId, appStoreApp);
 
         // TODO: test validations
     }
     
     /**
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      *
      * 
      *

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **description** | **String** | Description | 
 **key** | **String** | Key | 
 **tooltip** | **String** | Tooltip |  [optional]
-**position** | **Integer** | Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt; | 
-**defaultValue** | **String** | Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt; |  [optional]
+**position** | **Integer** | Position | 
+**defaultValue** | **String** | Default Value |  [optional]
 **validValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; |  [optional]
 **validationRegex** | **String** | Validation Regex |  [optional]
 **fieldType** | [**FieldTypeEnum**](#FieldTypeEnum) | Field Type | 

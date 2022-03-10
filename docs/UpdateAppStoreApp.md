@@ -1,22 +1,20 @@
 
-# AppDetailBase
+# UpdateAppStoreApp
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration Type  &lt;example&gt;ExternalLink&lt;/example&gt;&lt;example&gt;FlipdishHosted&lt;/example&gt; | 
-**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store Selector Type | 
-**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field Groups |  [optional]
-**setupInstructions** | **String** | Setup Instructions |  [optional]
-**externalSetupLink** | **String** | External Setup Link |  [optional]
-**oauthAppId** | **String** | OAuth App Id | 
-**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate App Access Level |  [optional]
-**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions Type | 
+**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
+**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
+**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups |  [optional]
+**setupInstructions** | **String** | Setup instructions |  [optional]
+**externalSetupLink** | **String** | External setup link |  [optional]
+**oauthAppId** | **String** | OAuth app id | 
+**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
+**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
 **name** | **String** | Name | 
 **description** | **String** | Description | 
-**logo** | **String** | Logo |  [optional]
 **isEnabled** | **Boolean** | Is application enabled |  [optional]
-**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **tags** | **List&lt;String&gt;** | Tags | 
 **regions** | **List&lt;String&gt;** | Regions | 
 **developerName** | **String** | Developer Name |  [optional]
@@ -58,15 +56,6 @@ FINANCEMANGER | &quot;FinanceManger&quot;
 Name | Value
 ---- | -----
 TEAMMATE | &quot;Teammate&quot;
-
-
-<a name="VerificationStatusEnum"></a>
-## Enum: VerificationStatusEnum
-Name | Value
----- | -----
-DRAFT | &quot;Draft&quot;
-SUBMITTED | &quot;Submitted&quot;
-VERIFIED | &quot;Verified&quot;
 
 
 
