@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents the format of a bank account field
  */
 @ApiModel(description = "Represents the format of a bank account field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-09T14:20:28.508Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
 public class AccountFieldDefinition {
   /**
    * Depending on the Key, the field&#39;s value will be stored in a different field in PayeeBankAccountData

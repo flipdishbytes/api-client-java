@@ -31,7 +31,7 @@ import java.util.List;
  * Application Detail Base  &lt;remarks&gt;Used for creating new apps&lt;/remarks&gt;
  */
 @ApiModel(description = "Application Detail Base  <remarks>Used for creating new apps</remarks>")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-09T14:20:28.508Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
 public class AppDetailBase {
   /**
    * Configuration Type  &lt;example&gt;ExternalLink&lt;/example&gt;&lt;example&gt;FlipdishHosted&lt;/example&gt;

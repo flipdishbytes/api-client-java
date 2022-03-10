@@ -14,9 +14,11 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
+import com.flipdish.apiclient.model.RestApiResultCardReader;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalPrivateKey;
@@ -171,6 +173,23 @@ public class CardReadersApiTest {
         String deviceId = null;
         String terminalType = null;
         api.initiateKioskBluetoothUpdateInstall(appId, deviceId, terminalType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void registerStripeTerminalTest() throws ApiException {
+        CardReaderRegistrationRequest request = null;
+        String appId = null;
+        RestApiResultCardReader response = api.registerStripeTerminal(request, appId);
 
         // TODO: test validations
     }

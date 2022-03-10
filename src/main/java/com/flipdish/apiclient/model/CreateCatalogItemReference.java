@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
  */
 @ApiModel(description = "Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-09T14:20:28.508Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
 public class CreateCatalogItemReference {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;

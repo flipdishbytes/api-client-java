@@ -32,7 +32,7 @@ import java.util.List;
  * Create menu section item
  */
 @ApiModel(description = "Create menu section item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-09T14:20:28.508Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-10T15:15:38.717Z")
 public class CreateFullMenuSectionItem {
   @SerializedName("MenuItemOptionSets")
   private List<CreateFullMenuItemOptionSet> menuItemOptionSets = null;
