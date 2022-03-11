@@ -14,12 +14,16 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.Channel;
 import com.flipdish.apiclient.model.ChannelStoreMapping;
 import com.flipdish.apiclient.model.Response;
+import com.flipdish.apiclient.model.RestApiArrayResultChannel;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelStoreMapping;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultChannel;
+import com.flipdish.apiclient.model.RestApiResultAppChannelAssignment;
+import com.flipdish.apiclient.model.RestApiResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -162,7 +166,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      *
      * 
      *
@@ -172,7 +176,23 @@ public class ChannelsApiTest {
     @Test
     public void getAssignedChannelsTest() throws ApiException {
         String appId = null;
-        Object response = api.getAssignedChannels(appId);
+        RestApiArrayResultChannel response = api.getAssignedChannels(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAvailableChannelsTest() throws ApiException {
+        String appId = null;
+        RestApiArrayResultChannel response = api.getAvailableChannels(appId);
 
         // TODO: test validations
     }
@@ -189,7 +209,7 @@ public class ChannelsApiTest {
     public void getChannelTest() throws ApiException {
         Integer id = null;
         String appId = null;
-        RestApiPaginationResultChannel response = api.getChannel(id, appId);
+        Channel response = api.getChannel(id, appId);
 
         // TODO: test validations
     }
@@ -205,29 +225,13 @@ public class ChannelsApiTest {
     @Test
     public void getChannelsTest() throws ApiException {
         String appId = null;
-        RestApiPaginationResultChannel response = api.getChannels(appId);
+        RestApiArrayResultChannel response = api.getChannels(appId);
 
         // TODO: test validations
     }
     
     /**
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getNotAssignedChannelsTest() throws ApiException {
-        String appId = null;
-        Object response = api.getNotAssignedChannels(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      *
      * 
      *
@@ -238,7 +242,7 @@ public class ChannelsApiTest {
     public void getStoresAssignedToChannelTest() throws ApiException {
         String appId = null;
         Integer channelId = null;
-        Object response = api.getStoresAssignedToChannel(appId, channelId);
+        RestApiArrayResultStoreChannelAssignment response = api.getStoresAssignedToChannel(appId, channelId);
 
         // TODO: test validations
     }

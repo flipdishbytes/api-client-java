@@ -27,12 +27,16 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.flipdish.apiclient.model.Channel;
 import com.flipdish.apiclient.model.ChannelStoreMapping;
 import com.flipdish.apiclient.model.Response;
+import com.flipdish.apiclient.model.RestApiArrayResultChannel;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelStoreMapping;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultChannel;
+import com.flipdish.apiclient.model.RestApiResultAppChannelAssignment;
+import com.flipdish.apiclient.model.RestApiResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -1099,39 +1103,39 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      * 
      * @param appId Application Id (AppNameIdxxx) (required)
-     * @return Object
+     * @return RestApiArrayResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object getAssignedChannels(String appId) throws ApiException {
-        ApiResponse<Object> resp = getAssignedChannelsWithHttpInfo(appId);
+    public RestApiArrayResultChannel getAssignedChannels(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultChannel> resp = getAssignedChannelsWithHttpInfo(appId);
         return resp.getData();
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      * 
      * @param appId Application Id (AppNameIdxxx) (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> getAssignedChannelsWithHttpInfo(String appId) throws ApiException {
+    public ApiResponse<RestApiArrayResultChannel> getAssignedChannelsWithHttpInfo(String appId) throws ApiException {
         com.squareup.okhttp.Call call = getAssignedChannelsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given whitelabel (asynchronously)
+     * Returns a list of sales channels that are assigned to a given AppId (asynchronously)
      * 
      * @param appId Application Id (AppNameIdxxx) (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAssignedChannelsAsync(String appId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAssignedChannelsAsync(String appId, final ApiCallback<RestApiArrayResultChannel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1153,14 +1157,137 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = getAssignedChannelsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getAvailableChannels
+     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getAvailableChannelsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/channels/available-channels"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getAvailableChannelsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getAvailableChannels(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getAvailableChannelsCall(appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     * 
+     * @param appId Application Id (AppNameIdxxx) (required)
+     * @return RestApiArrayResultChannel
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultChannel getAvailableChannels(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultChannel> resp = getAvailableChannelsWithHttpInfo(appId);
+        return resp.getData();
+    }
+
+    /**
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     * 
+     * @param appId Application Id (AppNameIdxxx) (required)
+     * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultChannel> getAvailableChannelsWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getAvailableChannelsValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Returns a list of sales channels that are not yet assigned to a given AppId (asynchronously)
+     * 
+     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getAvailableChannelsAsync(String appId, final ApiCallback<RestApiArrayResultChannel> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getAvailableChannelsValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getChannel
-     * @param id  (required)
-     * @param appId  (required)
+     * @param id ChannelId (required)
+     * @param appId AppId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1231,40 +1358,40 @@ public class ChannelsApi {
     /**
      * 
      * 
-     * @param id  (required)
-     * @param appId  (required)
-     * @return RestApiPaginationResultChannel
+     * @param id ChannelId (required)
+     * @param appId AppId (required)
+     * @return Channel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultChannel getChannel(Integer id, String appId) throws ApiException {
-        ApiResponse<RestApiPaginationResultChannel> resp = getChannelWithHttpInfo(id, appId);
+    public Channel getChannel(Integer id, String appId) throws ApiException {
+        ApiResponse<Channel> resp = getChannelWithHttpInfo(id, appId);
         return resp.getData();
     }
 
     /**
      * 
      * 
-     * @param id  (required)
-     * @param appId  (required)
-     * @return ApiResponse&lt;RestApiPaginationResultChannel&gt;
+     * @param id ChannelId (required)
+     * @param appId AppId (required)
+     * @return ApiResponse&lt;Channel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultChannel> getChannelWithHttpInfo(Integer id, String appId) throws ApiException {
+    public ApiResponse<Channel> getChannelWithHttpInfo(Integer id, String appId) throws ApiException {
         com.squareup.okhttp.Call call = getChannelValidateBeforeCall(id, appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultChannel>(){}.getType();
+        Type localVarReturnType = new TypeToken<Channel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      *  (asynchronously)
      * 
-     * @param id  (required)
-     * @param appId  (required)
+     * @param id ChannelId (required)
+     * @param appId AppId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getChannelAsync(Integer id, String appId, final ApiCallback<RestApiPaginationResultChannel> callback) throws ApiException {
+    public com.squareup.okhttp.Call getChannelAsync(Integer id, String appId, final ApiCallback<Channel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1286,7 +1413,7 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = getChannelValidateBeforeCall(id, appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultChannel>(){}.getType();
+        Type localVarReturnType = new TypeToken<Channel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1358,11 +1485,11 @@ public class ChannelsApi {
      * 
      * 
      * @param appId  (required)
-     * @return RestApiPaginationResultChannel
+     * @return RestApiArrayResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultChannel getChannels(String appId) throws ApiException {
-        ApiResponse<RestApiPaginationResultChannel> resp = getChannelsWithHttpInfo(appId);
+    public RestApiArrayResultChannel getChannels(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultChannel> resp = getChannelsWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -1370,12 +1497,12 @@ public class ChannelsApi {
      * 
      * 
      * @param appId  (required)
-     * @return ApiResponse&lt;RestApiPaginationResultChannel&gt;
+     * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultChannel> getChannelsWithHttpInfo(String appId) throws ApiException {
+    public ApiResponse<RestApiArrayResultChannel> getChannelsWithHttpInfo(String appId) throws ApiException {
         com.squareup.okhttp.Call call = getChannelsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultChannel>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1387,7 +1514,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getChannelsAsync(String appId, final ApiCallback<RestApiPaginationResultChannel> callback) throws ApiException {
+    public com.squareup.okhttp.Call getChannelsAsync(String appId, final ApiCallback<RestApiArrayResultChannel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1409,130 +1536,7 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = getChannelsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultChannel>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getNotAssignedChannels
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getNotAssignedChannelsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/channels/available-channels"
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getNotAssignedChannelsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'appId' is set
-        if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getNotAssignedChannels(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = getNotAssignedChannelsCall(appId, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @return Object
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public Object getNotAssignedChannels(String appId) throws ApiException {
-        ApiResponse<Object> resp = getNotAssignedChannelsWithHttpInfo(appId);
-        return resp.getData();
-    }
-
-    /**
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @return ApiResponse&lt;Object&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Object> getNotAssignedChannelsWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getNotAssignedChannelsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel (asynchronously)
-     * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getNotAssignedChannelsAsync(String appId, final ApiCallback<Object> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getNotAssignedChannelsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultChannel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1608,34 +1612,34 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      * 
      * @param appId Application Id (AppNameId) (required)
      * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
-     * @return Object
+     * @return RestApiArrayResultStoreChannelAssignment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object getStoresAssignedToChannel(String appId, Integer channelId) throws ApiException {
-        ApiResponse<Object> resp = getStoresAssignedToChannelWithHttpInfo(appId, channelId);
+    public RestApiArrayResultStoreChannelAssignment getStoresAssignedToChannel(String appId, Integer channelId) throws ApiException {
+        ApiResponse<RestApiArrayResultStoreChannelAssignment> resp = getStoresAssignedToChannelWithHttpInfo(appId, channelId);
         return resp.getData();
     }
 
     /**
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      * 
      * @param appId Application Id (AppNameId) (required)
      * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiArrayResultStoreChannelAssignment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> getStoresAssignedToChannelWithHttpInfo(String appId, Integer channelId) throws ApiException {
+    public ApiResponse<RestApiArrayResultStoreChannelAssignment> getStoresAssignedToChannelWithHttpInfo(String appId, Integer channelId) throws ApiException {
         com.squareup.okhttp.Call call = getStoresAssignedToChannelValidateBeforeCall(appId, channelId, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStoreChannelAssignment>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Returns a list of store that are assigned to the given sales channel. (asynchronously)
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel (asynchronously)
      * 
      * @param appId Application Id (AppNameId) (required)
      * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
@@ -1643,7 +1647,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoresAssignedToChannelAsync(String appId, Integer channelId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoresAssignedToChannelAsync(String appId, Integer channelId, final ApiCallback<RestApiArrayResultStoreChannelAssignment> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1665,7 +1669,7 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = getStoresAssignedToChannelValidateBeforeCall(appId, channelId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStoreChannelAssignment>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1855,7 +1859,7 @@ public class ChannelsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
     @SuppressWarnings("rawtypes")

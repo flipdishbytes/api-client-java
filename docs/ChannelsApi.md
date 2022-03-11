@@ -11,13 +11,13 @@ Method | HTTP request | Description
 [**channelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 [**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 [**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
+[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
+[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
 [**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 [**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | 
-[**getNotAssignedChannels**](ChannelsApi.md#getNotAssignedChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
-[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
+[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
 [**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 
 
 <a name="assignAppIdToSalesChannel"></a>
@@ -401,9 +401,9 @@ Name | Type | Description  | Notes
 
 <a name="getAssignedChannels"></a>
 # **getAssignedChannels**
-> Object getAssignedChannels(appId)
+> RestApiArrayResultChannel getAssignedChannels(appId)
 
-Returns a list of sales channels that are assigned to a given whitelabel
+Returns a list of sales channels that are assigned to a given AppId
 
 ### Example
 ```java
@@ -423,7 +423,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 ChannelsApi apiInstance = new ChannelsApi();
 String appId = "appId_example"; // String | Application Id (AppNameIdxxx)
 try {
-    Object result = apiInstance.getAssignedChannels(appId);
+    RestApiArrayResultChannel result = apiInstance.getAssignedChannels(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#getAssignedChannels");
@@ -439,7 +439,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -450,115 +450,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getChannel"></a>
-# **getChannel**
-> RestApiPaginationResultChannel getChannel(id, appId)
+<a name="getAvailableChannels"></a>
+# **getAvailableChannels**
+> RestApiArrayResultChannel getAvailableChannels(appId)
 
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.ChannelsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-ChannelsApi apiInstance = new ChannelsApi();
-Integer id = 56; // Integer | 
-String appId = "appId_example"; // String | 
-try {
-    RestApiPaginationResultChannel result = apiInstance.getChannel(id, appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ChannelsApi#getChannel");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **Integer**|  |
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiPaginationResultChannel**](RestApiPaginationResultChannel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getChannels"></a>
-# **getChannels**
-> RestApiPaginationResultChannel getChannels(appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.ChannelsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | 
-try {
-    RestApiPaginationResultChannel result = apiInstance.getChannels(appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ChannelsApi#getChannels");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiPaginationResultChannel**](RestApiPaginationResultChannel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getNotAssignedChannels"></a>
-# **getNotAssignedChannels**
-> Object getNotAssignedChannels(appId)
-
-Returns a list of sales channels that are not yet assigned to a given whitelabel
+Returns a list of sales channels that are not yet assigned to a given AppId
 
 ### Example
 ```java
@@ -578,10 +474,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 ChannelsApi apiInstance = new ChannelsApi();
 String appId = "appId_example"; // String | Application Id (AppNameIdxxx)
 try {
-    Object result = apiInstance.getNotAssignedChannels(appId);
+    RestApiArrayResultChannel result = apiInstance.getAvailableChannels(appId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ChannelsApi#getNotAssignedChannels");
+    System.err.println("Exception when calling ChannelsApi#getAvailableChannels");
     e.printStackTrace();
 }
 ```
@@ -594,7 +490,111 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getChannel"></a>
+# **getChannel**
+> Channel getChannel(id, appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+Integer id = 56; // Integer | ChannelId
+String appId = "appId_example"; // String | AppId
+try {
+    Channel result = apiInstance.getChannel(id, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#getChannel");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Integer**| ChannelId |
+ **appId** | **String**| AppId |
+
+### Return type
+
+[**Channel**](Channel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getChannels"></a>
+# **getChannels**
+> RestApiArrayResultChannel getChannels(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.ChannelsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+ChannelsApi apiInstance = new ChannelsApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiArrayResultChannel result = apiInstance.getChannels(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ChannelsApi#getChannels");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiArrayResultChannel**](RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -607,9 +607,9 @@ Name | Type | Description  | Notes
 
 <a name="getStoresAssignedToChannel"></a>
 # **getStoresAssignedToChannel**
-> Object getStoresAssignedToChannel(appId, channelId)
+> RestApiArrayResultStoreChannelAssignment getStoresAssignedToChannel(appId, channelId)
 
-Returns a list of store that are assigned to the given sales channel.
+Returns a list of stores of an AppId that are assigned to a given Sales Channel
 
 ### Example
 ```java
@@ -630,7 +630,7 @@ ChannelsApi apiInstance = new ChannelsApi();
 String appId = "appId_example"; // String | Application Id (AppNameId)
 Integer channelId = 56; // Integer | Sales channel (Android, IOS, Web, etc.)
 try {
-    Object result = apiInstance.getStoresAssignedToChannel(appId, channelId);
+    RestApiArrayResultStoreChannelAssignment result = apiInstance.getStoresAssignedToChannel(appId, channelId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#getStoresAssignedToChannel");
@@ -647,7 +647,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiArrayResultStoreChannelAssignment**](RestApiArrayResultStoreChannelAssignment.md)
 
 ### Authorization
 
