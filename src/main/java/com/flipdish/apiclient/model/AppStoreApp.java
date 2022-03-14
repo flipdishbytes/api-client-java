@@ -31,7 +31,7 @@ import java.util.List;
  * App store app
  */
 @ApiModel(description = "App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-11T10:26:05.505Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-14T15:27:38.518Z")
 public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
@@ -324,11 +324,145 @@ public class AppStoreApp {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
+  /**
+   * Gets or Sets tags
+   */
+  @JsonAdapter(TagsEnum.Adapter.class)
+  public enum TagsEnum {
+    POINTOFSALE("PointOfSale"),
+    
+    DELIVERYANDLOGISTICS("DeliveryAndLogistics"),
+    
+    CRM("CRM"),
+    
+    GIFTCARD("GiftCard"),
+    
+    ACCOUNTING("Accounting"),
+    
+    LOYALTYANDMARKETING("LoyaltyAndMarketing"),
+    
+    OTHER("Other");
+
+    private String value;
+
+    TagsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static TagsEnum fromValue(String text) {
+      for (TagsEnum b : TagsEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<TagsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final TagsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public TagsEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return TagsEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
   @SerializedName("Tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<TagsEnum> tags = new ArrayList<TagsEnum>();
+
+  /**
+   * Gets or Sets regions
+   */
+  @JsonAdapter(RegionsEnum.Adapter.class)
+  public enum RegionsEnum {
+    GB("GB"),
+    
+    IE("IE"),
+    
+    FR("FR"),
+    
+    ES("ES"),
+    
+    PT("PT"),
+    
+    IT("IT"),
+    
+    DE("DE"),
+    
+    PL("PL"),
+    
+    BE("BE"),
+    
+    LU("LU"),
+    
+    NL("NL"),
+    
+    US("US"),
+    
+    CA("CA"),
+    
+    BG("BG"),
+    
+    MX("MX"),
+    
+    AU("AU"),
+    
+    NZ("NZ");
+
+    private String value;
+
+    RegionsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static RegionsEnum fromValue(String text) {
+      for (RegionsEnum b : RegionsEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<RegionsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final RegionsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public RegionsEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return RegionsEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
 
   @SerializedName("Regions")
-  private List<String> regions = new ArrayList<String>();
+  private List<RegionsEnum> regions = new ArrayList<RegionsEnum>();
 
   @SerializedName("DeveloperName")
   private String developerName = null;
@@ -593,12 +727,12 @@ public class AppStoreApp {
     this.isEnabled = isEnabled;
   }
 
-  public AppStoreApp tags(List<String> tags) {
+  public AppStoreApp tags(List<TagsEnum> tags) {
     this.tags = tags;
     return this;
   }
 
-  public AppStoreApp addTagsItem(String tagsItem) {
+  public AppStoreApp addTagsItem(TagsEnum tagsItem) {
     this.tags.add(tagsItem);
     return this;
   }
@@ -608,20 +742,20 @@ public class AppStoreApp {
    * @return tags
   **/
   @ApiModelProperty(required = true, value = "Tags")
-  public List<String> getTags() {
+  public List<TagsEnum> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(List<TagsEnum> tags) {
     this.tags = tags;
   }
 
-  public AppStoreApp regions(List<String> regions) {
+  public AppStoreApp regions(List<RegionsEnum> regions) {
     this.regions = regions;
     return this;
   }
 
-  public AppStoreApp addRegionsItem(String regionsItem) {
+  public AppStoreApp addRegionsItem(RegionsEnum regionsItem) {
     this.regions.add(regionsItem);
     return this;
   }
@@ -631,11 +765,11 @@ public class AppStoreApp {
    * @return regions
   **/
   @ApiModelProperty(required = true, value = "Regions")
-  public List<String> getRegions() {
+  public List<RegionsEnum> getRegions() {
     return regions;
   }
 
-  public void setRegions(List<String> regions) {
+  public void setRegions(List<RegionsEnum> regions) {
     this.regions = regions;
   }
 
