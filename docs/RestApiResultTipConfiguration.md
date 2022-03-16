@@ -1,10 +1,10 @@
 
-# RestApiResultProduct
+# RestApiResultTipConfiguration
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Product**](Product.md) | Generic data object. | 
+**data** | [**TipConfiguration**](TipConfiguration.md) | Generic data object. | 
 
 
 

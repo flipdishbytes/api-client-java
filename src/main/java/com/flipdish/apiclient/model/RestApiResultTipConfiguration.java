@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.Product;
+import com.flipdish.apiclient.model.TipConfiguration;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,12 +29,12 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-15T10:47:36.379Z")
-public class RestApiResultProduct {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-16T12:05:11.792Z")
+public class RestApiResultTipConfiguration {
   @SerializedName("Data")
-  private Product data = null;
+  private TipConfiguration data = null;
 
-  public RestApiResultProduct data(Product data) {
+  public RestApiResultTipConfiguration data(TipConfiguration data) {
     this.data = data;
     return this;
   }
@@ -44,11 +44,11 @@ public class RestApiResultProduct {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public Product getData() {
+  public TipConfiguration getData() {
     return data;
   }
 
-  public void setData(Product data) {
+  public void setData(TipConfiguration data) {
     this.data = data;
   }
 
@@ -61,8 +61,8 @@ public class RestApiResultProduct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiResultProduct restApiResultProduct = (RestApiResultProduct) o;
-    return Objects.equals(this.data, restApiResultProduct.data);
+    RestApiResultTipConfiguration restApiResultTipConfiguration = (RestApiResultTipConfiguration) o;
+    return Objects.equals(this.data, restApiResultTipConfiguration.data);
   }
 
   @Override
@@ -74,7 +74,7 @@ public class RestApiResultProduct {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiResultProduct {\n");
+    sb.append("class RestApiResultTipConfiguration {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
