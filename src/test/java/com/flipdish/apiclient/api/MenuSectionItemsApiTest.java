@@ -15,7 +15,6 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateMenuSectionItemFromCatalogItems;
-import com.flipdish.apiclient.model.CreateMenuSectionItemFromProducts;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuSectionItemBase;
 import com.flipdish.apiclient.model.RestApiArrayResultMenuSectionItem;
@@ -92,24 +91,6 @@ public class MenuSectionItemsApiTest {
         Integer menuSectionId = null;
         CreateMenuSectionItemFromCatalogItems createFromCatalogItems = null;
         Object response = api.createMenuSectionItemFromCatalogItems(menuId, menuSectionId, createFromCatalogItems);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Create menu section items from a list of Products
-     *
-     * BETA - this endpoint is under development, do not use it in your production system
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void createMenuSectionItemFromProductsTest() throws ApiException {
-        Integer menuId = null;
-        Integer menuSectionId = null;
-        CreateMenuSectionItemFromProducts createFromProducts = null;
-        Object response = api.createMenuSectionItemFromProducts(menuId, menuSectionId, createFromProducts);
 
         // TODO: test validations
     }

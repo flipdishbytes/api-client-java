@@ -6,12 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**archiveCatalogItem**](CatalogItemsApi.md#archiveCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
 [**createCatalogItem**](CatalogItemsApi.md#createCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
-[**deleteCatalogItemImage**](CatalogItemsApi.md#deleteCatalogItemImage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
 [**duplicateCatalogItem**](CatalogItemsApi.md#duplicateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
 [**getCatalogItemById**](CatalogItemsApi.md#getCatalogItemById) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 [**getItems**](CatalogItemsApi.md#getItems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 [**updateCatalogItem**](CatalogItemsApi.md#updateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
-[**uploadCatalogItemImage**](CatalogItemsApi.md#uploadCatalogItemImage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 
 
 <a name="archiveCatalogItem"></a>
@@ -121,60 +119,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="deleteCatalogItemImage"></a>
-# **deleteCatalogItemImage**
-> deleteCatalogItemImage(appId, catalogItemId)
-
-Delete a CatalogItem Image
-
-[BETA - this endpoint is under development, do not use it in your production system]
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.CatalogItemsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-CatalogItemsApi apiInstance = new CatalogItemsApi();
-String appId = "appId_example"; // String | 
-String catalogItemId = "catalogItemId_example"; // String | 
-try {
-    apiInstance.deleteCatalogItemImage(appId, catalogItemId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CatalogItemsApi#deleteCatalogItemImage");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **catalogItemId** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="duplicateCatalogItem"></a>
@@ -399,62 +343,5 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="uploadCatalogItemImage"></a>
-# **uploadCatalogItemImage**
-> RestApiStringResult uploadCatalogItemImage(appId, catalogItemId, image)
-
-Upload a Catalog Item Image
-
-[BETA - this endpoint is under development, do not use it in your production system]
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.CatalogItemsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-CatalogItemsApi apiInstance = new CatalogItemsApi();
-String appId = "appId_example"; // String | 
-String catalogItemId = "catalogItemId_example"; // String | 
-File image = new File("/path/to/file.txt"); // File | Catalog Item image
-try {
-    RestApiStringResult result = apiInstance.uploadCatalogItemImage(appId, catalogItemId, image);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CatalogItemsApi#uploadCatalogItemImage");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **catalogItemId** | **String**|  |
- **image** | **File**| Catalog Item image |
-
-### Return type
-
-[**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 

@@ -34,7 +34,7 @@ import java.util.UUID;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-17T11:01:15.393Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-21T11:49:31.050Z")
 public class MenuSectionItem {
   @SerializedName("MenuItemId")
   private Integer menuItemId = null;
@@ -331,10 +331,10 @@ public class MenuSectionItem {
   }
 
    /**
-   * Get taxRateId
+   * TaxRate
    * @return taxRateId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TaxRate")
   public Integer getTaxRateId() {
     return taxRateId;
   }
@@ -349,10 +349,10 @@ public class MenuSectionItem {
   }
 
    /**
-   * Get taxValue
+   * TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)
    * @return taxValue
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)")
   public Double getTaxValue() {
     return taxValue;
   }

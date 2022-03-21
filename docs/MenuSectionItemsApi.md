@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**cloneMenuSectionItem**](MenuSectionItemsApi.md#cloneMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 [**createMenuSectionItem**](MenuSectionItemsApi.md#createMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
 [**createMenuSectionItemFromCatalogItems**](MenuSectionItemsApi.md#createMenuSectionItemFromCatalogItems) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-catalogitems | Create menu section items from a list of Catalog Items
-[**createMenuSectionItemFromProducts**](MenuSectionItemsApi.md#createMenuSectionItemFromProducts) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-products | Create menu section items from a list of Products
 [**deleteMenuSectionItem**](MenuSectionItemsApi.md#deleteMenuSectionItem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 [**deleteMenuSectionItemImage**](MenuSectionItemsApi.md#deleteMenuSectionItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**getMenuItemById**](MenuSectionItemsApi.md#getMenuItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
@@ -171,63 +170,6 @@ Name | Type | Description  | Notes
  **menuId** | **Integer**| Menu identifier |
  **menuSectionId** | **Integer**| Menu section identifier |
  **createFromCatalogItems** | [**CreateMenuSectionItemFromCatalogItems**](CreateMenuSectionItemFromCatalogItems.md)| Information to create the new MenuSectionItems |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="createMenuSectionItemFromProducts"></a>
-# **createMenuSectionItemFromProducts**
-> Object createMenuSectionItemFromProducts(menuId, menuSectionId, createFromProducts)
-
-Create menu section items from a list of Products
-
-BETA - this endpoint is under development, do not use it in your production system
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenuSectionItemsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenuSectionItemsApi apiInstance = new MenuSectionItemsApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer menuSectionId = 56; // Integer | Menu section identifier
-CreateMenuSectionItemFromProducts createFromProducts = new CreateMenuSectionItemFromProducts(); // CreateMenuSectionItemFromProducts | Menu section item
-try {
-    Object result = apiInstance.createMenuSectionItemFromProducts(menuId, menuSectionId, createFromProducts);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenuSectionItemsApi#createMenuSectionItemFromProducts");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menuSectionId** | **Integer**| Menu section identifier |
- **createFromProducts** | [**CreateMenuSectionItemFromProducts**](CreateMenuSectionItemFromProducts.md)| Menu section item |
 
 ### Return type
 

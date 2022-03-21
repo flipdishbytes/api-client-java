@@ -16,12 +16,10 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CatalogItem;
 import com.flipdish.apiclient.model.CreateCatalogItem;
-import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultCatalogItem;
 import com.flipdish.apiclient.model.RestApiResultCatalogItem;
-import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateCatalogItem;
 import org.junit.Test;
@@ -71,23 +69,6 @@ public class CatalogItemsApiTest {
         String appId = null;
         CreateCatalogItem createCatalogItem = null;
         RestApiResultCatalogItem response = api.createCatalogItem(appId, createCatalogItem);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Delete a CatalogItem Image
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void deleteCatalogItemImageTest() throws ApiException {
-        String appId = null;
-        String catalogItemId = null;
-        api.deleteCatalogItemImage(appId, catalogItemId);
 
         // TODO: test validations
     }
@@ -160,24 +141,6 @@ public class CatalogItemsApiTest {
         String catalogItemId = null;
         UpdateCatalogItem updateCatalogItem = null;
         api.updateCatalogItem(appId, catalogItemId, updateCatalogItem);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Upload a Catalog Item Image
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void uploadCatalogItemImageTest() throws ApiException {
-        String appId = null;
-        String catalogItemId = null;
-        File image = null;
-        RestApiStringResult response = api.uploadCatalogItemImage(appId, catalogItemId, image);
 
         // TODO: test validations
     }
