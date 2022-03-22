@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a charge related to a payout
  */
 @ApiModel(description = "Holds the information for a charge related to a payout")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-21T11:49:31.050Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-22T10:31:33.690Z")
 public class PayoutOtherCharge {
   @SerializedName("ChargeId")
   private Integer chargeId = null;
