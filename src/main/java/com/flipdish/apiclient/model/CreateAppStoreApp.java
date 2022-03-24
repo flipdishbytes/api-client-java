@@ -31,8 +31,11 @@ import java.util.List;
  * Create App store app
  */
 @ApiModel(description = "Create App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-23T12:11:32.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
 public class CreateAppStoreApp {
+  @SerializedName("Details")
+  private String details = null;
+
   /**
    * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
    */
@@ -409,6 +412,24 @@ public class CreateAppStoreApp {
   @SerializedName("DeveloperName")
   private String developerName = null;
 
+  public CreateAppStoreApp details(String details) {
+    this.details = details;
+    return this;
+  }
+
+   /**
+   * Details
+   * @return details
+  **/
+  @ApiModelProperty(required = true, value = "Details")
+  public String getDetails() {
+    return details;
+  }
+
+  public void setDetails(String details) {
+    this.details = details;
+  }
+
   public CreateAppStoreApp configurationType(ConfigurationTypeEnum configurationType) {
     this.configurationType = configurationType;
     return this;
@@ -689,7 +710,8 @@ public class CreateAppStoreApp {
       return false;
     }
     CreateAppStoreApp createAppStoreApp = (CreateAppStoreApp) o;
-    return Objects.equals(this.configurationType, createAppStoreApp.configurationType) &&
+    return Objects.equals(this.details, createAppStoreApp.details) &&
+        Objects.equals(this.configurationType, createAppStoreApp.configurationType) &&
         Objects.equals(this.storeSelectorType, createAppStoreApp.storeSelectorType) &&
         Objects.equals(this.fieldGroups, createAppStoreApp.fieldGroups) &&
         Objects.equals(this.setupInstructions, createAppStoreApp.setupInstructions) &&
@@ -707,7 +729,7 @@ public class CreateAppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
+    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
   }
 
 
@@ -716,6 +738,7 @@ public class CreateAppStoreApp {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateAppStoreApp {\n");
     
+    sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");

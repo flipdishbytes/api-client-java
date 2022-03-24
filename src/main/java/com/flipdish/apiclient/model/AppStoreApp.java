@@ -31,7 +31,7 @@ import java.util.List;
  * App store app
  */
 @ApiModel(description = "App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-23T12:11:32.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
 public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
@@ -90,6 +90,9 @@ public class AppStoreApp {
 
   @SerializedName("Logo")
   private String logo = null;
+
+  @SerializedName("Details")
+  private String details = null;
 
   /**
    * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
@@ -521,6 +524,24 @@ public class AppStoreApp {
     this.logo = logo;
   }
 
+  public AppStoreApp details(String details) {
+    this.details = details;
+    return this;
+  }
+
+   /**
+   * Details
+   * @return details
+  **/
+  @ApiModelProperty(required = true, value = "Details")
+  public String getDetails() {
+    return details;
+  }
+
+  public void setDetails(String details) {
+    this.details = details;
+  }
+
   public AppStoreApp configurationType(ConfigurationTypeEnum configurationType) {
     this.configurationType = configurationType;
     return this;
@@ -804,6 +825,7 @@ public class AppStoreApp {
     return Objects.equals(this.id, appStoreApp.id) &&
         Objects.equals(this.verificationStatus, appStoreApp.verificationStatus) &&
         Objects.equals(this.logo, appStoreApp.logo) &&
+        Objects.equals(this.details, appStoreApp.details) &&
         Objects.equals(this.configurationType, appStoreApp.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreApp.storeSelectorType) &&
         Objects.equals(this.fieldGroups, appStoreApp.fieldGroups) &&
@@ -822,7 +844,7 @@ public class AppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, verificationStatus, logo, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
+    return Objects.hash(id, verificationStatus, logo, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
   }
 
 
@@ -834,6 +856,7 @@ public class AppStoreApp {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
+    sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");

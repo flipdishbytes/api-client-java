@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
  */
 @ApiModel(description = "Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-23T12:11:32.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
 public class LocationAreaLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
@@ -36,8 +36,11 @@ public class LocationAreaLocation {
   @SerializedName("LocationName")
   private String locationName = null;
 
+  @SerializedName("DisplayOrder")
+  private Integer displayOrder = null;
+
   @SerializedName("ExternalLocationId")
-  private Integer externalLocationId = null;
+  private String externalLocationId = null;
 
   public LocationAreaLocation locationId(Integer locationId) {
     this.locationId = locationId;
@@ -75,7 +78,25 @@ public class LocationAreaLocation {
     this.locationName = locationName;
   }
 
-  public LocationAreaLocation externalLocationId(Integer externalLocationId) {
+  public LocationAreaLocation displayOrder(Integer displayOrder) {
+    this.displayOrder = displayOrder;
+    return this;
+  }
+
+   /**
+   * The order that the Location should be displayed on the screen
+   * @return displayOrder
+  **/
+  @ApiModelProperty(value = "The order that the Location should be displayed on the screen")
+  public Integer getDisplayOrder() {
+    return displayOrder;
+  }
+
+  public void setDisplayOrder(Integer displayOrder) {
+    this.displayOrder = displayOrder;
+  }
+
+  public LocationAreaLocation externalLocationId(String externalLocationId) {
     this.externalLocationId = externalLocationId;
     return this;
   }
@@ -85,11 +106,11 @@ public class LocationAreaLocation {
    * @return externalLocationId
   **/
   @ApiModelProperty(value = "Id of the Location on an external system")
-  public Integer getExternalLocationId() {
+  public String getExternalLocationId() {
     return externalLocationId;
   }
 
-  public void setExternalLocationId(Integer externalLocationId) {
+  public void setExternalLocationId(String externalLocationId) {
     this.externalLocationId = externalLocationId;
   }
 
@@ -105,12 +126,13 @@ public class LocationAreaLocation {
     LocationAreaLocation locationAreaLocation = (LocationAreaLocation) o;
     return Objects.equals(this.locationId, locationAreaLocation.locationId) &&
         Objects.equals(this.locationName, locationAreaLocation.locationName) &&
+        Objects.equals(this.displayOrder, locationAreaLocation.displayOrder) &&
         Objects.equals(this.externalLocationId, locationAreaLocation.externalLocationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(locationId, locationName, externalLocationId);
+    return Objects.hash(locationId, locationName, displayOrder, externalLocationId);
   }
 
 
@@ -121,6 +143,7 @@ public class LocationAreaLocation {
     
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    locationName: ").append(toIndentedString(locationName)).append("\n");
+    sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");
     sb.append("}");
     return sb.toString();

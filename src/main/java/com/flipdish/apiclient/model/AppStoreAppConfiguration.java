@@ -32,7 +32,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-23T12:11:32.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -106,6 +106,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("Logo")
   private String logo = null;
+
+  @SerializedName("Details")
+  private String details = null;
 
   /**
    * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
@@ -640,6 +643,24 @@ public class AppStoreAppConfiguration {
     this.logo = logo;
   }
 
+  public AppStoreAppConfiguration details(String details) {
+    this.details = details;
+    return this;
+  }
+
+   /**
+   * Details
+   * @return details
+  **/
+  @ApiModelProperty(required = true, value = "Details")
+  public String getDetails() {
+    return details;
+  }
+
+  public void setDetails(String details) {
+    this.details = details;
+  }
+
   public AppStoreAppConfiguration configurationType(ConfigurationTypeEnum configurationType) {
     this.configurationType = configurationType;
     return this;
@@ -910,6 +931,7 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.settings, appStoreAppConfiguration.settings) &&
         Objects.equals(this.verificationStatus, appStoreAppConfiguration.verificationStatus) &&
         Objects.equals(this.logo, appStoreAppConfiguration.logo) &&
+        Objects.equals(this.details, appStoreAppConfiguration.details) &&
         Objects.equals(this.configurationType, appStoreAppConfiguration.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreAppConfiguration.storeSelectorType) &&
         Objects.equals(this.fieldGroups, appStoreAppConfiguration.fieldGroups) &&
@@ -927,7 +949,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, verificationStatus, logo, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, tags, regions, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, verificationStatus, logo, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, tags, regions, developerName);
   }
 
 
@@ -944,6 +966,7 @@ public class AppStoreAppConfiguration {
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
+    sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");
