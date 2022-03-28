@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User created event
  */
 @ApiModel(description = "User created event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class UserCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -53,6 +53,9 @@ public class UserCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public UserCreatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -180,6 +183,24 @@ public class UserCreatedEvent {
     this.appId = appId;
   }
 
+  public UserCreatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -196,12 +217,13 @@ public class UserCreatedEvent {
         Objects.equals(this.flipdishEventId, userCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, userCreatedEvent.createTime) &&
         Objects.equals(this.position, userCreatedEvent.position) &&
-        Objects.equals(this.appId, userCreatedEvent.appId);
+        Objects.equals(this.appId, userCreatedEvent.appId) &&
+        Objects.equals(this.ipAddress, userCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -217,6 +239,7 @@ public class UserCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

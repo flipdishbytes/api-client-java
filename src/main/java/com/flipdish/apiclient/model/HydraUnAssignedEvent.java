@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra unassigned event
  */
 @ApiModel(description = "Hydra unassigned event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class HydraUnAssignedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -54,6 +54,9 @@ public class HydraUnAssignedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public HydraUnAssignedEvent user(UserEventInfo user) {
     this.user = user;
@@ -181,6 +184,24 @@ public class HydraUnAssignedEvent {
     this.appId = appId;
   }
 
+  public HydraUnAssignedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,12 +218,13 @@ public class HydraUnAssignedEvent {
         Objects.equals(this.flipdishEventId, hydraUnAssignedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, hydraUnAssignedEvent.createTime) &&
         Objects.equals(this.position, hydraUnAssignedEvent.position) &&
-        Objects.equals(this.appId, hydraUnAssignedEvent.appId);
+        Objects.equals(this.appId, hydraUnAssignedEvent.appId) &&
+        Objects.equals(this.ipAddress, hydraUnAssignedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -218,6 +240,7 @@ public class HydraUnAssignedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

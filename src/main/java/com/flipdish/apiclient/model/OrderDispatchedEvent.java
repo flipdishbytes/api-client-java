@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Dispatched Event
  */
 @ApiModel(description = "Order Dispatched Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class OrderDispatchedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -56,6 +56,9 @@ public class OrderDispatchedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public OrderDispatchedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -201,6 +204,24 @@ public class OrderDispatchedEvent {
     this.appId = appId;
   }
 
+  public OrderDispatchedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -218,12 +239,13 @@ public class OrderDispatchedEvent {
         Objects.equals(this.flipdishEventId, orderDispatchedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderDispatchedEvent.createTime) &&
         Objects.equals(this.position, orderDispatchedEvent.position) &&
-        Objects.equals(this.appId, orderDispatchedEvent.appId);
+        Objects.equals(this.appId, orderDispatchedEvent.appId) &&
+        Objects.equals(this.ipAddress, orderDispatchedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, orderDispatchedTime, order, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, description, orderDispatchedTime, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -240,6 +262,7 @@ public class OrderDispatchedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

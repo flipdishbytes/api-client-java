@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store&#39;s Order Capacity Configuration Updated
  */
 @ApiModel(description = "Store's Order Capacity Configuration Updated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class OrderCapacityConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -60,6 +60,9 @@ public class OrderCapacityConfigUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public OrderCapacityConfigUpdatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -223,6 +226,24 @@ public class OrderCapacityConfigUpdatedEvent {
     this.appId = appId;
   }
 
+  public OrderCapacityConfigUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +262,13 @@ public class OrderCapacityConfigUpdatedEvent {
         Objects.equals(this.flipdishEventId, orderCapacityConfigUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderCapacityConfigUpdatedEvent.createTime) &&
         Objects.equals(this.position, orderCapacityConfigUpdatedEvent.position) &&
-        Objects.equals(this.appId, orderCapacityConfigUpdatedEvent.appId);
+        Objects.equals(this.appId, orderCapacityConfigUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, orderCapacityConfigUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, user, description, orderCapacityConfig, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, user, description, orderCapacityConfig, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -264,6 +286,7 @@ public class OrderCapacityConfigUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

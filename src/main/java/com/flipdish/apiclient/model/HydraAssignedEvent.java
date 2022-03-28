@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra assigned event
  */
 @ApiModel(description = "Hydra assigned event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class HydraAssignedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -54,6 +54,9 @@ public class HydraAssignedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public HydraAssignedEvent user(UserEventInfo user) {
     this.user = user;
@@ -181,6 +184,24 @@ public class HydraAssignedEvent {
     this.appId = appId;
   }
 
+  public HydraAssignedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,12 +218,13 @@ public class HydraAssignedEvent {
         Objects.equals(this.flipdishEventId, hydraAssignedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, hydraAssignedEvent.createTime) &&
         Objects.equals(this.position, hydraAssignedEvent.position) &&
-        Objects.equals(this.appId, hydraAssignedEvent.appId);
+        Objects.equals(this.appId, hydraAssignedEvent.appId) &&
+        Objects.equals(this.ipAddress, hydraAssignedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -218,6 +240,7 @@ public class HydraAssignedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

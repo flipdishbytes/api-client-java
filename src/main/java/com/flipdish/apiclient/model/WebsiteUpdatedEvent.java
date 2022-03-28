@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * WebsiteUpdatedEvent
  */
 @ApiModel(description = "WebsiteUpdatedEvent")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class WebsiteUpdatedEvent {
   @SerializedName("AppNameId")
   private String appNameId = null;
@@ -56,6 +56,9 @@ public class WebsiteUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public WebsiteUpdatedEvent appNameId(String appNameId) {
     this.appNameId = appNameId;
@@ -201,6 +204,24 @@ public class WebsiteUpdatedEvent {
     this.appId = appId;
   }
 
+  public WebsiteUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -218,12 +239,13 @@ public class WebsiteUpdatedEvent {
         Objects.equals(this.flipdishEventId, websiteUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, websiteUpdatedEvent.createTime) &&
         Objects.equals(this.position, websiteUpdatedEvent.position) &&
-        Objects.equals(this.appId, websiteUpdatedEvent.appId);
+        Objects.equals(this.appId, websiteUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, websiteUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appNameId, user, description, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(appNameId, user, description, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -240,6 +262,7 @@ public class WebsiteUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

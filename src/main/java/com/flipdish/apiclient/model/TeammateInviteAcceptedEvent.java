@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class TeammateInviteAcceptedEvent {
   @SerializedName("Teammate")
   private Teammate teammate = null;
@@ -54,6 +54,9 @@ public class TeammateInviteAcceptedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public TeammateInviteAcceptedEvent teammate(Teammate teammate) {
     this.teammate = teammate;
@@ -181,6 +184,24 @@ public class TeammateInviteAcceptedEvent {
     this.appId = appId;
   }
 
+  public TeammateInviteAcceptedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,12 +218,13 @@ public class TeammateInviteAcceptedEvent {
         Objects.equals(this.flipdishEventId, teammateInviteAcceptedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, teammateInviteAcceptedEvent.createTime) &&
         Objects.equals(this.position, teammateInviteAcceptedEvent.position) &&
-        Objects.equals(this.appId, teammateInviteAcceptedEvent.appId);
+        Objects.equals(this.appId, teammateInviteAcceptedEvent.appId) &&
+        Objects.equals(this.ipAddress, teammateInviteAcceptedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(teammate, user, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(teammate, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -218,6 +240,7 @@ public class TeammateInviteAcceptedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

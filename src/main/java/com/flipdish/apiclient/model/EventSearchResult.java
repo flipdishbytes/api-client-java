@@ -153,7 +153,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class EventSearchResult {
   @SerializedName("AppCreatedEvent")
   private List<AppCreatedEvent> appCreatedEvent = null;
@@ -418,6 +418,9 @@ public class EventSearchResult {
 
   @SerializedName("BankAccountDeletedEvent")
   private List<BankAccountDeletedEvent> bankAccountDeletedEvent = null;
+
+  @SerializedName("BankAccountAssignedEvent")
+  private List<BankAccountDeletedEvent> bankAccountAssignedEvent = null;
 
   @SerializedName("HydraAssignedEvent")
   private List<HydraAssignedEvent> hydraAssignedEvent = null;
@@ -2812,6 +2815,32 @@ public class EventSearchResult {
     this.bankAccountDeletedEvent = bankAccountDeletedEvent;
   }
 
+  public EventSearchResult bankAccountAssignedEvent(List<BankAccountDeletedEvent> bankAccountAssignedEvent) {
+    this.bankAccountAssignedEvent = bankAccountAssignedEvent;
+    return this;
+  }
+
+  public EventSearchResult addBankAccountAssignedEventItem(BankAccountDeletedEvent bankAccountAssignedEventItem) {
+    if (this.bankAccountAssignedEvent == null) {
+      this.bankAccountAssignedEvent = new ArrayList<BankAccountDeletedEvent>();
+    }
+    this.bankAccountAssignedEvent.add(bankAccountAssignedEventItem);
+    return this;
+  }
+
+   /**
+   * Bank account assigned event
+   * @return bankAccountAssignedEvent
+  **/
+  @ApiModelProperty(value = "Bank account assigned event")
+  public List<BankAccountDeletedEvent> getBankAccountAssignedEvent() {
+    return bankAccountAssignedEvent;
+  }
+
+  public void setBankAccountAssignedEvent(List<BankAccountDeletedEvent> bankAccountAssignedEvent) {
+    this.bankAccountAssignedEvent = bankAccountAssignedEvent;
+  }
+
   public EventSearchResult hydraAssignedEvent(List<HydraAssignedEvent> hydraAssignedEvent) {
     this.hydraAssignedEvent = hydraAssignedEvent;
     return this;
@@ -3820,6 +3849,7 @@ public class EventSearchResult {
         Objects.equals(this.bankAccountCreatedEvent, eventSearchResult.bankAccountCreatedEvent) &&
         Objects.equals(this.bankAccountUpdatedEvent, eventSearchResult.bankAccountUpdatedEvent) &&
         Objects.equals(this.bankAccountDeletedEvent, eventSearchResult.bankAccountDeletedEvent) &&
+        Objects.equals(this.bankAccountAssignedEvent, eventSearchResult.bankAccountAssignedEvent) &&
         Objects.equals(this.hydraAssignedEvent, eventSearchResult.hydraAssignedEvent) &&
         Objects.equals(this.hydraRequestResetEvent, eventSearchResult.hydraRequestResetEvent) &&
         Objects.equals(this.hydraStoreAssignedEvent, eventSearchResult.hydraStoreAssignedEvent) &&
@@ -3859,7 +3889,7 @@ public class EventSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent);
+    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, bankAccountAssignedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent);
   }
 
 
@@ -3956,6 +3986,7 @@ public class EventSearchResult {
     sb.append("    bankAccountCreatedEvent: ").append(toIndentedString(bankAccountCreatedEvent)).append("\n");
     sb.append("    bankAccountUpdatedEvent: ").append(toIndentedString(bankAccountUpdatedEvent)).append("\n");
     sb.append("    bankAccountDeletedEvent: ").append(toIndentedString(bankAccountDeletedEvent)).append("\n");
+    sb.append("    bankAccountAssignedEvent: ").append(toIndentedString(bankAccountAssignedEvent)).append("\n");
     sb.append("    hydraAssignedEvent: ").append(toIndentedString(hydraAssignedEvent)).append("\n");
     sb.append("    hydraRequestResetEvent: ").append(toIndentedString(hydraRequestResetEvent)).append("\n");
     sb.append("    hydraStoreAssignedEvent: ").append(toIndentedString(hydraStoreAssignedEvent)).append("\n");

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class OrderCustomerTrackingCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -53,6 +53,9 @@ public class OrderCustomerTrackingCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public OrderCustomerTrackingCreatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -180,6 +183,24 @@ public class OrderCustomerTrackingCreatedEvent {
     this.appId = appId;
   }
 
+  public OrderCustomerTrackingCreatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -196,12 +217,13 @@ public class OrderCustomerTrackingCreatedEvent {
         Objects.equals(this.flipdishEventId, orderCustomerTrackingCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderCustomerTrackingCreatedEvent.createTime) &&
         Objects.equals(this.position, orderCustomerTrackingCreatedEvent.position) &&
-        Objects.equals(this.appId, orderCustomerTrackingCreatedEvent.appId);
+        Objects.equals(this.appId, orderCustomerTrackingCreatedEvent.appId) &&
+        Objects.equals(this.ipAddress, orderCustomerTrackingCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, order, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, description, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -217,6 +239,7 @@ public class OrderCustomerTrackingCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

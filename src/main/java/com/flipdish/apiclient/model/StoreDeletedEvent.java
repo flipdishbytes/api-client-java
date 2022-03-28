@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Deleted Event
  */
 @ApiModel(description = "Store Deleted Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class StoreDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -63,6 +63,9 @@ public class StoreDeletedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public StoreDeletedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -235,6 +238,24 @@ public class StoreDeletedEvent {
     this.appId = appId;
   }
 
+  public StoreDeletedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -254,12 +275,13 @@ public class StoreDeletedEvent {
         Objects.equals(this.flipdishEventId, storeDeletedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, storeDeletedEvent.createTime) &&
         Objects.equals(this.position, storeDeletedEvent.position) &&
-        Objects.equals(this.appId, storeDeletedEvent.appId);
+        Objects.equals(this.appId, storeDeletedEvent.appId) &&
+        Objects.equals(this.ipAddress, storeDeletedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -278,6 +300,7 @@ public class StoreDeletedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

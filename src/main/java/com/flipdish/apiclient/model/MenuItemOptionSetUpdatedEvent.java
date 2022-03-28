@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class MenuItemOptionSetUpdatedEvent {
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -60,6 +60,9 @@ public class MenuItemOptionSetUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public MenuItemOptionSetUpdatedEvent menuId(Integer menuId) {
     this.menuId = menuId;
@@ -223,6 +226,24 @@ public class MenuItemOptionSetUpdatedEvent {
     this.appId = appId;
   }
 
+  public MenuItemOptionSetUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +262,13 @@ public class MenuItemOptionSetUpdatedEvent {
         Objects.equals(this.flipdishEventId, menuItemOptionSetUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, menuItemOptionSetUpdatedEvent.createTime) &&
         Objects.equals(this.position, menuItemOptionSetUpdatedEvent.position) &&
-        Objects.equals(this.appId, menuItemOptionSetUpdatedEvent.appId);
+        Objects.equals(this.appId, menuItemOptionSetUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, menuItemOptionSetUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuId, description, user, menuItemOptionSet, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(menuId, description, user, menuItemOptionSet, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -264,6 +286,7 @@ public class MenuItemOptionSetUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

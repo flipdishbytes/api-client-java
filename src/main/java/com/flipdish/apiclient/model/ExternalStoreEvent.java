@@ -34,7 +34,7 @@ import org.threeten.bp.OffsetDateTime;
  * External event
  */
 @ApiModel(description = "External event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class ExternalStoreEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -89,6 +89,9 @@ public class ExternalStoreEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public ExternalStoreEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -430,6 +433,24 @@ public class ExternalStoreEvent {
     this.appId = appId;
   }
 
+  public ExternalStoreEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -457,12 +478,13 @@ public class ExternalStoreEvent {
         Objects.equals(this.flipdishEventId, externalStoreEvent.flipdishEventId) &&
         Objects.equals(this.createTime, externalStoreEvent.createTime) &&
         Objects.equals(this.position, externalStoreEvent.position) &&
-        Objects.equals(this.appId, externalStoreEvent.appId);
+        Objects.equals(this.appId, externalStoreEvent.appId) &&
+        Objects.equals(this.ipAddress, externalStoreEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, user, description, descriptionFormat, descriptionFields, descriptionId, ref1, ref2, ref3, ref4, orderId, tags, fieldChanges, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, user, description, descriptionFormat, descriptionFields, descriptionId, ref1, ref2, ref3, ref4, orderId, tags, fieldChanges, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -489,6 +511,7 @@ public class ExternalStoreEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

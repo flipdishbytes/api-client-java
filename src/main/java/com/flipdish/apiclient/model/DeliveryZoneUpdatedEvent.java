@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Delivery Zone Updated Event
  */
 @ApiModel(description = "Delivery Zone Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class DeliveryZoneUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -63,6 +63,9 @@ public class DeliveryZoneUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public DeliveryZoneUpdatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -244,6 +247,24 @@ public class DeliveryZoneUpdatedEvent {
     this.appId = appId;
   }
 
+  public DeliveryZoneUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -263,12 +284,13 @@ public class DeliveryZoneUpdatedEvent {
         Objects.equals(this.flipdishEventId, deliveryZoneUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, deliveryZoneUpdatedEvent.createTime) &&
         Objects.equals(this.position, deliveryZoneUpdatedEvent.position) &&
-        Objects.equals(this.appId, deliveryZoneUpdatedEvent.appId);
+        Objects.equals(this.appId, deliveryZoneUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, deliveryZoneUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, description, deliveryZone, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, storeGroupId, user, description, deliveryZone, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -287,6 +309,7 @@ public class DeliveryZoneUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

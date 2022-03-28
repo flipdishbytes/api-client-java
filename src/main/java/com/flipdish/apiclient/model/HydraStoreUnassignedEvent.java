@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra store\\s unassigned event
  */
 @ApiModel(description = "Hydra store\\s unassigned event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class HydraStoreUnassignedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -55,6 +55,9 @@ public class HydraStoreUnassignedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public HydraStoreUnassignedEvent user(UserEventInfo user) {
     this.user = user;
@@ -190,6 +193,24 @@ public class HydraStoreUnassignedEvent {
     this.appId = appId;
   }
 
+  public HydraStoreUnassignedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -206,12 +227,13 @@ public class HydraStoreUnassignedEvent {
         Objects.equals(this.flipdishEventId, hydraStoreUnassignedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, hydraStoreUnassignedEvent.createTime) &&
         Objects.equals(this.position, hydraStoreUnassignedEvent.position) &&
-        Objects.equals(this.appId, hydraStoreUnassignedEvent.appId);
+        Objects.equals(this.appId, hydraStoreUnassignedEvent.appId) &&
+        Objects.equals(this.ipAddress, hydraStoreUnassignedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, storeIds, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(user, storeIds, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -227,6 +249,7 @@ public class HydraStoreUnassignedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

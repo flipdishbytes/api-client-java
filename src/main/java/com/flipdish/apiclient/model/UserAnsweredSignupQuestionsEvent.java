@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User answered signup questions event
  */
 @ApiModel(description = "User answered signup questions event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class UserAnsweredSignupQuestionsEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -53,6 +53,9 @@ public class UserAnsweredSignupQuestionsEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public UserAnsweredSignupQuestionsEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -180,6 +183,24 @@ public class UserAnsweredSignupQuestionsEvent {
     this.appId = appId;
   }
 
+  public UserAnsweredSignupQuestionsEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -196,12 +217,13 @@ public class UserAnsweredSignupQuestionsEvent {
         Objects.equals(this.flipdishEventId, userAnsweredSignupQuestionsEvent.flipdishEventId) &&
         Objects.equals(this.createTime, userAnsweredSignupQuestionsEvent.createTime) &&
         Objects.equals(this.position, userAnsweredSignupQuestionsEvent.position) &&
-        Objects.equals(this.appId, userAnsweredSignupQuestionsEvent.appId);
+        Objects.equals(this.appId, userAnsweredSignupQuestionsEvent.appId) &&
+        Objects.equals(this.ipAddress, userAnsweredSignupQuestionsEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, user, signupAnswers, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, user, signupAnswers, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -217,6 +239,7 @@ public class UserAnsweredSignupQuestionsEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

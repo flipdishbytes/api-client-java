@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk bluetooth terminal unpaired
  */
 @ApiModel(description = "Kiosk bluetooth terminal unpaired")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class KioskBluetoothTerminalUpdatedEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
@@ -114,6 +114,9 @@ public class KioskBluetoothTerminalUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public KioskBluetoothTerminalUpdatedEvent deviceId(String deviceId) {
     this.deviceId = deviceId;
@@ -295,6 +298,24 @@ public class KioskBluetoothTerminalUpdatedEvent {
     this.appId = appId;
   }
 
+  public KioskBluetoothTerminalUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -314,12 +335,13 @@ public class KioskBluetoothTerminalUpdatedEvent {
         Objects.equals(this.flipdishEventId, kioskBluetoothTerminalUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, kioskBluetoothTerminalUpdatedEvent.createTime) &&
         Objects.equals(this.position, kioskBluetoothTerminalUpdatedEvent.position) &&
-        Objects.equals(this.appId, kioskBluetoothTerminalUpdatedEvent.appId);
+        Objects.equals(this.appId, kioskBluetoothTerminalUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, kioskBluetoothTerminalUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceId, bluetoothTerminalType, bluetoothTerminalSerialNumber, bluetoothTerminalStatus, user, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(deviceId, bluetoothTerminalType, bluetoothTerminalSerialNumber, bluetoothTerminalStatus, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -338,6 +360,7 @@ public class KioskBluetoothTerminalUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

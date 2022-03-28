@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Created Event
  */
 @ApiModel(description = "Store Created Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class StoreCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -60,6 +60,9 @@ public class StoreCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public StoreCreatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -223,6 +226,24 @@ public class StoreCreatedEvent {
     this.appId = appId;
   }
 
+  public StoreCreatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +262,13 @@ public class StoreCreatedEvent {
         Objects.equals(this.flipdishEventId, storeCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, storeCreatedEvent.createTime) &&
         Objects.equals(this.position, storeCreatedEvent.position) &&
-        Objects.equals(this.appId, storeCreatedEvent.appId);
+        Objects.equals(this.appId, storeCreatedEvent.appId) &&
+        Objects.equals(this.ipAddress, storeCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, user, description, store, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, user, description, store, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -264,6 +286,7 @@ public class StoreCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

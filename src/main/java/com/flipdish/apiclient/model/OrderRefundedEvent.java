@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Refunded Event
  */
 @ApiModel(description = "Order Refunded Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class OrderRefundedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -56,6 +56,9 @@ public class OrderRefundedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public OrderRefundedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -201,6 +204,24 @@ public class OrderRefundedEvent {
     this.appId = appId;
   }
 
+  public OrderRefundedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -218,12 +239,13 @@ public class OrderRefundedEvent {
         Objects.equals(this.flipdishEventId, orderRefundedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderRefundedEvent.createTime) &&
         Objects.equals(this.position, orderRefundedEvent.position) &&
-        Objects.equals(this.appId, orderRefundedEvent.appId);
+        Objects.equals(this.appId, orderRefundedEvent.appId) &&
+        Objects.equals(this.ipAddress, orderRefundedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, refundedAmount, description, order, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, refundedAmount, description, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -240,6 +262,7 @@ public class OrderRefundedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

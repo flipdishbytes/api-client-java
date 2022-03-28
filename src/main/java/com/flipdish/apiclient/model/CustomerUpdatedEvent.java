@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Customer updated event
  */
 @ApiModel(description = "Customer updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class CustomerUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -53,6 +53,9 @@ public class CustomerUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public CustomerUpdatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -180,6 +183,24 @@ public class CustomerUpdatedEvent {
     this.appId = appId;
   }
 
+  public CustomerUpdatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -196,12 +217,13 @@ public class CustomerUpdatedEvent {
         Objects.equals(this.flipdishEventId, customerUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, customerUpdatedEvent.createTime) &&
         Objects.equals(this.position, customerUpdatedEvent.position) &&
-        Objects.equals(this.appId, customerUpdatedEvent.appId);
+        Objects.equals(this.appId, customerUpdatedEvent.appId) &&
+        Objects.equals(this.ipAddress, customerUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, user, description, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, user, description, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -217,6 +239,7 @@ public class CustomerUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

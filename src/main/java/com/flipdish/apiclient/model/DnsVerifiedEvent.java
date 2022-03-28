@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * The DNS for the Hostname verified
  */
 @ApiModel(description = "The DNS for the Hostname verified")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class DnsVerifiedEvent {
   @SerializedName("Hostname")
   private String hostname = null;
@@ -49,6 +49,9 @@ public class DnsVerifiedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public DnsVerifiedEvent hostname(String hostname) {
     this.hostname = hostname;
@@ -158,6 +161,24 @@ public class DnsVerifiedEvent {
     this.appId = appId;
   }
 
+  public DnsVerifiedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -173,12 +194,13 @@ public class DnsVerifiedEvent {
         Objects.equals(this.flipdishEventId, dnsVerifiedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, dnsVerifiedEvent.createTime) &&
         Objects.equals(this.position, dnsVerifiedEvent.position) &&
-        Objects.equals(this.appId, dnsVerifiedEvent.appId);
+        Objects.equals(this.appId, dnsVerifiedEvent.appId) &&
+        Objects.equals(this.ipAddress, dnsVerifiedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(hostname, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(hostname, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -193,6 +215,7 @@ public class DnsVerifiedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

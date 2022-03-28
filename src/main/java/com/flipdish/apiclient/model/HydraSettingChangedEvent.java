@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra settings changed
  */
 @ApiModel(description = "Hydra settings changed")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class HydraSettingChangedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -54,6 +54,9 @@ public class HydraSettingChangedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public HydraSettingChangedEvent user(UserEventInfo user) {
     this.user = user;
@@ -181,6 +184,24 @@ public class HydraSettingChangedEvent {
     this.appId = appId;
   }
 
+  public HydraSettingChangedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,12 +218,13 @@ public class HydraSettingChangedEvent {
         Objects.equals(this.flipdishEventId, hydraSettingChangedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, hydraSettingChangedEvent.createTime) &&
         Objects.equals(this.position, hydraSettingChangedEvent.position) &&
-        Objects.equals(this.appId, hydraSettingChangedEvent.appId);
+        Objects.equals(this.appId, hydraSettingChangedEvent.appId) &&
+        Objects.equals(this.ipAddress, hydraSettingChangedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, hydraConfig, eventName, flipdishEventId, createTime, position, appId);
+    return Objects.hash(user, hydraConfig, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -218,6 +240,7 @@ public class HydraSettingChangedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

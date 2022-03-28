@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher Created Event
  */
 @ApiModel(description = "Voucher Created Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class VoucherCreatedEvent {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -60,6 +60,9 @@ public class VoucherCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public VoucherCreatedEvent voucherId(Integer voucherId) {
     this.voucherId = voucherId;
@@ -223,6 +226,24 @@ public class VoucherCreatedEvent {
     this.appId = appId;
   }
 
+  public VoucherCreatedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +262,13 @@ public class VoucherCreatedEvent {
         Objects.equals(this.flipdishEventId, voucherCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, voucherCreatedEvent.createTime) &&
         Objects.equals(this.position, voucherCreatedEvent.position) &&
-        Objects.equals(this.appId, voucherCreatedEvent.appId);
+        Objects.equals(this.appId, voucherCreatedEvent.appId) &&
+        Objects.equals(this.ipAddress, voucherCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, eventName, user, description, voucher, flipdishEventId, createTime, position, appId);
+    return Objects.hash(voucherId, eventName, user, description, voucher, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -264,6 +286,7 @@ public class VoucherCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

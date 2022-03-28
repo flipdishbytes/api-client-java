@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Unarchived Event
  */
 @ApiModel(description = "Store Unarchived Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T10:29:16.815Z")
 public class StoreUnarchivedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -63,6 +63,9 @@ public class StoreUnarchivedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public StoreUnarchivedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -235,6 +238,24 @@ public class StoreUnarchivedEvent {
     this.appId = appId;
   }
 
+  public StoreUnarchivedEvent ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Ip Address
+   * @return ipAddress
+  **/
+  @ApiModelProperty(value = "Ip Address")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -254,12 +275,13 @@ public class StoreUnarchivedEvent {
         Objects.equals(this.flipdishEventId, storeUnarchivedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, storeUnarchivedEvent.createTime) &&
         Objects.equals(this.position, storeUnarchivedEvent.position) &&
-        Objects.equals(this.appId, storeUnarchivedEvent.appId);
+        Objects.equals(this.appId, storeUnarchivedEvent.appId) &&
+        Objects.equals(this.ipAddress, storeUnarchivedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId);
+    return Objects.hash(eventName, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -278,6 +300,7 @@ public class StoreUnarchivedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }
