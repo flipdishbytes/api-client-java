@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 <a name="getChannel"></a>
 # **getChannel**
-> Channel getChannel(id, appId)
+> RestApiResultChannel getChannel(id, appId)
 
 Returns a Sales Channel by Id.
 
@@ -416,7 +416,7 @@ ChannelsApi apiInstance = new ChannelsApi();
 Integer id = 56; // Integer | ChannelId
 String appId = "appId_example"; // String | AppId
 try {
-    Channel result = apiInstance.getChannel(id, appId);
+    RestApiResultChannel result = apiInstance.getChannel(id, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#getChannel");
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Channel**](Channel.md)
+[**RestApiResultChannel**](RestApiResultChannel.md)
 
 ### Authorization
 

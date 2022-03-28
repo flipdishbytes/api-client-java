@@ -55,4 +55,24 @@ public class LocationApiTest {
         // TODO: test validations
     }
     
+    /**
+     * Update a Location i.e: Table, Hotel Room, Car park space
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateLocationTest() throws ApiException {
+        CreateLocation updateLocationInput = null;
+        Integer locationAreaId = null;
+        Integer locationId = null;
+        String appId = null;
+        Integer storeId = null;
+        LocationAreaLocation response = api.updateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId);
+
+        // TODO: test validations
+    }
+    
 }

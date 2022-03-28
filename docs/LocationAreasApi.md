@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 <a name="getLocationArea"></a>
 # **getLocationArea**
-> LocationAreaWithLocations getLocationArea(locationAreaId, appId, storeId)
+> RestApiResultLocationAreaWithLocations getLocationArea(locationAreaId, appId, storeId)
 
 Retrieve a Location Area
 
@@ -91,7 +91,7 @@ Integer locationAreaId = 56; // Integer | Id of the Location Area
 String appId = "appId_example"; // String | AppId i.e: (fd1234)
 Integer storeId = 56; // Integer | Id of the Store
 try {
-    LocationAreaWithLocations result = apiInstance.getLocationArea(locationAreaId, appId, storeId);
+    RestApiResultLocationAreaWithLocations result = apiInstance.getLocationArea(locationAreaId, appId, storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationAreasApi#getLocationArea");
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LocationAreaWithLocations**](LocationAreaWithLocations.md)
+[**RestApiResultLocationAreaWithLocations**](RestApiResultLocationAreaWithLocations.md)
 
 ### Authorization
 

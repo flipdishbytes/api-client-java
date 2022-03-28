@@ -14,13 +14,13 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.Channel;
 import com.flipdish.apiclient.model.Response;
 import com.flipdish.apiclient.model.RestApiArrayResultChannel;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppChannelAssignment;
+import com.flipdish.apiclient.model.RestApiResultChannel;
 import com.flipdish.apiclient.model.RestApiResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -172,7 +172,7 @@ public class ChannelsApiTest {
     public void getChannelTest() throws ApiException {
         Integer id = null;
         String appId = null;
-        Channel response = api.getChannel(id, appId);
+        RestApiResultChannel response = api.getChannel(id, appId);
 
         // TODO: test validations
     }

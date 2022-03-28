@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.Channel;
 import com.flipdish.apiclient.model.Response;
 import com.flipdish.apiclient.model.RestApiArrayResultChannel;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppChannelAssignment;
+import com.flipdish.apiclient.model.RestApiResultChannel;
 import com.flipdish.apiclient.model.RestApiResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
@@ -1108,11 +1108,11 @@ public class ChannelsApi {
      * 
      * @param id ChannelId (required)
      * @param appId AppId (required)
-     * @return Channel
+     * @return RestApiResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Channel getChannel(Integer id, String appId) throws ApiException {
-        ApiResponse<Channel> resp = getChannelWithHttpInfo(id, appId);
+    public RestApiResultChannel getChannel(Integer id, String appId) throws ApiException {
+        ApiResponse<RestApiResultChannel> resp = getChannelWithHttpInfo(id, appId);
         return resp.getData();
     }
 
@@ -1121,12 +1121,12 @@ public class ChannelsApi {
      * 
      * @param id ChannelId (required)
      * @param appId AppId (required)
-     * @return ApiResponse&lt;Channel&gt;
+     * @return ApiResponse&lt;RestApiResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Channel> getChannelWithHttpInfo(Integer id, String appId) throws ApiException {
+    public ApiResponse<RestApiResultChannel> getChannelWithHttpInfo(Integer id, String appId) throws ApiException {
         com.squareup.okhttp.Call call = getChannelValidateBeforeCall(id, appId, null, null);
-        Type localVarReturnType = new TypeToken<Channel>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultChannel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1139,7 +1139,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getChannelAsync(Integer id, String appId, final ApiCallback<Channel> callback) throws ApiException {
+    public com.squareup.okhttp.Call getChannelAsync(Integer id, String appId, final ApiCallback<RestApiResultChannel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1161,7 +1161,7 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = getChannelValidateBeforeCall(id, appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Channel>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultChannel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

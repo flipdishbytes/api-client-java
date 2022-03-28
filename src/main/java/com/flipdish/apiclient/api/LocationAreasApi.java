@@ -29,10 +29,10 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CreateLocationArea;
 import com.flipdish.apiclient.model.LocationArea;
-import com.flipdish.apiclient.model.LocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateLocationArea;
 
@@ -287,11 +287,11 @@ public class LocationAreasApi {
      * @param locationAreaId Id of the Location Area (required)
      * @param appId AppId i.e: (fd1234) (required)
      * @param storeId Id of the Store (required)
-     * @return LocationAreaWithLocations
+     * @return RestApiResultLocationAreaWithLocations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LocationAreaWithLocations getLocationArea(Integer locationAreaId, String appId, Integer storeId) throws ApiException {
-        ApiResponse<LocationAreaWithLocations> resp = getLocationAreaWithHttpInfo(locationAreaId, appId, storeId);
+    public RestApiResultLocationAreaWithLocations getLocationArea(Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultLocationAreaWithLocations> resp = getLocationAreaWithHttpInfo(locationAreaId, appId, storeId);
         return resp.getData();
     }
 
@@ -301,12 +301,12 @@ public class LocationAreasApi {
      * @param locationAreaId Id of the Location Area (required)
      * @param appId AppId i.e: (fd1234) (required)
      * @param storeId Id of the Store (required)
-     * @return ApiResponse&lt;LocationAreaWithLocations&gt;
+     * @return ApiResponse&lt;RestApiResultLocationAreaWithLocations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LocationAreaWithLocations> getLocationAreaWithHttpInfo(Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+    public ApiResponse<RestApiResultLocationAreaWithLocations> getLocationAreaWithHttpInfo(Integer locationAreaId, String appId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = getLocationAreaValidateBeforeCall(locationAreaId, appId, storeId, null, null);
-        Type localVarReturnType = new TypeToken<LocationAreaWithLocations>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultLocationAreaWithLocations>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -320,7 +320,7 @@ public class LocationAreasApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLocationAreaAsync(Integer locationAreaId, String appId, Integer storeId, final ApiCallback<LocationAreaWithLocations> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLocationAreaAsync(Integer locationAreaId, String appId, Integer storeId, final ApiCallback<RestApiResultLocationAreaWithLocations> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -342,7 +342,7 @@ public class LocationAreasApi {
         }
 
         com.squareup.okhttp.Call call = getLocationAreaValidateBeforeCall(locationAreaId, appId, storeId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<LocationAreaWithLocations>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultLocationAreaWithLocations>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
