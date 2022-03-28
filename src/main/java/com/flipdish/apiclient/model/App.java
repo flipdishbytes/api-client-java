@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -280,14 +280,6 @@ public class App {
     
     EDITCUSTOMERS("EditCustomers"),
     
-    CREATEPRODUCT("CreateProduct"),
-    
-    UPDATEPRODUCT("UpdateProduct"),
-    
-    VIEWPRODUCT("ViewProduct"),
-    
-    DELETEPRODUCT("DeleteProduct"),
-    
     CREATECATALOGELEMENTS("CreateCatalogElements"),
     
     UPDATECATALOGELEMENTS("UpdateCatalogElements"),
@@ -305,6 +297,10 @@ public class App {
     DELETEMETAFIELDDEFINITIONS("DeleteMetafieldDefinitions"),
     
     UPDATEMETAFIELDS("UpdateMetafields"),
+    
+    VIEWCATALOGMENUCHANGES("ViewCatalogMenuChanges"),
+    
+    PUBLISHCATALOGMENUCHANGES("PublishCatalogMenuChanges"),
     
     VIEWAPPSTATISTICS("ViewAppStatistics"),
     

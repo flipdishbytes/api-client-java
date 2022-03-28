@@ -38,14 +38,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PendingMenuChangesApi {
+public class CatalogChangesApi {
     private ApiClient apiClient;
 
-    public PendingMenuChangesApi() {
+    public CatalogChangesApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public PendingMenuChangesApi(ApiClient apiClient) {
+    public CatalogChangesApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 
@@ -73,7 +73,7 @@ public class PendingMenuChangesApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/menus/pendingmenuchanges"
+        String localVarPath = "/api/v1.0/{appId}/menus/catalog-changes"
             .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();

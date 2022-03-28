@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**productId** | **String** | Unique product id |  [optional]
+**catalogElementId** | **String** | Unique catalog element id |  [optional]
 **menuId** | **Integer** | Unique menu id |  [optional]
 **lastUpdatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Update date and time |  [optional]
 

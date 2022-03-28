@@ -1,10 +1,10 @@
-# PendingMenuChangesApi
+# CatalogChangesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPendingMenuChanges**](PendingMenuChangesApi.md#getPendingMenuChanges) | **GET** /api/v1.0/{appId}/menus/pendingmenuchanges | Get menu pending changes from Catalog groups and items
+[**getPendingMenuChanges**](CatalogChangesApi.md#getPendingMenuChanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
 
 
 <a name="getPendingMenuChanges"></a>
@@ -22,7 +22,7 @@ Get menu pending changes from Catalog groups and items
 //import com.flipdish.apiclient.ApiException;
 //import com.flipdish.apiclient.Configuration;
 //import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.PendingMenuChangesApi;
+//import com.flipdish.apiclient.api.CatalogChangesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -30,7 +30,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
-PendingMenuChangesApi apiInstance = new PendingMenuChangesApi();
+CatalogChangesApi apiInstance = new CatalogChangesApi();
 String appId = "appId_example"; // String | 
 Integer menuId = 56; // Integer | 
 String catalogElementId = "catalogElementId_example"; // String | 
@@ -40,7 +40,7 @@ try {
     RestApiPaginationResultPendingMenuChanges result = apiInstance.getPendingMenuChanges(appId, menuId, catalogElementId, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling PendingMenuChangesApi#getPendingMenuChanges");
+    System.err.println("Exception when calling CatalogChangesApi#getPendingMenuChanges");
     e.printStackTrace();
 }
 ```

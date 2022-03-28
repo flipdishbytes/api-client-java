@@ -27,12 +27,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for PendingMenuChangesApi
+ * API tests for CatalogChangesApi
  */
 @Ignore
-public class PendingMenuChangesApiTest {
+public class CatalogChangesApiTest {
 
-    private final PendingMenuChangesApi api = new PendingMenuChangesApi();
+    private final CatalogChangesApi api = new CatalogChangesApi();
 
     
     /**

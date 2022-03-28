@@ -29,10 +29,10 @@ import org.threeten.bp.OffsetDateTime;
  * Pending Menu Changes
  */
 @ApiModel(description = "Pending Menu Changes")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-24T11:16:28.593Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-28T09:13:21.556Z")
 public class PendingMenuChanges {
-  @SerializedName("ProductId")
-  private String productId = null;
+  @SerializedName("CatalogElementId")
+  private String catalogElementId = null;
 
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -40,22 +40,22 @@ public class PendingMenuChanges {
   @SerializedName("LastUpdatedAt")
   private OffsetDateTime lastUpdatedAt = null;
 
-  public PendingMenuChanges productId(String productId) {
-    this.productId = productId;
+  public PendingMenuChanges catalogElementId(String catalogElementId) {
+    this.catalogElementId = catalogElementId;
     return this;
   }
 
    /**
-   * Unique product id
-   * @return productId
+   * Unique catalog element id
+   * @return catalogElementId
   **/
-  @ApiModelProperty(value = "Unique product id")
-  public String getProductId() {
-    return productId;
+  @ApiModelProperty(value = "Unique catalog element id")
+  public String getCatalogElementId() {
+    return catalogElementId;
   }
 
-  public void setProductId(String productId) {
-    this.productId = productId;
+  public void setCatalogElementId(String catalogElementId) {
+    this.catalogElementId = catalogElementId;
   }
 
   public PendingMenuChanges menuId(Integer menuId) {
@@ -104,14 +104,14 @@ public class PendingMenuChanges {
       return false;
     }
     PendingMenuChanges pendingMenuChanges = (PendingMenuChanges) o;
-    return Objects.equals(this.productId, pendingMenuChanges.productId) &&
+    return Objects.equals(this.catalogElementId, pendingMenuChanges.catalogElementId) &&
         Objects.equals(this.menuId, pendingMenuChanges.menuId) &&
         Objects.equals(this.lastUpdatedAt, pendingMenuChanges.lastUpdatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productId, menuId, lastUpdatedAt);
+    return Objects.hash(catalogElementId, menuId, lastUpdatedAt);
   }
 
 
@@ -120,7 +120,7 @@ public class PendingMenuChanges {
     StringBuilder sb = new StringBuilder();
     sb.append("class PendingMenuChanges {\n");
     
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    catalogElementId: ").append(toIndentedString(catalogElementId)).append("\n");
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
     sb.append("    lastUpdatedAt: ").append(toIndentedString(lastUpdatedAt)).append("\n");
     sb.append("}");
