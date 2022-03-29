@@ -15,9 +15,9 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateLocation;
-import com.flipdish.apiclient.model.LocationAreaLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultLocationAreaLocation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -56,6 +56,26 @@ public class LocationApiTest {
     }
     
     /**
+     * Move a Location to a different location Area
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void moveLocationTest() throws ApiException {
+        Integer locationId = null;
+        Integer locationAreaId = null;
+        Integer newLocationAreaId = null;
+        String appId = null;
+        Integer storeId = null;
+        Object response = api.moveLocation(locationId, locationAreaId, newLocationAreaId, appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Update a Location i.e: Table, Hotel Room, Car park space
      *
      * 
@@ -70,7 +90,7 @@ public class LocationApiTest {
         Integer locationId = null;
         String appId = null;
         Integer storeId = null;
-        LocationAreaLocation response = api.updateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId);
+        RestApiResultLocationAreaLocation response = api.updateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId);
 
         // TODO: test validations
     }
