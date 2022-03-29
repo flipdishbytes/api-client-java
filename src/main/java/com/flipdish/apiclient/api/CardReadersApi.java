@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
+import com.flipdish.apiclient.model.GeoPointRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
@@ -326,14 +327,15 @@ public class CardReadersApi {
     }
     /**
      * Build call for generateStripeTerminalLocation
+     * @param geoPointRequest  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call generateStripeTerminalLocationCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call generateStripeTerminalLocationCall(GeoPointRequest geoPointRequest, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = geoPointRequest;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/stripeterminal/location"
@@ -353,7 +355,7 @@ public class CardReadersApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -375,7 +377,12 @@ public class CardReadersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call generateStripeTerminalLocationValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call generateStripeTerminalLocationValidateBeforeCall(GeoPointRequest geoPointRequest, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'geoPointRequest' is set
+        if (geoPointRequest == null) {
+            throw new ApiException("Missing the required parameter 'geoPointRequest' when calling generateStripeTerminalLocation(Async)");
+        }
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -383,7 +390,7 @@ public class CardReadersApi {
         }
         
 
-        com.squareup.okhttp.Call call = generateStripeTerminalLocationCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = generateStripeTerminalLocationCall(geoPointRequest, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -391,24 +398,26 @@ public class CardReadersApi {
     /**
      * Get Location ID for Stripe Terminal
      * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param geoPointRequest  (required)
      * @param appId  (required)
      * @return RestApiResultStripeTerminalLocation
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultStripeTerminalLocation generateStripeTerminalLocation(String appId) throws ApiException {
-        ApiResponse<RestApiResultStripeTerminalLocation> resp = generateStripeTerminalLocationWithHttpInfo(appId);
+    public RestApiResultStripeTerminalLocation generateStripeTerminalLocation(GeoPointRequest geoPointRequest, String appId) throws ApiException {
+        ApiResponse<RestApiResultStripeTerminalLocation> resp = generateStripeTerminalLocationWithHttpInfo(geoPointRequest, appId);
         return resp.getData();
     }
 
     /**
      * Get Location ID for Stripe Terminal
      * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param geoPointRequest  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultStripeTerminalLocation&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultStripeTerminalLocation> generateStripeTerminalLocationWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = generateStripeTerminalLocationValidateBeforeCall(appId, null, null);
+    public ApiResponse<RestApiResultStripeTerminalLocation> generateStripeTerminalLocationWithHttpInfo(GeoPointRequest geoPointRequest, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = generateStripeTerminalLocationValidateBeforeCall(geoPointRequest, appId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultStripeTerminalLocation>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -416,12 +425,13 @@ public class CardReadersApi {
     /**
      * Get Location ID for Stripe Terminal (asynchronously)
      * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param geoPointRequest  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call generateStripeTerminalLocationAsync(String appId, final ApiCallback<RestApiResultStripeTerminalLocation> callback) throws ApiException {
+    public com.squareup.okhttp.Call generateStripeTerminalLocationAsync(GeoPointRequest geoPointRequest, String appId, final ApiCallback<RestApiResultStripeTerminalLocation> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -442,7 +452,7 @@ public class CardReadersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = generateStripeTerminalLocationValidateBeforeCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = generateStripeTerminalLocationValidateBeforeCall(geoPointRequest, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultStripeTerminalLocation>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -127,7 +127,7 @@ null (empty response body)
 
 <a name="generateStripeTerminalLocation"></a>
 # **generateStripeTerminalLocation**
-> RestApiResultStripeTerminalLocation generateStripeTerminalLocation(appId)
+> RestApiResultStripeTerminalLocation generateStripeTerminalLocation(geoPointRequest, appId)
 
 Get Location ID for Stripe Terminal
 
@@ -149,9 +149,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CardReadersApi apiInstance = new CardReadersApi();
+GeoPointRequest geoPointRequest = new GeoPointRequest(); // GeoPointRequest | 
 String appId = "appId_example"; // String | 
 try {
-    RestApiResultStripeTerminalLocation result = apiInstance.generateStripeTerminalLocation(appId);
+    RestApiResultStripeTerminalLocation result = apiInstance.generateStripeTerminalLocation(geoPointRequest, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CardReadersApi#generateStripeTerminalLocation");
@@ -163,6 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **geoPointRequest** | [**GeoPointRequest**](GeoPointRequest.md)|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -175,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getBluetoothTerminalStatus"></a>

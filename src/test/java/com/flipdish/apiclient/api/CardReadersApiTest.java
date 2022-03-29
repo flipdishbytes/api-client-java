@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
+import com.flipdish.apiclient.model.GeoPointRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
@@ -84,8 +85,9 @@ public class CardReadersApiTest {
      */
     @Test
     public void generateStripeTerminalLocationTest() throws ApiException {
+        GeoPointRequest geoPointRequest = null;
         String appId = null;
-        RestApiResultStripeTerminalLocation response = api.generateStripeTerminalLocation(appId);
+        RestApiResultStripeTerminalLocation response = api.generateStripeTerminalLocation(geoPointRequest, appId);
 
         // TODO: test validations
     }
