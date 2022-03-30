@@ -56,6 +56,25 @@ public class LocationApiTest {
     }
     
     /**
+     * Set a Location as deleted
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteLocationTest() throws ApiException {
+        Integer locationId = null;
+        Integer locationAreaId = null;
+        String appId = null;
+        Integer storeId = null;
+        Object response = api.deleteLocation(locationId, locationAreaId, appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Move a Location to a different location Area
      *
      * 

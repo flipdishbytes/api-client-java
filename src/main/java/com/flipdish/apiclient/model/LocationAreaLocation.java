@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
  */
 @ApiModel(description = "Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T15:09:36.323+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T15:31:38.401+01:00")
 public class LocationAreaLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
@@ -41,6 +41,9 @@ public class LocationAreaLocation {
 
   @SerializedName("ExternalLocationId")
   private String externalLocationId = null;
+
+  @SerializedName("IsDeleted")
+  private Boolean isDeleted = null;
 
   public LocationAreaLocation locationId(Integer locationId) {
     this.locationId = locationId;
@@ -114,6 +117,24 @@ public class LocationAreaLocation {
     this.externalLocationId = externalLocationId;
   }
 
+  public LocationAreaLocation isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+   /**
+   * Shows if the Location is deleted or not
+   * @return isDeleted
+  **/
+  @ApiModelProperty(value = "Shows if the Location is deleted or not")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -127,12 +148,13 @@ public class LocationAreaLocation {
     return Objects.equals(this.locationId, locationAreaLocation.locationId) &&
         Objects.equals(this.locationName, locationAreaLocation.locationName) &&
         Objects.equals(this.displayOrder, locationAreaLocation.displayOrder) &&
-        Objects.equals(this.externalLocationId, locationAreaLocation.externalLocationId);
+        Objects.equals(this.externalLocationId, locationAreaLocation.externalLocationId) &&
+        Objects.equals(this.isDeleted, locationAreaLocation.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(locationId, locationName, displayOrder, externalLocationId);
+    return Objects.hash(locationId, locationName, displayOrder, externalLocationId, isDeleted);
   }
 
 
@@ -145,6 +167,7 @@ public class LocationAreaLocation {
     sb.append("    locationName: ").append(toIndentedString(locationName)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");
+    sb.append("    isDeleted: ").append(toIndentedString(isDeleted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

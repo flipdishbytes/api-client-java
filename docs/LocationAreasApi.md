@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 [**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**getLocationsForStore**](LocationAreasApi.md#getLocationsForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
+[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
 [**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
 
 
@@ -120,9 +120,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getLocationsForStore"></a>
-# **getLocationsForStore**
-> RestApiArrayResultLocationAreaWithLocations getLocationsForStore(appId, storeId)
+<a name="getLocationAreasForStore"></a>
+# **getLocationAreasForStore**
+> RestApiArrayResultLocationAreaWithLocations getLocationAreasForStore(appId, storeId)
 
 Retrieve all Location Areas for a Store
 
@@ -145,10 +145,10 @@ LocationAreasApi apiInstance = new LocationAreasApi();
 String appId = "appId_example"; // String | AppId i.e: (fd1234)
 Integer storeId = 56; // Integer | Id of the Store
 try {
-    RestApiArrayResultLocationAreaWithLocations result = apiInstance.getLocationsForStore(appId, storeId);
+    RestApiArrayResultLocationAreaWithLocations result = apiInstance.getLocationAreasForStore(appId, storeId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling LocationAreasApi#getLocationsForStore");
+    System.err.println("Exception when calling LocationAreasApi#getLocationAreasForStore");
     e.printStackTrace();
 }
 ```

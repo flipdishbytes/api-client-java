@@ -347,7 +347,7 @@ public class LocationAreasApi {
         return call;
     }
     /**
-     * Build call for getLocationsForStore
+     * Build call for getLocationAreasForStore
      * @param appId AppId i.e: (fd1234) (required)
      * @param storeId Id of the Store (required)
      * @param progressListener Progress listener
@@ -355,7 +355,7 @@ public class LocationAreasApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getLocationsForStoreCall(String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getLocationAreasForStoreCall(String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -399,20 +399,20 @@ public class LocationAreasApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getLocationsForStoreValidateBeforeCall(String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getLocationAreasForStoreValidateBeforeCall(String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getLocationsForStore(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling getLocationAreasForStore(Async)");
         }
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling getLocationsForStore(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling getLocationAreasForStore(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getLocationsForStoreCall(appId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getLocationAreasForStoreCall(appId, storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -425,8 +425,8 @@ public class LocationAreasApi {
      * @return RestApiArrayResultLocationAreaWithLocations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultLocationAreaWithLocations getLocationsForStore(String appId, Integer storeId) throws ApiException {
-        ApiResponse<RestApiArrayResultLocationAreaWithLocations> resp = getLocationsForStoreWithHttpInfo(appId, storeId);
+    public RestApiArrayResultLocationAreaWithLocations getLocationAreasForStore(String appId, Integer storeId) throws ApiException {
+        ApiResponse<RestApiArrayResultLocationAreaWithLocations> resp = getLocationAreasForStoreWithHttpInfo(appId, storeId);
         return resp.getData();
     }
 
@@ -438,8 +438,8 @@ public class LocationAreasApi {
      * @return ApiResponse&lt;RestApiArrayResultLocationAreaWithLocations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultLocationAreaWithLocations> getLocationsForStoreWithHttpInfo(String appId, Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = getLocationsForStoreValidateBeforeCall(appId, storeId, null, null);
+    public ApiResponse<RestApiArrayResultLocationAreaWithLocations> getLocationAreasForStoreWithHttpInfo(String appId, Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = getLocationAreasForStoreValidateBeforeCall(appId, storeId, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultLocationAreaWithLocations>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -453,7 +453,7 @@ public class LocationAreasApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLocationsForStoreAsync(String appId, Integer storeId, final ApiCallback<RestApiArrayResultLocationAreaWithLocations> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLocationAreasForStoreAsync(String appId, Integer storeId, final ApiCallback<RestApiArrayResultLocationAreaWithLocations> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -474,7 +474,7 @@ public class LocationAreasApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getLocationsForStoreValidateBeforeCall(appId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getLocationAreasForStoreValidateBeforeCall(appId, storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultLocationAreaWithLocations>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **locationName** | **String** | Name of the Location |  [optional]
 **displayOrder** | **Integer** | The order that the Location should be displayed on the screen |  [optional]
 **externalLocationId** | **String** | Id of the Location on an external system |  [optional]
+**isDeleted** | **Boolean** | Shows if the Location is deleted or not |  [optional]
 
 
 

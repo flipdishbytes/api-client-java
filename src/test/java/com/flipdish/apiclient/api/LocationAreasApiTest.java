@@ -84,10 +84,10 @@ public class LocationAreasApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getLocationsForStoreTest() throws ApiException {
+    public void getLocationAreasForStoreTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        RestApiArrayResultLocationAreaWithLocations response = api.getLocationsForStore(appId, storeId);
+        RestApiArrayResultLocationAreaWithLocations response = api.getLocationAreasForStore(appId, storeId);
 
         // TODO: test validations
     }

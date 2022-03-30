@@ -211,6 +211,159 @@ public class LocationApi {
         return call;
     }
     /**
+     * Build call for deleteLocation
+     * @param locationId Id of the Location that will be moved (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call deleteLocationCall(Integer locationId, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete"
+            .replaceAll("\\{" + "locationId" + "\\}", apiClient.escapeString(locationId.toString()))
+            .replaceAll("\\{" + "locationAreaId" + "\\}", apiClient.escapeString(locationAreaId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call deleteLocationValidateBeforeCall(Integer locationId, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'locationId' is set
+        if (locationId == null) {
+            throw new ApiException("Missing the required parameter 'locationId' when calling deleteLocation(Async)");
+        }
+        
+        // verify the required parameter 'locationAreaId' is set
+        if (locationAreaId == null) {
+            throw new ApiException("Missing the required parameter 'locationAreaId' when calling deleteLocation(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling deleteLocation(Async)");
+        }
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling deleteLocation(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = deleteLocationCall(locationId, locationAreaId, appId, storeId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Set a Location as deleted
+     * 
+     * @param locationId Id of the Location that will be moved (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public Object deleteLocation(Integer locationId, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = deleteLocationWithHttpInfo(locationId, locationAreaId, appId, storeId);
+        return resp.getData();
+    }
+
+    /**
+     * Set a Location as deleted
+     * 
+     * @param locationId Id of the Location that will be moved (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Object> deleteLocationWithHttpInfo(Integer locationId, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = deleteLocationValidateBeforeCall(locationId, locationAreaId, appId, storeId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Set a Location as deleted (asynchronously)
+     * 
+     * @param locationId Id of the Location that will be moved (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call deleteLocationAsync(Integer locationId, Integer locationAreaId, String appId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = deleteLocationValidateBeforeCall(locationId, locationAreaId, appId, storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for moveLocation
      * @param locationId Id of the Location that will be moved (required)
      * @param locationAreaId Id of the new Location area that it should be moved to (required)
