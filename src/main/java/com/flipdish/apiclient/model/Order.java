@@ -40,7 +40,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-29T16:26:17.904+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T15:09:36.323+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -276,6 +276,9 @@ public class Order {
 
   @SerializedName("OrderItemsAmount")
   private Double orderItemsAmount = null;
+
+  @SerializedName("ServiceChargeAmount")
+  private Double serviceChargeAmount = null;
 
   @SerializedName("Amount")
   private Double amount = null;
@@ -1173,6 +1176,24 @@ public class Order {
     this.orderItemsAmount = orderItemsAmount;
   }
 
+  public Order serviceChargeAmount(Double serviceChargeAmount) {
+    this.serviceChargeAmount = serviceChargeAmount;
+    return this;
+  }
+
+   /**
+   * Service Charge Amount
+   * @return serviceChargeAmount
+  **/
+  @ApiModelProperty(value = "Service Charge Amount")
+  public Double getServiceChargeAmount() {
+    return serviceChargeAmount;
+  }
+
+  public void setServiceChargeAmount(Double serviceChargeAmount) {
+    this.serviceChargeAmount = serviceChargeAmount;
+  }
+
   public Order amount(Double amount) {
     this.amount = amount;
     return this;
@@ -1533,6 +1554,7 @@ public class Order {
         Objects.equals(this.tipAmount, order.tipAmount) &&
         Objects.equals(this.deliveryAmount, order.deliveryAmount) &&
         Objects.equals(this.orderItemsAmount, order.orderItemsAmount) &&
+        Objects.equals(this.serviceChargeAmount, order.serviceChargeAmount) &&
         Objects.equals(this.amount, order.amount) &&
         Objects.equals(this.processingFee, order.processingFee) &&
         Objects.equals(this.paymentAccountType, order.paymentAccountType) &&
@@ -1555,7 +1577,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
   }
 
 
@@ -1590,6 +1612,7 @@ public class Order {
     sb.append("    tipAmount: ").append(toIndentedString(tipAmount)).append("\n");
     sb.append("    deliveryAmount: ").append(toIndentedString(deliveryAmount)).append("\n");
     sb.append("    orderItemsAmount: ").append(toIndentedString(orderItemsAmount)).append("\n");
+    sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    processingFee: ").append(toIndentedString(processingFee)).append("\n");
     sb.append("    paymentAccountType: ").append(toIndentedString(paymentAccountType)).append("\n");

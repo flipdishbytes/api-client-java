@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-29T16:26:17.904+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T15:09:36.323+01:00")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -448,6 +448,9 @@ public class Payout {
   @SerializedName("OnlineSalesTips")
   private Double onlineSalesTips = null;
 
+  @SerializedName("OnlineSalesServiceCharges")
+  private Double onlineSalesServiceCharges = null;
+
   @SerializedName("OnlineSalesRefundedFees")
   private Double onlineSalesRefundedFees = null;
 
@@ -787,6 +790,24 @@ public class Payout {
     this.onlineSalesTips = onlineSalesTips;
   }
 
+  public Payout onlineSalesServiceCharges(Double onlineSalesServiceCharges) {
+    this.onlineSalesServiceCharges = onlineSalesServiceCharges;
+    return this;
+  }
+
+   /**
+   * Payout online sales service charges
+   * @return onlineSalesServiceCharges
+  **/
+  @ApiModelProperty(value = "Payout online sales service charges")
+  public Double getOnlineSalesServiceCharges() {
+    return onlineSalesServiceCharges;
+  }
+
+  public void setOnlineSalesServiceCharges(Double onlineSalesServiceCharges) {
+    this.onlineSalesServiceCharges = onlineSalesServiceCharges;
+  }
+
   public Payout onlineSalesRefundedFees(Double onlineSalesRefundedFees) {
     this.onlineSalesRefundedFees = onlineSalesRefundedFees;
     return this;
@@ -1119,6 +1140,7 @@ public class Payout {
         Objects.equals(this.onlineSalesAmount, payout.onlineSalesAmount) &&
         Objects.equals(this.onlineSalesDeliveryCharges, payout.onlineSalesDeliveryCharges) &&
         Objects.equals(this.onlineSalesTips, payout.onlineSalesTips) &&
+        Objects.equals(this.onlineSalesServiceCharges, payout.onlineSalesServiceCharges) &&
         Objects.equals(this.onlineSalesRefundedFees, payout.onlineSalesRefundedFees) &&
         Objects.equals(this.onlineSalesFees, payout.onlineSalesFees) &&
         Objects.equals(this.onlineSalesRefundedAmount, payout.onlineSalesRefundedAmount) &&
@@ -1140,7 +1162,7 @@ public class Payout {
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesRefundedFees, onlineSalesFees, onlineSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, onlineSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance);
   }
 
 
@@ -1165,6 +1187,7 @@ public class Payout {
     sb.append("    onlineSalesAmount: ").append(toIndentedString(onlineSalesAmount)).append("\n");
     sb.append("    onlineSalesDeliveryCharges: ").append(toIndentedString(onlineSalesDeliveryCharges)).append("\n");
     sb.append("    onlineSalesTips: ").append(toIndentedString(onlineSalesTips)).append("\n");
+    sb.append("    onlineSalesServiceCharges: ").append(toIndentedString(onlineSalesServiceCharges)).append("\n");
     sb.append("    onlineSalesRefundedFees: ").append(toIndentedString(onlineSalesRefundedFees)).append("\n");
     sb.append("    onlineSalesFees: ").append(toIndentedString(onlineSalesFees)).append("\n");
     sb.append("    onlineSalesRefundedAmount: ").append(toIndentedString(onlineSalesRefundedAmount)).append("\n");

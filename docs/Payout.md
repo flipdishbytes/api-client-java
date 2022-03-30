@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **onlineSalesAmount** | **Double** | Payout online sales amount |  [optional]
 **onlineSalesDeliveryCharges** | **Double** | Payout online sales delivery charges |  [optional]
 **onlineSalesTips** | **Double** | Payout online sales tips |  [optional]
+**onlineSalesServiceCharges** | **Double** | Payout online sales service charges |  [optional]
 **onlineSalesRefundedFees** | **Double** | Payout online sales refunded fees |  [optional]
 **onlineSalesFees** | **Double** | Payout online sales fees |  [optional]
 **onlineSalesRefundedAmount** | **Double** | Payout online sales refunded amount |  [optional]
