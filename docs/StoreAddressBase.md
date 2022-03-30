@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **city** | **String** | City |  [optional]
 **countryCode** | **String** | Country code (ISO-alpha2) |  [optional]
 **displayForCustomer** | **String** | Display for customer |  [optional]
+**addressFields** | **Map&lt;String, Object&gt;** | Dyanmic field/value pairs, defined by the form assigned to the given country code. |  [optional]
 
 
 

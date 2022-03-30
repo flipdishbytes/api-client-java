@@ -24,12 +24,15 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Store address
  */
 @ApiModel(description = "Store address")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T15:31:38.401+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-03-30T16:16:08.086+01:00")
 public class StoreAddress {
   @SerializedName("AddressId")
   private Integer addressId = null;
@@ -51,6 +54,9 @@ public class StoreAddress {
 
   @SerializedName("DisplayForCustomer")
   private String displayForCustomer = null;
+
+  @SerializedName("AddressFields")
+  private Map<String, Object> addressFields = null;
 
   public StoreAddress addressId(Integer addressId) {
     this.addressId = addressId;
@@ -178,6 +184,32 @@ public class StoreAddress {
     this.displayForCustomer = displayForCustomer;
   }
 
+  public StoreAddress addressFields(Map<String, Object> addressFields) {
+    this.addressFields = addressFields;
+    return this;
+  }
+
+  public StoreAddress putAddressFieldsItem(String key, Object addressFieldsItem) {
+    if (this.addressFields == null) {
+      this.addressFields = new HashMap<String, Object>();
+    }
+    this.addressFields.put(key, addressFieldsItem);
+    return this;
+  }
+
+   /**
+   * Dyanmic field/value pairs, defined by the form assigned to the given country code.
+   * @return addressFields
+  **/
+  @ApiModelProperty(value = "Dyanmic field/value pairs, defined by the form assigned to the given country code.")
+  public Map<String, Object> getAddressFields() {
+    return addressFields;
+  }
+
+  public void setAddressFields(Map<String, Object> addressFields) {
+    this.addressFields = addressFields;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -194,12 +226,13 @@ public class StoreAddress {
         Objects.equals(this.postcode, storeAddress.postcode) &&
         Objects.equals(this.city, storeAddress.city) &&
         Objects.equals(this.countryCode, storeAddress.countryCode) &&
-        Objects.equals(this.displayForCustomer, storeAddress.displayForCustomer);
+        Objects.equals(this.displayForCustomer, storeAddress.displayForCustomer) &&
+        Objects.equals(this.addressFields, storeAddress.addressFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(addressId, coordinates, line1, postcode, city, countryCode, displayForCustomer);
+    return Objects.hash(addressId, coordinates, line1, postcode, city, countryCode, displayForCustomer, addressFields);
   }
 
 
@@ -215,6 +248,7 @@ public class StoreAddress {
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    displayForCustomer: ").append(toIndentedString(displayForCustomer)).append("\n");
+    sb.append("    addressFields: ").append(toIndentedString(addressFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
