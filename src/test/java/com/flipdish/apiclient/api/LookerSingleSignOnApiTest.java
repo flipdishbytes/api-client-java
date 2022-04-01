@@ -52,4 +52,21 @@ public class LookerSingleSignOnApiTest {
         // TODO: test validations
     }
     
+    /**
+     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getLookerPerformanceSummaryEmbedUrlTest() throws ApiException {
+        String appId = null;
+        String embedPath = null;
+        DashboardEmbed response = api.getLookerPerformanceSummaryEmbedUrl(appId, embedPath);
+
+        // TODO: test validations
+    }
+    
 }
