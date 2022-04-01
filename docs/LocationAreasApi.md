@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 <a name="updateLocationArea"></a>
 # **updateLocationArea**
-> LocationArea updateLocationArea(locationAreaInput, appId, storeId, locationAreaId)
+> RestApiResultLocationArea updateLocationArea(locationAreaInput, appId, storeId, locationAreaId)
 
 Update a Location Area, i.e: Room, Floor, Car park space
 
@@ -200,7 +200,7 @@ String appId = "appId_example"; // String | AppId i.e: (fd1234)
 Integer storeId = 56; // Integer | Id of the Store
 String locationAreaId = "locationAreaId_example"; // String | 
 try {
-    LocationArea result = apiInstance.updateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
+    RestApiResultLocationArea result = apiInstance.updateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationAreasApi#updateLocationArea");
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LocationArea**](LocationArea.md)
+[**RestApiResultLocationArea**](RestApiResultLocationArea.md)
 
 ### Authorization
 

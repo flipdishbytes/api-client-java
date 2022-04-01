@@ -15,10 +15,10 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateLocationArea;
-import com.flipdish.apiclient.model.LocationArea;
 import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultLocationArea;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateLocationArea;
@@ -106,7 +106,7 @@ public class LocationAreasApiTest {
         String appId = null;
         Integer storeId = null;
         String locationAreaId = null;
-        LocationArea response = api.updateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
+        RestApiResultLocationArea response = api.updateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
 
         // TODO: test validations
     }

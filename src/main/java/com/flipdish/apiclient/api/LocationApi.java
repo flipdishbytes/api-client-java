@@ -31,6 +31,7 @@ import com.flipdish.apiclient.model.CreateLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaLocation;
+import com.flipdish.apiclient.model.RestApiResultMappedLocation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -263,7 +264,7 @@ public class LocationApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
     @SuppressWarnings("rawtypes")
@@ -360,6 +361,165 @@ public class LocationApi {
 
         com.squareup.okhttp.Call call = deleteLocationValidateBeforeCall(locationId, locationAreaId, appId, storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for mapLocationToExternalId
+     * @param locationId Id of the Location that will be mapped (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param externalLocationId External Id to be mapped to the location (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call mapLocationToExternalIdCall(Integer locationId, Integer locationAreaId, String appId, Integer storeId, String externalLocationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external"
+            .replaceAll("\\{" + "locationId" + "\\}", apiClient.escapeString(locationId.toString()))
+            .replaceAll("\\{" + "locationAreaId" + "\\}", apiClient.escapeString(locationAreaId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (externalLocationId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("externalLocationId", externalLocationId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call mapLocationToExternalIdValidateBeforeCall(Integer locationId, Integer locationAreaId, String appId, Integer storeId, String externalLocationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'locationId' is set
+        if (locationId == null) {
+            throw new ApiException("Missing the required parameter 'locationId' when calling mapLocationToExternalId(Async)");
+        }
+        
+        // verify the required parameter 'locationAreaId' is set
+        if (locationAreaId == null) {
+            throw new ApiException("Missing the required parameter 'locationAreaId' when calling mapLocationToExternalId(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling mapLocationToExternalId(Async)");
+        }
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling mapLocationToExternalId(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = mapLocationToExternalIdCall(locationId, locationAreaId, appId, storeId, externalLocationId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Set or unset External Location Id on a Location
+     * 
+     * @param locationId Id of the Location that will be mapped (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param externalLocationId External Id to be mapped to the location (optional)
+     * @return RestApiResultMappedLocation
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultMappedLocation mapLocationToExternalId(Integer locationId, Integer locationAreaId, String appId, Integer storeId, String externalLocationId) throws ApiException {
+        ApiResponse<RestApiResultMappedLocation> resp = mapLocationToExternalIdWithHttpInfo(locationId, locationAreaId, appId, storeId, externalLocationId);
+        return resp.getData();
+    }
+
+    /**
+     * Set or unset External Location Id on a Location
+     * 
+     * @param locationId Id of the Location that will be mapped (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param externalLocationId External Id to be mapped to the location (optional)
+     * @return ApiResponse&lt;RestApiResultMappedLocation&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultMappedLocation> mapLocationToExternalIdWithHttpInfo(Integer locationId, Integer locationAreaId, String appId, Integer storeId, String externalLocationId) throws ApiException {
+        com.squareup.okhttp.Call call = mapLocationToExternalIdValidateBeforeCall(locationId, locationAreaId, appId, storeId, externalLocationId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultMappedLocation>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Set or unset External Location Id on a Location (asynchronously)
+     * 
+     * @param locationId Id of the Location that will be mapped (required)
+     * @param locationAreaId Id of the Location Area that the Location belong (required)
+     * @param appId AppId i.e: (fd1234) (required)
+     * @param storeId Id of the Store (required)
+     * @param externalLocationId External Id to be mapped to the location (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call mapLocationToExternalIdAsync(Integer locationId, Integer locationAreaId, String appId, Integer storeId, String externalLocationId, final ApiCallback<RestApiResultMappedLocation> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = mapLocationToExternalIdValidateBeforeCall(locationId, locationAreaId, appId, storeId, externalLocationId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultMappedLocation>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

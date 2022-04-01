@@ -28,10 +28,10 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.CreateLocationArea;
-import com.flipdish.apiclient.model.LocationArea;
 import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultLocationArea;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateLocationArea;
@@ -570,11 +570,11 @@ public class LocationAreasApi {
      * @param appId AppId i.e: (fd1234) (required)
      * @param storeId Id of the Store (required)
      * @param locationAreaId  (required)
-     * @return LocationArea
+     * @return RestApiResultLocationArea
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LocationArea updateLocationArea(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId) throws ApiException {
-        ApiResponse<LocationArea> resp = updateLocationAreaWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
+    public RestApiResultLocationArea updateLocationArea(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId) throws ApiException {
+        ApiResponse<RestApiResultLocationArea> resp = updateLocationAreaWithHttpInfo(locationAreaInput, appId, storeId, locationAreaId);
         return resp.getData();
     }
 
@@ -585,12 +585,12 @@ public class LocationAreasApi {
      * @param appId AppId i.e: (fd1234) (required)
      * @param storeId Id of the Store (required)
      * @param locationAreaId  (required)
-     * @return ApiResponse&lt;LocationArea&gt;
+     * @return ApiResponse&lt;RestApiResultLocationArea&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LocationArea> updateLocationAreaWithHttpInfo(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId) throws ApiException {
+    public ApiResponse<RestApiResultLocationArea> updateLocationAreaWithHttpInfo(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId) throws ApiException {
         com.squareup.okhttp.Call call = updateLocationAreaValidateBeforeCall(locationAreaInput, appId, storeId, locationAreaId, null, null);
-        Type localVarReturnType = new TypeToken<LocationArea>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultLocationArea>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -605,7 +605,7 @@ public class LocationAreasApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateLocationAreaAsync(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId, final ApiCallback<LocationArea> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateLocationAreaAsync(UpdateLocationArea locationAreaInput, String appId, Integer storeId, String locationAreaId, final ApiCallback<RestApiResultLocationArea> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -627,7 +627,7 @@ public class LocationAreasApi {
         }
 
         com.squareup.okhttp.Call call = updateLocationAreaValidateBeforeCall(locationAreaInput, appId, storeId, locationAreaId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<LocationArea>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultLocationArea>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

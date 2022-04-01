@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.CreateLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaLocation;
+import com.flipdish.apiclient.model.RestApiResultMappedLocation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -70,6 +71,26 @@ public class LocationApiTest {
         String appId = null;
         Integer storeId = null;
         Object response = api.deleteLocation(locationId, locationAreaId, appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set or unset External Location Id on a Location
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mapLocationToExternalIdTest() throws ApiException {
+        Integer locationId = null;
+        Integer locationAreaId = null;
+        String appId = null;
+        Integer storeId = null;
+        String externalLocationId = null;
+        RestApiResultMappedLocation response = api.mapLocationToExternalId(locationId, locationAreaId, appId, storeId, externalLocationId);
 
         // TODO: test validations
     }
