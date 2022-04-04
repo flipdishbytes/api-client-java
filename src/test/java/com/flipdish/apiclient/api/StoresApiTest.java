@@ -35,6 +35,7 @@ import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
+import com.flipdish.apiclient.model.RestApiResultServiceCharge;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
 import com.flipdish.apiclient.model.RestApiResultStoreEndOfDayReport;
@@ -123,7 +124,7 @@ public class StoresApiTest {
     public void configureStoreServiceChargeTest() throws ApiException {
         Integer storeId = null;
         ServiceCharge serviceCharge = null;
-        Object response = api.configureStoreServiceCharge(storeId, serviceCharge);
+        RestApiResultServiceCharge response = api.configureStoreServiceCharge(storeId, serviceCharge);
 
         // TODO: test validations
     }

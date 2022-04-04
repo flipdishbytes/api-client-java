@@ -28,13 +28,13 @@ import java.io.IOException;
  * Store Service Charge
  */
 @ApiModel(description = "Store Service Charge")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-04T11:37:01.767+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-04T15:51:38.560+01:00")
 public class ServiceCharge {
   @SerializedName("StoreId")
   private Integer storeId = null;
 
   @SerializedName("PercentageValue")
-  private Integer percentageValue = null;
+  private Double percentageValue = null;
 
   @SerializedName("Enabled")
   private Boolean enabled = null;
@@ -57,7 +57,7 @@ public class ServiceCharge {
     this.storeId = storeId;
   }
 
-  public ServiceCharge percentageValue(Integer percentageValue) {
+  public ServiceCharge percentageValue(Double percentageValue) {
     this.percentageValue = percentageValue;
     return this;
   }
@@ -67,11 +67,11 @@ public class ServiceCharge {
    * @return percentageValue
   **/
   @ApiModelProperty(value = "The Default Service Charge Value")
-  public Integer getPercentageValue() {
+  public Double getPercentageValue() {
     return percentageValue;
   }
 
-  public void setPercentageValue(Integer percentageValue) {
+  public void setPercentageValue(Double percentageValue) {
     this.percentageValue = percentageValue;
   }
 

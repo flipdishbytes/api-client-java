@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 <a name="configureStoreServiceCharge"></a>
 # **configureStoreServiceCharge**
-> Object configureStoreServiceCharge(storeId, serviceCharge)
+> RestApiResultServiceCharge configureStoreServiceCharge(storeId, serviceCharge)
 
 Configure Store Service Charge; Idempotent Operation
 
@@ -216,7 +216,7 @@ StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | Store identifier
 ServiceCharge serviceCharge = new ServiceCharge(); // ServiceCharge | Service charge
 try {
-    Object result = apiInstance.configureStoreServiceCharge(storeId, serviceCharge);
+    RestApiResultServiceCharge result = apiInstance.configureStoreServiceCharge(storeId, serviceCharge);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#configureStoreServiceCharge");
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultServiceCharge**](RestApiResultServiceCharge.md)
 
 ### Authorization
 

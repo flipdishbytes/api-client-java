@@ -129,6 +129,7 @@ Name | Type | Description | Notes
 **catalogGroupUpdatedEvent** | [**List&lt;CatalogGroupUpdatedEvent&gt;**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated |  [optional]
 **catalogGroupArchivedEvent** | [**List&lt;CatalogGroupArchivedEvent&gt;**](CatalogGroupArchivedEvent.md) | Catalog Group Archived |  [optional]
 **storeTipUpdatedEvent** | [**List&lt;StoreTipUpdatedEvent&gt;**](StoreTipUpdatedEvent.md) | Store Tip Updated Event |  [optional]
+**storeServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event |  [optional]
 
 
 

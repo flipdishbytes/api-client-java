@@ -48,6 +48,7 @@ import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
+import com.flipdish.apiclient.model.RestApiResultServiceCharge;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
 import com.flipdish.apiclient.model.RestApiResultStoreEndOfDayReport;
@@ -542,11 +543,11 @@ public class StoresApi {
      * 
      * @param storeId Store identifier (required)
      * @param serviceCharge Service charge (required)
-     * @return Object
+     * @return RestApiResultServiceCharge
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object configureStoreServiceCharge(Integer storeId, ServiceCharge serviceCharge) throws ApiException {
-        ApiResponse<Object> resp = configureStoreServiceChargeWithHttpInfo(storeId, serviceCharge);
+    public RestApiResultServiceCharge configureStoreServiceCharge(Integer storeId, ServiceCharge serviceCharge) throws ApiException {
+        ApiResponse<RestApiResultServiceCharge> resp = configureStoreServiceChargeWithHttpInfo(storeId, serviceCharge);
         return resp.getData();
     }
 
@@ -555,12 +556,12 @@ public class StoresApi {
      * 
      * @param storeId Store identifier (required)
      * @param serviceCharge Service charge (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiResultServiceCharge&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> configureStoreServiceChargeWithHttpInfo(Integer storeId, ServiceCharge serviceCharge) throws ApiException {
+    public ApiResponse<RestApiResultServiceCharge> configureStoreServiceChargeWithHttpInfo(Integer storeId, ServiceCharge serviceCharge) throws ApiException {
         com.squareup.okhttp.Call call = configureStoreServiceChargeValidateBeforeCall(storeId, serviceCharge, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultServiceCharge>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -573,7 +574,7 @@ public class StoresApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call configureStoreServiceChargeAsync(Integer storeId, ServiceCharge serviceCharge, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call configureStoreServiceChargeAsync(Integer storeId, ServiceCharge serviceCharge, final ApiCallback<RestApiResultServiceCharge> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -595,7 +596,7 @@ public class StoresApi {
         }
 
         com.squareup.okhttp.Call call = configureStoreServiceChargeValidateBeforeCall(storeId, serviceCharge, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultServiceCharge>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
