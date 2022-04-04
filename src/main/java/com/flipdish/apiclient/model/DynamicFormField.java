@@ -15,7 +15,6 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.DynamicFormFieldMapping;
 import com.flipdish.apiclient.model.DynamicFormRules;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -25,11 +24,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * DynamicFormField
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-01T11:47:30.999+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-04T11:37:01.767+01:00")
 public class DynamicFormField {
   @SerializedName("Identifier")
   private String identifier = null;
@@ -44,7 +46,7 @@ public class DynamicFormField {
   private DynamicFormRules rules = null;
 
   @SerializedName("Mapping")
-  private DynamicFormFieldMapping mapping = null;
+  private Map<String, String> mapping = null;
 
   @SerializedName("Value")
   private Object value = null;
@@ -121,8 +123,16 @@ public class DynamicFormField {
     this.rules = rules;
   }
 
-  public DynamicFormField mapping(DynamicFormFieldMapping mapping) {
+  public DynamicFormField mapping(Map<String, String> mapping) {
     this.mapping = mapping;
+    return this;
+  }
+
+  public DynamicFormField putMappingItem(String key, String mappingItem) {
+    if (this.mapping == null) {
+      this.mapping = new HashMap<String, String>();
+    }
+    this.mapping.put(key, mappingItem);
     return this;
   }
 
@@ -131,11 +141,11 @@ public class DynamicFormField {
    * @return mapping
   **/
   @ApiModelProperty(value = "")
-  public DynamicFormFieldMapping getMapping() {
+  public Map<String, String> getMapping() {
     return mapping;
   }
 
-  public void setMapping(DynamicFormFieldMapping mapping) {
+  public void setMapping(Map<String, String> mapping) {
     this.mapping = mapping;
   }
 

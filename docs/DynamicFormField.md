@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **label** | **String** |  |  [optional]
 **placeholder** | **String** |  |  [optional]
 **rules** | [**DynamicFormRules**](DynamicFormRules.md) |  |  [optional]
-**mapping** | [**DynamicFormFieldMapping**](DynamicFormFieldMapping.md) |  |  [optional]
+**mapping** | **Map&lt;String, String&gt;** |  |  [optional]
 **value** | **Object** |  |  [optional]
 
 
