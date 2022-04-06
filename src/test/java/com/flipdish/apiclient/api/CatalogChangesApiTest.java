@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.PublishMenuChanges;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPendingMenuChanges;
@@ -51,6 +52,23 @@ public class CatalogChangesApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultPendingMenuChanges response = api.getPendingMenuChanges(appId, menuId, catalogElementId, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update menus with the pending changes from Catalog groups and items
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void publishPendingMenuChangesTest() throws ApiException {
+        String appId = null;
+        PublishMenuChanges publishMenuChanges = null;
+        api.publishPendingMenuChanges(appId, publishMenuChanges);
 
         // TODO: test validations
     }
