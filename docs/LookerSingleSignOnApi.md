@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getLookerCustomerReportingEmbedUrl**](LookerSingleSignOnApi.md#getLookerCustomerReportingEmbedUrl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
-[**getLookerPerformanceSummaryEmbedUrl**](LookerSingleSignOnApi.md#getLookerPerformanceSummaryEmbedUrl) | **GET** /api/v1.0/{appId}/looker/sso/PerformanceSummary | Get the single sign on embed URL for PerformanceSummary Dashboard
+[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the single sign on embed URL for PerformanceSummary Dashboard
 
 
 <a name="getLookerCustomerReportingEmbedUrl"></a>
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getLookerPerformanceSummaryEmbedUrl"></a>
-# **getLookerPerformanceSummaryEmbedUrl**
-> DashboardEmbed getLookerPerformanceSummaryEmbedUrl(appId, embedPath)
+<a name="getSSOEndpoint"></a>
+# **getSSOEndpoint**
+> DashboardEmbed getSSOEndpoint(appId, embedPath)
 
 Get the single sign on embed URL for PerformanceSummary Dashboard
 
@@ -86,10 +86,10 @@ LookerSingleSignOnApi apiInstance = new LookerSingleSignOnApi();
 String appId = "appId_example"; // String | AppNameId
 String embedPath = "embedPath_example"; // String | Embed URL of the dashboard
 try {
-    DashboardEmbed result = apiInstance.getLookerPerformanceSummaryEmbedUrl(appId, embedPath);
+    DashboardEmbed result = apiInstance.getSSOEndpoint(appId, embedPath);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling LookerSingleSignOnApi#getLookerPerformanceSummaryEmbedUrl");
+    System.err.println("Exception when calling LookerSingleSignOnApi#getSSOEndpoint");
     e.printStackTrace();
 }
 ```

@@ -61,10 +61,10 @@ public class LookerSingleSignOnApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getLookerPerformanceSummaryEmbedUrlTest() throws ApiException {
+    public void getSSOEndpointTest() throws ApiException {
         String appId = null;
         String embedPath = null;
-        DashboardEmbed response = api.getLookerPerformanceSummaryEmbedUrl(appId, embedPath);
+        DashboardEmbed response = api.getSSOEndpoint(appId, embedPath);
 
         // TODO: test validations
     }
