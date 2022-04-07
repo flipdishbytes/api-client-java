@@ -24,6 +24,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +32,7 @@ import java.util.Map;
 /**
  * DynamicFormField
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T12:39:20.558+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T15:38:11.794+01:00")
 public class DynamicFormField {
   @SerializedName("Identifier")
   private String identifier = null;
@@ -47,6 +48,9 @@ public class DynamicFormField {
 
   @SerializedName("Mapping")
   private Map<String, String> mapping = null;
+
+  @SerializedName("Modifiers")
+  private List<String> modifiers = null;
 
   @SerializedName("Value")
   private Object value = null;
@@ -149,6 +153,32 @@ public class DynamicFormField {
     this.mapping = mapping;
   }
 
+  public DynamicFormField modifiers(List<String> modifiers) {
+    this.modifiers = modifiers;
+    return this;
+  }
+
+  public DynamicFormField addModifiersItem(String modifiersItem) {
+    if (this.modifiers == null) {
+      this.modifiers = new ArrayList<String>();
+    }
+    this.modifiers.add(modifiersItem);
+    return this;
+  }
+
+   /**
+   * Get modifiers
+   * @return modifiers
+  **/
+  @ApiModelProperty(value = "")
+  public List<String> getModifiers() {
+    return modifiers;
+  }
+
+  public void setModifiers(List<String> modifiers) {
+    this.modifiers = modifiers;
+  }
+
   public DynamicFormField value(Object value) {
     this.value = value;
     return this;
@@ -182,12 +212,13 @@ public class DynamicFormField {
         Objects.equals(this.placeholder, dynamicFormField.placeholder) &&
         Objects.equals(this.rules, dynamicFormField.rules) &&
         Objects.equals(this.mapping, dynamicFormField.mapping) &&
+        Objects.equals(this.modifiers, dynamicFormField.modifiers) &&
         Objects.equals(this.value, dynamicFormField.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifier, label, placeholder, rules, mapping, value);
+    return Objects.hash(identifier, label, placeholder, rules, mapping, modifiers, value);
   }
 
 
@@ -201,6 +232,7 @@ public class DynamicFormField {
     sb.append("    placeholder: ").append(toIndentedString(placeholder)).append("\n");
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("    mapping: ").append(toIndentedString(mapping)).append("\n");
+    sb.append("    modifiers: ").append(toIndentedString(modifiers)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

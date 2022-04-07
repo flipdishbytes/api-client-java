@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **placeholder** | **String** |  |  [optional]
 **rules** | [**DynamicFormRules**](DynamicFormRules.md) |  |  [optional]
 **mapping** | **Map&lt;String, String&gt;** |  |  [optional]
+**modifiers** | **List&lt;String&gt;** |  |  [optional]
 **value** | **Object** |  |  [optional]
 
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Data to update a {!:CatalogGroupReference}
  */
 @ApiModel(description = "Data to update a {!:CatalogGroupReference}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T12:39:20.558+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T15:38:11.794+01:00")
 public class UpdateCatalogItemReference {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
