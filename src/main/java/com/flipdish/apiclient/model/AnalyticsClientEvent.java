@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Client Analytics event
  */
 @ApiModel(description = "Client Analytics event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T15:38:11.794+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-11T15:22:02.745+01:00")
 public class AnalyticsClientEvent {
   @SerializedName("EventName")
   private String eventName = null;

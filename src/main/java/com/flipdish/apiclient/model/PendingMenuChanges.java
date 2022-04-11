@@ -23,22 +23,18 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * Pending Menu Changes
  */
 @ApiModel(description = "Pending Menu Changes")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-07T15:38:11.794+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-11T15:22:02.745+01:00")
 public class PendingMenuChanges {
   @SerializedName("CatalogElementId")
   private String catalogElementId = null;
 
   @SerializedName("MenuId")
   private Integer menuId = null;
-
-  @SerializedName("LastUpdatedAt")
-  private OffsetDateTime lastUpdatedAt = null;
 
   public PendingMenuChanges catalogElementId(String catalogElementId) {
     this.catalogElementId = catalogElementId;
@@ -76,24 +72,6 @@ public class PendingMenuChanges {
     this.menuId = menuId;
   }
 
-  public PendingMenuChanges lastUpdatedAt(OffsetDateTime lastUpdatedAt) {
-    this.lastUpdatedAt = lastUpdatedAt;
-    return this;
-  }
-
-   /**
-   * Update date and time
-   * @return lastUpdatedAt
-  **/
-  @ApiModelProperty(value = "Update date and time")
-  public OffsetDateTime getLastUpdatedAt() {
-    return lastUpdatedAt;
-  }
-
-  public void setLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
-    this.lastUpdatedAt = lastUpdatedAt;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,13 +83,12 @@ public class PendingMenuChanges {
     }
     PendingMenuChanges pendingMenuChanges = (PendingMenuChanges) o;
     return Objects.equals(this.catalogElementId, pendingMenuChanges.catalogElementId) &&
-        Objects.equals(this.menuId, pendingMenuChanges.menuId) &&
-        Objects.equals(this.lastUpdatedAt, pendingMenuChanges.lastUpdatedAt);
+        Objects.equals(this.menuId, pendingMenuChanges.menuId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogElementId, menuId, lastUpdatedAt);
+    return Objects.hash(catalogElementId, menuId);
   }
 
 
@@ -122,7 +99,6 @@ public class PendingMenuChanges {
     
     sb.append("    catalogElementId: ").append(toIndentedString(catalogElementId)).append("\n");
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
-    sb.append("    lastUpdatedAt: ").append(toIndentedString(lastUpdatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }
