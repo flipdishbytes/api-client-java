@@ -28,7 +28,7 @@ import java.io.IOException;
  * Oauth client (also knowns as &#39;app&#39;)
  */
 @ApiModel(description = "Oauth client (also knowns as 'app')")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-11T15:22:02.745+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T09:30:14.187+01:00")
 public class OAuthApp {
   @SerializedName("OauthAppId")
   private String oauthAppId = null;

@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Time order can be placed
  */
 @ApiModel(description = "Time order can be placed")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-11T15:22:02.745+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T09:30:14.187+01:00")
 public class PreOrderTime {
   @SerializedName("StartTime")
   private OffsetDateTime startTime = null;
