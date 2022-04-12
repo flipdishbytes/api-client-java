@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CspReport
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T09:30:14.187+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
 public class CspReport {
   @SerializedName("Document-uri")
   private String documentUri = null;
