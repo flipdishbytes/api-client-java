@@ -163,14 +163,6 @@ VIEWKIOSKBLUETOOTHDEVICEAUDITLOGS | &quot;ViewKioskBluetoothDeviceAuditLogs&quot
 VIEWEXTERNALAUDITLOGS | &quot;ViewExternalAuditLogs&quot;
 CREATEEXTERNALAUDITLOGEVENTS | &quot;CreateExternalAuditLogEvents&quot;
 VIEWCATALOGAUDITLOGS | &quot;ViewCatalogAuditLogs&quot;
-CREATEAPPSTOREAPP | &quot;CreateAppStoreApp&quot;
-VIEWAPPSTOREAPP | &quot;ViewAppStoreApp&quot;
-UPDATEAPPSTOREAPP | &quot;UpdateAppStoreApp&quot;
-DELETEAPPSTOREAPP | &quot;DeleteAppStoreApp&quot;
-CREATEAPPSTOREAPPCONFIGURATION | &quot;CreateAppStoreAppConfiguration&quot;
-VIEWAPPSTOREAPPCONFIGURATION | &quot;ViewAppStoreAppConfiguration&quot;
-UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
-DELETEAPPSTOREAPPCONFIGURATION | &quot;DeleteAppStoreAppConfiguration&quot;
 SENDPUSHNOTIFICATIONTOCUSTOMER | &quot;SendPushNotificationToCustomer&quot;
 INVITEDRIVERTOAPP | &quot;InviteDriverToApp&quot;
 GETDRIVERFORAPP | &quot;GetDriverForApp&quot;
@@ -182,6 +174,10 @@ VIEWPAYOUTS | &quot;ViewPayouts&quot;
 VIEWCHANNELS | &quot;ViewChannels&quot;
 VIEWONBOARDING | &quot;ViewOnboarding&quot;
 UPDATEONBOARDING | &quot;UpdateOnboarding&quot;
+CREATEAPPSTOREAPPCONFIGURATION | &quot;CreateAppStoreAppConfiguration&quot;
+VIEWAPPSTOREAPPCONFIGURATION | &quot;ViewAppStoreAppConfiguration&quot;
+UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
+DELETEAPPSTOREAPPCONFIGURATION | &quot;DeleteAppStoreAppConfiguration&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>

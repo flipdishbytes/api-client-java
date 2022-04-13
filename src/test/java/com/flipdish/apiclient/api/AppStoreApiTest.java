@@ -15,15 +15,10 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppStoreApp;
-import com.flipdish.apiclient.model.CreateAppStoreApp;
-import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
-import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
-import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.UpdateAppStoreApp;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -42,58 +37,9 @@ public class AppStoreApiTest {
 
     
     /**
-     * Update App store app verification
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void appVerificationUpdateTest() throws ApiException {
-        String appStoreAppId = null;
-        String verificationStatus = null;
-        api.appVerificationUpdate(appStoreAppId, verificationStatus);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Create App store app
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void createAppStoreAppTest() throws ApiException {
-        CreateAppStoreApp createAppStoreApp = null;
-        RestApiResultAppStoreApp response = api.createAppStoreApp(createAppStoreApp);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Delete App store app
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void deleteAppStoreAppTest() throws ApiException {
-        String appStoreAppId = null;
-        RestApiStringResult response = api.deleteAppStoreApp(appStoreAppId);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get App store app
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -121,40 +67,6 @@ public class AppStoreApiTest {
         Integer limit = null;
         Boolean excludeNotOwned = null;
         RestApiPaginationResultAppStoreAppSummary response = api.getAppStoreApps(search, page, limit, excludeNotOwned);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Update App store app
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void updateAppStoreAppTest() throws ApiException {
-        String appStoreAppId = null;
-        UpdateAppStoreApp appStoreApp = null;
-        api.updateAppStoreApp(appStoreAppId, appStoreApp);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Upload the App store app logo \\ icon
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void uploadAppStoreAppLogoTest() throws ApiException {
-        String appStoreAppId = null;
-        File image = null;
-        api.uploadAppStoreAppLogo(appStoreAppId, image);
 
         // TODO: test validations
     }

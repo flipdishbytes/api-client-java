@@ -33,7 +33,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-CreateLocation createLocationInput = new CreateLocation(); // CreateLocation | Input data for creating the Location
+List<CreateLocation> createLocationInput = Arrays.asList(new CreateLocation()); // List<CreateLocation> | Input data for creating the Location
 Integer locationAreaId = 56; // Integer | Id of the Location area where the Location belongs
 String appId = "appId_example"; // String | AppId i.e: (fd1234)
 Integer storeId = 56; // Integer | Id of the Store
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createLocationInput** | [**CreateLocation**](CreateLocation.md)| Input data for creating the Location |
+ **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)| Input data for creating the Location |
  **locationAreaId** | **Integer**| Id of the Location area where the Location belongs |
  **appId** | **String**| AppId i.e: (fd1234) |
  **storeId** | **Integer**| Id of the Store |

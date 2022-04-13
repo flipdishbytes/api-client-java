@@ -32,7 +32,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -106,6 +106,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("Logo")
   private String logo = null;
+
+  @SerializedName("OAuthAppId")
+  private String oauthAppId = null;
 
   @SerializedName("Details")
   private String details = null;
@@ -220,9 +223,6 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("ExternalSetupLink")
   private String externalSetupLink = null;
-
-  @SerializedName("OAuthAppId")
-  private String oauthAppId = null;
 
   /**
    * Teammate app access level
@@ -643,6 +643,24 @@ public class AppStoreAppConfiguration {
     this.logo = logo;
   }
 
+  public AppStoreAppConfiguration oauthAppId(String oauthAppId) {
+    this.oauthAppId = oauthAppId;
+    return this;
+  }
+
+   /**
+   * OAuth App identifier
+   * @return oauthAppId
+  **/
+  @ApiModelProperty(required = true, value = "OAuth App identifier")
+  public String getOauthAppId() {
+    return oauthAppId;
+  }
+
+  public void setOauthAppId(String oauthAppId) {
+    this.oauthAppId = oauthAppId;
+  }
+
   public AppStoreAppConfiguration details(String details) {
     this.details = details;
     return this;
@@ -757,24 +775,6 @@ public class AppStoreAppConfiguration {
 
   public void setExternalSetupLink(String externalSetupLink) {
     this.externalSetupLink = externalSetupLink;
-  }
-
-  public AppStoreAppConfiguration oauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
-    return this;
-  }
-
-   /**
-   * OAuth app id
-   * @return oauthAppId
-  **/
-  @ApiModelProperty(required = true, value = "OAuth app id")
-  public String getOauthAppId() {
-    return oauthAppId;
-  }
-
-  public void setOauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
   }
 
   public AppStoreAppConfiguration teammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
@@ -931,13 +931,13 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.settings, appStoreAppConfiguration.settings) &&
         Objects.equals(this.verificationStatus, appStoreAppConfiguration.verificationStatus) &&
         Objects.equals(this.logo, appStoreAppConfiguration.logo) &&
+        Objects.equals(this.oauthAppId, appStoreAppConfiguration.oauthAppId) &&
         Objects.equals(this.details, appStoreAppConfiguration.details) &&
         Objects.equals(this.configurationType, appStoreAppConfiguration.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreAppConfiguration.storeSelectorType) &&
         Objects.equals(this.fieldGroups, appStoreAppConfiguration.fieldGroups) &&
         Objects.equals(this.setupInstructions, appStoreAppConfiguration.setupInstructions) &&
         Objects.equals(this.externalSetupLink, appStoreAppConfiguration.externalSetupLink) &&
-        Objects.equals(this.oauthAppId, appStoreAppConfiguration.oauthAppId) &&
         Objects.equals(this.teammateAppAccessLevel, appStoreAppConfiguration.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, appStoreAppConfiguration.permissionsType) &&
         Objects.equals(this.name, appStoreAppConfiguration.name) &&
@@ -949,7 +949,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, verificationStatus, logo, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, tags, regions, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, physicalRestaurants, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, tags, regions, developerName);
   }
 
 
@@ -966,13 +966,13 @@ public class AppStoreAppConfiguration {
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
+    sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
     sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");
     sb.append("    setupInstructions: ").append(toIndentedString(setupInstructions)).append("\n");
     sb.append("    externalSetupLink: ").append(toIndentedString(externalSetupLink)).append("\n");
-    sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -362,22 +362,6 @@ public class App {
     
     VIEWCATALOGAUDITLOGS("ViewCatalogAuditLogs"),
     
-    CREATEAPPSTOREAPP("CreateAppStoreApp"),
-    
-    VIEWAPPSTOREAPP("ViewAppStoreApp"),
-    
-    UPDATEAPPSTOREAPP("UpdateAppStoreApp"),
-    
-    DELETEAPPSTOREAPP("DeleteAppStoreApp"),
-    
-    CREATEAPPSTOREAPPCONFIGURATION("CreateAppStoreAppConfiguration"),
-    
-    VIEWAPPSTOREAPPCONFIGURATION("ViewAppStoreAppConfiguration"),
-    
-    UPDATEAPPSTOREAPPCONFIGURATION("UpdateAppStoreAppConfiguration"),
-    
-    DELETEAPPSTOREAPPCONFIGURATION("DeleteAppStoreAppConfiguration"),
-    
     SENDPUSHNOTIFICATIONTOCUSTOMER("SendPushNotificationToCustomer"),
     
     INVITEDRIVERTOAPP("InviteDriverToApp"),
@@ -398,7 +382,15 @@ public class App {
     
     VIEWONBOARDING("ViewOnboarding"),
     
-    UPDATEONBOARDING("UpdateOnboarding");
+    UPDATEONBOARDING("UpdateOnboarding"),
+    
+    CREATEAPPSTOREAPPCONFIGURATION("CreateAppStoreAppConfiguration"),
+    
+    VIEWAPPSTOREAPPCONFIGURATION("ViewAppStoreAppConfiguration"),
+    
+    UPDATEAPPSTOREAPPCONFIGURATION("UpdateAppStoreAppConfiguration"),
+    
+    DELETEAPPSTOREAPPCONFIGURATION("DeleteAppStoreAppConfiguration");
 
     private String value;
 

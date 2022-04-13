@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.CreateLocation;
+import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaLocation;
@@ -70,7 +71,7 @@ public class LocationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createLocationCall(CreateLocation createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call createLocationCall(List<CreateLocation> createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = createLocationInput;
 
         // create path and map variables
@@ -115,7 +116,7 @@ public class LocationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createLocationValidateBeforeCall(CreateLocation createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createLocationValidateBeforeCall(List<CreateLocation> createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'createLocationInput' is set
         if (createLocationInput == null) {
@@ -153,7 +154,7 @@ public class LocationApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object createLocation(CreateLocation createLocationInput, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+    public Object createLocation(List<CreateLocation> createLocationInput, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
         ApiResponse<Object> resp = createLocationWithHttpInfo(createLocationInput, locationAreaId, appId, storeId);
         return resp.getData();
     }
@@ -168,7 +169,7 @@ public class LocationApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> createLocationWithHttpInfo(CreateLocation createLocationInput, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
+    public ApiResponse<Object> createLocationWithHttpInfo(List<CreateLocation> createLocationInput, Integer locationAreaId, String appId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = createLocationValidateBeforeCall(createLocationInput, locationAreaId, appId, storeId, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -185,7 +186,7 @@ public class LocationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createLocationAsync(CreateLocation createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call createLocationAsync(List<CreateLocation> createLocationInput, Integer locationAreaId, String appId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

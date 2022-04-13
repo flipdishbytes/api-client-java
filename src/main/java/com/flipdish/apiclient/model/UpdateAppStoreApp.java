@@ -31,7 +31,7 @@ import java.util.List;
  * Update App store app
  */
 @ApiModel(description = "Update App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
 public class UpdateAppStoreApp {
   @SerializedName("Details")
   private String details = null;
@@ -146,9 +146,6 @@ public class UpdateAppStoreApp {
 
   @SerializedName("ExternalSetupLink")
   private String externalSetupLink = null;
-
-  @SerializedName("OAuthAppId")
-  private String oauthAppId = null;
 
   /**
    * Teammate app access level
@@ -528,24 +525,6 @@ public class UpdateAppStoreApp {
     this.externalSetupLink = externalSetupLink;
   }
 
-  public UpdateAppStoreApp oauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
-    return this;
-  }
-
-   /**
-   * OAuth app id
-   * @return oauthAppId
-  **/
-  @ApiModelProperty(required = true, value = "OAuth app id")
-  public String getOauthAppId() {
-    return oauthAppId;
-  }
-
-  public void setOauthAppId(String oauthAppId) {
-    this.oauthAppId = oauthAppId;
-  }
-
   public UpdateAppStoreApp teammateAppAccessLevel(TeammateAppAccessLevelEnum teammateAppAccessLevel) {
     this.teammateAppAccessLevel = teammateAppAccessLevel;
     return this;
@@ -716,7 +695,6 @@ public class UpdateAppStoreApp {
         Objects.equals(this.fieldGroups, updateAppStoreApp.fieldGroups) &&
         Objects.equals(this.setupInstructions, updateAppStoreApp.setupInstructions) &&
         Objects.equals(this.externalSetupLink, updateAppStoreApp.externalSetupLink) &&
-        Objects.equals(this.oauthAppId, updateAppStoreApp.oauthAppId) &&
         Objects.equals(this.teammateAppAccessLevel, updateAppStoreApp.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, updateAppStoreApp.permissionsType) &&
         Objects.equals(this.name, updateAppStoreApp.name) &&
@@ -729,7 +707,7 @@ public class UpdateAppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, oauthAppId, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
+    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
   }
 
 
@@ -744,7 +722,6 @@ public class UpdateAppStoreApp {
     sb.append("    fieldGroups: ").append(toIndentedString(fieldGroups)).append("\n");
     sb.append("    setupInstructions: ").append(toIndentedString(setupInstructions)).append("\n");
     sb.append("    externalSetupLink: ").append(toIndentedString(externalSetupLink)).append("\n");
-    sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

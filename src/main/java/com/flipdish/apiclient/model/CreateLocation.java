@@ -28,8 +28,11 @@ import java.io.IOException;
  * Input model for creating a Location
  */
 @ApiModel(description = "Input model for creating a Location")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
 public class CreateLocation {
+  @SerializedName("LocationId")
+  private Integer locationId = null;
+
   @SerializedName("LocationName")
   private String locationName = null;
 
@@ -38,6 +41,24 @@ public class CreateLocation {
 
   @SerializedName("ExternalLocationId")
   private String externalLocationId = null;
+
+  public CreateLocation locationId(Integer locationId) {
+    this.locationId = locationId;
+    return this;
+  }
+
+   /**
+   * Location Id
+   * @return locationId
+  **/
+  @ApiModelProperty(value = "Location Id")
+  public Integer getLocationId() {
+    return locationId;
+  }
+
+  public void setLocationId(Integer locationId) {
+    this.locationId = locationId;
+  }
 
   public CreateLocation locationName(String locationName) {
     this.locationName = locationName;
@@ -103,14 +124,15 @@ public class CreateLocation {
       return false;
     }
     CreateLocation createLocation = (CreateLocation) o;
-    return Objects.equals(this.locationName, createLocation.locationName) &&
+    return Objects.equals(this.locationId, createLocation.locationId) &&
+        Objects.equals(this.locationName, createLocation.locationName) &&
         Objects.equals(this.displayOrder, createLocation.displayOrder) &&
         Objects.equals(this.externalLocationId, createLocation.externalLocationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(locationName, displayOrder, externalLocationId);
+    return Objects.hash(locationId, locationName, displayOrder, externalLocationId);
   }
 
 
@@ -119,6 +141,7 @@ public class CreateLocation {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateLocation {\n");
     
+    sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    locationName: ").append(toIndentedString(locationName)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");

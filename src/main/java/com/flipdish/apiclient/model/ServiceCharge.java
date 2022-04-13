@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Service Charge
  */
 @ApiModel(description = "Store Service Charge")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-12T14:44:58.403+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
 public class ServiceCharge {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -38,6 +38,15 @@ public class ServiceCharge {
 
   @SerializedName("Enabled")
   private Boolean enabled = null;
+
+  @SerializedName("IsOptional")
+  private Boolean isOptional = null;
+
+  @SerializedName("DisplayWithProcessingFee")
+  private Boolean displayWithProcessingFee = null;
+
+  @SerializedName("IncludesVouchers")
+  private Boolean includesVouchers = null;
 
   public ServiceCharge storeId(Integer storeId) {
     this.storeId = storeId;
@@ -93,6 +102,60 @@ public class ServiceCharge {
     this.enabled = enabled;
   }
 
+  public ServiceCharge isOptional(Boolean isOptional) {
+    this.isOptional = isOptional;
+    return this;
+  }
+
+   /**
+   * Sets the service charge to be optional
+   * @return isOptional
+  **/
+  @ApiModelProperty(value = "Sets the service charge to be optional")
+  public Boolean isIsOptional() {
+    return isOptional;
+  }
+
+  public void setIsOptional(Boolean isOptional) {
+    this.isOptional = isOptional;
+  }
+
+  public ServiceCharge displayWithProcessingFee(Boolean displayWithProcessingFee) {
+    this.displayWithProcessingFee = displayWithProcessingFee;
+    return this;
+  }
+
+   /**
+   * Display service charge together with processing fee
+   * @return displayWithProcessingFee
+  **/
+  @ApiModelProperty(value = "Display service charge together with processing fee")
+  public Boolean isDisplayWithProcessingFee() {
+    return displayWithProcessingFee;
+  }
+
+  public void setDisplayWithProcessingFee(Boolean displayWithProcessingFee) {
+    this.displayWithProcessingFee = displayWithProcessingFee;
+  }
+
+  public ServiceCharge includesVouchers(Boolean includesVouchers) {
+    this.includesVouchers = includesVouchers;
+    return this;
+  }
+
+   /**
+   * If true, will include voucher value in calculation   i.e 10E order with 1E service charge and 5E voucher would have service charge at 0.5E
+   * @return includesVouchers
+  **/
+  @ApiModelProperty(value = "If true, will include voucher value in calculation   i.e 10E order with 1E service charge and 5E voucher would have service charge at 0.5E")
+  public Boolean isIncludesVouchers() {
+    return includesVouchers;
+  }
+
+  public void setIncludesVouchers(Boolean includesVouchers) {
+    this.includesVouchers = includesVouchers;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +168,15 @@ public class ServiceCharge {
     ServiceCharge serviceCharge = (ServiceCharge) o;
     return Objects.equals(this.storeId, serviceCharge.storeId) &&
         Objects.equals(this.percentageValue, serviceCharge.percentageValue) &&
-        Objects.equals(this.enabled, serviceCharge.enabled);
+        Objects.equals(this.enabled, serviceCharge.enabled) &&
+        Objects.equals(this.isOptional, serviceCharge.isOptional) &&
+        Objects.equals(this.displayWithProcessingFee, serviceCharge.displayWithProcessingFee) &&
+        Objects.equals(this.includesVouchers, serviceCharge.includesVouchers);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, percentageValue, enabled);
+    return Objects.hash(storeId, percentageValue, enabled, isOptional, displayWithProcessingFee, includesVouchers);
   }
 
 
@@ -122,6 +188,9 @@ public class ServiceCharge {
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    percentageValue: ").append(toIndentedString(percentageValue)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
+    sb.append("    isOptional: ").append(toIndentedString(isOptional)).append("\n");
+    sb.append("    displayWithProcessingFee: ").append(toIndentedString(displayWithProcessingFee)).append("\n");
+    sb.append("    includesVouchers: ").append(toIndentedString(includesVouchers)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateLocation;
+import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultLocationAreaLocation;
@@ -47,7 +48,7 @@ public class LocationApiTest {
      */
     @Test
     public void createLocationTest() throws ApiException {
-        CreateLocation createLocationInput = null;
+        List<CreateLocation> createLocationInput = null;
         Integer locationAreaId = null;
         String appId = null;
         Integer storeId = null;

@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **id** | **String** | Unique App store app id | 
 **verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **logo** | **String** | Logo |  [optional]
+**oauthAppId** | **String** | OAuth App identifier | 
 **details** | **String** | Details | 
 **configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
 **storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
 **fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups |  [optional]
 **setupInstructions** | **String** | Setup instructions |  [optional]
 **externalSetupLink** | **String** | External setup link |  [optional]
-**oauthAppId** | **String** | OAuth app id | 
 **teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
 **permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
 **name** | **String** | Name | 
