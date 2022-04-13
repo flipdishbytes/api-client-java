@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.ConfiguredPhysicalRestaurant;
+import com.flipdish.apiclient.model.ConfiguredStore;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +31,7 @@ import java.util.List;
  * App store app configuration summary information
  */
 @ApiModel(description = "App store app configuration summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T15:31:22.795+01:00")
 public class AppStoreAppConfigurationSummary {
   @SerializedName("Id")
   private String id = null;
@@ -42,8 +42,8 @@ public class AppStoreAppConfigurationSummary {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
-  @SerializedName("PhysicalRestaurants")
-  private List<ConfiguredPhysicalRestaurant> physicalRestaurants = new ArrayList<ConfiguredPhysicalRestaurant>();
+  @SerializedName("Stores")
+  private List<ConfiguredStore> stores = new ArrayList<ConfiguredStore>();
 
   /**
    * Configuration type
@@ -216,27 +216,27 @@ public class AppStoreAppConfigurationSummary {
     this.isEnabled = isEnabled;
   }
 
-  public AppStoreAppConfigurationSummary physicalRestaurants(List<ConfiguredPhysicalRestaurant> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public AppStoreAppConfigurationSummary stores(List<ConfiguredStore> stores) {
+    this.stores = stores;
     return this;
   }
 
-  public AppStoreAppConfigurationSummary addPhysicalRestaurantsItem(ConfiguredPhysicalRestaurant physicalRestaurantsItem) {
-    this.physicalRestaurants.add(physicalRestaurantsItem);
+  public AppStoreAppConfigurationSummary addStoresItem(ConfiguredStore storesItem) {
+    this.stores.add(storesItem);
     return this;
   }
 
    /**
    * List of stores
-   * @return physicalRestaurants
+   * @return stores
   **/
   @ApiModelProperty(required = true, value = "List of stores")
-  public List<ConfiguredPhysicalRestaurant> getPhysicalRestaurants() {
-    return physicalRestaurants;
+  public List<ConfiguredStore> getStores() {
+    return stores;
   }
 
-  public void setPhysicalRestaurants(List<ConfiguredPhysicalRestaurant> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public void setStores(List<ConfiguredStore> stores) {
+    this.stores = stores;
   }
 
   public AppStoreAppConfigurationSummary configurationType(ConfigurationTypeEnum configurationType) {
@@ -378,7 +378,7 @@ public class AppStoreAppConfigurationSummary {
     return Objects.equals(this.id, appStoreAppConfigurationSummary.id) &&
         Objects.equals(this.appId, appStoreAppConfigurationSummary.appId) &&
         Objects.equals(this.isEnabled, appStoreAppConfigurationSummary.isEnabled) &&
-        Objects.equals(this.physicalRestaurants, appStoreAppConfigurationSummary.physicalRestaurants) &&
+        Objects.equals(this.stores, appStoreAppConfigurationSummary.stores) &&
         Objects.equals(this.configurationType, appStoreAppConfigurationSummary.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreAppConfigurationSummary.storeSelectorType) &&
         Objects.equals(this.appStoreAppId, appStoreAppConfigurationSummary.appStoreAppId) &&
@@ -390,7 +390,7 @@ public class AppStoreAppConfigurationSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, isEnabled, physicalRestaurants, configurationType, storeSelectorType, appStoreAppId, name, description, logo, developerName);
+    return Objects.hash(id, appId, isEnabled, stores, configurationType, storeSelectorType, appStoreAppId, name, description, logo, developerName);
   }
 
 
@@ -402,7 +402,7 @@ public class AppStoreAppConfigurationSummary {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");

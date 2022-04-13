@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **isEnabled** | **Boolean** | Is application enabled |  [optional]
-**tags** | [**List&lt;TagsEnum&gt;**](#List&lt;TagsEnum&gt;) | Tags | 
-**regions** | [**List&lt;RegionsEnum&gt;**](#List&lt;RegionsEnum&gt;) | Regions | 
+**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
+**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) | Countries | 
 **developerName** | **String** | Developer Name |  [optional]
 
 
@@ -24,8 +24,8 @@ SUBMITTED | &quot;Submitted&quot;
 VERIFIED | &quot;Verified&quot;
 
 
-<a name="List<TagsEnum>"></a>
-## Enum: List&lt;TagsEnum&gt;
+<a name="List<CategoriesEnum>"></a>
+## Enum: List&lt;CategoriesEnum&gt;
 Name | Value
 ---- | -----
 POINTOFSALE | &quot;PointOfSale&quot;
@@ -37,8 +37,8 @@ LOYALTYANDMARKETING | &quot;LoyaltyAndMarketing&quot;
 OTHER | &quot;Other&quot;
 
 
-<a name="List<RegionsEnum>"></a>
-## Enum: List&lt;RegionsEnum&gt;
+<a name="List<CountriesEnum>"></a>
+## Enum: List&lt;CountriesEnum&gt;
 Name | Value
 ---- | -----
 GB | &quot;GB&quot;

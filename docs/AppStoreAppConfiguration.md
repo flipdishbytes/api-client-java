@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **appId** | **String** | App id | 
 **appStoreAppId** | **String** | App store app id | 
 **isEnabled** | **Boolean** | Is enabled | 
-**physicalRestaurants** | **List&lt;Integer&gt;** | Stores id&#39;s |  [optional]
+**storeIds** | **List&lt;Integer&gt;** | Stores id&#39;s |  [optional]
 **settings** | [**List&lt;Setting&gt;**](Setting.md) | Settings |  [optional]
 **verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **logo** | **String** | Logo |  [optional]
@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 **permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
 **name** | **String** | Name | 
 **description** | **String** | Description | 
-**tags** | [**List&lt;TagsEnum&gt;**](#List&lt;TagsEnum&gt;) | Tags | 
-**regions** | [**List&lt;RegionsEnum&gt;**](#List&lt;RegionsEnum&gt;) | Regions | 
+**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
+**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) | Countries | 
 **developerName** | **String** | Developer Name |  [optional]
 
 
@@ -75,8 +75,8 @@ Name | Value
 TEAMMATE | &quot;Teammate&quot;
 
 
-<a name="List<TagsEnum>"></a>
-## Enum: List&lt;TagsEnum&gt;
+<a name="List<CategoriesEnum>"></a>
+## Enum: List&lt;CategoriesEnum&gt;
 Name | Value
 ---- | -----
 POINTOFSALE | &quot;PointOfSale&quot;
@@ -88,8 +88,8 @@ LOYALTYANDMARKETING | &quot;LoyaltyAndMarketing&quot;
 OTHER | &quot;Other&quot;
 
 
-<a name="List<RegionsEnum>"></a>
-## Enum: List&lt;RegionsEnum&gt;
+<a name="List<CountriesEnum>"></a>
+## Enum: List&lt;CountriesEnum&gt;
 Name | Value
 ---- | -----
 GB | &quot;GB&quot;

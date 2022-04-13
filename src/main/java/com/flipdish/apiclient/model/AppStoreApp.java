@@ -31,7 +31,7 @@ import java.util.List;
  * App store app
  */
 @ApiModel(description = "App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T15:31:22.795+01:00")
 public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
@@ -328,10 +328,10 @@ public class AppStoreApp {
   private Boolean isEnabled = null;
 
   /**
-   * Gets or Sets tags
+   * Gets or Sets categories
    */
-  @JsonAdapter(TagsEnum.Adapter.class)
-  public enum TagsEnum {
+  @JsonAdapter(CategoriesEnum.Adapter.class)
+  public enum CategoriesEnum {
     POINTOFSALE("PointOfSale"),
     
     DELIVERYANDLOGISTICS("DeliveryAndLogistics"),
@@ -348,7 +348,7 @@ public class AppStoreApp {
 
     private String value;
 
-    TagsEnum(String value) {
+    CategoriesEnum(String value) {
       this.value = value;
     }
 
@@ -361,8 +361,8 @@ public class AppStoreApp {
       return String.valueOf(value);
     }
 
-    public static TagsEnum fromValue(String text) {
-      for (TagsEnum b : TagsEnum.values()) {
+    public static CategoriesEnum fromValue(String text) {
+      for (CategoriesEnum b : CategoriesEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -370,28 +370,28 @@ public class AppStoreApp {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<TagsEnum> {
+    public static class Adapter extends TypeAdapter<CategoriesEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final TagsEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final CategoriesEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public TagsEnum read(final JsonReader jsonReader) throws IOException {
+      public CategoriesEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return TagsEnum.fromValue(String.valueOf(value));
+        return CategoriesEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("Tags")
-  private List<TagsEnum> tags = new ArrayList<TagsEnum>();
+  @SerializedName("Categories")
+  private List<CategoriesEnum> categories = new ArrayList<CategoriesEnum>();
 
   /**
-   * Gets or Sets regions
+   * Gets or Sets countries
    */
-  @JsonAdapter(RegionsEnum.Adapter.class)
-  public enum RegionsEnum {
+  @JsonAdapter(CountriesEnum.Adapter.class)
+  public enum CountriesEnum {
     GB("GB"),
     
     IE("IE"),
@@ -428,7 +428,7 @@ public class AppStoreApp {
 
     private String value;
 
-    RegionsEnum(String value) {
+    CountriesEnum(String value) {
       this.value = value;
     }
 
@@ -441,8 +441,8 @@ public class AppStoreApp {
       return String.valueOf(value);
     }
 
-    public static RegionsEnum fromValue(String text) {
-      for (RegionsEnum b : RegionsEnum.values()) {
+    public static CountriesEnum fromValue(String text) {
+      for (CountriesEnum b : CountriesEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -450,22 +450,22 @@ public class AppStoreApp {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<RegionsEnum> {
+    public static class Adapter extends TypeAdapter<CountriesEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final RegionsEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final CountriesEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public RegionsEnum read(final JsonReader jsonReader) throws IOException {
+      public CountriesEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return RegionsEnum.fromValue(String.valueOf(value));
+        return CountriesEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("Regions")
-  private List<RegionsEnum> regions = new ArrayList<RegionsEnum>();
+  @SerializedName("Countries")
+  private List<CountriesEnum> countries = new ArrayList<CountriesEnum>();
 
   @SerializedName("DeveloperName")
   private String developerName = null;
@@ -748,50 +748,50 @@ public class AppStoreApp {
     this.isEnabled = isEnabled;
   }
 
-  public AppStoreApp tags(List<TagsEnum> tags) {
-    this.tags = tags;
+  public AppStoreApp categories(List<CategoriesEnum> categories) {
+    this.categories = categories;
     return this;
   }
 
-  public AppStoreApp addTagsItem(TagsEnum tagsItem) {
-    this.tags.add(tagsItem);
-    return this;
-  }
-
-   /**
-   * Tags
-   * @return tags
-  **/
-  @ApiModelProperty(required = true, value = "Tags")
-  public List<TagsEnum> getTags() {
-    return tags;
-  }
-
-  public void setTags(List<TagsEnum> tags) {
-    this.tags = tags;
-  }
-
-  public AppStoreApp regions(List<RegionsEnum> regions) {
-    this.regions = regions;
-    return this;
-  }
-
-  public AppStoreApp addRegionsItem(RegionsEnum regionsItem) {
-    this.regions.add(regionsItem);
+  public AppStoreApp addCategoriesItem(CategoriesEnum categoriesItem) {
+    this.categories.add(categoriesItem);
     return this;
   }
 
    /**
-   * Regions
-   * @return regions
+   * Categories
+   * @return categories
   **/
-  @ApiModelProperty(required = true, value = "Regions")
-  public List<RegionsEnum> getRegions() {
-    return regions;
+  @ApiModelProperty(required = true, value = "Categories")
+  public List<CategoriesEnum> getCategories() {
+    return categories;
   }
 
-  public void setRegions(List<RegionsEnum> regions) {
-    this.regions = regions;
+  public void setCategories(List<CategoriesEnum> categories) {
+    this.categories = categories;
+  }
+
+  public AppStoreApp countries(List<CountriesEnum> countries) {
+    this.countries = countries;
+    return this;
+  }
+
+  public AppStoreApp addCountriesItem(CountriesEnum countriesItem) {
+    this.countries.add(countriesItem);
+    return this;
+  }
+
+   /**
+   * Countries
+   * @return countries
+  **/
+  @ApiModelProperty(required = true, value = "Countries")
+  public List<CountriesEnum> getCountries() {
+    return countries;
+  }
+
+  public void setCountries(List<CountriesEnum> countries) {
+    this.countries = countries;
   }
 
   public AppStoreApp developerName(String developerName) {
@@ -837,14 +837,14 @@ public class AppStoreApp {
         Objects.equals(this.name, appStoreApp.name) &&
         Objects.equals(this.description, appStoreApp.description) &&
         Objects.equals(this.isEnabled, appStoreApp.isEnabled) &&
-        Objects.equals(this.tags, appStoreApp.tags) &&
-        Objects.equals(this.regions, appStoreApp.regions) &&
+        Objects.equals(this.categories, appStoreApp.categories) &&
+        Objects.equals(this.countries, appStoreApp.countries) &&
         Objects.equals(this.developerName, appStoreApp.developerName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, isEnabled, tags, regions, developerName);
+    return Objects.hash(id, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -868,8 +868,8 @@ public class AppStoreApp {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
-    sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
+    sb.append("    categories: ").append(toIndentedString(categories)).append("\n");
+    sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
     sb.append("    developerName: ").append(toIndentedString(developerName)).append("\n");
     sb.append("}");
     return sb.toString();

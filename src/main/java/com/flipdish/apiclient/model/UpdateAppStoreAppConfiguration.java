@@ -31,13 +31,13 @@ import java.util.List;
  * Update App store app configuration
  */
 @ApiModel(description = "Update App store app configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T15:31:22.795+01:00")
 public class UpdateAppStoreAppConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
-  @SerializedName("PhysicalRestaurants")
-  private List<Integer> physicalRestaurants = null;
+  @SerializedName("StoreIds")
+  private List<Integer> storeIds = null;
 
   @SerializedName("Settings")
   private List<Setting> settings = null;
@@ -60,30 +60,30 @@ public class UpdateAppStoreAppConfiguration {
     this.isEnabled = isEnabled;
   }
 
-  public UpdateAppStoreAppConfiguration physicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public UpdateAppStoreAppConfiguration storeIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
     return this;
   }
 
-  public UpdateAppStoreAppConfiguration addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
-    if (this.physicalRestaurants == null) {
-      this.physicalRestaurants = new ArrayList<Integer>();
+  public UpdateAppStoreAppConfiguration addStoreIdsItem(Integer storeIdsItem) {
+    if (this.storeIds == null) {
+      this.storeIds = new ArrayList<Integer>();
     }
-    this.physicalRestaurants.add(physicalRestaurantsItem);
+    this.storeIds.add(storeIdsItem);
     return this;
   }
 
    /**
    * Stores id&#39;s
-   * @return physicalRestaurants
+   * @return storeIds
   **/
   @ApiModelProperty(value = "Stores id's")
-  public List<Integer> getPhysicalRestaurants() {
-    return physicalRestaurants;
+  public List<Integer> getStoreIds() {
+    return storeIds;
   }
 
-  public void setPhysicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public void setStoreIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
   }
 
   public UpdateAppStoreAppConfiguration settings(List<Setting> settings) {
@@ -123,13 +123,13 @@ public class UpdateAppStoreAppConfiguration {
     }
     UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration = (UpdateAppStoreAppConfiguration) o;
     return Objects.equals(this.isEnabled, updateAppStoreAppConfiguration.isEnabled) &&
-        Objects.equals(this.physicalRestaurants, updateAppStoreAppConfiguration.physicalRestaurants) &&
+        Objects.equals(this.storeIds, updateAppStoreAppConfiguration.storeIds) &&
         Objects.equals(this.settings, updateAppStoreAppConfiguration.settings);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isEnabled, physicalRestaurants, settings);
+    return Objects.hash(isEnabled, storeIds, settings);
   }
 
 
@@ -139,7 +139,7 @@ public class UpdateAppStoreAppConfiguration {
     sb.append("class UpdateAppStoreAppConfiguration {\n");
     
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
+    sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("}");
     return sb.toString();

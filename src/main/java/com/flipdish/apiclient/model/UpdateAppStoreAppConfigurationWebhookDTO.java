@@ -31,7 +31,7 @@ import java.util.List;
  * App store app configuration webhook event
  */
 @ApiModel(description = "App store app configuration webhook event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T15:31:22.795+01:00")
 public class UpdateAppStoreAppConfigurationWebhookDTO {
   @SerializedName("Id")
   private String id = null;
@@ -39,8 +39,8 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
-  @SerializedName("PhysicalRestaurants")
-  private List<Integer> physicalRestaurants = null;
+  @SerializedName("StoreIds")
+  private List<Integer> storeIds = null;
 
   @SerializedName("Settings")
   private List<Setting> settings = null;
@@ -81,30 +81,30 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
     this.isEnabled = isEnabled;
   }
 
-  public UpdateAppStoreAppConfigurationWebhookDTO physicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public UpdateAppStoreAppConfigurationWebhookDTO storeIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
     return this;
   }
 
-  public UpdateAppStoreAppConfigurationWebhookDTO addPhysicalRestaurantsItem(Integer physicalRestaurantsItem) {
-    if (this.physicalRestaurants == null) {
-      this.physicalRestaurants = new ArrayList<Integer>();
+  public UpdateAppStoreAppConfigurationWebhookDTO addStoreIdsItem(Integer storeIdsItem) {
+    if (this.storeIds == null) {
+      this.storeIds = new ArrayList<Integer>();
     }
-    this.physicalRestaurants.add(physicalRestaurantsItem);
+    this.storeIds.add(storeIdsItem);
     return this;
   }
 
    /**
    * Store id&#39;s
-   * @return physicalRestaurants
+   * @return storeIds
   **/
   @ApiModelProperty(value = "Store id's")
-  public List<Integer> getPhysicalRestaurants() {
-    return physicalRestaurants;
+  public List<Integer> getStoreIds() {
+    return storeIds;
   }
 
-  public void setPhysicalRestaurants(List<Integer> physicalRestaurants) {
-    this.physicalRestaurants = physicalRestaurants;
+  public void setStoreIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
   }
 
   public UpdateAppStoreAppConfigurationWebhookDTO settings(List<Setting> settings) {
@@ -145,13 +145,13 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
     UpdateAppStoreAppConfigurationWebhookDTO updateAppStoreAppConfigurationWebhookDTO = (UpdateAppStoreAppConfigurationWebhookDTO) o;
     return Objects.equals(this.id, updateAppStoreAppConfigurationWebhookDTO.id) &&
         Objects.equals(this.isEnabled, updateAppStoreAppConfigurationWebhookDTO.isEnabled) &&
-        Objects.equals(this.physicalRestaurants, updateAppStoreAppConfigurationWebhookDTO.physicalRestaurants) &&
+        Objects.equals(this.storeIds, updateAppStoreAppConfigurationWebhookDTO.storeIds) &&
         Objects.equals(this.settings, updateAppStoreAppConfigurationWebhookDTO.settings);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, isEnabled, physicalRestaurants, settings);
+    return Objects.hash(id, isEnabled, storeIds, settings);
   }
 
 
@@ -162,7 +162,7 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
-    sb.append("    physicalRestaurants: ").append(toIndentedString(physicalRestaurants)).append("\n");
+    sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("}");
     return sb.toString();

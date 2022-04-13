@@ -28,15 +28,15 @@ import java.io.IOException;
  * Configured stores
  */
 @ApiModel(description = "Configured stores")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T11:30:14.410+01:00")
-public class ConfiguredPhysicalRestaurant {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-13T15:31:22.795+01:00")
+public class ConfiguredStore {
   @SerializedName("StoreId")
   private Integer storeId = null;
 
   @SerializedName("Name")
   private String name = null;
 
-  public ConfiguredPhysicalRestaurant storeId(Integer storeId) {
+  public ConfiguredStore storeId(Integer storeId) {
     this.storeId = storeId;
     return this;
   }
@@ -54,7 +54,7 @@ public class ConfiguredPhysicalRestaurant {
     this.storeId = storeId;
   }
 
-  public ConfiguredPhysicalRestaurant name(String name) {
+  public ConfiguredStore name(String name) {
     this.name = name;
     return this;
   }
@@ -81,9 +81,9 @@ public class ConfiguredPhysicalRestaurant {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ConfiguredPhysicalRestaurant configuredPhysicalRestaurant = (ConfiguredPhysicalRestaurant) o;
-    return Objects.equals(this.storeId, configuredPhysicalRestaurant.storeId) &&
-        Objects.equals(this.name, configuredPhysicalRestaurant.name);
+    ConfiguredStore configuredStore = (ConfiguredStore) o;
+    return Objects.equals(this.storeId, configuredStore.storeId) &&
+        Objects.equals(this.name, configuredStore.name);
   }
 
   @Override
@@ -95,7 +95,7 @@ public class ConfiguredPhysicalRestaurant {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ConfiguredPhysicalRestaurant {\n");
+    sb.append("class ConfiguredStore {\n");
     
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
