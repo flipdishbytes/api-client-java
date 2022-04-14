@@ -326,6 +326,139 @@ public class CardReadersApi {
         return call;
     }
     /**
+     * Build call for cancelReaderAction
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call cancelReaderActionCall(String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action"
+            .replaceAll("\\{" + "readerId" + "\\}", apiClient.escapeString(readerId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call cancelReaderActionValidateBeforeCall(String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'readerId' is set
+        if (readerId == null) {
+            throw new ApiException("Missing the required parameter 'readerId' when calling cancelReaderAction(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling cancelReaderAction(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = cancelReaderActionCall(readerId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Cancel terminals action
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return RestApiResultCardReader
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultCardReader cancelReaderAction(String readerId, String appId) throws ApiException {
+        ApiResponse<RestApiResultCardReader> resp = cancelReaderActionWithHttpInfo(readerId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * Cancel terminals action
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiResultCardReader&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultCardReader> cancelReaderActionWithHttpInfo(String readerId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = cancelReaderActionValidateBeforeCall(readerId, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Cancel terminals action (asynchronously)
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call cancelReaderActionAsync(String readerId, String appId, final ApiCallback<RestApiResultCardReader> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = cancelReaderActionValidateBeforeCall(readerId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for generateStripeTerminalLocation
      * @param geoPointRequest  (required)
      * @param appId  (required)

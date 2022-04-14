@@ -76,6 +76,23 @@ public class CardReadersApiTest {
     }
     
     /**
+     * Cancel terminals action
+     *
+     * Can only be called by Kiosk
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void cancelReaderActionTest() throws ApiException {
+        String readerId = null;
+        String appId = null;
+        RestApiResultCardReader response = api.cancelReaderAction(readerId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get Location ID for Stripe Terminal
      *
      * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
