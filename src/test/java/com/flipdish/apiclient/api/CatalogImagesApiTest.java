@@ -39,7 +39,7 @@ public class CatalogImagesApiTest {
     /**
      * Upload a Catalog Image
      *
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      *
      * @throws ApiException
      *          if the Api call fails

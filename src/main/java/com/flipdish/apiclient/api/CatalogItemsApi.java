@@ -524,7 +524,7 @@ public class CatalogItemsApi {
 
     /**
      * Get item by Id
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return CatalogItem
@@ -537,7 +537,7 @@ public class CatalogItemsApi {
 
     /**
      * Get item by Id
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;CatalogItem&gt;
@@ -551,7 +551,7 @@ public class CatalogItemsApi {
 
     /**
      * Get item by Id (asynchronously)
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes

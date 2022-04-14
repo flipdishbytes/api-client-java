@@ -181,6 +181,8 @@ null (empty response body)
 
 Get item by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
+
 ### Example
 ```java
 // Import classes:
