@@ -129,6 +129,10 @@ Name | Type | Description | Notes
 **catalogGroupUpdatedEvent** | [**List&lt;CatalogGroupUpdatedEvent&gt;**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated |  [optional]
 **catalogGroupArchivedEvent** | [**List&lt;CatalogGroupArchivedEvent&gt;**](CatalogGroupArchivedEvent.md) | Catalog Group Archived |  [optional]
 **storeTipUpdatedEvent** | [**List&lt;StoreTipUpdatedEvent&gt;**](StoreTipUpdatedEvent.md) | Store Tip Updated Event |  [optional]
+**locationAreaCreatedEvent** | [**List&lt;LocationAreaCreatedEvent&gt;**](LocationAreaCreatedEvent.md) | LocationArea created event |  [optional]
+**locationAreaUpdatedEvent** | [**List&lt;LocationAreaUpdatedEvent&gt;**](LocationAreaUpdatedEvent.md) | LocationArea updated event |  [optional]
+**locationCreatedEvent** | [**List&lt;LocationCreatedEvent&gt;**](LocationCreatedEvent.md) | Location created event |  [optional]
+**locationDeletedEvent** | [**List&lt;LocationDeletedEvent&gt;**](LocationDeletedEvent.md) | Location deleted event |  [optional]
 **storeServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event |  [optional]
 
 

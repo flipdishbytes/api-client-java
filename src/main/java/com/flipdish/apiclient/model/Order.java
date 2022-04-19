@@ -41,7 +41,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-14T14:38:32.205+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-19T10:43:26.729+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -362,8 +362,6 @@ public class Order {
   public enum OrderStateEnum {
     CREATED("Created"),
     
-    PLACEDCANBECANCELLED("PlacedCanBeCancelled"),
-    
     READYTOPROCESS("ReadyToProcess"),
     
     ACCEPTEDBYRESTAURANT("AcceptedByRestaurant"),
@@ -375,6 +373,8 @@ public class Order {
     CANCELLED("Cancelled"),
     
     MANUALREVIEW("ManualReview"),
+    
+    PLACEDCANBECANCELLED("PlacedCanBeCancelled"),
     
     REJECTEDBYSTORE("RejectedByStore"),
     
