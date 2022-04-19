@@ -267,7 +267,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)| Physical restaurant identifiers | [optional]
- **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, PlacedCanBeCancelled, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
  **from** | **OffsetDateTime**| Order has been placed after this parameter value | [optional]
  **to** | **OffsetDateTime**| Order has been placed before this parameter value | [optional]
  **page** | **Integer**| Requested page number | [optional]
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **appId** | **String**| App Name Id |
  **searchQuery** | **String**| Query string | [optional]
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)| Physical restaurant identifiers | [optional]
- **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, PlacedCanBeCancelled, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
  **page** | **Integer**| Requested page number | [optional]
  **limit** | **Integer**| Requested page limit | [optional]
  **orderByRequestedForTime** | **Boolean**|  | [optional]

@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
 [**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
 [**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-[**getAppStoreApp**](AppStoreDeveloperApi.md#getAppStoreApp) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Get App store app
 [**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 [**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 
@@ -168,61 +167,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getAppStoreApp"></a>
-# **getAppStoreApp**
-> AppStoreApp getAppStoreApp(oauthAppId, appStoreAppId)
-
-Get App store app
-
-[BETA - this endpoint is under development, do not use it in your production system]
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AppStoreDeveloperApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
-try {
-    AppStoreApp result = apiInstance.getAppStoreApp(oauthAppId, appStoreAppId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AppStoreDeveloperApi#getAppStoreApp");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
-
-### Return type
-
-[**AppStoreApp**](AppStoreApp.md)
 
 ### Authorization
 

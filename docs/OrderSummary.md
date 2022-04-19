@@ -68,13 +68,13 @@ DRIVETHROUGH | &quot;DriveThrough&quot;
 Name | Value
 ---- | -----
 CREATED | &quot;Created&quot;
+PLACEDCANBECANCELLED | &quot;PlacedCanBeCancelled&quot;
 READYTOPROCESS | &quot;ReadyToProcess&quot;
 ACCEPTEDBYRESTAURANT | &quot;AcceptedByRestaurant&quot;
 DISPATCHED | &quot;Dispatched&quot;
 DELIVERED | &quot;Delivered&quot;
 CANCELLED | &quot;Cancelled&quot;
 MANUALREVIEW | &quot;ManualReview&quot;
-PLACEDCANBECANCELLED | &quot;PlacedCanBeCancelled&quot;
 REJECTEDBYSTORE | &quot;RejectedByStore&quot;
 REJECTEDBYFLIPDISH | &quot;RejectedByFlipdish&quot;
 REJECTEDAUTOMATICALLY | &quot;RejectedAutomatically&quot;

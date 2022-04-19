@@ -14,7 +14,6 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppStoreApp;
 import com.flipdish.apiclient.model.CreateAppStoreApp;
 import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -88,23 +87,6 @@ public class AppStoreDeveloperApiTest {
         String oauthAppId = null;
         String appStoreAppId = null;
         RestApiStringResult response = api.deleteAppStoreApp(oauthAppId, appStoreAppId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get App store app
-     *
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getAppStoreAppTest() throws ApiException {
-        String oauthAppId = null;
-        String appStoreAppId = null;
-        AppStoreApp response = api.getAppStoreApp(oauthAppId, appStoreAppId);
 
         // TODO: test validations
     }
