@@ -31,7 +31,7 @@ import java.util.List;
  * Represents a LocationArea and its Location list
  */
 @ApiModel(description = "Represents a LocationArea and its Location list")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-25T15:07:58.954+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-28T10:02:38.973+01:00")
 public class LocationAreaWithLocations {
   @SerializedName("LocationAreaId")
   private Integer locationAreaId = null;
@@ -57,7 +57,7 @@ public class LocationAreaWithLocations {
    * Id of the LocationArea
    * @return locationAreaId
   **/
-  @ApiModelProperty(value = "Id of the LocationArea")
+  @ApiModelProperty(required = true, value = "Id of the LocationArea")
   public Integer getLocationAreaId() {
     return locationAreaId;
   }
@@ -75,7 +75,7 @@ public class LocationAreaWithLocations {
    * Id of the Store that this LocationArea belongs to
    * @return storeId
   **/
-  @ApiModelProperty(value = "Id of the Store that this LocationArea belongs to")
+  @ApiModelProperty(required = true, value = "Id of the Store that this LocationArea belongs to")
   public Integer getStoreId() {
     return storeId;
   }
@@ -93,7 +93,7 @@ public class LocationAreaWithLocations {
    * Descriptive LocationArea name
    * @return locationAreaName
   **/
-  @ApiModelProperty(value = "Descriptive LocationArea name")
+  @ApiModelProperty(required = true, value = "Descriptive LocationArea name")
   public String getLocationAreaName() {
     return locationAreaName;
   }

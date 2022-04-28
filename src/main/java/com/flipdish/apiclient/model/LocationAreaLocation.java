@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
  */
 @ApiModel(description = "Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-25T15:07:58.954+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-28T10:02:38.973+01:00")
 public class LocationAreaLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
@@ -54,7 +54,7 @@ public class LocationAreaLocation {
    * Id of the Location
    * @return locationId
   **/
-  @ApiModelProperty(value = "Id of the Location")
+  @ApiModelProperty(required = true, value = "Id of the Location")
   public Integer getLocationId() {
     return locationId;
   }
@@ -72,7 +72,7 @@ public class LocationAreaLocation {
    * Name of the Location
    * @return locationName
   **/
-  @ApiModelProperty(value = "Name of the Location")
+  @ApiModelProperty(required = true, value = "Name of the Location")
   public String getLocationName() {
     return locationName;
   }
@@ -90,7 +90,7 @@ public class LocationAreaLocation {
    * The order that the Location should be displayed on the screen
    * @return displayOrder
   **/
-  @ApiModelProperty(value = "The order that the Location should be displayed on the screen")
+  @ApiModelProperty(required = true, value = "The order that the Location should be displayed on the screen")
   public Integer getDisplayOrder() {
     return displayOrder;
   }

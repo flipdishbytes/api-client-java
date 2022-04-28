@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location and its External Mapping
  */
 @ApiModel(description = "Representation of a Location and its External Mapping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-25T15:07:58.954+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-28T10:02:38.973+01:00")
 public class MappedLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
@@ -45,7 +45,7 @@ public class MappedLocation {
    * Id of the Location
    * @return locationId
   **/
-  @ApiModelProperty(value = "Id of the Location")
+  @ApiModelProperty(required = true, value = "Id of the Location")
   public Integer getLocationId() {
     return locationId;
   }
@@ -63,7 +63,7 @@ public class MappedLocation {
    * Id of the Location on an external system
    * @return externalLocationId
   **/
-  @ApiModelProperty(value = "Id of the Location on an external system")
+  @ApiModelProperty(required = true, value = "Id of the Location on an external system")
   public String getExternalLocationId() {
     return externalLocationId;
   }

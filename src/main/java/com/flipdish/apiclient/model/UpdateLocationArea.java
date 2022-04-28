@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for updating a LocationArea
  */
 @ApiModel(description = "Input model for updating a LocationArea")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-25T15:07:58.954+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-04-28T10:02:38.973+01:00")
 public class UpdateLocationArea {
   @SerializedName("LocationAreaId")
   private Integer locationAreaId = null;
@@ -48,7 +48,7 @@ public class UpdateLocationArea {
    * Location Area Id
    * @return locationAreaId
   **/
-  @ApiModelProperty(value = "Location Area Id")
+  @ApiModelProperty(required = true, value = "Location Area Id")
   public Integer getLocationAreaId() {
     return locationAreaId;
   }
@@ -66,7 +66,7 @@ public class UpdateLocationArea {
    * Descriptive LocationArea name
    * @return locationAreaName
   **/
-  @ApiModelProperty(value = "Descriptive LocationArea name")
+  @ApiModelProperty(required = true, value = "Descriptive LocationArea name")
   public String getLocationAreaName() {
     return locationAreaName;
   }
