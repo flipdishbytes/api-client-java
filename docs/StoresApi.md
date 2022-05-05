@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**updateStoreAddress**](StoresApi.md#updateStoreAddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**updateStoreAddressCoordinates**](StoresApi.md#updateStoreAddressCoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+[**updateStoreAddressForm**](StoresApi.md#updateStoreAddressForm) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
 
 
 <a name="archiveStore"></a>
@@ -1593,6 +1594,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultCoordinates**](RestApiResultCoordinates.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="updateStoreAddressForm"></a>
+# **updateStoreAddressForm**
+> Object updateStoreAddressForm(storeId, address)
+
+Update store address
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | Store identifier
+StoreAddressForm address = new StoreAddressForm(); // StoreAddressForm | Store address
+try {
+    Object result = apiInstance.updateStoreAddressForm(storeId, address);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#updateStoreAddressForm");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**| Store identifier |
+ **address** | [**StoreAddressForm**](StoreAddressForm.md)| Store address |
+
+### Return type
+
+**Object**
 
 ### Authorization
 

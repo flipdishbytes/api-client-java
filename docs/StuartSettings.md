@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **clientSecret** | **String** | Client Secret |  [optional]
 **enabled** | **Boolean** | Enabled |  [optional]
 **webhookUrlBasicAuthentication** | **String** | Webhook url to settle in the Stuart portal |  [optional]
+**overrideWebhookUrl** | **Boolean** | Override Flipdish Webhook Url |  [optional]
 **minutesToPickupBeforeThanDeliveryTime** | **Integer** | MinutesToPickupBeforeThanDeliveryTime |  [optional]
 **packageType** | [**PackageTypeEnum**](#PackageTypeEnum) | Package type |  [optional]
 **transportType** | [**TransportTypeEnum**](#TransportTypeEnum) | Transport type |  [optional]

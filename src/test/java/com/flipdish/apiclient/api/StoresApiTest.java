@@ -42,6 +42,7 @@ import com.flipdish.apiclient.model.RestApiResultStoreEndOfDayReport;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.ServiceCharge;
 import com.flipdish.apiclient.model.StoreAddressBase;
+import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
@@ -568,6 +569,23 @@ public class StoresApiTest {
         Coordinates coordinates = null;
         String appNameId = null;
         RestApiResultCoordinates response = api.updateStoreAddressCoordinates(storeId, coordinates, appNameId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update store address
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateStoreAddressFormTest() throws ApiException {
+        Integer storeId = null;
+        StoreAddressForm address = null;
+        Object response = api.updateStoreAddressForm(storeId, address);
 
         // TODO: test validations
     }

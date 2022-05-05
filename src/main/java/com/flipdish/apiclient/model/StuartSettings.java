@@ -29,7 +29,7 @@ import java.io.IOException;
  * Stuart settings
  */
 @ApiModel(description = "Stuart settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-04T14:54:54.478+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-05T10:13:45.296+01:00")
 public class StuartSettings {
   @SerializedName("ClientId")
   private String clientId = null;
@@ -42,6 +42,9 @@ public class StuartSettings {
 
   @SerializedName("WebhookUrlBasicAuthentication")
   private String webhookUrlBasicAuthentication = null;
+
+  @SerializedName("OverrideWebhookUrl")
+  private Boolean overrideWebhookUrl = null;
 
   @SerializedName("MinutesToPickupBeforeThanDeliveryTime")
   private Integer minutesToPickupBeforeThanDeliveryTime = null;
@@ -240,6 +243,24 @@ public class StuartSettings {
     this.webhookUrlBasicAuthentication = webhookUrlBasicAuthentication;
   }
 
+  public StuartSettings overrideWebhookUrl(Boolean overrideWebhookUrl) {
+    this.overrideWebhookUrl = overrideWebhookUrl;
+    return this;
+  }
+
+   /**
+   * Override Flipdish Webhook Url
+   * @return overrideWebhookUrl
+  **/
+  @ApiModelProperty(value = "Override Flipdish Webhook Url")
+  public Boolean isOverrideWebhookUrl() {
+    return overrideWebhookUrl;
+  }
+
+  public void setOverrideWebhookUrl(Boolean overrideWebhookUrl) {
+    this.overrideWebhookUrl = overrideWebhookUrl;
+  }
+
   public StuartSettings minutesToPickupBeforeThanDeliveryTime(Integer minutesToPickupBeforeThanDeliveryTime) {
     this.minutesToPickupBeforeThanDeliveryTime = minutesToPickupBeforeThanDeliveryTime;
     return this;
@@ -344,6 +365,7 @@ public class StuartSettings {
         Objects.equals(this.clientSecret, stuartSettings.clientSecret) &&
         Objects.equals(this.enabled, stuartSettings.enabled) &&
         Objects.equals(this.webhookUrlBasicAuthentication, stuartSettings.webhookUrlBasicAuthentication) &&
+        Objects.equals(this.overrideWebhookUrl, stuartSettings.overrideWebhookUrl) &&
         Objects.equals(this.minutesToPickupBeforeThanDeliveryTime, stuartSettings.minutesToPickupBeforeThanDeliveryTime) &&
         Objects.equals(this.packageType, stuartSettings.packageType) &&
         Objects.equals(this.transportType, stuartSettings.transportType) &&
@@ -353,7 +375,7 @@ public class StuartSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(clientId, clientSecret, enabled, webhookUrlBasicAuthentication, minutesToPickupBeforeThanDeliveryTime, packageType, transportType, cancelOrderIfStuartCancelDelivery, transportPrices);
+    return Objects.hash(clientId, clientSecret, enabled, webhookUrlBasicAuthentication, overrideWebhookUrl, minutesToPickupBeforeThanDeliveryTime, packageType, transportType, cancelOrderIfStuartCancelDelivery, transportPrices);
   }
 
 
@@ -366,6 +388,7 @@ public class StuartSettings {
     sb.append("    clientSecret: ").append(toIndentedString(clientSecret)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    webhookUrlBasicAuthentication: ").append(toIndentedString(webhookUrlBasicAuthentication)).append("\n");
+    sb.append("    overrideWebhookUrl: ").append(toIndentedString(overrideWebhookUrl)).append("\n");
     sb.append("    minutesToPickupBeforeThanDeliveryTime: ").append(toIndentedString(minutesToPickupBeforeThanDeliveryTime)).append("\n");
     sb.append("    packageType: ").append(toIndentedString(packageType)).append("\n");
     sb.append("    transportType: ").append(toIndentedString(transportType)).append("\n");
