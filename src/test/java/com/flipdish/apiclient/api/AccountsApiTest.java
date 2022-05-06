@@ -23,6 +23,7 @@ import com.flipdish.apiclient.model.PasswordResetModel;
 import com.flipdish.apiclient.model.RequestLoginPinModel;
 import com.flipdish.apiclient.model.RequestLoginPinResposne;
 import com.flipdish.apiclient.model.RequestPasswordResetModel;
+import com.flipdish.apiclient.model.RequestPasswordResetPinResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultLocalisedTimeZone;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -232,6 +233,22 @@ public class AccountsApiTest {
     public void requestPasswordResetTest() throws ApiException {
         RequestPasswordResetModel requestPasswordResetModel = null;
         api.requestPasswordReset(requestPasswordResetModel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Request Password Reset PIN. The server sends the PIN to the email address.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void sendPinForPasswordResetTest() throws ApiException {
+        RequestPasswordResetModel requestPasswordResetRequest = null;
+        RequestPasswordResetPinResponse response = api.sendPinForPasswordReset(requestPasswordResetRequest);
 
         // TODO: test validations
     }
