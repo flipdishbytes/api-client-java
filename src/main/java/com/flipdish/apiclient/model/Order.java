@@ -41,7 +41,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-10T10:53:39.340+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-10T11:50:59.106+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -283,6 +283,9 @@ public class Order {
 
   @SerializedName("ServiceChargeAmount")
   private Double serviceChargeAmount = null;
+
+  @SerializedName("ServiceChargePercentage")
+  private Double serviceChargePercentage = null;
 
   @SerializedName("Amount")
   private Double amount = null;
@@ -1216,6 +1219,24 @@ public class Order {
     this.serviceChargeAmount = serviceChargeAmount;
   }
 
+  public Order serviceChargePercentage(Double serviceChargePercentage) {
+    this.serviceChargePercentage = serviceChargePercentage;
+    return this;
+  }
+
+   /**
+   * Service Charge Percentage
+   * @return serviceChargePercentage
+  **/
+  @ApiModelProperty(value = "Service Charge Percentage")
+  public Double getServiceChargePercentage() {
+    return serviceChargePercentage;
+  }
+
+  public void setServiceChargePercentage(Double serviceChargePercentage) {
+    this.serviceChargePercentage = serviceChargePercentage;
+  }
+
   public Order amount(Double amount) {
     this.amount = amount;
     return this;
@@ -1578,6 +1599,7 @@ public class Order {
         Objects.equals(this.deliveryAmount, order.deliveryAmount) &&
         Objects.equals(this.orderItemsAmount, order.orderItemsAmount) &&
         Objects.equals(this.serviceChargeAmount, order.serviceChargeAmount) &&
+        Objects.equals(this.serviceChargePercentage, order.serviceChargePercentage) &&
         Objects.equals(this.amount, order.amount) &&
         Objects.equals(this.processingFee, order.processingFee) &&
         Objects.equals(this.paymentAccountType, order.paymentAccountType) &&
@@ -1600,7 +1622,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
   }
 
 
@@ -1637,6 +1659,7 @@ public class Order {
     sb.append("    deliveryAmount: ").append(toIndentedString(deliveryAmount)).append("\n");
     sb.append("    orderItemsAmount: ").append(toIndentedString(orderItemsAmount)).append("\n");
     sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
+    sb.append("    serviceChargePercentage: ").append(toIndentedString(serviceChargePercentage)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    processingFee: ").append(toIndentedString(processingFee)).append("\n");
     sb.append("    paymentAccountType: ").append(toIndentedString(paymentAccountType)).append("\n");
