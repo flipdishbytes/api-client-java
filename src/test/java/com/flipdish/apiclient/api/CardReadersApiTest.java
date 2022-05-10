@@ -24,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalPrivateKey;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UnRegisterCardReaderRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -209,6 +210,23 @@ public class CardReadersApiTest {
         CardReaderRegistrationRequest request = null;
         String appId = null;
         RestApiResultCardReader response = api.registerStripeTerminal(request, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Un-register terminal by deleting it from stripe
+     *
+     * Can only be called by Kiosk
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void unRegisterTerminalTest() throws ApiException {
+        UnRegisterCardReaderRequest request = null;
+        String appId = null;
+        RestApiResultCardReader response = api.unRegisterTerminal(request, appId);
 
         // TODO: test validations
     }

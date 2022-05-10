@@ -28,7 +28,7 @@ import java.io.IOException;
  * Card reader
  */
 @ApiModel(description = "Card reader")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-09T10:14:50.065+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-10T10:53:39.340+01:00")
 public class CardReader {
   @SerializedName("Id")
   private String id = null;
@@ -47,6 +47,9 @@ public class CardReader {
 
   @SerializedName("DeviceType")
   private String deviceType = null;
+
+  @SerializedName("Deleted")
+  private Boolean deleted = null;
 
   public CardReader id(String id) {
     this.id = id;
@@ -156,6 +159,24 @@ public class CardReader {
     this.deviceType = deviceType;
   }
 
+  public CardReader deleted(Boolean deleted) {
+    this.deleted = deleted;
+    return this;
+  }
+
+   /**
+   * Indicates that the reader is deleted or not
+   * @return deleted
+  **/
+  @ApiModelProperty(value = "Indicates that the reader is deleted or not")
+  public Boolean isDeleted() {
+    return deleted;
+  }
+
+  public void setDeleted(Boolean deleted) {
+    this.deleted = deleted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -171,12 +192,13 @@ public class CardReader {
         Objects.equals(this.serialNumber, cardReader.serialNumber) &&
         Objects.equals(this.status, cardReader.status) &&
         Objects.equals(this.registrationCode, cardReader.registrationCode) &&
-        Objects.equals(this.deviceType, cardReader.deviceType);
+        Objects.equals(this.deviceType, cardReader.deviceType) &&
+        Objects.equals(this.deleted, cardReader.deleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, deviceSoftwareVersion, serialNumber, status, registrationCode, deviceType);
+    return Objects.hash(id, deviceSoftwareVersion, serialNumber, status, registrationCode, deviceType, deleted);
   }
 
 
@@ -191,6 +213,7 @@ public class CardReader {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    registrationCode: ").append(toIndentedString(registrationCode)).append("\n");
     sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
+    sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

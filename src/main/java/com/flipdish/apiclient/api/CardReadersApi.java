@@ -37,6 +37,7 @@ import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalPrivateKey;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UnRegisterCardReaderRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -1391,6 +1392,138 @@ public class CardReadersApi {
         }
 
         com.squareup.okhttp.Call call = registerStripeTerminalValidateBeforeCall(request, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for unRegisterTerminal
+     * @param request  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call unRegisterTerminalCall(UnRegisterCardReaderRequest request, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = request;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/unregister"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call unRegisterTerminalValidateBeforeCall(UnRegisterCardReaderRequest request, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new ApiException("Missing the required parameter 'request' when calling unRegisterTerminal(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling unRegisterTerminal(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = unRegisterTerminalCall(request, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Un-register terminal by deleting it from stripe
+     * Can only be called by Kiosk
+     * @param request  (required)
+     * @param appId  (required)
+     * @return RestApiResultCardReader
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultCardReader unRegisterTerminal(UnRegisterCardReaderRequest request, String appId) throws ApiException {
+        ApiResponse<RestApiResultCardReader> resp = unRegisterTerminalWithHttpInfo(request, appId);
+        return resp.getData();
+    }
+
+    /**
+     * Un-register terminal by deleting it from stripe
+     * Can only be called by Kiosk
+     * @param request  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiResultCardReader&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultCardReader> unRegisterTerminalWithHttpInfo(UnRegisterCardReaderRequest request, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = unRegisterTerminalValidateBeforeCall(request, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Un-register terminal by deleting it from stripe (asynchronously)
+     * Can only be called by Kiosk
+     * @param request  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call unRegisterTerminalAsync(UnRegisterCardReaderRequest request, String appId, final ApiCallback<RestApiResultCardReader> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = unRegisterTerminalValidateBeforeCall(request, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 [**initiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiateKioskBluetoothUpdateInstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 [**registerStripeTerminal**](CardReadersApi.md#registerStripeTerminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
+[**unRegisterTerminal**](CardReadersApi.md#unRegisterTerminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 [**unpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpairCurrentlyPairedBluetoothDevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 
 
@@ -550,6 +551,61 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CardReaderRegistrationRequest**](CardReaderRegistrationRequest.md)|  |
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultCardReader**](RestApiResultCardReader.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="unRegisterTerminal"></a>
+# **unRegisterTerminal**
+> RestApiResultCardReader unRegisterTerminal(request, appId)
+
+Un-register terminal by deleting it from stripe
+
+Can only be called by Kiosk
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CardReadersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CardReadersApi apiInstance = new CardReadersApi();
+UnRegisterCardReaderRequest request = new UnRegisterCardReaderRequest(); // UnRegisterCardReaderRequest | 
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultCardReader result = apiInstance.unRegisterTerminal(request, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CardReadersApi#unRegisterTerminal");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**UnRegisterCardReaderRequest**](UnRegisterCardReaderRequest.md)|  |
  **appId** | **String**|  |
 
 ### Return type
