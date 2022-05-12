@@ -42,6 +42,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiPaginationResultStore;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreHeader;
+import com.flipdish.apiclient.model.RestApiPaginationResultStoreValidationConfig;
 import com.flipdish.apiclient.model.RestApiResultAssignedBankAccount;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
@@ -2915,6 +2916,152 @@ public class StoresApi {
 
         com.squareup.okhttp.Call call = getStoresByAppIdValidateBeforeCall(appId, searchQuery, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultStore>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getStoresByStoreIdWithValidations
+     * @param storeId Store identifier (required)
+     * @param appId  (required)
+     * @param page Requested page index (optional)
+     * @param limit Requested page limit (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getStoresByStoreIdWithValidationsCall(List<Integer> storeId, String appId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/storevalidation/kiosk"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (storeId != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "storeId", storeId));
+        if (page != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getStoresByStoreIdWithValidationsValidateBeforeCall(List<Integer> storeId, String appId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getStoresByStoreIdWithValidations(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getStoresByStoreIdWithValidations(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getStoresByStoreIdWithValidationsCall(storeId, appId, page, limit, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get store validation by storeIds
+     * 
+     * @param storeId Store identifier (required)
+     * @param appId  (required)
+     * @param page Requested page index (optional)
+     * @param limit Requested page limit (optional)
+     * @return RestApiPaginationResultStoreValidationConfig
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiPaginationResultStoreValidationConfig getStoresByStoreIdWithValidations(List<Integer> storeId, String appId, Integer page, Integer limit) throws ApiException {
+        ApiResponse<RestApiPaginationResultStoreValidationConfig> resp = getStoresByStoreIdWithValidationsWithHttpInfo(storeId, appId, page, limit);
+        return resp.getData();
+    }
+
+    /**
+     * Get store validation by storeIds
+     * 
+     * @param storeId Store identifier (required)
+     * @param appId  (required)
+     * @param page Requested page index (optional)
+     * @param limit Requested page limit (optional)
+     * @return ApiResponse&lt;RestApiPaginationResultStoreValidationConfig&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiPaginationResultStoreValidationConfig> getStoresByStoreIdWithValidationsWithHttpInfo(List<Integer> storeId, String appId, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = getStoresByStoreIdWithValidationsValidateBeforeCall(storeId, appId, page, limit, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultStoreValidationConfig>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get store validation by storeIds (asynchronously)
+     * 
+     * @param storeId Store identifier (required)
+     * @param appId  (required)
+     * @param page Requested page index (optional)
+     * @param limit Requested page limit (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getStoresByStoreIdWithValidationsAsync(List<Integer> storeId, String appId, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultStoreValidationConfig> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getStoresByStoreIdWithValidationsValidateBeforeCall(storeId, appId, page, limit, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultStoreValidationConfig>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

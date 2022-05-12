@@ -29,6 +29,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiPaginationResultStore;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreHeader;
+import com.flipdish.apiclient.model.RestApiPaginationResultStoreValidationConfig;
 import com.flipdish.apiclient.model.RestApiResultAssignedBankAccount;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
@@ -431,6 +432,25 @@ public class StoresApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultStore response = api.getStoresByAppId(appId, searchQuery, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get store validation by storeIds
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoresByStoreIdWithValidationsTest() throws ApiException {
+        List<Integer> storeId = null;
+        String appId = null;
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultStoreValidationConfig response = api.getStoresByStoreIdWithValidations(storeId, appId, page, limit);
 
         // TODO: test validations
     }

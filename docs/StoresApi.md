@@ -25,6 +25,7 @@ Method | HTTP request | Description
 [**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 [**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 [**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
+[**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
 [**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
@@ -1168,6 +1169,63 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultStore**](RestApiPaginationResultStore.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getStoresByStoreIdWithValidations"></a>
+# **getStoresByStoreIdWithValidations**
+> RestApiPaginationResultStoreValidationConfig getStoresByStoreIdWithValidations(storeId, appId, page, limit)
+
+Get store validation by storeIds
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store identifier
+String appId = "appId_example"; // String | 
+Integer page = 56; // Integer | Requested page index
+Integer limit = 56; // Integer | Requested page limit
+try {
+    RestApiPaginationResultStoreValidationConfig result = apiInstance.getStoresByStoreIdWithValidations(storeId, appId, page, limit);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#getStoresByStoreIdWithValidations");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store identifier |
+ **appId** | **String**|  |
+ **page** | **Integer**| Requested page index | [optional]
+ **limit** | **Integer**| Requested page limit | [optional]
+
+### Return type
+
+[**RestApiPaginationResultStoreValidationConfig**](RestApiPaginationResultStoreValidationConfig.md)
 
 ### Authorization
 
