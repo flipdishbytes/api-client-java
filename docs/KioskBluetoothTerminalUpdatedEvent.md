@@ -25,6 +25,7 @@ CHIPPER_2X | &quot;CHIPPER_2X&quot;
 COTS_DEVICE | &quot;COTS_DEVICE&quot;
 VERIFONE_P400 | &quot;VERIFONE_P400&quot;
 WISEPAD_3 | &quot;WISEPAD_3&quot;
+WISEPOS_E | &quot;WISEPOS_E&quot;
 
 
 

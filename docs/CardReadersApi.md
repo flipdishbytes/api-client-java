@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **deviceId** | **String**|  |
- **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3]
+ **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3, WISEPOS_E]
 
 ### Return type
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **deviceId** | **String**|  |
- **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3]
+ **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3, WISEPOS_E]
 
 ### Return type
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **deviceId** | **String**|  |
- **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3]
+ **terminalType** | **String**|  | [enum: CHIPPER_2X, COTS_DEVICE, VERIFONE_P400, WISEPAD_3, WISEPOS_E]
 
 ### Return type
 

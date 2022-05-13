@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Bluetooth Unpairing mode initiated
  */
 @ApiModel(description = "Kiosk Bluetooth Unpairing mode initiated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-12T09:19:54.472+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-13T09:47:54.420+01:00")
 public class KioskBluetoothUnpairingModeEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
@@ -47,7 +47,9 @@ public class KioskBluetoothUnpairingModeEvent {
     
     VERIFONE_P400("VERIFONE_P400"),
     
-    WISEPAD_3("WISEPAD_3");
+    WISEPAD_3("WISEPAD_3"),
+    
+    WISEPOS_E("WISEPOS_E");
 
     private String value;
 
