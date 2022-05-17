@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **onlineSalesDeliveryCharges** | **Double** | Delivery charges on online sales |  [optional]
 **onlineSalesTips** | **Double** | Tips for online sales |  [optional]
 **totalOnlineRevenue** | **Double** | Online sales plus online delivery charges and tips |  [optional]
+**onlineSalesServiceCharges** | **Double** | Service charge on online sales |  [optional]
 
 
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Sales information
  */
 @ApiModel(description = "Sales information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-13T09:47:54.420+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-17T12:59:34.139+01:00")
 public class RevenueDetail {
   @SerializedName("OnlineSalesAmount")
   private Double onlineSalesAmount = null;
@@ -65,6 +65,9 @@ public class RevenueDetail {
 
   @SerializedName("TotalOnlineRevenue")
   private Double totalOnlineRevenue = null;
+
+  @SerializedName("OnlineSalesServiceCharges")
+  private Double onlineSalesServiceCharges = null;
 
   public RevenueDetail onlineSalesAmount(Double onlineSalesAmount) {
     this.onlineSalesAmount = onlineSalesAmount;
@@ -282,6 +285,24 @@ public class RevenueDetail {
     this.totalOnlineRevenue = totalOnlineRevenue;
   }
 
+  public RevenueDetail onlineSalesServiceCharges(Double onlineSalesServiceCharges) {
+    this.onlineSalesServiceCharges = onlineSalesServiceCharges;
+    return this;
+  }
+
+   /**
+   * Service charge on online sales
+   * @return onlineSalesServiceCharges
+  **/
+  @ApiModelProperty(value = "Service charge on online sales")
+  public Double getOnlineSalesServiceCharges() {
+    return onlineSalesServiceCharges;
+  }
+
+  public void setOnlineSalesServiceCharges(Double onlineSalesServiceCharges) {
+    this.onlineSalesServiceCharges = onlineSalesServiceCharges;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -303,12 +324,13 @@ public class RevenueDetail {
         Objects.equals(this.totalSalesIncludingTax, revenueDetail.totalSalesIncludingTax) &&
         Objects.equals(this.onlineSalesDeliveryCharges, revenueDetail.onlineSalesDeliveryCharges) &&
         Objects.equals(this.onlineSalesTips, revenueDetail.onlineSalesTips) &&
-        Objects.equals(this.totalOnlineRevenue, revenueDetail.totalOnlineRevenue);
+        Objects.equals(this.totalOnlineRevenue, revenueDetail.totalOnlineRevenue) &&
+        Objects.equals(this.onlineSalesServiceCharges, revenueDetail.onlineSalesServiceCharges);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(onlineSalesAmount, onlineSalesTax, onlineSalesIncludingTax, onlineSalesFeesBaseAmount, cashSalesAmount, cashSalesTax, cashSalesIncludingTax, cashSalesFeesBaseAmount, totalSalesIncludingTax, onlineSalesDeliveryCharges, onlineSalesTips, totalOnlineRevenue);
+    return Objects.hash(onlineSalesAmount, onlineSalesTax, onlineSalesIncludingTax, onlineSalesFeesBaseAmount, cashSalesAmount, cashSalesTax, cashSalesIncludingTax, cashSalesFeesBaseAmount, totalSalesIncludingTax, onlineSalesDeliveryCharges, onlineSalesTips, totalOnlineRevenue, onlineSalesServiceCharges);
   }
 
 
@@ -329,6 +351,7 @@ public class RevenueDetail {
     sb.append("    onlineSalesDeliveryCharges: ").append(toIndentedString(onlineSalesDeliveryCharges)).append("\n");
     sb.append("    onlineSalesTips: ").append(toIndentedString(onlineSalesTips)).append("\n");
     sb.append("    totalOnlineRevenue: ").append(toIndentedString(totalOnlineRevenue)).append("\n");
+    sb.append("    onlineSalesServiceCharges: ").append(toIndentedString(onlineSalesServiceCharges)).append("\n");
     sb.append("}");
     return sb.toString();
   }
