@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Status of the bluetooth terminal
  */
 @ApiModel(description = "Status of the bluetooth terminal")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-17T12:59:34.139+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-18T10:32:33.900+01:00")
 public class BluetoothTerminalStatus {
   @SerializedName("SerialNumber")
   private String serialNumber = null;
@@ -102,7 +102,11 @@ public class BluetoothTerminalStatus {
     
     CONNECTING("Connecting"),
     
-    CONNECTED("Connected");
+    CONNECTED("Connected"),
+    
+    ONLINE("Online"),
+    
+    OFFLINE("Offline");
 
     private String value;
 
@@ -150,6 +154,9 @@ public class BluetoothTerminalStatus {
 
   @SerializedName("UpdateTime")
   private OffsetDateTime updateTime = null;
+
+  @SerializedName("ReaderId")
+  private String readerId = null;
 
   public BluetoothTerminalStatus serialNumber(String serialNumber) {
     this.serialNumber = serialNumber;
@@ -259,6 +266,24 @@ public class BluetoothTerminalStatus {
     this.updateTime = updateTime;
   }
 
+  public BluetoothTerminalStatus readerId(String readerId) {
+    this.readerId = readerId;
+    return this;
+  }
+
+   /**
+   * ReaderId for Stripe Terminal
+   * @return readerId
+  **/
+  @ApiModelProperty(value = "ReaderId for Stripe Terminal")
+  public String getReaderId() {
+    return readerId;
+  }
+
+  public void setReaderId(String readerId) {
+    this.readerId = readerId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -274,12 +299,13 @@ public class BluetoothTerminalStatus {
         Objects.equals(this.deviceType, bluetoothTerminalStatus.deviceType) &&
         Objects.equals(this.status, bluetoothTerminalStatus.status) &&
         Objects.equals(this.batteryLevel, bluetoothTerminalStatus.batteryLevel) &&
-        Objects.equals(this.updateTime, bluetoothTerminalStatus.updateTime);
+        Objects.equals(this.updateTime, bluetoothTerminalStatus.updateTime) &&
+        Objects.equals(this.readerId, bluetoothTerminalStatus.readerId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serialNumber, softwareVersion, deviceType, status, batteryLevel, updateTime);
+    return Objects.hash(serialNumber, softwareVersion, deviceType, status, batteryLevel, updateTime, readerId);
   }
 
 
@@ -294,6 +320,7 @@ public class BluetoothTerminalStatus {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    batteryLevel: ").append(toIndentedString(batteryLevel)).append("\n");
     sb.append("    updateTime: ").append(toIndentedString(updateTime)).append("\n");
+    sb.append("    readerId: ").append(toIndentedString(readerId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
