@@ -28,7 +28,7 @@ import java.io.IOException;
  * Job Driver
  */
 @ApiModel(description = "Job Driver")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-25T10:43:49.714+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-25T11:26:31.882+01:00")
 public class JobDriver {
   @SerializedName("Id")
   private Integer id = null;
