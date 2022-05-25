@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
 **metadata** | [**List&lt;CreateMetadata&gt;**](CreateMetadata.md) | List of metadata |  [optional]
 **nextMenuItemOptionSetId** | **Integer** | if null, next option set is next. if -1, this is the final option set |  [optional]
-**productId** | **String** | Product Id when the OptionSet is associated to a Product |  [optional]
+**catalogItemId** | **String** | Catalog item Id when the OptionSet is associated to a Product |  [optional]
 **taxRateName** | **String** | Tax rate name |  [optional]
 **taxRateId** | **Integer** |  |  [optional]
 **taxValue** | **Double** |  |  [optional]

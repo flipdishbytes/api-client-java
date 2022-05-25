@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set
  */
 @ApiModel(description = "Menu item option set")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-24T10:41:57.409+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-25T10:43:49.714+01:00")
 public class MenuItemOptionSet {
   @SerializedName("MenuItemOptionSetId")
   private Integer menuItemOptionSetId = null;
@@ -49,8 +49,8 @@ public class MenuItemOptionSet {
   @SerializedName("PublicId")
   private UUID publicId = null;
 
-  @SerializedName("ProductId")
-  private String productId = null;
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -219,22 +219,22 @@ public class MenuItemOptionSet {
     this.publicId = publicId;
   }
 
-  public MenuItemOptionSet productId(String productId) {
-    this.productId = productId;
+  public MenuItemOptionSet catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
     return this;
   }
 
    /**
-   * Product Id when the OptionSet is associated to a Product
-   * @return productId
+   * Catalog item Id when the OptionSet is associated to a Product
+   * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Product Id when the OptionSet is associated to a Product")
-  public String getProductId() {
-    return productId;
+  @ApiModelProperty(value = "Catalog item Id when the OptionSet is associated to a Product")
+  public String getCatalogItemId() {
+    return catalogItemId;
   }
 
-  public void setProductId(String productId) {
-    this.productId = productId;
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
   }
 
   public MenuItemOptionSet name(String name) {
@@ -360,7 +360,7 @@ public class MenuItemOptionSet {
         Objects.equals(this.imageUrl, menuItemOptionSet.imageUrl) &&
         Objects.equals(this.menuItemOptionSetItems, menuItemOptionSet.menuItemOptionSetItems) &&
         Objects.equals(this.publicId, menuItemOptionSet.publicId) &&
-        Objects.equals(this.productId, menuItemOptionSet.productId) &&
+        Objects.equals(this.catalogItemId, menuItemOptionSet.catalogItemId) &&
         Objects.equals(this.name, menuItemOptionSet.name) &&
         Objects.equals(this.isMasterOptionSet, menuItemOptionSet.isMasterOptionSet) &&
         Objects.equals(this.displayOrder, menuItemOptionSet.displayOrder) &&
@@ -371,7 +371,7 @@ public class MenuItemOptionSet {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetId, imageName, imageUrl, menuItemOptionSetItems, publicId, productId, name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType);
+    return Objects.hash(menuItemOptionSetId, imageName, imageUrl, menuItemOptionSetItems, publicId, catalogItemId, name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType);
   }
 
 
@@ -385,7 +385,7 @@ public class MenuItemOptionSet {
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuItemOptionSetItems: ").append(toIndentedString(menuItemOptionSetItems)).append("\n");
     sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    isMasterOptionSet: ").append(toIndentedString(isMasterOptionSet)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");

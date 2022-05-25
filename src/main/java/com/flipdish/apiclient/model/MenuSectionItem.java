@@ -34,7 +34,7 @@ import java.util.UUID;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-24T10:41:57.409+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-25T10:43:49.714+01:00")
 public class MenuSectionItem {
   @SerializedName("MenuItemId")
   private Integer menuItemId = null;
@@ -63,8 +63,8 @@ public class MenuSectionItem {
   @SerializedName("Metadata")
   private List<CreateMetadata> metadata = null;
 
-  @SerializedName("ProductId")
-  private String productId = null;
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -387,22 +387,22 @@ public class MenuSectionItem {
     this.metadata = metadata;
   }
 
-  public MenuSectionItem productId(String productId) {
-    this.productId = productId;
+  public MenuSectionItem catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
     return this;
   }
 
    /**
-   * Product Id when the Item is associated to a Product
-   * @return productId
+   * Catalog item Id when the Item is associated to a Product
+   * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Product Id when the Item is associated to a Product")
-  public String getProductId() {
-    return productId;
+  @ApiModelProperty(value = "Catalog item Id when the Item is associated to a Product")
+  public String getCatalogItemId() {
+    return catalogItemId;
   }
 
-  public void setProductId(String productId) {
-    this.productId = productId;
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
   }
 
   public MenuSectionItem name(String name) {
@@ -622,7 +622,7 @@ public class MenuSectionItem {
         Objects.equals(this.taxRateId, menuSectionItem.taxRateId) &&
         Objects.equals(this.taxValue, menuSectionItem.taxValue) &&
         Objects.equals(this.metadata, menuSectionItem.metadata) &&
-        Objects.equals(this.productId, menuSectionItem.productId) &&
+        Objects.equals(this.catalogItemId, menuSectionItem.catalogItemId) &&
         Objects.equals(this.name, menuSectionItem.name) &&
         Objects.equals(this.description, menuSectionItem.description) &&
         Objects.equals(this.spicinessRating, menuSectionItem.spicinessRating) &&
@@ -638,7 +638,7 @@ public class MenuSectionItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemId, actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, metadata, productId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl);
+    return Objects.hash(menuItemId, actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, metadata, catalogItemId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl);
   }
 
 
@@ -656,7 +656,7 @@ public class MenuSectionItem {
     sb.append("    taxRateId: ").append(toIndentedString(taxRateId)).append("\n");
     sb.append("    taxValue: ").append(toIndentedString(taxValue)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    spicinessRating: ").append(toIndentedString(spicinessRating)).append("\n");

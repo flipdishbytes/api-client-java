@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-24T10:41:57.409+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-25T10:43:49.714+01:00")
 public class MenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
@@ -46,8 +46,8 @@ public class MenuItemOptionSetItem {
   @SerializedName("NextMenuItemOptionSetId")
   private Integer nextMenuItemOptionSetId = null;
 
-  @SerializedName("ProductId")
-  private String productId = null;
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   @SerializedName("TaxRateName")
   private String taxRateName = null;
@@ -207,22 +207,22 @@ public class MenuItemOptionSetItem {
     this.nextMenuItemOptionSetId = nextMenuItemOptionSetId;
   }
 
-  public MenuItemOptionSetItem productId(String productId) {
-    this.productId = productId;
+  public MenuItemOptionSetItem catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
     return this;
   }
 
    /**
-   * Product Id when the OptionSet is associated to a Product
-   * @return productId
+   * Catalog item Id when the OptionSet is associated to a Product
+   * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Product Id when the OptionSet is associated to a Product")
-  public String getProductId() {
-    return productId;
+  @ApiModelProperty(value = "Catalog item Id when the OptionSet is associated to a Product")
+  public String getCatalogItemId() {
+    return catalogItemId;
   }
 
-  public void setProductId(String productId) {
-    this.productId = productId;
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
   }
 
   public MenuItemOptionSetItem taxRateName(String taxRateName) {
@@ -401,7 +401,7 @@ public class MenuItemOptionSetItem {
         Objects.equals(this.publicId, menuItemOptionSetItem.publicId) &&
         Objects.equals(this.metadata, menuItemOptionSetItem.metadata) &&
         Objects.equals(this.nextMenuItemOptionSetId, menuItemOptionSetItem.nextMenuItemOptionSetId) &&
-        Objects.equals(this.productId, menuItemOptionSetItem.productId) &&
+        Objects.equals(this.catalogItemId, menuItemOptionSetItem.catalogItemId) &&
         Objects.equals(this.taxRateName, menuItemOptionSetItem.taxRateName) &&
         Objects.equals(this.taxRateId, menuItemOptionSetItem.taxRateId) &&
         Objects.equals(this.taxValue, menuItemOptionSetItem.taxValue) &&
@@ -415,7 +415,7 @@ public class MenuItemOptionSetItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, productId, taxRateName, taxRateId, taxValue, name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, catalogItemId, taxRateName, taxRateId, taxValue, name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
   }
 
 
@@ -428,7 +428,7 @@ public class MenuItemOptionSetItem {
     sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    nextMenuItemOptionSetId: ").append(toIndentedString(nextMenuItemOptionSetId)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    taxRateName: ").append(toIndentedString(taxRateName)).append("\n");
     sb.append("    taxRateId: ").append(toIndentedString(taxRateId)).append("\n");
     sb.append("    taxValue: ").append(toIndentedString(taxValue)).append("\n");
