@@ -121,6 +121,7 @@ VIEWHYDRACONFIG | &quot;ViewHydraConfig&quot;
 UPDATEHYDRACONFIGMANAGE | &quot;UpdateHydraConfigManage&quot;
 INITIATEBLUETOOTHPAIRINGMODE | &quot;InitiateBluetoothPairingMode&quot;
 DELETETERMINAL | &quot;DeleteTerminal&quot;
+VIEWKIOSKTELEMETRY | &quot;ViewKioskTelemetry&quot;
 VIEWCUSTOMERS | &quot;ViewCustomers&quot;
 EDITCUSTOMERS | &quot;EditCustomers&quot;
 CREATECATALOGELEMENTS | &quot;CreateCatalogElements&quot;

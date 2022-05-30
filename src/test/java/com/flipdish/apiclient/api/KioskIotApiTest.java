@@ -17,7 +17,9 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultKioskIotConnectionParameters;
+import com.flipdish.apiclient.model.RestApiResultTelemetrySeriesResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.TelemetrySeriesQueryParameters;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -46,6 +48,23 @@ public class KioskIotApiTest {
     @Test
     public void getKioskIotConnectionTest() throws ApiException {
         RestApiResultKioskIotConnectionParameters response = api.getKioskIotConnection();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the IoT time series values for a given Kiosk Id, properties and time range
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void queryTelemetrySeriesTest() throws ApiException {
+        String appId = null;
+        TelemetrySeriesQueryParameters queryParams = null;
+        RestApiResultTelemetrySeriesResult response = api.queryTelemetrySeries(appId, queryParams);
 
         // TODO: test validations
     }

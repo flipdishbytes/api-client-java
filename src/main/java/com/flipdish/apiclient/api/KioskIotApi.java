@@ -30,7 +30,9 @@ import java.io.IOException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultKioskIotConnectionParameters;
+import com.flipdish.apiclient.model.RestApiResultTelemetrySeriesResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.TelemetrySeriesQueryParameters;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -167,6 +169,138 @@ public class KioskIotApi {
 
         com.squareup.okhttp.Call call = getKioskIotConnectionValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultKioskIotConnectionParameters>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for queryTelemetrySeries
+     * @param appId  (required)
+     * @param queryParams  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call queryTelemetrySeriesCall(String appId, TelemetrySeriesQueryParameters queryParams, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = queryParams;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/kioskiot/timeseries/query"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call queryTelemetrySeriesValidateBeforeCall(String appId, TelemetrySeriesQueryParameters queryParams, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling queryTelemetrySeries(Async)");
+        }
+        
+        // verify the required parameter 'queryParams' is set
+        if (queryParams == null) {
+            throw new ApiException("Missing the required parameter 'queryParams' when calling queryTelemetrySeries(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = queryTelemetrySeriesCall(appId, queryParams, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get the IoT time series values for a given Kiosk Id, properties and time range
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param queryParams  (required)
+     * @return RestApiResultTelemetrySeriesResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultTelemetrySeriesResult queryTelemetrySeries(String appId, TelemetrySeriesQueryParameters queryParams) throws ApiException {
+        ApiResponse<RestApiResultTelemetrySeriesResult> resp = queryTelemetrySeriesWithHttpInfo(appId, queryParams);
+        return resp.getData();
+    }
+
+    /**
+     * Get the IoT time series values for a given Kiosk Id, properties and time range
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param queryParams  (required)
+     * @return ApiResponse&lt;RestApiResultTelemetrySeriesResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultTelemetrySeriesResult> queryTelemetrySeriesWithHttpInfo(String appId, TelemetrySeriesQueryParameters queryParams) throws ApiException {
+        com.squareup.okhttp.Call call = queryTelemetrySeriesValidateBeforeCall(appId, queryParams, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultTelemetrySeriesResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get the IoT time series values for a given Kiosk Id, properties and time range (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId  (required)
+     * @param queryParams  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call queryTelemetrySeriesAsync(String appId, TelemetrySeriesQueryParameters queryParams, final ApiCallback<RestApiResultTelemetrySeriesResult> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = queryTelemetrySeriesValidateBeforeCall(appId, queryParams, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultTelemetrySeriesResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
