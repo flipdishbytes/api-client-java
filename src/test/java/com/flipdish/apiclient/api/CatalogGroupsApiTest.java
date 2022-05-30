@@ -48,10 +48,10 @@ public class CatalogGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void archiveCatalogGroupTest() throws ApiException {
+    public void archiveGroupTest() throws ApiException {
         String appId = null;
-        String catalogGroupId = null;
-        api.archiveCatalogGroup(appId, catalogGroupId);
+        String catalogItemId = null;
+        api.archiveGroup(appId, catalogItemId);
 
         // TODO: test validations
     }
@@ -82,10 +82,10 @@ public class CatalogGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void duplicateCatalogGroupTest() throws ApiException {
+    public void duplicateGroupTest() throws ApiException {
         String appId = null;
-        String catalogGroupId = null;
-        api.duplicateCatalogGroup(appId, catalogGroupId);
+        String catalogItemId = null;
+        api.duplicateGroup(appId, catalogItemId);
 
         // TODO: test validations
     }
@@ -99,10 +99,10 @@ public class CatalogGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getCatalogGroupByIdTest() throws ApiException {
+    public void getGroupByIdTest() throws ApiException {
         String appId = null;
-        String catalogGroupId = null;
-        CatalogGroup response = api.getCatalogGroupById(appId, catalogGroupId);
+        String catalogItemId = null;
+        CatalogGroup response = api.getGroupById(appId, catalogItemId);
 
         // TODO: test validations
     }
@@ -136,11 +136,11 @@ public class CatalogGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateCatalogGroupTest() throws ApiException {
+    public void updateGroupTest() throws ApiException {
         String appId = null;
-        String catalogGroupId = null;
+        String catalogItemId = null;
         UpdateCatalogGroup updateCatalogGroup = null;
-        api.updateCatalogGroup(appId, catalogGroupId, updateCatalogGroup);
+        api.updateGroup(appId, catalogItemId, updateCatalogGroup);
 
         // TODO: test validations
     }

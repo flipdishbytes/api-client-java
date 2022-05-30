@@ -28,10 +28,13 @@ import java.io.IOException;
  * Data to update a {Flipdish.PublicModels.V1.Catalog.Products.GroupReference}
  */
 @ApiModel(description = "Data to update a {Flipdish.PublicModels.V1.Catalog.Products.GroupReference}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-27T10:43:22.052+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-30T10:04:00.832+01:00")
 public class UpdateGroupReference {
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;
+
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   /**
    * Type of the SupProduct
@@ -99,6 +102,24 @@ public class UpdateGroupReference {
     this.catalogGroupId = catalogGroupId;
   }
 
+  public UpdateGroupReference catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
+    return this;
+  }
+
+   /**
+   * Identifier of the ProductId to use as SubProduct
+   * @return catalogItemId
+  **/
+  @ApiModelProperty(value = "Identifier of the ProductId to use as SubProduct")
+  public String getCatalogItemId() {
+    return catalogItemId;
+  }
+
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
+  }
+
   public UpdateGroupReference groupType(GroupTypeEnum groupType) {
     this.groupType = groupType;
     return this;
@@ -128,12 +149,13 @@ public class UpdateGroupReference {
     }
     UpdateGroupReference updateGroupReference = (UpdateGroupReference) o;
     return Objects.equals(this.catalogGroupId, updateGroupReference.catalogGroupId) &&
+        Objects.equals(this.catalogItemId, updateGroupReference.catalogItemId) &&
         Objects.equals(this.groupType, updateGroupReference.groupType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogGroupId, groupType);
+    return Objects.hash(catalogGroupId, catalogItemId, groupType);
   }
 
 
@@ -143,6 +165,7 @@ public class UpdateGroupReference {
     sb.append("class UpdateGroupReference {\n");
     
     sb.append("    catalogGroupId: ").append(toIndentedString(catalogGroupId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("}");
     return sb.toString();

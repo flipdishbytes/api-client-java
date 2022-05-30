@@ -29,13 +29,16 @@ import java.io.IOException;
  * Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
  */
 @ApiModel(description = "Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-27T10:43:22.052+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-30T10:04:00.832+01:00")
 public class CatalogGroupReference {
   @SerializedName("Group")
   private CatalogGroup group = null;
 
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;
+
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   /**
    * Type of the SupProduct
@@ -121,6 +124,24 @@ public class CatalogGroupReference {
     this.catalogGroupId = catalogGroupId;
   }
 
+  public CatalogGroupReference catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
+    return this;
+  }
+
+   /**
+   * Identifier of the ProductId to use as SubProduct
+   * @return catalogItemId
+  **/
+  @ApiModelProperty(value = "Identifier of the ProductId to use as SubProduct")
+  public String getCatalogItemId() {
+    return catalogItemId;
+  }
+
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
+  }
+
   public CatalogGroupReference groupType(GroupTypeEnum groupType) {
     this.groupType = groupType;
     return this;
@@ -151,12 +172,13 @@ public class CatalogGroupReference {
     CatalogGroupReference catalogGroupReference = (CatalogGroupReference) o;
     return Objects.equals(this.group, catalogGroupReference.group) &&
         Objects.equals(this.catalogGroupId, catalogGroupReference.catalogGroupId) &&
+        Objects.equals(this.catalogItemId, catalogGroupReference.catalogItemId) &&
         Objects.equals(this.groupType, catalogGroupReference.groupType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(group, catalogGroupId, groupType);
+    return Objects.hash(group, catalogGroupId, catalogItemId, groupType);
   }
 
 
@@ -167,6 +189,7 @@ public class CatalogGroupReference {
     
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    catalogGroupId: ").append(toIndentedString(catalogGroupId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("}");
     return sb.toString();

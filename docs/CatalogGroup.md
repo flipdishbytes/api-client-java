@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **catalogGroupId** | **String** | Unique catalog group id |  [optional]
+**catalogItemId** | **String** | Unique catalog item id |  [optional]
 **isArchived** | **Boolean** | Returns true if the group is archived |  [optional]
 **minSelectCount** | **Integer** | Minimum number of items that the user has to select |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items that the user has to select |  [optional]

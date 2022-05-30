@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveCatalogGroup**](CatalogGroupsApi.md#archiveCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
+[**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
 [**createCatalogGroup**](CatalogGroupsApi.md#createCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
-[**duplicateCatalogGroup**](CatalogGroupsApi.md#duplicateCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
-[**getCatalogGroupById**](CatalogGroupsApi.md#getCatalogGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+[**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+[**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 [**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
-[**updateCatalogGroup**](CatalogGroupsApi.md#updateCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+[**updateGroup**](CatalogGroupsApi.md#updateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
 
 
-<a name="archiveCatalogGroup"></a>
-# **archiveCatalogGroup**
-> archiveCatalogGroup(appId, catalogGroupId)
+<a name="archiveGroup"></a>
+# **archiveGroup**
+> archiveGroup(appId, catalogItemId)
 
 Archive Catalog Group
 
@@ -37,11 +37,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
-String catalogGroupId = "catalogGroupId_example"; // String | 
+String catalogItemId = "catalogItemId_example"; // String | 
 try {
-    apiInstance.archiveCatalogGroup(appId, catalogGroupId);
+    apiInstance.archiveGroup(appId, catalogItemId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CatalogGroupsApi#archiveCatalogGroup");
+    System.err.println("Exception when calling CatalogGroupsApi#archiveGroup");
     e.printStackTrace();
 }
 ```
@@ -51,7 +51,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **catalogGroupId** | **String**|  |
+ **catalogItemId** | **String**|  |
 
 ### Return type
 
@@ -121,9 +121,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="duplicateCatalogGroup"></a>
-# **duplicateCatalogGroup**
-> duplicateCatalogGroup(appId, catalogGroupId)
+<a name="duplicateGroup"></a>
+# **duplicateGroup**
+> duplicateGroup(appId, catalogItemId)
 
 Duplicate Catalog Group
 
@@ -146,11 +146,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
-String catalogGroupId = "catalogGroupId_example"; // String | 
+String catalogItemId = "catalogItemId_example"; // String | 
 try {
-    apiInstance.duplicateCatalogGroup(appId, catalogGroupId);
+    apiInstance.duplicateGroup(appId, catalogItemId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CatalogGroupsApi#duplicateCatalogGroup");
+    System.err.println("Exception when calling CatalogGroupsApi#duplicateGroup");
     e.printStackTrace();
 }
 ```
@@ -160,7 +160,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **catalogGroupId** | **String**|  |
+ **catalogItemId** | **String**|  |
 
 ### Return type
 
@@ -175,9 +175,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getCatalogGroupById"></a>
-# **getCatalogGroupById**
-> CatalogGroup getCatalogGroupById(appId, catalogGroupId)
+<a name="getGroupById"></a>
+# **getGroupById**
+> CatalogGroup getGroupById(appId, catalogItemId)
 
 Get group by Id
 
@@ -200,12 +200,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
-String catalogGroupId = "catalogGroupId_example"; // String | 
+String catalogItemId = "catalogItemId_example"; // String | 
 try {
-    CatalogGroup result = apiInstance.getCatalogGroupById(appId, catalogGroupId);
+    CatalogGroup result = apiInstance.getGroupById(appId, catalogItemId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CatalogGroupsApi#getCatalogGroupById");
+    System.err.println("Exception when calling CatalogGroupsApi#getGroupById");
     e.printStackTrace();
 }
 ```
@@ -215,7 +215,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **catalogGroupId** | **String**|  |
+ **catalogItemId** | **String**|  |
 
 ### Return type
 
@@ -291,9 +291,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateCatalogGroup"></a>
-# **updateCatalogGroup**
-> updateCatalogGroup(appId, catalogGroupId, updateCatalogGroup)
+<a name="updateGroup"></a>
+# **updateGroup**
+> updateGroup(appId, catalogItemId, updateCatalogGroup)
 
 Update Catalog Group
 
@@ -316,12 +316,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
-String catalogGroupId = "catalogGroupId_example"; // String | 
+String catalogItemId = "catalogItemId_example"; // String | 
 UpdateCatalogGroup updateCatalogGroup = new UpdateCatalogGroup(); // UpdateCatalogGroup | 
 try {
-    apiInstance.updateCatalogGroup(appId, catalogGroupId, updateCatalogGroup);
+    apiInstance.updateGroup(appId, catalogItemId, updateCatalogGroup);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CatalogGroupsApi#updateCatalogGroup");
+    System.err.println("Exception when calling CatalogGroupsApi#updateGroup");
     e.printStackTrace();
 }
 ```
@@ -331,7 +331,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **catalogGroupId** | **String**|  |
+ **catalogItemId** | **String**|  |
  **updateCatalogGroup** | [**UpdateCatalogGroup**](UpdateCatalogGroup.md)|  |
 
 ### Return type
