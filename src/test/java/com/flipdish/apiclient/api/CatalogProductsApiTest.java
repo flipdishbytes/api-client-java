@@ -18,7 +18,7 @@ import com.flipdish.apiclient.model.CreateProduct;
 import com.flipdish.apiclient.model.Product;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultCatalogItem;
+import com.flipdish.apiclient.model.RestApiPaginationResultProduct;
 import com.flipdish.apiclient.model.RestApiResultProduct;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateProduct;
@@ -118,11 +118,11 @@ public class CatalogProductsApiTest {
     @Test
     public void getProductsTest() throws ApiException {
         String appId = null;
-        List<String> itemTypes = null;
+        List<String> productTypes = null;
         String searchTerm = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultCatalogItem response = api.getProducts(appId, itemTypes, searchTerm, page, limit);
+        RestApiPaginationResultProduct response = api.getProducts(appId, productTypes, searchTerm, page, limit);
 
         // TODO: test validations
     }

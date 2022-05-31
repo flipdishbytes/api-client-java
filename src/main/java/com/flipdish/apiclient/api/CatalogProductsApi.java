@@ -31,7 +31,7 @@ import com.flipdish.apiclient.model.CreateProduct;
 import com.flipdish.apiclient.model.Product;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultCatalogItem;
+import com.flipdish.apiclient.model.RestApiPaginationResultProduct;
 import com.flipdish.apiclient.model.RestApiResultProduct;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateProduct;
@@ -587,7 +587,7 @@ public class CatalogProductsApi {
     /**
      * Build call for getProducts
      * @param appId  (required)
-     * @param itemTypes  (required)
+     * @param productTypes  (required)
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -596,7 +596,7 @@ public class CatalogProductsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getProductsCall(String appId, List<String> itemTypes, String searchTerm, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getProductsCall(String appId, List<String> productTypes, String searchTerm, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -605,8 +605,8 @@ public class CatalogProductsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (itemTypes != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "itemTypes", itemTypes));
+        if (productTypes != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "productTypes", productTypes));
         if (searchTerm != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("searchTerm", searchTerm));
         if (page != null)
@@ -647,20 +647,20 @@ public class CatalogProductsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getProductsValidateBeforeCall(String appId, List<String> itemTypes, String searchTerm, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getProductsValidateBeforeCall(String appId, List<String> productTypes, String searchTerm, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
             throw new ApiException("Missing the required parameter 'appId' when calling getProducts(Async)");
         }
         
-        // verify the required parameter 'itemTypes' is set
-        if (itemTypes == null) {
-            throw new ApiException("Missing the required parameter 'itemTypes' when calling getProducts(Async)");
+        // verify the required parameter 'productTypes' is set
+        if (productTypes == null) {
+            throw new ApiException("Missing the required parameter 'productTypes' when calling getProducts(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getProductsCall(appId, itemTypes, searchTerm, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getProductsCall(appId, productTypes, searchTerm, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -669,15 +669,15 @@ public class CatalogProductsApi {
      * Get paginated products by app name id filtered by types
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param itemTypes  (required)
+     * @param productTypes  (required)
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
-     * @return RestApiPaginationResultCatalogItem
+     * @return RestApiPaginationResultProduct
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultCatalogItem getProducts(String appId, List<String> itemTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
-        ApiResponse<RestApiPaginationResultCatalogItem> resp = getProductsWithHttpInfo(appId, itemTypes, searchTerm, page, limit);
+    public RestApiPaginationResultProduct getProducts(String appId, List<String> productTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
+        ApiResponse<RestApiPaginationResultProduct> resp = getProductsWithHttpInfo(appId, productTypes, searchTerm, page, limit);
         return resp.getData();
     }
 
@@ -685,16 +685,16 @@ public class CatalogProductsApi {
      * Get paginated products by app name id filtered by types
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param itemTypes  (required)
+     * @param productTypes  (required)
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
-     * @return ApiResponse&lt;RestApiPaginationResultCatalogItem&gt;
+     * @return ApiResponse&lt;RestApiPaginationResultProduct&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultCatalogItem> getProductsWithHttpInfo(String appId, List<String> itemTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = getProductsValidateBeforeCall(appId, itemTypes, searchTerm, page, limit, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultCatalogItem>(){}.getType();
+    public ApiResponse<RestApiPaginationResultProduct> getProductsWithHttpInfo(String appId, List<String> productTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = getProductsValidateBeforeCall(appId, productTypes, searchTerm, page, limit, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultProduct>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -702,7 +702,7 @@ public class CatalogProductsApi {
      * Get paginated products by app name id filtered by types (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param itemTypes  (required)
+     * @param productTypes  (required)
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -710,7 +710,7 @@ public class CatalogProductsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getProductsAsync(String appId, List<String> itemTypes, String searchTerm, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultCatalogItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call getProductsAsync(String appId, List<String> productTypes, String searchTerm, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultProduct> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -731,8 +731,8 @@ public class CatalogProductsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getProductsValidateBeforeCall(appId, itemTypes, searchTerm, page, limit, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultCatalogItem>(){}.getType();
+        com.squareup.okhttp.Call call = getProductsValidateBeforeCall(appId, productTypes, searchTerm, page, limit, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultProduct>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

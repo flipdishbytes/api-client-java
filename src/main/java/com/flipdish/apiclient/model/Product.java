@@ -32,7 +32,7 @@ import java.util.List;
  * Product
  */
 @ApiModel(description = "Product")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-31T10:05:43.481+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-31T11:54:27.838+01:00")
 public class Product {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
@@ -49,15 +49,15 @@ public class Product {
   /**
    * Type of item (Product, Modifier, etc)
    */
-  @JsonAdapter(ItemTypeEnum.Adapter.class)
-  public enum ItemTypeEnum {
+  @JsonAdapter(ProductTypeEnum.Adapter.class)
+  public enum ProductTypeEnum {
     PRODUCT("Product"),
     
     MODIFIER("Modifier");
 
     private String value;
 
-    ItemTypeEnum(String value) {
+    ProductTypeEnum(String value) {
       this.value = value;
     }
 
@@ -70,8 +70,8 @@ public class Product {
       return String.valueOf(value);
     }
 
-    public static ItemTypeEnum fromValue(String text) {
-      for (ItemTypeEnum b : ItemTypeEnum.values()) {
+    public static ProductTypeEnum fromValue(String text) {
+      for (ProductTypeEnum b : ProductTypeEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -79,22 +79,22 @@ public class Product {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<ItemTypeEnum> {
+    public static class Adapter extends TypeAdapter<ProductTypeEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final ItemTypeEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final ProductTypeEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public ItemTypeEnum read(final JsonReader jsonReader) throws IOException {
+      public ProductTypeEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return ItemTypeEnum.fromValue(String.valueOf(value));
+        return ProductTypeEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("ItemType")
-  private ItemTypeEnum itemType = null;
+  @SerializedName("ProductType")
+  private ProductTypeEnum productType = null;
 
   @SerializedName("Sku")
   private String sku = null;
@@ -202,22 +202,22 @@ public class Product {
     this.metafields = metafields;
   }
 
-  public Product itemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public Product productType(ProductTypeEnum productType) {
+    this.productType = productType;
     return this;
   }
 
    /**
    * Type of item (Product, Modifier, etc)
-   * @return itemType
+   * @return productType
   **/
   @ApiModelProperty(required = true, value = "Type of item (Product, Modifier, etc)")
-  public ItemTypeEnum getItemType() {
-    return itemType;
+  public ProductTypeEnum getProductType() {
+    return productType;
   }
 
-  public void setItemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public void setProductType(ProductTypeEnum productType) {
+    this.productType = productType;
   }
 
   public Product sku(String sku) {
@@ -343,7 +343,7 @@ public class Product {
         Objects.equals(this.isArchived, product.isArchived) &&
         Objects.equals(this.groups, product.groups) &&
         Objects.equals(this.metafields, product.metafields) &&
-        Objects.equals(this.itemType, product.itemType) &&
+        Objects.equals(this.productType, product.productType) &&
         Objects.equals(this.sku, product.sku) &&
         Objects.equals(this.name, product.name) &&
         Objects.equals(this.description, product.description) &&
@@ -354,7 +354,7 @@ public class Product {
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogItemId, isArchived, groups, metafields, itemType, sku, name, description, price, imageFileName, alcohol);
+    return Objects.hash(catalogItemId, isArchived, groups, metafields, productType, sku, name, description, price, imageFileName, alcohol);
   }
 
 
@@ -367,7 +367,7 @@ public class Product {
     sb.append("    isArchived: ").append(toIndentedString(isArchived)).append("\n");
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("    metafields: ").append(toIndentedString(metafields)).append("\n");
-    sb.append("    itemType: ").append(toIndentedString(itemType)).append("\n");
+    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

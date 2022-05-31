@@ -32,7 +32,7 @@ import java.util.List;
  * Create a Catalog Item
  */
 @ApiModel(description = "Create a Catalog Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-31T10:05:43.481+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-31T11:54:27.838+01:00")
 public class CreateProduct {
   @SerializedName("Groups")
   private List<CreateGroupReference> groups = null;
@@ -43,15 +43,15 @@ public class CreateProduct {
   /**
    * Type of item (Product, Modifier, etc)
    */
-  @JsonAdapter(ItemTypeEnum.Adapter.class)
-  public enum ItemTypeEnum {
+  @JsonAdapter(ProductTypeEnum.Adapter.class)
+  public enum ProductTypeEnum {
     PRODUCT("Product"),
     
     MODIFIER("Modifier");
 
     private String value;
 
-    ItemTypeEnum(String value) {
+    ProductTypeEnum(String value) {
       this.value = value;
     }
 
@@ -64,8 +64,8 @@ public class CreateProduct {
       return String.valueOf(value);
     }
 
-    public static ItemTypeEnum fromValue(String text) {
-      for (ItemTypeEnum b : ItemTypeEnum.values()) {
+    public static ProductTypeEnum fromValue(String text) {
+      for (ProductTypeEnum b : ProductTypeEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -73,22 +73,22 @@ public class CreateProduct {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<ItemTypeEnum> {
+    public static class Adapter extends TypeAdapter<ProductTypeEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final ItemTypeEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final ProductTypeEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public ItemTypeEnum read(final JsonReader jsonReader) throws IOException {
+      public ProductTypeEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return ItemTypeEnum.fromValue(String.valueOf(value));
+        return ProductTypeEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("ItemType")
-  private ItemTypeEnum itemType = null;
+  @SerializedName("ProductType")
+  private ProductTypeEnum productType = null;
 
   @SerializedName("Sku")
   private String sku = null;
@@ -160,22 +160,22 @@ public class CreateProduct {
     this.metafields = metafields;
   }
 
-  public CreateProduct itemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public CreateProduct productType(ProductTypeEnum productType) {
+    this.productType = productType;
     return this;
   }
 
    /**
    * Type of item (Product, Modifier, etc)
-   * @return itemType
+   * @return productType
   **/
   @ApiModelProperty(required = true, value = "Type of item (Product, Modifier, etc)")
-  public ItemTypeEnum getItemType() {
-    return itemType;
+  public ProductTypeEnum getProductType() {
+    return productType;
   }
 
-  public void setItemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public void setProductType(ProductTypeEnum productType) {
+    this.productType = productType;
   }
 
   public CreateProduct sku(String sku) {
@@ -299,7 +299,7 @@ public class CreateProduct {
     CreateProduct createProduct = (CreateProduct) o;
     return Objects.equals(this.groups, createProduct.groups) &&
         Objects.equals(this.metafields, createProduct.metafields) &&
-        Objects.equals(this.itemType, createProduct.itemType) &&
+        Objects.equals(this.productType, createProduct.productType) &&
         Objects.equals(this.sku, createProduct.sku) &&
         Objects.equals(this.name, createProduct.name) &&
         Objects.equals(this.description, createProduct.description) &&
@@ -310,7 +310,7 @@ public class CreateProduct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(groups, metafields, itemType, sku, name, description, price, imageFileName, alcohol);
+    return Objects.hash(groups, metafields, productType, sku, name, description, price, imageFileName, alcohol);
   }
 
 
@@ -321,7 +321,7 @@ public class CreateProduct {
     
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("    metafields: ").append(toIndentedString(metafields)).append("\n");
-    sb.append("    itemType: ").append(toIndentedString(itemType)).append("\n");
+    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

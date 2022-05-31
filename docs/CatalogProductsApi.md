@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 <a name="getProducts"></a>
 # **getProducts**
-> RestApiPaginationResultCatalogItem getProducts(appId, itemTypes, searchTerm, page, limit)
+> RestApiPaginationResultProduct getProducts(appId, productTypes, searchTerm, page, limit)
 
 Get paginated products by app name id filtered by types
 
@@ -255,12 +255,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogProductsApi apiInstance = new CatalogProductsApi();
 String appId = "appId_example"; // String | 
-List<String> itemTypes = Arrays.asList("itemTypes_example"); // List<String> | 
+List<String> productTypes = Arrays.asList("productTypes_example"); // List<String> | 
 String searchTerm = "searchTerm_example"; // String | 
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultCatalogItem result = apiInstance.getProducts(appId, itemTypes, searchTerm, page, limit);
+    RestApiPaginationResultProduct result = apiInstance.getProducts(appId, productTypes, searchTerm, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CatalogProductsApi#getProducts");
@@ -273,14 +273,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **itemTypes** | [**List&lt;String&gt;**](String.md)|  | [enum: Product, Modifier]
+ **productTypes** | [**List&lt;String&gt;**](String.md)|  | [enum: Product, Modifier]
  **searchTerm** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 
 ### Return type
 
-[**RestApiPaginationResultCatalogItem**](RestApiPaginationResultCatalogItem.md)
+[**RestApiPaginationResultProduct**](RestApiPaginationResultProduct.md)
 
 ### Authorization
 
