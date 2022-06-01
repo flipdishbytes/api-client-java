@@ -31,7 +31,7 @@ import java.util.Map;
  * Ligthspeed store settings
  */
 @ApiModel(description = "Ligthspeed store settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-31T11:54:27.838+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-01T09:27:00.884+01:00")
 public class LightspeedSettings {
   @SerializedName("CompanyId")
   private String companyId = null;
@@ -147,6 +147,9 @@ public class LightspeedSettings {
 
   @SerializedName("ChefNoteModifierId")
   private String chefNoteModifierId = null;
+
+  @SerializedName("ServiceChargeId")
+  private String serviceChargeId = null;
 
   public LightspeedSettings companyId(String companyId) {
     this.companyId = companyId;
@@ -560,6 +563,24 @@ public class LightspeedSettings {
     this.chefNoteModifierId = chefNoteModifierId;
   }
 
+  public LightspeedSettings serviceChargeId(String serviceChargeId) {
+    this.serviceChargeId = serviceChargeId;
+    return this;
+  }
+
+   /**
+   * The Lightspeed Service Charge Id to map
+   * @return serviceChargeId
+  **/
+  @ApiModelProperty(value = "The Lightspeed Service Charge Id to map")
+  public String getServiceChargeId() {
+    return serviceChargeId;
+  }
+
+  public void setServiceChargeId(String serviceChargeId) {
+    this.serviceChargeId = serviceChargeId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -591,12 +612,13 @@ public class LightspeedSettings {
         Objects.equals(this.sendTableNumberToTableId, lightspeedSettings.sendTableNumberToTableId) &&
         Objects.equals(this.addChefNoteToProduct, lightspeedSettings.addChefNoteToProduct) &&
         Objects.equals(this.chefNoteItemId, lightspeedSettings.chefNoteItemId) &&
-        Objects.equals(this.chefNoteModifierId, lightspeedSettings.chefNoteModifierId);
+        Objects.equals(this.chefNoteModifierId, lightspeedSettings.chefNoteModifierId) &&
+        Objects.equals(this.serviceChargeId, lightspeedSettings.serviceChargeId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(companyId, useOAuth, enabled, estimatedMinutesForDelivery, estimatedMinutesForCollection, geographicLocation, establishment, voucherId, deliveryFeeId, processingFeeId, priceType, menuId, collectionTableId, deliveryTableId, collectionTableIds, deliveryTableIds, useTaxInclusivePrices, skipStatusCheckAndAcceptOrderAfterSending, sendTableNumberToTableId, addChefNoteToProduct, chefNoteItemId, chefNoteModifierId);
+    return Objects.hash(companyId, useOAuth, enabled, estimatedMinutesForDelivery, estimatedMinutesForCollection, geographicLocation, establishment, voucherId, deliveryFeeId, processingFeeId, priceType, menuId, collectionTableId, deliveryTableId, collectionTableIds, deliveryTableIds, useTaxInclusivePrices, skipStatusCheckAndAcceptOrderAfterSending, sendTableNumberToTableId, addChefNoteToProduct, chefNoteItemId, chefNoteModifierId, serviceChargeId);
   }
 
 
@@ -627,6 +649,7 @@ public class LightspeedSettings {
     sb.append("    addChefNoteToProduct: ").append(toIndentedString(addChefNoteToProduct)).append("\n");
     sb.append("    chefNoteItemId: ").append(toIndentedString(chefNoteItemId)).append("\n");
     sb.append("    chefNoteModifierId: ").append(toIndentedString(chefNoteModifierId)).append("\n");
+    sb.append("    serviceChargeId: ").append(toIndentedString(serviceChargeId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

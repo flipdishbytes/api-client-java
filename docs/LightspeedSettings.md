@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **addChefNoteToProduct** | **Boolean** | Add ChefNote To Product |  [optional]
 **chefNoteItemId** | **String** | The Lightspeed Chef Note Item Id to map |  [optional]
 **chefNoteModifierId** | **String** | The Lightspeed Chef Note Modifier Id to map |  [optional]
+**serviceChargeId** | **String** | The Lightspeed Service Charge Id to map |  [optional]
 
 
 <a name="PriceTypeEnum"></a>
