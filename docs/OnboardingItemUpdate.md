@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) | Completion Status for Onboarding Item |  [optional]
 
 
 <a name="StatusEnum"></a>

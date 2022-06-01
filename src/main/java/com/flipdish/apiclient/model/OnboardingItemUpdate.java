@@ -25,12 +25,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * OnboardingItemUpdate
+ * 
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-01T09:27:00.884+01:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-01T12:16:42.462+01:00")
 public class OnboardingItemUpdate {
   /**
-   * Gets or Sets status
+   * Completion Status for Onboarding Item
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -87,10 +88,10 @@ public class OnboardingItemUpdate {
   }
 
    /**
-   * Get status
+   * Completion Status for Onboarding Item
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Completion Status for Onboarding Item")
   public StatusEnum getStatus() {
     return status;
   }
