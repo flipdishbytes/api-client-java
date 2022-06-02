@@ -72,7 +72,7 @@ public class AppStoreDeveloperApi {
      * @throws ApiException If fail to serialize the request body object
      */
     public com.squareup.okhttp.Call appVerificationUpdateCall(String oauthAppId, String appStoreAppId, String verificationStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = verificationStatus;
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification"
@@ -81,6 +81,8 @@ public class AppStoreDeveloperApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (verificationStatus != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("verificationStatus", verificationStatus));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -93,7 +95,7 @@ public class AppStoreDeveloperApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+            
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);

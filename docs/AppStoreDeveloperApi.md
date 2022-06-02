@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oauthAppId** | **String**| OAuth App identifier |
  **appStoreAppId** | **String**| App store app id |
- **verificationStatus** | **String**| New verification status |
+ **verificationStatus** | **String**| New verification status | [enum: Draft, Submitted, Verified]
 
 ### Return type
 
@@ -64,7 +64,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="createAppStoreApp"></a>
