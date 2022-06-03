@@ -32,7 +32,7 @@ import java.util.List;
  * A response of a dyanmic form definition.
  */
 @ApiModel(description = "A response of a dyanmic form definition.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-02T16:01:19.032+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-03T10:39:56.331+01:00")
 public class AddressFormResponse {
   @SerializedName("FormData")
   private List<DynamicFormField> formData = null;

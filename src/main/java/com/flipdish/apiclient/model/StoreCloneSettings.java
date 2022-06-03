@@ -28,7 +28,7 @@ import java.io.IOException;
  * Settings for cloning a store
  */
 @ApiModel(description = "Settings for cloning a store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-02T16:01:19.032+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-03T10:39:56.331+01:00")
 public class StoreCloneSettings {
   @SerializedName("TargetStoreGroupId")
   private Integer targetStoreGroupId = null;

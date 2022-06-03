@@ -32,7 +32,7 @@ import java.util.List;
  * Create a Catalog Item
  */
 @ApiModel(description = "Create a Catalog Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-02T16:01:19.032+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-03T10:39:56.331+01:00")
 public class CreateProduct {
   @SerializedName("Groups")
   private List<CreateGroupReference> groups = null;
@@ -202,10 +202,10 @@ public class CreateProduct {
   }
 
    /**
-   * Item name
+   * Product name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Item name")
+  @ApiModelProperty(required = true, value = "Product name")
   public String getName() {
     return name;
   }
@@ -220,10 +220,10 @@ public class CreateProduct {
   }
 
    /**
-   * Item description
+   * Product description
    * @return description
   **/
-  @ApiModelProperty(value = "Item description")
+  @ApiModelProperty(value = "Product description")
   public String getDescription() {
     return description;
   }
@@ -238,11 +238,11 @@ public class CreateProduct {
   }
 
    /**
-   * Item price
+   * Product price
    * minimum: 0
    * @return price
   **/
-  @ApiModelProperty(required = true, value = "Item price")
+  @ApiModelProperty(required = true, value = "Product price")
   public Double getPrice() {
     return price;
   }
@@ -275,10 +275,10 @@ public class CreateProduct {
   }
 
    /**
-   * item contains alcohol
+   * Product contains alcohol
    * @return alcohol
   **/
-  @ApiModelProperty(value = "item contains alcohol")
+  @ApiModelProperty(value = "Product contains alcohol")
   public Boolean isAlcohol() {
     return alcohol;
   }

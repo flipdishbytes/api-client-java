@@ -32,7 +32,7 @@ import java.util.List;
  * Product
  */
 @ApiModel(description = "Product")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-02T16:01:19.032+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-03T10:39:56.331+01:00")
 public class Product {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
@@ -244,10 +244,10 @@ public class Product {
   }
 
    /**
-   * Item name
+   * Product name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Item name")
+  @ApiModelProperty(required = true, value = "Product name")
   public String getName() {
     return name;
   }
@@ -262,10 +262,10 @@ public class Product {
   }
 
    /**
-   * Item description
+   * Product description
    * @return description
   **/
-  @ApiModelProperty(value = "Item description")
+  @ApiModelProperty(value = "Product description")
   public String getDescription() {
     return description;
   }
@@ -280,11 +280,11 @@ public class Product {
   }
 
    /**
-   * Item price
+   * Product price
    * minimum: 0
    * @return price
   **/
-  @ApiModelProperty(required = true, value = "Item price")
+  @ApiModelProperty(required = true, value = "Product price")
   public Double getPrice() {
     return price;
   }
@@ -317,10 +317,10 @@ public class Product {
   }
 
    /**
-   * item contains alcohol
+   * Product contains alcohol
    * @return alcohol
   **/
-  @ApiModelProperty(value = "item contains alcohol")
+  @ApiModelProperty(value = "Product contains alcohol")
   public Boolean isAlcohol() {
     return alcohol;
   }
