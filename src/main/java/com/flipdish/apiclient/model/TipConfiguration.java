@@ -30,7 +30,7 @@ import java.util.List;
  * Describes the configuration of tipping
  */
 @ApiModel(description = "Describes the configuration of tipping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-07T12:47:04.151+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T08:53:59.871+01:00")
 public class TipConfiguration {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -40,6 +40,9 @@ public class TipConfiguration {
 
   @SerializedName("AllowCustomTips")
   private Boolean allowCustomTips = null;
+
+  @SerializedName("AllowRoundUp")
+  private Boolean allowRoundUp = null;
 
   @SerializedName("Percentages")
   private List<Double> percentages = null;
@@ -101,6 +104,24 @@ public class TipConfiguration {
     this.allowCustomTips = allowCustomTips;
   }
 
+  public TipConfiguration allowRoundUp(Boolean allowRoundUp) {
+    this.allowRoundUp = allowRoundUp;
+    return this;
+  }
+
+   /**
+   * Is round up allowed?
+   * @return allowRoundUp
+  **/
+  @ApiModelProperty(value = "Is round up allowed?")
+  public Boolean isAllowRoundUp() {
+    return allowRoundUp;
+  }
+
+  public void setAllowRoundUp(Boolean allowRoundUp) {
+    this.allowRoundUp = allowRoundUp;
+  }
+
   public TipConfiguration percentages(List<Double> percentages) {
     this.percentages = percentages;
     return this;
@@ -158,13 +179,14 @@ public class TipConfiguration {
     return Objects.equals(this.storeId, tipConfiguration.storeId) &&
         Objects.equals(this.isEnabled, tipConfiguration.isEnabled) &&
         Objects.equals(this.allowCustomTips, tipConfiguration.allowCustomTips) &&
+        Objects.equals(this.allowRoundUp, tipConfiguration.allowRoundUp) &&
         Objects.equals(this.percentages, tipConfiguration.percentages) &&
         Objects.equals(this.defaultPercentage, tipConfiguration.defaultPercentage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, isEnabled, allowCustomTips, percentages, defaultPercentage);
+    return Objects.hash(storeId, isEnabled, allowCustomTips, allowRoundUp, percentages, defaultPercentage);
   }
 
 
@@ -176,6 +198,7 @@ public class TipConfiguration {
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    allowCustomTips: ").append(toIndentedString(allowCustomTips)).append("\n");
+    sb.append("    allowRoundUp: ").append(toIndentedString(allowRoundUp)).append("\n");
     sb.append("    percentages: ").append(toIndentedString(percentages)).append("\n");
     sb.append("    defaultPercentage: ").append(toIndentedString(defaultPercentage)).append("\n");
     sb.append("}");

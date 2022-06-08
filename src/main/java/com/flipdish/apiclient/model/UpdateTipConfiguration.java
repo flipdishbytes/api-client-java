@@ -30,13 +30,16 @@ import java.util.List;
  * Describes the configuration of tipping
  */
 @ApiModel(description = "Describes the configuration of tipping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-07T12:47:04.151+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T08:53:59.871+01:00")
 public class UpdateTipConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
   @SerializedName("AllowCustomTips")
   private Boolean allowCustomTips = null;
+
+  @SerializedName("AllowRoundUp")
+  private Boolean allowRoundUp = null;
 
   @SerializedName("Percentages")
   private List<Double> percentages = null;
@@ -78,6 +81,24 @@ public class UpdateTipConfiguration {
 
   public void setAllowCustomTips(Boolean allowCustomTips) {
     this.allowCustomTips = allowCustomTips;
+  }
+
+  public UpdateTipConfiguration allowRoundUp(Boolean allowRoundUp) {
+    this.allowRoundUp = allowRoundUp;
+    return this;
+  }
+
+   /**
+   * Is round up allowed?
+   * @return allowRoundUp
+  **/
+  @ApiModelProperty(value = "Is round up allowed?")
+  public Boolean isAllowRoundUp() {
+    return allowRoundUp;
+  }
+
+  public void setAllowRoundUp(Boolean allowRoundUp) {
+    this.allowRoundUp = allowRoundUp;
   }
 
   public UpdateTipConfiguration percentages(List<Double> percentages) {
@@ -136,13 +157,14 @@ public class UpdateTipConfiguration {
     UpdateTipConfiguration updateTipConfiguration = (UpdateTipConfiguration) o;
     return Objects.equals(this.isEnabled, updateTipConfiguration.isEnabled) &&
         Objects.equals(this.allowCustomTips, updateTipConfiguration.allowCustomTips) &&
+        Objects.equals(this.allowRoundUp, updateTipConfiguration.allowRoundUp) &&
         Objects.equals(this.percentages, updateTipConfiguration.percentages) &&
         Objects.equals(this.defaultPercentage, updateTipConfiguration.defaultPercentage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isEnabled, allowCustomTips, percentages, defaultPercentage);
+    return Objects.hash(isEnabled, allowCustomTips, allowRoundUp, percentages, defaultPercentage);
   }
 
 
@@ -153,6 +175,7 @@ public class UpdateTipConfiguration {
     
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    allowCustomTips: ").append(toIndentedString(allowCustomTips)).append("\n");
+    sb.append("    allowRoundUp: ").append(toIndentedString(allowRoundUp)).append("\n");
     sb.append("    percentages: ").append(toIndentedString(percentages)).append("\n");
     sb.append("    defaultPercentage: ").append(toIndentedString(defaultPercentage)).append("\n");
     sb.append("}");
