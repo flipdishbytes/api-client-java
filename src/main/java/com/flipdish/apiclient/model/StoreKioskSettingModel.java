@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Kiosk Settings
  */
 @ApiModel(description = "Store Kiosk Settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T08:53:59.871+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
 public class StoreKioskSettingModel {
   @SerializedName("KioskName")
   private String kioskName = null;
