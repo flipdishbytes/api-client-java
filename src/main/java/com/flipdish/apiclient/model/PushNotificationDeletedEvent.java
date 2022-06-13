@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class PushNotificationDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;

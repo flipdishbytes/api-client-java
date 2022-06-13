@@ -1,12 +1,15 @@
 
-# CreateCatalogGroup
+# Group
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**catalogGroupId** | **String** | Unique catalog group id |  [optional]
+**catalogItemId** | **String** | Unique catalog item id |  [optional]
+**isArchived** | **Boolean** | Returns true if the group is archived |  [optional]
 **minSelectCount** | **Integer** | Minimum number of items that the user has to select |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items that the user has to select |  [optional]
-**items** | [**List&lt;CreateCatalogItemReference&gt;**](CreateCatalogItemReference.md) | Collection of items associated with this group |  [optional]
+**products** | [**List&lt;ProductReference&gt;**](ProductReference.md) | Collection of items associated with this product |  [optional]
 **metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields |  [optional]
 **groupType** | [**GroupTypeEnum**](#GroupTypeEnum) | Type of group (ModifierGroup, etc) | 
 **sku** | **String** | Stock Keeping Unit (SKU) | 

@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogGroup;
+import com.flipdish.apiclient.model.Group;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,12 +29,12 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
-public class RestApiResultCatalogGroup {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
+public class RestApiResultGroup {
   @SerializedName("Data")
-  private CatalogGroup data = null;
+  private Group data = null;
 
-  public RestApiResultCatalogGroup data(CatalogGroup data) {
+  public RestApiResultGroup data(Group data) {
     this.data = data;
     return this;
   }
@@ -44,11 +44,11 @@ public class RestApiResultCatalogGroup {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public CatalogGroup getData() {
+  public Group getData() {
     return data;
   }
 
-  public void setData(CatalogGroup data) {
+  public void setData(Group data) {
     this.data = data;
   }
 
@@ -61,8 +61,8 @@ public class RestApiResultCatalogGroup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiResultCatalogGroup restApiResultCatalogGroup = (RestApiResultCatalogGroup) o;
-    return Objects.equals(this.data, restApiResultCatalogGroup.data);
+    RestApiResultGroup restApiResultGroup = (RestApiResultGroup) o;
+    return Objects.equals(this.data, restApiResultGroup.data);
   }
 
   @Override
@@ -74,7 +74,7 @@ public class RestApiResultCatalogGroup {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiResultCatalogGroup {\n");
+    sb.append("class RestApiResultGroup {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

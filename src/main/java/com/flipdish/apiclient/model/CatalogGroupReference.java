@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogGroup;
+import com.flipdish.apiclient.model.Group;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,13 +26,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+ * Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
  */
-@ApiModel(description = "Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@ApiModel(description = "Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class CatalogGroupReference {
   @SerializedName("Group")
-  private CatalogGroup group = null;
+  private Group group = null;
 
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;
@@ -88,7 +88,7 @@ public class CatalogGroupReference {
   @SerializedName("GroupType")
   private GroupTypeEnum groupType = null;
 
-  public CatalogGroupReference group(CatalogGroup group) {
+  public CatalogGroupReference group(Group group) {
     this.group = group;
     return this;
   }
@@ -98,11 +98,11 @@ public class CatalogGroupReference {
    * @return group
   **/
   @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}")
-  public CatalogGroup getGroup() {
+  public Group getGroup() {
     return group;
   }
 
-  public void setGroup(CatalogGroup group) {
+  public void setGroup(Group group) {
     this.group = group;
   }
 

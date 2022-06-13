@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogItem;
+import com.flipdish.apiclient.model.Product;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,10 +29,13 @@ import java.io.IOException;
  * Catalog Item associated
  */
 @ApiModel(description = "Catalog Item associated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
-public class CatalogItemReference {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
+public class ProductReference {
   @SerializedName("Item")
-  private CatalogItem item = null;
+  private Product item = null;
+
+  @SerializedName("Product")
+  private Product product = null;
 
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
@@ -40,15 +43,15 @@ public class CatalogItemReference {
   /**
    * Type of the SupProduct
    */
-  @JsonAdapter(ItemTypeEnum.Adapter.class)
-  public enum ItemTypeEnum {
+  @JsonAdapter(ProductTypeEnum.Adapter.class)
+  public enum ProductTypeEnum {
     PRODUCT("Product"),
     
     MODIFIER("Modifier");
 
     private String value;
 
-    ItemTypeEnum(String value) {
+    ProductTypeEnum(String value) {
       this.value = value;
     }
 
@@ -61,8 +64,8 @@ public class CatalogItemReference {
       return String.valueOf(value);
     }
 
-    public static ItemTypeEnum fromValue(String text) {
-      for (ItemTypeEnum b : ItemTypeEnum.values()) {
+    public static ProductTypeEnum fromValue(String text) {
+      for (ProductTypeEnum b : ProductTypeEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -70,45 +73,63 @@ public class CatalogItemReference {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<ItemTypeEnum> {
+    public static class Adapter extends TypeAdapter<ProductTypeEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final ItemTypeEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final ProductTypeEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public ItemTypeEnum read(final JsonReader jsonReader) throws IOException {
+      public ProductTypeEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return ItemTypeEnum.fromValue(String.valueOf(value));
+        return ProductTypeEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("ItemType")
-  private ItemTypeEnum itemType = null;
+  @SerializedName("ProductType")
+  private ProductTypeEnum productType = null;
 
   @SerializedName("PreselectedQuantity")
   private Integer preselectedQuantity = null;
 
-  public CatalogItemReference item(CatalogItem item) {
+  public ProductReference item(Product item) {
     this.item = item;
     return this;
   }
 
    /**
-   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
+   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
    * @return item
   **/
-  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}")
-  public CatalogItem getItem() {
+  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
+  public Product getItem() {
     return item;
   }
 
-  public void setItem(CatalogItem item) {
+  public void setItem(Product item) {
     this.item = item;
   }
 
-  public CatalogItemReference catalogItemId(String catalogItemId) {
+  public ProductReference product(Product product) {
+    this.product = product;
+    return this;
+  }
+
+   /**
+   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+   * @return product
+  **/
+  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
+  public Product getProduct() {
+    return product;
+  }
+
+  public void setProduct(Product product) {
+    this.product = product;
+  }
+
+  public ProductReference catalogItemId(String catalogItemId) {
     this.catalogItemId = catalogItemId;
     return this;
   }
@@ -126,25 +147,25 @@ public class CatalogItemReference {
     this.catalogItemId = catalogItemId;
   }
 
-  public CatalogItemReference itemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public ProductReference productType(ProductTypeEnum productType) {
+    this.productType = productType;
     return this;
   }
 
    /**
    * Type of the SupProduct
-   * @return itemType
+   * @return productType
   **/
   @ApiModelProperty(required = true, value = "Type of the SupProduct")
-  public ItemTypeEnum getItemType() {
-    return itemType;
+  public ProductTypeEnum getProductType() {
+    return productType;
   }
 
-  public void setItemType(ItemTypeEnum itemType) {
-    this.itemType = itemType;
+  public void setProductType(ProductTypeEnum productType) {
+    this.productType = productType;
   }
 
-  public CatalogItemReference preselectedQuantity(Integer preselectedQuantity) {
+  public ProductReference preselectedQuantity(Integer preselectedQuantity) {
     this.preselectedQuantity = preselectedQuantity;
     return this;
   }
@@ -171,27 +192,29 @@ public class CatalogItemReference {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CatalogItemReference catalogItemReference = (CatalogItemReference) o;
-    return Objects.equals(this.item, catalogItemReference.item) &&
-        Objects.equals(this.catalogItemId, catalogItemReference.catalogItemId) &&
-        Objects.equals(this.itemType, catalogItemReference.itemType) &&
-        Objects.equals(this.preselectedQuantity, catalogItemReference.preselectedQuantity);
+    ProductReference productReference = (ProductReference) o;
+    return Objects.equals(this.item, productReference.item) &&
+        Objects.equals(this.product, productReference.product) &&
+        Objects.equals(this.catalogItemId, productReference.catalogItemId) &&
+        Objects.equals(this.productType, productReference.productType) &&
+        Objects.equals(this.preselectedQuantity, productReference.preselectedQuantity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(item, catalogItemId, itemType, preselectedQuantity);
+    return Objects.hash(item, product, catalogItemId, productType, preselectedQuantity);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogItemReference {\n");
+    sb.append("class ProductReference {\n");
     
     sb.append("    item: ").append(toIndentedString(item)).append("\n");
+    sb.append("    product: ").append(toIndentedString(product)).append("\n");
     sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
-    sb.append("    itemType: ").append(toIndentedString(itemType)).append("\n");
+    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    preselectedQuantity: ").append(toIndentedString(preselectedQuantity)).append("\n");
     sb.append("}");
     return sb.toString();

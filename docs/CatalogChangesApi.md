@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getPendingMenuChanges"></a>
 # **getPendingMenuChanges**
-> RestApiPaginationResultPendingMenuChanges getPendingMenuChanges(appId, menuId, catalogElementId, page, limit)
+> RestApiPaginationResultPendingMenuChanges getPendingMenuChanges(appId, menuId, catalogItemId, page, limit)
 
 Get menu pending changes from Catalog groups and items
 
@@ -34,11 +34,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 CatalogChangesApi apiInstance = new CatalogChangesApi();
 String appId = "appId_example"; // String | 
 Integer menuId = 56; // Integer | 
-String catalogElementId = "catalogElementId_example"; // String | 
+String catalogItemId = "catalogItemId_example"; // String | 
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultPendingMenuChanges result = apiInstance.getPendingMenuChanges(appId, menuId, catalogElementId, page, limit);
+    RestApiPaginationResultPendingMenuChanges result = apiInstance.getPendingMenuChanges(appId, menuId, catalogItemId, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CatalogChangesApi#getPendingMenuChanges");
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **menuId** | **Integer**|  | [optional]
- **catalogElementId** | **String**|  | [optional]
+ **catalogItemId** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 

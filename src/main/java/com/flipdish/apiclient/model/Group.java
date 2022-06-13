@@ -15,8 +15,8 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogItemReference;
 import com.flipdish.apiclient.model.Metafield;
+import com.flipdish.apiclient.model.ProductReference;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -32,8 +32,8 @@ import java.util.List;
  * CatalogGroup
  */
 @ApiModel(description = "CatalogGroup")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
-public class CatalogGroup {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
+public class Group {
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;
 
@@ -49,8 +49,8 @@ public class CatalogGroup {
   @SerializedName("MaxSelectCount")
   private Integer maxSelectCount = null;
 
-  @SerializedName("Items")
-  private List<CatalogItemReference> items = null;
+  @SerializedName("Products")
+  private List<ProductReference> products = null;
 
   @SerializedName("Metafields")
   private List<Metafield> metafields = null;
@@ -115,7 +115,7 @@ public class CatalogGroup {
   @SerializedName("ImageFileName")
   private String imageFileName = null;
 
-  public CatalogGroup catalogGroupId(String catalogGroupId) {
+  public Group catalogGroupId(String catalogGroupId) {
     this.catalogGroupId = catalogGroupId;
     return this;
   }
@@ -133,7 +133,7 @@ public class CatalogGroup {
     this.catalogGroupId = catalogGroupId;
   }
 
-  public CatalogGroup catalogItemId(String catalogItemId) {
+  public Group catalogItemId(String catalogItemId) {
     this.catalogItemId = catalogItemId;
     return this;
   }
@@ -151,7 +151,7 @@ public class CatalogGroup {
     this.catalogItemId = catalogItemId;
   }
 
-  public CatalogGroup isArchived(Boolean isArchived) {
+  public Group isArchived(Boolean isArchived) {
     this.isArchived = isArchived;
     return this;
   }
@@ -169,7 +169,7 @@ public class CatalogGroup {
     this.isArchived = isArchived;
   }
 
-  public CatalogGroup minSelectCount(Integer minSelectCount) {
+  public Group minSelectCount(Integer minSelectCount) {
     this.minSelectCount = minSelectCount;
     return this;
   }
@@ -187,7 +187,7 @@ public class CatalogGroup {
     this.minSelectCount = minSelectCount;
   }
 
-  public CatalogGroup maxSelectCount(Integer maxSelectCount) {
+  public Group maxSelectCount(Integer maxSelectCount) {
     this.maxSelectCount = maxSelectCount;
     return this;
   }
@@ -205,38 +205,38 @@ public class CatalogGroup {
     this.maxSelectCount = maxSelectCount;
   }
 
-  public CatalogGroup items(List<CatalogItemReference> items) {
-    this.items = items;
+  public Group products(List<ProductReference> products) {
+    this.products = products;
     return this;
   }
 
-  public CatalogGroup addItemsItem(CatalogItemReference itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<CatalogItemReference>();
+  public Group addProductsItem(ProductReference productsItem) {
+    if (this.products == null) {
+      this.products = new ArrayList<ProductReference>();
     }
-    this.items.add(itemsItem);
+    this.products.add(productsItem);
     return this;
   }
 
    /**
    * Collection of items associated with this product
-   * @return items
+   * @return products
   **/
   @ApiModelProperty(value = "Collection of items associated with this product")
-  public List<CatalogItemReference> getItems() {
-    return items;
+  public List<ProductReference> getProducts() {
+    return products;
   }
 
-  public void setItems(List<CatalogItemReference> items) {
-    this.items = items;
+  public void setProducts(List<ProductReference> products) {
+    this.products = products;
   }
 
-  public CatalogGroup metafields(List<Metafield> metafields) {
+  public Group metafields(List<Metafield> metafields) {
     this.metafields = metafields;
     return this;
   }
 
-  public CatalogGroup addMetafieldsItem(Metafield metafieldsItem) {
+  public Group addMetafieldsItem(Metafield metafieldsItem) {
     if (this.metafields == null) {
       this.metafields = new ArrayList<Metafield>();
     }
@@ -257,7 +257,7 @@ public class CatalogGroup {
     this.metafields = metafields;
   }
 
-  public CatalogGroup groupType(GroupTypeEnum groupType) {
+  public Group groupType(GroupTypeEnum groupType) {
     this.groupType = groupType;
     return this;
   }
@@ -275,7 +275,7 @@ public class CatalogGroup {
     this.groupType = groupType;
   }
 
-  public CatalogGroup sku(String sku) {
+  public Group sku(String sku) {
     this.sku = sku;
     return this;
   }
@@ -293,7 +293,7 @@ public class CatalogGroup {
     this.sku = sku;
   }
 
-  public CatalogGroup name(String name) {
+  public Group name(String name) {
     this.name = name;
     return this;
   }
@@ -311,7 +311,7 @@ public class CatalogGroup {
     this.name = name;
   }
 
-  public CatalogGroup autogenerateDisplayText(Boolean autogenerateDisplayText) {
+  public Group autogenerateDisplayText(Boolean autogenerateDisplayText) {
     this.autogenerateDisplayText = autogenerateDisplayText;
     return this;
   }
@@ -329,7 +329,7 @@ public class CatalogGroup {
     this.autogenerateDisplayText = autogenerateDisplayText;
   }
 
-  public CatalogGroup imageFileName(String imageFileName) {
+  public Group imageFileName(String imageFileName) {
     this.imageFileName = imageFileName;
     return this;
   }
@@ -356,38 +356,38 @@ public class CatalogGroup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CatalogGroup catalogGroup = (CatalogGroup) o;
-    return Objects.equals(this.catalogGroupId, catalogGroup.catalogGroupId) &&
-        Objects.equals(this.catalogItemId, catalogGroup.catalogItemId) &&
-        Objects.equals(this.isArchived, catalogGroup.isArchived) &&
-        Objects.equals(this.minSelectCount, catalogGroup.minSelectCount) &&
-        Objects.equals(this.maxSelectCount, catalogGroup.maxSelectCount) &&
-        Objects.equals(this.items, catalogGroup.items) &&
-        Objects.equals(this.metafields, catalogGroup.metafields) &&
-        Objects.equals(this.groupType, catalogGroup.groupType) &&
-        Objects.equals(this.sku, catalogGroup.sku) &&
-        Objects.equals(this.name, catalogGroup.name) &&
-        Objects.equals(this.autogenerateDisplayText, catalogGroup.autogenerateDisplayText) &&
-        Objects.equals(this.imageFileName, catalogGroup.imageFileName);
+    Group group = (Group) o;
+    return Objects.equals(this.catalogGroupId, group.catalogGroupId) &&
+        Objects.equals(this.catalogItemId, group.catalogItemId) &&
+        Objects.equals(this.isArchived, group.isArchived) &&
+        Objects.equals(this.minSelectCount, group.minSelectCount) &&
+        Objects.equals(this.maxSelectCount, group.maxSelectCount) &&
+        Objects.equals(this.products, group.products) &&
+        Objects.equals(this.metafields, group.metafields) &&
+        Objects.equals(this.groupType, group.groupType) &&
+        Objects.equals(this.sku, group.sku) &&
+        Objects.equals(this.name, group.name) &&
+        Objects.equals(this.autogenerateDisplayText, group.autogenerateDisplayText) &&
+        Objects.equals(this.imageFileName, group.imageFileName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogGroupId, catalogItemId, isArchived, minSelectCount, maxSelectCount, items, metafields, groupType, sku, name, autogenerateDisplayText, imageFileName);
+    return Objects.hash(catalogGroupId, catalogItemId, isArchived, minSelectCount, maxSelectCount, products, metafields, groupType, sku, name, autogenerateDisplayText, imageFileName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CatalogGroup {\n");
+    sb.append("class Group {\n");
     
     sb.append("    catalogGroupId: ").append(toIndentedString(catalogGroupId)).append("\n");
     sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    isArchived: ").append(toIndentedString(isArchived)).append("\n");
     sb.append("    minSelectCount: ").append(toIndentedString(minSelectCount)).append("\n");
     sb.append("    maxSelectCount: ").append(toIndentedString(maxSelectCount)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    products: ").append(toIndentedString(products)).append("\n");
     sb.append("    metafields: ").append(toIndentedString(metafields)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");

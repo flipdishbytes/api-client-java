@@ -30,30 +30,30 @@ import java.util.List;
  * Publish Menu Changes
  */
 @ApiModel(description = "Publish Menu Changes")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class PublishMenuChanges {
-  @SerializedName("CatalogElementId")
-  private String catalogElementId = null;
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   @SerializedName("MenuIds")
   private List<Integer> menuIds = null;
 
-  public PublishMenuChanges catalogElementId(String catalogElementId) {
-    this.catalogElementId = catalogElementId;
+  public PublishMenuChanges catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
     return this;
   }
 
    /**
-   * Optional Catalog element id
-   * @return catalogElementId
+   * Optional Catalog item id
+   * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Optional Catalog element id")
-  public String getCatalogElementId() {
-    return catalogElementId;
+  @ApiModelProperty(value = "Optional Catalog item id")
+  public String getCatalogItemId() {
+    return catalogItemId;
   }
 
-  public void setCatalogElementId(String catalogElementId) {
-    this.catalogElementId = catalogElementId;
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
   }
 
   public PublishMenuChanges menuIds(List<Integer> menuIds) {
@@ -92,13 +92,13 @@ public class PublishMenuChanges {
       return false;
     }
     PublishMenuChanges publishMenuChanges = (PublishMenuChanges) o;
-    return Objects.equals(this.catalogElementId, publishMenuChanges.catalogElementId) &&
+    return Objects.equals(this.catalogItemId, publishMenuChanges.catalogItemId) &&
         Objects.equals(this.menuIds, publishMenuChanges.menuIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogElementId, menuIds);
+    return Objects.hash(catalogItemId, menuIds);
   }
 
 
@@ -107,7 +107,7 @@ public class PublishMenuChanges {
     StringBuilder sb = new StringBuilder();
     sb.append("class PublishMenuChanges {\n");
     
-    sb.append("    catalogElementId: ").append(toIndentedString(catalogElementId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    menuIds: ").append(toIndentedString(menuIds)).append("\n");
     sb.append("}");
     return sb.toString();

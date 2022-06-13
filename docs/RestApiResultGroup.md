@@ -1,10 +1,10 @@
 
-# RestApiResultCatalogGroup
+# RestApiResultGroup
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**CatalogGroup**](CatalogGroup.md) | Generic data object. | 
+**data** | [**Group**](Group.md) | Generic data object. | 
 
 
 

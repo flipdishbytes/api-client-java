@@ -27,14 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.CatalogGroup;
-import com.flipdish.apiclient.model.CreateCatalogGroup;
+import com.flipdish.apiclient.model.CreateGroup;
+import com.flipdish.apiclient.model.Group;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultCatalogGroup;
-import com.flipdish.apiclient.model.RestApiResultCatalogGroup;
+import com.flipdish.apiclient.model.RestApiPaginationResultGroup;
+import com.flipdish.apiclient.model.RestApiResultGroup;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.UpdateCatalogGroup;
+import com.flipdish.apiclient.model.UpdateGroup;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -191,16 +191,16 @@ public class CatalogGroupsApi {
         return call;
     }
     /**
-     * Build call for createCatalogGroup
+     * Build call for createGroup
      * @param appId  (required)
-     * @param createCatalogGroup  (required)
+     * @param createGroup  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createCatalogGroupCall(String appId, CreateCatalogGroup createCatalogGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = createCatalogGroup;
+    public com.squareup.okhttp.Call createGroupCall(String appId, CreateGroup createGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = createGroup;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/catalog/groups"
@@ -242,20 +242,20 @@ public class CatalogGroupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createCatalogGroupValidateBeforeCall(String appId, CreateCatalogGroup createCatalogGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createGroupValidateBeforeCall(String appId, CreateGroup createGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling createCatalogGroup(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling createGroup(Async)");
         }
         
-        // verify the required parameter 'createCatalogGroup' is set
-        if (createCatalogGroup == null) {
-            throw new ApiException("Missing the required parameter 'createCatalogGroup' when calling createCatalogGroup(Async)");
+        // verify the required parameter 'createGroup' is set
+        if (createGroup == null) {
+            throw new ApiException("Missing the required parameter 'createGroup' when calling createGroup(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = createCatalogGroupCall(appId, createCatalogGroup, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createGroupCall(appId, createGroup, progressListener, progressRequestListener);
         return call;
 
     }
@@ -264,12 +264,12 @@ public class CatalogGroupsApi {
      * Create a Catalog Group
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param createCatalogGroup  (required)
-     * @return RestApiResultCatalogGroup
+     * @param createGroup  (required)
+     * @return RestApiResultGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultCatalogGroup createCatalogGroup(String appId, CreateCatalogGroup createCatalogGroup) throws ApiException {
-        ApiResponse<RestApiResultCatalogGroup> resp = createCatalogGroupWithHttpInfo(appId, createCatalogGroup);
+    public RestApiResultGroup createGroup(String appId, CreateGroup createGroup) throws ApiException {
+        ApiResponse<RestApiResultGroup> resp = createGroupWithHttpInfo(appId, createGroup);
         return resp.getData();
     }
 
@@ -277,13 +277,13 @@ public class CatalogGroupsApi {
      * Create a Catalog Group
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param createCatalogGroup  (required)
-     * @return ApiResponse&lt;RestApiResultCatalogGroup&gt;
+     * @param createGroup  (required)
+     * @return ApiResponse&lt;RestApiResultGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultCatalogGroup> createCatalogGroupWithHttpInfo(String appId, CreateCatalogGroup createCatalogGroup) throws ApiException {
-        com.squareup.okhttp.Call call = createCatalogGroupValidateBeforeCall(appId, createCatalogGroup, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultCatalogGroup>(){}.getType();
+    public ApiResponse<RestApiResultGroup> createGroupWithHttpInfo(String appId, CreateGroup createGroup) throws ApiException {
+        com.squareup.okhttp.Call call = createGroupValidateBeforeCall(appId, createGroup, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultGroup>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -291,12 +291,12 @@ public class CatalogGroupsApi {
      * Create a Catalog Group (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
-     * @param createCatalogGroup  (required)
+     * @param createGroup  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createCatalogGroupAsync(String appId, CreateCatalogGroup createCatalogGroup, final ApiCallback<RestApiResultCatalogGroup> callback) throws ApiException {
+    public com.squareup.okhttp.Call createGroupAsync(String appId, CreateGroup createGroup, final ApiCallback<RestApiResultGroup> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -317,8 +317,8 @@ public class CatalogGroupsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createCatalogGroupValidateBeforeCall(appId, createCatalogGroup, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultCatalogGroup>(){}.getType();
+        com.squareup.okhttp.Call call = createGroupValidateBeforeCall(appId, createGroup, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultGroup>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -527,11 +527,11 @@ public class CatalogGroupsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @return CatalogGroup
+     * @return Group
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CatalogGroup getGroupById(String appId, String catalogItemId) throws ApiException {
-        ApiResponse<CatalogGroup> resp = getGroupByIdWithHttpInfo(appId, catalogItemId);
+    public Group getGroupById(String appId, String catalogItemId) throws ApiException {
+        ApiResponse<Group> resp = getGroupByIdWithHttpInfo(appId, catalogItemId);
         return resp.getData();
     }
 
@@ -540,12 +540,12 @@ public class CatalogGroupsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @return ApiResponse&lt;CatalogGroup&gt;
+     * @return ApiResponse&lt;Group&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CatalogGroup> getGroupByIdWithHttpInfo(String appId, String catalogItemId) throws ApiException {
+    public ApiResponse<Group> getGroupByIdWithHttpInfo(String appId, String catalogItemId) throws ApiException {
         com.squareup.okhttp.Call call = getGroupByIdValidateBeforeCall(appId, catalogItemId, null, null);
-        Type localVarReturnType = new TypeToken<CatalogGroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<Group>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -558,7 +558,7 @@ public class CatalogGroupsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGroupByIdAsync(String appId, String catalogItemId, final ApiCallback<CatalogGroup> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGroupByIdAsync(String appId, String catalogItemId, final ApiCallback<Group> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -580,7 +580,7 @@ public class CatalogGroupsApi {
         }
 
         com.squareup.okhttp.Call call = getGroupByIdValidateBeforeCall(appId, catalogItemId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<CatalogGroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<Group>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -673,11 +673,11 @@ public class CatalogGroupsApi {
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
-     * @return RestApiPaginationResultCatalogGroup
+     * @return RestApiPaginationResultGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultCatalogGroup getGroups(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
-        ApiResponse<RestApiPaginationResultCatalogGroup> resp = getGroupsWithHttpInfo(appId, groupTypes, searchTerm, page, limit);
+    public RestApiPaginationResultGroup getGroups(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
+        ApiResponse<RestApiPaginationResultGroup> resp = getGroupsWithHttpInfo(appId, groupTypes, searchTerm, page, limit);
         return resp.getData();
     }
 
@@ -689,12 +689,12 @@ public class CatalogGroupsApi {
      * @param searchTerm  (optional)
      * @param page  (optional)
      * @param limit  (optional)
-     * @return ApiResponse&lt;RestApiPaginationResultCatalogGroup&gt;
+     * @return ApiResponse&lt;RestApiPaginationResultGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultCatalogGroup> getGroupsWithHttpInfo(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
+    public ApiResponse<RestApiPaginationResultGroup> getGroupsWithHttpInfo(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit) throws ApiException {
         com.squareup.okhttp.Call call = getGroupsValidateBeforeCall(appId, groupTypes, searchTerm, page, limit, null, null);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultCatalogGroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultGroup>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -710,7 +710,7 @@ public class CatalogGroupsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGroupsAsync(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultCatalogGroup> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGroupsAsync(String appId, List<String> groupTypes, String searchTerm, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultGroup> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -732,7 +732,7 @@ public class CatalogGroupsApi {
         }
 
         com.squareup.okhttp.Call call = getGroupsValidateBeforeCall(appId, groupTypes, searchTerm, page, limit, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiPaginationResultCatalogGroup>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultGroup>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -740,14 +740,14 @@ public class CatalogGroupsApi {
      * Build call for updateGroup
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @param updateCatalogGroup  (required)
+     * @param updateGroup  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateGroupCall(String appId, String catalogItemId, UpdateCatalogGroup updateCatalogGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = updateCatalogGroup;
+    public com.squareup.okhttp.Call updateGroupCall(String appId, String catalogItemId, UpdateGroup updateGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateGroup;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/catalog/groups/{catalogItemId}"
@@ -790,7 +790,7 @@ public class CatalogGroupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateGroupValidateBeforeCall(String appId, String catalogItemId, UpdateCatalogGroup updateCatalogGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateGroupValidateBeforeCall(String appId, String catalogItemId, UpdateGroup updateGroup, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -802,13 +802,13 @@ public class CatalogGroupsApi {
             throw new ApiException("Missing the required parameter 'catalogItemId' when calling updateGroup(Async)");
         }
         
-        // verify the required parameter 'updateCatalogGroup' is set
-        if (updateCatalogGroup == null) {
-            throw new ApiException("Missing the required parameter 'updateCatalogGroup' when calling updateGroup(Async)");
+        // verify the required parameter 'updateGroup' is set
+        if (updateGroup == null) {
+            throw new ApiException("Missing the required parameter 'updateGroup' when calling updateGroup(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateGroupCall(appId, catalogItemId, updateCatalogGroup, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateGroupCall(appId, catalogItemId, updateGroup, progressListener, progressRequestListener);
         return call;
 
     }
@@ -818,11 +818,11 @@ public class CatalogGroupsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @param updateCatalogGroup  (required)
+     * @param updateGroup  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateGroup(String appId, String catalogItemId, UpdateCatalogGroup updateCatalogGroup) throws ApiException {
-        updateGroupWithHttpInfo(appId, catalogItemId, updateCatalogGroup);
+    public void updateGroup(String appId, String catalogItemId, UpdateGroup updateGroup) throws ApiException {
+        updateGroupWithHttpInfo(appId, catalogItemId, updateGroup);
     }
 
     /**
@@ -830,12 +830,12 @@ public class CatalogGroupsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @param updateCatalogGroup  (required)
+     * @param updateGroup  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateGroupWithHttpInfo(String appId, String catalogItemId, UpdateCatalogGroup updateCatalogGroup) throws ApiException {
-        com.squareup.okhttp.Call call = updateGroupValidateBeforeCall(appId, catalogItemId, updateCatalogGroup, null, null);
+    public ApiResponse<Void> updateGroupWithHttpInfo(String appId, String catalogItemId, UpdateGroup updateGroup) throws ApiException {
+        com.squareup.okhttp.Call call = updateGroupValidateBeforeCall(appId, catalogItemId, updateGroup, null, null);
         return apiClient.execute(call);
     }
 
@@ -844,12 +844,12 @@ public class CatalogGroupsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
-     * @param updateCatalogGroup  (required)
+     * @param updateGroup  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateGroupAsync(String appId, String catalogItemId, UpdateCatalogGroup updateCatalogGroup, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateGroupAsync(String appId, String catalogItemId, UpdateGroup updateGroup, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -870,7 +870,7 @@ public class CatalogGroupsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateGroupValidateBeforeCall(appId, catalogItemId, updateCatalogGroup, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateGroupValidateBeforeCall(appId, catalogItemId, updateGroup, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogGroup;
+import com.flipdish.apiclient.model.Group;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,8 +31,8 @@ import java.util.List;
  * Rest api pagination result
  */
 @ApiModel(description = "Rest api pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
-public class RestApiPaginationResultCatalogGroup {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
+public class RestApiPaginationResultGroup {
   @SerializedName("Page")
   private Integer page = null;
 
@@ -43,9 +43,9 @@ public class RestApiPaginationResultCatalogGroup {
   private Integer totalRecordCount = null;
 
   @SerializedName("Data")
-  private List<CatalogGroup> data = new ArrayList<CatalogGroup>();
+  private List<Group> data = new ArrayList<Group>();
 
-  public RestApiPaginationResultCatalogGroup page(Integer page) {
+  public RestApiPaginationResultGroup page(Integer page) {
     this.page = page;
     return this;
   }
@@ -63,7 +63,7 @@ public class RestApiPaginationResultCatalogGroup {
     this.page = page;
   }
 
-  public RestApiPaginationResultCatalogGroup limit(Integer limit) {
+  public RestApiPaginationResultGroup limit(Integer limit) {
     this.limit = limit;
     return this;
   }
@@ -81,7 +81,7 @@ public class RestApiPaginationResultCatalogGroup {
     this.limit = limit;
   }
 
-  public RestApiPaginationResultCatalogGroup totalRecordCount(Integer totalRecordCount) {
+  public RestApiPaginationResultGroup totalRecordCount(Integer totalRecordCount) {
     this.totalRecordCount = totalRecordCount;
     return this;
   }
@@ -99,12 +99,12 @@ public class RestApiPaginationResultCatalogGroup {
     this.totalRecordCount = totalRecordCount;
   }
 
-  public RestApiPaginationResultCatalogGroup data(List<CatalogGroup> data) {
+  public RestApiPaginationResultGroup data(List<Group> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiPaginationResultCatalogGroup addDataItem(CatalogGroup dataItem) {
+  public RestApiPaginationResultGroup addDataItem(Group dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -114,11 +114,11 @@ public class RestApiPaginationResultCatalogGroup {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<CatalogGroup> getData() {
+  public List<Group> getData() {
     return data;
   }
 
-  public void setData(List<CatalogGroup> data) {
+  public void setData(List<Group> data) {
     this.data = data;
   }
 
@@ -131,11 +131,11 @@ public class RestApiPaginationResultCatalogGroup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiPaginationResultCatalogGroup restApiPaginationResultCatalogGroup = (RestApiPaginationResultCatalogGroup) o;
-    return Objects.equals(this.page, restApiPaginationResultCatalogGroup.page) &&
-        Objects.equals(this.limit, restApiPaginationResultCatalogGroup.limit) &&
-        Objects.equals(this.totalRecordCount, restApiPaginationResultCatalogGroup.totalRecordCount) &&
-        Objects.equals(this.data, restApiPaginationResultCatalogGroup.data);
+    RestApiPaginationResultGroup restApiPaginationResultGroup = (RestApiPaginationResultGroup) o;
+    return Objects.equals(this.page, restApiPaginationResultGroup.page) &&
+        Objects.equals(this.limit, restApiPaginationResultGroup.limit) &&
+        Objects.equals(this.totalRecordCount, restApiPaginationResultGroup.totalRecordCount) &&
+        Objects.equals(this.data, restApiPaginationResultGroup.data);
   }
 
   @Override
@@ -147,7 +147,7 @@ public class RestApiPaginationResultCatalogGroup {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiPaginationResultCatalogGroup {\n");
+    sb.append("class RestApiPaginationResultGroup {\n");
     
     sb.append("    page: ").append(toIndentedString(page)).append("\n");
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");

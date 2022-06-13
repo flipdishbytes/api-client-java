@@ -1,16 +1,16 @@
 
-# UpdateCatalogItemReference
+# CreateProductReference
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **catalogItemId** | **String** | Identifier of the CatalogItemId to use as SubProduct | 
-**itemType** | [**ItemTypeEnum**](#ItemTypeEnum) | Type of the SupProduct | 
+**productType** | [**ProductTypeEnum**](#ProductTypeEnum) | Type of the SupProduct | 
 **preselectedQuantity** | **Integer** | Quantity of the modifier that will be set when the parent product is placed in the basket |  [optional]
 
 
-<a name="ItemTypeEnum"></a>
-## Enum: ItemTypeEnum
+<a name="ProductTypeEnum"></a>
+## Enum: ProductTypeEnum
 Name | Value
 ---- | -----
 PRODUCT | &quot;Product&quot;

@@ -4,8 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**catalogGroupId** | **String** | Identifier of the ProductId to use as SubProduct | 
-**catalogItemId** | **String** | Identifier of the ProductId to use as SubProduct |  [optional]
+**catalogItemId** | **String** | Identifier of the ProductId to use as SubProduct | 
 **groupType** | [**GroupTypeEnum**](#GroupTypeEnum) | Type of the SupProduct | 
 
 

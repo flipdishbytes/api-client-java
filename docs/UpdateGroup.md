@@ -1,5 +1,5 @@
 
-# UpdateCatalogGroup
+# UpdateGroup
 
 ## Properties
 Name | Type | Description | Notes
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **imageFileName** | **String** | Image File Name |  [optional]
 **minSelectCount** | **Integer** | Minimum number of items that the user has to select |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items that the user has to select |  [optional]
-**items** | [**List&lt;UpdateCatalogItemReference&gt;**](UpdateCatalogItemReference.md) | Collection of items associated with this group |  [optional]
+**products** | [**List&lt;UpdateProductReference&gt;**](UpdateProductReference.md) | Collection of items associated with this group |  [optional]
 **metafields** | [**List&lt;Metafield&gt;**](Metafield.md) | Collection of metafields |  [optional]
 
 

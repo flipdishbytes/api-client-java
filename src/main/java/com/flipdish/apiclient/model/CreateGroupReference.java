@@ -28,11 +28,8 @@ import java.io.IOException;
  * Information to create a reference to a {System.Text.RegularExpressions.Group}
  */
 @ApiModel(description = "Information to create a reference to a {System.Text.RegularExpressions.Group}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class CreateGroupReference {
-  @SerializedName("CatalogGroupId")
-  private String catalogGroupId = null;
-
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
 
@@ -84,24 +81,6 @@ public class CreateGroupReference {
   @SerializedName("GroupType")
   private GroupTypeEnum groupType = null;
 
-  public CreateGroupReference catalogGroupId(String catalogGroupId) {
-    this.catalogGroupId = catalogGroupId;
-    return this;
-  }
-
-   /**
-   * Identifier of the ProductId to use as SubProduct
-   * @return catalogGroupId
-  **/
-  @ApiModelProperty(required = true, value = "Identifier of the ProductId to use as SubProduct")
-  public String getCatalogGroupId() {
-    return catalogGroupId;
-  }
-
-  public void setCatalogGroupId(String catalogGroupId) {
-    this.catalogGroupId = catalogGroupId;
-  }
-
   public CreateGroupReference catalogItemId(String catalogItemId) {
     this.catalogItemId = catalogItemId;
     return this;
@@ -111,7 +90,7 @@ public class CreateGroupReference {
    * Identifier of the ProductId to use as SubProduct
    * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Identifier of the ProductId to use as SubProduct")
+  @ApiModelProperty(required = true, value = "Identifier of the ProductId to use as SubProduct")
   public String getCatalogItemId() {
     return catalogItemId;
   }
@@ -148,14 +127,13 @@ public class CreateGroupReference {
       return false;
     }
     CreateGroupReference createGroupReference = (CreateGroupReference) o;
-    return Objects.equals(this.catalogGroupId, createGroupReference.catalogGroupId) &&
-        Objects.equals(this.catalogItemId, createGroupReference.catalogItemId) &&
+    return Objects.equals(this.catalogItemId, createGroupReference.catalogItemId) &&
         Objects.equals(this.groupType, createGroupReference.groupType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogGroupId, catalogItemId, groupType);
+    return Objects.hash(catalogItemId, groupType);
   }
 
 
@@ -164,7 +142,6 @@ public class CreateGroupReference {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreateGroupReference {\n");
     
-    sb.append("    catalogGroupId: ").append(toIndentedString(catalogGroupId)).append("\n");
     sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("}");

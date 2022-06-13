@@ -14,14 +14,14 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.CatalogGroup;
-import com.flipdish.apiclient.model.CreateCatalogGroup;
+import com.flipdish.apiclient.model.CreateGroup;
+import com.flipdish.apiclient.model.Group;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultCatalogGroup;
-import com.flipdish.apiclient.model.RestApiResultCatalogGroup;
+import com.flipdish.apiclient.model.RestApiPaginationResultGroup;
+import com.flipdish.apiclient.model.RestApiResultGroup;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.UpdateCatalogGroup;
+import com.flipdish.apiclient.model.UpdateGroup;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -65,10 +65,10 @@ public class CatalogGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createCatalogGroupTest() throws ApiException {
+    public void createGroupTest() throws ApiException {
         String appId = null;
-        CreateCatalogGroup createCatalogGroup = null;
-        RestApiResultCatalogGroup response = api.createCatalogGroup(appId, createCatalogGroup);
+        CreateGroup createGroup = null;
+        RestApiResultGroup response = api.createGroup(appId, createGroup);
 
         // TODO: test validations
     }
@@ -102,7 +102,7 @@ public class CatalogGroupsApiTest {
     public void getGroupByIdTest() throws ApiException {
         String appId = null;
         String catalogItemId = null;
-        CatalogGroup response = api.getGroupById(appId, catalogItemId);
+        Group response = api.getGroupById(appId, catalogItemId);
 
         // TODO: test validations
     }
@@ -122,7 +122,7 @@ public class CatalogGroupsApiTest {
         String searchTerm = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultCatalogGroup response = api.getGroups(appId, groupTypes, searchTerm, page, limit);
+        RestApiPaginationResultGroup response = api.getGroups(appId, groupTypes, searchTerm, page, limit);
 
         // TODO: test validations
     }
@@ -139,8 +139,8 @@ public class CatalogGroupsApiTest {
     public void updateGroupTest() throws ApiException {
         String appId = null;
         String catalogItemId = null;
-        UpdateCatalogGroup updateCatalogGroup = null;
-        api.updateGroup(appId, catalogItemId, updateCatalogGroup);
+        UpdateGroup updateGroup = null;
+        api.updateGroup(appId, catalogItemId, updateGroup);
 
         // TODO: test validations
     }

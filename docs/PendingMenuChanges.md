@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**catalogElementId** | **String** | Unique catalog element id |  [optional]
+**catalogItemId** | **String** | Unique catalog item id |  [optional]
 **menuId** | **Integer** | Unique menu id |  [optional]
 
 

@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.CatalogGroup;
+import com.flipdish.apiclient.model.Group;
 import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class CatalogGroupArchivedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -43,8 +43,8 @@ public class CatalogGroupArchivedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
 
-  @SerializedName("CatalogGroup")
-  private CatalogGroup catalogGroup = null;
+  @SerializedName("Group")
+  private Group group = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -115,22 +115,22 @@ public class CatalogGroupArchivedEvent {
     this.user = user;
   }
 
-  public CatalogGroupArchivedEvent catalogGroup(CatalogGroup catalogGroup) {
-    this.catalogGroup = catalogGroup;
+  public CatalogGroupArchivedEvent group(Group group) {
+    this.group = group;
     return this;
   }
 
    /**
    * Catalog group created
-   * @return catalogGroup
+   * @return group
   **/
   @ApiModelProperty(value = "Catalog group created")
-  public CatalogGroup getCatalogGroup() {
-    return catalogGroup;
+  public Group getGroup() {
+    return group;
   }
 
-  public void setCatalogGroup(CatalogGroup catalogGroup) {
-    this.catalogGroup = catalogGroup;
+  public void setGroup(Group group) {
+    this.group = group;
   }
 
   public CatalogGroupArchivedEvent flipdishEventId(UUID flipdishEventId) {
@@ -236,7 +236,7 @@ public class CatalogGroupArchivedEvent {
     return Objects.equals(this.eventName, catalogGroupArchivedEvent.eventName) &&
         Objects.equals(this.description, catalogGroupArchivedEvent.description) &&
         Objects.equals(this.user, catalogGroupArchivedEvent.user) &&
-        Objects.equals(this.catalogGroup, catalogGroupArchivedEvent.catalogGroup) &&
+        Objects.equals(this.group, catalogGroupArchivedEvent.group) &&
         Objects.equals(this.flipdishEventId, catalogGroupArchivedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, catalogGroupArchivedEvent.createTime) &&
         Objects.equals(this.position, catalogGroupArchivedEvent.position) &&
@@ -246,7 +246,7 @@ public class CatalogGroupArchivedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, catalogGroup, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, user, group, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -258,7 +258,7 @@ public class CatalogGroupArchivedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    catalogGroup: ").append(toIndentedString(catalogGroup)).append("\n");
+    sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

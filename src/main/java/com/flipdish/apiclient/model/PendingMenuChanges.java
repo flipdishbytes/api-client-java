@@ -28,30 +28,30 @@ import java.io.IOException;
  * Pending Menu Changes
  */
 @ApiModel(description = "Pending Menu Changes")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class PendingMenuChanges {
-  @SerializedName("CatalogElementId")
-  private String catalogElementId = null;
+  @SerializedName("CatalogItemId")
+  private String catalogItemId = null;
 
   @SerializedName("MenuId")
   private Integer menuId = null;
 
-  public PendingMenuChanges catalogElementId(String catalogElementId) {
-    this.catalogElementId = catalogElementId;
+  public PendingMenuChanges catalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
     return this;
   }
 
    /**
-   * Unique catalog element id
-   * @return catalogElementId
+   * Unique catalog item id
+   * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Unique catalog element id")
-  public String getCatalogElementId() {
-    return catalogElementId;
+  @ApiModelProperty(value = "Unique catalog item id")
+  public String getCatalogItemId() {
+    return catalogItemId;
   }
 
-  public void setCatalogElementId(String catalogElementId) {
-    this.catalogElementId = catalogElementId;
+  public void setCatalogItemId(String catalogItemId) {
+    this.catalogItemId = catalogItemId;
   }
 
   public PendingMenuChanges menuId(Integer menuId) {
@@ -82,13 +82,13 @@ public class PendingMenuChanges {
       return false;
     }
     PendingMenuChanges pendingMenuChanges = (PendingMenuChanges) o;
-    return Objects.equals(this.catalogElementId, pendingMenuChanges.catalogElementId) &&
+    return Objects.equals(this.catalogItemId, pendingMenuChanges.catalogItemId) &&
         Objects.equals(this.menuId, pendingMenuChanges.menuId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogElementId, menuId);
+    return Objects.hash(catalogItemId, menuId);
   }
 
 
@@ -97,7 +97,7 @@ public class PendingMenuChanges {
     StringBuilder sb = new StringBuilder();
     sb.append("class PendingMenuChanges {\n");
     
-    sb.append("    catalogElementId: ").append(toIndentedString(catalogElementId)).append("\n");
+    sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,11 +28,8 @@ import java.io.IOException;
  * Data to update a {Flipdish.PublicModels.V1.Catalog.Products.GroupReference}
  */
 @ApiModel(description = "Data to update a {Flipdish.PublicModels.V1.Catalog.Products.GroupReference}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-08T13:18:58.782+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
 public class UpdateGroupReference {
-  @SerializedName("CatalogGroupId")
-  private String catalogGroupId = null;
-
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
 
@@ -84,24 +81,6 @@ public class UpdateGroupReference {
   @SerializedName("GroupType")
   private GroupTypeEnum groupType = null;
 
-  public UpdateGroupReference catalogGroupId(String catalogGroupId) {
-    this.catalogGroupId = catalogGroupId;
-    return this;
-  }
-
-   /**
-   * Identifier of the ProductId to use as SubProduct
-   * @return catalogGroupId
-  **/
-  @ApiModelProperty(required = true, value = "Identifier of the ProductId to use as SubProduct")
-  public String getCatalogGroupId() {
-    return catalogGroupId;
-  }
-
-  public void setCatalogGroupId(String catalogGroupId) {
-    this.catalogGroupId = catalogGroupId;
-  }
-
   public UpdateGroupReference catalogItemId(String catalogItemId) {
     this.catalogItemId = catalogItemId;
     return this;
@@ -111,7 +90,7 @@ public class UpdateGroupReference {
    * Identifier of the ProductId to use as SubProduct
    * @return catalogItemId
   **/
-  @ApiModelProperty(value = "Identifier of the ProductId to use as SubProduct")
+  @ApiModelProperty(required = true, value = "Identifier of the ProductId to use as SubProduct")
   public String getCatalogItemId() {
     return catalogItemId;
   }
@@ -148,14 +127,13 @@ public class UpdateGroupReference {
       return false;
     }
     UpdateGroupReference updateGroupReference = (UpdateGroupReference) o;
-    return Objects.equals(this.catalogGroupId, updateGroupReference.catalogGroupId) &&
-        Objects.equals(this.catalogItemId, updateGroupReference.catalogItemId) &&
+    return Objects.equals(this.catalogItemId, updateGroupReference.catalogItemId) &&
         Objects.equals(this.groupType, updateGroupReference.groupType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogGroupId, catalogItemId, groupType);
+    return Objects.hash(catalogItemId, groupType);
   }
 
 
@@ -164,7 +142,6 @@ public class UpdateGroupReference {
     StringBuilder sb = new StringBuilder();
     sb.append("class UpdateGroupReference {\n");
     
-    sb.append("    catalogGroupId: ").append(toIndentedString(catalogGroupId)).append("\n");
     sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("}");

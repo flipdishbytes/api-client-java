@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
-[**createCatalogGroup**](CatalogGroupsApi.md#createCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 [**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
 [**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 [**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
@@ -66,9 +66,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="createCatalogGroup"></a>
-# **createCatalogGroup**
-> RestApiResultCatalogGroup createCatalogGroup(appId, createCatalogGroup)
+<a name="createGroup"></a>
+# **createGroup**
+> RestApiResultGroup createGroup(appId, createGroup)
 
 Create a Catalog Group
 
@@ -91,12 +91,12 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
-CreateCatalogGroup createCatalogGroup = new CreateCatalogGroup(); // CreateCatalogGroup | 
+CreateGroup createGroup = new CreateGroup(); // CreateGroup | 
 try {
-    RestApiResultCatalogGroup result = apiInstance.createCatalogGroup(appId, createCatalogGroup);
+    RestApiResultGroup result = apiInstance.createGroup(appId, createGroup);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CatalogGroupsApi#createCatalogGroup");
+    System.err.println("Exception when calling CatalogGroupsApi#createGroup");
     e.printStackTrace();
 }
 ```
@@ -106,11 +106,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **createCatalogGroup** | [**CreateCatalogGroup**](CreateCatalogGroup.md)|  |
+ **createGroup** | [**CreateGroup**](CreateGroup.md)|  |
 
 ### Return type
 
-[**RestApiResultCatalogGroup**](RestApiResultCatalogGroup.md)
+[**RestApiResultGroup**](RestApiResultGroup.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ null (empty response body)
 
 <a name="getGroupById"></a>
 # **getGroupById**
-> CatalogGroup getGroupById(appId, catalogItemId)
+> Group getGroupById(appId, catalogItemId)
 
 Get group by Id
 
@@ -202,7 +202,7 @@ CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
 String catalogItemId = "catalogItemId_example"; // String | 
 try {
-    CatalogGroup result = apiInstance.getGroupById(appId, catalogItemId);
+    Group result = apiInstance.getGroupById(appId, catalogItemId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CatalogGroupsApi#getGroupById");
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogGroup**](CatalogGroup.md)
+[**Group**](Group.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 <a name="getGroups"></a>
 # **getGroups**
-> RestApiPaginationResultCatalogGroup getGroups(appId, groupTypes, searchTerm, page, limit)
+> RestApiPaginationResultGroup getGroups(appId, groupTypes, searchTerm, page, limit)
 
 Get paginated groups by app name id filtered by types
 
@@ -260,7 +260,7 @@ String searchTerm = "searchTerm_example"; // String |
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultCatalogGroup result = apiInstance.getGroups(appId, groupTypes, searchTerm, page, limit);
+    RestApiPaginationResultGroup result = apiInstance.getGroups(appId, groupTypes, searchTerm, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CatalogGroupsApi#getGroups");
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultCatalogGroup**](RestApiPaginationResultCatalogGroup.md)
+[**RestApiPaginationResultGroup**](RestApiPaginationResultGroup.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 <a name="updateGroup"></a>
 # **updateGroup**
-> updateGroup(appId, catalogItemId, updateCatalogGroup)
+> updateGroup(appId, catalogItemId, updateGroup)
 
 Update Catalog Group
 
@@ -317,9 +317,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 CatalogGroupsApi apiInstance = new CatalogGroupsApi();
 String appId = "appId_example"; // String | 
 String catalogItemId = "catalogItemId_example"; // String | 
-UpdateCatalogGroup updateCatalogGroup = new UpdateCatalogGroup(); // UpdateCatalogGroup | 
+UpdateGroup updateGroup = new UpdateGroup(); // UpdateGroup | 
 try {
-    apiInstance.updateGroup(appId, catalogItemId, updateCatalogGroup);
+    apiInstance.updateGroup(appId, catalogItemId, updateGroup);
 } catch (ApiException e) {
     System.err.println("Exception when calling CatalogGroupsApi#updateGroup");
     e.printStackTrace();
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **catalogItemId** | **String**|  |
- **updateCatalogGroup** | [**UpdateCatalogGroup**](UpdateCatalogGroup.md)|  |
+ **updateGroup** | [**UpdateGroup**](UpdateGroup.md)|  |
 
 ### Return type
 

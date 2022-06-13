@@ -48,10 +48,10 @@ public class CatalogChangesApiTest {
     public void getPendingMenuChangesTest() throws ApiException {
         String appId = null;
         Integer menuId = null;
-        String catalogElementId = null;
+        String catalogItemId = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultPendingMenuChanges response = api.getPendingMenuChanges(appId, menuId, catalogElementId, page, limit);
+        RestApiPaginationResultPendingMenuChanges response = api.getPendingMenuChanges(appId, menuId, catalogItemId, page, limit);
 
         // TODO: test validations
     }

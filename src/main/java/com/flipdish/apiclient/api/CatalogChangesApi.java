@@ -62,7 +62,7 @@ public class CatalogChangesApi {
      * Build call for getPendingMenuChanges
      * @param appId  (required)
      * @param menuId  (optional)
-     * @param catalogElementId  (optional)
+     * @param catalogItemId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param progressListener Progress listener
@@ -70,7 +70,7 @@ public class CatalogChangesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPendingMenuChangesCall(String appId, Integer menuId, String catalogElementId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPendingMenuChangesCall(String appId, Integer menuId, String catalogItemId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -81,8 +81,8 @@ public class CatalogChangesApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (menuId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
-        if (catalogElementId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("catalogElementId", catalogElementId));
+        if (catalogItemId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("catalogItemId", catalogItemId));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -121,7 +121,7 @@ public class CatalogChangesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPendingMenuChangesValidateBeforeCall(String appId, Integer menuId, String catalogElementId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPendingMenuChangesValidateBeforeCall(String appId, Integer menuId, String catalogItemId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -129,7 +129,7 @@ public class CatalogChangesApi {
         }
         
 
-        com.squareup.okhttp.Call call = getPendingMenuChangesCall(appId, menuId, catalogElementId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPendingMenuChangesCall(appId, menuId, catalogItemId, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -139,14 +139,14 @@ public class CatalogChangesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
-     * @param catalogElementId  (optional)
+     * @param catalogItemId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @return RestApiPaginationResultPendingMenuChanges
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultPendingMenuChanges getPendingMenuChanges(String appId, Integer menuId, String catalogElementId, Integer page, Integer limit) throws ApiException {
-        ApiResponse<RestApiPaginationResultPendingMenuChanges> resp = getPendingMenuChangesWithHttpInfo(appId, menuId, catalogElementId, page, limit);
+    public RestApiPaginationResultPendingMenuChanges getPendingMenuChanges(String appId, Integer menuId, String catalogItemId, Integer page, Integer limit) throws ApiException {
+        ApiResponse<RestApiPaginationResultPendingMenuChanges> resp = getPendingMenuChangesWithHttpInfo(appId, menuId, catalogItemId, page, limit);
         return resp.getData();
     }
 
@@ -155,14 +155,14 @@ public class CatalogChangesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
-     * @param catalogElementId  (optional)
+     * @param catalogItemId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultPendingMenuChanges&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultPendingMenuChanges> getPendingMenuChangesWithHttpInfo(String appId, Integer menuId, String catalogElementId, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = getPendingMenuChangesValidateBeforeCall(appId, menuId, catalogElementId, page, limit, null, null);
+    public ApiResponse<RestApiPaginationResultPendingMenuChanges> getPendingMenuChangesWithHttpInfo(String appId, Integer menuId, String catalogItemId, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = getPendingMenuChangesValidateBeforeCall(appId, menuId, catalogItemId, page, limit, null, null);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultPendingMenuChanges>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -172,14 +172,14 @@ public class CatalogChangesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
-     * @param catalogElementId  (optional)
+     * @param catalogItemId  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPendingMenuChangesAsync(String appId, Integer menuId, String catalogElementId, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultPendingMenuChanges> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPendingMenuChangesAsync(String appId, Integer menuId, String catalogItemId, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultPendingMenuChanges> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -200,7 +200,7 @@ public class CatalogChangesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPendingMenuChangesValidateBeforeCall(appId, menuId, catalogElementId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPendingMenuChangesValidateBeforeCall(appId, menuId, catalogItemId, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultPendingMenuChanges>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
