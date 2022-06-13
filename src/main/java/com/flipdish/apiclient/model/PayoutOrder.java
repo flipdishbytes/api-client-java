@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for an order related to a payout
  */
 @ApiModel(description = "Holds the information for an order related to a payout")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T10:04:32.138+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T11:24:07.541+01:00")
 public class PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -404,6 +404,12 @@ public class PayoutOrder {
   @SerializedName("StoreId")
   private Integer storeId = null;
 
+  @SerializedName("ServiceChargeAmount")
+  private Double serviceChargeAmount = null;
+
+  @SerializedName("ServiceChargePercentage")
+  private Double serviceChargePercentage = null;
+
   public PayoutOrder orderId(Integer orderId) {
     this.orderId = orderId;
     return this;
@@ -746,6 +752,42 @@ public class PayoutOrder {
     this.storeId = storeId;
   }
 
+  public PayoutOrder serviceChargeAmount(Double serviceChargeAmount) {
+    this.serviceChargeAmount = serviceChargeAmount;
+    return this;
+  }
+
+   /**
+   * Order ServiceChargeAmount amount
+   * @return serviceChargeAmount
+  **/
+  @ApiModelProperty(value = "Order ServiceChargeAmount amount")
+  public Double getServiceChargeAmount() {
+    return serviceChargeAmount;
+  }
+
+  public void setServiceChargeAmount(Double serviceChargeAmount) {
+    this.serviceChargeAmount = serviceChargeAmount;
+  }
+
+  public PayoutOrder serviceChargePercentage(Double serviceChargePercentage) {
+    this.serviceChargePercentage = serviceChargePercentage;
+    return this;
+  }
+
+   /**
+   * Order ServiceChargePercentage amount
+   * @return serviceChargePercentage
+  **/
+  @ApiModelProperty(value = "Order ServiceChargePercentage amount")
+  public Double getServiceChargePercentage() {
+    return serviceChargePercentage;
+  }
+
+  public void setServiceChargePercentage(Double serviceChargePercentage) {
+    this.serviceChargePercentage = serviceChargePercentage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -774,12 +816,14 @@ public class PayoutOrder {
         Objects.equals(this.totalFees, payoutOrder.totalFees) &&
         Objects.equals(this.cashFeeChargedToCustomer, payoutOrder.cashFeeChargedToCustomer) &&
         Objects.equals(this.netSales, payoutOrder.netSales) &&
-        Objects.equals(this.storeId, payoutOrder.storeId);
+        Objects.equals(this.storeId, payoutOrder.storeId) &&
+        Objects.equals(this.serviceChargeAmount, payoutOrder.serviceChargeAmount) &&
+        Objects.equals(this.serviceChargePercentage, payoutOrder.serviceChargePercentage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId);
+    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, serviceChargeAmount, serviceChargePercentage);
   }
 
 
@@ -807,6 +851,8 @@ public class PayoutOrder {
     sb.append("    cashFeeChargedToCustomer: ").append(toIndentedString(cashFeeChargedToCustomer)).append("\n");
     sb.append("    netSales: ").append(toIndentedString(netSales)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
+    sb.append("    serviceChargePercentage: ").append(toIndentedString(serviceChargePercentage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
