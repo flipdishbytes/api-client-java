@@ -53,7 +53,7 @@ public class LookerSingleSignOnApiTest {
     }
     
     /**
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      *
      * 
      *
@@ -64,7 +64,8 @@ public class LookerSingleSignOnApiTest {
     public void getSSOEndpointTest() throws ApiException {
         String appId = null;
         String embedPath = null;
-        DashboardEmbed response = api.getSSOEndpoint(appId, embedPath);
+        String filters = null;
+        DashboardEmbed response = api.getSSOEndpoint(appId, embedPath, filters);
 
         // TODO: test validations
     }

@@ -195,12 +195,13 @@ public class LookerSingleSignOnApi {
      * Build call for getSSOEndpoint
      * @param appId AppNameId (required)
      * @param embedPath Embed URL of the dashboard (required)
+     * @param filters Filters that will be passed to the dashboard (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getSSOEndpointCall(String appId, String embedPath, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getSSOEndpointCall(String appId, String embedPath, String filters, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -211,6 +212,8 @@ public class LookerSingleSignOnApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (embedPath != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("embedPath", embedPath));
+        if (filters != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("filters", filters));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -245,7 +248,7 @@ public class LookerSingleSignOnApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getSSOEndpointValidateBeforeCall(String appId, String embedPath, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getSSOEndpointValidateBeforeCall(String appId, String embedPath, String filters, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -258,48 +261,51 @@ public class LookerSingleSignOnApi {
         }
         
 
-        com.squareup.okhttp.Call call = getSSOEndpointCall(appId, embedPath, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSSOEndpointCall(appId, embedPath, filters, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      * 
      * @param appId AppNameId (required)
      * @param embedPath Embed URL of the dashboard (required)
+     * @param filters Filters that will be passed to the dashboard (optional)
      * @return DashboardEmbed
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public DashboardEmbed getSSOEndpoint(String appId, String embedPath) throws ApiException {
-        ApiResponse<DashboardEmbed> resp = getSSOEndpointWithHttpInfo(appId, embedPath);
+    public DashboardEmbed getSSOEndpoint(String appId, String embedPath, String filters) throws ApiException {
+        ApiResponse<DashboardEmbed> resp = getSSOEndpointWithHttpInfo(appId, embedPath, filters);
         return resp.getData();
     }
 
     /**
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      * 
      * @param appId AppNameId (required)
      * @param embedPath Embed URL of the dashboard (required)
+     * @param filters Filters that will be passed to the dashboard (optional)
      * @return ApiResponse&lt;DashboardEmbed&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<DashboardEmbed> getSSOEndpointWithHttpInfo(String appId, String embedPath) throws ApiException {
-        com.squareup.okhttp.Call call = getSSOEndpointValidateBeforeCall(appId, embedPath, null, null);
+    public ApiResponse<DashboardEmbed> getSSOEndpointWithHttpInfo(String appId, String embedPath, String filters) throws ApiException {
+        com.squareup.okhttp.Call call = getSSOEndpointValidateBeforeCall(appId, embedPath, filters, null, null);
         Type localVarReturnType = new TypeToken<DashboardEmbed>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Get the single sign on embed URL for PerformanceSummary Dashboard (asynchronously)
+     * Get the generic single sign on embed URL for Looker dashboards (asynchronously)
      * 
      * @param appId AppNameId (required)
      * @param embedPath Embed URL of the dashboard (required)
+     * @param filters Filters that will be passed to the dashboard (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSSOEndpointAsync(String appId, String embedPath, final ApiCallback<DashboardEmbed> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSSOEndpointAsync(String appId, String embedPath, String filters, final ApiCallback<DashboardEmbed> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -320,7 +326,7 @@ public class LookerSingleSignOnApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getSSOEndpointValidateBeforeCall(appId, embedPath, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSSOEndpointValidateBeforeCall(appId, embedPath, filters, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<DashboardEmbed>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
