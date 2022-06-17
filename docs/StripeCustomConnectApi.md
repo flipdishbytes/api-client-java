@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
 [**stripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripeCustomConnectRefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+[**updatePayoutSchedule**](StripeCustomConnectApi.md#updatePayoutSchedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
 
 
 <a name="createBankAccountAndConnectedAccount"></a>
@@ -388,5 +389,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="updatePayoutSchedule"></a>
+# **updatePayoutSchedule**
+> RestApiResultModelBase updatePayoutSchedule(appId, stripeConnectedAccountId, interval)
+
+Update Stripe Connection Account&#39;s payout schedule
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StripeCustomConnectApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StripeCustomConnectApi apiInstance = new StripeCustomConnectApi();
+String appId = "appId_example"; // String | 
+String stripeConnectedAccountId = "stripeConnectedAccountId_example"; // String | 
+String interval = "interval_example"; // String | 
+try {
+    RestApiResultModelBase result = apiInstance.updatePayoutSchedule(appId, stripeConnectedAccountId, interval);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StripeCustomConnectApi#updatePayoutSchedule");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **stripeConnectedAccountId** | **String**|  |
+ **interval** | **String**|  |
+
+### Return type
+
+[**RestApiResultModelBase**](RestApiResultModelBase.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 

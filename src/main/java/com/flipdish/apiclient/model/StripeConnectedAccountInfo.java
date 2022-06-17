@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents information about a Stripe connected account associated with a bank account
  */
 @ApiModel(description = "Represents information about a Stripe connected account associated with a bank account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-16T14:34:50.609+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-17T08:22:50.614+01:00")
 public class StripeConnectedAccountInfo {
   /**
    * Stripe connected account status
@@ -147,6 +147,60 @@ public class StripeConnectedAccountInfo {
   @SerializedName("CardPaymentStatus")
   private CardPaymentStatusEnum cardPaymentStatus = null;
 
+  /**
+   * Payouts Schedule Interval
+   */
+  @JsonAdapter(PayoutScheduleIntervalEnum.Adapter.class)
+  public enum PayoutScheduleIntervalEnum {
+    MANUAL("Manual"),
+    
+    DAILY("Daily"),
+    
+    WEEKLY("Weekly"),
+    
+    MONTHLY("Monthly");
+
+    private String value;
+
+    PayoutScheduleIntervalEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static PayoutScheduleIntervalEnum fromValue(String text) {
+      for (PayoutScheduleIntervalEnum b : PayoutScheduleIntervalEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<PayoutScheduleIntervalEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final PayoutScheduleIntervalEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public PayoutScheduleIntervalEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return PayoutScheduleIntervalEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("PayoutScheduleInterval")
+  private PayoutScheduleIntervalEnum payoutScheduleInterval = null;
+
   public StripeConnectedAccountInfo accountStatus(AccountStatusEnum accountStatus) {
     this.accountStatus = accountStatus;
     return this;
@@ -201,6 +255,24 @@ public class StripeConnectedAccountInfo {
     this.cardPaymentStatus = cardPaymentStatus;
   }
 
+  public StripeConnectedAccountInfo payoutScheduleInterval(PayoutScheduleIntervalEnum payoutScheduleInterval) {
+    this.payoutScheduleInterval = payoutScheduleInterval;
+    return this;
+  }
+
+   /**
+   * Payouts Schedule Interval
+   * @return payoutScheduleInterval
+  **/
+  @ApiModelProperty(value = "Payouts Schedule Interval")
+  public PayoutScheduleIntervalEnum getPayoutScheduleInterval() {
+    return payoutScheduleInterval;
+  }
+
+  public void setPayoutScheduleInterval(PayoutScheduleIntervalEnum payoutScheduleInterval) {
+    this.payoutScheduleInterval = payoutScheduleInterval;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -213,12 +285,13 @@ public class StripeConnectedAccountInfo {
     StripeConnectedAccountInfo stripeConnectedAccountInfo = (StripeConnectedAccountInfo) o;
     return Objects.equals(this.accountStatus, stripeConnectedAccountInfo.accountStatus) &&
         Objects.equals(this.stripeId, stripeConnectedAccountInfo.stripeId) &&
-        Objects.equals(this.cardPaymentStatus, stripeConnectedAccountInfo.cardPaymentStatus);
+        Objects.equals(this.cardPaymentStatus, stripeConnectedAccountInfo.cardPaymentStatus) &&
+        Objects.equals(this.payoutScheduleInterval, stripeConnectedAccountInfo.payoutScheduleInterval);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountStatus, stripeId, cardPaymentStatus);
+    return Objects.hash(accountStatus, stripeId, cardPaymentStatus, payoutScheduleInterval);
   }
 
 
@@ -230,6 +303,7 @@ public class StripeConnectedAccountInfo {
     sb.append("    accountStatus: ").append(toIndentedString(accountStatus)).append("\n");
     sb.append("    stripeId: ").append(toIndentedString(stripeId)).append("\n");
     sb.append("    cardPaymentStatus: ").append(toIndentedString(cardPaymentStatus)).append("\n");
+    sb.append("    payoutScheduleInterval: ").append(toIndentedString(payoutScheduleInterval)).append("\n");
     sb.append("}");
     return sb.toString();
   }

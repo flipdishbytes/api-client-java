@@ -19,6 +19,7 @@ import com.flipdish.apiclient.model.BankAccountDetailsUpdateRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBankAccountDetail;
+import com.flipdish.apiclient.model.RestApiResultModelBase;
 import com.flipdish.apiclient.model.RestApiResultStripeConnectedAccount;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StripeAccountLinkRequest;
@@ -157,6 +158,24 @@ public class StripeCustomConnectApiTest {
         Integer bankAccountId = null;
         BankAccountDetailsUpdateRequest updateRequest = null;
         RestApiResultStripeConnectedAccount response = api.updateBankAccountDetails(appId, bankAccountId, updateRequest);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update Stripe Connection Account&#39;s payout schedule
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updatePayoutScheduleTest() throws ApiException {
+        String appId = null;
+        String stripeConnectedAccountId = null;
+        String interval = null;
+        RestApiResultModelBase response = api.updatePayoutSchedule(appId, stripeConnectedAccountId, interval);
 
         // TODO: test validations
     }
