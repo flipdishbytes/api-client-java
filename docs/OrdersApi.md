@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order delivery information
+[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatus**
 > RestApiResultOrderFulfillmentStatus getFulfillmentStatus(orderId)
 
-Get order delivery information
+Get order fulfillment status
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
 
@@ -593,7 +593,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
 Integer orderId = 56; // Integer | Flipdish Order Id
-OrderFulfillmentStatusBase fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | 
+OrderFulfillmentStatusBase fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
 try {
     apiInstance.updateFulfillmentStatus(orderId, fulfillmentStatusRequest);
 } catch (ApiException e) {
@@ -607,7 +607,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **Integer**| Flipdish Order Id |
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)|  |
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status |
 
 ### Return type
 

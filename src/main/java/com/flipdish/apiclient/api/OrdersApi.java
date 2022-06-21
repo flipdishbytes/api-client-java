@@ -502,7 +502,7 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information
+     * Get order fulfillment status
      * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
      * @return RestApiResultOrderFulfillmentStatus
@@ -514,7 +514,7 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information
+     * Get order fulfillment status
      * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
      * @return ApiResponse&lt;RestApiResultOrderFulfillmentStatus&gt;
@@ -527,7 +527,7 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information (asynchronously)
+     * Get order fulfillment status (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1384,7 +1384,7 @@ public class OrdersApi {
     /**
      * Build call for updateFulfillmentStatus
      * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest  (required)
+     * @param fulfillmentStatusRequest Fulfillment Status (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1455,7 +1455,7 @@ public class OrdersApi {
      * Add/update fulfillment status information to an order
      * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest  (required)
+     * @param fulfillmentStatusRequest Fulfillment Status (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateFulfillmentStatus(Integer orderId, OrderFulfillmentStatusBase fulfillmentStatusRequest) throws ApiException {
@@ -1466,7 +1466,7 @@ public class OrdersApi {
      * Add/update fulfillment status information to an order
      * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest  (required)
+     * @param fulfillmentStatusRequest Fulfillment Status (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1479,7 +1479,7 @@ public class OrdersApi {
      * Add/update fulfillment status information to an order (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
      * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest  (required)
+     * @param fulfillmentStatusRequest Fulfillment Status (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

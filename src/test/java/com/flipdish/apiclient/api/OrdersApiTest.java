@@ -95,7 +95,7 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order delivery information
+     * Get order fulfillment status
      *
      * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
      *

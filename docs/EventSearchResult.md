@@ -119,6 +119,7 @@ Name | Type | Description | Notes
 **websiteUpdatedEvent** | [**List&lt;WebsiteUpdatedEvent&gt;**](WebsiteUpdatedEvent.md) | Website updated |  [optional]
 **orderCapacityUpdatedEvent** | [**List&lt;OrderCapacityConfigUpdatedEvent&gt;**](OrderCapacityConfigUpdatedEvent.md) | Order capacity config updated |  [optional]
 **externalStoreEvent** | [**List&lt;ExternalStoreEvent&gt;**](ExternalStoreEvent.md) | External event |  [optional]
+**orderFulfillmentStatusUpdatedEvent** | [**List&lt;OrderFulfillmentStatusUpdatedEvent&gt;**](OrderFulfillmentStatusUpdatedEvent.md) | Fulfillment status updated event |  [optional]
 **appStoreConfigCreatedEvent** | [**List&lt;AppStoreConfigCreatedEvent&gt;**](AppStoreConfigCreatedEvent.md) | App Store Config Created |  [optional]
 **appStoreConfigUpdatedEvent** | [**List&lt;AppStoreConfigUpdatedEvent&gt;**](AppStoreConfigUpdatedEvent.md) | App Store Config Updated |  [optional]
 **appStoreConfigDeletedEvent** | [**List&lt;AppStoreConfigDeletedEvent&gt;**](AppStoreConfigDeletedEvent.md) | App Store Config Deleted |  [optional]
