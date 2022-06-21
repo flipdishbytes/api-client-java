@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Accept;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
+import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -25,6 +26,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultOrder;
 import com.flipdish.apiclient.model.RestApiPaginationResultOrderSummary;
 import com.flipdish.apiclient.model.RestApiResultOrder;
 import com.flipdish.apiclient.model.RestApiResultOrderDeliveryInformation;
+import com.flipdish.apiclient.model.RestApiResultOrderFulfillmentStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -88,6 +90,22 @@ public class OrdersApiTest {
     public void getDeliveryInformationTest() throws ApiException {
         Integer orderId = null;
         RestApiResultOrderDeliveryInformation response = api.getDeliveryInformation(orderId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get order delivery information
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getFulfillmentStatusTest() throws ApiException {
+        Integer orderId = null;
+        RestApiResultOrderFulfillmentStatus response = api.getFulfillmentStatus(orderId);
 
         // TODO: test validations
     }
@@ -199,6 +217,23 @@ public class OrdersApiTest {
         Integer orderId = null;
         OrderDeliveryInformationBase deliveryInformation = null;
         api.updateDeliveryInformation(orderId, deliveryInformation);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Add/update fulfillment status information to an order
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateFulfillmentStatusTest() throws ApiException {
+        Integer orderId = null;
+        OrderFulfillmentStatusBase fulfillmentStatusRequest = null;
+        api.updateFulfillmentStatus(orderId, fulfillmentStatusRequest);
 
         // TODO: test validations
     }

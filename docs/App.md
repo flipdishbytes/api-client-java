@@ -172,6 +172,7 @@ REMOVEDRIVERFROMAPP | &quot;RemoveDriverFromApp&quot;
 ASSIGNDRIVERTOORDER | &quot;AssignDriverToOrder&quot;
 UNASSIGNDRIVERFROMORDER | &quot;UnassignDriverFromOrder&quot;
 UPDATEORDERSDELIVERYTRACKINGSTATUS | &quot;UpdateOrdersDeliveryTrackingStatus&quot;
+UPDATEORDERFULFILLMENTSTATUS | &quot;UpdateOrderFulfillmentStatus&quot;
 VIEWPAYOUTS | &quot;ViewPayouts&quot;
 VIEWCHANNELS | &quot;ViewChannels&quot;
 VIEWONBOARDING | &quot;ViewOnboarding&quot;
