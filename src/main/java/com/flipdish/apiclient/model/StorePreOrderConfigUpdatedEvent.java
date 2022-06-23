@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Pre order config updated
  */
 @ApiModel(description = "Store Pre order config updated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-23T10:43:02.857+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-23T13:29:51.386+01:00")
 public class StorePreOrderConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -48,6 +48,9 @@ public class StorePreOrderConfigUpdatedEvent {
 
   @SerializedName("PreOrderConfig")
   private PreOrderConfig preOrderConfig = null;
+
+  @SerializedName("OldPreOrderConfig")
+  private PreOrderConfig oldPreOrderConfig = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -152,6 +155,24 @@ public class StorePreOrderConfigUpdatedEvent {
 
   public void setPreOrderConfig(PreOrderConfig preOrderConfig) {
     this.preOrderConfig = preOrderConfig;
+  }
+
+  public StorePreOrderConfigUpdatedEvent oldPreOrderConfig(PreOrderConfig oldPreOrderConfig) {
+    this.oldPreOrderConfig = oldPreOrderConfig;
+    return this;
+  }
+
+   /**
+   * Old Pre Order Configuration
+   * @return oldPreOrderConfig
+  **/
+  @ApiModelProperty(value = "Old Pre Order Configuration")
+  public PreOrderConfig getOldPreOrderConfig() {
+    return oldPreOrderConfig;
+  }
+
+  public void setOldPreOrderConfig(PreOrderConfig oldPreOrderConfig) {
+    this.oldPreOrderConfig = oldPreOrderConfig;
   }
 
   public StorePreOrderConfigUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -259,6 +280,7 @@ public class StorePreOrderConfigUpdatedEvent {
         Objects.equals(this.user, storePreOrderConfigUpdatedEvent.user) &&
         Objects.equals(this.description, storePreOrderConfigUpdatedEvent.description) &&
         Objects.equals(this.preOrderConfig, storePreOrderConfigUpdatedEvent.preOrderConfig) &&
+        Objects.equals(this.oldPreOrderConfig, storePreOrderConfigUpdatedEvent.oldPreOrderConfig) &&
         Objects.equals(this.flipdishEventId, storePreOrderConfigUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, storePreOrderConfigUpdatedEvent.createTime) &&
         Objects.equals(this.position, storePreOrderConfigUpdatedEvent.position) &&
@@ -268,7 +290,7 @@ public class StorePreOrderConfigUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, user, description, preOrderConfig, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, storeId, user, description, preOrderConfig, oldPreOrderConfig, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -282,6 +304,7 @@ public class StorePreOrderConfigUpdatedEvent {
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    preOrderConfig: ").append(toIndentedString(preOrderConfig)).append("\n");
+    sb.append("    oldPreOrderConfig: ").append(toIndentedString(oldPreOrderConfig)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
