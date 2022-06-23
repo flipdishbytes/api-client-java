@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.OnboardingConfigUpdate;
 import com.flipdish.apiclient.model.OnboardingItemUpdate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -44,10 +45,43 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
+    public void onboardingGetOnboardingConfigTest() throws ApiException {
+        String appId = null;
+        Object response = api.onboardingGetOnboardingConfig(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void onboardingGetOnboardingItemsTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
         Object response = api.onboardingGetOnboardingItems(appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void onboardingUpdateOnboardingConfigTest() throws ApiException {
+        String appId = null;
+        OnboardingConfigUpdate configUpdate = null;
+        Object response = api.onboardingUpdateOnboardingConfig(appId, configUpdate);
 
         // TODO: test validations
     }
