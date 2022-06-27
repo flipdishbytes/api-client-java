@@ -29,7 +29,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentIntentsApi apiInstance = new PaymentIntentsApi();
-String paymentIntentId = "paymentIntentId_example"; // String | Stripes payment intent indentifier
+String paymentIntentId = "paymentIntentId_example"; // String | Stripe payment intent identifier
 try {
     RestApiResultPaymentIntent result = apiInstance.getPaymentIntent(paymentIntentId);
     System.out.println(result);
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentIntentId** | **String**| Stripes payment intent indentifier |
+ **paymentIntentId** | **String**| Stripe payment intent identifier |
 
 ### Return type
 

@@ -59,7 +59,7 @@ public class PaymentIntentsApi {
 
     /**
      * Build call for getPaymentIntent
-     * @param paymentIntentId Stripes payment intent indentifier (required)
+     * @param paymentIntentId Stripe payment intent identifier (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -124,7 +124,7 @@ public class PaymentIntentsApi {
     /**
      * Returns stripe payment intent for a given id
      * 
-     * @param paymentIntentId Stripes payment intent indentifier (required)
+     * @param paymentIntentId Stripe payment intent identifier (required)
      * @return RestApiResultPaymentIntent
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -136,7 +136,7 @@ public class PaymentIntentsApi {
     /**
      * Returns stripe payment intent for a given id
      * 
-     * @param paymentIntentId Stripes payment intent indentifier (required)
+     * @param paymentIntentId Stripe payment intent identifier (required)
      * @return ApiResponse&lt;RestApiResultPaymentIntent&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -149,7 +149,7 @@ public class PaymentIntentsApi {
     /**
      * Returns stripe payment intent for a given id (asynchronously)
      * 
-     * @param paymentIntentId Stripes payment intent indentifier (required)
+     * @param paymentIntentId Stripe payment intent identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
