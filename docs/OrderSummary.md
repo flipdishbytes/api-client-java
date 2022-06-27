@@ -61,6 +61,7 @@ TABLE | &quot;Table&quot;
 PARKINGBAY | &quot;ParkingBay&quot;
 GATE | &quot;Gate&quot;
 DRIVETHROUGH | &quot;DriveThrough&quot;
+TEAM | &quot;Team&quot;
 
 
 <a name="OrderStateEnum"></a>
