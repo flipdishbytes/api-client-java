@@ -152,7 +152,8 @@ public class CampaignsApiTest {
     @Test
     public void getStoreListTest() throws ApiException {
         String appId = null;
-        RestApiArrayResultStoreListItem response = api.getStoreList(appId);
+        Boolean onlyPublished = null;
+        RestApiArrayResultStoreListItem response = api.getStoreList(appId, onlyPublished);
 
         // TODO: test validations
     }

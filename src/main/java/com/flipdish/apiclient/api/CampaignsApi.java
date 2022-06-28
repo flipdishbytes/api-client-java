@@ -842,12 +842,13 @@ public class CampaignsApi {
     /**
      * Build call for getStoreList
      * @param appId App Name Id (required)
+     * @param onlyPublished  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStoreListCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStoreListCall(String appId, Boolean onlyPublished, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -856,6 +857,8 @@ public class CampaignsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (onlyPublished != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("onlyPublished", onlyPublished));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -890,7 +893,7 @@ public class CampaignsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStoreListValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStoreListValidateBeforeCall(String appId, Boolean onlyPublished, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -898,7 +901,7 @@ public class CampaignsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getStoreListCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoreListCall(appId, onlyPublished, progressListener, progressRequestListener);
         return call;
 
     }
@@ -907,11 +910,12 @@ public class CampaignsApi {
      * Gets list of stores for app
      * 
      * @param appId App Name Id (required)
+     * @param onlyPublished  (optional)
      * @return RestApiArrayResultStoreListItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultStoreListItem getStoreList(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultStoreListItem> resp = getStoreListWithHttpInfo(appId);
+    public RestApiArrayResultStoreListItem getStoreList(String appId, Boolean onlyPublished) throws ApiException {
+        ApiResponse<RestApiArrayResultStoreListItem> resp = getStoreListWithHttpInfo(appId, onlyPublished);
         return resp.getData();
     }
 
@@ -919,11 +923,12 @@ public class CampaignsApi {
      * Gets list of stores for app
      * 
      * @param appId App Name Id (required)
+     * @param onlyPublished  (optional)
      * @return ApiResponse&lt;RestApiArrayResultStoreListItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultStoreListItem> getStoreListWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getStoreListValidateBeforeCall(appId, null, null);
+    public ApiResponse<RestApiArrayResultStoreListItem> getStoreListWithHttpInfo(String appId, Boolean onlyPublished) throws ApiException {
+        com.squareup.okhttp.Call call = getStoreListValidateBeforeCall(appId, onlyPublished, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultStoreListItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -932,11 +937,12 @@ public class CampaignsApi {
      * Gets list of stores for app (asynchronously)
      * 
      * @param appId App Name Id (required)
+     * @param onlyPublished  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreListAsync(String appId, final ApiCallback<RestApiArrayResultStoreListItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoreListAsync(String appId, Boolean onlyPublished, final ApiCallback<RestApiArrayResultStoreListItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -957,7 +963,7 @@ public class CampaignsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStoreListValidateBeforeCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoreListValidateBeforeCall(appId, onlyPublished, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultStoreListItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

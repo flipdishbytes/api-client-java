@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoreList"></a>
 # **getStoreList**
-> RestApiArrayResultStoreListItem getStoreList(appId)
+> RestApiArrayResultStoreListItem getStoreList(appId, onlyPublished)
 
 Gets list of stores for app
 
@@ -353,8 +353,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 String appId = "appId_example"; // String | App Name Id
+Boolean onlyPublished = true; // Boolean | 
 try {
-    RestApiArrayResultStoreListItem result = apiInstance.getStoreList(appId);
+    RestApiArrayResultStoreListItem result = apiInstance.getStoreList(appId, onlyPublished);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CampaignsApi#getStoreList");
@@ -367,6 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Name Id |
+ **onlyPublished** | **Boolean**|  | [optional]
 
 ### Return type
 

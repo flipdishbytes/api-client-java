@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store id and name
  */
 @ApiModel(description = "Store id and name")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-27T14:44:08.820+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-28T15:18:01.989+01:00")
 public class StoreListItem {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -47,6 +47,9 @@ public class StoreListItem {
 
   @SerializedName("HasRetentionCampaign")
   private Boolean hasRetentionCampaign = null;
+
+  @SerializedName("IsPublished")
+  private Boolean isPublished = null;
 
   public StoreListItem storeId(Integer storeId) {
     this.storeId = storeId;
@@ -156,6 +159,24 @@ public class StoreListItem {
     this.hasRetentionCampaign = hasRetentionCampaign;
   }
 
+  public StoreListItem isPublished(Boolean isPublished) {
+    this.isPublished = isPublished;
+    return this;
+  }
+
+   /**
+   * Is Published store
+   * @return isPublished
+  **/
+  @ApiModelProperty(value = "Is Published store")
+  public Boolean isIsPublished() {
+    return isPublished;
+  }
+
+  public void setIsPublished(Boolean isPublished) {
+    this.isPublished = isPublished;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -171,12 +192,13 @@ public class StoreListItem {
         Objects.equals(this.storeGroupId, storeListItem.storeGroupId) &&
         Objects.equals(this.storeGroupName, storeListItem.storeGroupName) &&
         Objects.equals(this.hasLoyaltyCampaign, storeListItem.hasLoyaltyCampaign) &&
-        Objects.equals(this.hasRetentionCampaign, storeListItem.hasRetentionCampaign);
+        Objects.equals(this.hasRetentionCampaign, storeListItem.hasRetentionCampaign) &&
+        Objects.equals(this.isPublished, storeListItem.isPublished);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeName, storeGroupId, storeGroupName, hasLoyaltyCampaign, hasRetentionCampaign);
+    return Objects.hash(storeId, storeName, storeGroupId, storeGroupName, hasLoyaltyCampaign, hasRetentionCampaign, isPublished);
   }
 
 
@@ -191,6 +213,7 @@ public class StoreListItem {
     sb.append("    storeGroupName: ").append(toIndentedString(storeGroupName)).append("\n");
     sb.append("    hasLoyaltyCampaign: ").append(toIndentedString(hasLoyaltyCampaign)).append("\n");
     sb.append("    hasRetentionCampaign: ").append(toIndentedString(hasRetentionCampaign)).append("\n");
+    sb.append("    isPublished: ").append(toIndentedString(isPublished)).append("\n");
     sb.append("}");
     return sb.toString();
   }
