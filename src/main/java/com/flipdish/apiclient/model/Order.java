@@ -22,6 +22,7 @@ import com.flipdish.apiclient.model.DeliveryLocation;
 import com.flipdish.apiclient.model.FeeSummary;
 import com.flipdish.apiclient.model.MaskedPhoneNumber;
 import com.flipdish.apiclient.model.OrderDropOffLocation;
+import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.OrderItem;
 import com.flipdish.apiclient.model.OrderVoucherSummary;
 import com.flipdish.apiclient.model.StoreSummary;
@@ -41,7 +42,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-28T15:18:01.989+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-29T14:22:45.424+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -99,6 +100,9 @@ public class Order {
 
   @SerializedName("OrderDropOffLocation")
   private OrderDropOffLocation orderDropOffLocation = null;
+
+  @SerializedName("FulfillmentStatus")
+  private OrderFulfillmentStatusBase fulfillmentStatus = null;
 
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -1059,6 +1063,24 @@ public class Order {
     this.orderDropOffLocation = orderDropOffLocation;
   }
 
+  public Order fulfillmentStatus(OrderFulfillmentStatusBase fulfillmentStatus) {
+    this.fulfillmentStatus = fulfillmentStatus;
+    return this;
+  }
+
+   /**
+   * Fulfillment status for this order
+   * @return fulfillmentStatus
+  **/
+  @ApiModelProperty(value = "Fulfillment status for this order")
+  public OrderFulfillmentStatusBase getFulfillmentStatus() {
+    return fulfillmentStatus;
+  }
+
+  public void setFulfillmentStatus(OrderFulfillmentStatusBase fulfillmentStatus) {
+    this.fulfillmentStatus = fulfillmentStatus;
+  }
+
   public Order orderId(Integer orderId) {
     this.orderId = orderId;
     return this;
@@ -1592,6 +1614,7 @@ public class Order {
         Objects.equals(this.channel, order.channel) &&
         Objects.equals(this.receiptCode, order.receiptCode) &&
         Objects.equals(this.orderDropOffLocation, order.orderDropOffLocation) &&
+        Objects.equals(this.fulfillmentStatus, order.fulfillmentStatus) &&
         Objects.equals(this.orderId, order.orderId) &&
         Objects.equals(this.localOrderId, order.localOrderId) &&
         Objects.equals(this.deliveryType, order.deliveryType) &&
@@ -1624,7 +1647,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, fulfillmentStatus, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
   }
 
 
@@ -1652,6 +1675,7 @@ public class Order {
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
     sb.append("    receiptCode: ").append(toIndentedString(receiptCode)).append("\n");
     sb.append("    orderDropOffLocation: ").append(toIndentedString(orderDropOffLocation)).append("\n");
+    sb.append("    fulfillmentStatus: ").append(toIndentedString(fulfillmentStatus)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    localOrderId: ").append(toIndentedString(localOrderId)).append("\n");
     sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");

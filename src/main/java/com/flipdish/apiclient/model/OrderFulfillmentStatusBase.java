@@ -28,10 +28,16 @@ import java.io.IOException;
  * Fulfillment Status Information
  */
 @ApiModel(description = "Fulfillment Status Information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-28T15:18:01.989+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-29T14:22:45.424+01:00")
 public class OrderFulfillmentStatusBase {
   @SerializedName("StatusId")
   private String statusId = null;
+
+  @SerializedName("StatusName")
+  private String statusName = null;
+
+  @SerializedName("Icon")
+  private String icon = null;
 
   public OrderFulfillmentStatusBase statusId(String statusId) {
     this.statusId = statusId;
@@ -51,6 +57,42 @@ public class OrderFulfillmentStatusBase {
     this.statusId = statusId;
   }
 
+  public OrderFulfillmentStatusBase statusName(String statusName) {
+    this.statusName = statusName;
+    return this;
+  }
+
+   /**
+   * Fulfillment Status Name
+   * @return statusName
+  **/
+  @ApiModelProperty(value = "Fulfillment Status Name")
+  public String getStatusName() {
+    return statusName;
+  }
+
+  public void setStatusName(String statusName) {
+    this.statusName = statusName;
+  }
+
+  public OrderFulfillmentStatusBase icon(String icon) {
+    this.icon = icon;
+    return this;
+  }
+
+   /**
+   * Status Icon
+   * @return icon
+  **/
+  @ApiModelProperty(value = "Status Icon")
+  public String getIcon() {
+    return icon;
+  }
+
+  public void setIcon(String icon) {
+    this.icon = icon;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +103,14 @@ public class OrderFulfillmentStatusBase {
       return false;
     }
     OrderFulfillmentStatusBase orderFulfillmentStatusBase = (OrderFulfillmentStatusBase) o;
-    return Objects.equals(this.statusId, orderFulfillmentStatusBase.statusId);
+    return Objects.equals(this.statusId, orderFulfillmentStatusBase.statusId) &&
+        Objects.equals(this.statusName, orderFulfillmentStatusBase.statusName) &&
+        Objects.equals(this.icon, orderFulfillmentStatusBase.icon);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusId);
+    return Objects.hash(statusId, statusName, icon);
   }
 
 
@@ -76,6 +120,8 @@ public class OrderFulfillmentStatusBase {
     sb.append("class OrderFulfillmentStatusBase {\n");
     
     sb.append("    statusId: ").append(toIndentedString(statusId)).append("\n");
+    sb.append("    statusName: ").append(toIndentedString(statusName)).append("\n");
+    sb.append("    icon: ").append(toIndentedString(icon)).append("\n");
     sb.append("}");
     return sb.toString();
   }
