@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.AppStoreAppSupportInfo;
 import com.flipdish.apiclient.model.FieldGroup;
 import com.flipdish.apiclient.model.Setting;
 import com.google.gson.TypeAdapter;
@@ -32,7 +33,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-30T12:30:08.188+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-30T15:51:47.988+01:00")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -333,6 +334,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("PermissionsType")
   private PermissionsTypeEnum permissionsType = null;
+
+  @SerializedName("Support")
+  private AppStoreAppSupportInfo support = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -813,6 +817,24 @@ public class AppStoreAppConfiguration {
     this.permissionsType = permissionsType;
   }
 
+  public AppStoreAppConfiguration support(AppStoreAppSupportInfo support) {
+    this.support = support;
+    return this;
+  }
+
+   /**
+   * Support information
+   * @return support
+  **/
+  @ApiModelProperty(value = "Support information")
+  public AppStoreAppSupportInfo getSupport() {
+    return support;
+  }
+
+  public void setSupport(AppStoreAppSupportInfo support) {
+    this.support = support;
+  }
+
   public AppStoreAppConfiguration name(String name) {
     this.name = name;
     return this;
@@ -940,6 +962,7 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.externalSetupLink, appStoreAppConfiguration.externalSetupLink) &&
         Objects.equals(this.teammateAppAccessLevel, appStoreAppConfiguration.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, appStoreAppConfiguration.permissionsType) &&
+        Objects.equals(this.support, appStoreAppConfiguration.support) &&
         Objects.equals(this.name, appStoreAppConfiguration.name) &&
         Objects.equals(this.description, appStoreAppConfiguration.description) &&
         Objects.equals(this.categories, appStoreAppConfiguration.categories) &&
@@ -949,7 +972,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, categories, countries, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, name, description, categories, countries, developerName);
   }
 
 
@@ -975,6 +998,7 @@ public class AppStoreAppConfiguration {
     sb.append("    externalSetupLink: ").append(toIndentedString(externalSetupLink)).append("\n");
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
+    sb.append("    support: ").append(toIndentedString(support)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    categories: ").append(toIndentedString(categories)).append("\n");

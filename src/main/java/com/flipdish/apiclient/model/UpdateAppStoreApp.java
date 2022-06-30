@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.AppStoreAppSupportInfo;
 import com.flipdish.apiclient.model.FieldGroup;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -31,7 +32,7 @@ import java.util.List;
  * Update App store app
  */
 @ApiModel(description = "Update App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-30T12:30:08.188+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-30T15:51:47.988+01:00")
 public class UpdateAppStoreApp {
   @SerializedName("Details")
   private String details = null;
@@ -256,6 +257,9 @@ public class UpdateAppStoreApp {
 
   @SerializedName("PermissionsType")
   private PermissionsTypeEnum permissionsType = null;
+
+  @SerializedName("Support")
+  private AppStoreAppSupportInfo support = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -561,6 +565,24 @@ public class UpdateAppStoreApp {
     this.permissionsType = permissionsType;
   }
 
+  public UpdateAppStoreApp support(AppStoreAppSupportInfo support) {
+    this.support = support;
+    return this;
+  }
+
+   /**
+   * Support information
+   * @return support
+  **/
+  @ApiModelProperty(value = "Support information")
+  public AppStoreAppSupportInfo getSupport() {
+    return support;
+  }
+
+  public void setSupport(AppStoreAppSupportInfo support) {
+    this.support = support;
+  }
+
   public UpdateAppStoreApp name(String name) {
     this.name = name;
     return this;
@@ -697,6 +719,7 @@ public class UpdateAppStoreApp {
         Objects.equals(this.externalSetupLink, updateAppStoreApp.externalSetupLink) &&
         Objects.equals(this.teammateAppAccessLevel, updateAppStoreApp.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, updateAppStoreApp.permissionsType) &&
+        Objects.equals(this.support, updateAppStoreApp.support) &&
         Objects.equals(this.name, updateAppStoreApp.name) &&
         Objects.equals(this.description, updateAppStoreApp.description) &&
         Objects.equals(this.isEnabled, updateAppStoreApp.isEnabled) &&
@@ -707,7 +730,7 @@ public class UpdateAppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -724,6 +747,7 @@ public class UpdateAppStoreApp {
     sb.append("    externalSetupLink: ").append(toIndentedString(externalSetupLink)).append("\n");
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
+    sb.append("    support: ").append(toIndentedString(support)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

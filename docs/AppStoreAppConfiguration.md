@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **externalSetupLink** | **String** | External setup link |  [optional]
 **teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
 **permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
+**support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information |  [optional]
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
