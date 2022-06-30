@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+[**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 [**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
@@ -512,6 +513,61 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="searchFulfillmentStatuses"></a>
+# **searchFulfillmentStatuses**
+> RestApiArrayResultOrderFulfillmentStatus searchFulfillmentStatuses(appId, orderIds)
+
+Get fulfillment status for a list of orders
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OrdersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OrdersApi apiInstance = new OrdersApi();
+String appId = "appId_example"; // String | App Id
+String orderIds = "orderIds_example"; // String | Flipdish Order Id list, comma separated
+try {
+    RestApiArrayResultOrderFulfillmentStatus result = apiInstance.searchFulfillmentStatuses(appId, orderIds);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrdersApi#searchFulfillmentStatuses");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| App Id |
+ **orderIds** | **String**| Flipdish Order Id list, comma separated |
+
+### Return type
+
+[**RestApiArrayResultOrderFulfillmentStatus**](RestApiArrayResultOrderFulfillmentStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="updateDeliveryInformation"></a>

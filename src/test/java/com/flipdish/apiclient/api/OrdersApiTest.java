@@ -20,6 +20,7 @@ import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
 import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
+import com.flipdish.apiclient.model.RestApiArrayResultOrderFulfillmentStatus;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultOrder;
@@ -200,6 +201,23 @@ public class OrdersApiTest {
         Integer id = null;
         Reject rejectObject = null;
         api.rejectOrder(id, rejectObject);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get fulfillment status for a list of orders
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchFulfillmentStatusesTest() throws ApiException {
+        String appId = null;
+        String orderIds = null;
+        RestApiArrayResultOrderFulfillmentStatus response = api.searchFulfillmentStatuses(appId, orderIds);
 
         // TODO: test validations
     }

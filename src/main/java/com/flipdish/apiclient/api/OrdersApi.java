@@ -33,6 +33,7 @@ import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
 import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
+import com.flipdish.apiclient.model.RestApiArrayResultOrderFulfillmentStatus;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultOrder;
@@ -1251,6 +1252,140 @@ public class OrdersApi {
 
         com.squareup.okhttp.Call call = rejectOrderValidateBeforeCall(id, rejectObject, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for searchFulfillmentStatuses
+     * @param appId App Id (required)
+     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call searchFulfillmentStatusesCall(String appId, String orderIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/orders/fulfillmentstatuses"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (orderIds != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("orderIds", orderIds));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call searchFulfillmentStatusesValidateBeforeCall(String appId, String orderIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling searchFulfillmentStatuses(Async)");
+        }
+        
+        // verify the required parameter 'orderIds' is set
+        if (orderIds == null) {
+            throw new ApiException("Missing the required parameter 'orderIds' when calling searchFulfillmentStatuses(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = searchFulfillmentStatusesCall(appId, orderIds, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get fulfillment status for a list of orders
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+     * @param appId App Id (required)
+     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * @return RestApiArrayResultOrderFulfillmentStatus
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultOrderFulfillmentStatus searchFulfillmentStatuses(String appId, String orderIds) throws ApiException {
+        ApiResponse<RestApiArrayResultOrderFulfillmentStatus> resp = searchFulfillmentStatusesWithHttpInfo(appId, orderIds);
+        return resp.getData();
+    }
+
+    /**
+     * Get fulfillment status for a list of orders
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+     * @param appId App Id (required)
+     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * @return ApiResponse&lt;RestApiArrayResultOrderFulfillmentStatus&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultOrderFulfillmentStatus> searchFulfillmentStatusesWithHttpInfo(String appId, String orderIds) throws ApiException {
+        com.squareup.okhttp.Call call = searchFulfillmentStatusesValidateBeforeCall(appId, orderIds, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderFulfillmentStatus>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get fulfillment status for a list of orders (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+     * @param appId App Id (required)
+     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call searchFulfillmentStatusesAsync(String appId, String orderIds, final ApiCallback<RestApiArrayResultOrderFulfillmentStatus> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = searchFulfillmentStatusesValidateBeforeCall(appId, orderIds, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderFulfillmentStatus>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
