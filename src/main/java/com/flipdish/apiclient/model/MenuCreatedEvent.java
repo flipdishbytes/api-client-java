@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu created event
  */
 @ApiModel(description = "Menu created event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-01T12:54:45.022+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-01T14:27:38.314+01:00")
 public class MenuCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

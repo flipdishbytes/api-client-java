@@ -28,10 +28,13 @@ import java.io.IOException;
  * Model for updating the onboarding config
  */
 @ApiModel(description = "Model for updating the onboarding config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-01T12:54:45.022+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-01T14:27:38.314+01:00")
 public class OnboardingConfigUpdate {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
+
+  @SerializedName("IsWelcomeScreenEnabled")
+  private Boolean isWelcomeScreenEnabled = null;
 
   public OnboardingConfigUpdate isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
@@ -51,6 +54,24 @@ public class OnboardingConfigUpdate {
     this.isEnabled = isEnabled;
   }
 
+  public OnboardingConfigUpdate isWelcomeScreenEnabled(Boolean isWelcomeScreenEnabled) {
+    this.isWelcomeScreenEnabled = isWelcomeScreenEnabled;
+    return this;
+  }
+
+   /**
+   * Get isWelcomeScreenEnabled
+   * @return isWelcomeScreenEnabled
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsWelcomeScreenEnabled() {
+    return isWelcomeScreenEnabled;
+  }
+
+  public void setIsWelcomeScreenEnabled(Boolean isWelcomeScreenEnabled) {
+    this.isWelcomeScreenEnabled = isWelcomeScreenEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +82,13 @@ public class OnboardingConfigUpdate {
       return false;
     }
     OnboardingConfigUpdate onboardingConfigUpdate = (OnboardingConfigUpdate) o;
-    return Objects.equals(this.isEnabled, onboardingConfigUpdate.isEnabled);
+    return Objects.equals(this.isEnabled, onboardingConfigUpdate.isEnabled) &&
+        Objects.equals(this.isWelcomeScreenEnabled, onboardingConfigUpdate.isWelcomeScreenEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isEnabled);
+    return Objects.hash(isEnabled, isWelcomeScreenEnabled);
   }
 
 
@@ -76,6 +98,7 @@ public class OnboardingConfigUpdate {
     sb.append("class OnboardingConfigUpdate {\n");
     
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
+    sb.append("    isWelcomeScreenEnabled: ").append(toIndentedString(isWelcomeScreenEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }
