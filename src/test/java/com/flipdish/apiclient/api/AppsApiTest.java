@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
@@ -23,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultApp;
 import com.flipdish.apiclient.model.RestApiResultApp;
 import com.flipdish.apiclient.model.RestApiResultAppCompliance;
+import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
 import com.flipdish.apiclient.model.RestApiResultDnsRecordInformation;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -42,6 +44,23 @@ public class AppsApiTest {
 
     private final AppsApi api = new AppsApi();
 
+    
+    /**
+     * Set the application sales channel configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editAppConfigSalesChannelTest() throws ApiException {
+        String appId = null;
+        AppConfigSalesChannel appConfigSalesChannel = null;
+        RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel(appId, appConfigSalesChannel);
+
+        // TODO: test validations
+    }
     
     /**
      * Get the application configuration
