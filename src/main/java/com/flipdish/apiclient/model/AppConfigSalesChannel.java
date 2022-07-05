@@ -28,7 +28,7 @@ import java.io.IOException;
  * App Config Sales Channel
  */
 @ApiModel(description = "App Config Sales Channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T08:07:14.758+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:00:00.643+01:00")
 public class AppConfigSalesChannel {
   /**
    * Display a popup to users requesting their email address
@@ -138,6 +138,58 @@ public class AppConfigSalesChannel {
   @SerializedName("WebToAppRedirect")
   private WebToAppRedirectEnum webToAppRedirect = null;
 
+  /**
+   * Address entry type
+   */
+  @JsonAdapter(AddressEntryTypeEnum.Adapter.class)
+  public enum AddressEntryTypeEnum {
+    MAPFIRST("MapFirst"),
+    
+    TEXTENTRYMANUALALLOWED("TextEntryManualAllowed"),
+    
+    TEXTENTRYMANUALDISALLOWED("TextEntryManualDisallowed");
+
+    private String value;
+
+    AddressEntryTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static AddressEntryTypeEnum fromValue(String text) {
+      for (AddressEntryTypeEnum b : AddressEntryTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<AddressEntryTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final AddressEntryTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public AddressEntryTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return AddressEntryTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("AddressEntryType")
+  private AddressEntryTypeEnum addressEntryType = null;
+
   @SerializedName("DisplayDeliveryRestaurantListScreen")
   private Boolean displayDeliveryRestaurantListScreen = null;
 
@@ -177,6 +229,24 @@ public class AppConfigSalesChannel {
     this.webToAppRedirect = webToAppRedirect;
   }
 
+  public AppConfigSalesChannel addressEntryType(AddressEntryTypeEnum addressEntryType) {
+    this.addressEntryType = addressEntryType;
+    return this;
+  }
+
+   /**
+   * Address entry type
+   * @return addressEntryType
+  **/
+  @ApiModelProperty(value = "Address entry type")
+  public AddressEntryTypeEnum getAddressEntryType() {
+    return addressEntryType;
+  }
+
+  public void setAddressEntryType(AddressEntryTypeEnum addressEntryType) {
+    this.addressEntryType = addressEntryType;
+  }
+
   public AppConfigSalesChannel displayDeliveryRestaurantListScreen(Boolean displayDeliveryRestaurantListScreen) {
     this.displayDeliveryRestaurantListScreen = displayDeliveryRestaurantListScreen;
     return this;
@@ -207,12 +277,13 @@ public class AppConfigSalesChannel {
     AppConfigSalesChannel appConfigSalesChannel = (AppConfigSalesChannel) o;
     return Objects.equals(this.emailRequestMode, appConfigSalesChannel.emailRequestMode) &&
         Objects.equals(this.webToAppRedirect, appConfigSalesChannel.webToAppRedirect) &&
+        Objects.equals(this.addressEntryType, appConfigSalesChannel.addressEntryType) &&
         Objects.equals(this.displayDeliveryRestaurantListScreen, appConfigSalesChannel.displayDeliveryRestaurantListScreen);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailRequestMode, webToAppRedirect, displayDeliveryRestaurantListScreen);
+    return Objects.hash(emailRequestMode, webToAppRedirect, addressEntryType, displayDeliveryRestaurantListScreen);
   }
 
 
@@ -223,6 +294,7 @@ public class AppConfigSalesChannel {
     
     sb.append("    emailRequestMode: ").append(toIndentedString(emailRequestMode)).append("\n");
     sb.append("    webToAppRedirect: ").append(toIndentedString(webToAppRedirect)).append("\n");
+    sb.append("    addressEntryType: ").append(toIndentedString(addressEntryType)).append("\n");
     sb.append("    displayDeliveryRestaurantListScreen: ").append(toIndentedString(displayDeliveryRestaurantListScreen)).append("\n");
     sb.append("}");
     return sb.toString();

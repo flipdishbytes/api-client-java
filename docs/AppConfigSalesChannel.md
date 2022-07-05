@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **emailRequestMode** | [**EmailRequestModeEnum**](#EmailRequestModeEnum) | Display a popup to users requesting their email address |  [optional]
 **webToAppRedirect** | [**WebToAppRedirectEnum**](#WebToAppRedirectEnum) | Sends users to their native apps or request them to install the pwa |  [optional]
+**addressEntryType** | [**AddressEntryTypeEnum**](#AddressEntryTypeEnum) | Address entry type |  [optional]
 **displayDeliveryRestaurantListScreen** | **Boolean** | Display Pickup Restaurant List Screen |  [optional]
 
 
@@ -27,6 +28,15 @@ REDIRECTONCE | &quot;RedirectOnce&quot;
 REDIRECTALWAYS | &quot;RedirectAlways&quot;
 SUGGESTPWA | &quot;SuggestPwa&quot;
 FORCEPWA | &quot;ForcePwa&quot;
+
+
+<a name="AddressEntryTypeEnum"></a>
+## Enum: AddressEntryTypeEnum
+Name | Value
+---- | -----
+MAPFIRST | &quot;MapFirst&quot;
+TEXTENTRYMANUALALLOWED | &quot;TextEntryManualAllowed&quot;
+TEXTENTRYMANUALDISALLOWED | &quot;TextEntryManualDisallowed&quot;
 
 
 
