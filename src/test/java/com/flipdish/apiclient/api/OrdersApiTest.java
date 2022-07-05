@@ -249,9 +249,10 @@ public class OrdersApiTest {
      */
     @Test
     public void updateFulfillmentStatusTest() throws ApiException {
+        String appId = null;
         Integer orderId = null;
         OrderFulfillmentStatusBase fulfillmentStatusRequest = null;
-        api.updateFulfillmentStatus(orderId, fulfillmentStatusRequest);
+        api.updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
 
         // TODO: test validations
     }

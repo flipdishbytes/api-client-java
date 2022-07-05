@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
 
 <a name="acceptOrder"></a>
@@ -626,7 +626,7 @@ null (empty response body)
 
 <a name="updateFulfillmentStatus"></a>
 # **updateFulfillmentStatus**
-> updateFulfillmentStatus(orderId, fulfillmentStatusRequest)
+> updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest)
 
 Add/update fulfillment status information to an order
 
@@ -648,10 +648,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
+String appId = "appId_example"; // String | 
 Integer orderId = 56; // Integer | Flipdish Order Id
 OrderFulfillmentStatusBase fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
 try {
-    apiInstance.updateFulfillmentStatus(orderId, fulfillmentStatusRequest);
+    apiInstance.updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrdersApi#updateFulfillmentStatus");
     e.printStackTrace();
@@ -662,6 +663,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
  **orderId** | **Integer**| Flipdish Order Id |
  **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status |
 
