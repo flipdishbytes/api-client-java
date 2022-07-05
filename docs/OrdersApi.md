@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 [**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
+[**getFulfillmentStatus_0**](OrdersApi.md#getFulfillmentStatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -220,6 +221,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultOrderFulfillmentStatus**](RestApiResultOrderFulfillmentStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getFulfillmentStatus_0"></a>
+# **getFulfillmentStatus_0**
+> RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatus_0(orderId)
+
+Get order fulfillment status with actionable details like default next status
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OrdersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OrdersApi apiInstance = new OrdersApi();
+Integer orderId = 56; // Integer | Flipdish Order Id
+try {
+    RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.getFulfillmentStatus_0(orderId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrdersApi#getFulfillmentStatus_0");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **Integer**| Flipdish Order Id |
+
+### Return type
+
+[**RestApiResultOrderFulfillmentStatusWithConfigurationActions**](RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
 
 ### Authorization
 

@@ -28,6 +28,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultOrderSummary;
 import com.flipdish.apiclient.model.RestApiResultOrder;
 import com.flipdish.apiclient.model.RestApiResultOrderDeliveryInformation;
 import com.flipdish.apiclient.model.RestApiResultOrderFulfillmentStatus;
+import com.flipdish.apiclient.model.RestApiResultOrderFulfillmentStatusWithConfigurationActions;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -107,6 +108,22 @@ public class OrdersApiTest {
     public void getFulfillmentStatusTest() throws ApiException {
         Integer orderId = null;
         RestApiResultOrderFulfillmentStatus response = api.getFulfillmentStatus(orderId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get order fulfillment status with actionable details like default next status
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getFulfillmentStatus_0Test() throws ApiException {
+        Integer orderId = null;
+        RestApiResultOrderFulfillmentStatusWithConfigurationActions response = api.getFulfillmentStatus_0(orderId);
 
         // TODO: test validations
     }

@@ -41,6 +41,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultOrderSummary;
 import com.flipdish.apiclient.model.RestApiResultOrder;
 import com.flipdish.apiclient.model.RestApiResultOrderDeliveryInformation;
 import com.flipdish.apiclient.model.RestApiResultOrderFulfillmentStatus;
+import com.flipdish.apiclient.model.RestApiResultOrderFulfillmentStatusWithConfigurationActions;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -558,6 +559,129 @@ public class OrdersApi {
 
         com.squareup.okhttp.Call call = getFulfillmentStatusValidateBeforeCall(orderId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultOrderFulfillmentStatus>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getFulfillmentStatus_0
+     * @param orderId Flipdish Order Id (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getFulfillmentStatus_0Call(Integer orderId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/orders/{orderId}/fulfillmentstatusdetails"
+            .replaceAll("\\{" + "orderId" + "\\}", apiClient.escapeString(orderId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getFulfillmentStatus_0ValidateBeforeCall(Integer orderId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'orderId' is set
+        if (orderId == null) {
+            throw new ApiException("Missing the required parameter 'orderId' when calling getFulfillmentStatus_0(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getFulfillmentStatus_0Call(orderId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get order fulfillment status with actionable details like default next status
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+     * @param orderId Flipdish Order Id (required)
+     * @return RestApiResultOrderFulfillmentStatusWithConfigurationActions
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatus_0(Integer orderId) throws ApiException {
+        ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> resp = getFulfillmentStatus_0WithHttpInfo(orderId);
+        return resp.getData();
+    }
+
+    /**
+     * Get order fulfillment status with actionable details like default next status
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+     * @param orderId Flipdish Order Id (required)
+     * @return ApiResponse&lt;RestApiResultOrderFulfillmentStatusWithConfigurationActions&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultOrderFulfillmentStatusWithConfigurationActions> getFulfillmentStatus_0WithHttpInfo(Integer orderId) throws ApiException {
+        com.squareup.okhttp.Call call = getFulfillmentStatus_0ValidateBeforeCall(orderId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultOrderFulfillmentStatusWithConfigurationActions>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get order fulfillment status with actionable details like default next status (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+     * @param orderId Flipdish Order Id (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getFulfillmentStatus_0Async(Integer orderId, final ApiCallback<RestApiResultOrderFulfillmentStatusWithConfigurationActions> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getFulfillmentStatus_0ValidateBeforeCall(orderId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultOrderFulfillmentStatusWithConfigurationActions>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

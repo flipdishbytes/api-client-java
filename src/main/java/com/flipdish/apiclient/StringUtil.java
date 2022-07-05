@@ -13,7 +13,7 @@
 
 package com.flipdish.apiclient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:00:00.643+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T12:27:53.039+01:00")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

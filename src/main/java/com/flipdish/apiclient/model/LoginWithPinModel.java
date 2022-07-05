@@ -28,7 +28,7 @@ import java.io.IOException;
  * Login with PIN model
  */
 @ApiModel(description = "Login with PIN model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:00:00.643+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T12:27:53.039+01:00")
 public class LoginWithPinModel {
   @SerializedName("Email")
   private String email = null;

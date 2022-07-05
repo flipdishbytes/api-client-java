@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * The DNS for the Hostname verified
  */
 @ApiModel(description = "The DNS for the Hostname verified")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:00:00.643+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-05T12:27:53.039+01:00")
 public class CertificateCreatedEvent {
   @SerializedName("Hostname")
   private String hostname = null;
