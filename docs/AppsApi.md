@@ -4,7 +4,6 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**editAppConfigSalesChannel**](AppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/apps/{appId}/config/saleschannel | Set the application sales channel configuration
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 [**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | Get Apps
@@ -19,59 +18,6 @@ Method | HTTP request | Description
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
 
-
-<a name="editAppConfigSalesChannel"></a>
-# **editAppConfigSalesChannel**
-> RestApiResultAppConfigSalesChannel editAppConfigSalesChannel(appId, appConfigSalesChannel)
-
-Set the application sales channel configuration
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AppsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | 
-AppConfigSalesChannel appConfigSalesChannel = new AppConfigSalesChannel(); // AppConfigSalesChannel | 
-try {
-    RestApiResultAppConfigSalesChannel result = apiInstance.editAppConfigSalesChannel(appId, appConfigSalesChannel);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AppsApi#editAppConfigSalesChannel");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **appConfigSalesChannel** | [**AppConfigSalesChannel**](AppConfigSalesChannel.md)|  |
-
-### Return type
-
-[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getApp"></a>
 # **getApp**
