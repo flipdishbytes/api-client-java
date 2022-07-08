@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +32,7 @@ import java.util.Map;
  * Store address base
  */
 @ApiModel(description = "Store address base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-07T07:52:05.200+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-08T10:01:41.587+01:00")
 public class StoreAddressBase {
   @SerializedName("Line1")
   private String line1 = null;
@@ -50,6 +51,12 @@ public class StoreAddressBase {
 
   @SerializedName("AddressFields")
   private Map<String, Object> addressFields = null;
+
+  @SerializedName("SingleLineDisplay")
+  private String singleLineDisplay = null;
+
+  @SerializedName("TwoLinesDisplay")
+  private List<String> twoLinesDisplay = null;
 
   public StoreAddressBase line1(String line1) {
     this.line1 = line1;
@@ -167,6 +174,50 @@ public class StoreAddressBase {
     this.addressFields = addressFields;
   }
 
+  public StoreAddressBase singleLineDisplay(String singleLineDisplay) {
+    this.singleLineDisplay = singleLineDisplay;
+    return this;
+  }
+
+   /**
+   * Single line display i18n, may be empty for not supported countries
+   * @return singleLineDisplay
+  **/
+  @ApiModelProperty(value = "Single line display i18n, may be empty for not supported countries")
+  public String getSingleLineDisplay() {
+    return singleLineDisplay;
+  }
+
+  public void setSingleLineDisplay(String singleLineDisplay) {
+    this.singleLineDisplay = singleLineDisplay;
+  }
+
+  public StoreAddressBase twoLinesDisplay(List<String> twoLinesDisplay) {
+    this.twoLinesDisplay = twoLinesDisplay;
+    return this;
+  }
+
+  public StoreAddressBase addTwoLinesDisplayItem(String twoLinesDisplayItem) {
+    if (this.twoLinesDisplay == null) {
+      this.twoLinesDisplay = new ArrayList<String>();
+    }
+    this.twoLinesDisplay.add(twoLinesDisplayItem);
+    return this;
+  }
+
+   /**
+   * Two line display i18n, may be empty for not supported countries
+   * @return twoLinesDisplay
+  **/
+  @ApiModelProperty(value = "Two line display i18n, may be empty for not supported countries")
+  public List<String> getTwoLinesDisplay() {
+    return twoLinesDisplay;
+  }
+
+  public void setTwoLinesDisplay(List<String> twoLinesDisplay) {
+    this.twoLinesDisplay = twoLinesDisplay;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -182,12 +233,14 @@ public class StoreAddressBase {
         Objects.equals(this.city, storeAddressBase.city) &&
         Objects.equals(this.countryCode, storeAddressBase.countryCode) &&
         Objects.equals(this.displayForCustomer, storeAddressBase.displayForCustomer) &&
-        Objects.equals(this.addressFields, storeAddressBase.addressFields);
+        Objects.equals(this.addressFields, storeAddressBase.addressFields) &&
+        Objects.equals(this.singleLineDisplay, storeAddressBase.singleLineDisplay) &&
+        Objects.equals(this.twoLinesDisplay, storeAddressBase.twoLinesDisplay);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(line1, postcode, city, countryCode, displayForCustomer, addressFields);
+    return Objects.hash(line1, postcode, city, countryCode, displayForCustomer, addressFields, singleLineDisplay, twoLinesDisplay);
   }
 
 
@@ -202,6 +255,8 @@ public class StoreAddressBase {
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    displayForCustomer: ").append(toIndentedString(displayForCustomer)).append("\n");
     sb.append("    addressFields: ").append(toIndentedString(addressFields)).append("\n");
+    sb.append("    singleLineDisplay: ").append(toIndentedString(singleLineDisplay)).append("\n");
+    sb.append("    twoLinesDisplay: ").append(toIndentedString(twoLinesDisplay)).append("\n");
     sb.append("}");
     return sb.toString();
   }
