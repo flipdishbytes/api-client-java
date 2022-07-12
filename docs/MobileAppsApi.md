@@ -6,11 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**editAppConfigSalesChannel**](MobileAppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**editAppConfigSalesChannel_0**](MobileAppsApi.md#editAppConfigSalesChannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+[**uploadMobileAppsImage**](MobileAppsApi.md#uploadMobileAppsImage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 
 
 <a name="editAppConfigSalesChannel"></a>
 # **editAppConfigSalesChannel**
-> RestApiResultAppConfigSalesChannel editAppConfigSalesChannel(appId, mobileAppsSubmission)
+> RestApiResultMobileAppsSubmission editAppConfigSalesChannel(appId, mobileAppsSubmission)
 
 Submission form mobile apps
 
@@ -33,7 +34,7 @@ MobileAppsApi apiInstance = new MobileAppsApi();
 String appId = "appId_example"; // String | 
 MobileAppsSubmission mobileAppsSubmission = new MobileAppsSubmission(); // MobileAppsSubmission | 
 try {
-    RestApiResultAppConfigSalesChannel result = apiInstance.editAppConfigSalesChannel(appId, mobileAppsSubmission);
+    RestApiResultMobileAppsSubmission result = apiInstance.editAppConfigSalesChannel(appId, mobileAppsSubmission);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MobileAppsApi#editAppConfigSalesChannel");
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultAppConfigSalesChannel**](RestApiResultAppConfigSalesChannel.md)
+[**RestApiResultMobileAppsSubmission**](RestApiResultMobileAppsSubmission.md)
 
 ### Authorization
 
@@ -112,5 +113,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="uploadMobileAppsImage"></a>
+# **uploadMobileAppsImage**
+> RestApiResultMobileAppsImage uploadMobileAppsImage(appId, image)
+
+Upload a Mobile Apps Image
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MobileAppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MobileAppsApi apiInstance = new MobileAppsApi();
+String appId = "appId_example"; // String | 
+File image = new File("/path/to/file.txt"); // File | Mobile Apps image
+try {
+    RestApiResultMobileAppsImage result = apiInstance.uploadMobileAppsImage(appId, image);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MobileAppsApi#uploadMobileAppsImage");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **image** | **File**| Mobile Apps image |
+
+### Return type
+
+[**RestApiResultMobileAppsImage**](RestApiResultMobileAppsImage.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 

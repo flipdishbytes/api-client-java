@@ -28,10 +28,13 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.AppConfigSalesChannel;
+import java.io.File;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -134,11 +137,11 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
-     * @return RestApiResultAppConfigSalesChannel
+     * @return RestApiResultMobileAppsSubmission
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppConfigSalesChannel editAppConfigSalesChannel(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
-        ApiResponse<RestApiResultAppConfigSalesChannel> resp = editAppConfigSalesChannelWithHttpInfo(appId, mobileAppsSubmission);
+    public RestApiResultMobileAppsSubmission editAppConfigSalesChannel(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
+        ApiResponse<RestApiResultMobileAppsSubmission> resp = editAppConfigSalesChannelWithHttpInfo(appId, mobileAppsSubmission);
         return resp.getData();
     }
 
@@ -147,12 +150,12 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
-     * @return ApiResponse&lt;RestApiResultAppConfigSalesChannel&gt;
+     * @return ApiResponse&lt;RestApiResultMobileAppsSubmission&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppConfigSalesChannel> editAppConfigSalesChannelWithHttpInfo(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
+    public ApiResponse<RestApiResultMobileAppsSubmission> editAppConfigSalesChannelWithHttpInfo(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
         com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, mobileAppsSubmission, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultAppConfigSalesChannel>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +168,7 @@ public class MobileAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call editAppConfigSalesChannelAsync(String appId, MobileAppsSubmission mobileAppsSubmission, final ApiCallback<RestApiResultAppConfigSalesChannel> callback) throws ApiException {
+    public com.squareup.okhttp.Call editAppConfigSalesChannelAsync(String appId, MobileAppsSubmission mobileAppsSubmission, final ApiCallback<RestApiResultMobileAppsSubmission> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +190,7 @@ public class MobileAppsApi {
         }
 
         com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, mobileAppsSubmission, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultAppConfigSalesChannel>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -320,6 +323,140 @@ public class MobileAppsApi {
 
         com.squareup.okhttp.Call call = editAppConfigSalesChannel_0ValidateBeforeCall(appId, appConfigSalesChannel, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultAppConfigSalesChannel>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for uploadMobileAppsImage
+     * @param appId  (required)
+     * @param image Mobile Apps image (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call uploadMobileAppsImageCall(String appId, File image, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/mobileapps/{appId}/image"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (image != null)
+        localVarFormParams.put("Image", image);
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "multipart/form-data"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call uploadMobileAppsImageValidateBeforeCall(String appId, File image, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling uploadMobileAppsImage(Async)");
+        }
+        
+        // verify the required parameter 'image' is set
+        if (image == null) {
+            throw new ApiException("Missing the required parameter 'image' when calling uploadMobileAppsImage(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = uploadMobileAppsImageCall(appId, image, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Upload a Mobile Apps Image
+     * 
+     * @param appId  (required)
+     * @param image Mobile Apps image (required)
+     * @return RestApiResultMobileAppsImage
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultMobileAppsImage uploadMobileAppsImage(String appId, File image) throws ApiException {
+        ApiResponse<RestApiResultMobileAppsImage> resp = uploadMobileAppsImageWithHttpInfo(appId, image);
+        return resp.getData();
+    }
+
+    /**
+     * Upload a Mobile Apps Image
+     * 
+     * @param appId  (required)
+     * @param image Mobile Apps image (required)
+     * @return ApiResponse&lt;RestApiResultMobileAppsImage&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultMobileAppsImage> uploadMobileAppsImageWithHttpInfo(String appId, File image) throws ApiException {
+        com.squareup.okhttp.Call call = uploadMobileAppsImageValidateBeforeCall(appId, image, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsImage>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Upload a Mobile Apps Image (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param image Mobile Apps image (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call uploadMobileAppsImageAsync(String appId, File image, final ApiCallback<RestApiResultMobileAppsImage> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = uploadMobileAppsImageValidateBeforeCall(appId, image, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsImage>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

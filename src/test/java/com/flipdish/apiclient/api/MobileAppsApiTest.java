@@ -15,10 +15,13 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigSalesChannel;
+import java.io.File;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -49,7 +52,7 @@ public class MobileAppsApiTest {
     public void editAppConfigSalesChannelTest() throws ApiException {
         String appId = null;
         MobileAppsSubmission mobileAppsSubmission = null;
-        RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel(appId, mobileAppsSubmission);
+        RestApiResultMobileAppsSubmission response = api.editAppConfigSalesChannel(appId, mobileAppsSubmission);
 
         // TODO: test validations
     }
@@ -67,6 +70,23 @@ public class MobileAppsApiTest {
         String appId = null;
         AppConfigSalesChannel appConfigSalesChannel = null;
         RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel_0(appId, appConfigSalesChannel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Upload a Mobile Apps Image
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadMobileAppsImageTest() throws ApiException {
+        String appId = null;
+        File image = null;
+        RestApiResultMobileAppsImage response = api.uploadMobileAppsImage(appId, image);
 
         // TODO: test validations
     }
