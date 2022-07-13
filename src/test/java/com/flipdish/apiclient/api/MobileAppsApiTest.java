@@ -20,6 +20,7 @@ import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -70,6 +71,22 @@ public class MobileAppsApiTest {
         String appId = null;
         AppConfigSalesChannel appConfigSalesChannel = null;
         RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel_0(appId, appConfigSalesChannel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get mobile app details
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppDetailsTest() throws ApiException {
+        String appId = null;
+        RestApiResultMobileAppsDetails response = api.getAppDetails(appId);
 
         // TODO: test validations
     }
