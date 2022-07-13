@@ -186,6 +186,8 @@ CREATEAPPSTOREAPPCONFIGURATION | &quot;CreateAppStoreAppConfiguration&quot;
 VIEWAPPSTOREAPPCONFIGURATION | &quot;ViewAppStoreAppConfiguration&quot;
 UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
 DELETEAPPSTOREAPPCONFIGURATION | &quot;DeleteAppStoreAppConfiguration&quot;
+VIEWSALESCHANNELS | &quot;ViewSalesChannels&quot;
+EDITSALESCHANNELS | &quot;EditSalesChannels&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>
