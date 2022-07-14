@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
-[**getFulfillmentStatus_0**](OrdersApi.md#getFulfillmentStatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
+[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
+[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
 
 
 <a name="acceptOrder"></a>
@@ -178,13 +178,13 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getFulfillmentStatus"></a>
-# **getFulfillmentStatus**
-> RestApiResultOrderFulfillmentStatus getFulfillmentStatus(orderId)
+<a name="getFulfillmentState"></a>
+# **getFulfillmentState**
+> RestApiResultOrderFulfillmentStatus getFulfillmentState(orderId)
 
-Get order fulfillment status
+Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
 
 ### Example
 ```java
@@ -204,10 +204,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 OrdersApi apiInstance = new OrdersApi();
 Integer orderId = 56; // Integer | Flipdish Order Id
 try {
-    RestApiResultOrderFulfillmentStatus result = apiInstance.getFulfillmentStatus(orderId);
+    RestApiResultOrderFulfillmentStatus result = apiInstance.getFulfillmentState(orderId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OrdersApi#getFulfillmentStatus");
+    System.err.println("Exception when calling OrdersApi#getFulfillmentState");
     e.printStackTrace();
 }
 ```
@@ -231,11 +231,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getFulfillmentStatus_0"></a>
-# **getFulfillmentStatus_0**
-> RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatus_0(orderId)
+<a name="getFulfillmentStatusWithDetailsAndActions"></a>
+# **getFulfillmentStatusWithDetailsAndActions**
+> RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatusWithDetailsAndActions(orderId)
 
-Get order fulfillment status with actionable details like default next status
+Get order fulfillment state with actionable details like default next state
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
 
@@ -257,10 +257,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 OrdersApi apiInstance = new OrdersApi();
 Integer orderId = 56; // Integer | Flipdish Order Id
 try {
-    RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.getFulfillmentStatus_0(orderId);
+    RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.getFulfillmentStatusWithDetailsAndActions(orderId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OrdersApi#getFulfillmentStatus_0");
+    System.err.println("Exception when calling OrdersApi#getFulfillmentStatusWithDetailsAndActions");
     e.printStackTrace();
 }
 ```
@@ -678,13 +678,13 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateFulfillmentStatus"></a>
-# **updateFulfillmentStatus**
-> updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest)
+<a name="updateFulfillmentState"></a>
+# **updateFulfillmentState**
+> updateFulfillmentState(orderId, fulfillmentStatusRequest)
 
-Add/update fulfillment status information to an order
+Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
 
 ### Example
 ```java
@@ -702,13 +702,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-String appId = "appId_example"; // String | 
 Integer orderId = 56; // Integer | Flipdish Order Id
-OrderFulfillmentStatusBase fulfillmentStatusRequest = new OrderFulfillmentStatusBase(); // OrderFulfillmentStatusBase | Fulfillment Status
+OrderFulfillmentStatusUpdate fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | Fulfillment Status
 try {
-    apiInstance.updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
+    apiInstance.updateFulfillmentState(orderId, fulfillmentStatusRequest);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OrdersApi#updateFulfillmentStatus");
+    System.err.println("Exception when calling OrdersApi#updateFulfillmentState");
     e.printStackTrace();
 }
 ```
@@ -717,9 +716,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
  **orderId** | **Integer**| Flipdish Order Id |
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md)| Fulfillment Status |
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)| Fulfillment Status |
 
 ### Return type
 

@@ -17,7 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Accept;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
-import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
+import com.flipdish.apiclient.model.OrderFulfillmentStatusUpdate;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
 import com.flipdish.apiclient.model.RestApiArrayResultOrderFulfillmentStatus;
@@ -97,23 +97,23 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order fulfillment status
+     * Get order fulfillment state
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status.
+     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStatusTest() throws ApiException {
+    public void getFulfillmentStateTest() throws ApiException {
         Integer orderId = null;
-        RestApiResultOrderFulfillmentStatus response = api.getFulfillmentStatus(orderId);
+        RestApiResultOrderFulfillmentStatus response = api.getFulfillmentState(orderId);
 
         // TODO: test validations
     }
     
     /**
-     * Get order fulfillment status with actionable details like default next status
+     * Get order fulfillment state with actionable details like default next state
      *
      * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
      *
@@ -121,9 +121,9 @@ public class OrdersApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStatus_0Test() throws ApiException {
+    public void getFulfillmentStatusWithDetailsAndActionsTest() throws ApiException {
         Integer orderId = null;
-        RestApiResultOrderFulfillmentStatusWithConfigurationActions response = api.getFulfillmentStatus_0(orderId);
+        RestApiResultOrderFulfillmentStatusWithConfigurationActions response = api.getFulfillmentStatusWithDetailsAndActions(orderId);
 
         // TODO: test validations
     }
@@ -257,19 +257,18 @@ public class OrdersApiTest {
     }
     
     /**
-     * Add/update fulfillment status information to an order
+     * Update fulfillment status information to an order
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment status.
+     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void updateFulfillmentStatusTest() throws ApiException {
-        String appId = null;
+    public void updateFulfillmentStateTest() throws ApiException {
         Integer orderId = null;
-        OrderFulfillmentStatusBase fulfillmentStatusRequest = null;
-        api.updateFulfillmentStatus(appId, orderId, fulfillmentStatusRequest);
+        OrderFulfillmentStatusUpdate fulfillmentStatusRequest = null;
+        api.updateFulfillmentState(orderId, fulfillmentStatusRequest);
 
         // TODO: test validations
     }

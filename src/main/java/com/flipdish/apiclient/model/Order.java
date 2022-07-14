@@ -42,7 +42,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-13T15:50:44.000+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-14T08:36:52.138+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -1069,10 +1069,10 @@ public class Order {
   }
 
    /**
-   * Fulfillment status for this order
+   * [BETA - this is a new field in development] Fulfillment status for this order
    * @return fulfillmentStatus
   **/
-  @ApiModelProperty(value = "Fulfillment status for this order")
+  @ApiModelProperty(value = "[BETA - this is a new field in development] Fulfillment status for this order")
   public OrderFulfillmentStatusBase getFulfillmentStatus() {
     return fulfillmentStatus;
   }
