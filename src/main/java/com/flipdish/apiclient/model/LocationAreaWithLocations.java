@@ -31,7 +31,7 @@ import java.util.List;
  * Represents a LocationArea and its Location list
  */
 @ApiModel(description = "Represents a LocationArea and its Location list")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T10:44:17.809+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T15:22:47.795+01:00")
 public class LocationAreaWithLocations {
   @SerializedName("LocationAreaId")
   private Integer locationAreaId = null;

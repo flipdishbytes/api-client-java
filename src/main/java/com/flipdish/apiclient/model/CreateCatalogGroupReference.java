@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.Group}
  */
 @ApiModel(description = "Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.Group}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T10:44:17.809+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T15:22:47.795+01:00")
 public class CreateCatalogGroupReference {
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;

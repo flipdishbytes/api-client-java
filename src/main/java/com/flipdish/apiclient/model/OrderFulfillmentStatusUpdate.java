@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * OrderFulfillmentStatusUpdate
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T10:44:17.809+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T15:22:47.795+01:00")
 public class OrderFulfillmentStatusUpdate {
   @SerializedName("StatusId")
   private String statusId = null;

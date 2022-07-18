@@ -33,7 +33,7 @@ import java.util.Map;
  * Tax information for Menu
  */
 @ApiModel(description = "Tax information for Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T10:44:17.809+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-18T15:22:47.795+01:00")
 public class MenuTaxDetails {
   @SerializedName("TaxRates")
   private List<MenuTaxRate> taxRates = null;
