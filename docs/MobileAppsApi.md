@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**editAppConfigSalesChannel**](MobileAppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**editAppConfigSalesChannel_0**](MobileAppsApi.md#editAppConfigSalesChannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+[**getAppConfig**](MobileAppsApi.md#getAppConfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 [**getAppDetails**](MobileAppsApi.md#getAppDetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 [**uploadMobileAppsImage**](MobileAppsApi.md#uploadMobileAppsImage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 
@@ -114,6 +115,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getAppConfig"></a>
+# **getAppConfig**
+> RestApiResultMobileAppsDetails getAppConfig(appId)
+
+Get mobile app configuration
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MobileAppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MobileAppsApi apiInstance = new MobileAppsApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultMobileAppsDetails result = apiInstance.getAppConfig(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MobileAppsApi#getAppConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultMobileAppsDetails**](RestApiResultMobileAppsDetails.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getAppDetails"></a>

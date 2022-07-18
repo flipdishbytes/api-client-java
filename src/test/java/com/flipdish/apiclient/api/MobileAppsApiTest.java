@@ -76,6 +76,22 @@ public class MobileAppsApiTest {
     }
     
     /**
+     * Get mobile app configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppConfigTest() throws ApiException {
+        String appId = null;
+        RestApiResultMobileAppsDetails response = api.getAppConfig(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get mobile app details
      *
      * 
