@@ -16,9 +16,11 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import java.io.File;
+import com.flipdish.apiclient.model.MobileAppConfig;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
@@ -121,6 +123,23 @@ public class MobileAppsApiTest {
         String appId = null;
         String plataformType = null;
         RestApiResultMobileAppsSubmissionStatus response = api.getMobileAppsSubmissionStatus(appId, plataformType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set mobile app configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setAppConfigTest() throws ApiException {
+        String appId = null;
+        MobileAppConfig configUpdate = null;
+        RestApiResult response = api.setAppConfig(appId, configUpdate);
 
         // TODO: test validations
     }
