@@ -31,6 +31,7 @@ import com.flipdish.apiclient.model.FulfillmentStatesConfiguration;
 import com.flipdish.apiclient.model.RestApiArrayResultFulfillmentStatesConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultFulfillmentStatesConfiguration;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateFulfillmentStatesConfiguration;
@@ -128,11 +129,11 @@ public class FulfillmentStateConfigurationApi {
      * Create fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
-     * @return Object
+     * @return RestApiResultFulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object createFulfillmentStatesConfig(String appId) throws ApiException {
-        ApiResponse<Object> resp = createFulfillmentStatesConfigWithHttpInfo(appId);
+    public RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(String appId) throws ApiException {
+        ApiResponse<RestApiResultFulfillmentStatesConfiguration> resp = createFulfillmentStatesConfigWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -140,12 +141,12 @@ public class FulfillmentStateConfigurationApi {
      * Create fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiResultFulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> createFulfillmentStatesConfigWithHttpInfo(String appId) throws ApiException {
+    public ApiResponse<RestApiResultFulfillmentStatesConfiguration> createFulfillmentStatesConfigWithHttpInfo(String appId) throws ApiException {
         com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFulfillmentStatesConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -157,7 +158,7 @@ public class FulfillmentStateConfigurationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createFulfillmentStatesConfigAsync(String appId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call createFulfillmentStatesConfigAsync(String appId, final ApiCallback<RestApiResultFulfillmentStatesConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -179,7 +180,7 @@ public class FulfillmentStateConfigurationApi {
         }
 
         com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFulfillmentStatesConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createFulfillmentStatesConfig"></a>
 # **createFulfillmentStatesConfig**
-> Object createFulfillmentStatesConfig(appId)
+> RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(appId)
 
 Create fulfillment configuration
 
@@ -37,7 +37,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
 String appId = "appId_example"; // String | App id
 try {
-    Object result = apiInstance.createFulfillmentStatesConfig(appId);
+    RestApiResultFulfillmentStatesConfiguration result = apiInstance.createFulfillmentStatesConfig(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FulfillmentStateConfigurationApi#createFulfillmentStatesConfig");
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiResultFulfillmentStatesConfiguration**](RestApiResultFulfillmentStatesConfiguration.md)
 
 ### Authorization
 

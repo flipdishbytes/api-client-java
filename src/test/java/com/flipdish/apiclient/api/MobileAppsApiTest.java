@@ -23,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -103,6 +104,23 @@ public class MobileAppsApiTest {
     public void getAppDetailsTest() throws ApiException {
         String appId = null;
         RestApiResultMobileAppsDetails response = api.getAppDetails(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get mobile app submitted status
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getMobileAppsSubmissionStatusTest() throws ApiException {
+        String appId = null;
+        String plataformType = null;
+        RestApiResultMobileAppsSubmissionStatus response = api.getMobileAppsSubmissionStatus(appId, plataformType);
 
         // TODO: test validations
     }
