@@ -31,7 +31,7 @@ import java.util.Map;
  * Address form payload.
  */
 @ApiModel(description = "Address form payload.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T13:59:48.716+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T16:37:45.427+01:00")
 public class StoreAddressForm {
   @SerializedName("AddressFields")
   private Map<String, Object> addressFields = new HashMap<String, Object>();

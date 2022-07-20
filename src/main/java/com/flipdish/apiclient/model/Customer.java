@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Defines a customer
  */
 @ApiModel(description = "Defines a customer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T13:59:48.716+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T16:37:45.427+01:00")
 public class Customer {
   @SerializedName("CustomerId")
   private Integer customerId = null;
