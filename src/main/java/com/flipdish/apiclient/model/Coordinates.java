@@ -28,7 +28,7 @@ import java.io.IOException;
  * Coordinates
  */
 @ApiModel(description = "Coordinates")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-19T19:41:16.384+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T11:14:56.203+01:00")
 public class Coordinates {
   @SerializedName("Latitude")
   private Double latitude = null;

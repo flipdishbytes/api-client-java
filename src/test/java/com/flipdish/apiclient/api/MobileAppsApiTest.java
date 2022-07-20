@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import java.io.File;
 import com.flipdish.apiclient.model.MobileAppConfig;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
+import com.flipdish.apiclient.model.RestApiArrayResultMobileAppsStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResult;
@@ -45,7 +46,7 @@ public class MobileAppsApiTest {
 
     
     /**
-     * Submission form mobile apps
+     * Set the application sales channel configuration
      *
      * 
      *
@@ -55,25 +56,8 @@ public class MobileAppsApiTest {
     @Test
     public void editAppConfigSalesChannelTest() throws ApiException {
         String appId = null;
-        MobileAppsSubmission mobileAppsSubmission = null;
-        RestApiResultMobileAppsSubmission response = api.editAppConfigSalesChannel(appId, mobileAppsSubmission);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Set the application sales channel configuration
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void editAppConfigSalesChannel_0Test() throws ApiException {
-        String appId = null;
         AppConfigSalesChannel appConfigSalesChannel = null;
-        RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel_0(appId, appConfigSalesChannel);
+        RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel(appId, appConfigSalesChannel);
 
         // TODO: test validations
     }
@@ -128,6 +112,23 @@ public class MobileAppsApiTest {
     }
     
     /**
+     * Get statistics mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStatisticsTest() throws ApiException {
+        String appId = null;
+        List<String> platformTypes = null;
+        RestApiArrayResultMobileAppsStatistics response = api.getStatistics(appId, platformTypes);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Set mobile app configuration
      *
      * 
@@ -140,6 +141,23 @@ public class MobileAppsApiTest {
         String appId = null;
         MobileAppConfig configUpdate = null;
         RestApiResult response = api.setAppConfig(appId, configUpdate);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Submission form mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void submissionTest() throws ApiException {
+        String appId = null;
+        MobileAppsSubmission mobileAppsSubmission = null;
+        RestApiResultMobileAppsSubmission response = api.submission(appId, mobileAppsSubmission);
 
         // TODO: test validations
     }

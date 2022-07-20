@@ -28,7 +28,7 @@ import java.io.IOException;
  * Login model
  */
 @ApiModel(description = "Login model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-19T19:41:16.384+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-20T11:14:56.203+01:00")
 public class LoginModel {
   @SerializedName("Email")
   private String email = null;

@@ -31,6 +31,7 @@ import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import java.io.File;
 import com.flipdish.apiclient.model.MobileAppConfig;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
+import com.flipdish.apiclient.model.RestApiArrayResultMobileAppsStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResult;
@@ -69,145 +70,13 @@ public class MobileAppsApi {
     /**
      * Build call for editAppConfigSalesChannel
      * @param appId  (required)
-     * @param mobileAppsSubmission  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call editAppConfigSalesChannelCall(String appId, MobileAppsSubmission mobileAppsSubmission, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = mobileAppsSubmission;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/mobileapps/{appId}/submission"
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call editAppConfigSalesChannelValidateBeforeCall(String appId, MobileAppsSubmission mobileAppsSubmission, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'appId' is set
-        if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling editAppConfigSalesChannel(Async)");
-        }
-        
-        // verify the required parameter 'mobileAppsSubmission' is set
-        if (mobileAppsSubmission == null) {
-            throw new ApiException("Missing the required parameter 'mobileAppsSubmission' when calling editAppConfigSalesChannel(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = editAppConfigSalesChannelCall(appId, mobileAppsSubmission, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * Submission form mobile apps
-     * 
-     * @param appId  (required)
-     * @param mobileAppsSubmission  (required)
-     * @return RestApiResultMobileAppsSubmission
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiResultMobileAppsSubmission editAppConfigSalesChannel(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
-        ApiResponse<RestApiResultMobileAppsSubmission> resp = editAppConfigSalesChannelWithHttpInfo(appId, mobileAppsSubmission);
-        return resp.getData();
-    }
-
-    /**
-     * Submission form mobile apps
-     * 
-     * @param appId  (required)
-     * @param mobileAppsSubmission  (required)
-     * @return ApiResponse&lt;RestApiResultMobileAppsSubmission&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiResultMobileAppsSubmission> editAppConfigSalesChannelWithHttpInfo(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
-        com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, mobileAppsSubmission, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Submission form mobile apps (asynchronously)
-     * 
-     * @param appId  (required)
-     * @param mobileAppsSubmission  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call editAppConfigSalesChannelAsync(String appId, MobileAppsSubmission mobileAppsSubmission, final ApiCallback<RestApiResultMobileAppsSubmission> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, mobileAppsSubmission, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for editAppConfigSalesChannel_0
-     * @param appId  (required)
      * @param appConfigSalesChannel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call editAppConfigSalesChannel_0Call(String appId, AppConfigSalesChannel appConfigSalesChannel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call editAppConfigSalesChannelCall(String appId, AppConfigSalesChannel appConfigSalesChannel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = appConfigSalesChannel;
 
         // create path and map variables
@@ -250,20 +119,20 @@ public class MobileAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call editAppConfigSalesChannel_0ValidateBeforeCall(String appId, AppConfigSalesChannel appConfigSalesChannel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call editAppConfigSalesChannelValidateBeforeCall(String appId, AppConfigSalesChannel appConfigSalesChannel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling editAppConfigSalesChannel_0(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling editAppConfigSalesChannel(Async)");
         }
         
         // verify the required parameter 'appConfigSalesChannel' is set
         if (appConfigSalesChannel == null) {
-            throw new ApiException("Missing the required parameter 'appConfigSalesChannel' when calling editAppConfigSalesChannel_0(Async)");
+            throw new ApiException("Missing the required parameter 'appConfigSalesChannel' when calling editAppConfigSalesChannel(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = editAppConfigSalesChannel_0Call(appId, appConfigSalesChannel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = editAppConfigSalesChannelCall(appId, appConfigSalesChannel, progressListener, progressRequestListener);
         return call;
 
     }
@@ -276,8 +145,8 @@ public class MobileAppsApi {
      * @return RestApiResultAppConfigSalesChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppConfigSalesChannel editAppConfigSalesChannel_0(String appId, AppConfigSalesChannel appConfigSalesChannel) throws ApiException {
-        ApiResponse<RestApiResultAppConfigSalesChannel> resp = editAppConfigSalesChannel_0WithHttpInfo(appId, appConfigSalesChannel);
+    public RestApiResultAppConfigSalesChannel editAppConfigSalesChannel(String appId, AppConfigSalesChannel appConfigSalesChannel) throws ApiException {
+        ApiResponse<RestApiResultAppConfigSalesChannel> resp = editAppConfigSalesChannelWithHttpInfo(appId, appConfigSalesChannel);
         return resp.getData();
     }
 
@@ -289,8 +158,8 @@ public class MobileAppsApi {
      * @return ApiResponse&lt;RestApiResultAppConfigSalesChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppConfigSalesChannel> editAppConfigSalesChannel_0WithHttpInfo(String appId, AppConfigSalesChannel appConfigSalesChannel) throws ApiException {
-        com.squareup.okhttp.Call call = editAppConfigSalesChannel_0ValidateBeforeCall(appId, appConfigSalesChannel, null, null);
+    public ApiResponse<RestApiResultAppConfigSalesChannel> editAppConfigSalesChannelWithHttpInfo(String appId, AppConfigSalesChannel appConfigSalesChannel) throws ApiException {
+        com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, appConfigSalesChannel, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultAppConfigSalesChannel>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -304,7 +173,7 @@ public class MobileAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call editAppConfigSalesChannel_0Async(String appId, AppConfigSalesChannel appConfigSalesChannel, final ApiCallback<RestApiResultAppConfigSalesChannel> callback) throws ApiException {
+    public com.squareup.okhttp.Call editAppConfigSalesChannelAsync(String appId, AppConfigSalesChannel appConfigSalesChannel, final ApiCallback<RestApiResultAppConfigSalesChannel> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -325,7 +194,7 @@ public class MobileAppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = editAppConfigSalesChannel_0ValidateBeforeCall(appId, appConfigSalesChannel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = editAppConfigSalesChannelValidateBeforeCall(appId, appConfigSalesChannel, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultAppConfigSalesChannel>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -710,6 +579,140 @@ public class MobileAppsApi {
         return call;
     }
     /**
+     * Build call for getStatistics
+     * @param appId  (required)
+     * @param platformTypes  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getStatisticsCall(String appId, List<String> platformTypes, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/mobileapps/{appId}/statistics"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (platformTypes != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "platformTypes", platformTypes));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getStatisticsValidateBeforeCall(String appId, List<String> platformTypes, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getStatistics(Async)");
+        }
+        
+        // verify the required parameter 'platformTypes' is set
+        if (platformTypes == null) {
+            throw new ApiException("Missing the required parameter 'platformTypes' when calling getStatistics(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getStatisticsCall(appId, platformTypes, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get statistics mobile apps
+     * 
+     * @param appId  (required)
+     * @param platformTypes  (required)
+     * @return RestApiArrayResultMobileAppsStatistics
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultMobileAppsStatistics getStatistics(String appId, List<String> platformTypes) throws ApiException {
+        ApiResponse<RestApiArrayResultMobileAppsStatistics> resp = getStatisticsWithHttpInfo(appId, platformTypes);
+        return resp.getData();
+    }
+
+    /**
+     * Get statistics mobile apps
+     * 
+     * @param appId  (required)
+     * @param platformTypes  (required)
+     * @return ApiResponse&lt;RestApiArrayResultMobileAppsStatistics&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultMobileAppsStatistics> getStatisticsWithHttpInfo(String appId, List<String> platformTypes) throws ApiException {
+        com.squareup.okhttp.Call call = getStatisticsValidateBeforeCall(appId, platformTypes, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMobileAppsStatistics>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get statistics mobile apps (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param platformTypes  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getStatisticsAsync(String appId, List<String> platformTypes, final ApiCallback<RestApiArrayResultMobileAppsStatistics> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getStatisticsValidateBeforeCall(appId, platformTypes, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMobileAppsStatistics>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for setAppConfig
      * @param appId  (required)
      * @param configUpdate  (required)
@@ -838,6 +841,138 @@ public class MobileAppsApi {
 
         com.squareup.okhttp.Call call = setAppConfigValidateBeforeCall(appId, configUpdate, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for submission
+     * @param appId  (required)
+     * @param mobileAppsSubmission  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call submissionCall(String appId, MobileAppsSubmission mobileAppsSubmission, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = mobileAppsSubmission;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/mobileapps/{appId}/submission"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call submissionValidateBeforeCall(String appId, MobileAppsSubmission mobileAppsSubmission, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling submission(Async)");
+        }
+        
+        // verify the required parameter 'mobileAppsSubmission' is set
+        if (mobileAppsSubmission == null) {
+            throw new ApiException("Missing the required parameter 'mobileAppsSubmission' when calling submission(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = submissionCall(appId, mobileAppsSubmission, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Submission form mobile apps
+     * 
+     * @param appId  (required)
+     * @param mobileAppsSubmission  (required)
+     * @return RestApiResultMobileAppsSubmission
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultMobileAppsSubmission submission(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
+        ApiResponse<RestApiResultMobileAppsSubmission> resp = submissionWithHttpInfo(appId, mobileAppsSubmission);
+        return resp.getData();
+    }
+
+    /**
+     * Submission form mobile apps
+     * 
+     * @param appId  (required)
+     * @param mobileAppsSubmission  (required)
+     * @return ApiResponse&lt;RestApiResultMobileAppsSubmission&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultMobileAppsSubmission> submissionWithHttpInfo(String appId, MobileAppsSubmission mobileAppsSubmission) throws ApiException {
+        com.squareup.okhttp.Call call = submissionValidateBeforeCall(appId, mobileAppsSubmission, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Submission form mobile apps (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param mobileAppsSubmission  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call submissionAsync(String appId, MobileAppsSubmission mobileAppsSubmission, final ApiCallback<RestApiResultMobileAppsSubmission> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = submissionValidateBeforeCall(appId, mobileAppsSubmission, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultMobileAppsSubmission>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
