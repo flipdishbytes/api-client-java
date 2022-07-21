@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
  */
 @ApiModel(description = "Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-21T12:06:42.217+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-21T13:38:20.864+01:00")
 public class LocationAreaLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
