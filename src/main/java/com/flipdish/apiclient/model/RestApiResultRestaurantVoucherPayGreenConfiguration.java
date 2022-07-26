@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.RestaurantVoucherPaygreenConfiguration;
+import com.flipdish.apiclient.model.RestaurantVoucherPayGreenConfiguration;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,25 +24,18 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Rest api array result
+ * Rest api result
  */
-@ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class RestApiArrayResultRestaurantVoucherPaygreenConfiguration {
+@ApiModel(description = "Rest api result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class RestApiResultRestaurantVoucherPayGreenConfiguration {
   @SerializedName("Data")
-  private List<RestaurantVoucherPaygreenConfiguration> data = new ArrayList<RestaurantVoucherPaygreenConfiguration>();
+  private RestaurantVoucherPayGreenConfiguration data = null;
 
-  public RestApiArrayResultRestaurantVoucherPaygreenConfiguration data(List<RestaurantVoucherPaygreenConfiguration> data) {
+  public RestApiResultRestaurantVoucherPayGreenConfiguration data(RestaurantVoucherPayGreenConfiguration data) {
     this.data = data;
-    return this;
-  }
-
-  public RestApiArrayResultRestaurantVoucherPaygreenConfiguration addDataItem(RestaurantVoucherPaygreenConfiguration dataItem) {
-    this.data.add(dataItem);
     return this;
   }
 
@@ -51,11 +44,11 @@ public class RestApiArrayResultRestaurantVoucherPaygreenConfiguration {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<RestaurantVoucherPaygreenConfiguration> getData() {
+  public RestaurantVoucherPayGreenConfiguration getData() {
     return data;
   }
 
-  public void setData(List<RestaurantVoucherPaygreenConfiguration> data) {
+  public void setData(RestaurantVoucherPayGreenConfiguration data) {
     this.data = data;
   }
 
@@ -68,8 +61,8 @@ public class RestApiArrayResultRestaurantVoucherPaygreenConfiguration {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiArrayResultRestaurantVoucherPaygreenConfiguration restApiArrayResultRestaurantVoucherPaygreenConfiguration = (RestApiArrayResultRestaurantVoucherPaygreenConfiguration) o;
-    return Objects.equals(this.data, restApiArrayResultRestaurantVoucherPaygreenConfiguration.data);
+    RestApiResultRestaurantVoucherPayGreenConfiguration restApiResultRestaurantVoucherPayGreenConfiguration = (RestApiResultRestaurantVoucherPayGreenConfiguration) o;
+    return Objects.equals(this.data, restApiResultRestaurantVoucherPayGreenConfiguration.data);
   }
 
   @Override
@@ -81,7 +74,7 @@ public class RestApiArrayResultRestaurantVoucherPaygreenConfiguration {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiArrayResultRestaurantVoucherPaygreenConfiguration {\n");
+    sb.append("class RestApiResultRestaurantVoucherPayGreenConfiguration {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

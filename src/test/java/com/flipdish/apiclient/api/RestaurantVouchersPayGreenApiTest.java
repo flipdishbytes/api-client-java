@@ -16,15 +16,15 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreatePayGreenConfigurationRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherEligibleStore;
-import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPaygreenConfiguration;
-import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary;
+import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPayGreenConfiguration;
+import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPaygreenConfiguration;
-import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPaygreenStoreConfiguration;
+import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPayGreenConfiguration;
+import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPayGreenStoreConfiguration;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdatePayGreenConfigurationRequest;
-import com.flipdish.apiclient.model.UpdateStorePaygreenConfigurationRequest;
+import com.flipdish.apiclient.model.UpdateStorePayGreenConfigurationRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,12 +34,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for PaygreenApi
+ * API tests for RestaurantVouchersPayGreenApi
  */
 @Ignore
-public class PaygreenApiTest {
+public class RestaurantVouchersPayGreenApiTest {
 
-    private final PaygreenApi api = new PaygreenApi();
+    private final RestaurantVouchersPayGreenApi api = new RestaurantVouchersPayGreenApi();
 
     
     /**
@@ -54,7 +54,7 @@ public class PaygreenApiTest {
     public void createPayGreenConfigurationTest() throws ApiException {
         String appId = null;
         CreatePayGreenConfigurationRequest request = null;
-        RestApiResultRestaurantVoucherPaygreenConfiguration response = api.createPayGreenConfiguration(appId, request);
+        RestApiResultRestaurantVoucherPayGreenConfiguration response = api.createPayGreenConfiguration(appId, request);
 
         // TODO: test validations
     }
@@ -68,10 +68,10 @@ public class PaygreenApiTest {
      *          if the Api call fails
      */
     @Test
-    public void deletePaygreenConfigurationTest() throws ApiException {
+    public void deletePayGreenConfigurationTest() throws ApiException {
         String appId = null;
         Integer paygreenConfigurationId = null;
-        Object response = api.deletePaygreenConfiguration(appId, paygreenConfigurationId);
+        Object response = api.deletePayGreenConfiguration(appId, paygreenConfigurationId);
 
         // TODO: test validations
     }
@@ -85,9 +85,25 @@ public class PaygreenApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getPaygreenConfigurationsTest() throws ApiException {
+    public void getElegibleStoresTest() throws ApiException {
         String appId = null;
-        RestApiArrayResultRestaurantVoucherPaygreenConfiguration response = api.getPaygreenConfigurations(appId);
+        RestApiArrayResultRestaurantVoucherEligibleStore response = api.getElegibleStores(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPayGreenConfigurationsTest() throws ApiException {
+        String appId = null;
+        RestApiArrayResultRestaurantVoucherPayGreenConfiguration response = api.getPayGreenConfigurations(appId);
 
         // TODO: test validations
     }
@@ -104,23 +120,7 @@ public class PaygreenApiTest {
     public void getStoreAvailablePayGreenConfigurationsTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary response = api.getStoreAvailablePayGreenConfigurations(appId, storeId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getStorePayGreenConfigurationTest() throws ApiException {
-        String appId = null;
-        RestApiArrayResultRestaurantVoucherEligibleStore response = api.getStorePayGreenConfiguration(appId);
+        RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary response = api.getStoreAvailablePayGreenConfigurations(appId, storeId);
 
         // TODO: test validations
     }
@@ -137,7 +137,7 @@ public class PaygreenApiTest {
     public void getStorePayGreenConfiguration_Test() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        RestApiResultRestaurantVoucherPaygreenStoreConfiguration response = api.getStorePayGreenConfiguration_(appId, storeId);
+        RestApiResultRestaurantVoucherPayGreenStoreConfiguration response = api.getStorePayGreenConfiguration_(appId, storeId);
 
         // TODO: test validations
     }
@@ -154,7 +154,7 @@ public class PaygreenApiTest {
     public void listPayGreenConfigurationsTest() throws ApiException {
         String appId = null;
         Integer paygreenConfigurationId = null;
-        RestApiResultRestaurantVoucherPaygreenConfiguration response = api.listPayGreenConfigurations(appId, paygreenConfigurationId);
+        RestApiResultRestaurantVoucherPayGreenConfiguration response = api.listPayGreenConfigurations(appId, paygreenConfigurationId);
 
         // TODO: test validations
     }
@@ -172,7 +172,7 @@ public class PaygreenApiTest {
         String appId = null;
         Integer paygreenConfigurationId = null;
         UpdatePayGreenConfigurationRequest request = null;
-        RestApiResultRestaurantVoucherPaygreenConfiguration response = api.updatePayGreenConfiguration(appId, paygreenConfigurationId, request);
+        RestApiResultRestaurantVoucherPayGreenConfiguration response = api.updatePayGreenConfiguration(appId, paygreenConfigurationId, request);
 
         // TODO: test validations
     }
@@ -189,8 +189,8 @@ public class PaygreenApiTest {
     public void updateStorePayGreenConfiguration_Test() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        UpdateStorePaygreenConfigurationRequest request = null;
-        RestApiResultRestaurantVoucherPaygreenStoreConfiguration response = api.updateStorePayGreenConfiguration_(appId, storeId, request);
+        UpdateStorePayGreenConfigurationRequest request = null;
+        RestApiResultRestaurantVoucherPayGreenStoreConfiguration response = api.updateStorePayGreenConfiguration_(appId, storeId, request);
 
         // TODO: test validations
     }

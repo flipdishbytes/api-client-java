@@ -30,8 +30,8 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class MobileAppsDetails {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class MobileAppsSubmissionDetails {
   @SerializedName("AppName")
   private String appName = null;
 
@@ -47,7 +47,68 @@ public class MobileAppsDetails {
   @SerializedName("AppLogoUrl")
   private String appLogoUrl = null;
 
-  public MobileAppsDetails appName(String appName) {
+  @SerializedName("AutoPublish")
+  private Boolean autoPublish = null;
+
+  /**
+   * Mobile App Status
+   */
+  @JsonAdapter(StatusEnum.Adapter.class)
+  public enum StatusEnum {
+    NONE("None"),
+    
+    INPROGRESS("InProgress"),
+    
+    SUBMITTED("Submitted"),
+    
+    APPSTOREREVIEW("AppStoreReview"),
+    
+    SUCESSFULL("Sucessfull"),
+    
+    UNSUCCESFUL("Unsuccesful");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static StatusEnum fromValue(String text) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<StatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return StatusEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("Status")
+  private StatusEnum status = null;
+
+  public MobileAppsSubmissionDetails appName(String appName) {
     this.appName = appName;
     return this;
   }
@@ -65,7 +126,7 @@ public class MobileAppsDetails {
     this.appName = appName;
   }
 
-  public MobileAppsDetails appDescription(String appDescription) {
+  public MobileAppsSubmissionDetails appDescription(String appDescription) {
     this.appDescription = appDescription;
     return this;
   }
@@ -83,7 +144,7 @@ public class MobileAppsDetails {
     this.appDescription = appDescription;
   }
 
-  public MobileAppsDetails appShortDescription(String appShortDescription) {
+  public MobileAppsSubmissionDetails appShortDescription(String appShortDescription) {
     this.appShortDescription = appShortDescription;
     return this;
   }
@@ -101,12 +162,12 @@ public class MobileAppsDetails {
     this.appShortDescription = appShortDescription;
   }
 
-  public MobileAppsDetails keywords(List<String> keywords) {
+  public MobileAppsSubmissionDetails keywords(List<String> keywords) {
     this.keywords = keywords;
     return this;
   }
 
-  public MobileAppsDetails addKeywordsItem(String keywordsItem) {
+  public MobileAppsSubmissionDetails addKeywordsItem(String keywordsItem) {
     if (this.keywords == null) {
       this.keywords = new ArrayList<String>();
     }
@@ -127,7 +188,7 @@ public class MobileAppsDetails {
     this.keywords = keywords;
   }
 
-  public MobileAppsDetails appLogoUrl(String appLogoUrl) {
+  public MobileAppsSubmissionDetails appLogoUrl(String appLogoUrl) {
     this.appLogoUrl = appLogoUrl;
     return this;
   }
@@ -145,6 +206,42 @@ public class MobileAppsDetails {
     this.appLogoUrl = appLogoUrl;
   }
 
+  public MobileAppsSubmissionDetails autoPublish(Boolean autoPublish) {
+    this.autoPublish = autoPublish;
+    return this;
+  }
+
+   /**
+   * Publish automatically
+   * @return autoPublish
+  **/
+  @ApiModelProperty(value = "Publish automatically")
+  public Boolean isAutoPublish() {
+    return autoPublish;
+  }
+
+  public void setAutoPublish(Boolean autoPublish) {
+    this.autoPublish = autoPublish;
+  }
+
+  public MobileAppsSubmissionDetails status(StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Mobile App Status
+   * @return status
+  **/
+  @ApiModelProperty(value = "Mobile App Status")
+  public StatusEnum getStatus() {
+    return status;
+  }
+
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -154,30 +251,34 @@ public class MobileAppsDetails {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MobileAppsDetails mobileAppsDetails = (MobileAppsDetails) o;
-    return Objects.equals(this.appName, mobileAppsDetails.appName) &&
-        Objects.equals(this.appDescription, mobileAppsDetails.appDescription) &&
-        Objects.equals(this.appShortDescription, mobileAppsDetails.appShortDescription) &&
-        Objects.equals(this.keywords, mobileAppsDetails.keywords) &&
-        Objects.equals(this.appLogoUrl, mobileAppsDetails.appLogoUrl);
+    MobileAppsSubmissionDetails mobileAppsSubmissionDetails = (MobileAppsSubmissionDetails) o;
+    return Objects.equals(this.appName, mobileAppsSubmissionDetails.appName) &&
+        Objects.equals(this.appDescription, mobileAppsSubmissionDetails.appDescription) &&
+        Objects.equals(this.appShortDescription, mobileAppsSubmissionDetails.appShortDescription) &&
+        Objects.equals(this.keywords, mobileAppsSubmissionDetails.keywords) &&
+        Objects.equals(this.appLogoUrl, mobileAppsSubmissionDetails.appLogoUrl) &&
+        Objects.equals(this.autoPublish, mobileAppsSubmissionDetails.autoPublish) &&
+        Objects.equals(this.status, mobileAppsSubmissionDetails.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, appDescription, appShortDescription, keywords, appLogoUrl);
+    return Objects.hash(appName, appDescription, appShortDescription, keywords, appLogoUrl, autoPublish, status);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MobileAppsDetails {\n");
+    sb.append("class MobileAppsSubmissionDetails {\n");
     
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    appDescription: ").append(toIndentedString(appDescription)).append("\n");
     sb.append("    appShortDescription: ").append(toIndentedString(appShortDescription)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    appLogoUrl: ").append(toIndentedString(appLogoUrl)).append("\n");
+    sb.append("    autoPublish: ").append(toIndentedString(autoPublish)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

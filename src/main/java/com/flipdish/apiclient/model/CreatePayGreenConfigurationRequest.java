@@ -29,16 +29,16 @@ import java.util.List;
 /**
  * CreatePayGreenConfigurationRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
 public class CreatePayGreenConfigurationRequest {
   @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("PaygreenId")
-  private String paygreenId = null;
+  @SerializedName("PayGreenId")
+  private String payGreenId = null;
 
-  @SerializedName("PaygreenPrivateKey")
-  private String paygreenPrivateKey = null;
+  @SerializedName("PayGreenPrivateKey")
+  private String payGreenPrivateKey = null;
 
   @SerializedName("AssignedStores")
   private List<Integer> assignedStores = null;
@@ -61,40 +61,40 @@ public class CreatePayGreenConfigurationRequest {
     this.name = name;
   }
 
-  public CreatePayGreenConfigurationRequest paygreenId(String paygreenId) {
-    this.paygreenId = paygreenId;
+  public CreatePayGreenConfigurationRequest payGreenId(String payGreenId) {
+    this.payGreenId = payGreenId;
     return this;
   }
 
    /**
-   * Get paygreenId
-   * @return paygreenId
+   * Get payGreenId
+   * @return payGreenId
   **/
   @ApiModelProperty(value = "")
-  public String getPaygreenId() {
-    return paygreenId;
+  public String getPayGreenId() {
+    return payGreenId;
   }
 
-  public void setPaygreenId(String paygreenId) {
-    this.paygreenId = paygreenId;
+  public void setPayGreenId(String payGreenId) {
+    this.payGreenId = payGreenId;
   }
 
-  public CreatePayGreenConfigurationRequest paygreenPrivateKey(String paygreenPrivateKey) {
-    this.paygreenPrivateKey = paygreenPrivateKey;
+  public CreatePayGreenConfigurationRequest payGreenPrivateKey(String payGreenPrivateKey) {
+    this.payGreenPrivateKey = payGreenPrivateKey;
     return this;
   }
 
    /**
-   * Get paygreenPrivateKey
-   * @return paygreenPrivateKey
+   * Get payGreenPrivateKey
+   * @return payGreenPrivateKey
   **/
   @ApiModelProperty(value = "")
-  public String getPaygreenPrivateKey() {
-    return paygreenPrivateKey;
+  public String getPayGreenPrivateKey() {
+    return payGreenPrivateKey;
   }
 
-  public void setPaygreenPrivateKey(String paygreenPrivateKey) {
-    this.paygreenPrivateKey = paygreenPrivateKey;
+  public void setPayGreenPrivateKey(String payGreenPrivateKey) {
+    this.payGreenPrivateKey = payGreenPrivateKey;
   }
 
   public CreatePayGreenConfigurationRequest assignedStores(List<Integer> assignedStores) {
@@ -134,14 +134,14 @@ public class CreatePayGreenConfigurationRequest {
     }
     CreatePayGreenConfigurationRequest createPayGreenConfigurationRequest = (CreatePayGreenConfigurationRequest) o;
     return Objects.equals(this.name, createPayGreenConfigurationRequest.name) &&
-        Objects.equals(this.paygreenId, createPayGreenConfigurationRequest.paygreenId) &&
-        Objects.equals(this.paygreenPrivateKey, createPayGreenConfigurationRequest.paygreenPrivateKey) &&
+        Objects.equals(this.payGreenId, createPayGreenConfigurationRequest.payGreenId) &&
+        Objects.equals(this.payGreenPrivateKey, createPayGreenConfigurationRequest.payGreenPrivateKey) &&
         Objects.equals(this.assignedStores, createPayGreenConfigurationRequest.assignedStores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, paygreenId, paygreenPrivateKey, assignedStores);
+    return Objects.hash(name, payGreenId, payGreenPrivateKey, assignedStores);
   }
 
 
@@ -151,8 +151,8 @@ public class CreatePayGreenConfigurationRequest {
     sb.append("class CreatePayGreenConfigurationRequest {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    paygreenId: ").append(toIndentedString(paygreenId)).append("\n");
-    sb.append("    paygreenPrivateKey: ").append(toIndentedString(paygreenPrivateKey)).append("\n");
+    sb.append("    payGreenId: ").append(toIndentedString(payGreenId)).append("\n");
+    sb.append("    payGreenPrivateKey: ").append(toIndentedString(payGreenPrivateKey)).append("\n");
     sb.append("    assignedStores: ").append(toIndentedString(assignedStores)).append("\n");
     sb.append("}");
     return sb.toString();

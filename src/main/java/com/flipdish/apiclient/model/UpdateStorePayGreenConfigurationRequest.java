@@ -25,14 +25,17 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * UpdateStorePaygreenConfigurationRequest
+ * UpdateStorePayGreenConfigurationRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class UpdateStorePaygreenConfigurationRequest {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class UpdateStorePayGreenConfigurationRequest {
   @SerializedName("Active")
   private Boolean active = null;
 
-  public UpdateStorePaygreenConfigurationRequest active(Boolean active) {
+  @SerializedName("PayGreenConfigurationId")
+  private Integer payGreenConfigurationId = null;
+
+  public UpdateStorePayGreenConfigurationRequest active(Boolean active) {
     this.active = active;
     return this;
   }
@@ -50,6 +53,24 @@ public class UpdateStorePaygreenConfigurationRequest {
     this.active = active;
   }
 
+  public UpdateStorePayGreenConfigurationRequest payGreenConfigurationId(Integer payGreenConfigurationId) {
+    this.payGreenConfigurationId = payGreenConfigurationId;
+    return this;
+  }
+
+   /**
+   * Get payGreenConfigurationId
+   * @return payGreenConfigurationId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getPayGreenConfigurationId() {
+    return payGreenConfigurationId;
+  }
+
+  public void setPayGreenConfigurationId(Integer payGreenConfigurationId) {
+    this.payGreenConfigurationId = payGreenConfigurationId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -59,22 +80,24 @@ public class UpdateStorePaygreenConfigurationRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateStorePaygreenConfigurationRequest updateStorePaygreenConfigurationRequest = (UpdateStorePaygreenConfigurationRequest) o;
-    return Objects.equals(this.active, updateStorePaygreenConfigurationRequest.active);
+    UpdateStorePayGreenConfigurationRequest updateStorePayGreenConfigurationRequest = (UpdateStorePayGreenConfigurationRequest) o;
+    return Objects.equals(this.active, updateStorePayGreenConfigurationRequest.active) &&
+        Objects.equals(this.payGreenConfigurationId, updateStorePayGreenConfigurationRequest.payGreenConfigurationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(active);
+    return Objects.hash(active, payGreenConfigurationId);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateStorePaygreenConfigurationRequest {\n");
+    sb.append("class UpdateStorePayGreenConfigurationRequest {\n");
     
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    payGreenConfigurationId: ").append(toIndentedString(payGreenConfigurationId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

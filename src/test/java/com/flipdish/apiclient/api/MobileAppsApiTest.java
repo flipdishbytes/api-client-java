@@ -16,16 +16,14 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import java.io.File;
-import com.flipdish.apiclient.model.MobileAppConfig;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiArrayResultMobileAppsStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
-import com.flipdish.apiclient.model.RestApiResultMobileAppsDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
+import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -46,72 +44,6 @@ public class MobileAppsApiTest {
 
     
     /**
-     * Set the application sales channel configuration
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void editAppConfigSalesChannelTest() throws ApiException {
-        String appId = null;
-        AppConfigSalesChannel appConfigSalesChannel = null;
-        RestApiResultAppConfigSalesChannel response = api.editAppConfigSalesChannel(appId, appConfigSalesChannel);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get mobile app configuration
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getAppConfigTest() throws ApiException {
-        String appId = null;
-        RestApiResultMobileAppsDetails response = api.getAppConfig(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get mobile app details
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getAppDetailsTest() throws ApiException {
-        String appId = null;
-        RestApiResultMobileAppsDetails response = api.getAppDetails(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get mobile app submitted status
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getMobileAppsSubmissionStatusTest() throws ApiException {
-        String appId = null;
-        String plataformType = null;
-        RestApiResultMobileAppsSubmissionStatus response = api.getMobileAppsSubmissionStatus(appId, plataformType);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get statistics mobile apps
      *
      * 
@@ -129,7 +61,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Set mobile app configuration
+     * Get submission details mobile apps
      *
      * 
      *
@@ -137,10 +69,26 @@ public class MobileAppsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void setAppConfigTest() throws ApiException {
+    public void getSubmissionDetailsTest() throws ApiException {
         String appId = null;
-        MobileAppConfig configUpdate = null;
-        RestApiResult response = api.setAppConfig(appId, configUpdate);
+        RestApiResultMobileAppsSubmissionDetails response = api.getSubmissionDetails(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get submission status mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getSubmissionStatusTest() throws ApiException {
+        String appId = null;
+        String type = null;
+        RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, type);
 
         // TODO: test validations
     }
@@ -163,7 +111,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Upload a Mobile Apps Image
+     * Update the application sales channel configuration
      *
      * 
      *
@@ -171,10 +119,27 @@ public class MobileAppsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void uploadMobileAppsImageTest() throws ApiException {
+    public void updateAppConfigSalesChannelTest() throws ApiException {
+        String appId = null;
+        AppConfigSalesChannel appConfigSalesChannel = null;
+        RestApiResultAppConfigSalesChannel response = api.updateAppConfigSalesChannel(appId, appConfigSalesChannel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Upload image mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadImageTest() throws ApiException {
         String appId = null;
         File image = null;
-        RestApiResultMobileAppsImage response = api.uploadMobileAppsImage(appId, image);
+        RestApiResultMobileAppsImage response = api.uploadImage(appId, image);
 
         // TODO: test validations
     }

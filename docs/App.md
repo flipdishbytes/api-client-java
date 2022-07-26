@@ -188,6 +188,10 @@ UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
 DELETEAPPSTOREAPPCONFIGURATION | &quot;DeleteAppStoreAppConfiguration&quot;
 VIEWSALESCHANNELS | &quot;ViewSalesChannels&quot;
 EDITSALESCHANNELS | &quot;EditSalesChannels&quot;
+VIEWPAYGREENWHITELABELCONFIGURATION | &quot;ViewPayGreenWhiteLabelConfiguration&quot;
+CREATEPAYGREENWHITELABELCONFIGURATION | &quot;CreatePayGreenWhiteLabelConfiguration&quot;
+UPDATEPAYGREENWHITELABELCONFIGURATION | &quot;UpdatePayGreenWhiteLabelConfiguration&quot;
+UPDATEPAYGREENSTORECONFIGURATION | &quot;UpdatePayGreenStoreConfiguration&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>

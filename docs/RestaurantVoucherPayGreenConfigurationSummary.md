@@ -1,11 +1,11 @@
 
-# RestaurantVoucherPaygreenConfigurationSummary
+# RestaurantVoucherPayGreenConfigurationSummary
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  |  [optional]
-**paygreenConfigurationId** | **Integer** |  |  [optional]
+**payGreenConfigurationId** | **Integer** |  |  [optional]
 
 
 

@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.MobileAppsDetails;
+import com.flipdish.apiclient.model.MobileAppsSubmissionDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,12 +29,12 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class RestApiResultMobileAppsDetails {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class RestApiResultMobileAppsSubmissionDetails {
   @SerializedName("Data")
-  private MobileAppsDetails data = null;
+  private MobileAppsSubmissionDetails data = null;
 
-  public RestApiResultMobileAppsDetails data(MobileAppsDetails data) {
+  public RestApiResultMobileAppsSubmissionDetails data(MobileAppsSubmissionDetails data) {
     this.data = data;
     return this;
   }
@@ -44,11 +44,11 @@ public class RestApiResultMobileAppsDetails {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public MobileAppsDetails getData() {
+  public MobileAppsSubmissionDetails getData() {
     return data;
   }
 
-  public void setData(MobileAppsDetails data) {
+  public void setData(MobileAppsSubmissionDetails data) {
     this.data = data;
   }
 
@@ -61,8 +61,8 @@ public class RestApiResultMobileAppsDetails {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiResultMobileAppsDetails restApiResultMobileAppsDetails = (RestApiResultMobileAppsDetails) o;
-    return Objects.equals(this.data, restApiResultMobileAppsDetails.data);
+    RestApiResultMobileAppsSubmissionDetails restApiResultMobileAppsSubmissionDetails = (RestApiResultMobileAppsSubmissionDetails) o;
+    return Objects.equals(this.data, restApiResultMobileAppsSubmissionDetails.data);
   }
 
   @Override
@@ -74,7 +74,7 @@ public class RestApiResultMobileAppsDetails {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiResultMobileAppsDetails {\n");
+    sb.append("class RestApiResultMobileAppsSubmissionDetails {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

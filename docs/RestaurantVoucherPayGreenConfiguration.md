@@ -1,12 +1,12 @@
 
-# RestaurantVoucherPaygreenConfiguration
+# RestaurantVoucherPayGreenConfiguration
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  |  [optional]
-**paygreenId** | **String** |  |  [optional]
-**paygreenConfigurationId** | **Integer** |  |  [optional]
+**payGreenId** | **String** |  |  [optional]
+**payGreenConfigurationId** | **Integer** |  |  [optional]
 **assignedStores** | [**List&lt;RestaurantVoucherAssignedStore&gt;**](RestaurantVoucherAssignedStore.md) |  |  [optional]
 
 

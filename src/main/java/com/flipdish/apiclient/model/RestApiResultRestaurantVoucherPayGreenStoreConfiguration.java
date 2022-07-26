@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.RestaurantVoucherPayGreenStoreConfiguration;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,30 +26,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Mobile Apps form submission
+ * Rest api result
  */
-@ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class MobileAppConfig {
-  @SerializedName("AutoPublish")
-  private Boolean autoPublish = null;
+@ApiModel(description = "Rest api result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class RestApiResultRestaurantVoucherPayGreenStoreConfiguration {
+  @SerializedName("Data")
+  private RestaurantVoucherPayGreenStoreConfiguration data = null;
 
-  public MobileAppConfig autoPublish(Boolean autoPublish) {
-    this.autoPublish = autoPublish;
+  public RestApiResultRestaurantVoucherPayGreenStoreConfiguration data(RestaurantVoucherPayGreenStoreConfiguration data) {
+    this.data = data;
     return this;
   }
 
    /**
-   * App Name
-   * @return autoPublish
+   * Generic data object.
+   * @return data
   **/
-  @ApiModelProperty(value = "App Name")
-  public Boolean isAutoPublish() {
-    return autoPublish;
+  @ApiModelProperty(required = true, value = "Generic data object.")
+  public RestaurantVoucherPayGreenStoreConfiguration getData() {
+    return data;
   }
 
-  public void setAutoPublish(Boolean autoPublish) {
-    this.autoPublish = autoPublish;
+  public void setData(RestaurantVoucherPayGreenStoreConfiguration data) {
+    this.data = data;
   }
 
 
@@ -60,22 +61,22 @@ public class MobileAppConfig {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MobileAppConfig mobileAppConfig = (MobileAppConfig) o;
-    return Objects.equals(this.autoPublish, mobileAppConfig.autoPublish);
+    RestApiResultRestaurantVoucherPayGreenStoreConfiguration restApiResultRestaurantVoucherPayGreenStoreConfiguration = (RestApiResultRestaurantVoucherPayGreenStoreConfiguration) o;
+    return Objects.equals(this.data, restApiResultRestaurantVoucherPayGreenStoreConfiguration.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(autoPublish);
+    return Objects.hash(data);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MobileAppConfig {\n");
+    sb.append("class RestApiResultRestaurantVoucherPayGreenStoreConfiguration {\n");
     
-    sb.append("    autoPublish: ").append(toIndentedString(autoPublish)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

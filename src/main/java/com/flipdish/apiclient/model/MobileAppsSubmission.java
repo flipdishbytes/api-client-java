@@ -30,7 +30,7 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
 public class MobileAppsSubmission {
   @SerializedName("AppName")
   private String appName = null;
@@ -43,6 +43,67 @@ public class MobileAppsSubmission {
 
   @SerializedName("Keywords")
   private List<String> keywords = null;
+
+  @SerializedName("AutoPublish")
+  private Boolean autoPublish = null;
+
+  /**
+   * Mobile App Status
+   */
+  @JsonAdapter(StatusEnum.Adapter.class)
+  public enum StatusEnum {
+    NONE("None"),
+    
+    INPROGRESS("InProgress"),
+    
+    SUBMITTED("Submitted"),
+    
+    APPSTOREREVIEW("AppStoreReview"),
+    
+    SUCESSFULL("Sucessfull"),
+    
+    UNSUCCESFUL("Unsuccesful");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static StatusEnum fromValue(String text) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<StatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return StatusEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("Status")
+  private StatusEnum status = null;
 
   public MobileAppsSubmission appName(String appName) {
     this.appName = appName;
@@ -124,6 +185,42 @@ public class MobileAppsSubmission {
     this.keywords = keywords;
   }
 
+  public MobileAppsSubmission autoPublish(Boolean autoPublish) {
+    this.autoPublish = autoPublish;
+    return this;
+  }
+
+   /**
+   * Publish automatically
+   * @return autoPublish
+  **/
+  @ApiModelProperty(value = "Publish automatically")
+  public Boolean isAutoPublish() {
+    return autoPublish;
+  }
+
+  public void setAutoPublish(Boolean autoPublish) {
+    this.autoPublish = autoPublish;
+  }
+
+  public MobileAppsSubmission status(StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Mobile App Status
+   * @return status
+  **/
+  @ApiModelProperty(value = "Mobile App Status")
+  public StatusEnum getStatus() {
+    return status;
+  }
+
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,12 +234,14 @@ public class MobileAppsSubmission {
     return Objects.equals(this.appName, mobileAppsSubmission.appName) &&
         Objects.equals(this.appDescription, mobileAppsSubmission.appDescription) &&
         Objects.equals(this.appShortDescription, mobileAppsSubmission.appShortDescription) &&
-        Objects.equals(this.keywords, mobileAppsSubmission.keywords);
+        Objects.equals(this.keywords, mobileAppsSubmission.keywords) &&
+        Objects.equals(this.autoPublish, mobileAppsSubmission.autoPublish) &&
+        Objects.equals(this.status, mobileAppsSubmission.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, appDescription, appShortDescription, keywords);
+    return Objects.hash(appName, appDescription, appShortDescription, keywords, autoPublish, status);
   }
 
 
@@ -155,6 +254,8 @@ public class MobileAppsSubmission {
     sb.append("    appDescription: ").append(toIndentedString(appDescription)).append("\n");
     sb.append("    appShortDescription: ").append(toIndentedString(appShortDescription)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
+    sb.append("    autoPublish: ").append(toIndentedString(autoPublish)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -28,23 +28,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * RestaurantVoucherPaygreenConfiguration
+ * RestaurantVoucherPayGreenConfiguration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T08:19:31.593+01:00")
-public class RestaurantVoucherPaygreenConfiguration {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-26T13:39:50.059+01:00")
+public class RestaurantVoucherPayGreenConfiguration {
   @SerializedName("Name")
   private String name = null;
 
-  @SerializedName("PaygreenId")
-  private String paygreenId = null;
+  @SerializedName("PayGreenId")
+  private String payGreenId = null;
 
-  @SerializedName("PaygreenConfigurationId")
-  private Integer paygreenConfigurationId = null;
+  @SerializedName("PayGreenConfigurationId")
+  private Integer payGreenConfigurationId = null;
 
   @SerializedName("AssignedStores")
   private List<RestaurantVoucherAssignedStore> assignedStores = null;
 
-  public RestaurantVoucherPaygreenConfiguration name(String name) {
+  public RestaurantVoucherPayGreenConfiguration name(String name) {
     this.name = name;
     return this;
   }
@@ -62,48 +62,48 @@ public class RestaurantVoucherPaygreenConfiguration {
     this.name = name;
   }
 
-  public RestaurantVoucherPaygreenConfiguration paygreenId(String paygreenId) {
-    this.paygreenId = paygreenId;
+  public RestaurantVoucherPayGreenConfiguration payGreenId(String payGreenId) {
+    this.payGreenId = payGreenId;
     return this;
   }
 
    /**
-   * Get paygreenId
-   * @return paygreenId
+   * Get payGreenId
+   * @return payGreenId
   **/
   @ApiModelProperty(value = "")
-  public String getPaygreenId() {
-    return paygreenId;
+  public String getPayGreenId() {
+    return payGreenId;
   }
 
-  public void setPaygreenId(String paygreenId) {
-    this.paygreenId = paygreenId;
+  public void setPayGreenId(String payGreenId) {
+    this.payGreenId = payGreenId;
   }
 
-  public RestaurantVoucherPaygreenConfiguration paygreenConfigurationId(Integer paygreenConfigurationId) {
-    this.paygreenConfigurationId = paygreenConfigurationId;
+  public RestaurantVoucherPayGreenConfiguration payGreenConfigurationId(Integer payGreenConfigurationId) {
+    this.payGreenConfigurationId = payGreenConfigurationId;
     return this;
   }
 
    /**
-   * Get paygreenConfigurationId
-   * @return paygreenConfigurationId
+   * Get payGreenConfigurationId
+   * @return payGreenConfigurationId
   **/
   @ApiModelProperty(value = "")
-  public Integer getPaygreenConfigurationId() {
-    return paygreenConfigurationId;
+  public Integer getPayGreenConfigurationId() {
+    return payGreenConfigurationId;
   }
 
-  public void setPaygreenConfigurationId(Integer paygreenConfigurationId) {
-    this.paygreenConfigurationId = paygreenConfigurationId;
+  public void setPayGreenConfigurationId(Integer payGreenConfigurationId) {
+    this.payGreenConfigurationId = payGreenConfigurationId;
   }
 
-  public RestaurantVoucherPaygreenConfiguration assignedStores(List<RestaurantVoucherAssignedStore> assignedStores) {
+  public RestaurantVoucherPayGreenConfiguration assignedStores(List<RestaurantVoucherAssignedStore> assignedStores) {
     this.assignedStores = assignedStores;
     return this;
   }
 
-  public RestaurantVoucherPaygreenConfiguration addAssignedStoresItem(RestaurantVoucherAssignedStore assignedStoresItem) {
+  public RestaurantVoucherPayGreenConfiguration addAssignedStoresItem(RestaurantVoucherAssignedStore assignedStoresItem) {
     if (this.assignedStores == null) {
       this.assignedStores = new ArrayList<RestaurantVoucherAssignedStore>();
     }
@@ -133,27 +133,27 @@ public class RestaurantVoucherPaygreenConfiguration {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestaurantVoucherPaygreenConfiguration restaurantVoucherPaygreenConfiguration = (RestaurantVoucherPaygreenConfiguration) o;
-    return Objects.equals(this.name, restaurantVoucherPaygreenConfiguration.name) &&
-        Objects.equals(this.paygreenId, restaurantVoucherPaygreenConfiguration.paygreenId) &&
-        Objects.equals(this.paygreenConfigurationId, restaurantVoucherPaygreenConfiguration.paygreenConfigurationId) &&
-        Objects.equals(this.assignedStores, restaurantVoucherPaygreenConfiguration.assignedStores);
+    RestaurantVoucherPayGreenConfiguration restaurantVoucherPayGreenConfiguration = (RestaurantVoucherPayGreenConfiguration) o;
+    return Objects.equals(this.name, restaurantVoucherPayGreenConfiguration.name) &&
+        Objects.equals(this.payGreenId, restaurantVoucherPayGreenConfiguration.payGreenId) &&
+        Objects.equals(this.payGreenConfigurationId, restaurantVoucherPayGreenConfiguration.payGreenConfigurationId) &&
+        Objects.equals(this.assignedStores, restaurantVoucherPayGreenConfiguration.assignedStores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, paygreenId, paygreenConfigurationId, assignedStores);
+    return Objects.hash(name, payGreenId, payGreenConfigurationId, assignedStores);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestaurantVoucherPaygreenConfiguration {\n");
+    sb.append("class RestaurantVoucherPayGreenConfiguration {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    paygreenId: ").append(toIndentedString(paygreenId)).append("\n");
-    sb.append("    paygreenConfigurationId: ").append(toIndentedString(paygreenConfigurationId)).append("\n");
+    sb.append("    payGreenId: ").append(toIndentedString(payGreenId)).append("\n");
+    sb.append("    payGreenConfigurationId: ").append(toIndentedString(payGreenConfigurationId)).append("\n");
     sb.append("    assignedStores: ").append(toIndentedString(assignedStores)).append("\n");
     sb.append("}");
     return sb.toString();

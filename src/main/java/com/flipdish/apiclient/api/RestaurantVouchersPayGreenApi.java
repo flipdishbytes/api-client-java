@@ -29,15 +29,15 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CreatePayGreenConfigurationRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherEligibleStore;
-import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPaygreenConfiguration;
-import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary;
+import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPayGreenConfiguration;
+import com.flipdish.apiclient.model.RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPaygreenConfiguration;
-import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPaygreenStoreConfiguration;
+import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPayGreenConfiguration;
+import com.flipdish.apiclient.model.RestApiResultRestaurantVoucherPayGreenStoreConfiguration;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdatePayGreenConfigurationRequest;
-import com.flipdish.apiclient.model.UpdateStorePaygreenConfigurationRequest;
+import com.flipdish.apiclient.model.UpdateStorePayGreenConfigurationRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -45,14 +45,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PaygreenApi {
+public class RestaurantVouchersPayGreenApi {
     private ApiClient apiClient;
 
-    public PaygreenApi() {
+    public RestaurantVouchersPayGreenApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public PaygreenApi(ApiClient apiClient) {
+    public RestaurantVouchersPayGreenApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 
@@ -139,11 +139,11 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param request  (required)
-     * @return RestApiResultRestaurantVoucherPaygreenConfiguration
+     * @return RestApiResultRestaurantVoucherPayGreenConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestaurantVoucherPaygreenConfiguration createPayGreenConfiguration(String appId, CreatePayGreenConfigurationRequest request) throws ApiException {
-        ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> resp = createPayGreenConfigurationWithHttpInfo(appId, request);
+    public RestApiResultRestaurantVoucherPayGreenConfiguration createPayGreenConfiguration(String appId, CreatePayGreenConfigurationRequest request) throws ApiException {
+        ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> resp = createPayGreenConfigurationWithHttpInfo(appId, request);
         return resp.getData();
     }
 
@@ -152,12 +152,12 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param request  (required)
-     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPaygreenConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPayGreenConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> createPayGreenConfigurationWithHttpInfo(String appId, CreatePayGreenConfigurationRequest request) throws ApiException {
+    public ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> createPayGreenConfigurationWithHttpInfo(String appId, CreatePayGreenConfigurationRequest request) throws ApiException {
         com.squareup.okhttp.Call call = createPayGreenConfigurationValidateBeforeCall(appId, request, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -170,7 +170,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createPayGreenConfigurationAsync(String appId, CreatePayGreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPaygreenConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call createPayGreenConfigurationAsync(String appId, CreatePayGreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPayGreenConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -192,12 +192,12 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = createPayGreenConfigurationValidateBeforeCall(appId, request, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for deletePaygreenConfiguration
+     * Build call for deletePayGreenConfiguration
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
      * @param progressListener Progress listener
@@ -205,7 +205,7 @@ public class PaygreenApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deletePaygreenConfigurationCall(String appId, Integer paygreenConfigurationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deletePayGreenConfigurationCall(String appId, Integer paygreenConfigurationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -249,20 +249,20 @@ public class PaygreenApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deletePaygreenConfigurationValidateBeforeCall(String appId, Integer paygreenConfigurationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deletePayGreenConfigurationValidateBeforeCall(String appId, Integer paygreenConfigurationId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling deletePaygreenConfiguration(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling deletePayGreenConfiguration(Async)");
         }
         
         // verify the required parameter 'paygreenConfigurationId' is set
         if (paygreenConfigurationId == null) {
-            throw new ApiException("Missing the required parameter 'paygreenConfigurationId' when calling deletePaygreenConfiguration(Async)");
+            throw new ApiException("Missing the required parameter 'paygreenConfigurationId' when calling deletePayGreenConfiguration(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = deletePaygreenConfigurationCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deletePayGreenConfigurationCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -275,8 +275,8 @@ public class PaygreenApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object deletePaygreenConfiguration(String appId, Integer paygreenConfigurationId) throws ApiException {
-        ApiResponse<Object> resp = deletePaygreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
+    public Object deletePayGreenConfiguration(String appId, Integer paygreenConfigurationId) throws ApiException {
+        ApiResponse<Object> resp = deletePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
         return resp.getData();
     }
 
@@ -288,8 +288,8 @@ public class PaygreenApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> deletePaygreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
-        com.squareup.okhttp.Call call = deletePaygreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, null, null);
+    public ApiResponse<Object> deletePayGreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
+        com.squareup.okhttp.Call call = deletePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -303,7 +303,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deletePaygreenConfigurationAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call deletePayGreenConfigurationAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -324,20 +324,143 @@ public class PaygreenApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deletePaygreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deletePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getPaygreenConfigurations
+     * Build call for getElegibleStores
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPaygreenConfigurationsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getElegibleStoresCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getElegibleStoresValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getElegibleStores(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getElegibleStoresCall(appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @return RestApiArrayResultRestaurantVoucherEligibleStore
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultRestaurantVoucherEligibleStore getElegibleStores(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultRestaurantVoucherEligibleStore> resp = getElegibleStoresWithHttpInfo(appId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherEligibleStore&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultRestaurantVoucherEligibleStore> getElegibleStoresWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getElegibleStoresValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherEligibleStore>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getElegibleStoresAsync(String appId, final ApiCallback<RestApiArrayResultRestaurantVoucherEligibleStore> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getElegibleStoresValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherEligibleStore>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getPayGreenConfigurations
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPayGreenConfigurationsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -380,15 +503,15 @@ public class PaygreenApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPaygreenConfigurationsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPayGreenConfigurationsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getPaygreenConfigurations(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling getPayGreenConfigurations(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getPaygreenConfigurationsCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPayGreenConfigurationsCall(appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -397,11 +520,11 @@ public class PaygreenApi {
      * 
      * 
      * @param appId  (required)
-     * @return RestApiArrayResultRestaurantVoucherPaygreenConfiguration
+     * @return RestApiArrayResultRestaurantVoucherPayGreenConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultRestaurantVoucherPaygreenConfiguration getPaygreenConfigurations(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultRestaurantVoucherPaygreenConfiguration> resp = getPaygreenConfigurationsWithHttpInfo(appId);
+    public RestApiArrayResultRestaurantVoucherPayGreenConfiguration getPayGreenConfigurations(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultRestaurantVoucherPayGreenConfiguration> resp = getPayGreenConfigurationsWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -409,12 +532,12 @@ public class PaygreenApi {
      * 
      * 
      * @param appId  (required)
-     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherPaygreenConfiguration&gt;
+     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherPayGreenConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultRestaurantVoucherPaygreenConfiguration> getPaygreenConfigurationsWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getPaygreenConfigurationsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+    public ApiResponse<RestApiArrayResultRestaurantVoucherPayGreenConfiguration> getPayGreenConfigurationsWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getPayGreenConfigurationsValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -426,7 +549,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPaygreenConfigurationsAsync(String appId, final ApiCallback<RestApiArrayResultRestaurantVoucherPaygreenConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPayGreenConfigurationsAsync(String appId, final ApiCallback<RestApiArrayResultRestaurantVoucherPayGreenConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -447,8 +570,8 @@ public class PaygreenApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPaygreenConfigurationsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        com.squareup.okhttp.Call call = getPayGreenConfigurationsValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -528,11 +651,11 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param storeId  (required)
-     * @return RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary
+     * @return RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary getStoreAvailablePayGreenConfigurations(String appId, Integer storeId) throws ApiException {
-        ApiResponse<RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary> resp = getStoreAvailablePayGreenConfigurationsWithHttpInfo(appId, storeId);
+    public RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary getStoreAvailablePayGreenConfigurations(String appId, Integer storeId) throws ApiException {
+        ApiResponse<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary> resp = getStoreAvailablePayGreenConfigurationsWithHttpInfo(appId, storeId);
         return resp.getData();
     }
 
@@ -541,12 +664,12 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param storeId  (required)
-     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary&gt;
+     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary> getStoreAvailablePayGreenConfigurationsWithHttpInfo(String appId, Integer storeId) throws ApiException {
+    public ApiResponse<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary> getStoreAvailablePayGreenConfigurationsWithHttpInfo(String appId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = getStoreAvailablePayGreenConfigurationsValidateBeforeCall(appId, storeId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -559,7 +682,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreAvailablePayGreenConfigurationsAsync(String appId, Integer storeId, final ApiCallback<RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoreAvailablePayGreenConfigurationsAsync(String appId, Integer storeId, final ApiCallback<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -581,130 +704,7 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = getStoreAvailablePayGreenConfigurationsValidateBeforeCall(appId, storeId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getStorePayGreenConfiguration
-     * @param appId  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getStorePayGreenConfigurationCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores"
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStorePayGreenConfigurationValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'appId' is set
-        if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getStorePayGreenConfiguration(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = getStorePayGreenConfigurationCall(appId, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param appId  (required)
-     * @return RestApiArrayResultRestaurantVoucherEligibleStore
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiArrayResultRestaurantVoucherEligibleStore getStorePayGreenConfiguration(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultRestaurantVoucherEligibleStore> resp = getStorePayGreenConfigurationWithHttpInfo(appId);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param appId  (required)
-     * @return ApiResponse&lt;RestApiArrayResultRestaurantVoucherEligibleStore&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiArrayResultRestaurantVoucherEligibleStore> getStorePayGreenConfigurationWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getStorePayGreenConfigurationValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherEligibleStore>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param appId  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getStorePayGreenConfigurationAsync(String appId, final ApiCallback<RestApiArrayResultRestaurantVoucherEligibleStore> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getStorePayGreenConfigurationValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherEligibleStore>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -784,11 +784,11 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param storeId  (required)
-     * @return RestApiResultRestaurantVoucherPaygreenStoreConfiguration
+     * @return RestApiResultRestaurantVoucherPayGreenStoreConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestaurantVoucherPaygreenStoreConfiguration getStorePayGreenConfiguration_(String appId, Integer storeId) throws ApiException {
-        ApiResponse<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> resp = getStorePayGreenConfiguration_WithHttpInfo(appId, storeId);
+    public RestApiResultRestaurantVoucherPayGreenStoreConfiguration getStorePayGreenConfiguration_(String appId, Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> resp = getStorePayGreenConfiguration_WithHttpInfo(appId, storeId);
         return resp.getData();
     }
 
@@ -797,12 +797,12 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param storeId  (required)
-     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPaygreenStoreConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPayGreenStoreConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> getStorePayGreenConfiguration_WithHttpInfo(String appId, Integer storeId) throws ApiException {
+    public ApiResponse<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> getStorePayGreenConfiguration_WithHttpInfo(String appId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = getStorePayGreenConfiguration_ValidateBeforeCall(appId, storeId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenStoreConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenStoreConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -815,7 +815,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStorePayGreenConfiguration_Async(String appId, Integer storeId, final ApiCallback<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStorePayGreenConfiguration_Async(String appId, Integer storeId, final ApiCallback<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -837,7 +837,7 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = getStorePayGreenConfiguration_ValidateBeforeCall(appId, storeId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenStoreConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenStoreConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -917,11 +917,11 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
-     * @return RestApiResultRestaurantVoucherPaygreenConfiguration
+     * @return RestApiResultRestaurantVoucherPayGreenConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestaurantVoucherPaygreenConfiguration listPayGreenConfigurations(String appId, Integer paygreenConfigurationId) throws ApiException {
-        ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> resp = listPayGreenConfigurationsWithHttpInfo(appId, paygreenConfigurationId);
+    public RestApiResultRestaurantVoucherPayGreenConfiguration listPayGreenConfigurations(String appId, Integer paygreenConfigurationId) throws ApiException {
+        ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> resp = listPayGreenConfigurationsWithHttpInfo(appId, paygreenConfigurationId);
         return resp.getData();
     }
 
@@ -930,12 +930,12 @@ public class PaygreenApi {
      * 
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
-     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPaygreenConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPayGreenConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> listPayGreenConfigurationsWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
+    public ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> listPayGreenConfigurationsWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
         com.squareup.okhttp.Call call = listPayGreenConfigurationsValidateBeforeCall(appId, paygreenConfigurationId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -948,7 +948,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listPayGreenConfigurationsAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<RestApiResultRestaurantVoucherPaygreenConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call listPayGreenConfigurationsAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<RestApiResultRestaurantVoucherPayGreenConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -970,7 +970,7 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = listPayGreenConfigurationsValidateBeforeCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1057,11 +1057,11 @@ public class PaygreenApi {
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
      * @param request  (required)
-     * @return RestApiResultRestaurantVoucherPaygreenConfiguration
+     * @return RestApiResultRestaurantVoucherPayGreenConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestaurantVoucherPaygreenConfiguration updatePayGreenConfiguration(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request) throws ApiException {
-        ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> resp = updatePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId, request);
+    public RestApiResultRestaurantVoucherPayGreenConfiguration updatePayGreenConfiguration(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request) throws ApiException {
+        ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> resp = updatePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId, request);
         return resp.getData();
     }
 
@@ -1071,12 +1071,12 @@ public class PaygreenApi {
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
      * @param request  (required)
-     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPaygreenConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPayGreenConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestaurantVoucherPaygreenConfiguration> updatePayGreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request) throws ApiException {
+    public ApiResponse<RestApiResultRestaurantVoucherPayGreenConfiguration> updatePayGreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request) throws ApiException {
         com.squareup.okhttp.Call call = updatePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, request, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1090,7 +1090,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updatePayGreenConfigurationAsync(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPaygreenConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call updatePayGreenConfigurationAsync(String appId, Integer paygreenConfigurationId, UpdatePayGreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPayGreenConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1112,7 +1112,7 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = updatePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, request, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1126,7 +1126,7 @@ public class PaygreenApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateStorePayGreenConfiguration_Call(String appId, Integer storeId, UpdateStorePaygreenConfigurationRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call updateStorePayGreenConfiguration_Call(String appId, Integer storeId, UpdateStorePayGreenConfigurationRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -1170,7 +1170,7 @@ public class PaygreenApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateStorePayGreenConfiguration_ValidateBeforeCall(String appId, Integer storeId, UpdateStorePaygreenConfigurationRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateStorePayGreenConfiguration_ValidateBeforeCall(String appId, Integer storeId, UpdateStorePayGreenConfigurationRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -1199,11 +1199,11 @@ public class PaygreenApi {
      * @param appId  (required)
      * @param storeId  (required)
      * @param request  (required)
-     * @return RestApiResultRestaurantVoucherPaygreenStoreConfiguration
+     * @return RestApiResultRestaurantVoucherPayGreenStoreConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestaurantVoucherPaygreenStoreConfiguration updateStorePayGreenConfiguration_(String appId, Integer storeId, UpdateStorePaygreenConfigurationRequest request) throws ApiException {
-        ApiResponse<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> resp = updateStorePayGreenConfiguration_WithHttpInfo(appId, storeId, request);
+    public RestApiResultRestaurantVoucherPayGreenStoreConfiguration updateStorePayGreenConfiguration_(String appId, Integer storeId, UpdateStorePayGreenConfigurationRequest request) throws ApiException {
+        ApiResponse<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> resp = updateStorePayGreenConfiguration_WithHttpInfo(appId, storeId, request);
         return resp.getData();
     }
 
@@ -1213,12 +1213,12 @@ public class PaygreenApi {
      * @param appId  (required)
      * @param storeId  (required)
      * @param request  (required)
-     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPaygreenStoreConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultRestaurantVoucherPayGreenStoreConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> updateStorePayGreenConfiguration_WithHttpInfo(String appId, Integer storeId, UpdateStorePaygreenConfigurationRequest request) throws ApiException {
+    public ApiResponse<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> updateStorePayGreenConfiguration_WithHttpInfo(String appId, Integer storeId, UpdateStorePayGreenConfigurationRequest request) throws ApiException {
         com.squareup.okhttp.Call call = updateStorePayGreenConfiguration_ValidateBeforeCall(appId, storeId, request, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenStoreConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenStoreConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1232,7 +1232,7 @@ public class PaygreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateStorePayGreenConfiguration_Async(String appId, Integer storeId, UpdateStorePaygreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPaygreenStoreConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateStorePayGreenConfiguration_Async(String appId, Integer storeId, UpdateStorePayGreenConfigurationRequest request, final ApiCallback<RestApiResultRestaurantVoucherPayGreenStoreConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1254,7 +1254,7 @@ public class PaygreenApi {
         }
 
         com.squareup.okhttp.Call call = updateStorePayGreenConfiguration_ValidateBeforeCall(appId, storeId, request, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPaygreenStoreConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultRestaurantVoucherPayGreenStoreConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
