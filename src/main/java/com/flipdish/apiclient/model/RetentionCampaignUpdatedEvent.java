@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Retention campaign updated event
  */
 @ApiModel(description = "Retention campaign updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T10:37:09.983+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:13:42.784+01:00")
 public class RetentionCampaignUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

@@ -31,7 +31,7 @@ import java.util.List;
  * Field
  */
 @ApiModel(description = "Field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T10:37:09.983+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:13:42.784+01:00")
 public class Field {
   @SerializedName("Name")
   private String name = null;

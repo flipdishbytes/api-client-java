@@ -18,6 +18,7 @@ import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiArrayResultOrderBatchItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultOrderBatch;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -28,18 +29,18 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for OrderBatchApi
+ * API tests for OrderBatchesApi
  */
 @Ignore
-public class OrderBatchApiTest {
+public class OrderBatchesApiTest {
 
-    private final OrderBatchApi api = new OrderBatchApi();
+    private final OrderBatchesApi api = new OrderBatchesApi();
 
     
     /**
-     * Returns order batches created in a given time range
+     * Returns order batches
      *
-     * 
+     * Entries are sorted by date, from the most recent. At most 100 entries are returned.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -48,9 +49,27 @@ public class OrderBatchApiTest {
     public void getAllOrderBatchesTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        RestApiArrayResultOrderBatchItem response = api.getAllOrderBatches(appId, storeId, startDate, endDate);
+        OffsetDateTime createdFrom = null;
+        OffsetDateTime createdTo = null;
+        RestApiArrayResultOrderBatchItem response = api.getAllOrderBatches(appId, storeId, createdFrom, createdTo);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Returns the order batch details
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOrderBatchTest() throws ApiException {
+        String appId = null;
+        Integer storeId = null;
+        Integer batchId = null;
+        RestApiResultOrderBatch response = api.getOrderBatch(appId, storeId, batchId);
 
         // TODO: test validations
     }

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu Summary
  */
 @ApiModel(description = "Menu Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T10:37:09.983+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:13:42.784+01:00")
 public class MenuSummary {
   @SerializedName("MenuId")
   private Integer menuId = null;
