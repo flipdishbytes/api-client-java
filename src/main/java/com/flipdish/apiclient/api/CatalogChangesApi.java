@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.PublishMenuChanges;
+import com.flipdish.apiclient.model.RestApiArrayResultPendingMenuChangesSummaries;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPendingMenuChanges;
@@ -202,6 +203,129 @@ public class CatalogChangesApi {
 
         com.squareup.okhttp.Call call = getPendingMenuChangesValidateBeforeCall(appId, menuId, catalogItemId, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultPendingMenuChanges>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getPendingMenuChangesSummaries
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPendingMenuChangesSummariesCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/menus/catalog-changes/summaries"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getPendingMenuChangesSummariesValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getPendingMenuChangesSummaries(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getPendingMenuChangesSummariesCall(appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get menu pending changes summaries by appId
+     * 
+     * @param appId  (required)
+     * @return RestApiArrayResultPendingMenuChangesSummaries
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultPendingMenuChangesSummaries getPendingMenuChangesSummaries(String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultPendingMenuChangesSummaries> resp = getPendingMenuChangesSummariesWithHttpInfo(appId);
+        return resp.getData();
+    }
+
+    /**
+     * Get menu pending changes summaries by appId
+     * 
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultPendingMenuChangesSummaries&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultPendingMenuChangesSummaries> getPendingMenuChangesSummariesWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getPendingMenuChangesSummariesValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingMenuChangesSummaries>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get menu pending changes summaries by appId (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getPendingMenuChangesSummariesAsync(String appId, final ApiCallback<RestApiArrayResultPendingMenuChangesSummaries> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getPendingMenuChangesSummariesValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingMenuChangesSummaries>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

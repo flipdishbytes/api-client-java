@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.PublishMenuChanges;
+import com.flipdish.apiclient.model.RestApiArrayResultPendingMenuChangesSummaries;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPendingMenuChanges;
@@ -52,6 +53,22 @@ public class CatalogChangesApiTest {
         Integer page = null;
         Integer limit = null;
         RestApiPaginationResultPendingMenuChanges response = api.getPendingMenuChanges(appId, menuId, catalogItemId, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get menu pending changes summaries by appId
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPendingMenuChangesSummariesTest() throws ApiException {
+        String appId = null;
+        RestApiArrayResultPendingMenuChangesSummaries response = api.getPendingMenuChangesSummaries(appId);
 
         // TODO: test validations
     }
