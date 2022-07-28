@@ -44,6 +44,22 @@ public class MobileAppsApiTest {
 
     
     /**
+     * Get sales channel configuration
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppConfigSalesChannelTest() throws ApiException {
+        String appId = null;
+        RestApiResultAppConfigSalesChannel response = api.getAppConfigSalesChannel(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get statistics mobile apps
      *
      * 

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **unusualHighValueOrder** | **Boolean** | Is order of unusually high value |  [optional]
 **channelOrderId** | **String** | ChannelOrderId from external channel |  [optional]
 **channelOrderDisplayId** | **String** | ChannelOrderDisplayId from external channel |  [optional]
+**orderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order |  [optional]
 
 
 <a name="DeliveryTypeEnum"></a>
