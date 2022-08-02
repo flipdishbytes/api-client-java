@@ -30,7 +30,7 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-02T13:04:28.830+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-02T14:48:54.677+01:00")
 public class MobileAppsSubmission {
   @SerializedName("AppName")
   private String appName = null;
@@ -114,7 +114,7 @@ public class MobileAppsSubmission {
    * App Name
    * @return appName
   **/
-  @ApiModelProperty(value = "App Name")
+  @ApiModelProperty(required = true, value = "App Name")
   public String getAppName() {
     return appName;
   }
@@ -132,7 +132,7 @@ public class MobileAppsSubmission {
    * App Description
    * @return appDescription
   **/
-  @ApiModelProperty(value = "App Description")
+  @ApiModelProperty(required = true, value = "App Description")
   public String getAppDescription() {
     return appDescription;
   }
@@ -150,7 +150,7 @@ public class MobileAppsSubmission {
    * App Description
    * @return appShortDescription
   **/
-  @ApiModelProperty(value = "App Description")
+  @ApiModelProperty(required = true, value = "App Description")
   public String getAppShortDescription() {
     return appShortDescription;
   }
