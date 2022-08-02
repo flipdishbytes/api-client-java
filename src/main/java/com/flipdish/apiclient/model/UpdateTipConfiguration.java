@@ -30,7 +30,7 @@ import java.util.List;
  * Describes the configuration of tipping
  */
 @ApiModel(description = "Describes the configuration of tipping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-07-28T10:48:04.325+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-02T13:04:28.830+01:00")
 public class UpdateTipConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
@@ -40,6 +40,9 @@ public class UpdateTipConfiguration {
 
   @SerializedName("AllowRoundUp")
   private Boolean allowRoundUp = null;
+
+  @SerializedName("AllowEmojis")
+  private Boolean allowEmojis = null;
 
   @SerializedName("Percentages")
   private List<Double> percentages = null;
@@ -101,6 +104,24 @@ public class UpdateTipConfiguration {
     this.allowRoundUp = allowRoundUp;
   }
 
+  public UpdateTipConfiguration allowEmojis(Boolean allowEmojis) {
+    this.allowEmojis = allowEmojis;
+    return this;
+  }
+
+   /**
+   * Are emojis allowed?
+   * @return allowEmojis
+  **/
+  @ApiModelProperty(value = "Are emojis allowed?")
+  public Boolean isAllowEmojis() {
+    return allowEmojis;
+  }
+
+  public void setAllowEmojis(Boolean allowEmojis) {
+    this.allowEmojis = allowEmojis;
+  }
+
   public UpdateTipConfiguration percentages(List<Double> percentages) {
     this.percentages = percentages;
     return this;
@@ -158,13 +179,14 @@ public class UpdateTipConfiguration {
     return Objects.equals(this.isEnabled, updateTipConfiguration.isEnabled) &&
         Objects.equals(this.allowCustomTips, updateTipConfiguration.allowCustomTips) &&
         Objects.equals(this.allowRoundUp, updateTipConfiguration.allowRoundUp) &&
+        Objects.equals(this.allowEmojis, updateTipConfiguration.allowEmojis) &&
         Objects.equals(this.percentages, updateTipConfiguration.percentages) &&
         Objects.equals(this.defaultPercentage, updateTipConfiguration.defaultPercentage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isEnabled, allowCustomTips, allowRoundUp, percentages, defaultPercentage);
+    return Objects.hash(isEnabled, allowCustomTips, allowRoundUp, allowEmojis, percentages, defaultPercentage);
   }
 
 
@@ -176,6 +198,7 @@ public class UpdateTipConfiguration {
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    allowCustomTips: ").append(toIndentedString(allowCustomTips)).append("\n");
     sb.append("    allowRoundUp: ").append(toIndentedString(allowRoundUp)).append("\n");
+    sb.append("    allowEmojis: ").append(toIndentedString(allowEmojis)).append("\n");
     sb.append("    percentages: ").append(toIndentedString(percentages)).append("\n");
     sb.append("    defaultPercentage: ").append(toIndentedString(defaultPercentage)).append("\n");
     sb.append("}");
