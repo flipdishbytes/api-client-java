@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **appId** | **String** | AppId | 
 **configurationUid** | **String** | Configuration Uid |  [optional]
+**name** | **String** | Name |  [optional]
 **storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type |  [optional]
 **stores** | [**List&lt;FulfillmentStatesConfiguredStore&gt;**](FulfillmentStatesConfiguredStore.md) | Stores |  [optional]
 

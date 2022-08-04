@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.FulfillmentStatesConfiguration;
+import com.flipdish.apiclient.model.FulfillmentStatesConfigurationCreateBase;
 import com.flipdish.apiclient.model.RestApiArrayResultFulfillmentStatesConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -50,7 +51,8 @@ public class FulfillmentStateConfigurationApiTest {
     @Test
     public void createFulfillmentStatesConfigTest() throws ApiException {
         String appId = null;
-        RestApiResultFulfillmentStatesConfiguration response = api.createFulfillmentStatesConfig(appId);
+        FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration = null;
+        RestApiResultFulfillmentStatesConfiguration response = api.createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
 
         // TODO: test validations
     }

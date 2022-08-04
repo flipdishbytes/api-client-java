@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **configurationUid** | **String** | Configuration Uid |  [optional]
 **storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store Selector Type |  [optional]
 **storeIds** | **List&lt;Integer&gt;** | Store Ids |  [optional]
+**name** | **String** | Name |  [optional]
 
 
 <a name="StoreSelectorTypeEnum"></a>

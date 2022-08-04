@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createFulfillmentStatesConfig"></a>
 # **createFulfillmentStatesConfig**
-> RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(appId)
+> RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration)
 
 Create fulfillment configuration
 
@@ -36,8 +36,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
 String appId = "appId_example"; // String | App id
+FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration = new FulfillmentStatesConfigurationCreateBase(); // FulfillmentStatesConfigurationCreateBase | Fulfillment state configuration
 try {
-    RestApiResultFulfillmentStatesConfiguration result = apiInstance.createFulfillmentStatesConfig(appId);
+    RestApiResultFulfillmentStatesConfiguration result = apiInstance.createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FulfillmentStateConfigurationApi#createFulfillmentStatesConfig");
@@ -50,6 +51,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App id |
+ **fulfillmentStateConfiguration** | [**FulfillmentStatesConfigurationCreateBase**](FulfillmentStatesConfigurationCreateBase.md)| Fulfillment state configuration |
 
 ### Return type
 
@@ -61,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="deleteFulfillmentStatesConfig"></a>

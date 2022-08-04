@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.FulfillmentStatesConfiguration;
+import com.flipdish.apiclient.model.FulfillmentStatesConfigurationCreateBase;
 import com.flipdish.apiclient.model.RestApiArrayResultFulfillmentStatesConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -64,13 +65,14 @@ public class FulfillmentStateConfigurationApi {
     /**
      * Build call for createFulfillmentStatesConfig
      * @param appId App id (required)
+     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createFulfillmentStatesConfigCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call createFulfillmentStatesConfigCall(String appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = fulfillmentStateConfiguration;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/fulfillment/configuration/states"
@@ -90,7 +92,7 @@ public class FulfillmentStateConfigurationApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -112,15 +114,20 @@ public class FulfillmentStateConfigurationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createFulfillmentStatesConfigValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createFulfillmentStatesConfigValidateBeforeCall(String appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
             throw new ApiException("Missing the required parameter 'appId' when calling createFulfillmentStatesConfig(Async)");
         }
         
+        // verify the required parameter 'fulfillmentStateConfiguration' is set
+        if (fulfillmentStateConfiguration == null) {
+            throw new ApiException("Missing the required parameter 'fulfillmentStateConfiguration' when calling createFulfillmentStatesConfig(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = createFulfillmentStatesConfigCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createFulfillmentStatesConfigCall(appId, fulfillmentStateConfiguration, progressListener, progressRequestListener);
         return call;
 
     }
@@ -129,11 +136,12 @@ public class FulfillmentStateConfigurationApi {
      * Create fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
+     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
      * @return RestApiResultFulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(String appId) throws ApiException {
-        ApiResponse<RestApiResultFulfillmentStatesConfiguration> resp = createFulfillmentStatesConfigWithHttpInfo(appId);
+    public RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(String appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration) throws ApiException {
+        ApiResponse<RestApiResultFulfillmentStatesConfiguration> resp = createFulfillmentStatesConfigWithHttpInfo(appId, fulfillmentStateConfiguration);
         return resp.getData();
     }
 
@@ -141,11 +149,12 @@ public class FulfillmentStateConfigurationApi {
      * Create fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
+     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
      * @return ApiResponse&lt;RestApiResultFulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultFulfillmentStatesConfiguration> createFulfillmentStatesConfigWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, null, null);
+    public ApiResponse<RestApiResultFulfillmentStatesConfiguration> createFulfillmentStatesConfigWithHttpInfo(String appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration) throws ApiException {
+        com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, fulfillmentStateConfiguration, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultFulfillmentStatesConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -154,11 +163,12 @@ public class FulfillmentStateConfigurationApi {
      * Create fulfillment configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
+     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createFulfillmentStatesConfigAsync(String appId, final ApiCallback<RestApiResultFulfillmentStatesConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call createFulfillmentStatesConfigAsync(String appId, FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration, final ApiCallback<RestApiResultFulfillmentStatesConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -179,7 +189,7 @@ public class FulfillmentStateConfigurationApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createFulfillmentStatesConfigValidateBeforeCall(appId, fulfillmentStateConfiguration, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultFulfillmentStatesConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

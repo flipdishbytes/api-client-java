@@ -31,13 +31,16 @@ import java.util.List;
  * App store app configuration header information
  */
 @ApiModel(description = "App store app configuration header information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-03T13:33:49.409+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-04T09:49:23.182+01:00")
 public class FulfillmentStatesConfigurationSummary {
   @SerializedName("AppId")
   private String appId = null;
 
   @SerializedName("ConfigurationUid")
   private String configurationUid = null;
+
+  @SerializedName("Name")
+  private String name = null;
 
   /**
    * Store selector type
@@ -130,6 +133,24 @@ public class FulfillmentStatesConfigurationSummary {
     this.configurationUid = configurationUid;
   }
 
+  public FulfillmentStatesConfigurationSummary name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Name
+   * @return name
+  **/
+  @ApiModelProperty(value = "Name")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public FulfillmentStatesConfigurationSummary storeSelectorType(StoreSelectorTypeEnum storeSelectorType) {
     this.storeSelectorType = storeSelectorType;
     return this;
@@ -186,13 +207,14 @@ public class FulfillmentStatesConfigurationSummary {
     FulfillmentStatesConfigurationSummary fulfillmentStatesConfigurationSummary = (FulfillmentStatesConfigurationSummary) o;
     return Objects.equals(this.appId, fulfillmentStatesConfigurationSummary.appId) &&
         Objects.equals(this.configurationUid, fulfillmentStatesConfigurationSummary.configurationUid) &&
+        Objects.equals(this.name, fulfillmentStatesConfigurationSummary.name) &&
         Objects.equals(this.storeSelectorType, fulfillmentStatesConfigurationSummary.storeSelectorType) &&
         Objects.equals(this.stores, fulfillmentStatesConfigurationSummary.stores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, configurationUid, storeSelectorType, stores);
+    return Objects.hash(appId, configurationUid, name, storeSelectorType, stores);
   }
 
 
@@ -203,6 +225,7 @@ public class FulfillmentStatesConfigurationSummary {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    configurationUid: ").append(toIndentedString(configurationUid)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("}");
