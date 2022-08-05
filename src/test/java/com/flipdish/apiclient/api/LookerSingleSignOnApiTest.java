@@ -36,23 +36,6 @@ public class LookerSingleSignOnApiTest {
 
     
     /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getLookerCustomerReportingEmbedUrlTest() throws ApiException {
-        String appId = null;
-        String embedPath = null;
-        DashboardEmbed response = api.getLookerCustomerReportingEmbedUrl(appId, embedPath);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get the generic single sign on embed URL for Looker dashboards
      *
      * 
