@@ -47,6 +47,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
+import com.flipdish.apiclient.model.StoreFeeConfig;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -383,7 +384,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Retrieve Store Service Charge
+     * Retrieve Store feeConfig
      *
      * 
      *
@@ -393,7 +394,23 @@ public class StoresApiTest {
     @Test
     public void getStoreServiceChargeTest() throws ApiException {
         Integer storeId = null;
-        ServiceCharge response = api.getStoreServiceCharge(storeId);
+        StoreFeeConfig response = api.getStoreServiceCharge(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve Store Service Charge
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoreServiceCharge_0Test() throws ApiException {
+        Integer storeId = null;
+        ServiceCharge response = api.getStoreServiceCharge_0(storeId);
 
         // TODO: test validations
     }

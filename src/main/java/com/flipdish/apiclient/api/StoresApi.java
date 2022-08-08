@@ -60,6 +60,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
+import com.flipdish.apiclient.model.StoreFeeConfig;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -2530,7 +2531,7 @@ public class StoresApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/stores/{storeId}/servicecharge"
+        String localVarPath = "/api/v1.0/stores/{storeId}/feeConfig"
             .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -2583,39 +2584,39 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store Service Charge
+     * Retrieve Store feeConfig
      * 
      * @param storeId Store identifier (required)
-     * @return ServiceCharge
+     * @return StoreFeeConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ServiceCharge getStoreServiceCharge(Integer storeId) throws ApiException {
-        ApiResponse<ServiceCharge> resp = getStoreServiceChargeWithHttpInfo(storeId);
+    public StoreFeeConfig getStoreServiceCharge(Integer storeId) throws ApiException {
+        ApiResponse<StoreFeeConfig> resp = getStoreServiceChargeWithHttpInfo(storeId);
         return resp.getData();
     }
 
     /**
-     * Retrieve Store Service Charge
+     * Retrieve Store feeConfig
      * 
      * @param storeId Store identifier (required)
-     * @return ApiResponse&lt;ServiceCharge&gt;
+     * @return ApiResponse&lt;StoreFeeConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ServiceCharge> getStoreServiceChargeWithHttpInfo(Integer storeId) throws ApiException {
+    public ApiResponse<StoreFeeConfig> getStoreServiceChargeWithHttpInfo(Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = getStoreServiceChargeValidateBeforeCall(storeId, null, null);
-        Type localVarReturnType = new TypeToken<ServiceCharge>(){}.getType();
+        Type localVarReturnType = new TypeToken<StoreFeeConfig>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * Retrieve Store Service Charge (asynchronously)
+     * Retrieve Store feeConfig (asynchronously)
      * 
      * @param storeId Store identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreServiceChargeAsync(Integer storeId, final ApiCallback<ServiceCharge> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoreServiceChargeAsync(Integer storeId, final ApiCallback<StoreFeeConfig> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2637,6 +2638,129 @@ public class StoresApi {
         }
 
         com.squareup.okhttp.Call call = getStoreServiceChargeValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<StoreFeeConfig>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getStoreServiceCharge_0
+     * @param storeId Store identifier (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getStoreServiceCharge_0Call(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/servicecharge"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getStoreServiceCharge_0ValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getStoreServiceCharge_0(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getStoreServiceCharge_0Call(storeId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Retrieve Store Service Charge
+     * 
+     * @param storeId Store identifier (required)
+     * @return ServiceCharge
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ServiceCharge getStoreServiceCharge_0(Integer storeId) throws ApiException {
+        ApiResponse<ServiceCharge> resp = getStoreServiceCharge_0WithHttpInfo(storeId);
+        return resp.getData();
+    }
+
+    /**
+     * Retrieve Store Service Charge
+     * 
+     * @param storeId Store identifier (required)
+     * @return ApiResponse&lt;ServiceCharge&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<ServiceCharge> getStoreServiceCharge_0WithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = getStoreServiceCharge_0ValidateBeforeCall(storeId, null, null);
+        Type localVarReturnType = new TypeToken<ServiceCharge>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Store Service Charge (asynchronously)
+     * 
+     * @param storeId Store identifier (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getStoreServiceCharge_0Async(Integer storeId, final ApiCallback<ServiceCharge> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getStoreServiceCharge_0ValidateBeforeCall(storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<ServiceCharge>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
