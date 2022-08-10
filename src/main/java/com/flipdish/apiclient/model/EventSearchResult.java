@@ -57,6 +57,7 @@ import com.flipdish.apiclient.model.KioskBluetoothTerminalInstallationStatusEven
 import com.flipdish.apiclient.model.KioskBluetoothTerminalUnpairedEvent;
 import com.flipdish.apiclient.model.KioskBluetoothTerminalUpdatedEvent;
 import com.flipdish.apiclient.model.KioskBluetoothUnpairingModeEvent;
+import com.flipdish.apiclient.model.KioskTerminalActionStateChangedEvent;
 import com.flipdish.apiclient.model.LocationAreaCreatedEvent;
 import com.flipdish.apiclient.model.LocationAreaUpdatedEvent;
 import com.flipdish.apiclient.model.LocationCreatedEvent;
@@ -160,7 +161,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T11:45:18.406+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T14:24:47.085+01:00")
 public class EventSearchResult {
   @SerializedName("AppCreatedEvent")
   private List<AppCreatedEvent> appCreatedEvent = null;
@@ -458,6 +459,9 @@ public class EventSearchResult {
 
   @SerializedName("KioskBluetoothTerminalUnpairedEvent")
   private List<KioskBluetoothTerminalUnpairedEvent> kioskBluetoothTerminalUnpairedEvent = null;
+
+  @SerializedName("KioskTerminalActionStateChangedEvent")
+  private List<KioskTerminalActionStateChangedEvent> kioskTerminalActionStateChangedEvent = null;
 
   @SerializedName("KioskBluetoothTerminalUpdatedEvent")
   private List<KioskBluetoothTerminalUpdatedEvent> kioskBluetoothTerminalUpdatedEvent = null;
@@ -3129,6 +3133,32 @@ public class EventSearchResult {
     this.kioskBluetoothTerminalUnpairedEvent = kioskBluetoothTerminalUnpairedEvent;
   }
 
+  public EventSearchResult kioskTerminalActionStateChangedEvent(List<KioskTerminalActionStateChangedEvent> kioskTerminalActionStateChangedEvent) {
+    this.kioskTerminalActionStateChangedEvent = kioskTerminalActionStateChangedEvent;
+    return this;
+  }
+
+  public EventSearchResult addKioskTerminalActionStateChangedEventItem(KioskTerminalActionStateChangedEvent kioskTerminalActionStateChangedEventItem) {
+    if (this.kioskTerminalActionStateChangedEvent == null) {
+      this.kioskTerminalActionStateChangedEvent = new ArrayList<KioskTerminalActionStateChangedEvent>();
+    }
+    this.kioskTerminalActionStateChangedEvent.add(kioskTerminalActionStateChangedEventItem);
+    return this;
+  }
+
+   /**
+   * Terminal actionstate change
+   * @return kioskTerminalActionStateChangedEvent
+  **/
+  @ApiModelProperty(value = "Terminal actionstate change")
+  public List<KioskTerminalActionStateChangedEvent> getKioskTerminalActionStateChangedEvent() {
+    return kioskTerminalActionStateChangedEvent;
+  }
+
+  public void setKioskTerminalActionStateChangedEvent(List<KioskTerminalActionStateChangedEvent> kioskTerminalActionStateChangedEvent) {
+    this.kioskTerminalActionStateChangedEvent = kioskTerminalActionStateChangedEvent;
+  }
+
   public EventSearchResult kioskBluetoothTerminalUpdatedEvent(List<KioskBluetoothTerminalUpdatedEvent> kioskBluetoothTerminalUpdatedEvent) {
     this.kioskBluetoothTerminalUpdatedEvent = kioskBluetoothTerminalUpdatedEvent;
     return this;
@@ -4070,6 +4100,7 @@ public class EventSearchResult {
         Objects.equals(this.kioskBluetoothPairingModeEvent, eventSearchResult.kioskBluetoothPairingModeEvent) &&
         Objects.equals(this.kioskBluetoothUnpairingModeEvent, eventSearchResult.kioskBluetoothUnpairingModeEvent) &&
         Objects.equals(this.kioskBluetoothTerminalUnpairedEvent, eventSearchResult.kioskBluetoothTerminalUnpairedEvent) &&
+        Objects.equals(this.kioskTerminalActionStateChangedEvent, eventSearchResult.kioskTerminalActionStateChangedEvent) &&
         Objects.equals(this.kioskBluetoothTerminalUpdatedEvent, eventSearchResult.kioskBluetoothTerminalUpdatedEvent) &&
         Objects.equals(this.kioskBluetoothTerminalInitiateUpdateCheckEvent, eventSearchResult.kioskBluetoothTerminalInitiateUpdateCheckEvent) &&
         Objects.equals(this.kioskBluetoothInstallUpdateInitiateEvent, eventSearchResult.kioskBluetoothInstallUpdateInitiateEvent) &&
@@ -4106,7 +4137,7 @@ public class EventSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, bankAccountAssignedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, orderFulfillmentStatusUpdatedEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent, storeTipUpdatedEvent, locationAreaCreatedEvent, locationAreaUpdatedEvent, locationCreatedEvent, locationDeletedEvent, storeServiceChargeUpdatedEvent);
+    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, bankAccountAssignedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskTerminalActionStateChangedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, orderFulfillmentStatusUpdatedEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent, storeTipUpdatedEvent, locationAreaCreatedEvent, locationAreaUpdatedEvent, locationCreatedEvent, locationDeletedEvent, storeServiceChargeUpdatedEvent);
   }
 
 
@@ -4214,6 +4245,7 @@ public class EventSearchResult {
     sb.append("    kioskBluetoothPairingModeEvent: ").append(toIndentedString(kioskBluetoothPairingModeEvent)).append("\n");
     sb.append("    kioskBluetoothUnpairingModeEvent: ").append(toIndentedString(kioskBluetoothUnpairingModeEvent)).append("\n");
     sb.append("    kioskBluetoothTerminalUnpairedEvent: ").append(toIndentedString(kioskBluetoothTerminalUnpairedEvent)).append("\n");
+    sb.append("    kioskTerminalActionStateChangedEvent: ").append(toIndentedString(kioskTerminalActionStateChangedEvent)).append("\n");
     sb.append("    kioskBluetoothTerminalUpdatedEvent: ").append(toIndentedString(kioskBluetoothTerminalUpdatedEvent)).append("\n");
     sb.append("    kioskBluetoothTerminalInitiateUpdateCheckEvent: ").append(toIndentedString(kioskBluetoothTerminalInitiateUpdateCheckEvent)).append("\n");
     sb.append("    kioskBluetoothInstallUpdateInitiateEvent: ").append(toIndentedString(kioskBluetoothInstallUpdateInitiateEvent)).append("\n");
