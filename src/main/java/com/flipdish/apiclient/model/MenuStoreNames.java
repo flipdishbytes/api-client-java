@@ -30,7 +30,7 @@ import java.util.List;
  * Menu Store Names
  */
 @ApiModel(description = "Menu Store Names")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T14:24:47.085+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T15:50:34.748+01:00")
 public class MenuStoreNames {
   @SerializedName("StoreNames")
   private List<String> storeNames = null;

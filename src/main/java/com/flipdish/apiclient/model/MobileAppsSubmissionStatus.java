@@ -28,7 +28,7 @@ import java.io.IOException;
  * Mobile Apps Status
  */
 @ApiModel(description = "Mobile Apps Status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T14:24:47.085+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T15:50:34.748+01:00")
 public class MobileAppsSubmissionStatus {
   /**
    * Mobile App Status
