@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
 import com.flipdish.apiclient.model.GeoPointRequest;
+import com.flipdish.apiclient.model.ProcessPaymentIntentRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
@@ -89,6 +90,23 @@ public class CardReadersApiTest {
         String readerId = null;
         String appId = null;
         RestApiResultCardReader response = api.cancelReaderAction(readerId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get reader
+     *
+     * Can only be called by Kiosk
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void cardReadersGetReaderTest() throws ApiException {
+        String readerId = null;
+        String appId = null;
+        RestApiResultCardReader response = api.cardReadersGetReader(readerId, appId);
 
         // TODO: test validations
     }
@@ -193,6 +211,24 @@ public class CardReadersApiTest {
         String deviceId = null;
         String terminalType = null;
         api.initiateKioskBluetoothUpdateInstall(appId, deviceId, terminalType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Initiate Stripe terminal to Process Payment Intent
+     *
+     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void initiateReaderProcessPaymentIntentTest() throws ApiException {
+        ProcessPaymentIntentRequest request = null;
+        String readerId = null;
+        String appId = null;
+        RestApiResultCardReader response = api.initiateReaderProcessPaymentIntent(request, readerId, appId);
 
         // TODO: test validations
     }

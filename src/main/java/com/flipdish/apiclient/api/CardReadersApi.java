@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
 import com.flipdish.apiclient.model.GeoPointRequest;
+import com.flipdish.apiclient.model.ProcessPaymentIntentRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
@@ -455,6 +456,139 @@ public class CardReadersApi {
         }
 
         com.squareup.okhttp.Call call = cancelReaderActionValidateBeforeCall(readerId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for cardReadersGetReader
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call cardReadersGetReaderCall(String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}"
+            .replaceAll("\\{" + "readerId" + "\\}", apiClient.escapeString(readerId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call cardReadersGetReaderValidateBeforeCall(String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'readerId' is set
+        if (readerId == null) {
+            throw new ApiException("Missing the required parameter 'readerId' when calling cardReadersGetReader(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling cardReadersGetReader(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = cardReadersGetReaderCall(readerId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get reader
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return RestApiResultCardReader
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultCardReader cardReadersGetReader(String readerId, String appId) throws ApiException {
+        ApiResponse<RestApiResultCardReader> resp = cardReadersGetReaderWithHttpInfo(readerId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * Get reader
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiResultCardReader&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultCardReader> cardReadersGetReaderWithHttpInfo(String readerId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = cardReadersGetReaderValidateBeforeCall(readerId, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get reader (asynchronously)
+     * Can only be called by Kiosk
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call cardReadersGetReaderAsync(String readerId, String appId, final ApiCallback<RestApiResultCardReader> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = cardReadersGetReaderValidateBeforeCall(readerId, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1262,6 +1396,148 @@ public class CardReadersApi {
 
         com.squareup.okhttp.Call call = initiateKioskBluetoothUpdateInstallValidateBeforeCall(appId, deviceId, terminalType, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for initiateReaderProcessPaymentIntent
+     * @param request  (required)
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call initiateReaderProcessPaymentIntentCall(ProcessPaymentIntentRequest request, String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = request;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent"
+            .replaceAll("\\{" + "readerId" + "\\}", apiClient.escapeString(readerId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call initiateReaderProcessPaymentIntentValidateBeforeCall(ProcessPaymentIntentRequest request, String readerId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new ApiException("Missing the required parameter 'request' when calling initiateReaderProcessPaymentIntent(Async)");
+        }
+        
+        // verify the required parameter 'readerId' is set
+        if (readerId == null) {
+            throw new ApiException("Missing the required parameter 'readerId' when calling initiateReaderProcessPaymentIntent(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling initiateReaderProcessPaymentIntent(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = initiateReaderProcessPaymentIntentCall(request, readerId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Initiate Stripe terminal to Process Payment Intent
+     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param request  (required)
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return RestApiResultCardReader
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultCardReader initiateReaderProcessPaymentIntent(ProcessPaymentIntentRequest request, String readerId, String appId) throws ApiException {
+        ApiResponse<RestApiResultCardReader> resp = initiateReaderProcessPaymentIntentWithHttpInfo(request, readerId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * Initiate Stripe terminal to Process Payment Intent
+     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param request  (required)
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiResultCardReader&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultCardReader> initiateReaderProcessPaymentIntentWithHttpInfo(ProcessPaymentIntentRequest request, String readerId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = initiateReaderProcessPaymentIntentValidateBeforeCall(request, readerId, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Initiate Stripe terminal to Process Payment Intent (asynchronously)
+     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * @param request  (required)
+     * @param readerId  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call initiateReaderProcessPaymentIntentAsync(ProcessPaymentIntentRequest request, String readerId, String appId, final ApiCallback<RestApiResultCardReader> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = initiateReaderProcessPaymentIntentValidateBeforeCall(request, readerId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultCardReader>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

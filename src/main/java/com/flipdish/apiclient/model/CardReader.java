@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.ReaderActionStateInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,7 +29,7 @@ import java.io.IOException;
  * Card reader
  */
 @ApiModel(description = "Card reader")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-10T15:50:34.748+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-15T13:45:52.427+01:00")
 public class CardReader {
   @SerializedName("Id")
   private String id = null;
@@ -50,6 +51,9 @@ public class CardReader {
 
   @SerializedName("Deleted")
   private Boolean deleted = null;
+
+  @SerializedName("Action")
+  private ReaderActionStateInfo action = null;
 
   public CardReader id(String id) {
     this.id = id;
@@ -177,6 +181,24 @@ public class CardReader {
     this.deleted = deleted;
   }
 
+  public CardReader action(ReaderActionStateInfo action) {
+    this.action = action;
+    return this;
+  }
+
+   /**
+   * Action status
+   * @return action
+  **/
+  @ApiModelProperty(value = "Action status")
+  public ReaderActionStateInfo getAction() {
+    return action;
+  }
+
+  public void setAction(ReaderActionStateInfo action) {
+    this.action = action;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -193,12 +215,13 @@ public class CardReader {
         Objects.equals(this.status, cardReader.status) &&
         Objects.equals(this.registrationCode, cardReader.registrationCode) &&
         Objects.equals(this.deviceType, cardReader.deviceType) &&
-        Objects.equals(this.deleted, cardReader.deleted);
+        Objects.equals(this.deleted, cardReader.deleted) &&
+        Objects.equals(this.action, cardReader.action);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, deviceSoftwareVersion, serialNumber, status, registrationCode, deviceType, deleted);
+    return Objects.hash(id, deviceSoftwareVersion, serialNumber, status, registrationCode, deviceType, deleted, action);
   }
 
 
@@ -214,6 +237,7 @@ public class CardReader {
     sb.append("    registrationCode: ").append(toIndentedString(registrationCode)).append("\n");
     sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
     sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");
+    sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("}");
     return sb.toString();
   }

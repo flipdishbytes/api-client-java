@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **registrationCode** | **String** | Registration code |  [optional]
 **deviceType** | **String** | Device type |  [optional]
 **deleted** | **Boolean** | Indicates that the reader is deleted or not |  [optional]
+**action** | [**ReaderActionStateInfo**](ReaderActionStateInfo.md) | Action status |  [optional]
 
 
 
