@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * RestaurantVoucherPayGreenConfiguration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-15T13:45:52.427+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-16T15:43:48.032+01:00")
 public class RestaurantVoucherPayGreenConfiguration {
   @SerializedName("Name")
   private String name = null;
