@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 <a name="getSubmissionStatus"></a>
 # **getSubmissionStatus**
-> RestApiResultMobileAppsSubmissionStatus getSubmissionStatus(appId, type)
+> RestApiResultMobileAppsSubmissionStatus getSubmissionStatus(appId, mobileAppsSubmissionId)
 
 Get submission status mobile apps
 
@@ -191,9 +191,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MobileAppsApi apiInstance = new MobileAppsApi();
 String appId = "appId_example"; // String | 
-String type = "type_example"; // String | 
+Integer mobileAppsSubmissionId = 56; // Integer | 
 try {
-    RestApiResultMobileAppsSubmissionStatus result = apiInstance.getSubmissionStatus(appId, type);
+    RestApiResultMobileAppsSubmissionStatus result = apiInstance.getSubmissionStatus(appId, mobileAppsSubmissionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MobileAppsApi#getSubmissionStatus");
@@ -206,7 +206,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **type** | **String**|  | [enum: Android, IOS]
+ **mobileAppsSubmissionId** | **Integer**|  |
 
 ### Return type
 

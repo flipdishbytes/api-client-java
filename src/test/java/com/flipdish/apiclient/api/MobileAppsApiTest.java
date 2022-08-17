@@ -103,8 +103,8 @@ public class MobileAppsApiTest {
     @Test
     public void getSubmissionStatusTest() throws ApiException {
         String appId = null;
-        String type = null;
-        RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, type);
+        Integer mobileAppsSubmissionId = null;
+        RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, mobileAppsSubmissionId);
 
         // TODO: test validations
     }

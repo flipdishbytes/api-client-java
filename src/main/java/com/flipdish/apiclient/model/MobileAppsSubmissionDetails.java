@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.MobileAppsSubmissionStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-16T15:43:48.032+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-17T14:30:37.663+01:00")
 public class MobileAppsSubmissionDetails {
   @SerializedName("AppName")
   private String appName = null;
@@ -50,63 +51,8 @@ public class MobileAppsSubmissionDetails {
   @SerializedName("AutoPublish")
   private Boolean autoPublish = null;
 
-  /**
-   * Mobile App Status
-   */
-  @JsonAdapter(StatusEnum.Adapter.class)
-  public enum StatusEnum {
-    NONE("None"),
-    
-    INPROGRESS("InProgress"),
-    
-    SUBMITTED("Submitted"),
-    
-    APPSTOREREVIEW("AppStoreReview"),
-    
-    SUCESSFULL("Sucessfull"),
-    
-    UNSUCCESFUL("Unsuccesful");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static StatusEnum fromValue(String text) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return StatusEnum.fromValue(String.valueOf(value));
-      }
-    }
-  }
-
   @SerializedName("Status")
-  private StatusEnum status = null;
+  private List<MobileAppsSubmissionStatus> status = null;
 
   public MobileAppsSubmissionDetails appName(String appName) {
     this.appName = appName;
@@ -224,8 +170,16 @@ public class MobileAppsSubmissionDetails {
     this.autoPublish = autoPublish;
   }
 
-  public MobileAppsSubmissionDetails status(StatusEnum status) {
+  public MobileAppsSubmissionDetails status(List<MobileAppsSubmissionStatus> status) {
     this.status = status;
+    return this;
+  }
+
+  public MobileAppsSubmissionDetails addStatusItem(MobileAppsSubmissionStatus statusItem) {
+    if (this.status == null) {
+      this.status = new ArrayList<MobileAppsSubmissionStatus>();
+    }
+    this.status.add(statusItem);
     return this;
   }
 
@@ -234,11 +188,11 @@ public class MobileAppsSubmissionDetails {
    * @return status
   **/
   @ApiModelProperty(value = "Mobile App Status")
-  public StatusEnum getStatus() {
+  public List<MobileAppsSubmissionStatus> getStatus() {
     return status;
   }
 
-  public void setStatus(StatusEnum status) {
+  public void setStatus(List<MobileAppsSubmissionStatus> status) {
     this.status = status;
   }
 
