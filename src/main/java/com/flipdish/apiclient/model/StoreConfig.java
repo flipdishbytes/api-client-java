@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * StoreConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-17T14:30:37.663+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-18T11:20:33.214+01:00")
 public class StoreConfig {
   @SerializedName("PickupEnabled")
   private Boolean pickupEnabled = null;

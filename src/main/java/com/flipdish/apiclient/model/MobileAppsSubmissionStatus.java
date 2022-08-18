@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Mobile Apps Status
  */
 @ApiModel(description = "Mobile Apps Status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-17T14:30:37.663+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-18T11:20:33.214+01:00")
 public class MobileAppsSubmissionStatus {
   @SerializedName("MobileAppsSubmissionStatusId")
   private Integer mobileAppsSubmissionStatusId = null;
@@ -142,23 +142,23 @@ public class MobileAppsSubmissionStatus {
   /**
    * Mobile App Status
    */
-  @JsonAdapter(StatusEnum.Adapter.class)
-  public enum StatusEnum {
+  @JsonAdapter(UpdateStatusEnum.Adapter.class)
+  public enum UpdateStatusEnum {
     NONE("None"),
-    
-    INPROGRESS("InProgress"),
     
     SUBMITTED("Submitted"),
     
-    APPSTOREREVIEW("AppStoreReview"),
+    INREVIEW("InReview"),
     
-    SUCESSFULL("Sucessfull"),
+    REJECTED("Rejected"),
     
-    UNSUCCESFUL("Unsuccesful");
+    APPROVED("Approved"),
+    
+    PUBLISHED("Published");
 
     private String value;
 
-    StatusEnum(String value) {
+    UpdateStatusEnum(String value) {
       this.value = value;
     }
 
@@ -171,8 +171,8 @@ public class MobileAppsSubmissionStatus {
       return String.valueOf(value);
     }
 
-    public static StatusEnum fromValue(String text) {
-      for (StatusEnum b : StatusEnum.values()) {
+    public static UpdateStatusEnum fromValue(String text) {
+      for (UpdateStatusEnum b : UpdateStatusEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
           return b;
         }
@@ -180,22 +180,22 @@ public class MobileAppsSubmissionStatus {
       return null;
     }
 
-    public static class Adapter extends TypeAdapter<StatusEnum> {
+    public static class Adapter extends TypeAdapter<UpdateStatusEnum> {
       @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
+      public void write(final JsonWriter jsonWriter, final UpdateStatusEnum enumeration) throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
       @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
+      public UpdateStatusEnum read(final JsonReader jsonReader) throws IOException {
         String value = jsonReader.nextString();
-        return StatusEnum.fromValue(String.valueOf(value));
+        return UpdateStatusEnum.fromValue(String.valueOf(value));
       }
     }
   }
 
-  @SerializedName("Status")
-  private StatusEnum status = null;
+  @SerializedName("UpdateStatus")
+  private UpdateStatusEnum updateStatus = null;
 
   @SerializedName("LastUpdateStatusTime")
   private OffsetDateTime lastUpdateStatusTime = null;
@@ -281,22 +281,22 @@ public class MobileAppsSubmissionStatus {
     this.appStatus = appStatus;
   }
 
-  public MobileAppsSubmissionStatus status(StatusEnum status) {
-    this.status = status;
+  public MobileAppsSubmissionStatus updateStatus(UpdateStatusEnum updateStatus) {
+    this.updateStatus = updateStatus;
     return this;
   }
 
    /**
    * Mobile App Status
-   * @return status
+   * @return updateStatus
   **/
   @ApiModelProperty(value = "Mobile App Status")
-  public StatusEnum getStatus() {
-    return status;
+  public UpdateStatusEnum getUpdateStatus() {
+    return updateStatus;
   }
 
-  public void setStatus(StatusEnum status) {
-    this.status = status;
+  public void setUpdateStatus(UpdateStatusEnum updateStatus) {
+    this.updateStatus = updateStatus;
   }
 
   public MobileAppsSubmissionStatus lastUpdateStatusTime(OffsetDateTime lastUpdateStatusTime) {
@@ -385,7 +385,7 @@ public class MobileAppsSubmissionStatus {
         Objects.equals(this.mobileAppsSubmissionId, mobileAppsSubmissionStatus.mobileAppsSubmissionId) &&
         Objects.equals(this.type, mobileAppsSubmissionStatus.type) &&
         Objects.equals(this.appStatus, mobileAppsSubmissionStatus.appStatus) &&
-        Objects.equals(this.status, mobileAppsSubmissionStatus.status) &&
+        Objects.equals(this.updateStatus, mobileAppsSubmissionStatus.updateStatus) &&
         Objects.equals(this.lastUpdateStatusTime, mobileAppsSubmissionStatus.lastUpdateStatusTime) &&
         Objects.equals(this.createTime, mobileAppsSubmissionStatus.createTime) &&
         Objects.equals(this.updateTime, mobileAppsSubmissionStatus.updateTime) &&
@@ -394,7 +394,7 @@ public class MobileAppsSubmissionStatus {
 
   @Override
   public int hashCode() {
-    return Objects.hash(mobileAppsSubmissionStatusId, mobileAppsSubmissionId, type, appStatus, status, lastUpdateStatusTime, createTime, updateTime, notes);
+    return Objects.hash(mobileAppsSubmissionStatusId, mobileAppsSubmissionId, type, appStatus, updateStatus, lastUpdateStatusTime, createTime, updateTime, notes);
   }
 
 
@@ -407,7 +407,7 @@ public class MobileAppsSubmissionStatus {
     sb.append("    mobileAppsSubmissionId: ").append(toIndentedString(mobileAppsSubmissionId)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    appStatus: ").append(toIndentedString(appStatus)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    updateStatus: ").append(toIndentedString(updateStatus)).append("\n");
     sb.append("    lastUpdateStatusTime: ").append(toIndentedString(lastUpdateStatusTime)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    updateTime: ").append(toIndentedString(updateTime)).append("\n");

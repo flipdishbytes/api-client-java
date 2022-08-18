@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **mobileAppsSubmissionId** | **Integer** | Mobile Apps Submission Id |  [optional]
 **type** | [**TypeEnum**](#TypeEnum) | Mobile Type |  [optional]
 **appStatus** | [**AppStatusEnum**](#AppStatusEnum) | Mobile App Status |  [optional]
-**status** | [**StatusEnum**](#StatusEnum) | Mobile App Status |  [optional]
+**updateStatus** | [**UpdateStatusEnum**](#UpdateStatusEnum) | Mobile App Status |  [optional]
 **lastUpdateStatusTime** | [**OffsetDateTime**](OffsetDateTime.md) | Mobile LastUpdateStatusTime |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | Mobile CreateTime |  [optional]
 **updateTime** | [**OffsetDateTime**](OffsetDateTime.md) | Mobile UpdateTime |  [optional]
@@ -32,16 +32,16 @@ PUBLISHED | &quot;Published&quot;
 UNPUBLISHED | &quot;Unpublished&quot;
 
 
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
+<a name="UpdateStatusEnum"></a>
+## Enum: UpdateStatusEnum
 Name | Value
 ---- | -----
 NONE | &quot;None&quot;
-INPROGRESS | &quot;InProgress&quot;
 SUBMITTED | &quot;Submitted&quot;
-APPSTOREREVIEW | &quot;AppStoreReview&quot;
-SUCESSFULL | &quot;Sucessfull&quot;
-UNSUCCESFUL | &quot;Unsuccesful&quot;
+INREVIEW | &quot;InReview&quot;
+REJECTED | &quot;Rejected&quot;
+APPROVED | &quot;Approved&quot;
+PUBLISHED | &quot;Published&quot;
 
 
 
