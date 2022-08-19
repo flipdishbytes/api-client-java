@@ -27,13 +27,16 @@ import java.io.IOException;
 /**
  * DynamicFormRule
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-18T11:20:33.214+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-19T10:58:46.420+01:00")
 public class DynamicFormRule {
   @SerializedName("Value")
   private Object value = null;
 
   @SerializedName("Message")
   private String message = null;
+
+  @SerializedName("Scopes")
+  private String scopes = null;
 
   public DynamicFormRule value(Object value) {
     this.value = value;
@@ -71,6 +74,24 @@ public class DynamicFormRule {
     this.message = message;
   }
 
+  public DynamicFormRule scopes(String scopes) {
+    this.scopes = scopes;
+    return this;
+  }
+
+   /**
+   * Get scopes
+   * @return scopes
+  **/
+  @ApiModelProperty(value = "")
+  public String getScopes() {
+    return scopes;
+  }
+
+  public void setScopes(String scopes) {
+    this.scopes = scopes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -82,12 +103,13 @@ public class DynamicFormRule {
     }
     DynamicFormRule dynamicFormRule = (DynamicFormRule) o;
     return Objects.equals(this.value, dynamicFormRule.value) &&
-        Objects.equals(this.message, dynamicFormRule.message);
+        Objects.equals(this.message, dynamicFormRule.message) &&
+        Objects.equals(this.scopes, dynamicFormRule.scopes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, message);
+    return Objects.hash(value, message, scopes);
   }
 
 
@@ -98,6 +120,7 @@ public class DynamicFormRule {
     
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    scopes: ").append(toIndentedString(scopes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
