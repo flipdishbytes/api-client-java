@@ -25,7 +25,9 @@ import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionStatus;
+import com.flipdish.apiclient.model.RestApiResultUpdateMobileAppsSubmissionStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.UpdateMobileAppsSubmissionStatus;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -139,6 +141,24 @@ public class MobileAppsApiTest {
         String appId = null;
         AppConfigSalesChannel appConfigSalesChannel = null;
         RestApiResultAppConfigSalesChannel response = api.updateAppConfigSalesChannel(appId, appConfigSalesChannel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update submission status
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateSubmissionStatusTest() throws ApiException {
+        String appId = null;
+        Integer mobileAppsSubmissionId = null;
+        UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus = null;
+        RestApiResultUpdateMobileAppsSubmissionStatus response = api.updateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus);
 
         // TODO: test validations
     }
