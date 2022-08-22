@@ -319,12 +319,13 @@ public class AddressApi {
     /**
      * Build call for formatGoogleAddress
      * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call formatGoogleAddressCall(GoogleAddress googleAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call formatGoogleAddressCall(GoogleAddress googleAddress, String language, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = googleAddress;
 
         // create path and map variables
@@ -332,6 +333,8 @@ public class AddressApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (language != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("language", language));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -366,7 +369,7 @@ public class AddressApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call formatGoogleAddressValidateBeforeCall(GoogleAddress googleAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call formatGoogleAddressValidateBeforeCall(GoogleAddress googleAddress, String language, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'googleAddress' is set
         if (googleAddress == null) {
@@ -374,7 +377,7 @@ public class AddressApi {
         }
         
 
-        com.squareup.okhttp.Call call = formatGoogleAddressCall(googleAddress, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = formatGoogleAddressCall(googleAddress, language, progressListener, progressRequestListener);
         return call;
 
     }
@@ -383,11 +386,12 @@ public class AddressApi {
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
      * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @return RestApiResultAddressFormResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAddressFormResponse formatGoogleAddress(GoogleAddress googleAddress) throws ApiException {
-        ApiResponse<RestApiResultAddressFormResponse> resp = formatGoogleAddressWithHttpInfo(googleAddress);
+    public RestApiResultAddressFormResponse formatGoogleAddress(GoogleAddress googleAddress, String language) throws ApiException {
+        ApiResponse<RestApiResultAddressFormResponse> resp = formatGoogleAddressWithHttpInfo(googleAddress, language);
         return resp.getData();
     }
 
@@ -395,11 +399,12 @@ public class AddressApi {
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
      * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @return ApiResponse&lt;RestApiResultAddressFormResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAddressFormResponse> formatGoogleAddressWithHttpInfo(GoogleAddress googleAddress) throws ApiException {
-        com.squareup.okhttp.Call call = formatGoogleAddressValidateBeforeCall(googleAddress, null, null);
+    public ApiResponse<RestApiResultAddressFormResponse> formatGoogleAddressWithHttpInfo(GoogleAddress googleAddress, String language) throws ApiException {
+        com.squareup.okhttp.Call call = formatGoogleAddressValidateBeforeCall(googleAddress, language, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultAddressFormResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -408,11 +413,12 @@ public class AddressApi {
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. (asynchronously)
      * 
      * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call formatGoogleAddressAsync(GoogleAddress googleAddress, final ApiCallback<RestApiResultAddressFormResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call formatGoogleAddressAsync(GoogleAddress googleAddress, String language, final ApiCallback<RestApiResultAddressFormResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -433,7 +439,7 @@ public class AddressApi {
             };
         }
 
-        com.squareup.okhttp.Call call = formatGoogleAddressValidateBeforeCall(googleAddress, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = formatGoogleAddressValidateBeforeCall(googleAddress, language, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultAddressFormResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

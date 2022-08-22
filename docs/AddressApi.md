@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="formatGoogleAddress"></a>
 # **formatGoogleAddress**
-> RestApiResultAddressFormResponse formatGoogleAddress(googleAddress)
+> RestApiResultAddressFormResponse formatGoogleAddress(googleAddress, language)
 
 Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
 
@@ -138,8 +138,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AddressApi apiInstance = new AddressApi();
 GoogleAddress googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is retuned from the maps API.
+String language = "language_example"; // String | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
 try {
-    RestApiResultAddressFormResponse result = apiInstance.formatGoogleAddress(googleAddress);
+    RestApiResultAddressFormResponse result = apiInstance.formatGoogleAddress(googleAddress, language);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AddressApi#formatGoogleAddress");
@@ -152,6 +153,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is retuned from the maps API. |
+ **language** | **String**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
 
 ### Return type
 

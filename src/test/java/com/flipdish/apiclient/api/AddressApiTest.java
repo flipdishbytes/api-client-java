@@ -81,7 +81,8 @@ public class AddressApiTest {
     @Test
     public void formatGoogleAddressTest() throws ApiException {
         GoogleAddress googleAddress = null;
-        RestApiResultAddressFormResponse response = api.formatGoogleAddress(googleAddress);
+        String language = null;
+        RestApiResultAddressFormResponse response = api.formatGoogleAddress(googleAddress, language);
 
         // TODO: test validations
     }
