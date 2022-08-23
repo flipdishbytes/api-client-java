@@ -28,13 +28,16 @@ import java.io.IOException;
  * Card reader state information
  */
 @ApiModel(description = "Card reader state information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-22T15:53:56.672+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-23T09:45:04.926+01:00")
 public class ReaderActionStateInfo {
   @SerializedName("ActionState")
   private String actionState = null;
 
   @SerializedName("FailureCode")
   private String failureCode = null;
+
+  @SerializedName("FailureMessage")
+  private String failureMessage = null;
 
   @SerializedName("Type")
   private String type = null;
@@ -75,6 +78,24 @@ public class ReaderActionStateInfo {
     this.failureCode = failureCode;
   }
 
+  public ReaderActionStateInfo failureMessage(String failureMessage) {
+    this.failureMessage = failureMessage;
+    return this;
+  }
+
+   /**
+   * Failure Message
+   * @return failureMessage
+  **/
+  @ApiModelProperty(value = "Failure Message")
+  public String getFailureMessage() {
+    return failureMessage;
+  }
+
+  public void setFailureMessage(String failureMessage) {
+    this.failureMessage = failureMessage;
+  }
+
   public ReaderActionStateInfo type(String type) {
     this.type = type;
     return this;
@@ -105,12 +126,13 @@ public class ReaderActionStateInfo {
     ReaderActionStateInfo readerActionStateInfo = (ReaderActionStateInfo) o;
     return Objects.equals(this.actionState, readerActionStateInfo.actionState) &&
         Objects.equals(this.failureCode, readerActionStateInfo.failureCode) &&
+        Objects.equals(this.failureMessage, readerActionStateInfo.failureMessage) &&
         Objects.equals(this.type, readerActionStateInfo.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(actionState, failureCode, type);
+    return Objects.hash(actionState, failureCode, failureMessage, type);
   }
 
 
@@ -121,6 +143,7 @@ public class ReaderActionStateInfo {
     
     sb.append("    actionState: ").append(toIndentedString(actionState)).append("\n");
     sb.append("    failureCode: ").append(toIndentedString(failureCode)).append("\n");
+    sb.append("    failureMessage: ").append(toIndentedString(failureMessage)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();

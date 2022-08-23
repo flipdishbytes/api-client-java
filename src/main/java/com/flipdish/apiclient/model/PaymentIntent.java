@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.LastPaymentError;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Represents stripe PaymentIntent
  */
 @ApiModel(description = "Represents stripe PaymentIntent")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-22T15:53:56.672+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-23T09:45:04.926+01:00")
 public class PaymentIntent {
   @SerializedName("Id")
   private String id = null;
@@ -45,6 +46,9 @@ public class PaymentIntent {
 
   @SerializedName("Created")
   private OffsetDateTime created = null;
+
+  @SerializedName("LastPaymentError")
+  private LastPaymentError lastPaymentError = null;
 
   public PaymentIntent id(String id) {
     this.id = id;
@@ -136,6 +140,24 @@ public class PaymentIntent {
     this.created = created;
   }
 
+  public PaymentIntent lastPaymentError(LastPaymentError lastPaymentError) {
+    this.lastPaymentError = lastPaymentError;
+    return this;
+  }
+
+   /**
+   * Failed payment intent Errors
+   * @return lastPaymentError
+  **/
+  @ApiModelProperty(value = "Failed payment intent Errors")
+  public LastPaymentError getLastPaymentError() {
+    return lastPaymentError;
+  }
+
+  public void setLastPaymentError(LastPaymentError lastPaymentError) {
+    this.lastPaymentError = lastPaymentError;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -150,12 +172,13 @@ public class PaymentIntent {
         Objects.equals(this.description, paymentIntent.description) &&
         Objects.equals(this.currency, paymentIntent.currency) &&
         Objects.equals(this.status, paymentIntent.status) &&
-        Objects.equals(this.created, paymentIntent.created);
+        Objects.equals(this.created, paymentIntent.created) &&
+        Objects.equals(this.lastPaymentError, paymentIntent.lastPaymentError);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, description, currency, status, created);
+    return Objects.hash(id, description, currency, status, created, lastPaymentError);
   }
 
 
@@ -169,6 +192,7 @@ public class PaymentIntent {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    lastPaymentError: ").append(toIndentedString(lastPaymentError)).append("\n");
     sb.append("}");
     return sb.toString();
   }
