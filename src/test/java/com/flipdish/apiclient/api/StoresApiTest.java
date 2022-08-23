@@ -348,6 +348,22 @@ public class StoresApiTest {
     }
     
     /**
+     * Retrieve Store feeConfig
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getStoreFeeConfigTest() throws ApiException {
+        Integer storeId = null;
+        StoreFeeConfig response = api.getStoreFeeConfig(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get all stores by app name id
      *
      * 
@@ -384,7 +400,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Retrieve Store feeConfig
+     * Retrieve Store Service Charge
      *
      * 
      *
@@ -394,23 +410,7 @@ public class StoresApiTest {
     @Test
     public void getStoreServiceChargeTest() throws ApiException {
         Integer storeId = null;
-        StoreFeeConfig response = api.getStoreServiceCharge(storeId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieve Store Service Charge
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getStoreServiceCharge_0Test() throws ApiException {
-        Integer storeId = null;
-        ServiceCharge response = api.getStoreServiceCharge_0(storeId);
+        ServiceCharge response = api.getStoreServiceCharge(storeId);
 
         // TODO: test validations
     }

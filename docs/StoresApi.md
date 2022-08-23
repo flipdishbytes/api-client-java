@@ -20,10 +20,10 @@ Method | HTTP request | Description
 [**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
 [**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 [**getStoreNetSales**](StoresApi.md#getStoreNetSales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-[**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
-[**getStoreServiceCharge_0**](StoresApi.md#getStoreServiceCharge_0) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
+[**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 [**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 [**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 [**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
@@ -905,6 +905,57 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="getStoreFeeConfig"></a>
+# **getStoreFeeConfig**
+> StoreFeeConfig getStoreFeeConfig(storeId)
+
+Retrieve Store feeConfig
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | Store identifier
+try {
+    StoreFeeConfig result = apiInstance.getStoreFeeConfig(storeId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#getStoreFeeConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**| Store identifier |
+
+### Return type
+
+[**StoreFeeConfig**](StoreFeeConfig.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getStoreHeadersByAppId"></a>
 # **getStoreHeadersByAppId**
 > RestApiPaginationResultStoreHeader getStoreHeadersByAppId(appId, storeNameQuery, page, limit)
@@ -1017,58 +1068,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoreServiceCharge"></a>
 # **getStoreServiceCharge**
-> StoreFeeConfig getStoreServiceCharge(storeId)
-
-Retrieve Store feeConfig
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.StoresApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-StoresApi apiInstance = new StoresApi();
-Integer storeId = 56; // Integer | Store identifier
-try {
-    StoreFeeConfig result = apiInstance.getStoreServiceCharge(storeId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling StoresApi#getStoreServiceCharge");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store identifier |
-
-### Return type
-
-[**StoreFeeConfig**](StoreFeeConfig.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getStoreServiceCharge_0"></a>
-# **getStoreServiceCharge_0**
-> ServiceCharge getStoreServiceCharge_0(storeId)
+> ServiceCharge getStoreServiceCharge(storeId)
 
 Retrieve Store Service Charge
 
@@ -1090,10 +1090,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | Store identifier
 try {
-    ServiceCharge result = apiInstance.getStoreServiceCharge_0(storeId);
+    ServiceCharge result = apiInstance.getStoreServiceCharge(storeId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StoresApi#getStoreServiceCharge_0");
+    System.err.println("Exception when calling StoresApi#getStoreServiceCharge");
     e.printStackTrace();
 }
 ```

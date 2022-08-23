@@ -31,8 +31,11 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-23T09:45:04.926+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-23T16:05:27.818+01:00")
 public class MobileAppsSubmissionDetails {
+  @SerializedName("MobileAppsSubmissionId")
+  private Integer mobileAppsSubmissionId = null;
+
   @SerializedName("AppName")
   private String appName = null;
 
@@ -53,6 +56,24 @@ public class MobileAppsSubmissionDetails {
 
   @SerializedName("Status")
   private List<MobileAppsSubmissionStatus> status = null;
+
+  public MobileAppsSubmissionDetails mobileAppsSubmissionId(Integer mobileAppsSubmissionId) {
+    this.mobileAppsSubmissionId = mobileAppsSubmissionId;
+    return this;
+  }
+
+   /**
+   * Mobile Apps Submission Id
+   * @return mobileAppsSubmissionId
+  **/
+  @ApiModelProperty(value = "Mobile Apps Submission Id")
+  public Integer getMobileAppsSubmissionId() {
+    return mobileAppsSubmissionId;
+  }
+
+  public void setMobileAppsSubmissionId(Integer mobileAppsSubmissionId) {
+    this.mobileAppsSubmissionId = mobileAppsSubmissionId;
+  }
 
   public MobileAppsSubmissionDetails appName(String appName) {
     this.appName = appName;
@@ -206,7 +227,8 @@ public class MobileAppsSubmissionDetails {
       return false;
     }
     MobileAppsSubmissionDetails mobileAppsSubmissionDetails = (MobileAppsSubmissionDetails) o;
-    return Objects.equals(this.appName, mobileAppsSubmissionDetails.appName) &&
+    return Objects.equals(this.mobileAppsSubmissionId, mobileAppsSubmissionDetails.mobileAppsSubmissionId) &&
+        Objects.equals(this.appName, mobileAppsSubmissionDetails.appName) &&
         Objects.equals(this.appDescription, mobileAppsSubmissionDetails.appDescription) &&
         Objects.equals(this.appShortDescription, mobileAppsSubmissionDetails.appShortDescription) &&
         Objects.equals(this.keywords, mobileAppsSubmissionDetails.keywords) &&
@@ -217,7 +239,7 @@ public class MobileAppsSubmissionDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, appDescription, appShortDescription, keywords, appLogoUrl, autoPublish, status);
+    return Objects.hash(mobileAppsSubmissionId, appName, appDescription, appShortDescription, keywords, appLogoUrl, autoPublish, status);
   }
 
 
@@ -226,6 +248,7 @@ public class MobileAppsSubmissionDetails {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileAppsSubmissionDetails {\n");
     
+    sb.append("    mobileAppsSubmissionId: ").append(toIndentedString(mobileAppsSubmissionId)).append("\n");
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    appDescription: ").append(toIndentedString(appDescription)).append("\n");
     sb.append("    appShortDescription: ").append(toIndentedString(appShortDescription)).append("\n");
