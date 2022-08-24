@@ -96,6 +96,7 @@ GIROPAY | &quot;Giropay&quot;
 EPS | &quot;Eps&quot;
 EMV | &quot;Emv&quot;
 PAYPAL | &quot;PayPal&quot;
+PAYGREEN | &quot;PayGreen&quot;
 
 
 <a name="PaymentStatusEnum"></a>

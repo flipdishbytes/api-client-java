@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**formByApp**](AddressApi.md#formByApp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
 [**formByCountry**](AddressApi.md#formByCountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
 [**formatGoogleAddress**](AddressApi.md#formatGoogleAddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+[**getCountries**](AddressApi.md#getCountries) | **GET** /api/v1.0/address/countries | Retuns a list of localised countries
 
 
 <a name="formByApp"></a>
@@ -166,5 +167,56 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getCountries"></a>
+# **getCountries**
+> RestApiResultCountryFormResponse getCountries(language)
+
+Retuns a list of localised countries
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AddressApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AddressApi apiInstance = new AddressApi();
+String language = "language_example"; // String | 
+try {
+    RestApiResultCountryFormResponse result = apiInstance.getCountries(language);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AddressApi#getCountries");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **language** | **String**|  | [optional]
+
+### Return type
+
+[**RestApiResultCountryFormResponse**](RestApiResultCountryFormResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 

@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.GoogleAddress;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAddressFormResponse;
+import com.flipdish.apiclient.model.RestApiResultCountryFormResponse;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -83,6 +84,22 @@ public class AddressApiTest {
         GoogleAddress googleAddress = null;
         String language = null;
         RestApiResultAddressFormResponse response = api.formatGoogleAddress(googleAddress, language);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retuns a list of localised countries
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getCountriesTest() throws ApiException {
+        String language = null;
+        RestApiResultCountryFormResponse response = api.getCountries(language);
 
         // TODO: test validations
     }

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Processing fee config
  */
 @ApiModel(description = "Processing fee config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-23T16:05:27.818+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-24T12:25:59.605+01:00")
 public class ProcessingFeeConfig {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -52,7 +52,9 @@ public class ProcessingFeeConfig {
     
     EMV("Emv"),
     
-    PAYPAL("PayPal");
+    PAYPAL("PayPal"),
+    
+    PAYGREEN("PayGreen");
 
     private String value;
 
