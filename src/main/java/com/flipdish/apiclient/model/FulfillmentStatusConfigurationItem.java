@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.NextStatusWithOrderType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ import java.util.List;
  * Fulfillment Status Item
  */
 @ApiModel(description = "Fulfillment Status Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-24T17:29:22.642+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-25T07:35:00.817+01:00")
 public class FulfillmentStatusConfigurationItem {
   @SerializedName("StatusId")
   private String statusId = null;
@@ -57,7 +58,7 @@ public class FulfillmentStatusConfigurationItem {
   private List<String> nextStatuses = null;
 
   @SerializedName("DefaultNextStatus")
-  private String defaultNextStatus = null;
+  private List<NextStatusWithOrderType> defaultNextStatus = null;
 
   /**
    * How will state change (manually or automated, including timed)
@@ -117,8 +118,59 @@ public class FulfillmentStatusConfigurationItem {
   @SerializedName("IsCustom")
   private Boolean isCustom = null;
 
+  /**
+   * Gets or Sets orderTypes
+   */
+  @JsonAdapter(OrderTypesEnum.Adapter.class)
+  public enum OrderTypesEnum {
+    ALL("All"),
+    
+    DELIVERY("Delivery"),
+    
+    COLLECTION("Collection"),
+    
+    DINEIN("DineIn");
+
+    private String value;
+
+    OrderTypesEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static OrderTypesEnum fromValue(String text) {
+      for (OrderTypesEnum b : OrderTypesEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<OrderTypesEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final OrderTypesEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public OrderTypesEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return OrderTypesEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
   @SerializedName("OrderTypes")
-  private List<String> orderTypes = null;
+  private List<OrderTypesEnum> orderTypes = null;
 
   @SerializedName("Communication")
   private Boolean communication = null;
@@ -278,8 +330,16 @@ public class FulfillmentStatusConfigurationItem {
     this.nextStatuses = nextStatuses;
   }
 
-  public FulfillmentStatusConfigurationItem defaultNextStatus(String defaultNextStatus) {
+  public FulfillmentStatusConfigurationItem defaultNextStatus(List<NextStatusWithOrderType> defaultNextStatus) {
     this.defaultNextStatus = defaultNextStatus;
+    return this;
+  }
+
+  public FulfillmentStatusConfigurationItem addDefaultNextStatusItem(NextStatusWithOrderType defaultNextStatusItem) {
+    if (this.defaultNextStatus == null) {
+      this.defaultNextStatus = new ArrayList<NextStatusWithOrderType>();
+    }
+    this.defaultNextStatus.add(defaultNextStatusItem);
     return this;
   }
 
@@ -288,11 +348,11 @@ public class FulfillmentStatusConfigurationItem {
    * @return defaultNextStatus
   **/
   @ApiModelProperty(value = "The default next status (on a dropdown or quick button on terminal or portal)")
-  public String getDefaultNextStatus() {
+  public List<NextStatusWithOrderType> getDefaultNextStatus() {
     return defaultNextStatus;
   }
 
-  public void setDefaultNextStatus(String defaultNextStatus) {
+  public void setDefaultNextStatus(List<NextStatusWithOrderType> defaultNextStatus) {
     this.defaultNextStatus = defaultNextStatus;
   }
 
@@ -350,14 +410,14 @@ public class FulfillmentStatusConfigurationItem {
     this.isCustom = isCustom;
   }
 
-  public FulfillmentStatusConfigurationItem orderTypes(List<String> orderTypes) {
+  public FulfillmentStatusConfigurationItem orderTypes(List<OrderTypesEnum> orderTypes) {
     this.orderTypes = orderTypes;
     return this;
   }
 
-  public FulfillmentStatusConfigurationItem addOrderTypesItem(String orderTypesItem) {
+  public FulfillmentStatusConfigurationItem addOrderTypesItem(OrderTypesEnum orderTypesItem) {
     if (this.orderTypes == null) {
-      this.orderTypes = new ArrayList<String>();
+      this.orderTypes = new ArrayList<OrderTypesEnum>();
     }
     this.orderTypes.add(orderTypesItem);
     return this;
@@ -368,11 +428,11 @@ public class FulfillmentStatusConfigurationItem {
    * @return orderTypes
   **/
   @ApiModelProperty(value = "If empty then applies to all ordertypes, otherwise a list of order types this state applies to")
-  public List<String> getOrderTypes() {
+  public List<OrderTypesEnum> getOrderTypes() {
     return orderTypes;
   }
 
-  public void setOrderTypes(List<String> orderTypes) {
+  public void setOrderTypes(List<OrderTypesEnum> orderTypes) {
     this.orderTypes = orderTypes;
   }
 
