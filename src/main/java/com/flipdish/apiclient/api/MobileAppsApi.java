@@ -460,13 +460,12 @@ public class MobileAppsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/mobileapps/{appId}/submission/status"
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+        String localVarPath = "/api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "mobileAppsSubmissionId" + "\\}", apiClient.escapeString(mobileAppsSubmissionId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (mobileAppsSubmissionId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("mobileAppsSubmissionId", mobileAppsSubmissionId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
