@@ -28,7 +28,7 @@ import java.io.IOException;
  * Provides an average value for a single hour of day of the week
  */
 @ApiModel(description = "Provides an average value for a single hour of day of the week")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-08-31T08:06:26.662+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-01T11:04:25.406+01:00")
 public class ApmHourlyDataPoint {
   /**
    * Day of the week
