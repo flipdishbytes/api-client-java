@@ -30,8 +30,11 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-01T11:04:25.406+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-05T14:58:23.587+01:00")
 public class MobileAppsSubmission {
+  @SerializedName("SubmissionId")
+  private Integer submissionId = null;
+
   @SerializedName("AppName")
   private String appName = null;
 
@@ -46,6 +49,24 @@ public class MobileAppsSubmission {
 
   @SerializedName("AutoPublish")
   private Boolean autoPublish = null;
+
+  public MobileAppsSubmission submissionId(Integer submissionId) {
+    this.submissionId = submissionId;
+    return this;
+  }
+
+   /**
+   * Mobile Apps Submission Id
+   * @return submissionId
+  **/
+  @ApiModelProperty(value = "Mobile Apps Submission Id")
+  public Integer getSubmissionId() {
+    return submissionId;
+  }
+
+  public void setSubmissionId(Integer submissionId) {
+    this.submissionId = submissionId;
+  }
 
   public MobileAppsSubmission appName(String appName) {
     this.appName = appName;
@@ -155,7 +176,8 @@ public class MobileAppsSubmission {
       return false;
     }
     MobileAppsSubmission mobileAppsSubmission = (MobileAppsSubmission) o;
-    return Objects.equals(this.appName, mobileAppsSubmission.appName) &&
+    return Objects.equals(this.submissionId, mobileAppsSubmission.submissionId) &&
+        Objects.equals(this.appName, mobileAppsSubmission.appName) &&
         Objects.equals(this.appDescription, mobileAppsSubmission.appDescription) &&
         Objects.equals(this.appShortDescription, mobileAppsSubmission.appShortDescription) &&
         Objects.equals(this.keywords, mobileAppsSubmission.keywords) &&
@@ -164,7 +186,7 @@ public class MobileAppsSubmission {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, appDescription, appShortDescription, keywords, autoPublish);
+    return Objects.hash(submissionId, appName, appDescription, appShortDescription, keywords, autoPublish);
   }
 
 
@@ -173,6 +195,7 @@ public class MobileAppsSubmission {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileAppsSubmission {\n");
     
+    sb.append("    submissionId: ").append(toIndentedString(submissionId)).append("\n");
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    appDescription: ").append(toIndentedString(appDescription)).append("\n");
     sb.append("    appShortDescription: ").append(toIndentedString(appShortDescription)).append("\n");

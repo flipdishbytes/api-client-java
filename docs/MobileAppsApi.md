@@ -7,10 +7,13 @@ Method | HTTP request | Description
 [**getAppConfigSalesChannel**](MobileAppsApi.md#getAppConfigSalesChannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 [**getStatistics**](MobileAppsApi.md#getStatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 [**getSubmissionDetails**](MobileAppsApi.md#getSubmissionDetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId} | Get submission status mobile apps
+[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
+[**publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
+[**resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
 [**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
+[**unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
 [**updateAppConfigSalesChannel**](MobileAppsApi.md#updateAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
+[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
 [**uploadImage**](MobileAppsApi.md#uploadImage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
 
@@ -171,7 +174,7 @@ Name | Type | Description  | Notes
 
 <a name="getSubmissionStatus"></a>
 # **getSubmissionStatus**
-> RestApiResultMobileAppsSubmissionStatus getSubmissionStatus(appId, mobileAppsSubmissionId)
+> RestApiResultMobileAppsSubmissionStatus getSubmissionStatus(appId, submissionId)
 
 Get submission status mobile apps
 
@@ -192,9 +195,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MobileAppsApi apiInstance = new MobileAppsApi();
 String appId = "appId_example"; // String | 
-Integer mobileAppsSubmissionId = 56; // Integer | 
+Integer submissionId = 56; // Integer | 
 try {
-    RestApiResultMobileAppsSubmissionStatus result = apiInstance.getSubmissionStatus(appId, mobileAppsSubmissionId);
+    RestApiResultMobileAppsSubmissionStatus result = apiInstance.getSubmissionStatus(appId, submissionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MobileAppsApi#getSubmissionStatus");
@@ -207,7 +210,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **mobileAppsSubmissionId** | **Integer**|  |
+ **submissionId** | **Integer**|  |
 
 ### Return type
 
@@ -220,6 +223,114 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="publish"></a>
+# **publish**
+> RestApiResultRestApiIntegerResult publish(appId, submissionId, platformType)
+
+Publish mobile apps
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MobileAppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MobileAppsApi apiInstance = new MobileAppsApi();
+String appId = "appId_example"; // String | 
+Integer submissionId = 56; // Integer | 
+String platformType = "platformType_example"; // String | 
+try {
+    RestApiResultRestApiIntegerResult result = apiInstance.publish(appId, submissionId, platformType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MobileAppsApi#publish");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **submissionId** | **Integer**|  |
+ **platformType** | **String**|  | [enum: Android, IOS]
+
+### Return type
+
+[**RestApiResultRestApiIntegerResult**](RestApiResultRestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="resubmission"></a>
+# **resubmission**
+> RestApiResultMobileAppsSubmission resubmission(appId, mobileAppsSubmission)
+
+Re-submission form mobile apps
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MobileAppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MobileAppsApi apiInstance = new MobileAppsApi();
+String appId = "appId_example"; // String | 
+MobileAppsSubmission mobileAppsSubmission = new MobileAppsSubmission(); // MobileAppsSubmission | 
+try {
+    RestApiResultMobileAppsSubmission result = apiInstance.resubmission(appId, mobileAppsSubmission);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MobileAppsApi#resubmission");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **mobileAppsSubmission** | [**MobileAppsSubmission**](MobileAppsSubmission.md)|  |
+
+### Return type
+
+[**RestApiResultMobileAppsSubmission**](RestApiResultMobileAppsSubmission.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="submission"></a>
@@ -273,6 +384,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="unpublish"></a>
+# **unpublish**
+> RestApiIntegerResult unpublish(appId, submissionId, platformType)
+
+Unpublish mobile apps
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MobileAppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MobileAppsApi apiInstance = new MobileAppsApi();
+String appId = "appId_example"; // String | 
+Integer submissionId = 56; // Integer | 
+String platformType = "platformType_example"; // String | 
+try {
+    RestApiIntegerResult result = apiInstance.unpublish(appId, submissionId, platformType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MobileAppsApi#unpublish");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **submissionId** | **Integer**|  |
+ **platformType** | **String**|  | [enum: Android, IOS]
+
+### Return type
+
+[**RestApiIntegerResult**](RestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="updateAppConfigSalesChannel"></a>
@@ -330,7 +496,7 @@ Name | Type | Description  | Notes
 
 <a name="updateSubmissionStatus"></a>
 # **updateSubmissionStatus**
-> RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus)
+> RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus)
 
 Update submission status
 
@@ -351,10 +517,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MobileAppsApi apiInstance = new MobileAppsApi();
 String appId = "appId_example"; // String | 
-Integer mobileAppsSubmissionId = 56; // Integer | 
+Integer submissionId = 56; // Integer | 
 UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
 try {
-    RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.updateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus);
+    RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MobileAppsApi#updateSubmissionStatus");
@@ -367,7 +533,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **mobileAppsSubmissionId** | **Integer**|  |
+ **submissionId** | **Integer**|  |
  **updateMobileAppsSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  |
 
 ### Return type

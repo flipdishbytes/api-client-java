@@ -20,11 +20,13 @@ import com.flipdish.apiclient.model.MobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiArrayResultMobileAppsStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiIntegerResult;
 import com.flipdish.apiclient.model.RestApiResultAppConfigSalesChannel;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsImage;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmission;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionDetails;
 import com.flipdish.apiclient.model.RestApiResultMobileAppsSubmissionStatus;
+import com.flipdish.apiclient.model.RestApiResultRestApiIntegerResult;
 import com.flipdish.apiclient.model.RestApiResultUpdateMobileAppsSubmissionStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMobileAppsSubmissionStatus;
@@ -105,8 +107,43 @@ public class MobileAppsApiTest {
     @Test
     public void getSubmissionStatusTest() throws ApiException {
         String appId = null;
-        Integer mobileAppsSubmissionId = null;
-        RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, mobileAppsSubmissionId);
+        Integer submissionId = null;
+        RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, submissionId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Publish mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void publishTest() throws ApiException {
+        String appId = null;
+        Integer submissionId = null;
+        String platformType = null;
+        RestApiResultRestApiIntegerResult response = api.publish(appId, submissionId, platformType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Re-submission form mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void resubmissionTest() throws ApiException {
+        String appId = null;
+        MobileAppsSubmission mobileAppsSubmission = null;
+        RestApiResultMobileAppsSubmission response = api.resubmission(appId, mobileAppsSubmission);
 
         // TODO: test validations
     }
@@ -124,6 +161,24 @@ public class MobileAppsApiTest {
         String appId = null;
         MobileAppsSubmission mobileAppsSubmission = null;
         RestApiResultMobileAppsSubmission response = api.submission(appId, mobileAppsSubmission);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Unpublish mobile apps
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void unpublishTest() throws ApiException {
+        String appId = null;
+        Integer submissionId = null;
+        String platformType = null;
+        RestApiIntegerResult response = api.unpublish(appId, submissionId, platformType);
 
         // TODO: test validations
     }
@@ -156,9 +211,9 @@ public class MobileAppsApiTest {
     @Test
     public void updateSubmissionStatusTest() throws ApiException {
         String appId = null;
-        Integer mobileAppsSubmissionId = null;
+        Integer submissionId = null;
         UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus = null;
-        RestApiResultUpdateMobileAppsSubmissionStatus response = api.updateSubmissionStatus(appId, mobileAppsSubmissionId, updateMobileAppsSubmissionStatus);
+        RestApiResultUpdateMobileAppsSubmissionStatus response = api.updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
 
         // TODO: test validations
     }
