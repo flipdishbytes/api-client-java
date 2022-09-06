@@ -28,8 +28,11 @@ import java.io.IOException;
  * Password reset model
  */
 @ApiModel(description = "Password reset model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-06T12:39:46.243+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-06T16:06:40.673+01:00")
 public class PasswordResetModel {
+  @SerializedName("TokenId")
+  private String tokenId = null;
+
   @SerializedName("Email")
   private String email = null;
 
@@ -41,6 +44,24 @@ public class PasswordResetModel {
 
   @SerializedName("Token")
   private String token = null;
+
+  public PasswordResetModel tokenId(String tokenId) {
+    this.tokenId = tokenId;
+    return this;
+  }
+
+   /**
+   * Token Id
+   * @return tokenId
+  **/
+  @ApiModelProperty(value = "Token Id")
+  public String getTokenId() {
+    return tokenId;
+  }
+
+  public void setTokenId(String tokenId) {
+    this.tokenId = tokenId;
+  }
 
   public PasswordResetModel email(String email) {
     this.email = email;
@@ -124,7 +145,8 @@ public class PasswordResetModel {
       return false;
     }
     PasswordResetModel passwordResetModel = (PasswordResetModel) o;
-    return Objects.equals(this.email, passwordResetModel.email) &&
+    return Objects.equals(this.tokenId, passwordResetModel.tokenId) &&
+        Objects.equals(this.email, passwordResetModel.email) &&
         Objects.equals(this.password, passwordResetModel.password) &&
         Objects.equals(this.passwordConfirmation, passwordResetModel.passwordConfirmation) &&
         Objects.equals(this.token, passwordResetModel.token);
@@ -132,7 +154,7 @@ public class PasswordResetModel {
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, password, passwordConfirmation, token);
+    return Objects.hash(tokenId, email, password, passwordConfirmation, token);
   }
 
 
@@ -141,6 +163,7 @@ public class PasswordResetModel {
     StringBuilder sb = new StringBuilder();
     sb.append("class PasswordResetModel {\n");
     
+    sb.append("    tokenId: ").append(toIndentedString(tokenId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    passwordConfirmation: ").append(toIndentedString(passwordConfirmation)).append("\n");
