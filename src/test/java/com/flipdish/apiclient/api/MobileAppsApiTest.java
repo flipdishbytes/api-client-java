@@ -212,8 +212,8 @@ public class MobileAppsApiTest {
     public void updateSubmissionStatusTest() throws ApiException {
         String appId = null;
         Integer submissionId = null;
-        UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus = null;
-        RestApiResultUpdateMobileAppsSubmissionStatus response = api.updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
+        UpdateMobileAppsSubmissionStatus updateSubmissionStatus = null;
+        RestApiResultUpdateMobileAppsSubmissionStatus response = api.updateSubmissionStatus(appId, submissionId, updateSubmissionStatus);
 
         // TODO: test validations
     }

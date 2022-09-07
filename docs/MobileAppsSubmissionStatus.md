@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 Name | Value
 ---- | -----
+NONE | &quot;None&quot;
 ANDROID | &quot;Android&quot;
 IOS | &quot;IOS&quot;
 

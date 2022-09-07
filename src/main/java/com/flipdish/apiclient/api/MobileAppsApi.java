@@ -1270,14 +1270,14 @@ public class MobileAppsApi {
      * Build call for updateSubmissionStatus
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param updateMobileAppsSubmissionStatus  (required)
+     * @param updateSubmissionStatus  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateSubmissionStatusCall(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = updateMobileAppsSubmissionStatus;
+    public com.squareup.okhttp.Call updateSubmissionStatusCall(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = updateSubmissionStatus;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/mobileapps/{appId}/submission/{submissionId}/status"
@@ -1320,7 +1320,7 @@ public class MobileAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateSubmissionStatusValidateBeforeCall(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateSubmissionStatusValidateBeforeCall(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -1332,13 +1332,13 @@ public class MobileAppsApi {
             throw new ApiException("Missing the required parameter 'submissionId' when calling updateSubmissionStatus(Async)");
         }
         
-        // verify the required parameter 'updateMobileAppsSubmissionStatus' is set
-        if (updateMobileAppsSubmissionStatus == null) {
-            throw new ApiException("Missing the required parameter 'updateMobileAppsSubmissionStatus' when calling updateSubmissionStatus(Async)");
+        // verify the required parameter 'updateSubmissionStatus' is set
+        if (updateSubmissionStatus == null) {
+            throw new ApiException("Missing the required parameter 'updateSubmissionStatus' when calling updateSubmissionStatus(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateSubmissionStatusCall(appId, submissionId, updateMobileAppsSubmissionStatus, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateSubmissionStatusCall(appId, submissionId, updateSubmissionStatus, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1348,12 +1348,12 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param updateMobileAppsSubmissionStatus  (required)
+     * @param updateSubmissionStatus  (required)
      * @return RestApiResultUpdateMobileAppsSubmissionStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus) throws ApiException {
-        ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus> resp = updateSubmissionStatusWithHttpInfo(appId, submissionId, updateMobileAppsSubmissionStatus);
+    public RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus) throws ApiException {
+        ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus> resp = updateSubmissionStatusWithHttpInfo(appId, submissionId, updateSubmissionStatus);
         return resp.getData();
     }
 
@@ -1362,12 +1362,12 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param updateMobileAppsSubmissionStatus  (required)
+     * @param updateSubmissionStatus  (required)
      * @return ApiResponse&lt;RestApiResultUpdateMobileAppsSubmissionStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus> updateSubmissionStatusWithHttpInfo(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus) throws ApiException {
-        com.squareup.okhttp.Call call = updateSubmissionStatusValidateBeforeCall(appId, submissionId, updateMobileAppsSubmissionStatus, null, null);
+    public ApiResponse<RestApiResultUpdateMobileAppsSubmissionStatus> updateSubmissionStatusWithHttpInfo(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus) throws ApiException {
+        com.squareup.okhttp.Call call = updateSubmissionStatusValidateBeforeCall(appId, submissionId, updateSubmissionStatus, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultUpdateMobileAppsSubmissionStatus>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1377,12 +1377,12 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param updateMobileAppsSubmissionStatus  (required)
+     * @param updateSubmissionStatus  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateSubmissionStatusAsync(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus, final ApiCallback<RestApiResultUpdateMobileAppsSubmissionStatus> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateSubmissionStatusAsync(String appId, Integer submissionId, UpdateMobileAppsSubmissionStatus updateSubmissionStatus, final ApiCallback<RestApiResultUpdateMobileAppsSubmissionStatus> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1403,7 +1403,7 @@ public class MobileAppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateSubmissionStatusValidateBeforeCall(appId, submissionId, updateMobileAppsSubmissionStatus, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateSubmissionStatusValidateBeforeCall(appId, submissionId, updateSubmissionStatus, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultUpdateMobileAppsSubmissionStatus>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

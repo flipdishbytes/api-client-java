@@ -106,7 +106,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **platformTypes** | [**List&lt;String&gt;**](String.md)|  | [enum: Android, IOS]
+ **platformTypes** | [**List&lt;String&gt;**](String.md)|  | [enum: None, Android, IOS]
 
 ### Return type
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **submissionId** | **Integer**|  |
- **platformType** | **String**|  | [enum: Android, IOS]
+ **platformType** | **String**|  | [enum: None, Android, IOS]
 
 ### Return type
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **submissionId** | **Integer**|  |
- **platformType** | **String**|  | [enum: Android, IOS]
+ **platformType** | **String**|  | [enum: None, Android, IOS]
 
 ### Return type
 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 
 <a name="updateSubmissionStatus"></a>
 # **updateSubmissionStatus**
-> RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus)
+> RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus(appId, submissionId, updateSubmissionStatus)
 
 Update submission status
 
@@ -518,9 +518,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MobileAppsApi apiInstance = new MobileAppsApi();
 String appId = "appId_example"; // String | 
 Integer submissionId = 56; // Integer | 
-UpdateMobileAppsSubmissionStatus updateMobileAppsSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
+UpdateMobileAppsSubmissionStatus updateSubmissionStatus = new UpdateMobileAppsSubmissionStatus(); // UpdateMobileAppsSubmissionStatus | 
 try {
-    RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.updateSubmissionStatus(appId, submissionId, updateMobileAppsSubmissionStatus);
+    RestApiResultUpdateMobileAppsSubmissionStatus result = apiInstance.updateSubmissionStatus(appId, submissionId, updateSubmissionStatus);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MobileAppsApi#updateSubmissionStatus");
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **submissionId** | **Integer**|  |
- **updateMobileAppsSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  |
+ **updateSubmissionStatus** | [**UpdateMobileAppsSubmissionStatus**](UpdateMobileAppsSubmissionStatus.md)|  |
 
 ### Return type
 
