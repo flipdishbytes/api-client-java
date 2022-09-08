@@ -33,7 +33,7 @@ import java.util.Map;
  * Store address
  */
 @ApiModel(description = "Store address")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-07T15:42:32.195+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-08T09:15:58.305+01:00")
 public class StoreAddress {
   @SerializedName("AddressId")
   private Integer addressId = null;

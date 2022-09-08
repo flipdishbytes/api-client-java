@@ -30,7 +30,7 @@ import java.util.List;
  * Metafield Definition
  */
 @ApiModel(description = "Metafield Definition")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-07T15:42:32.195+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-08T09:15:58.305+01:00")
 public class MetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;
@@ -95,6 +95,8 @@ public class MetafieldDefinition {
    */
   @JsonAdapter(ValueTypeEnum.Adapter.class)
   public enum ValueTypeEnum {
+    BOOLEAN("Boolean"),
+    
     JSON("Json"),
     
     SINGLELINESTRING("SingleLineString"),

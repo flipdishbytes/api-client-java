@@ -26,6 +26,7 @@ MENU | &quot;Menu&quot;
 ## Enum: ValueTypeEnum
 Name | Value
 ---- | -----
+BOOLEAN | &quot;Boolean&quot;
 JSON | &quot;Json&quot;
 SINGLELINESTRING | &quot;SingleLineString&quot;
 MULTILINESTRING | &quot;MultiLineString&quot;

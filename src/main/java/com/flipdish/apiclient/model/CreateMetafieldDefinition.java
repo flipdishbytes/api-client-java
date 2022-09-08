@@ -30,7 +30,7 @@ import java.util.List;
  * Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
  */
 @ApiModel(description = "Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-07T15:42:32.195+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-08T09:15:58.305+01:00")
 public class CreateMetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;
@@ -95,6 +95,8 @@ public class CreateMetafieldDefinition {
    */
   @JsonAdapter(ValueTypeEnum.Adapter.class)
   public enum ValueTypeEnum {
+    BOOLEAN("Boolean"),
+    
     JSON("Json"),
     
     SINGLELINESTRING("SingleLineString"),
