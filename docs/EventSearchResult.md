@@ -137,6 +137,8 @@ Name | Type | Description | Notes
 **locationCreatedEvent** | [**List&lt;LocationCreatedEvent&gt;**](LocationCreatedEvent.md) | Location created event |  [optional]
 **locationDeletedEvent** | [**List&lt;LocationDeletedEvent&gt;**](LocationDeletedEvent.md) | Location deleted event |  [optional]
 **storeServiceChargeUpdatedEvent** | [**List&lt;StoreServiceChargeUpdatedEvent&gt;**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event |  [optional]
+**mobileAppsSubmissionStatusUpdatedEvent** | [**List&lt;MobileAppsSubmissionStatusUpdatedEvent&gt;**](MobileAppsSubmissionStatusUpdatedEvent.md) | Mobile Submission Status Updated Event |  [optional]
+**mobileAppsSubmissionUpdatedEvent** | [**List&lt;MobileAppsSubmissionUpdatedEvent&gt;**](MobileAppsSubmissionUpdatedEvent.md) | Mobile Submission Updated Event |  [optional]
 
 
 

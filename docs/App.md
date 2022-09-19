@@ -186,6 +186,7 @@ VIEWCLIENTDEVICES | &quot;ViewClientDevices&quot;
 UPDATECLIENTDEVICES | &quot;UpdateClientDevices&quot;
 ENROLLCLIENTDEVICES | &quot;EnrollClientDevices&quot;
 ASSIGNCLIENTDEVICES | &quot;AssignClientDevices&quot;
+VIEWCLIENTAUDITLOGS | &quot;ViewClientAuditLogs&quot;
 CREATEAPPSTOREAPPCONFIGURATION | &quot;CreateAppStoreAppConfiguration&quot;
 VIEWAPPSTOREAPPCONFIGURATION | &quot;ViewAppStoreAppConfiguration&quot;
 UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
