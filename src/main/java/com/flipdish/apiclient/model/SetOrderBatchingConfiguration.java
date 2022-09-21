@@ -28,34 +28,13 @@ import java.io.IOException;
  * Describes the configuration of OrderBatching
  */
 @ApiModel(description = "Describes the configuration of OrderBatching")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-19T10:49:28.171+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:16:44.298+01:00")
 public class SetOrderBatchingConfiguration {
-  @SerializedName("BatchIntervalInMinutes")
-  private Integer batchIntervalInMinutes = null;
-
   @SerializedName("BatchIntervalInSeconds")
   private Integer batchIntervalInSeconds = null;
 
   @SerializedName("Enabled")
   private Boolean enabled = null;
-
-  public SetOrderBatchingConfiguration batchIntervalInMinutes(Integer batchIntervalInMinutes) {
-    this.batchIntervalInMinutes = batchIntervalInMinutes;
-    return this;
-  }
-
-   /**
-   * Batch sending interval in minutes
-   * @return batchIntervalInMinutes
-  **/
-  @ApiModelProperty(value = "Batch sending interval in minutes")
-  public Integer getBatchIntervalInMinutes() {
-    return batchIntervalInMinutes;
-  }
-
-  public void setBatchIntervalInMinutes(Integer batchIntervalInMinutes) {
-    this.batchIntervalInMinutes = batchIntervalInMinutes;
-  }
 
   public SetOrderBatchingConfiguration batchIntervalInSeconds(Integer batchIntervalInSeconds) {
     this.batchIntervalInSeconds = batchIntervalInSeconds;
@@ -103,14 +82,13 @@ public class SetOrderBatchingConfiguration {
       return false;
     }
     SetOrderBatchingConfiguration setOrderBatchingConfiguration = (SetOrderBatchingConfiguration) o;
-    return Objects.equals(this.batchIntervalInMinutes, setOrderBatchingConfiguration.batchIntervalInMinutes) &&
-        Objects.equals(this.batchIntervalInSeconds, setOrderBatchingConfiguration.batchIntervalInSeconds) &&
+    return Objects.equals(this.batchIntervalInSeconds, setOrderBatchingConfiguration.batchIntervalInSeconds) &&
         Objects.equals(this.enabled, setOrderBatchingConfiguration.enabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(batchIntervalInMinutes, batchIntervalInSeconds, enabled);
+    return Objects.hash(batchIntervalInSeconds, enabled);
   }
 
 
@@ -119,7 +97,6 @@ public class SetOrderBatchingConfiguration {
     StringBuilder sb = new StringBuilder();
     sb.append("class SetOrderBatchingConfiguration {\n");
     
-    sb.append("    batchIntervalInMinutes: ").append(toIndentedString(batchIntervalInMinutes)).append("\n");
     sb.append("    batchIntervalInSeconds: ").append(toIndentedString(batchIntervalInSeconds)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("}");
