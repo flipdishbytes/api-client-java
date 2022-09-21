@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **submissionId** | **Integer**|  |
- **platformType** | **String**|  | [enum: None, Android, IOS]
+ **platformType** | **String**|  | [optional] [enum: None, Android, IOS]
 
 ### Return type
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **submissionId** | **Integer**|  |
- **platformType** | **String**|  | [enum: None, Android, IOS]
+ **platformType** | **String**|  | [optional] [enum: None, Android, IOS]
 
 ### Return type
 

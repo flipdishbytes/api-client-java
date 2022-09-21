@@ -586,7 +586,7 @@ public class MobileAppsApi {
      * Build call for publish
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -650,11 +650,6 @@ public class MobileAppsApi {
             throw new ApiException("Missing the required parameter 'submissionId' when calling publish(Async)");
         }
         
-        // verify the required parameter 'platformType' is set
-        if (platformType == null) {
-            throw new ApiException("Missing the required parameter 'platformType' when calling publish(Async)");
-        }
-        
 
         com.squareup.okhttp.Call call = publishCall(appId, submissionId, platformType, progressListener, progressRequestListener);
         return call;
@@ -666,7 +661,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @return RestApiResultRestApiIntegerResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -680,7 +675,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @return ApiResponse&lt;RestApiResultRestApiIntegerResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -695,7 +690,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -994,7 +989,7 @@ public class MobileAppsApi {
      * Build call for unpublish
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1058,11 +1053,6 @@ public class MobileAppsApi {
             throw new ApiException("Missing the required parameter 'submissionId' when calling unpublish(Async)");
         }
         
-        // verify the required parameter 'platformType' is set
-        if (platformType == null) {
-            throw new ApiException("Missing the required parameter 'platformType' when calling unpublish(Async)");
-        }
-        
 
         com.squareup.okhttp.Call call = unpublishCall(appId, submissionId, platformType, progressListener, progressRequestListener);
         return call;
@@ -1074,7 +1064,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @return RestApiIntegerResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1088,7 +1078,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @return ApiResponse&lt;RestApiIntegerResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1103,7 +1093,7 @@ public class MobileAppsApi {
      * 
      * @param appId  (required)
      * @param submissionId  (required)
-     * @param platformType  (required)
+     * @param platformType  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
