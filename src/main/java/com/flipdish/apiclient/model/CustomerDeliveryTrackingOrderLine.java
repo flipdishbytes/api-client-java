@@ -30,7 +30,7 @@ import java.util.List;
  * Defines an order line for driver tracking
  */
 @ApiModel(description = "Defines an order line for driver tracking")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-22T15:57:20.327+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-26T16:13:45.231+01:00")
 public class CustomerDeliveryTrackingOrderLine {
   @SerializedName("ItemName")
   private String itemName = null;
