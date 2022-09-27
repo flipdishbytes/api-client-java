@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a refund related to a payout
  */
 @ApiModel(description = "Holds the information for a refund related to a payout")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-26T16:13:45.231+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-09-27T11:35:00.018+01:00")
 public class PayoutRefund {
   @SerializedName("OrderId")
   private Integer orderId = null;

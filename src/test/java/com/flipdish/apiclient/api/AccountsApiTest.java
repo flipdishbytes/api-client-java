@@ -206,6 +206,22 @@ public class AccountsApiTest {
     }
     
     /**
+     * Validate recaptcha from flipdish portal
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void recaptchaValidateTest() throws ApiException {
+        String token = null;
+        api.recaptchaValidate(token);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Request login PIN. The server sends the PIN to the email address.
      *
      * 
