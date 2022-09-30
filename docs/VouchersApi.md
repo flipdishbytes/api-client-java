@@ -259,7 +259,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 VouchersApi apiInstance = new VouchersApi();
 Integer voucherId = 56; // Integer | Id of the voucher
 VoucherBase voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of store ids associated
 Integer percentValue = 56; // Integer | Percent voucher value (can have 1 of 3)
 Double lumpValue = 3.4D; // Double | Lump voucher value (can have 1 of 3)
 Integer freeItemId = 56; // Integer | Free Item Id (can have 1 of 3)
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **Integer**| Id of the voucher |
  **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher |
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of store ids associated | [optional]
  **percentValue** | **Integer**| Percent voucher value (can have 1 of 3) | [optional]
  **lumpValue** | **Double**| Lump voucher value (can have 1 of 3) | [optional]
  **freeItemId** | **Integer**| Free Item Id (can have 1 of 3) | [optional]

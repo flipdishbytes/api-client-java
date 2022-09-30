@@ -625,7 +625,7 @@ public class VouchersApi {
      * Build call for updateVoucher
      * @param voucherId Id of the voucher (required)
      * @param voucher Updated details for the voucher (required)
-     * @param storeId  (optional)
+     * @param storeId List of store ids associated (optional)
      * @param percentValue Percent voucher value (can have 1 of 3) (optional)
      * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
      * @param freeItemId Free Item Id (can have 1 of 3) (optional)
@@ -708,7 +708,7 @@ public class VouchersApi {
      * 
      * @param voucherId Id of the voucher (required)
      * @param voucher Updated details for the voucher (required)
-     * @param storeId  (optional)
+     * @param storeId List of store ids associated (optional)
      * @param percentValue Percent voucher value (can have 1 of 3) (optional)
      * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
      * @param freeItemId Free Item Id (can have 1 of 3) (optional)
@@ -725,7 +725,7 @@ public class VouchersApi {
      * 
      * @param voucherId Id of the voucher (required)
      * @param voucher Updated details for the voucher (required)
-     * @param storeId  (optional)
+     * @param storeId List of store ids associated (optional)
      * @param percentValue Percent voucher value (can have 1 of 3) (optional)
      * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
      * @param freeItemId Free Item Id (can have 1 of 3) (optional)
@@ -743,7 +743,7 @@ public class VouchersApi {
      * 
      * @param voucherId Id of the voucher (required)
      * @param voucher Updated details for the voucher (required)
-     * @param storeId  (optional)
+     * @param storeId List of store ids associated (optional)
      * @param percentValue Percent voucher value (can have 1 of 3) (optional)
      * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
      * @param freeItemId Free Item Id (can have 1 of 3) (optional)
