@@ -29,7 +29,7 @@ import java.io.IOException;
  * Hey
  */
 @ApiModel(description = "Hey")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:57:13.852+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-03T12:02:44.001+01:00")
 public class StoreValidationConfig {
   @SerializedName("StoreId")
   private Integer storeId = null;
