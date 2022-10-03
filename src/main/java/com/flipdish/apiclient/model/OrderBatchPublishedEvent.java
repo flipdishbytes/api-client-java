@@ -23,6 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
 
@@ -30,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Batch Published Event
  */
 @ApiModel(description = "Order Batch Published Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-03T12:02:44.001+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-03T14:44:44.088+01:00")
 public class OrderBatchPublishedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -40,6 +42,9 @@ public class OrderBatchPublishedEvent {
 
   @SerializedName("StoreId")
   private Integer storeId = null;
+
+  @SerializedName("OrderIds")
+  private List<Integer> orderIds = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -108,6 +113,32 @@ public class OrderBatchPublishedEvent {
 
   public void setStoreId(Integer storeId) {
     this.storeId = storeId;
+  }
+
+  public OrderBatchPublishedEvent orderIds(List<Integer> orderIds) {
+    this.orderIds = orderIds;
+    return this;
+  }
+
+  public OrderBatchPublishedEvent addOrderIdsItem(Integer orderIdsItem) {
+    if (this.orderIds == null) {
+      this.orderIds = new ArrayList<Integer>();
+    }
+    this.orderIds.add(orderIdsItem);
+    return this;
+  }
+
+   /**
+   * Orders&#39; ids on the batch
+   * @return orderIds
+  **/
+  @ApiModelProperty(value = "Orders' ids on the batch")
+  public List<Integer> getOrderIds() {
+    return orderIds;
+  }
+
+  public void setOrderIds(List<Integer> orderIds) {
+    this.orderIds = orderIds;
   }
 
   public OrderBatchPublishedEvent flipdishEventId(UUID flipdishEventId) {
@@ -213,6 +244,7 @@ public class OrderBatchPublishedEvent {
     return Objects.equals(this.eventName, orderBatchPublishedEvent.eventName) &&
         Objects.equals(this.batchId, orderBatchPublishedEvent.batchId) &&
         Objects.equals(this.storeId, orderBatchPublishedEvent.storeId) &&
+        Objects.equals(this.orderIds, orderBatchPublishedEvent.orderIds) &&
         Objects.equals(this.flipdishEventId, orderBatchPublishedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderBatchPublishedEvent.createTime) &&
         Objects.equals(this.position, orderBatchPublishedEvent.position) &&
@@ -222,7 +254,7 @@ public class OrderBatchPublishedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, batchId, storeId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, batchId, storeId, orderIds, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -234,6 +266,7 @@ public class OrderBatchPublishedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    orderIds: ").append(toIndentedString(orderIds)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
