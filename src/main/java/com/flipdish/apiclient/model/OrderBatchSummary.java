@@ -29,10 +29,10 @@ import org.threeten.bp.OffsetDateTime;
  * Order batch info
  */
 @ApiModel(description = "Order batch info")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
-public class OrderBatchDetails {
-  @SerializedName("OrderBatchId")
-  private Integer orderBatchId = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
+public class OrderBatchSummary {
+  @SerializedName("Id")
+  private Integer id = null;
 
   @SerializedName("DisplayCode")
   private String displayCode = null;
@@ -43,25 +43,25 @@ public class OrderBatchDetails {
   @SerializedName("IsPublished")
   private Boolean isPublished = null;
 
-  public OrderBatchDetails orderBatchId(Integer orderBatchId) {
-    this.orderBatchId = orderBatchId;
+  public OrderBatchSummary id(Integer id) {
+    this.id = id;
     return this;
   }
 
    /**
    * Order batch id
-   * @return orderBatchId
+   * @return id
   **/
   @ApiModelProperty(value = "Order batch id")
-  public Integer getOrderBatchId() {
-    return orderBatchId;
+  public Integer getId() {
+    return id;
   }
 
-  public void setOrderBatchId(Integer orderBatchId) {
-    this.orderBatchId = orderBatchId;
+  public void setId(Integer id) {
+    this.id = id;
   }
 
-  public OrderBatchDetails displayCode(String displayCode) {
+  public OrderBatchSummary displayCode(String displayCode) {
     this.displayCode = displayCode;
     return this;
   }
@@ -79,7 +79,7 @@ public class OrderBatchDetails {
     this.displayCode = displayCode;
   }
 
-  public OrderBatchDetails createTime(OffsetDateTime createTime) {
+  public OrderBatchSummary createTime(OffsetDateTime createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -97,7 +97,7 @@ public class OrderBatchDetails {
     this.createTime = createTime;
   }
 
-  public OrderBatchDetails isPublished(Boolean isPublished) {
+  public OrderBatchSummary isPublished(Boolean isPublished) {
     this.isPublished = isPublished;
     return this;
   }
@@ -124,25 +124,25 @@ public class OrderBatchDetails {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OrderBatchDetails orderBatchDetails = (OrderBatchDetails) o;
-    return Objects.equals(this.orderBatchId, orderBatchDetails.orderBatchId) &&
-        Objects.equals(this.displayCode, orderBatchDetails.displayCode) &&
-        Objects.equals(this.createTime, orderBatchDetails.createTime) &&
-        Objects.equals(this.isPublished, orderBatchDetails.isPublished);
+    OrderBatchSummary orderBatchSummary = (OrderBatchSummary) o;
+    return Objects.equals(this.id, orderBatchSummary.id) &&
+        Objects.equals(this.displayCode, orderBatchSummary.displayCode) &&
+        Objects.equals(this.createTime, orderBatchSummary.createTime) &&
+        Objects.equals(this.isPublished, orderBatchSummary.isPublished);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderBatchId, displayCode, createTime, isPublished);
+    return Objects.hash(id, displayCode, createTime, isPublished);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OrderBatchDetails {\n");
+    sb.append("class OrderBatchSummary {\n");
     
-    sb.append("    orderBatchId: ").append(toIndentedString(orderBatchId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    displayCode: ").append(toIndentedString(displayCode)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    isPublished: ").append(toIndentedString(isPublished)).append("\n");

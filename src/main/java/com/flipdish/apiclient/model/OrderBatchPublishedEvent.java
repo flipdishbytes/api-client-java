@@ -32,13 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * Order Batch Published Event
  */
 @ApiModel(description = "Order Batch Published Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
 public class OrderBatchPublishedEvent {
   @SerializedName("EventName")
   private String eventName = null;
 
-  @SerializedName("BatchId")
-  private Integer batchId = null;
+  @SerializedName("OrderBatchId")
+  private Integer orderBatchId = null;
 
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -79,22 +79,22 @@ public class OrderBatchPublishedEvent {
     this.eventName = eventName;
   }
 
-  public OrderBatchPublishedEvent batchId(Integer batchId) {
-    this.batchId = batchId;
+  public OrderBatchPublishedEvent orderBatchId(Integer orderBatchId) {
+    this.orderBatchId = orderBatchId;
     return this;
   }
 
    /**
    * Order Batch Id
-   * @return batchId
+   * @return orderBatchId
   **/
   @ApiModelProperty(value = "Order Batch Id")
-  public Integer getBatchId() {
-    return batchId;
+  public Integer getOrderBatchId() {
+    return orderBatchId;
   }
 
-  public void setBatchId(Integer batchId) {
-    this.batchId = batchId;
+  public void setOrderBatchId(Integer orderBatchId) {
+    this.orderBatchId = orderBatchId;
   }
 
   public OrderBatchPublishedEvent storeId(Integer storeId) {
@@ -242,7 +242,7 @@ public class OrderBatchPublishedEvent {
     }
     OrderBatchPublishedEvent orderBatchPublishedEvent = (OrderBatchPublishedEvent) o;
     return Objects.equals(this.eventName, orderBatchPublishedEvent.eventName) &&
-        Objects.equals(this.batchId, orderBatchPublishedEvent.batchId) &&
+        Objects.equals(this.orderBatchId, orderBatchPublishedEvent.orderBatchId) &&
         Objects.equals(this.storeId, orderBatchPublishedEvent.storeId) &&
         Objects.equals(this.orderIds, orderBatchPublishedEvent.orderIds) &&
         Objects.equals(this.flipdishEventId, orderBatchPublishedEvent.flipdishEventId) &&
@@ -254,7 +254,7 @@ public class OrderBatchPublishedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, batchId, storeId, orderIds, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orderBatchId, storeId, orderIds, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -264,7 +264,7 @@ public class OrderBatchPublishedEvent {
     sb.append("class OrderBatchPublishedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
-    sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
+    sb.append("    orderBatchId: ").append(toIndentedString(orderBatchId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    orderIds: ").append(toIndentedString(orderIds)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");

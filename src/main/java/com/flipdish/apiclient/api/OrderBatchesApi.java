@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
 import org.threeten.bp.OffsetDateTime;
-import com.flipdish.apiclient.model.RestApiArrayResultOrderBatchItem;
+import com.flipdish.apiclient.model.RestApiArrayResultOrderBatchSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultOrderBatch;
@@ -143,11 +143,11 @@ public class OrderBatchesApi {
      * @param storeId Store Id (required)
      * @param createdFrom Start date for retrieving the entries (optional)
      * @param createdTo End date for retrieving the entries (optional)
-     * @return RestApiArrayResultOrderBatchItem
+     * @return RestApiArrayResultOrderBatchSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultOrderBatchItem getAllOrderBatches(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo) throws ApiException {
-        ApiResponse<RestApiArrayResultOrderBatchItem> resp = getAllOrderBatchesWithHttpInfo(appId, storeId, createdFrom, createdTo);
+    public RestApiArrayResultOrderBatchSummary getAllOrderBatches(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo) throws ApiException {
+        ApiResponse<RestApiArrayResultOrderBatchSummary> resp = getAllOrderBatchesWithHttpInfo(appId, storeId, createdFrom, createdTo);
         return resp.getData();
     }
 
@@ -158,12 +158,12 @@ public class OrderBatchesApi {
      * @param storeId Store Id (required)
      * @param createdFrom Start date for retrieving the entries (optional)
      * @param createdTo End date for retrieving the entries (optional)
-     * @return ApiResponse&lt;RestApiArrayResultOrderBatchItem&gt;
+     * @return ApiResponse&lt;RestApiArrayResultOrderBatchSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultOrderBatchItem> getAllOrderBatchesWithHttpInfo(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo) throws ApiException {
+    public ApiResponse<RestApiArrayResultOrderBatchSummary> getAllOrderBatchesWithHttpInfo(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo) throws ApiException {
         com.squareup.okhttp.Call call = getAllOrderBatchesValidateBeforeCall(appId, storeId, createdFrom, createdTo, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderBatchItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderBatchSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -178,7 +178,7 @@ public class OrderBatchesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAllOrderBatchesAsync(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo, final ApiCallback<RestApiArrayResultOrderBatchItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAllOrderBatchesAsync(String appId, Integer storeId, OffsetDateTime createdFrom, OffsetDateTime createdTo, final ApiCallback<RestApiArrayResultOrderBatchSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -200,7 +200,7 @@ public class OrderBatchesApi {
         }
 
         com.squareup.okhttp.Call call = getAllOrderBatchesValidateBeforeCall(appId, storeId, createdFrom, createdTo, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderBatchItem>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiArrayResultOrderBatchSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -208,20 +208,20 @@ public class OrderBatchesApi {
      * Build call for getOrderBatch
      * @param appId App Id (required)
      * @param storeId Store Id (required)
-     * @param batchId Order Batch Id (required)
+     * @param orderBatchId Order Batch Id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOrderBatchCall(String appId, Integer storeId, Integer batchId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getOrderBatchCall(String appId, Integer storeId, Integer orderBatchId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId}"
+        String localVarPath = "/api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId}"
             .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
             .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()))
-            .replaceAll("\\{" + "batchId" + "\\}", apiClient.escapeString(batchId.toString()));
+            .replaceAll("\\{" + "orderBatchId" + "\\}", apiClient.escapeString(orderBatchId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -259,7 +259,7 @@ public class OrderBatchesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOrderBatchValidateBeforeCall(String appId, Integer storeId, Integer batchId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getOrderBatchValidateBeforeCall(String appId, Integer storeId, Integer orderBatchId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -271,13 +271,13 @@ public class OrderBatchesApi {
             throw new ApiException("Missing the required parameter 'storeId' when calling getOrderBatch(Async)");
         }
         
-        // verify the required parameter 'batchId' is set
-        if (batchId == null) {
-            throw new ApiException("Missing the required parameter 'batchId' when calling getOrderBatch(Async)");
+        // verify the required parameter 'orderBatchId' is set
+        if (orderBatchId == null) {
+            throw new ApiException("Missing the required parameter 'orderBatchId' when calling getOrderBatch(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getOrderBatchCall(appId, storeId, batchId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderBatchCall(appId, storeId, orderBatchId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -287,12 +287,12 @@ public class OrderBatchesApi {
      * 
      * @param appId App Id (required)
      * @param storeId Store Id (required)
-     * @param batchId Order Batch Id (required)
+     * @param orderBatchId Order Batch Id (required)
      * @return RestApiResultOrderBatch
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultOrderBatch getOrderBatch(String appId, Integer storeId, Integer batchId) throws ApiException {
-        ApiResponse<RestApiResultOrderBatch> resp = getOrderBatchWithHttpInfo(appId, storeId, batchId);
+    public RestApiResultOrderBatch getOrderBatch(String appId, Integer storeId, Integer orderBatchId) throws ApiException {
+        ApiResponse<RestApiResultOrderBatch> resp = getOrderBatchWithHttpInfo(appId, storeId, orderBatchId);
         return resp.getData();
     }
 
@@ -301,12 +301,12 @@ public class OrderBatchesApi {
      * 
      * @param appId App Id (required)
      * @param storeId Store Id (required)
-     * @param batchId Order Batch Id (required)
+     * @param orderBatchId Order Batch Id (required)
      * @return ApiResponse&lt;RestApiResultOrderBatch&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultOrderBatch> getOrderBatchWithHttpInfo(String appId, Integer storeId, Integer batchId) throws ApiException {
-        com.squareup.okhttp.Call call = getOrderBatchValidateBeforeCall(appId, storeId, batchId, null, null);
+    public ApiResponse<RestApiResultOrderBatch> getOrderBatchWithHttpInfo(String appId, Integer storeId, Integer orderBatchId) throws ApiException {
+        com.squareup.okhttp.Call call = getOrderBatchValidateBeforeCall(appId, storeId, orderBatchId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultOrderBatch>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -316,12 +316,12 @@ public class OrderBatchesApi {
      * 
      * @param appId App Id (required)
      * @param storeId Store Id (required)
-     * @param batchId Order Batch Id (required)
+     * @param orderBatchId Order Batch Id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOrderBatchAsync(String appId, Integer storeId, Integer batchId, final ApiCallback<RestApiResultOrderBatch> callback) throws ApiException {
+    public com.squareup.okhttp.Call getOrderBatchAsync(String appId, Integer storeId, Integer orderBatchId, final ApiCallback<RestApiResultOrderBatch> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -342,7 +342,7 @@ public class OrderBatchesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOrderBatchValidateBeforeCall(appId, storeId, batchId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderBatchValidateBeforeCall(appId, storeId, orderBatchId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultOrderBatch>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

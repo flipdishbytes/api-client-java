@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
-**batchId** | **Integer** | Order Batch Id |  [optional]
+**orderBatchId** | **Integer** | Order Batch Id |  [optional]
 **storeId** | **Integer** | Store id the order batch belogs to |  [optional]
 **orderIds** | **List&lt;Integer&gt;** | Orders&#39; ids on the batch |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]

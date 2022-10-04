@@ -15,7 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import org.threeten.bp.OffsetDateTime;
-import com.flipdish.apiclient.model.RestApiArrayResultOrderBatchItem;
+import com.flipdish.apiclient.model.RestApiArrayResultOrderBatchSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultOrderBatch;
@@ -51,7 +51,7 @@ public class OrderBatchesApiTest {
         Integer storeId = null;
         OffsetDateTime createdFrom = null;
         OffsetDateTime createdTo = null;
-        RestApiArrayResultOrderBatchItem response = api.getAllOrderBatches(appId, storeId, createdFrom, createdTo);
+        RestApiArrayResultOrderBatchSummary response = api.getAllOrderBatches(appId, storeId, createdFrom, createdTo);
 
         // TODO: test validations
     }
@@ -68,8 +68,8 @@ public class OrderBatchesApiTest {
     public void getOrderBatchTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        Integer batchId = null;
-        RestApiResultOrderBatch response = api.getOrderBatch(appId, storeId, batchId);
+        Integer orderBatchId = null;
+        RestApiResultOrderBatch response = api.getOrderBatch(appId, storeId, orderBatchId);
 
         // TODO: test validations
     }

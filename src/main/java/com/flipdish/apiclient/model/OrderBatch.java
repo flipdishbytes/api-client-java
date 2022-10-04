@@ -28,11 +28,14 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Order batch
+ * Order batch detailed information
  */
-@ApiModel(description = "Order batch")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
+@ApiModel(description = "Order batch detailed information")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
 public class OrderBatch {
+  @SerializedName("OrderIds")
+  private List<Integer> orderIds = null;
+
   @SerializedName("Id")
   private Integer id = null;
 
@@ -45,8 +48,31 @@ public class OrderBatch {
   @SerializedName("IsPublished")
   private Boolean isPublished = null;
 
-  @SerializedName("OrderIds")
-  private List<Integer> orderIds = null;
+  public OrderBatch orderIds(List<Integer> orderIds) {
+    this.orderIds = orderIds;
+    return this;
+  }
+
+  public OrderBatch addOrderIdsItem(Integer orderIdsItem) {
+    if (this.orderIds == null) {
+      this.orderIds = new ArrayList<Integer>();
+    }
+    this.orderIds.add(orderIdsItem);
+    return this;
+  }
+
+   /**
+   * Orders&#39; ids on the batch
+   * @return orderIds
+  **/
+  @ApiModelProperty(value = "Orders' ids on the batch")
+  public List<Integer> getOrderIds() {
+    return orderIds;
+  }
+
+  public void setOrderIds(List<Integer> orderIds) {
+    this.orderIds = orderIds;
+  }
 
   public OrderBatch id(Integer id) {
     this.id = id;
@@ -120,32 +146,6 @@ public class OrderBatch {
     this.isPublished = isPublished;
   }
 
-  public OrderBatch orderIds(List<Integer> orderIds) {
-    this.orderIds = orderIds;
-    return this;
-  }
-
-  public OrderBatch addOrderIdsItem(Integer orderIdsItem) {
-    if (this.orderIds == null) {
-      this.orderIds = new ArrayList<Integer>();
-    }
-    this.orderIds.add(orderIdsItem);
-    return this;
-  }
-
-   /**
-   * Orders&#39; ids on the batch
-   * @return orderIds
-  **/
-  @ApiModelProperty(value = "Orders' ids on the batch")
-  public List<Integer> getOrderIds() {
-    return orderIds;
-  }
-
-  public void setOrderIds(List<Integer> orderIds) {
-    this.orderIds = orderIds;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -156,16 +156,16 @@ public class OrderBatch {
       return false;
     }
     OrderBatch orderBatch = (OrderBatch) o;
-    return Objects.equals(this.id, orderBatch.id) &&
+    return Objects.equals(this.orderIds, orderBatch.orderIds) &&
+        Objects.equals(this.id, orderBatch.id) &&
         Objects.equals(this.displayCode, orderBatch.displayCode) &&
         Objects.equals(this.createTime, orderBatch.createTime) &&
-        Objects.equals(this.isPublished, orderBatch.isPublished) &&
-        Objects.equals(this.orderIds, orderBatch.orderIds);
+        Objects.equals(this.isPublished, orderBatch.isPublished);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, displayCode, createTime, isPublished, orderIds);
+    return Objects.hash(orderIds, id, displayCode, createTime, isPublished);
   }
 
 
@@ -174,11 +174,11 @@ public class OrderBatch {
     StringBuilder sb = new StringBuilder();
     sb.append("class OrderBatch {\n");
     
+    sb.append("    orderIds: ").append(toIndentedString(orderIds)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    displayCode: ").append(toIndentedString(displayCode)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    isPublished: ").append(toIndentedString(isPublished)).append("\n");
-    sb.append("    orderIds: ").append(toIndentedString(orderIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,6 +16,7 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.Channel;
+import com.flipdish.apiclient.model.OrderBatchSummary;
 import com.flipdish.apiclient.model.OrderDropOffLocation;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -31,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order summary
  */
 @ApiModel(description = "Order summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
 public class OrderSummary {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -787,6 +788,9 @@ public class OrderSummary {
   @SerializedName("OrderDropOffLocation")
   private OrderDropOffLocation orderDropOffLocation = null;
 
+  @SerializedName("OrderBatchInfo")
+  private OrderBatchSummary orderBatchInfo = null;
+
   public OrderSummary orderId(Integer orderId) {
     this.orderId = orderId;
     return this;
@@ -1255,6 +1259,24 @@ public class OrderSummary {
     this.orderDropOffLocation = orderDropOffLocation;
   }
 
+  public OrderSummary orderBatchInfo(OrderBatchSummary orderBatchInfo) {
+    this.orderBatchInfo = orderBatchInfo;
+    return this;
+  }
+
+   /**
+   * OrderBatch information
+   * @return orderBatchInfo
+  **/
+  @ApiModelProperty(value = "OrderBatch information")
+  public OrderBatchSummary getOrderBatchInfo() {
+    return orderBatchInfo;
+  }
+
+  public void setOrderBatchInfo(OrderBatchSummary orderBatchInfo) {
+    this.orderBatchInfo = orderBatchInfo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1290,12 +1312,13 @@ public class OrderSummary {
         Objects.equals(this.unusualHighValueOrder, orderSummary.unusualHighValueOrder) &&
         Objects.equals(this.channelOrderId, orderSummary.channelOrderId) &&
         Objects.equals(this.channelOrderDisplayId, orderSummary.channelOrderDisplayId) &&
-        Objects.equals(this.orderDropOffLocation, orderSummary.orderDropOffLocation);
+        Objects.equals(this.orderDropOffLocation, orderSummary.orderDropOffLocation) &&
+        Objects.equals(this.orderBatchInfo, orderSummary.orderBatchInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, deliveryType, pickupLocationType, tableServiceCatagory, orderState, requestedForTime, storeName, storeIanaTimeZone, customerName, customerPhoneNumber, amount, refundedAmount, paymentAccountType, paymentStatus, currency, appType, localOrderId, dropOffLocationId, dropOffLocation, acceptedFor, channel, inFraudZone, unusualHighValueOrder, channelOrderId, channelOrderDisplayId, orderDropOffLocation);
+    return Objects.hash(orderId, deliveryType, pickupLocationType, tableServiceCatagory, orderState, requestedForTime, storeName, storeIanaTimeZone, customerName, customerPhoneNumber, amount, refundedAmount, paymentAccountType, paymentStatus, currency, appType, localOrderId, dropOffLocationId, dropOffLocation, acceptedFor, channel, inFraudZone, unusualHighValueOrder, channelOrderId, channelOrderDisplayId, orderDropOffLocation, orderBatchInfo);
   }
 
 
@@ -1330,6 +1353,7 @@ public class OrderSummary {
     sb.append("    channelOrderId: ").append(toIndentedString(channelOrderId)).append("\n");
     sb.append("    channelOrderDisplayId: ").append(toIndentedString(channelOrderDisplayId)).append("\n");
     sb.append("    orderDropOffLocation: ").append(toIndentedString(orderDropOffLocation)).append("\n");
+    sb.append("    orderBatchInfo: ").append(toIndentedString(orderBatchInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

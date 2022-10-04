@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.OrderBatchItem;
+import com.flipdish.apiclient.model.OrderBatchSummary;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,17 +31,17 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
-public class RestApiArrayResultOrderBatchItem {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
+public class RestApiArrayResultOrderBatchSummary {
   @SerializedName("Data")
-  private List<OrderBatchItem> data = new ArrayList<OrderBatchItem>();
+  private List<OrderBatchSummary> data = new ArrayList<OrderBatchSummary>();
 
-  public RestApiArrayResultOrderBatchItem data(List<OrderBatchItem> data) {
+  public RestApiArrayResultOrderBatchSummary data(List<OrderBatchSummary> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiArrayResultOrderBatchItem addDataItem(OrderBatchItem dataItem) {
+  public RestApiArrayResultOrderBatchSummary addDataItem(OrderBatchSummary dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -51,11 +51,11 @@ public class RestApiArrayResultOrderBatchItem {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<OrderBatchItem> getData() {
+  public List<OrderBatchSummary> getData() {
     return data;
   }
 
-  public void setData(List<OrderBatchItem> data) {
+  public void setData(List<OrderBatchSummary> data) {
     this.data = data;
   }
 
@@ -68,8 +68,8 @@ public class RestApiArrayResultOrderBatchItem {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiArrayResultOrderBatchItem restApiArrayResultOrderBatchItem = (RestApiArrayResultOrderBatchItem) o;
-    return Objects.equals(this.data, restApiArrayResultOrderBatchItem.data);
+    RestApiArrayResultOrderBatchSummary restApiArrayResultOrderBatchSummary = (RestApiArrayResultOrderBatchSummary) o;
+    return Objects.equals(this.data, restApiArrayResultOrderBatchSummary.data);
   }
 
   @Override
@@ -81,7 +81,7 @@ public class RestApiArrayResultOrderBatchItem {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiArrayResultOrderBatchItem {\n");
+    sb.append("class RestApiArrayResultOrderBatchSummary {\n");
     
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");

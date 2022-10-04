@@ -21,7 +21,7 @@ import com.flipdish.apiclient.model.CustomerSummary;
 import com.flipdish.apiclient.model.DeliveryLocation;
 import com.flipdish.apiclient.model.FeeSummary;
 import com.flipdish.apiclient.model.MaskedPhoneNumber;
-import com.flipdish.apiclient.model.OrderBatchDetails;
+import com.flipdish.apiclient.model.OrderBatchSummary;
 import com.flipdish.apiclient.model.OrderDropOffLocation;
 import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.OrderItem;
@@ -43,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T10:39:10.038+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -106,7 +106,7 @@ public class Order {
   private OrderFulfillmentStatusBase fulfillmentStatus = null;
 
   @SerializedName("OrderBatchInfo")
-  private OrderBatchDetails orderBatchInfo = null;
+  private OrderBatchSummary orderBatchInfo = null;
 
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -1087,21 +1087,21 @@ public class Order {
     this.fulfillmentStatus = fulfillmentStatus;
   }
 
-  public Order orderBatchInfo(OrderBatchDetails orderBatchInfo) {
+  public Order orderBatchInfo(OrderBatchSummary orderBatchInfo) {
     this.orderBatchInfo = orderBatchInfo;
     return this;
   }
 
    /**
-   * OrderBatch info. This property is not populated in the API
+   * OrderBatch information
    * @return orderBatchInfo
   **/
-  @ApiModelProperty(value = "OrderBatch info. This property is not populated in the API")
-  public OrderBatchDetails getOrderBatchInfo() {
+  @ApiModelProperty(value = "OrderBatch information")
+  public OrderBatchSummary getOrderBatchInfo() {
     return orderBatchInfo;
   }
 
-  public void setOrderBatchInfo(OrderBatchDetails orderBatchInfo) {
+  public void setOrderBatchInfo(OrderBatchSummary orderBatchInfo) {
     this.orderBatchInfo = orderBatchInfo;
   }
 
