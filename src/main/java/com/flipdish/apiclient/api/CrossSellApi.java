@@ -62,13 +62,14 @@ public class CrossSellApi {
      * @param menuId Requested MenuId (required)
      * @param menuItemId Selected Menu items (required)
      * @param limit Set the limit of items returned (required)
+     * @param totalValue Get the total cost of items in the basket (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getCrossSellMenuItemsCall(Integer menuId, List<Integer> menuItemId, Integer limit, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getCrossSellMenuItemsCall(Integer menuId, List<Integer> menuItemId, Integer limit, Double totalValue, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -83,6 +84,8 @@ public class CrossSellApi {
         localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "menuItemId", menuItemId));
         if (limit != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (totalValue != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("totalValue", totalValue));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -117,7 +120,7 @@ public class CrossSellApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getCrossSellMenuItemsValidateBeforeCall(Integer menuId, List<Integer> menuItemId, Integer limit, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getCrossSellMenuItemsValidateBeforeCall(Integer menuId, List<Integer> menuItemId, Integer limit, Double totalValue, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'menuId' is set
         if (menuId == null) {
@@ -134,13 +137,18 @@ public class CrossSellApi {
             throw new ApiException("Missing the required parameter 'limit' when calling getCrossSellMenuItems(Async)");
         }
         
+        // verify the required parameter 'totalValue' is set
+        if (totalValue == null) {
+            throw new ApiException("Missing the required parameter 'totalValue' when calling getCrossSellMenuItems(Async)");
+        }
+        
         // verify the required parameter 'appId' is set
         if (appId == null) {
             throw new ApiException("Missing the required parameter 'appId' when calling getCrossSellMenuItems(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getCrossSellMenuItemsCall(menuId, menuItemId, limit, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getCrossSellMenuItemsCall(menuId, menuItemId, limit, totalValue, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -151,12 +159,13 @@ public class CrossSellApi {
      * @param menuId Requested MenuId (required)
      * @param menuItemId Selected Menu items (required)
      * @param limit Set the limit of items returned (required)
+     * @param totalValue Get the total cost of items in the basket (required)
      * @param appId  (required)
      * @return RestApiResultCrossSellMenuItems
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultCrossSellMenuItems getCrossSellMenuItems(Integer menuId, List<Integer> menuItemId, Integer limit, String appId) throws ApiException {
-        ApiResponse<RestApiResultCrossSellMenuItems> resp = getCrossSellMenuItemsWithHttpInfo(menuId, menuItemId, limit, appId);
+    public RestApiResultCrossSellMenuItems getCrossSellMenuItems(Integer menuId, List<Integer> menuItemId, Integer limit, Double totalValue, String appId) throws ApiException {
+        ApiResponse<RestApiResultCrossSellMenuItems> resp = getCrossSellMenuItemsWithHttpInfo(menuId, menuItemId, limit, totalValue, appId);
         return resp.getData();
     }
 
@@ -166,12 +175,13 @@ public class CrossSellApi {
      * @param menuId Requested MenuId (required)
      * @param menuItemId Selected Menu items (required)
      * @param limit Set the limit of items returned (required)
+     * @param totalValue Get the total cost of items in the basket (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultCrossSellMenuItems&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultCrossSellMenuItems> getCrossSellMenuItemsWithHttpInfo(Integer menuId, List<Integer> menuItemId, Integer limit, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getCrossSellMenuItemsValidateBeforeCall(menuId, menuItemId, limit, appId, null, null);
+    public ApiResponse<RestApiResultCrossSellMenuItems> getCrossSellMenuItemsWithHttpInfo(Integer menuId, List<Integer> menuItemId, Integer limit, Double totalValue, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getCrossSellMenuItemsValidateBeforeCall(menuId, menuItemId, limit, totalValue, appId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultCrossSellMenuItems>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -182,12 +192,13 @@ public class CrossSellApi {
      * @param menuId Requested MenuId (required)
      * @param menuItemId Selected Menu items (required)
      * @param limit Set the limit of items returned (required)
+     * @param totalValue Get the total cost of items in the basket (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getCrossSellMenuItemsAsync(Integer menuId, List<Integer> menuItemId, Integer limit, String appId, final ApiCallback<RestApiResultCrossSellMenuItems> callback) throws ApiException {
+    public com.squareup.okhttp.Call getCrossSellMenuItemsAsync(Integer menuId, List<Integer> menuItemId, Integer limit, Double totalValue, String appId, final ApiCallback<RestApiResultCrossSellMenuItems> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -208,7 +219,7 @@ public class CrossSellApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getCrossSellMenuItemsValidateBeforeCall(menuId, menuItemId, limit, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getCrossSellMenuItemsValidateBeforeCall(menuId, menuItemId, limit, totalValue, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultCrossSellMenuItems>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

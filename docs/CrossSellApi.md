@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getCrossSellMenuItems"></a>
 # **getCrossSellMenuItems**
-> RestApiResultCrossSellMenuItems getCrossSellMenuItems(menuId, menuItemId, limit, appId)
+> RestApiResultCrossSellMenuItems getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId)
 
 Get all Menu items by MenuId for cross sells
 
@@ -34,9 +34,10 @@ CrossSellApi apiInstance = new CrossSellApi();
 Integer menuId = 56; // Integer | Requested MenuId
 List<Integer> menuItemId = Arrays.asList(56); // List<Integer> | Selected Menu items
 Integer limit = 56; // Integer | Set the limit of items returned
+Double totalValue = 3.4D; // Double | Get the total cost of items in the basket
 String appId = "appId_example"; // String | 
 try {
-    RestApiResultCrossSellMenuItems result = apiInstance.getCrossSellMenuItems(menuId, menuItemId, limit, appId);
+    RestApiResultCrossSellMenuItems result = apiInstance.getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CrossSellApi#getCrossSellMenuItems");
@@ -51,6 +52,7 @@ Name | Type | Description  | Notes
  **menuId** | **Integer**| Requested MenuId |
  **menuItemId** | [**List&lt;Integer&gt;**](Integer.md)| Selected Menu items |
  **limit** | **Integer**| Set the limit of items returned |
+ **totalValue** | **Double**| Get the total cost of items in the basket |
  **appId** | **String**|  |
 
 ### Return type

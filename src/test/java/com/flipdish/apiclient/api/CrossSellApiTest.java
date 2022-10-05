@@ -48,8 +48,9 @@ public class CrossSellApiTest {
         Integer menuId = null;
         List<Integer> menuItemId = null;
         Integer limit = null;
+        Double totalValue = null;
         String appId = null;
-        RestApiResultCrossSellMenuItems response = api.getCrossSellMenuItems(menuId, menuItemId, limit, appId);
+        RestApiResultCrossSellMenuItems response = api.getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
 
         // TODO: test validations
     }
