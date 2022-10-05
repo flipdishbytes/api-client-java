@@ -29,7 +29,7 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-04T14:52:26.436+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-05T10:09:33.916+01:00")
 public class RestApiResultMenuItemOptionSet {
   @SerializedName("Data")
   private MenuItemOptionSet data = null;
