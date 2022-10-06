@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a localised time zone
  */
 @ApiModel(description = "Represents a localised time zone")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-05T16:29:39.363+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-06T10:14:25.287+01:00")
 public class LocalisedTimeZone {
   @SerializedName("TimeZoneId")
   private String timeZoneId = null;
