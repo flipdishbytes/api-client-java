@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllOrderBatches**](OrderBatchesApi.md#getAllOrderBatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches
-[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId} | Returns the order batch details
+[**getAllOrderBatches**](OrderBatchesApi.md#getAllOrderBatches) | **GET** /api/v1.0/{appId}/order-batches | Returns order batches
+[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | Returns the order batch details
 
 
 <a name="getAllOrderBatches"></a>
 # **getAllOrderBatches**
-> RestApiArrayResultOrderBatchSummary getAllOrderBatches(appId, storeId, createdFrom, createdTo)
+> RestApiArrayResultOrderBatch getAllOrderBatches(appId, storeIds, createdFrom, createdTo)
 
 Returns order batches
 
@@ -33,11 +33,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchesApi apiInstance = new OrderBatchesApi();
 String appId = "appId_example"; // String | App Id
-Integer storeId = 56; // Integer | Store Id
+List<Integer> storeIds = Arrays.asList(56); // List<Integer> | List of store Ids
 OffsetDateTime createdFrom = OffsetDateTime.now(); // OffsetDateTime | Start date for retrieving the entries
 OffsetDateTime createdTo = OffsetDateTime.now(); // OffsetDateTime | End date for retrieving the entries
 try {
-    RestApiArrayResultOrderBatchSummary result = apiInstance.getAllOrderBatches(appId, storeId, createdFrom, createdTo);
+    RestApiArrayResultOrderBatch result = apiInstance.getAllOrderBatches(appId, storeIds, createdFrom, createdTo);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrderBatchesApi#getAllOrderBatches");
@@ -50,13 +50,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
- **storeId** | **Integer**| Store Id |
+ **storeIds** | [**List&lt;Integer&gt;**](Integer.md)| List of store Ids | [optional]
  **createdFrom** | **OffsetDateTime**| Start date for retrieving the entries | [optional]
  **createdTo** | **OffsetDateTime**| End date for retrieving the entries | [optional]
 
 ### Return type
 
-[**RestApiArrayResultOrderBatchSummary**](RestApiArrayResultOrderBatchSummary.md)
+[**RestApiArrayResultOrderBatch**](RestApiArrayResultOrderBatch.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrderBatch"></a>
 # **getOrderBatch**
-> RestApiResultOrderBatch getOrderBatch(appId, storeId, orderBatchId)
+> RestApiResultOrderBatch getOrderBatch(appId, orderBatchId)
 
 Returns the order batch details
 
@@ -90,10 +90,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchesApi apiInstance = new OrderBatchesApi();
 String appId = "appId_example"; // String | App Id
-Integer storeId = 56; // Integer | Store Id
 Integer orderBatchId = 56; // Integer | Order Batch Id
 try {
-    RestApiResultOrderBatch result = apiInstance.getOrderBatch(appId, storeId, orderBatchId);
+    RestApiResultOrderBatch result = apiInstance.getOrderBatch(appId, orderBatchId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrderBatchesApi#getOrderBatch");
@@ -106,7 +105,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
- **storeId** | **Integer**| Store Id |
  **orderBatchId** | **Integer**| Order Batch Id |
 
 ### Return type

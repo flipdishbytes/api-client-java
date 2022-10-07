@@ -13,7 +13,7 @@
 
 package com.flipdish.apiclient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-07T08:04:54.412+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-07T12:11:29.677+01:00")
 public class Pair {
     private String name = "";
     private String value = "";
