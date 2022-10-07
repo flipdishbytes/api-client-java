@@ -319,7 +319,7 @@ public class AddressApi {
     }
     /**
      * Build call for formatGoogleAddress
-     * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
      * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -386,7 +386,7 @@ public class AddressApi {
     /**
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
-     * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
      * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @return RestApiResultAddressFormResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -399,7 +399,7 @@ public class AddressApi {
     /**
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
-     * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
      * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @return ApiResponse&lt;RestApiResultAddressFormResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -413,7 +413,7 @@ public class AddressApi {
     /**
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. (asynchronously)
      * 
-     * @param googleAddress A Google address object, as it is retuned from the maps API. (required)
+     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
      * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
