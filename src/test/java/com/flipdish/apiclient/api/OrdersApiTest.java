@@ -183,7 +183,8 @@ public class OrdersApiTest {
         Integer limit = null;
         Boolean orderByRequestedForTime = null;
         List<String> channels = null;
-        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels);
+        List<Integer> orderIds = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds);
 
         // TODO: test validations
     }
