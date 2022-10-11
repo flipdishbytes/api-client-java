@@ -28,7 +28,7 @@ import java.io.IOException;
  * Create account model
  */
 @ApiModel(description = "Create account model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-10T15:59:33.376+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-11T15:18:29.854+01:00")
 public class CreateAccountModel {
   @SerializedName("Email")
   private String email = null;
@@ -45,16 +45,19 @@ public class CreateAccountModel {
   @SerializedName("Cid")
   private String cid = null;
 
+  @SerializedName("RecaptchaToken")
+  private String recaptchaToken = null;
+
   public CreateAccountModel email(String email) {
     this.email = email;
     return this;
   }
 
    /**
-   * Email addres
+   * Email address
    * @return email
   **/
-  @ApiModelProperty(required = true, value = "Email addres")
+  @ApiModelProperty(required = true, value = "Email address")
   public String getEmail() {
     return email;
   }
@@ -135,6 +138,24 @@ public class CreateAccountModel {
     this.cid = cid;
   }
 
+  public CreateAccountModel recaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+    return this;
+  }
+
+   /**
+   * Google Recaptcha Token
+   * @return recaptchaToken
+  **/
+  @ApiModelProperty(value = "Google Recaptcha Token")
+  public String getRecaptchaToken() {
+    return recaptchaToken;
+  }
+
+  public void setRecaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -149,12 +170,13 @@ public class CreateAccountModel {
         Objects.equals(this.storeName, createAccountModel.storeName) &&
         Objects.equals(this.languageId, createAccountModel.languageId) &&
         Objects.equals(this.rid, createAccountModel.rid) &&
-        Objects.equals(this.cid, createAccountModel.cid);
+        Objects.equals(this.cid, createAccountModel.cid) &&
+        Objects.equals(this.recaptchaToken, createAccountModel.recaptchaToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, storeName, languageId, rid, cid);
+    return Objects.hash(email, storeName, languageId, rid, cid, recaptchaToken);
   }
 
 
@@ -168,6 +190,7 @@ public class CreateAccountModel {
     sb.append("    languageId: ").append(toIndentedString(languageId)).append("\n");
     sb.append("    rid: ").append(toIndentedString(rid)).append("\n");
     sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
+    sb.append("    recaptchaToken: ").append(toIndentedString(recaptchaToken)).append("\n");
     sb.append("}");
     return sb.toString();
   }
