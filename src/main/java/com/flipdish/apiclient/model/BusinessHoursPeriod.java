@@ -31,7 +31,7 @@ import java.util.List;
  * Business hours period
  */
 @ApiModel(description = "Business hours period")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-18T09:58:57.265+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-18T10:52:12.810+01:00")
 public class BusinessHoursPeriod {
   @SerializedName("Early")
   private Range early = null;
