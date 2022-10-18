@@ -28,10 +28,13 @@ import java.io.IOException;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-13T14:07:36.799+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-18T09:58:57.265+01:00")
 public class RequestPasswordResetModel {
   @SerializedName("Email")
   private String email = null;
+
+  @SerializedName("RecaptchaToken")
+  private String recaptchaToken = null;
 
   public RequestPasswordResetModel email(String email) {
     this.email = email;
@@ -51,6 +54,24 @@ public class RequestPasswordResetModel {
     this.email = email;
   }
 
+  public RequestPasswordResetModel recaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+    return this;
+  }
+
+   /**
+   * Google Recaptcha Token
+   * @return recaptchaToken
+  **/
+  @ApiModelProperty(value = "Google Recaptcha Token")
+  public String getRecaptchaToken() {
+    return recaptchaToken;
+  }
+
+  public void setRecaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +82,13 @@ public class RequestPasswordResetModel {
       return false;
     }
     RequestPasswordResetModel requestPasswordResetModel = (RequestPasswordResetModel) o;
-    return Objects.equals(this.email, requestPasswordResetModel.email);
+    return Objects.equals(this.email, requestPasswordResetModel.email) &&
+        Objects.equals(this.recaptchaToken, requestPasswordResetModel.recaptchaToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email);
+    return Objects.hash(email, recaptchaToken);
   }
 
 
@@ -76,6 +98,7 @@ public class RequestPasswordResetModel {
     sb.append("class RequestPasswordResetModel {\n");
     
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    recaptchaToken: ").append(toIndentedString(recaptchaToken)).append("\n");
     sb.append("}");
     return sb.toString();
   }
