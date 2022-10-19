@@ -28,6 +28,8 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.AppStoreAppConfiguration;
+import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
+import com.flipdish.apiclient.model.ExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationHeader;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -62,6 +64,129 @@ public class AppStoreConfigurationsApi {
         this.apiClient = apiClient;
     }
 
+    /**
+     * Build call for appStoreConfigurationsAppStoreHandleOauthResponseCode
+     * @param appStoreAppId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call appStoreConfigurationsAppStoreHandleOauthResponseCodeCall(String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode"
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call appStoreConfigurationsAppStoreHandleOauthResponseCodeValidateBeforeCall(String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling appStoreConfigurationsAppStoreHandleOauthResponseCode(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = appStoreConfigurationsAppStoreHandleOauthResponseCodeCall(appStoreAppId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     * 
+     * @param appStoreAppId  (required)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public Object appStoreConfigurationsAppStoreHandleOauthResponseCode(String appStoreAppId) throws ApiException {
+        ApiResponse<Object> resp = appStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo(appStoreAppId);
+        return resp.getData();
+    }
+
+    /**
+     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     * 
+     * @param appStoreAppId  (required)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Object> appStoreConfigurationsAppStoreHandleOauthResponseCodeWithHttpInfo(String appStoreAppId) throws ApiException {
+        com.squareup.okhttp.Call call = appStoreConfigurationsAppStoreHandleOauthResponseCodeValidateBeforeCall(appStoreAppId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code (asynchronously)
+     * 
+     * @param appStoreAppId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call appStoreConfigurationsAppStoreHandleOauthResponseCodeAsync(String appStoreAppId, final ApiCallback<Object> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = appStoreConfigurationsAppStoreHandleOauthResponseCodeValidateBeforeCall(appStoreAppId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
     /**
      * Build call for createAppStoreConfig
      * @param appId App id (required)
@@ -335,6 +460,158 @@ public class AppStoreConfigurationsApi {
 
         com.squareup.okhttp.Call call = deleteAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for executeConfigurationAction
+     * @param appId App Id (required)
+     * @param appStoreAppId AppStore App Id (required)
+     * @param configId AppStore App configuration Id (required)
+     * @param executeConfigurationActionRequest Action request details (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call executeConfigurationActionCall(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = executeConfigurationActionRequest;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()))
+            .replaceAll("\\{" + "configId" + "\\}", apiClient.escapeString(configId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call executeConfigurationActionValidateBeforeCall(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling executeConfigurationAction(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling executeConfigurationAction(Async)");
+        }
+        
+        // verify the required parameter 'configId' is set
+        if (configId == null) {
+            throw new ApiException("Missing the required parameter 'configId' when calling executeConfigurationAction(Async)");
+        }
+        
+        // verify the required parameter 'executeConfigurationActionRequest' is set
+        if (executeConfigurationActionRequest == null) {
+            throw new ApiException("Missing the required parameter 'executeConfigurationActionRequest' when calling executeConfigurationAction(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = executeConfigurationActionCall(appId, appStoreAppId, configId, executeConfigurationActionRequest, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Execute configuration action on a configuration item (eg. handle button press)
+     * 
+     * @param appId App Id (required)
+     * @param appStoreAppId AppStore App Id (required)
+     * @param configId AppStore App configuration Id (required)
+     * @param executeConfigurationActionRequest Action request details (required)
+     * @return ExecuteConfigurationActionResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ExecuteConfigurationActionResult executeConfigurationAction(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
+        ApiResponse<ExecuteConfigurationActionResult> resp = executeConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+        return resp.getData();
+    }
+
+    /**
+     * Execute configuration action on a configuration item (eg. handle button press)
+     * 
+     * @param appId App Id (required)
+     * @param appStoreAppId AppStore App Id (required)
+     * @param configId AppStore App configuration Id (required)
+     * @param executeConfigurationActionRequest Action request details (required)
+     * @return ApiResponse&lt;ExecuteConfigurationActionResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<ExecuteConfigurationActionResult> executeConfigurationActionWithHttpInfo(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
+        com.squareup.okhttp.Call call = executeConfigurationActionValidateBeforeCall(appId, appStoreAppId, configId, executeConfigurationActionRequest, null, null);
+        Type localVarReturnType = new TypeToken<ExecuteConfigurationActionResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Execute configuration action on a configuration item (eg. handle button press) (asynchronously)
+     * 
+     * @param appId App Id (required)
+     * @param appStoreAppId AppStore App Id (required)
+     * @param configId AppStore App configuration Id (required)
+     * @param executeConfigurationActionRequest Action request details (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call executeConfigurationActionAsync(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest, final ApiCallback<ExecuteConfigurationActionResult> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = executeConfigurationActionValidateBeforeCall(appId, appStoreAppId, configId, executeConfigurationActionRequest, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<ExecuteConfigurationActionResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

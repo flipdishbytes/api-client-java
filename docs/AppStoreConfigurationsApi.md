@@ -4,13 +4,66 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**appStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appStoreConfigurationsAppStoreHandleOauthResponseCode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
 [**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
 [**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+[**executeConfigurationAction**](AppStoreConfigurationsApi.md#executeConfigurationAction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
 [**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
 [**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 [**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 [**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
 
+
+<a name="appStoreConfigurationsAppStoreHandleOauthResponseCode"></a>
+# **appStoreConfigurationsAppStoreHandleOauthResponseCode**
+> Object appStoreConfigurationsAppStoreHandleOauthResponseCode(appStoreAppId)
+
+Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppStoreConfigurationsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
+String appStoreAppId = "appStoreAppId_example"; // String | 
+try {
+    Object result = apiInstance.appStoreConfigurationsAppStoreHandleOauthResponseCode(appStoreAppId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppStoreConfigurationsApi#appStoreConfigurationsAppStoreHandleOauthResponseCode");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appStoreAppId** | **String**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="createAppStoreConfig"></a>
 # **createAppStoreConfig**
@@ -122,6 +175,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="executeConfigurationAction"></a>
+# **executeConfigurationAction**
+> ExecuteConfigurationActionResult executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest)
+
+Execute configuration action on a configuration item (eg. handle button press)
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppStoreConfigurationsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
+String appId = "appId_example"; // String | App Id
+String appStoreAppId = "appStoreAppId_example"; // String | AppStore App Id
+String configId = "configId_example"; // String | AppStore App configuration Id
+ExecuteConfigurationActionRequest executeConfigurationActionRequest = new ExecuteConfigurationActionRequest(); // ExecuteConfigurationActionRequest | Action request details
+try {
+    ExecuteConfigurationActionResult result = apiInstance.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppStoreConfigurationsApi#executeConfigurationAction");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| App Id |
+ **appStoreAppId** | **String**| AppStore App Id |
+ **configId** | **String**| AppStore App configuration Id |
+ **executeConfigurationActionRequest** | [**ExecuteConfigurationActionRequest**](ExecuteConfigurationActionRequest.md)| Action request details |
+
+### Return type
+
+[**ExecuteConfigurationActionResult**](ExecuteConfigurationActionResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getAppStoreConfig"></a>

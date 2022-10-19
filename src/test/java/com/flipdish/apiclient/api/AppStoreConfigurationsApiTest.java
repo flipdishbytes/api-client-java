@@ -15,6 +15,8 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppStoreAppConfiguration;
+import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
+import com.flipdish.apiclient.model.ExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationHeader;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -39,6 +41,22 @@ public class AppStoreConfigurationsApiTest {
 
     private final AppStoreConfigurationsApi api = new AppStoreConfigurationsApi();
 
+    
+    /**
+     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void appStoreConfigurationsAppStoreHandleOauthResponseCodeTest() throws ApiException {
+        String appStoreAppId = null;
+        Object response = api.appStoreConfigurationsAppStoreHandleOauthResponseCode(appStoreAppId);
+
+        // TODO: test validations
+    }
     
     /**
      * Create App store app configuration
@@ -71,6 +89,25 @@ public class AppStoreConfigurationsApiTest {
         String appStoreAppId = null;
         String configId = null;
         RestApiStringResult response = api.deleteAppStoreConfig(appId, appStoreAppId, configId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Execute configuration action on a configuration item (eg. handle button press)
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void executeConfigurationActionTest() throws ApiException {
+        String appId = null;
+        String appStoreAppId = null;
+        String configId = null;
+        ExecuteConfigurationActionRequest executeConfigurationActionRequest = null;
+        ExecuteConfigurationActionResult response = api.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
 
         // TODO: test validations
     }
