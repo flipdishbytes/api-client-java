@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 [**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 [**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
+[**updateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateAppStoreConfigSettingValues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
 
 
 <a name="appStoreConfigurationsAppStoreHandleOauthResponseCode"></a>
@@ -443,6 +444,64 @@ Name | Type | Description  | Notes
  **appStoreAppId** | **String**| App store app id |
  **configId** | **String**| App store app configuration id |
  **updateAppStoreAppConfiguration** | [**UpdateAppStoreAppConfiguration**](UpdateAppStoreAppConfiguration.md)| Update App store app configuration |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="updateAppStoreConfigSettingValues"></a>
+# **updateAppStoreConfigSettingValues**
+> updateAppStoreConfigSettingValues(appId, appStoreAppId, configId, updateAppStoreAppConfigurationValues)
+
+Update AppStore App Configuration values, specified settings only
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppStoreConfigurationsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
+String appId = "appId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
+String configId = "configId_example"; // String | 
+UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues = new UpdateAppStoreAppConfigurationValuesBatch(); // UpdateAppStoreAppConfigurationValuesBatch | 
+try {
+    apiInstance.updateAppStoreConfigSettingValues(appId, appStoreAppId, configId, updateAppStoreAppConfigurationValues);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppStoreConfigurationsApi#updateAppStoreConfigSettingValues");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **appStoreAppId** | **String**|  |
+ **configId** | **String**|  |
+ **updateAppStoreAppConfigurationValues** | [**UpdateAppStoreAppConfigurationValuesBatch**](UpdateAppStoreAppConfigurationValuesBatch.md)|  |
 
 ### Return type
 

@@ -25,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
+import com.flipdish.apiclient.model.UpdateAppStoreAppConfigurationValuesBatch;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -178,6 +179,25 @@ public class AppStoreConfigurationsApiTest {
         String configId = null;
         UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration = null;
         api.updateAppStoreConfig(appId, appStoreAppId, configId, updateAppStoreAppConfiguration);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update AppStore App Configuration values, specified settings only
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateAppStoreConfigSettingValuesTest() throws ApiException {
+        String appId = null;
+        String appStoreAppId = null;
+        String configId = null;
+        UpdateAppStoreAppConfigurationValuesBatch updateAppStoreAppConfigurationValues = null;
+        api.updateAppStoreConfigSettingValues(appId, appStoreAppId, configId, updateAppStoreAppConfigurationValues);
 
         // TODO: test validations
     }
