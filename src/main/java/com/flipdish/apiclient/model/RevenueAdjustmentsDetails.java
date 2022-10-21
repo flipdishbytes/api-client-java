@@ -28,7 +28,7 @@ import java.io.IOException;
  * Revenue Adjustments breakdown
  */
 @ApiModel(description = "Revenue Adjustments breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-21T11:20:41.708+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-21T12:02:55.792+01:00")
 public class RevenueAdjustmentsDetails {
   @SerializedName("OnlineSalesRefundedAmount")
   private Double onlineSalesRefundedAmount = null;
@@ -41,6 +41,12 @@ public class RevenueAdjustmentsDetails {
 
   @SerializedName("RefundsCount")
   private Integer refundsCount = null;
+
+  @SerializedName("PayGreenSalesAmount")
+  private Double payGreenSalesAmount = null;
+
+  @SerializedName("PayGreenProcessingFees")
+  private Double payGreenProcessingFees = null;
 
   @SerializedName("TotalOnlineRevenueAdjustments")
   private Double totalOnlineRevenueAdjustments = null;
@@ -117,6 +123,42 @@ public class RevenueAdjustmentsDetails {
     this.refundsCount = refundsCount;
   }
 
+  public RevenueAdjustmentsDetails payGreenSalesAmount(Double payGreenSalesAmount) {
+    this.payGreenSalesAmount = payGreenSalesAmount;
+    return this;
+  }
+
+   /**
+   * PayGreen sales
+   * @return payGreenSalesAmount
+  **/
+  @ApiModelProperty(value = "PayGreen sales")
+  public Double getPayGreenSalesAmount() {
+    return payGreenSalesAmount;
+  }
+
+  public void setPayGreenSalesAmount(Double payGreenSalesAmount) {
+    this.payGreenSalesAmount = payGreenSalesAmount;
+  }
+
+  public RevenueAdjustmentsDetails payGreenProcessingFees(Double payGreenProcessingFees) {
+    this.payGreenProcessingFees = payGreenProcessingFees;
+    return this;
+  }
+
+   /**
+   * PayGreen processing fees charged to end-user
+   * @return payGreenProcessingFees
+  **/
+  @ApiModelProperty(value = "PayGreen processing fees charged to end-user")
+  public Double getPayGreenProcessingFees() {
+    return payGreenProcessingFees;
+  }
+
+  public void setPayGreenProcessingFees(Double payGreenProcessingFees) {
+    this.payGreenProcessingFees = payGreenProcessingFees;
+  }
+
   public RevenueAdjustmentsDetails totalOnlineRevenueAdjustments(Double totalOnlineRevenueAdjustments) {
     this.totalOnlineRevenueAdjustments = totalOnlineRevenueAdjustments;
     return this;
@@ -149,12 +191,14 @@ public class RevenueAdjustmentsDetails {
         Objects.equals(this.cashSalesRefundedAmount, revenueAdjustmentsDetails.cashSalesRefundedAmount) &&
         Objects.equals(this.customerCashFees, revenueAdjustmentsDetails.customerCashFees) &&
         Objects.equals(this.refundsCount, revenueAdjustmentsDetails.refundsCount) &&
+        Objects.equals(this.payGreenSalesAmount, revenueAdjustmentsDetails.payGreenSalesAmount) &&
+        Objects.equals(this.payGreenProcessingFees, revenueAdjustmentsDetails.payGreenProcessingFees) &&
         Objects.equals(this.totalOnlineRevenueAdjustments, revenueAdjustmentsDetails.totalOnlineRevenueAdjustments);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(onlineSalesRefundedAmount, cashSalesRefundedAmount, customerCashFees, refundsCount, totalOnlineRevenueAdjustments);
+    return Objects.hash(onlineSalesRefundedAmount, cashSalesRefundedAmount, customerCashFees, refundsCount, payGreenSalesAmount, payGreenProcessingFees, totalOnlineRevenueAdjustments);
   }
 
 
@@ -167,6 +211,8 @@ public class RevenueAdjustmentsDetails {
     sb.append("    cashSalesRefundedAmount: ").append(toIndentedString(cashSalesRefundedAmount)).append("\n");
     sb.append("    customerCashFees: ").append(toIndentedString(customerCashFees)).append("\n");
     sb.append("    refundsCount: ").append(toIndentedString(refundsCount)).append("\n");
+    sb.append("    payGreenSalesAmount: ").append(toIndentedString(payGreenSalesAmount)).append("\n");
+    sb.append("    payGreenProcessingFees: ").append(toIndentedString(payGreenProcessingFees)).append("\n");
     sb.append("    totalOnlineRevenueAdjustments: ").append(toIndentedString(totalOnlineRevenueAdjustments)).append("\n");
     sb.append("}");
     return sb.toString();

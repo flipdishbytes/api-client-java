@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-21T11:20:41.708+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-21T12:02:55.792+01:00")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -501,6 +501,9 @@ public class Payout {
 
   @SerializedName("ClosingBalance")
   private Double closingBalance = null;
+
+  @SerializedName("PayGreenSalesAmount")
+  private Double payGreenSalesAmount = null;
 
   public Payout payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -1114,6 +1117,24 @@ public class Payout {
     this.closingBalance = closingBalance;
   }
 
+  public Payout payGreenSalesAmount(Double payGreenSalesAmount) {
+    this.payGreenSalesAmount = payGreenSalesAmount;
+    return this;
+  }
+
+   /**
+   * Amount of sales through PayGreen (restaurant vouchers)
+   * @return payGreenSalesAmount
+  **/
+  @ApiModelProperty(value = "Amount of sales through PayGreen (restaurant vouchers)")
+  public Double getPayGreenSalesAmount() {
+    return payGreenSalesAmount;
+  }
+
+  public void setPayGreenSalesAmount(Double payGreenSalesAmount) {
+    this.payGreenSalesAmount = payGreenSalesAmount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1157,12 +1178,13 @@ public class Payout {
         Objects.equals(this.totalChargebackCost, payout.totalChargebackCost) &&
         Objects.equals(this.totalOtherCharges, payout.totalOtherCharges) &&
         Objects.equals(this.openingBalance, payout.openingBalance) &&
-        Objects.equals(this.closingBalance, payout.closingBalance);
+        Objects.equals(this.closingBalance, payout.closingBalance) &&
+        Objects.equals(this.payGreenSalesAmount, payout.payGreenSalesAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, onlineSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, onlineSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
   }
 
 
@@ -1205,6 +1227,7 @@ public class Payout {
     sb.append("    totalOtherCharges: ").append(toIndentedString(totalOtherCharges)).append("\n");
     sb.append("    openingBalance: ").append(toIndentedString(openingBalance)).append("\n");
     sb.append("    closingBalance: ").append(toIndentedString(closingBalance)).append("\n");
+    sb.append("    payGreenSalesAmount: ").append(toIndentedString(payGreenSalesAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

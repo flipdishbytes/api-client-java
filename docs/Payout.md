@@ -38,6 +38,7 @@ Name | Type | Description | Notes
 **totalOtherCharges** | **Double** | Payout other charges total |  [optional]
 **openingBalance** | **Double** | Payout opening balance |  [optional]
 **closingBalance** | **Double** | Payout closing balance |  [optional]
+**payGreenSalesAmount** | **Double** | Amount of sales through PayGreen (restaurant vouchers) |  [optional]
 
 
 <a name="PayoutStatusEnum"></a>
