@@ -28,7 +28,7 @@ import java.io.IOException;
  * Application compliance model
  */
 @ApiModel(description = "Application compliance model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-21T12:02:55.792+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-24T11:59:28.852+01:00")
 public class AppCompliance {
   @SerializedName("AppId")
   private String appId = null;
@@ -83,6 +83,9 @@ public class AppCompliance {
   @SerializedName("ComplianceType")
   private ComplianceTypeEnum complianceType = null;
 
+  @SerializedName("AllowDisablingOfGdpr")
+  private Boolean allowDisablingOfGdpr = null;
+
   public AppCompliance appId(String appId) {
     this.appId = appId;
     return this;
@@ -119,6 +122,24 @@ public class AppCompliance {
     this.complianceType = complianceType;
   }
 
+  public AppCompliance allowDisablingOfGdpr(Boolean allowDisablingOfGdpr) {
+    this.allowDisablingOfGdpr = allowDisablingOfGdpr;
+    return this;
+  }
+
+   /**
+   * For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so.
+   * @return allowDisablingOfGdpr
+  **/
+  @ApiModelProperty(value = "For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so.")
+  public Boolean isAllowDisablingOfGdpr() {
+    return allowDisablingOfGdpr;
+  }
+
+  public void setAllowDisablingOfGdpr(Boolean allowDisablingOfGdpr) {
+    this.allowDisablingOfGdpr = allowDisablingOfGdpr;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -130,12 +151,13 @@ public class AppCompliance {
     }
     AppCompliance appCompliance = (AppCompliance) o;
     return Objects.equals(this.appId, appCompliance.appId) &&
-        Objects.equals(this.complianceType, appCompliance.complianceType);
+        Objects.equals(this.complianceType, appCompliance.complianceType) &&
+        Objects.equals(this.allowDisablingOfGdpr, appCompliance.allowDisablingOfGdpr);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, complianceType);
+    return Objects.hash(appId, complianceType, allowDisablingOfGdpr);
   }
 
 
@@ -146,6 +168,7 @@ public class AppCompliance {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    complianceType: ").append(toIndentedString(complianceType)).append("\n");
+    sb.append("    allowDisablingOfGdpr: ").append(toIndentedString(allowDisablingOfGdpr)).append("\n");
     sb.append("}");
     return sb.toString();
   }
