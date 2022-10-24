@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * RestaurantVoucherAssignedStore
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-24T11:59:28.852+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-24T12:30:33.481+01:00")
 public class RestaurantVoucherAssignedStore {
   @SerializedName("StoreId")
   private Integer storeId = null;
