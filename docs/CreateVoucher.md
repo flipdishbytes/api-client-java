@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **voucherType** | [**VoucherTypeEnum**](#VoucherTypeEnum) | Voucher Type |  [optional]
-**stores** | **List&lt;Integer&gt;** | Stores that this voucher applies to |  [optional]
 **addItemDetails** | [**AddItemDetails**](AddItemDetails.md) | Add item details |  [optional]
 **creditNoteDetails** | [**CreditNoteDetails**](CreditNoteDetails.md) | Credit note details |  [optional]
 **lumpDiscountDetails** | [**LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details |  [optional]
 **percentDiscountDetails** | [**PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details |  [optional]
 **code** | **String** | Voucher Code |  [optional]
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
+**stores** | **List&lt;Integer&gt;** | Stores that this voucher applies to |  [optional]
 **validOnOrdersOver** | **Double** | Valid on orders on or above |  [optional]
 **takesPriority** | **Boolean** | Takes priority |  [optional]
 **isEnabled** | **Boolean** | Is voucher enabled |  [optional]

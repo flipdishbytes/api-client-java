@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Voucher Code |  [optional]
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
+**stores** | **List&lt;Integer&gt;** | Stores that this voucher applies to |  [optional]
 **validOnOrdersOver** | **Double** | Valid on orders on or above |  [optional]
 **takesPriority** | **Boolean** | Takes priority |  [optional]
 **isEnabled** | **Boolean** | Is voucher enabled |  [optional]

@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher
  */
 @ApiModel(description = "Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-26T11:54:25.251+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-27T14:24:17.971+01:00")
 public class CreateVoucher {
   /**
    * Voucher Type
@@ -91,9 +91,6 @@ public class CreateVoucher {
   @SerializedName("VoucherType")
   private VoucherTypeEnum voucherType = null;
 
-  @SerializedName("Stores")
-  private List<Integer> stores = null;
-
   @SerializedName("AddItemDetails")
   private AddItemDetails addItemDetails = null;
 
@@ -111,6 +108,9 @@ public class CreateVoucher {
 
   @SerializedName("Description")
   private String description = null;
+
+  @SerializedName("Stores")
+  private List<Integer> stores = null;
 
   @SerializedName("ValidOnOrdersOver")
   private Double validOnOrdersOver = null;
@@ -170,32 +170,6 @@ public class CreateVoucher {
 
   public void setVoucherType(VoucherTypeEnum voucherType) {
     this.voucherType = voucherType;
-  }
-
-  public CreateVoucher stores(List<Integer> stores) {
-    this.stores = stores;
-    return this;
-  }
-
-  public CreateVoucher addStoresItem(Integer storesItem) {
-    if (this.stores == null) {
-      this.stores = new ArrayList<Integer>();
-    }
-    this.stores.add(storesItem);
-    return this;
-  }
-
-   /**
-   * Stores that this voucher applies to
-   * @return stores
-  **/
-  @ApiModelProperty(value = "Stores that this voucher applies to")
-  public List<Integer> getStores() {
-    return stores;
-  }
-
-  public void setStores(List<Integer> stores) {
-    this.stores = stores;
   }
 
   public CreateVoucher addItemDetails(AddItemDetails addItemDetails) {
@@ -304,6 +278,32 @@ public class CreateVoucher {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public CreateVoucher stores(List<Integer> stores) {
+    this.stores = stores;
+    return this;
+  }
+
+  public CreateVoucher addStoresItem(Integer storesItem) {
+    if (this.stores == null) {
+      this.stores = new ArrayList<Integer>();
+    }
+    this.stores.add(storesItem);
+    return this;
+  }
+
+   /**
+   * Stores that this voucher applies to
+   * @return stores
+  **/
+  @ApiModelProperty(value = "Stores that this voucher applies to")
+  public List<Integer> getStores() {
+    return stores;
+  }
+
+  public void setStores(List<Integer> stores) {
+    this.stores = stores;
   }
 
   public CreateVoucher validOnOrdersOver(Double validOnOrdersOver) {
@@ -569,13 +569,13 @@ public class CreateVoucher {
     }
     CreateVoucher createVoucher = (CreateVoucher) o;
     return Objects.equals(this.voucherType, createVoucher.voucherType) &&
-        Objects.equals(this.stores, createVoucher.stores) &&
         Objects.equals(this.addItemDetails, createVoucher.addItemDetails) &&
         Objects.equals(this.creditNoteDetails, createVoucher.creditNoteDetails) &&
         Objects.equals(this.lumpDiscountDetails, createVoucher.lumpDiscountDetails) &&
         Objects.equals(this.percentDiscountDetails, createVoucher.percentDiscountDetails) &&
         Objects.equals(this.code, createVoucher.code) &&
         Objects.equals(this.description, createVoucher.description) &&
+        Objects.equals(this.stores, createVoucher.stores) &&
         Objects.equals(this.validOnOrdersOver, createVoucher.validOnOrdersOver) &&
         Objects.equals(this.takesPriority, createVoucher.takesPriority) &&
         Objects.equals(this.isEnabled, createVoucher.isEnabled) &&
@@ -594,7 +594,7 @@ public class CreateVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherType, stores, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(voucherType, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -604,13 +604,13 @@ public class CreateVoucher {
     sb.append("class CreateVoucher {\n");
     
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
-    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    addItemDetails: ").append(toIndentedString(addItemDetails)).append("\n");
     sb.append("    creditNoteDetails: ").append(toIndentedString(creditNoteDetails)).append("\n");
     sb.append("    lumpDiscountDetails: ").append(toIndentedString(lumpDiscountDetails)).append("\n");
     sb.append("    percentDiscountDetails: ").append(toIndentedString(percentDiscountDetails)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    validOnOrdersOver: ").append(toIndentedString(validOnOrdersOver)).append("\n");
     sb.append("    takesPriority: ").append(toIndentedString(takesPriority)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

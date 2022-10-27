@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher
  */
 @ApiModel(description = "Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-26T11:54:25.251+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-27T14:24:17.971+01:00")
 public class Voucher {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -482,9 +482,6 @@ public class Voucher {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
-  @SerializedName("Stores")
-  private List<Integer> stores = null;
-
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
 
@@ -505,6 +502,9 @@ public class Voucher {
 
   @SerializedName("Description")
   private String description = null;
+
+  @SerializedName("Stores")
+  private List<Integer> stores = null;
 
   @SerializedName("ValidOnOrdersOver")
   private Double validOnOrdersOver = null;
@@ -636,32 +636,6 @@ public class Voucher {
 
   public void setCurrency(CurrencyEnum currency) {
     this.currency = currency;
-  }
-
-  public Voucher stores(List<Integer> stores) {
-    this.stores = stores;
-    return this;
-  }
-
-  public Voucher addStoresItem(Integer storesItem) {
-    if (this.stores == null) {
-      this.stores = new ArrayList<Integer>();
-    }
-    this.stores.add(storesItem);
-    return this;
-  }
-
-   /**
-   * Stores that this voucher applies to
-   * @return stores
-  **/
-  @ApiModelProperty(value = "Stores that this voucher applies to")
-  public List<Integer> getStores() {
-    return stores;
-  }
-
-  public void setStores(List<Integer> stores) {
-    this.stores = stores;
   }
 
   public Voucher storeNames(List<String> storeNames) {
@@ -796,6 +770,32 @@ public class Voucher {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public Voucher stores(List<Integer> stores) {
+    this.stores = stores;
+    return this;
+  }
+
+  public Voucher addStoresItem(Integer storesItem) {
+    if (this.stores == null) {
+      this.stores = new ArrayList<Integer>();
+    }
+    this.stores.add(storesItem);
+    return this;
+  }
+
+   /**
+   * Stores that this voucher applies to
+   * @return stores
+  **/
+  @ApiModelProperty(value = "Stores that this voucher applies to")
+  public List<Integer> getStores() {
+    return stores;
+  }
+
+  public void setStores(List<Integer> stores) {
+    this.stores = stores;
   }
 
   public Voucher validOnOrdersOver(Double validOnOrdersOver) {
@@ -1065,7 +1065,6 @@ public class Voucher {
         Objects.equals(this.voucherType, voucher.voucherType) &&
         Objects.equals(this.voucherSubType, voucher.voucherSubType) &&
         Objects.equals(this.currency, voucher.currency) &&
-        Objects.equals(this.stores, voucher.stores) &&
         Objects.equals(this.storeNames, voucher.storeNames) &&
         Objects.equals(this.addItemDetails, voucher.addItemDetails) &&
         Objects.equals(this.creditNoteDetails, voucher.creditNoteDetails) &&
@@ -1073,6 +1072,7 @@ public class Voucher {
         Objects.equals(this.percentDiscountDetails, voucher.percentDiscountDetails) &&
         Objects.equals(this.code, voucher.code) &&
         Objects.equals(this.description, voucher.description) &&
+        Objects.equals(this.stores, voucher.stores) &&
         Objects.equals(this.validOnOrdersOver, voucher.validOnOrdersOver) &&
         Objects.equals(this.takesPriority, voucher.takesPriority) &&
         Objects.equals(this.isEnabled, voucher.isEnabled) &&
@@ -1091,7 +1091,7 @@ public class Voucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, status, voucherType, voucherSubType, currency, stores, storeNames, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(voucherId, status, voucherType, voucherSubType, currency, storeNames, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -1105,7 +1105,6 @@ public class Voucher {
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
     sb.append("    addItemDetails: ").append(toIndentedString(addItemDetails)).append("\n");
     sb.append("    creditNoteDetails: ").append(toIndentedString(creditNoteDetails)).append("\n");
@@ -1113,6 +1112,7 @@ public class Voucher {
     sb.append("    percentDiscountDetails: ").append(toIndentedString(percentDiscountDetails)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    validOnOrdersOver: ").append(toIndentedString(validOnOrdersOver)).append("\n");
     sb.append("    takesPriority: ").append(toIndentedString(takesPriority)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

@@ -48,21 +48,6 @@ public class AccountsApiTest {
 
     
     /**
-     * [PRIVATE API] Temporary endpoint to return recaptcha FF
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void accountsIsRecaptchaOnTest() throws ApiException {
-        api.accountsIsRecaptchaOn();
-
-        // TODO: test validations
-    }
-    
-    /**
      * Answer a signup question
      *
      * 

@@ -23,19 +23,24 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
  * Voucher Base
  */
 @ApiModel(description = "Voucher Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-26T11:54:25.251+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-27T14:24:17.971+01:00")
 public class VoucherBase {
   @SerializedName("Code")
   private String code = null;
 
   @SerializedName("Description")
   private String description = null;
+
+  @SerializedName("Stores")
+  private List<Integer> stores = null;
 
   @SerializedName("ValidOnOrdersOver")
   private Double validOnOrdersOver = null;
@@ -113,6 +118,32 @@ public class VoucherBase {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public VoucherBase stores(List<Integer> stores) {
+    this.stores = stores;
+    return this;
+  }
+
+  public VoucherBase addStoresItem(Integer storesItem) {
+    if (this.stores == null) {
+      this.stores = new ArrayList<Integer>();
+    }
+    this.stores.add(storesItem);
+    return this;
+  }
+
+   /**
+   * Stores that this voucher applies to
+   * @return stores
+  **/
+  @ApiModelProperty(value = "Stores that this voucher applies to")
+  public List<Integer> getStores() {
+    return stores;
+  }
+
+  public void setStores(List<Integer> stores) {
+    this.stores = stores;
   }
 
   public VoucherBase validOnOrdersOver(Double validOnOrdersOver) {
@@ -379,6 +410,7 @@ public class VoucherBase {
     VoucherBase voucherBase = (VoucherBase) o;
     return Objects.equals(this.code, voucherBase.code) &&
         Objects.equals(this.description, voucherBase.description) &&
+        Objects.equals(this.stores, voucherBase.stores) &&
         Objects.equals(this.validOnOrdersOver, voucherBase.validOnOrdersOver) &&
         Objects.equals(this.takesPriority, voucherBase.takesPriority) &&
         Objects.equals(this.isEnabled, voucherBase.isEnabled) &&
@@ -397,7 +429,7 @@ public class VoucherBase {
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, description, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -408,6 +440,7 @@ public class VoucherBase {
     
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    validOnOrdersOver: ").append(toIndentedString(validOnOrdersOver)).append("\n");
     sb.append("    takesPriority: ").append(toIndentedString(takesPriority)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

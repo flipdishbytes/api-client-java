@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher With Statistics
  */
 @ApiModel(description = "Voucher With Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-26T11:54:25.251+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-27T14:24:17.971+01:00")
 public class VoucherWithStats {
   @SerializedName("TotalUsed")
   private Integer totalUsed = null;
@@ -497,9 +497,6 @@ public class VoucherWithStats {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
-  @SerializedName("Stores")
-  private List<Integer> stores = null;
-
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
 
@@ -520,6 +517,9 @@ public class VoucherWithStats {
 
   @SerializedName("Description")
   private String description = null;
+
+  @SerializedName("Stores")
+  private List<Integer> stores = null;
 
   @SerializedName("ValidOnOrdersOver")
   private Double validOnOrdersOver = null;
@@ -743,32 +743,6 @@ public class VoucherWithStats {
     this.currency = currency;
   }
 
-  public VoucherWithStats stores(List<Integer> stores) {
-    this.stores = stores;
-    return this;
-  }
-
-  public VoucherWithStats addStoresItem(Integer storesItem) {
-    if (this.stores == null) {
-      this.stores = new ArrayList<Integer>();
-    }
-    this.stores.add(storesItem);
-    return this;
-  }
-
-   /**
-   * Stores that this voucher applies to
-   * @return stores
-  **/
-  @ApiModelProperty(value = "Stores that this voucher applies to")
-  public List<Integer> getStores() {
-    return stores;
-  }
-
-  public void setStores(List<Integer> stores) {
-    this.stores = stores;
-  }
-
   public VoucherWithStats storeNames(List<String> storeNames) {
     this.storeNames = storeNames;
     return this;
@@ -901,6 +875,32 @@ public class VoucherWithStats {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public VoucherWithStats stores(List<Integer> stores) {
+    this.stores = stores;
+    return this;
+  }
+
+  public VoucherWithStats addStoresItem(Integer storesItem) {
+    if (this.stores == null) {
+      this.stores = new ArrayList<Integer>();
+    }
+    this.stores.add(storesItem);
+    return this;
+  }
+
+   /**
+   * Stores that this voucher applies to
+   * @return stores
+  **/
+  @ApiModelProperty(value = "Stores that this voucher applies to")
+  public List<Integer> getStores() {
+    return stores;
+  }
+
+  public void setStores(List<Integer> stores) {
+    this.stores = stores;
   }
 
   public VoucherWithStats validOnOrdersOver(Double validOnOrdersOver) {
@@ -1175,7 +1175,6 @@ public class VoucherWithStats {
         Objects.equals(this.voucherType, voucherWithStats.voucherType) &&
         Objects.equals(this.voucherSubType, voucherWithStats.voucherSubType) &&
         Objects.equals(this.currency, voucherWithStats.currency) &&
-        Objects.equals(this.stores, voucherWithStats.stores) &&
         Objects.equals(this.storeNames, voucherWithStats.storeNames) &&
         Objects.equals(this.addItemDetails, voucherWithStats.addItemDetails) &&
         Objects.equals(this.creditNoteDetails, voucherWithStats.creditNoteDetails) &&
@@ -1183,6 +1182,7 @@ public class VoucherWithStats {
         Objects.equals(this.percentDiscountDetails, voucherWithStats.percentDiscountDetails) &&
         Objects.equals(this.code, voucherWithStats.code) &&
         Objects.equals(this.description, voucherWithStats.description) &&
+        Objects.equals(this.stores, voucherWithStats.stores) &&
         Objects.equals(this.validOnOrdersOver, voucherWithStats.validOnOrdersOver) &&
         Objects.equals(this.takesPriority, voucherWithStats.takesPriority) &&
         Objects.equals(this.isEnabled, voucherWithStats.isEnabled) &&
@@ -1201,7 +1201,7 @@ public class VoucherWithStats {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, stores, storeNames, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, storeNames, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -1220,7 +1220,6 @@ public class VoucherWithStats {
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
     sb.append("    addItemDetails: ").append(toIndentedString(addItemDetails)).append("\n");
     sb.append("    creditNoteDetails: ").append(toIndentedString(creditNoteDetails)).append("\n");
@@ -1228,6 +1227,7 @@ public class VoucherWithStats {
     sb.append("    percentDiscountDetails: ").append(toIndentedString(percentDiscountDetails)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    validOnOrdersOver: ").append(toIndentedString(validOnOrdersOver)).append("\n");
     sb.append("    takesPriority: ").append(toIndentedString(takesPriority)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
