@@ -60,8 +60,8 @@ public class ChannelsStoreMappingApi {
 
     /**
      * Build call for channelsGetStoreChannelStoreMapping
-     * @param appId  (required)
-     * @param channelId  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -131,10 +131,10 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
+     * Gets the relationship between Flipdish Store and Channel Store
      * 
-     * 
-     * @param appId  (required)
-     * @param channelId  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
      * @return RestApiArrayResultStoreChannelStoreMapping
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -144,10 +144,10 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
+     * Gets the relationship between Flipdish Store and Channel Store
      * 
-     * 
-     * @param appId  (required)
-     * @param channelId  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
      * @return ApiResponse&lt;RestApiArrayResultStoreChannelStoreMapping&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -158,10 +158,10 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
-     *  (asynchronously)
+     * Gets the relationship between Flipdish Store and Channel Store (asynchronously)
      * 
-     * @param appId  (required)
-     * @param channelId  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -194,9 +194,9 @@ public class ChannelsStoreMappingApi {
     }
     /**
      * Build call for channelsSetStoreChannelStoreMapping
-     * @param appId  (required)
-     * @param channelId  (required)
-     * @param stores  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
+     * @param stores Flipdish and Channel Store configuration (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -271,11 +271,11 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
+     * Sets the relationship between Flipdish Store and Channel Store
      * 
-     * 
-     * @param appId  (required)
-     * @param channelId  (required)
-     * @param stores  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
+     * @param stores Flipdish and Channel Store configuration (required)
      * @return RestApiArrayResultStoreChannelStoreMapping
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -285,11 +285,11 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
+     * Sets the relationship between Flipdish Store and Channel Store
      * 
-     * 
-     * @param appId  (required)
-     * @param channelId  (required)
-     * @param stores  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
+     * @param stores Flipdish and Channel Store configuration (required)
      * @return ApiResponse&lt;RestApiArrayResultStoreChannelStoreMapping&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -300,11 +300,11 @@ public class ChannelsStoreMappingApi {
     }
 
     /**
-     *  (asynchronously)
+     * Sets the relationship between Flipdish Store and Channel Store (asynchronously)
      * 
-     * @param appId  (required)
-     * @param channelId  (required)
-     * @param stores  (required)
+     * @param appId Flipdish App Name Id (required)
+     * @param channelId Flipdish Channel ID (required)
+     * @param stores Flipdish and Channel Store configuration (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

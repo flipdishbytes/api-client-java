@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**channelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
-[**channelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
+[**channelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/storemappings | Gets the relationship between Flipdish Store and Channel Store
+[**channelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/storemappings | Sets the relationship between Flipdish Store and Channel Store
 
 
 <a name="channelsGetStoreChannelStoreMapping"></a>
 # **channelsGetStoreChannelStoreMapping**
 > RestApiArrayResultStoreChannelStoreMapping channelsGetStoreChannelStoreMapping(appId, channelId)
 
-
+Gets the relationship between Flipdish Store and Channel Store
 
 ### Example
 ```java
@@ -30,8 +30,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsStoreMappingApi apiInstance = new ChannelsStoreMappingApi();
-String appId = "appId_example"; // String | 
-Integer channelId = 56; // Integer | 
+String appId = "appId_example"; // String | Flipdish App Name Id
+Integer channelId = 56; // Integer | Flipdish Channel ID
 try {
     RestApiArrayResultStoreChannelStoreMapping result = apiInstance.channelsGetStoreChannelStoreMapping(appId, channelId);
     System.out.println(result);
@@ -45,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **channelId** | **Integer**|  |
+ **appId** | **String**| Flipdish App Name Id |
+ **channelId** | **Integer**| Flipdish Channel ID |
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **channelsSetStoreChannelStoreMapping**
 > RestApiArrayResultStoreChannelStoreMapping channelsSetStoreChannelStoreMapping(appId, channelId, stores)
 
-
+Sets the relationship between Flipdish Store and Channel Store
 
 ### Example
 ```java
@@ -83,9 +83,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsStoreMappingApi apiInstance = new ChannelsStoreMappingApi();
-String appId = "appId_example"; // String | 
-Integer channelId = 56; // Integer | 
-List<ChannelStoreMapping> stores = Arrays.asList(new ChannelStoreMapping()); // List<ChannelStoreMapping> | 
+String appId = "appId_example"; // String | Flipdish App Name Id
+Integer channelId = 56; // Integer | Flipdish Channel ID
+List<ChannelStoreMapping> stores = Arrays.asList(new ChannelStoreMapping()); // List<ChannelStoreMapping> | Flipdish and Channel Store configuration
 try {
     RestApiArrayResultStoreChannelStoreMapping result = apiInstance.channelsSetStoreChannelStoreMapping(appId, channelId, stores);
     System.out.println(result);
@@ -99,9 +99,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **channelId** | **Integer**|  |
- **stores** | [**List&lt;ChannelStoreMapping&gt;**](ChannelStoreMapping.md)|  |
+ **appId** | **String**| Flipdish App Name Id |
+ **channelId** | **Integer**| Flipdish Channel ID |
+ **stores** | [**List&lt;ChannelStoreMapping&gt;**](ChannelStoreMapping.md)| Flipdish and Channel Store configuration |
 
 ### Return type
 

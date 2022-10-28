@@ -32,7 +32,7 @@ import java.util.List;
  * Store Group Extended
  */
 @ApiModel(description = "Store Group Extended")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:38:13.608+01:00")
 public class StoreGroupExtended {
   @SerializedName("TotalStores")
   private Integer totalStores = null;

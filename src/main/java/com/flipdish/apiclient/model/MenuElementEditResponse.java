@@ -28,7 +28,7 @@ import java.io.IOException;
  * Response with any menu elements that had issues being hidden/shown
  */
 @ApiModel(description = "Response with any menu elements that had issues being hidden/shown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:38:13.608+01:00")
 public class MenuElementEditResponse {
   @SerializedName("SectionName")
   private String sectionName = null;

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk bluetooth terminal Installation Status
  */
 @ApiModel(description = "Kiosk bluetooth terminal Installation Status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:38:13.608+01:00")
 public class KioskBluetoothTerminalInstallationStatusEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
