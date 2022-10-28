@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Data Point
  */
 @ApiModel(description = "Store Data Point")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:38:13.608+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T15:29:38.390+01:00")
 public class StoreDataPoint {
   @SerializedName("Day")
   private OffsetDateTime day = null;

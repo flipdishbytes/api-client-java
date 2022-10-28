@@ -28,7 +28,7 @@ import java.io.IOException;
  * Rest api default response
  */
 @ApiModel(description = "Rest api default response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:38:13.608+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T15:29:38.390+01:00")
 public class RestApiDefaultResponse {
   @SerializedName("Data")
   private String data = null;
