@@ -32,7 +32,7 @@ import java.util.List;
  * Defines the cart
  */
 @ApiModel(description = "Defines the cart")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T12:20:40.917+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
 public class Cart {
   @SerializedName("LineItems")
   private List<LineItem> lineItems = null;

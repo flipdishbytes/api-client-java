@@ -28,7 +28,7 @@ import java.io.IOException;
  * Delivery Zone Base
  */
 @ApiModel(description = "Delivery Zone Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T12:20:40.917+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
 public class DeliveryZoneBase {
   @SerializedName("DeliveryFee")
   private Double deliveryFee = null;

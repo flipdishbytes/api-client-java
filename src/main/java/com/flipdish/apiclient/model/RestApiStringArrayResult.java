@@ -30,7 +30,7 @@ import java.util.List;
  * Rest api string array result
  */
 @ApiModel(description = "Rest api string array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T12:20:40.917+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
 public class RestApiStringArrayResult {
   @SerializedName("Data")
   private List<String> data = new ArrayList<String>();

@@ -31,7 +31,7 @@ import java.util.List;
  * Field
  */
 @ApiModel(description = "Field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T12:20:40.917+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
 public class Field {
   @SerializedName("Name")
   private String name = null;
@@ -122,6 +122,9 @@ public class Field {
 
   @SerializedName("FieldType")
   private FieldTypeEnum fieldType = null;
+
+  @SerializedName("IsFlipdishRestricted")
+  private Boolean isFlipdishRestricted = null;
 
   public Field name(String name) {
     this.name = name;
@@ -295,6 +298,24 @@ public class Field {
     this.fieldType = fieldType;
   }
 
+  public Field isFlipdishRestricted(Boolean isFlipdishRestricted) {
+    this.isFlipdishRestricted = isFlipdishRestricted;
+    return this;
+  }
+
+   /**
+   * Is this field only editable by Flipdish?
+   * @return isFlipdishRestricted
+  **/
+  @ApiModelProperty(value = "Is this field only editable by Flipdish?")
+  public Boolean isIsFlipdishRestricted() {
+    return isFlipdishRestricted;
+  }
+
+  public void setIsFlipdishRestricted(Boolean isFlipdishRestricted) {
+    this.isFlipdishRestricted = isFlipdishRestricted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -313,12 +334,13 @@ public class Field {
         Objects.equals(this.defaultValue, field.defaultValue) &&
         Objects.equals(this.validValues, field.validValues) &&
         Objects.equals(this.validationRegex, field.validationRegex) &&
-        Objects.equals(this.fieldType, field.fieldType);
+        Objects.equals(this.fieldType, field.fieldType) &&
+        Objects.equals(this.isFlipdishRestricted, field.isFlipdishRestricted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, key, tooltip, position, defaultValue, validValues, validationRegex, fieldType);
+    return Objects.hash(name, description, key, tooltip, position, defaultValue, validValues, validationRegex, fieldType, isFlipdishRestricted);
   }
 
 
@@ -336,6 +358,7 @@ public class Field {
     sb.append("    validValues: ").append(toIndentedString(validValues)).append("\n");
     sb.append("    validationRegex: ").append(toIndentedString(validationRegex)).append("\n");
     sb.append("    fieldType: ").append(toIndentedString(fieldType)).append("\n");
+    sb.append("    isFlipdishRestricted: ").append(toIndentedString(isFlipdishRestricted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

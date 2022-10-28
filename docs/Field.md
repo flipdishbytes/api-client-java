@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **validValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; |  [optional]
 **validationRegex** | **String** | Validation Regex |  [optional]
 **fieldType** | [**FieldTypeEnum**](#FieldTypeEnum) | Field Type | 
+**isFlipdishRestricted** | **Boolean** | Is this field only editable by Flipdish? |  [optional]
 
 
 <a name="FieldTypeEnum"></a>

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Credit note details
  */
 @ApiModel(description = "Credit note details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T12:20:40.917+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-10-28T14:03:33.369+01:00")
 public class CreditNoteDetails {
   @SerializedName("RemainingCredit")
   private Double remainingCredit = null;
