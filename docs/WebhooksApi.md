@@ -4,7 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**craeteWebhookSubscription**](WebhooksApi.md#craeteWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
+[**createWebhookSubscription**](WebhooksApi.md#createWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
 [**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
 [**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
 [**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
@@ -16,9 +16,9 @@ Method | HTTP request | Description
 [**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
-<a name="craeteWebhookSubscription"></a>
-# **craeteWebhookSubscription**
-> RestApiIntegerResult craeteWebhookSubscription(oauthAppId, webhookSubscription, appId)
+<a name="createWebhookSubscription"></a>
+# **createWebhookSubscription**
+> RestApiIntegerResult createWebhookSubscription(oauthAppId, webhookSubscription, appId)
 
 Create a webhook subscription for you Oauth App
 
@@ -42,10 +42,10 @@ String oauthAppId = "oauthAppId_example"; // String | Oauth App identifier
 WebhookSubscription webhookSubscription = new WebhookSubscription(); // WebhookSubscription | Webhook subscription object
 String appId = "appId_example"; // String | 
 try {
-    RestApiIntegerResult result = apiInstance.craeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
+    RestApiIntegerResult result = apiInstance.createWebhookSubscription(oauthAppId, webhookSubscription, appId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WebhooksApi#craeteWebhookSubscription");
+    System.err.println("Exception when calling WebhooksApi#createWebhookSubscription");
     e.printStackTrace();
 }
 ```

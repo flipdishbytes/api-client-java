@@ -64,7 +64,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Build call for craeteWebhookSubscription
+     * Build call for createWebhookSubscription
      * @param oauthAppId Oauth App identifier (required)
      * @param webhookSubscription Webhook subscription object (required)
      * @param appId  (required)
@@ -73,7 +73,7 @@ public class WebhooksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call craeteWebhookSubscriptionCall(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call createWebhookSubscriptionCall(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = webhookSubscription;
 
         // create path and map variables
@@ -117,25 +117,25 @@ public class WebhooksApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call craeteWebhookSubscriptionValidateBeforeCall(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createWebhookSubscriptionValidateBeforeCall(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'oauthAppId' is set
         if (oauthAppId == null) {
-            throw new ApiException("Missing the required parameter 'oauthAppId' when calling craeteWebhookSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'oauthAppId' when calling createWebhookSubscription(Async)");
         }
         
         // verify the required parameter 'webhookSubscription' is set
         if (webhookSubscription == null) {
-            throw new ApiException("Missing the required parameter 'webhookSubscription' when calling craeteWebhookSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'webhookSubscription' when calling createWebhookSubscription(Async)");
         }
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling craeteWebhookSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling createWebhookSubscription(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = craeteWebhookSubscriptionCall(oauthAppId, webhookSubscription, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createWebhookSubscriptionCall(oauthAppId, webhookSubscription, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -149,8 +149,8 @@ public class WebhooksApi {
      * @return RestApiIntegerResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiIntegerResult craeteWebhookSubscription(String oauthAppId, WebhookSubscription webhookSubscription, String appId) throws ApiException {
-        ApiResponse<RestApiIntegerResult> resp = craeteWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscription, appId);
+    public RestApiIntegerResult createWebhookSubscription(String oauthAppId, WebhookSubscription webhookSubscription, String appId) throws ApiException {
+        ApiResponse<RestApiIntegerResult> resp = createWebhookSubscriptionWithHttpInfo(oauthAppId, webhookSubscription, appId);
         return resp.getData();
     }
 
@@ -163,8 +163,8 @@ public class WebhooksApi {
      * @return ApiResponse&lt;RestApiIntegerResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiIntegerResult> craeteWebhookSubscriptionWithHttpInfo(String oauthAppId, WebhookSubscription webhookSubscription, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = craeteWebhookSubscriptionValidateBeforeCall(oauthAppId, webhookSubscription, appId, null, null);
+    public ApiResponse<RestApiIntegerResult> createWebhookSubscriptionWithHttpInfo(String oauthAppId, WebhookSubscription webhookSubscription, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = createWebhookSubscriptionValidateBeforeCall(oauthAppId, webhookSubscription, appId, null, null);
         Type localVarReturnType = new TypeToken<RestApiIntegerResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -179,7 +179,7 @@ public class WebhooksApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call craeteWebhookSubscriptionAsync(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ApiCallback<RestApiIntegerResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call createWebhookSubscriptionAsync(String oauthAppId, WebhookSubscription webhookSubscription, String appId, final ApiCallback<RestApiIntegerResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -200,7 +200,7 @@ public class WebhooksApi {
             };
         }
 
-        com.squareup.okhttp.Call call = craeteWebhookSubscriptionValidateBeforeCall(oauthAppId, webhookSubscription, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createWebhookSubscriptionValidateBeforeCall(oauthAppId, webhookSubscription, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiIntegerResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

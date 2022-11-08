@@ -28,7 +28,7 @@ import java.io.IOException;
  * Period opening and closing balance
  */
 @ApiModel(description = "Period opening and closing balance")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-01T12:57:12.692Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-08T12:14:13.135Z")
 public class BalanceDetails {
   @SerializedName("OpeningBalance")
   private Double openingBalance = null;

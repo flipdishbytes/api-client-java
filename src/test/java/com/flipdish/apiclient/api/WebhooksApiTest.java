@@ -50,11 +50,11 @@ public class WebhooksApiTest {
      *          if the Api call fails
      */
     @Test
-    public void craeteWebhookSubscriptionTest() throws ApiException {
+    public void createWebhookSubscriptionTest() throws ApiException {
         String oauthAppId = null;
         WebhookSubscription webhookSubscription = null;
         String appId = null;
-        RestApiIntegerResult response = api.craeteWebhookSubscription(oauthAppId, webhookSubscription, appId);
+        RestApiIntegerResult response = api.createWebhookSubscription(oauthAppId, webhookSubscription, appId);
 
         // TODO: test validations
     }
