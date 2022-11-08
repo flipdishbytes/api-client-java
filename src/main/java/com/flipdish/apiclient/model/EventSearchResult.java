@@ -21,6 +21,7 @@ import com.flipdish.apiclient.model.AppStoreConfigCreatedEvent;
 import com.flipdish.apiclient.model.AppStoreConfigDeletedEvent;
 import com.flipdish.apiclient.model.AppStoreConfigUpdatedEvent;
 import com.flipdish.apiclient.model.AppUpdatedEvent;
+import com.flipdish.apiclient.model.BankAccountAssignedEvent;
 import com.flipdish.apiclient.model.BankAccountCreatedEvent;
 import com.flipdish.apiclient.model.BankAccountDeletedEvent;
 import com.flipdish.apiclient.model.BankAccountUpdatedEvent;
@@ -164,7 +165,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-08T12:14:13.135Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-08T16:07:14.035Z")
 public class EventSearchResult {
   @SerializedName("AppCreatedEvent")
   private List<AppCreatedEvent> appCreatedEvent = null;
@@ -434,7 +435,7 @@ public class EventSearchResult {
   private List<BankAccountDeletedEvent> bankAccountDeletedEvent = null;
 
   @SerializedName("BankAccountAssignedEvent")
-  private List<BankAccountDeletedEvent> bankAccountAssignedEvent = null;
+  private List<BankAccountAssignedEvent> bankAccountAssignedEvent = null;
 
   @SerializedName("HydraAssignedEvent")
   private List<HydraAssignedEvent> hydraAssignedEvent = null;
@@ -2885,14 +2886,14 @@ public class EventSearchResult {
     this.bankAccountDeletedEvent = bankAccountDeletedEvent;
   }
 
-  public EventSearchResult bankAccountAssignedEvent(List<BankAccountDeletedEvent> bankAccountAssignedEvent) {
+  public EventSearchResult bankAccountAssignedEvent(List<BankAccountAssignedEvent> bankAccountAssignedEvent) {
     this.bankAccountAssignedEvent = bankAccountAssignedEvent;
     return this;
   }
 
-  public EventSearchResult addBankAccountAssignedEventItem(BankAccountDeletedEvent bankAccountAssignedEventItem) {
+  public EventSearchResult addBankAccountAssignedEventItem(BankAccountAssignedEvent bankAccountAssignedEventItem) {
     if (this.bankAccountAssignedEvent == null) {
-      this.bankAccountAssignedEvent = new ArrayList<BankAccountDeletedEvent>();
+      this.bankAccountAssignedEvent = new ArrayList<BankAccountAssignedEvent>();
     }
     this.bankAccountAssignedEvent.add(bankAccountAssignedEventItem);
     return this;
@@ -2903,11 +2904,11 @@ public class EventSearchResult {
    * @return bankAccountAssignedEvent
   **/
   @ApiModelProperty(value = "Bank account assigned event")
-  public List<BankAccountDeletedEvent> getBankAccountAssignedEvent() {
+  public List<BankAccountAssignedEvent> getBankAccountAssignedEvent() {
     return bankAccountAssignedEvent;
   }
 
-  public void setBankAccountAssignedEvent(List<BankAccountDeletedEvent> bankAccountAssignedEvent) {
+  public void setBankAccountAssignedEvent(List<BankAccountAssignedEvent> bankAccountAssignedEvent) {
     this.bankAccountAssignedEvent = bankAccountAssignedEvent;
   }
 
