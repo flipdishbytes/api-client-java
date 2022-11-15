@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Phone call ended event
  */
 @ApiModel(description = "Phone call ended event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-10T11:57:07.208Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-15T13:23:32.168Z")
 public class PhoneCallEndedEvent {
   @SerializedName("EventName")
   private String eventName = null;
