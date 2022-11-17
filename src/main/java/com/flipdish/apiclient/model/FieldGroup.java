@@ -31,7 +31,7 @@ import java.util.List;
  * Field group
  */
 @ApiModel(description = "Field group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-16T15:28:51.553Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-17T11:46:10.431Z")
 public class FieldGroup {
   @SerializedName("Name")
   private String name = null;
