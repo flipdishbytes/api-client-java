@@ -31,7 +31,7 @@ import java.util.List;
  * Fulfillment Status Item
  */
 @ApiModel(description = "Fulfillment Status Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T14:14:52.946Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T16:23:31.913Z")
 public class FulfillmentStatusConfigurationItem {
   @SerializedName("StatusId")
   private String statusId = null;
@@ -174,9 +174,6 @@ public class FulfillmentStatusConfigurationItem {
 
   @SerializedName("Communication")
   private Boolean communication = null;
-
-  @SerializedName("VisualOrder")
-  private Integer visualOrder = null;
 
   public FulfillmentStatusConfigurationItem statusId(String statusId) {
     this.statusId = statusId;
@@ -454,24 +451,6 @@ public class FulfillmentStatusConfigurationItem {
     this.communication = communication;
   }
 
-  public FulfillmentStatusConfigurationItem visualOrder(Integer visualOrder) {
-    this.visualOrder = visualOrder;
-    return this;
-  }
-
-   /**
-   * Integer for ordering results in choices (eg. dropdowns)
-   * @return visualOrder
-  **/
-  @ApiModelProperty(value = "Integer for ordering results in choices (eg. dropdowns)")
-  public Integer getVisualOrder() {
-    return visualOrder;
-  }
-
-  public void setVisualOrder(Integer visualOrder) {
-    this.visualOrder = visualOrder;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -495,13 +474,12 @@ public class FulfillmentStatusConfigurationItem {
         Objects.equals(this.includeInReports, fulfillmentStatusConfigurationItem.includeInReports) &&
         Objects.equals(this.isCustom, fulfillmentStatusConfigurationItem.isCustom) &&
         Objects.equals(this.orderTypes, fulfillmentStatusConfigurationItem.orderTypes) &&
-        Objects.equals(this.communication, fulfillmentStatusConfigurationItem.communication) &&
-        Objects.equals(this.visualOrder, fulfillmentStatusConfigurationItem.visualOrder);
+        Objects.equals(this.communication, fulfillmentStatusConfigurationItem.communication);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusId, statusName, enabled, displayName, icon, publicDescription, internal, nextStatuses, defaultNextStatus, changeType, includeInReports, isCustom, orderTypes, communication, visualOrder);
+    return Objects.hash(statusId, statusName, enabled, displayName, icon, publicDescription, internal, nextStatuses, defaultNextStatus, changeType, includeInReports, isCustom, orderTypes, communication);
   }
 
 
@@ -524,7 +502,6 @@ public class FulfillmentStatusConfigurationItem {
     sb.append("    isCustom: ").append(toIndentedString(isCustom)).append("\n");
     sb.append("    orderTypes: ").append(toIndentedString(orderTypes)).append("\n");
     sb.append("    communication: ").append(toIndentedString(communication)).append("\n");
-    sb.append("    visualOrder: ").append(toIndentedString(visualOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }
