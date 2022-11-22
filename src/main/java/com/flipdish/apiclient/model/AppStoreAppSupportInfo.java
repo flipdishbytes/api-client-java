@@ -28,7 +28,7 @@ import java.io.IOException;
  * App store app support information
  */
 @ApiModel(description = "App store app support information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T13:32:50.522Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T14:14:52.946Z")
 public class AppStoreAppSupportInfo {
   @SerializedName("PrivacyPolicy")
   private String privacyPolicy = null;

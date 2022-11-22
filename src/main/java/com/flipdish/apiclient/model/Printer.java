@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Printer
  */
 @ApiModel(description = "Printer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T13:32:50.522Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T14:14:52.946Z")
 public class Printer {
   @SerializedName("SerialNumber")
   private String serialNumber = null;
