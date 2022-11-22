@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **percentFeeCashOrdersChargedToCustomerIncludingVat** | **Double** |  |  [optional]
 **fixedFeeCashOrdersChargedToCustomerIncludingVat** | **Double** |  |  [optional]
 **percentFeeTips** | **Double** | Gets or sets the percent fee tips. |  [optional]
+**percentFeeTipsCollection** | **Double** | Gets or sets the percent fee tips for collection. |  [optional]
+**percentFeeTipsDelivery** | **Double** | Gets or sets the percent fee tips for delivery. |  [optional]
 **taxRatePercent** | **Double** | Gets or sets the tax rate percent. |  [optional]
 **percentFeeCardOrdersLocationService** | **Double** | Gets or sets the percent fee card orders location service. |  [optional]
 **percentFeeCashOrdersLocationService** | **Double** | Gets or sets the percent fee cash orders location service. |  [optional]

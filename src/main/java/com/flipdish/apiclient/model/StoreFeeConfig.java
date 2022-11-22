@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-21T13:40:13.800Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-22T13:32:50.522Z")
 public class StoreFeeConfig {
   @SerializedName("FeeConfigId")
   private Integer feeConfigId = null;
@@ -96,6 +96,12 @@ public class StoreFeeConfig {
 
   @SerializedName("PercentFeeTips")
   private Double percentFeeTips = null;
+
+  @SerializedName("PercentFeeTipsCollection")
+  private Double percentFeeTipsCollection = null;
+
+  @SerializedName("PercentFeeTipsDelivery")
+  private Double percentFeeTipsDelivery = null;
 
   @SerializedName("TaxRatePercent")
   private Double taxRatePercent = null;
@@ -532,6 +538,42 @@ public class StoreFeeConfig {
     this.percentFeeTips = percentFeeTips;
   }
 
+  public StoreFeeConfig percentFeeTipsCollection(Double percentFeeTipsCollection) {
+    this.percentFeeTipsCollection = percentFeeTipsCollection;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee tips for collection.
+   * @return percentFeeTipsCollection
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee tips for collection.")
+  public Double getPercentFeeTipsCollection() {
+    return percentFeeTipsCollection;
+  }
+
+  public void setPercentFeeTipsCollection(Double percentFeeTipsCollection) {
+    this.percentFeeTipsCollection = percentFeeTipsCollection;
+  }
+
+  public StoreFeeConfig percentFeeTipsDelivery(Double percentFeeTipsDelivery) {
+    this.percentFeeTipsDelivery = percentFeeTipsDelivery;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee tips for delivery.
+   * @return percentFeeTipsDelivery
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee tips for delivery.")
+  public Double getPercentFeeTipsDelivery() {
+    return percentFeeTipsDelivery;
+  }
+
+  public void setPercentFeeTipsDelivery(Double percentFeeTipsDelivery) {
+    this.percentFeeTipsDelivery = percentFeeTipsDelivery;
+  }
+
   public StoreFeeConfig taxRatePercent(Double taxRatePercent) {
     this.taxRatePercent = taxRatePercent;
     return this;
@@ -798,6 +840,8 @@ public class StoreFeeConfig {
         Objects.equals(this.percentFeeCashOrdersChargedToCustomerIncludingVat, storeFeeConfig.percentFeeCashOrdersChargedToCustomerIncludingVat) &&
         Objects.equals(this.fixedFeeCashOrdersChargedToCustomerIncludingVat, storeFeeConfig.fixedFeeCashOrdersChargedToCustomerIncludingVat) &&
         Objects.equals(this.percentFeeTips, storeFeeConfig.percentFeeTips) &&
+        Objects.equals(this.percentFeeTipsCollection, storeFeeConfig.percentFeeTipsCollection) &&
+        Objects.equals(this.percentFeeTipsDelivery, storeFeeConfig.percentFeeTipsDelivery) &&
         Objects.equals(this.taxRatePercent, storeFeeConfig.taxRatePercent) &&
         Objects.equals(this.percentFeeCardOrdersLocationService, storeFeeConfig.percentFeeCardOrdersLocationService) &&
         Objects.equals(this.percentFeeCashOrdersLocationService, storeFeeConfig.percentFeeCashOrdersLocationService) &&
@@ -815,7 +859,7 @@ public class StoreFeeConfig {
 
   @Override
   public int hashCode() {
-    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest);
+    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest);
   }
 
 
@@ -846,6 +890,8 @@ public class StoreFeeConfig {
     sb.append("    percentFeeCashOrdersChargedToCustomerIncludingVat: ").append(toIndentedString(percentFeeCashOrdersChargedToCustomerIncludingVat)).append("\n");
     sb.append("    fixedFeeCashOrdersChargedToCustomerIncludingVat: ").append(toIndentedString(fixedFeeCashOrdersChargedToCustomerIncludingVat)).append("\n");
     sb.append("    percentFeeTips: ").append(toIndentedString(percentFeeTips)).append("\n");
+    sb.append("    percentFeeTipsCollection: ").append(toIndentedString(percentFeeTipsCollection)).append("\n");
+    sb.append("    percentFeeTipsDelivery: ").append(toIndentedString(percentFeeTipsDelivery)).append("\n");
     sb.append("    taxRatePercent: ").append(toIndentedString(taxRatePercent)).append("\n");
     sb.append("    percentFeeCardOrdersLocationService: ").append(toIndentedString(percentFeeCardOrdersLocationService)).append("\n");
     sb.append("    percentFeeCashOrdersLocationService: ").append(toIndentedString(percentFeeCashOrdersLocationService)).append("\n");
