@@ -81,7 +81,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FirebaseAppsApi apiInstance = new FirebaseAppsApi();
-String whitelabelId = "whitelabelId_example"; // String | 
+Integer whitelabelId = 56; // Integer | 
 try {
     Object result = apiInstance.firebaseAppsGetFirebaseApp(whitelabelId);
     System.out.println(result);
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **whitelabelId** | **String**|  |
+ **whitelabelId** | **Integer**|  |
 
 ### Return type
 

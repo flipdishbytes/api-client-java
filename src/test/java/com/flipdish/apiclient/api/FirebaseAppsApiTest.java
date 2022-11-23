@@ -61,7 +61,7 @@ public class FirebaseAppsApiTest {
      */
     @Test
     public void firebaseAppsGetFirebaseAppTest() throws ApiException {
-        String whitelabelId = null;
+        Integer whitelabelId = null;
         Object response = api.firebaseAppsGetFirebaseApp(whitelabelId);
 
         // TODO: test validations

@@ -187,7 +187,7 @@ public class FirebaseAppsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppCall(String whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -230,7 +230,7 @@ public class FirebaseAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call firebaseAppsGetFirebaseAppValidateBeforeCall(String whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call firebaseAppsGetFirebaseAppValidateBeforeCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'whitelabelId' is set
         if (whitelabelId == null) {
@@ -250,7 +250,7 @@ public class FirebaseAppsApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object firebaseAppsGetFirebaseApp(String whitelabelId) throws ApiException {
+    public Object firebaseAppsGetFirebaseApp(Integer whitelabelId) throws ApiException {
         ApiResponse<Object> resp = firebaseAppsGetFirebaseAppWithHttpInfo(whitelabelId);
         return resp.getData();
     }
@@ -262,7 +262,7 @@ public class FirebaseAppsApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> firebaseAppsGetFirebaseAppWithHttpInfo(String whitelabelId) throws ApiException {
+    public ApiResponse<Object> firebaseAppsGetFirebaseAppWithHttpInfo(Integer whitelabelId) throws ApiException {
         com.squareup.okhttp.Call call = firebaseAppsGetFirebaseAppValidateBeforeCall(whitelabelId, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -276,7 +276,7 @@ public class FirebaseAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppAsync(String whitelabelId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppAsync(Integer whitelabelId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
