@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * GoogleAddressResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-23T10:14:15.307Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-11-24T12:27:14.512Z")
 public class GoogleAddressResult {
   @SerializedName("Address_components")
   private List<GoogleAddressComponent> addressComponents = null;

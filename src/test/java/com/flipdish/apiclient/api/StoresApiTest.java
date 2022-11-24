@@ -21,7 +21,6 @@ import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
-import com.flipdish.apiclient.model.RestApiArrayResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultRestApiDefaultResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -35,7 +34,6 @@ import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
-import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultServiceCharge;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
@@ -47,7 +45,6 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
-import com.flipdish.apiclient.model.StoreFeeConfig;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -297,41 +294,6 @@ public class StoresApiTest {
     }
     
     /**
-     * Get processing fee configs by store identifier
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getProcessingFeeConfigsByStoreIdTest() throws ApiException {
-        Integer storeId = null;
-        String appNameId = null;
-        RestApiArrayResultProcessingFeeConfig response = api.getProcessingFeeConfigsByStoreId(storeId, appNameId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get processing fee configs by store identifier
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeTest() throws ApiException {
-        Integer storeId = null;
-        String paymentAccountType = null;
-        String appNameId = null;
-        RestApiResultProcessingFeeConfig response = api.getProcessingFeeConfigsByStoreIdAndPaymentAccountType(storeId, paymentAccountType, appNameId);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get store by identifier
      *
      * 
@@ -343,22 +305,6 @@ public class StoresApiTest {
     public void getStoreByIdTest() throws ApiException {
         Integer storeId = null;
         RestApiResultStore response = api.getStoreById(storeId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Retrieve Store feeConfig
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getStoreFeeConfigTest() throws ApiException {
-        Integer storeId = null;
-        StoreFeeConfig response = api.getStoreFeeConfig(storeId);
 
         // TODO: test validations
     }
