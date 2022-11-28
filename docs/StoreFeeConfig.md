@@ -41,8 +41,6 @@ Name | Type | Description | Notes
 **percentFeeCashOrdersIngest** | **Double** | Gets or sets the percent fee cash orders ingest. |  [optional]
 **fixedFeeCardOrdersIngest** | **Double** | Gets or sets the fixed fee card orders ingest. |  [optional]
 **fixedFeeCashOrdersIngest** | **Double** | Gets or sets the fixed fee cash orders ingest. |  [optional]
-**percentFeeDelivery** | **Double** | Gets or sets the percent fee for delivery orders. |  [optional]
-**fixedFeeDelivery** | **Double** | Gets or sets the fixed fee for delivery orders. |  [optional]
 
 
 

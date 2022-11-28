@@ -34,6 +34,7 @@ import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
+import com.flipdish.apiclient.model.RestApiArrayResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultRestApiDefaultResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -47,6 +48,7 @@ import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
+import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultServiceCharge;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
@@ -58,6 +60,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
+import com.flipdish.apiclient.model.StoreFeeConfig;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -1851,6 +1854,274 @@ public class StoresApi {
         return call;
     }
     /**
+     * Build call for getProcessingFeeConfigsByStoreId
+     * @param storeId Store identifier (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdCall(Integer storeId, String appNameId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appNameId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("appNameId", appNameId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdValidateBeforeCall(Integer storeId, String appNameId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getProcessingFeeConfigsByStoreId(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdCall(storeId, appNameId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get processing fee configs by store identifier
+     * 
+     * @param storeId Store identifier (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @return RestApiArrayResultProcessingFeeConfig
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreId(Integer storeId, String appNameId) throws ApiException {
+        ApiResponse<RestApiArrayResultProcessingFeeConfig> resp = getProcessingFeeConfigsByStoreIdWithHttpInfo(storeId, appNameId);
+        return resp.getData();
+    }
+
+    /**
+     * Get processing fee configs by store identifier
+     * 
+     * @param storeId Store identifier (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @return ApiResponse&lt;RestApiArrayResultProcessingFeeConfig&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultProcessingFeeConfig> getProcessingFeeConfigsByStoreIdWithHttpInfo(Integer storeId, String appNameId) throws ApiException {
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdValidateBeforeCall(storeId, appNameId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultProcessingFeeConfig>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get processing fee configs by store identifier (asynchronously)
+     * 
+     * @param storeId Store identifier (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdAsync(Integer storeId, String appNameId, final ApiCallback<RestApiArrayResultProcessingFeeConfig> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdValidateBeforeCall(storeId, appNameId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultProcessingFeeConfig>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getProcessingFeeConfigsByStoreIdAndPaymentAccountType
+     * @param storeId Store identifier (required)
+     * @param paymentAccountType  (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeCall(Integer storeId, String paymentAccountType, String appNameId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType}"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()))
+            .replaceAll("\\{" + "paymentAccountType" + "\\}", apiClient.escapeString(paymentAccountType.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appNameId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("appNameId", appNameId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeValidateBeforeCall(Integer storeId, String paymentAccountType, String appNameId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getProcessingFeeConfigsByStoreIdAndPaymentAccountType(Async)");
+        }
+        
+        // verify the required parameter 'paymentAccountType' is set
+        if (paymentAccountType == null) {
+            throw new ApiException("Missing the required parameter 'paymentAccountType' when calling getProcessingFeeConfigsByStoreIdAndPaymentAccountType(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeCall(storeId, paymentAccountType, appNameId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get processing fee configs by store identifier
+     * 
+     * @param storeId Store identifier (required)
+     * @param paymentAccountType  (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @return RestApiResultProcessingFeeConfig
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultProcessingFeeConfig getProcessingFeeConfigsByStoreIdAndPaymentAccountType(Integer storeId, String paymentAccountType, String appNameId) throws ApiException {
+        ApiResponse<RestApiResultProcessingFeeConfig> resp = getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo(storeId, paymentAccountType, appNameId);
+        return resp.getData();
+    }
+
+    /**
+     * Get processing fee configs by store identifier
+     * 
+     * @param storeId Store identifier (required)
+     * @param paymentAccountType  (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @return ApiResponse&lt;RestApiResultProcessingFeeConfig&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultProcessingFeeConfig> getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo(Integer storeId, String paymentAccountType, String appNameId) throws ApiException {
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeValidateBeforeCall(storeId, paymentAccountType, appNameId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultProcessingFeeConfig>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get processing fee configs by store identifier (asynchronously)
+     * 
+     * @param storeId Store identifier (required)
+     * @param paymentAccountType  (required)
+     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync(Integer storeId, String paymentAccountType, String appNameId, final ApiCallback<RestApiResultProcessingFeeConfig> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeValidateBeforeCall(storeId, paymentAccountType, appNameId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultProcessingFeeConfig>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getStoreById
      * @param storeId Store identifier (required)
      * @param progressListener Progress listener
@@ -1970,6 +2241,129 @@ public class StoresApi {
 
         com.squareup.okhttp.Call call = getStoreByIdValidateBeforeCall(storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultStore>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getStoreFeeConfig
+     * @param storeId Store identifier (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getStoreFeeConfigCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/feeConfig"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getStoreFeeConfigValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getStoreFeeConfig(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getStoreFeeConfigCall(storeId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Retrieve Store feeConfig
+     * 
+     * @param storeId Store identifier (required)
+     * @return StoreFeeConfig
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public StoreFeeConfig getStoreFeeConfig(Integer storeId) throws ApiException {
+        ApiResponse<StoreFeeConfig> resp = getStoreFeeConfigWithHttpInfo(storeId);
+        return resp.getData();
+    }
+
+    /**
+     * Retrieve Store feeConfig
+     * 
+     * @param storeId Store identifier (required)
+     * @return ApiResponse&lt;StoreFeeConfig&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<StoreFeeConfig> getStoreFeeConfigWithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = getStoreFeeConfigValidateBeforeCall(storeId, null, null);
+        Type localVarReturnType = new TypeToken<StoreFeeConfig>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Store feeConfig (asynchronously)
+     * 
+     * @param storeId Store identifier (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getStoreFeeConfigAsync(Integer storeId, final ApiCallback<StoreFeeConfig> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getStoreFeeConfigValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<StoreFeeConfig>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
