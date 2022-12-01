@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrdersSummary"></a>
 # **getOrdersSummary**
-> RestApiPaginationResultOrderSummary getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds)
+> RestApiPaginationResultOrderSummary getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -427,8 +427,10 @@ Integer limit = 56; // Integer | Requested page limit
 Boolean orderByRequestedForTime = true; // Boolean | 
 List<String> channels = Arrays.asList("channels_example"); // List<String> | 
 List<Integer> orderIds = Arrays.asList(56); // List<Integer> | Filter by the given orders
+OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | Filter by date from
+OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Filter by date to
 try {
-    RestApiPaginationResultOrderSummary result = apiInstance.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds);
+    RestApiPaginationResultOrderSummary result = apiInstance.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrdersApi#getOrdersSummary");
@@ -449,6 +451,8 @@ Name | Type | Description  | Notes
  **orderByRequestedForTime** | **Boolean**|  | [optional]
  **channels** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Unknown, Ios, Android, Web, Kiosk, Pos, TelephoneCall, Sms, PwaAndroid, PwaIos, Google]
  **orderIds** | [**List&lt;Integer&gt;**](Integer.md)| Filter by the given orders | [optional]
+ **from** | **OffsetDateTime**| Filter by date from | [optional]
+ **to** | **OffsetDateTime**| Filter by date to | [optional]
 
 ### Return type
 

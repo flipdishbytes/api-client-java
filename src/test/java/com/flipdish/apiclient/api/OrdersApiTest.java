@@ -184,7 +184,9 @@ public class OrdersApiTest {
         Boolean orderByRequestedForTime = null;
         List<String> channels = null;
         List<Integer> orderIds = null;
-        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds);
+        OffsetDateTime from = null;
+        OffsetDateTime to = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
 
         // TODO: test validations
     }
