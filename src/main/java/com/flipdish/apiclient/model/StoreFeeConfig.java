@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-05T10:46:43.456Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-05T14:11:54.635Z")
 public class StoreFeeConfig {
   @SerializedName("FeeConfigId")
   private Integer feeConfigId = null;
@@ -141,6 +141,12 @@ public class StoreFeeConfig {
 
   @SerializedName("FixedFeeCashOrdersIngest")
   private Double fixedFeeCashOrdersIngest = null;
+
+  @SerializedName("PercentFeeDelivery")
+  private Double percentFeeDelivery = null;
+
+  @SerializedName("FixedFeeDelivery")
+  private Double fixedFeeDelivery = null;
 
   public StoreFeeConfig feeConfigId(Integer feeConfigId) {
     this.feeConfigId = feeConfigId;
@@ -808,6 +814,42 @@ public class StoreFeeConfig {
     this.fixedFeeCashOrdersIngest = fixedFeeCashOrdersIngest;
   }
 
+  public StoreFeeConfig percentFeeDelivery(Double percentFeeDelivery) {
+    this.percentFeeDelivery = percentFeeDelivery;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee for delivery orders.
+   * @return percentFeeDelivery
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee for delivery orders.")
+  public Double getPercentFeeDelivery() {
+    return percentFeeDelivery;
+  }
+
+  public void setPercentFeeDelivery(Double percentFeeDelivery) {
+    this.percentFeeDelivery = percentFeeDelivery;
+  }
+
+  public StoreFeeConfig fixedFeeDelivery(Double fixedFeeDelivery) {
+    this.fixedFeeDelivery = fixedFeeDelivery;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee for delivery orders.
+   * @return fixedFeeDelivery
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee for delivery orders.")
+  public Double getFixedFeeDelivery() {
+    return fixedFeeDelivery;
+  }
+
+  public void setFixedFeeDelivery(Double fixedFeeDelivery) {
+    this.fixedFeeDelivery = fixedFeeDelivery;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -854,12 +896,14 @@ public class StoreFeeConfig {
         Objects.equals(this.percentFeeCardOrdersIngest, storeFeeConfig.percentFeeCardOrdersIngest) &&
         Objects.equals(this.percentFeeCashOrdersIngest, storeFeeConfig.percentFeeCashOrdersIngest) &&
         Objects.equals(this.fixedFeeCardOrdersIngest, storeFeeConfig.fixedFeeCardOrdersIngest) &&
-        Objects.equals(this.fixedFeeCashOrdersIngest, storeFeeConfig.fixedFeeCashOrdersIngest);
+        Objects.equals(this.fixedFeeCashOrdersIngest, storeFeeConfig.fixedFeeCashOrdersIngest) &&
+        Objects.equals(this.percentFeeDelivery, storeFeeConfig.percentFeeDelivery) &&
+        Objects.equals(this.fixedFeeDelivery, storeFeeConfig.fixedFeeDelivery);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest);
+    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery);
   }
 
 
@@ -905,6 +949,8 @@ public class StoreFeeConfig {
     sb.append("    percentFeeCashOrdersIngest: ").append(toIndentedString(percentFeeCashOrdersIngest)).append("\n");
     sb.append("    fixedFeeCardOrdersIngest: ").append(toIndentedString(fixedFeeCardOrdersIngest)).append("\n");
     sb.append("    fixedFeeCashOrdersIngest: ").append(toIndentedString(fixedFeeCashOrdersIngest)).append("\n");
+    sb.append("    percentFeeDelivery: ").append(toIndentedString(percentFeeDelivery)).append("\n");
+    sb.append("    fixedFeeDelivery: ").append(toIndentedString(fixedFeeDelivery)).append("\n");
     sb.append("}");
     return sb.toString();
   }
