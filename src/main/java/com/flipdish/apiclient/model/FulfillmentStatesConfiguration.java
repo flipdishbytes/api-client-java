@@ -31,10 +31,13 @@ import java.util.List;
  * Fulfillment States Configuration
  */
 @ApiModel(description = "Fulfillment States Configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-01T13:41:14.796Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-05T10:46:43.456Z")
 public class FulfillmentStatesConfiguration {
   @SerializedName("States")
   private List<FulfillmentStatusConfigurationItem> states = null;
+
+  @SerializedName("AutomaticTransitionsEnabled")
+  private Boolean automaticTransitionsEnabled = null;
 
   @SerializedName("AppId")
   private String appId = null;
@@ -124,6 +127,24 @@ public class FulfillmentStatesConfiguration {
 
   public void setStates(List<FulfillmentStatusConfigurationItem> states) {
     this.states = states;
+  }
+
+  public FulfillmentStatesConfiguration automaticTransitionsEnabled(Boolean automaticTransitionsEnabled) {
+    this.automaticTransitionsEnabled = automaticTransitionsEnabled;
+    return this;
+  }
+
+   /**
+   * Enable automatic transitions
+   * @return automaticTransitionsEnabled
+  **/
+  @ApiModelProperty(value = "Enable automatic transitions")
+  public Boolean isAutomaticTransitionsEnabled() {
+    return automaticTransitionsEnabled;
+  }
+
+  public void setAutomaticTransitionsEnabled(Boolean automaticTransitionsEnabled) {
+    this.automaticTransitionsEnabled = automaticTransitionsEnabled;
   }
 
   public FulfillmentStatesConfiguration appId(String appId) {
@@ -235,6 +256,7 @@ public class FulfillmentStatesConfiguration {
     }
     FulfillmentStatesConfiguration fulfillmentStatesConfiguration = (FulfillmentStatesConfiguration) o;
     return Objects.equals(this.states, fulfillmentStatesConfiguration.states) &&
+        Objects.equals(this.automaticTransitionsEnabled, fulfillmentStatesConfiguration.automaticTransitionsEnabled) &&
         Objects.equals(this.appId, fulfillmentStatesConfiguration.appId) &&
         Objects.equals(this.configurationUid, fulfillmentStatesConfiguration.configurationUid) &&
         Objects.equals(this.storeSelectorType, fulfillmentStatesConfiguration.storeSelectorType) &&
@@ -244,7 +266,7 @@ public class FulfillmentStatesConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(states, appId, configurationUid, storeSelectorType, storeIds, name);
+    return Objects.hash(states, automaticTransitionsEnabled, appId, configurationUid, storeSelectorType, storeIds, name);
   }
 
 
@@ -254,6 +276,7 @@ public class FulfillmentStatesConfiguration {
     sb.append("class FulfillmentStatesConfiguration {\n");
     
     sb.append("    states: ").append(toIndentedString(states)).append("\n");
+    sb.append("    automaticTransitionsEnabled: ").append(toIndentedString(automaticTransitionsEnabled)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    configurationUid: ").append(toIndentedString(configurationUid)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
