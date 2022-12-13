@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **isCustom** | **Boolean** | Is custom state. If not, then it&#39;s a system state |  [optional]
 **orderTypes** | [**List&lt;OrderTypesEnum&gt;**](#List&lt;OrderTypesEnum&gt;) | If empty then applies to all ordertypes, otherwise a list of order types this state applies to |  [optional]
 **communication** | **Boolean** | Whether state should fire off a notification to the customer |  [optional]
+**image** | **String** | Image (image filename, relative, not absolute URL) |  [optional]
 
 
 <a name="ChangeTypeEnum"></a>

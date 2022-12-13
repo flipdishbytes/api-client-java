@@ -31,7 +31,7 @@ import java.util.List;
  * Fulfillment Status Item
  */
 @ApiModel(description = "Fulfillment Status Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-13T08:35:19.838Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-13T11:34:22.266Z")
 public class FulfillmentStatusConfigurationItem {
   @SerializedName("StatusId")
   private String statusId = null;
@@ -174,6 +174,9 @@ public class FulfillmentStatusConfigurationItem {
 
   @SerializedName("Communication")
   private Boolean communication = null;
+
+  @SerializedName("Image")
+  private String image = null;
 
   public FulfillmentStatusConfigurationItem statusId(String statusId) {
     this.statusId = statusId;
@@ -451,6 +454,24 @@ public class FulfillmentStatusConfigurationItem {
     this.communication = communication;
   }
 
+  public FulfillmentStatusConfigurationItem image(String image) {
+    this.image = image;
+    return this;
+  }
+
+   /**
+   * Image (image filename, relative, not absolute URL)
+   * @return image
+  **/
+  @ApiModelProperty(value = "Image (image filename, relative, not absolute URL)")
+  public String getImage() {
+    return image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -474,12 +495,13 @@ public class FulfillmentStatusConfigurationItem {
         Objects.equals(this.includeInReports, fulfillmentStatusConfigurationItem.includeInReports) &&
         Objects.equals(this.isCustom, fulfillmentStatusConfigurationItem.isCustom) &&
         Objects.equals(this.orderTypes, fulfillmentStatusConfigurationItem.orderTypes) &&
-        Objects.equals(this.communication, fulfillmentStatusConfigurationItem.communication);
+        Objects.equals(this.communication, fulfillmentStatusConfigurationItem.communication) &&
+        Objects.equals(this.image, fulfillmentStatusConfigurationItem.image);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusId, statusName, enabled, displayName, icon, publicDescription, internal, nextStatuses, defaultNextStatus, changeType, includeInReports, isCustom, orderTypes, communication);
+    return Objects.hash(statusId, statusName, enabled, displayName, icon, publicDescription, internal, nextStatuses, defaultNextStatus, changeType, includeInReports, isCustom, orderTypes, communication, image);
   }
 
 
@@ -502,6 +524,7 @@ public class FulfillmentStatusConfigurationItem {
     sb.append("    isCustom: ").append(toIndentedString(isCustom)).append("\n");
     sb.append("    orderTypes: ").append(toIndentedString(orderTypes)).append("\n");
     sb.append("    communication: ").append(toIndentedString(communication)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("}");
     return sb.toString();
   }
