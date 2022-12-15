@@ -28,7 +28,7 @@ import java.io.IOException;
  * Pending menu changes summaries
  */
 @ApiModel(description = "Pending menu changes summaries")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-14T10:35:02.893Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
 public class PendingMenuChangesSummaries {
   @SerializedName("MenuId")
   private Integer menuId = null;
