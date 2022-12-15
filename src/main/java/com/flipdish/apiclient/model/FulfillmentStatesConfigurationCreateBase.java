@@ -28,7 +28,7 @@ import java.io.IOException;
  * Fulfillment States Configuration Create Base
  */
 @ApiModel(description = "Fulfillment States Configuration Create Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:07:00.530Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:41:06.949Z")
 public class FulfillmentStatesConfigurationCreateBase {
   @SerializedName("Name")
   private String name = null;
