@@ -21,7 +21,7 @@ import com.flipdish.apiclient.model.LoginModel;
 import com.flipdish.apiclient.model.LoginWithPinModel;
 import com.flipdish.apiclient.model.PasswordResetModel;
 import com.flipdish.apiclient.model.RequestLoginPinModel;
-import com.flipdish.apiclient.model.RequestLoginPinResposne;
+import com.flipdish.apiclient.model.RequestLoginPinResponse;
 import com.flipdish.apiclient.model.RequestPasswordResetModel;
 import com.flipdish.apiclient.model.RequestPasswordResetPinResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultLocalisedTimeZone;
@@ -159,7 +159,22 @@ public class AccountsApiTest {
     }
     
     /**
-     * Login with username and password
+     * Login with SSO token
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void loginSsoTest() throws ApiException {
+        api.loginSso();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Login with email and pin
      *
      * 
      *
@@ -232,7 +247,7 @@ public class AccountsApiTest {
     @Test
     public void requestLoginPinTest() throws ApiException {
         RequestLoginPinModel requestLoginPinRequest = null;
-        RequestLoginPinResposne response = api.requestLoginPin(requestLoginPinRequest);
+        RequestLoginPinResponse response = api.requestLoginPin(requestLoginPinRequest);
 
         // TODO: test validations
     }

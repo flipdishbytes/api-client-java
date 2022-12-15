@@ -34,7 +34,7 @@ import com.flipdish.apiclient.model.LoginModel;
 import com.flipdish.apiclient.model.LoginWithPinModel;
 import com.flipdish.apiclient.model.PasswordResetModel;
 import com.flipdish.apiclient.model.RequestLoginPinModel;
-import com.flipdish.apiclient.model.RequestLoginPinResposne;
+import com.flipdish.apiclient.model.RequestLoginPinResponse;
 import com.flipdish.apiclient.model.RequestPasswordResetModel;
 import com.flipdish.apiclient.model.RequestPasswordResetPinResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultLocalisedTimeZone;
@@ -896,8 +896,117 @@ public class AccountsApi {
         return call;
     }
     /**
+     * Build call for loginSso
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call loginSsoCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/accounts/login/sso";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call loginSsoValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = loginSsoCall(progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Login with SSO token
+     * 
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void loginSso() throws ApiException {
+        loginSsoWithHttpInfo();
+    }
+
+    /**
+     * Login with SSO token
+     * 
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> loginSsoWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = loginSsoValidateBeforeCall(null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Login with SSO token (asynchronously)
+     * 
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call loginSsoAsync(final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = loginSsoValidateBeforeCall(progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for loginWithPin
-     * @param loginModel Login model (required)
+     * @param loginModel Login with pin model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -959,9 +1068,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password
+     * Login with email and pin
      * 
-     * @param loginModel Login model (required)
+     * @param loginModel Login with pin model (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void loginWithPin(LoginWithPinModel loginModel) throws ApiException {
@@ -969,9 +1078,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password
+     * Login with email and pin
      * 
-     * @param loginModel Login model (required)
+     * @param loginModel Login with pin model (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -981,9 +1090,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password (asynchronously)
+     * Login with email and pin (asynchronously)
      * 
-     * @param loginModel Login model (required)
+     * @param loginModel Login with pin model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1427,11 +1536,11 @@ public class AccountsApi {
      * Request login PIN. The server sends the PIN to the email address.
      * 
      * @param requestLoginPinRequest Request login PIN request (required)
-     * @return RequestLoginPinResposne
+     * @return RequestLoginPinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RequestLoginPinResposne requestLoginPin(RequestLoginPinModel requestLoginPinRequest) throws ApiException {
-        ApiResponse<RequestLoginPinResposne> resp = requestLoginPinWithHttpInfo(requestLoginPinRequest);
+    public RequestLoginPinResponse requestLoginPin(RequestLoginPinModel requestLoginPinRequest) throws ApiException {
+        ApiResponse<RequestLoginPinResponse> resp = requestLoginPinWithHttpInfo(requestLoginPinRequest);
         return resp.getData();
     }
 
@@ -1439,12 +1548,12 @@ public class AccountsApi {
      * Request login PIN. The server sends the PIN to the email address.
      * 
      * @param requestLoginPinRequest Request login PIN request (required)
-     * @return ApiResponse&lt;RequestLoginPinResposne&gt;
+     * @return ApiResponse&lt;RequestLoginPinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RequestLoginPinResposne> requestLoginPinWithHttpInfo(RequestLoginPinModel requestLoginPinRequest) throws ApiException {
+    public ApiResponse<RequestLoginPinResponse> requestLoginPinWithHttpInfo(RequestLoginPinModel requestLoginPinRequest) throws ApiException {
         com.squareup.okhttp.Call call = requestLoginPinValidateBeforeCall(requestLoginPinRequest, null, null);
-        Type localVarReturnType = new TypeToken<RequestLoginPinResposne>(){}.getType();
+        Type localVarReturnType = new TypeToken<RequestLoginPinResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1456,7 +1565,7 @@ public class AccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call requestLoginPinAsync(RequestLoginPinModel requestLoginPinRequest, final ApiCallback<RequestLoginPinResposne> callback) throws ApiException {
+    public com.squareup.okhttp.Call requestLoginPinAsync(RequestLoginPinModel requestLoginPinRequest, final ApiCallback<RequestLoginPinResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1478,7 +1587,7 @@ public class AccountsApi {
         }
 
         com.squareup.okhttp.Call call = requestLoginPinValidateBeforeCall(requestLoginPinRequest, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RequestLoginPinResposne>(){}.getType();
+        Type localVarReturnType = new TypeToken<RequestLoginPinResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

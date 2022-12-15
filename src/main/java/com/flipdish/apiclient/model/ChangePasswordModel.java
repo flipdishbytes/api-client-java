@@ -28,7 +28,7 @@ import java.io.IOException;
  * Change password model
  */
 @ApiModel(description = "Change password model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:07:00.530Z")
 public class ChangePasswordModel {
   @SerializedName("OldPassword")
   private String oldPassword = null;

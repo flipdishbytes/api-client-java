@@ -28,12 +28,15 @@ import java.io.IOException;
  * Request login PIN response
  */
 @ApiModel(description = "Request login PIN response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
-public class RequestLoginPinResposne {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:07:00.530Z")
+public class RequestLoginPinResponse {
   @SerializedName("LoginPinSentViaEmail")
   private Boolean loginPinSentViaEmail = null;
 
-  public RequestLoginPinResposne loginPinSentViaEmail(Boolean loginPinSentViaEmail) {
+  @SerializedName("ForceOktaLogin")
+  private Boolean forceOktaLogin = null;
+
+  public RequestLoginPinResponse loginPinSentViaEmail(Boolean loginPinSentViaEmail) {
     this.loginPinSentViaEmail = loginPinSentViaEmail;
     return this;
   }
@@ -51,6 +54,24 @@ public class RequestLoginPinResposne {
     this.loginPinSentViaEmail = loginPinSentViaEmail;
   }
 
+  public RequestLoginPinResponse forceOktaLogin(Boolean forceOktaLogin) {
+    this.forceOktaLogin = forceOktaLogin;
+    return this;
+  }
+
+   /**
+   * All flipdishers must login via Okta
+   * @return forceOktaLogin
+  **/
+  @ApiModelProperty(value = "All flipdishers must login via Okta")
+  public Boolean isForceOktaLogin() {
+    return forceOktaLogin;
+  }
+
+  public void setForceOktaLogin(Boolean forceOktaLogin) {
+    this.forceOktaLogin = forceOktaLogin;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -60,22 +81,24 @@ public class RequestLoginPinResposne {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RequestLoginPinResposne requestLoginPinResposne = (RequestLoginPinResposne) o;
-    return Objects.equals(this.loginPinSentViaEmail, requestLoginPinResposne.loginPinSentViaEmail);
+    RequestLoginPinResponse requestLoginPinResponse = (RequestLoginPinResponse) o;
+    return Objects.equals(this.loginPinSentViaEmail, requestLoginPinResponse.loginPinSentViaEmail) &&
+        Objects.equals(this.forceOktaLogin, requestLoginPinResponse.forceOktaLogin);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(loginPinSentViaEmail);
+    return Objects.hash(loginPinSentViaEmail, forceOktaLogin);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RequestLoginPinResposne {\n");
+    sb.append("class RequestLoginPinResponse {\n");
     
     sb.append("    loginPinSentViaEmail: ").append(toIndentedString(loginPinSentViaEmail)).append("\n");
+    sb.append("    forceOktaLogin: ").append(toIndentedString(forceOktaLogin)).append("\n");
     sb.append("}");
     return sb.toString();
   }
