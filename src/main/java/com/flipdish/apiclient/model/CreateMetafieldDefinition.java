@@ -27,16 +27,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  */
-@ApiModel(description = "Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@ApiModel(description = "Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class CreateMetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;
 
   /**
-   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+   * The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
    */
   @JsonAdapter(OwnerEntityEnum.Adapter.class)
   public enum OwnerEntityEnum {
@@ -227,10 +227,10 @@ public class CreateMetafieldDefinition {
   }
 
    /**
-   * The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+   * The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
    * @return ownerEntity
   **/
-  @ApiModelProperty(value = "The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}")
+  @ApiModelProperty(value = "The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}")
   public OwnerEntityEnum getOwnerEntity() {
     return ownerEntity;
   }

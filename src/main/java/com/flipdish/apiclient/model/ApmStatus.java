@@ -28,7 +28,7 @@ import java.io.IOException;
  * APM status
  */
 @ApiModel(description = "APM status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class ApmStatus {
   @SerializedName("IsApmEnabled")
   private Boolean isApmEnabled = null;

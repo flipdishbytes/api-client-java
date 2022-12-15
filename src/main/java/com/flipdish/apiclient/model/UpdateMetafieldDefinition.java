@@ -27,10 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * Information to update a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  */
-@ApiModel(description = "Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@ApiModel(description = "Information to update a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class UpdateMetafieldDefinition {
   @SerializedName("Name")
   private String name = null;

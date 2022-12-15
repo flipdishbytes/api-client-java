@@ -29,7 +29,7 @@ import java.io.IOException;
  * Catalog Item associated
  */
 @ApiModel(description = "Catalog Item associated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class ProductReference {
   @SerializedName("Item")
   private Product item = null;
@@ -99,10 +99,10 @@ public class ProductReference {
   }
 
    /**
-   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+   * Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
    * @return item
   **/
-  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
+  @ApiModelProperty(value = "Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
   public Product getItem() {
     return item;
   }
@@ -117,10 +117,10 @@ public class ProductReference {
   }
 
    /**
-   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+   * Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
    * @return product
   **/
-  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
+  @ApiModelProperty(value = "Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}")
   public Product getProduct() {
     return product;
   }

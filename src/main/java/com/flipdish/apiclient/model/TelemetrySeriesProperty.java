@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * TelemetrySeriesProperty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class TelemetrySeriesProperty {
   @SerializedName("Name")
   private String name = null;

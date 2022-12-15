@@ -26,10 +26,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
+ * Reference to an existing {Flipdish.Menus.PublicModels.V1.Catalog.Groups.Group}
  */
-@ApiModel(description = "Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:26:14.408Z")
+@ApiModel(description = "Reference to an existing {Flipdish.Menus.PublicModels.V1.Catalog.Groups.Group}")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T12:22:09.726Z")
 public class CatalogGroupReference {
   @SerializedName("Group")
   private Group group = null;
@@ -94,10 +94,10 @@ public class CatalogGroupReference {
   }
 
    /**
-   * Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
+   * Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Items.CatalogItem}
    * @return group
   **/
-  @ApiModelProperty(value = "Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}")
+  @ApiModelProperty(value = "Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Items.CatalogItem}")
   public Group getGroup() {
     return group;
   }
