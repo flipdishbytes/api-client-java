@@ -34,7 +34,7 @@ import java.util.UUID;
  * Order item
  */
 @ApiModel(description = "Order item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:41:06.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-16T11:13:21.279Z")
 public class OrderItem {
   @SerializedName("OrderItemOptions")
   private List<OrderItemOption> orderItemOptions = null;

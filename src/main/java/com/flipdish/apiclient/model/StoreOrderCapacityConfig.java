@@ -31,7 +31,7 @@ import java.util.List;
  * Represents one store&#39;s order capacity configuration
  */
 @ApiModel(description = "Represents one store's order capacity configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:41:06.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-16T11:13:21.279Z")
 public class StoreOrderCapacityConfig {
   @SerializedName("StoreId")
   private Integer storeId = null;

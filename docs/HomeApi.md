@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
 [**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 [**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
+[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Okta Portal feature flag value
 
 
 <a name="completeHomeAction"></a>
@@ -204,6 +205,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultHomeStatistics**](RestApiResultHomeStatistics.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getOktaPortalFeatureFlag"></a>
+# **getOktaPortalFeatureFlag**
+> RestApiResultOktaPortalFeatureFlag getOktaPortalFeatureFlag()
+
+[PRIVATE API] Get Okta Portal feature flag value
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HomeApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HomeApi apiInstance = new HomeApi();
+try {
+    RestApiResultOktaPortalFeatureFlag result = apiInstance.getOktaPortalFeatureFlag();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HomeApi#getOktaPortalFeatureFlag");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestApiResultOktaPortalFeatureFlag**](RestApiResultOktaPortalFeatureFlag.md)
 
 ### Authorization
 

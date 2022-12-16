@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.RestApiArrayResultHomeAction;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultHomeStatistics;
+import com.flipdish.apiclient.model.RestApiResultOktaPortalFeatureFlag;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -97,6 +98,21 @@ public class HomeApiTest {
     public void getHomeStatisticsTest() throws ApiException {
         String appId = null;
         RestApiResultHomeStatistics response = api.getHomeStatistics(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * [PRIVATE API] Get Okta Portal feature flag value
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOktaPortalFeatureFlagTest() throws ApiException {
+        RestApiResultOktaPortalFeatureFlag response = api.getOktaPortalFeatureFlag();
 
         // TODO: test validations
     }

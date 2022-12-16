@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents information about a Stripe connected account associated with a bank account
  */
 @ApiModel(description = "Represents information about a Stripe connected account associated with a bank account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-15T14:41:06.949Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-16T11:13:21.279Z")
 public class StripeConnectedAccountInfo {
   /**
    * Stripe connected account status
