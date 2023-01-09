@@ -1397,7 +1397,7 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)
@@ -1410,7 +1410,7 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)
@@ -1424,7 +1424,7 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Methon on Kisok (asynchronously)
+     * Get the status of Cash Payment Method on Kiosk (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2817,7 +2817,7 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2829,7 +2829,7 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2843,7 +2843,7 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Methon Visiability on Kisok (asynchronously)
+     * Update the Cash Payment Method Visibility on Kiosk (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param deviceId  (required)

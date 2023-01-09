@@ -207,7 +207,7 @@ public class HydraApiTest {
     }
     
     /**
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
@@ -391,7 +391,7 @@ public class HydraApiTest {
     }
     
     /**
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *

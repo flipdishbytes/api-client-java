@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-16T11:13:21.279Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-09T12:30:32.528Z")
 public class StoreFeeConfig {
   @SerializedName("FeeConfigId")
   private Integer feeConfigId = null;
@@ -147,6 +147,12 @@ public class StoreFeeConfig {
 
   @SerializedName("FixedFeeDelivery")
   private Double fixedFeeDelivery = null;
+
+  @SerializedName("PercentFeeCardPosTransaction")
+  private Double percentFeeCardPosTransaction = null;
+
+  @SerializedName("FixedFeeCardPosTransaction")
+  private Double fixedFeeCardPosTransaction = null;
 
   public StoreFeeConfig feeConfigId(Integer feeConfigId) {
     this.feeConfigId = feeConfigId;
@@ -850,6 +856,42 @@ public class StoreFeeConfig {
     this.fixedFeeDelivery = fixedFeeDelivery;
   }
 
+  public StoreFeeConfig percentFeeCardPosTransaction(Double percentFeeCardPosTransaction) {
+    this.percentFeeCardPosTransaction = percentFeeCardPosTransaction;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee for POS transactions.
+   * @return percentFeeCardPosTransaction
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee for POS transactions.")
+  public Double getPercentFeeCardPosTransaction() {
+    return percentFeeCardPosTransaction;
+  }
+
+  public void setPercentFeeCardPosTransaction(Double percentFeeCardPosTransaction) {
+    this.percentFeeCardPosTransaction = percentFeeCardPosTransaction;
+  }
+
+  public StoreFeeConfig fixedFeeCardPosTransaction(Double fixedFeeCardPosTransaction) {
+    this.fixedFeeCardPosTransaction = fixedFeeCardPosTransaction;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee for POS transactions.
+   * @return fixedFeeCardPosTransaction
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee for POS transactions.")
+  public Double getFixedFeeCardPosTransaction() {
+    return fixedFeeCardPosTransaction;
+  }
+
+  public void setFixedFeeCardPosTransaction(Double fixedFeeCardPosTransaction) {
+    this.fixedFeeCardPosTransaction = fixedFeeCardPosTransaction;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -898,12 +940,14 @@ public class StoreFeeConfig {
         Objects.equals(this.fixedFeeCardOrdersIngest, storeFeeConfig.fixedFeeCardOrdersIngest) &&
         Objects.equals(this.fixedFeeCashOrdersIngest, storeFeeConfig.fixedFeeCashOrdersIngest) &&
         Objects.equals(this.percentFeeDelivery, storeFeeConfig.percentFeeDelivery) &&
-        Objects.equals(this.fixedFeeDelivery, storeFeeConfig.fixedFeeDelivery);
+        Objects.equals(this.fixedFeeDelivery, storeFeeConfig.fixedFeeDelivery) &&
+        Objects.equals(this.percentFeeCardPosTransaction, storeFeeConfig.percentFeeCardPosTransaction) &&
+        Objects.equals(this.fixedFeeCardPosTransaction, storeFeeConfig.fixedFeeCardPosTransaction);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery);
+    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery, percentFeeCardPosTransaction, fixedFeeCardPosTransaction);
   }
 
 
@@ -951,6 +995,8 @@ public class StoreFeeConfig {
     sb.append("    fixedFeeCashOrdersIngest: ").append(toIndentedString(fixedFeeCashOrdersIngest)).append("\n");
     sb.append("    percentFeeDelivery: ").append(toIndentedString(percentFeeDelivery)).append("\n");
     sb.append("    fixedFeeDelivery: ").append(toIndentedString(fixedFeeDelivery)).append("\n");
+    sb.append("    percentFeeCardPosTransaction: ").append(toIndentedString(percentFeeCardPosTransaction)).append("\n");
+    sb.append("    fixedFeeCardPosTransaction: ").append(toIndentedString(fixedFeeCardPosTransaction)).append("\n");
     sb.append("}");
     return sb.toString();
   }

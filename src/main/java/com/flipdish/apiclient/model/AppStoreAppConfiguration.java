@@ -33,7 +33,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-12-16T11:13:21.279Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-09T12:30:32.528Z")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
