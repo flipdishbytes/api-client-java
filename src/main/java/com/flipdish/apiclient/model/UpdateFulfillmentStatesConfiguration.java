@@ -31,7 +31,7 @@ import java.util.List;
  * Update fulfillment states configuration
  */
 @ApiModel(description = "Update fulfillment states configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-09T12:30:32.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-10T08:46:14.854Z")
 public class UpdateFulfillmentStatesConfiguration {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
@@ -93,6 +93,9 @@ public class UpdateFulfillmentStatesConfiguration {
 
   @SerializedName("AutomaticTransitionsEnabled")
   private Boolean automaticTransitionsEnabled = null;
+
+  @SerializedName("OverwriteSystemTemplate")
+  private Boolean overwriteSystemTemplate = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -185,6 +188,24 @@ public class UpdateFulfillmentStatesConfiguration {
     this.automaticTransitionsEnabled = automaticTransitionsEnabled;
   }
 
+  public UpdateFulfillmentStatesConfiguration overwriteSystemTemplate(Boolean overwriteSystemTemplate) {
+    this.overwriteSystemTemplate = overwriteSystemTemplate;
+    return this;
+  }
+
+   /**
+   * Set to true if a system configuration template is to be updated (permissions also needed)
+   * @return overwriteSystemTemplate
+  **/
+  @ApiModelProperty(value = "Set to true if a system configuration template is to be updated (permissions also needed)")
+  public Boolean isOverwriteSystemTemplate() {
+    return overwriteSystemTemplate;
+  }
+
+  public void setOverwriteSystemTemplate(Boolean overwriteSystemTemplate) {
+    this.overwriteSystemTemplate = overwriteSystemTemplate;
+  }
+
   public UpdateFulfillmentStatesConfiguration name(String name) {
     this.name = name;
     return this;
@@ -217,12 +238,13 @@ public class UpdateFulfillmentStatesConfiguration {
         Objects.equals(this.storeSelectorType, updateFulfillmentStatesConfiguration.storeSelectorType) &&
         Objects.equals(this.states, updateFulfillmentStatesConfiguration.states) &&
         Objects.equals(this.automaticTransitionsEnabled, updateFulfillmentStatesConfiguration.automaticTransitionsEnabled) &&
+        Objects.equals(this.overwriteSystemTemplate, updateFulfillmentStatesConfiguration.overwriteSystemTemplate) &&
         Objects.equals(this.name, updateFulfillmentStatesConfiguration.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeIds, storeSelectorType, states, automaticTransitionsEnabled, name);
+    return Objects.hash(storeIds, storeSelectorType, states, automaticTransitionsEnabled, overwriteSystemTemplate, name);
   }
 
 
@@ -235,6 +257,7 @@ public class UpdateFulfillmentStatesConfiguration {
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
     sb.append("    states: ").append(toIndentedString(states)).append("\n");
     sb.append("    automaticTransitionsEnabled: ").append(toIndentedString(automaticTransitionsEnabled)).append("\n");
+    sb.append("    overwriteSystemTemplate: ").append(toIndentedString(overwriteSystemTemplate)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();

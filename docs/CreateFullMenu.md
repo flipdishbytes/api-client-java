@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name of Menu, only shown in portal |  [optional]
 **imageUrl** | **String** | Image url |  [optional]
-**menuSections** | [**List&lt;CreateFullMenuSection&gt;**](CreateFullMenuSection.md) | Menu sections (startes, main etc) |  [optional]
+**menuSections** | [**List&lt;CreateFullMenuSection&gt;**](CreateFullMenuSection.md) | Menu sections (starters, main etc) |  [optional]
 **taxRates** | [**List&lt;CreateMenuTaxRate&gt;**](CreateMenuTaxRate.md) | Menu tax rates |  [optional]
 **displaySectionLinks** | **Boolean** | Display menu section link on UI |  [optional]
 **menuSectionBehaviour** | [**MenuSectionBehaviourEnum**](#MenuSectionBehaviourEnum) | Menu section behaviour |  [optional]
