@@ -14,8 +14,8 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CreateFulfillmentStatesConfiguration;
 import com.flipdish.apiclient.model.FulfillmentStatesConfiguration;
-import com.flipdish.apiclient.model.FulfillmentStatesConfigurationCreateBase;
 import com.flipdish.apiclient.model.RestApiArrayResultFulfillmentStatesConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -51,7 +51,7 @@ public class FulfillmentStateConfigurationApiTest {
     @Test
     public void createFulfillmentStatesConfigTest() throws ApiException {
         String appId = null;
-        FulfillmentStatesConfigurationCreateBase fulfillmentStateConfiguration = null;
+        CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration = null;
         RestApiResultFulfillmentStatesConfiguration response = api.createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
 
         // TODO: test validations
@@ -87,6 +87,22 @@ public class FulfillmentStateConfigurationApiTest {
         String appId = null;
         String configId = null;
         FulfillmentStatesConfiguration response = api.getFulfillmentStatesConfiguration(appId, configId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get fulfillment configuration template
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getFulfillmentStatesConfigurationTemplateTest() throws ApiException {
+        String appId = null;
+        FulfillmentStatesConfiguration response = api.getFulfillmentStatesConfigurationTemplate(appId);
 
         // TODO: test validations
     }
