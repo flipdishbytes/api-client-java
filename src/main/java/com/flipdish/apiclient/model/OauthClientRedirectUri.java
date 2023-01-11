@@ -28,7 +28,7 @@ import java.io.IOException;
  * OAuth client redirect uri
  */
 @ApiModel(description = "OAuth client redirect uri")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-11T11:24:46.378Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-11T12:25:53.831Z")
 public class OauthClientRedirectUri {
   @SerializedName("Id")
   private Integer id = null;
