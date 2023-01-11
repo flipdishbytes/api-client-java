@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu Summary
  */
 @ApiModel(description = "Menu Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-10T09:56:43.568Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-11T11:24:46.378Z")
 public class MenuSummary {
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -41,6 +41,9 @@ public class MenuSummary {
 
   @SerializedName("VersionNumber")
   private Integer versionNumber = null;
+
+  @SerializedName("MenuUrl")
+  private String menuUrl = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -103,6 +106,24 @@ public class MenuSummary {
 
   public void setVersionNumber(Integer versionNumber) {
     this.versionNumber = versionNumber;
+  }
+
+  public MenuSummary menuUrl(String menuUrl) {
+    this.menuUrl = menuUrl;
+    return this;
+  }
+
+   /**
+   * Menu Url
+   * @return menuUrl
+  **/
+  @ApiModelProperty(value = "Menu Url")
+  public String getMenuUrl() {
+    return menuUrl;
+  }
+
+  public void setMenuUrl(String menuUrl) {
+    this.menuUrl = menuUrl;
   }
 
   public MenuSummary name(String name) {
@@ -180,6 +201,7 @@ public class MenuSummary {
     return Objects.equals(this.menuId, menuSummary.menuId) &&
         Objects.equals(this.modifiedTime, menuSummary.modifiedTime) &&
         Objects.equals(this.versionNumber, menuSummary.versionNumber) &&
+        Objects.equals(this.menuUrl, menuSummary.menuUrl) &&
         Objects.equals(this.name, menuSummary.name) &&
         Objects.equals(this.locked, menuSummary.locked) &&
         Objects.equals(this.storeNames, menuSummary.storeNames);
@@ -187,7 +209,7 @@ public class MenuSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuId, modifiedTime, versionNumber, name, locked, storeNames);
+    return Objects.hash(menuId, modifiedTime, versionNumber, menuUrl, name, locked, storeNames);
   }
 
 
@@ -199,6 +221,7 @@ public class MenuSummary {
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
     sb.append("    modifiedTime: ").append(toIndentedString(modifiedTime)).append("\n");
     sb.append("    versionNumber: ").append(toIndentedString(versionNumber)).append("\n");
+    sb.append("    menuUrl: ").append(toIndentedString(menuUrl)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");

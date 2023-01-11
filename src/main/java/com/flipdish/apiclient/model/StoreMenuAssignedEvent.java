@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu Assigned To Store Event
  */
 @ApiModel(description = "Menu Assigned To Store Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-10T09:56:43.568Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-11T11:24:46.378Z")
 public class StoreMenuAssignedEvent {
   @SerializedName("EventName")
   private String eventName = null;
