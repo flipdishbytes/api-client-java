@@ -147,7 +147,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
 String appId = "appId_example"; // String | App id
-String configId = "configId_example"; // String | App store app configuration id
+String configId = "configId_example"; // String | Fulfillment configuration id
 try {
     FulfillmentStatesConfiguration result = apiInstance.getFulfillmentStatesConfiguration(appId, configId);
     System.out.println(result);
@@ -162,7 +162,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App id |
- **configId** | **String**| App store app configuration id |
+ **configId** | **String**| Fulfillment configuration id |
 
 ### Return type
 

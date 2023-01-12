@@ -330,7 +330,7 @@ public class FulfillmentStateConfigurationApi {
     /**
      * Build call for getFulfillmentStatesConfiguration
      * @param appId App id (required)
-     * @param configId App store app configuration id (required)
+     * @param configId Fulfillment configuration id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -402,7 +402,7 @@ public class FulfillmentStateConfigurationApi {
      * Get fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
-     * @param configId App store app configuration id (required)
+     * @param configId Fulfillment configuration id (required)
      * @return FulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -415,7 +415,7 @@ public class FulfillmentStateConfigurationApi {
      * Get fulfillment configuration
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
-     * @param configId App store app configuration id (required)
+     * @param configId Fulfillment configuration id (required)
      * @return ApiResponse&lt;FulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -429,7 +429,7 @@ public class FulfillmentStateConfigurationApi {
      * Get fulfillment configuration (asynchronously)
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App id (required)
-     * @param configId App store app configuration id (required)
+     * @param configId Fulfillment configuration id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
