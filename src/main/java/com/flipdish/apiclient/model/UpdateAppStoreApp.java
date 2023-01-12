@@ -32,7 +32,7 @@ import java.util.List;
  * Update App store app
  */
 @ApiModel(description = "Update App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-12T13:28:10.375Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-12T15:25:52.985Z")
 public class UpdateAppStoreApp {
   @SerializedName("Details")
   private String details = null;
