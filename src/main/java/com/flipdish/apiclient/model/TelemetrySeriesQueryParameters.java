@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * TelemetrySeriesQueryParameters
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-18T13:54:00.851Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-18T15:02:17.381Z")
 public class TelemetrySeriesQueryParameters {
   @SerializedName("KioskId")
   private String kioskId = null;
