@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-18T09:48:41.601Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-18T10:23:43.282Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -483,6 +483,9 @@ public class App {
   @SerializedName("MapSouthWest")
   private Coordinates mapSouthWest = null;
 
+  @SerializedName("GoogleMapsApiKeyWeb")
+  private String googleMapsApiKeyWeb = null;
+
   @SerializedName("Name")
   private String name = null;
 
@@ -816,6 +819,24 @@ public class App {
     this.mapSouthWest = mapSouthWest;
   }
 
+  public App googleMapsApiKeyWeb(String googleMapsApiKeyWeb) {
+    this.googleMapsApiKeyWeb = googleMapsApiKeyWeb;
+    return this;
+  }
+
+   /**
+   * Key to be passed with Google Maps requests
+   * @return googleMapsApiKeyWeb
+  **/
+  @ApiModelProperty(value = "Key to be passed with Google Maps requests")
+  public String getGoogleMapsApiKeyWeb() {
+    return googleMapsApiKeyWeb;
+  }
+
+  public void setGoogleMapsApiKeyWeb(String googleMapsApiKeyWeb) {
+    this.googleMapsApiKeyWeb = googleMapsApiKeyWeb;
+  }
+
   public App name(String name) {
     this.name = name;
     return this;
@@ -947,6 +968,7 @@ public class App {
         Objects.equals(this.mapCenter, app.mapCenter) &&
         Objects.equals(this.mapNorthEast, app.mapNorthEast) &&
         Objects.equals(this.mapSouthWest, app.mapSouthWest) &&
+        Objects.equals(this.googleMapsApiKeyWeb, app.googleMapsApiKeyWeb) &&
         Objects.equals(this.name, app.name) &&
         Objects.equals(this.hostName, app.hostName) &&
         Objects.equals(this.mainColor, app.mainColor) &&
@@ -957,7 +979,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, name, hostName, mainColor, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
   }
 
 
@@ -979,6 +1001,7 @@ public class App {
     sb.append("    mapCenter: ").append(toIndentedString(mapCenter)).append("\n");
     sb.append("    mapNorthEast: ").append(toIndentedString(mapNorthEast)).append("\n");
     sb.append("    mapSouthWest: ").append(toIndentedString(mapSouthWest)).append("\n");
+    sb.append("    googleMapsApiKeyWeb: ").append(toIndentedString(googleMapsApiKeyWeb)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");
