@@ -198,6 +198,7 @@ VIEWPAYGREENWHITELABELCONFIGURATION | &quot;ViewPayGreenWhiteLabelConfiguration&
 CREATEPAYGREENWHITELABELCONFIGURATION | &quot;CreatePayGreenWhiteLabelConfiguration&quot;
 UPDATEPAYGREENWHITELABELCONFIGURATION | &quot;UpdatePayGreenWhiteLabelConfiguration&quot;
 UPDATEPAYGREENSTORECONFIGURATION | &quot;UpdatePayGreenStoreConfiguration&quot;
+VIEWSUBSCRIPTIONS | &quot;ViewSubscriptions&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>

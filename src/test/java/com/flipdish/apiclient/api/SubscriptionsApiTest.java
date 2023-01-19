@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -34,6 +35,23 @@ public class SubscriptionsApiTest {
 
     private final SubscriptionsApi api = new SubscriptionsApi();
 
+    
+    /**
+     * Get subscription by id
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getSubscriptionByIdTest() throws ApiException {
+        String appId = null;
+        String subscriptionId = null;
+        RestApiResultSubscription response = api.getSubscriptionById(appId, subscriptionId);
+
+        // TODO: test validations
+    }
     
     /**
      * Get list of subscriptions for an App
