@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.BankAccountCreate;
 import com.flipdish.apiclient.model.BankAccountDetailsUpdateRequest;
+import com.flipdish.apiclient.model.RestApiArrayResultStripeCustomConnectedAccount;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBankAccountDetail;
@@ -466,6 +467,139 @@ public class StripeCustomConnectApi {
 
         com.squareup.okhttp.Call call = createStripeConnectedAccountLinkValidateBeforeCall(appId, stripeConnectedAccountId, stripeAccountLinkRequest, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultStripeConnectedAccount>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getCustomConnect
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getCustomConnectCall(Integer storeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/customconnect/{storeId}"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getCustomConnectValidateBeforeCall(Integer storeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getCustomConnect(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getCustomConnect(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getCustomConnectCall(storeId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Gets a list of stripe custom connect ids information
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @return RestApiArrayResultStripeCustomConnectedAccount
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultStripeCustomConnectedAccount getCustomConnect(Integer storeId, String appId) throws ApiException {
+        ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> resp = getCustomConnectWithHttpInfo(storeId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * Gets a list of stripe custom connect ids information
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultStripeCustomConnectedAccount&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultStripeCustomConnectedAccount> getCustomConnectWithHttpInfo(Integer storeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getCustomConnectValidateBeforeCall(storeId, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStripeCustomConnectedAccount>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets a list of stripe custom connect ids information (asynchronously)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getCustomConnectAsync(Integer storeId, String appId, final ApiCallback<RestApiArrayResultStripeCustomConnectedAccount> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getCustomConnectValidateBeforeCall(storeId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStripeCustomConnectedAccount>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

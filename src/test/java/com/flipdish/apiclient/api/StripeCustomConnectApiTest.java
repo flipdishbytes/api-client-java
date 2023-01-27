@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BankAccountCreate;
 import com.flipdish.apiclient.model.BankAccountDetailsUpdateRequest;
+import com.flipdish.apiclient.model.RestApiArrayResultStripeCustomConnectedAccount;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBankAccountDetail;
@@ -88,6 +89,23 @@ public class StripeCustomConnectApiTest {
         String stripeConnectedAccountId = null;
         StripeAccountLinkRequest stripeAccountLinkRequest = null;
         RestApiResultStripeConnectedAccount response = api.createStripeConnectedAccountLink(appId, stripeConnectedAccountId, stripeAccountLinkRequest);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Gets a list of stripe custom connect ids information
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getCustomConnectTest() throws ApiException {
+        Integer storeId = null;
+        String appId = null;
+        RestApiArrayResultStripeCustomConnectedAccount response = api.getCustomConnect(storeId, appId);
 
         // TODO: test validations
     }
