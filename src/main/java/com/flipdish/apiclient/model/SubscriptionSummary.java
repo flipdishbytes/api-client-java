@@ -28,10 +28,342 @@ import java.io.IOException;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-31T09:29:45.398Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-01-31T12:19:10.184Z")
 public class SubscriptionSummary {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
+
+  /**
+   * Status
+   */
+  @JsonAdapter(StatusEnum.Adapter.class)
+  public enum StatusEnum {
+    INCOMPLETE("incomplete"),
+    
+    INCOMPLETE_EXPIRED("incomplete_expired"),
+    
+    TRIALING("trialing"),
+    
+    ACTIVE("active"),
+    
+    PAST_DUE("past_due"),
+    
+    CANCELED("canceled"),
+    
+    UNPAID("unpaid");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static StatusEnum fromValue(String text) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<StatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return StatusEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("Status")
+  private StatusEnum status = null;
+
+  /**
+   * Currency
+   */
+  @JsonAdapter(CurrencyEnum.Adapter.class)
+  public enum CurrencyEnum {
+    EUR("EUR"),
+    
+    USD("USD"),
+    
+    GBP("GBP"),
+    
+    CAD("CAD"),
+    
+    AUD("AUD"),
+    
+    DJF("DJF"),
+    
+    ZAR("ZAR"),
+    
+    ETB("ETB"),
+    
+    AED("AED"),
+    
+    BHD("BHD"),
+    
+    DZD("DZD"),
+    
+    EGP("EGP"),
+    
+    IQD("IQD"),
+    
+    JOD("JOD"),
+    
+    KWD("KWD"),
+    
+    LBP("LBP"),
+    
+    LYD("LYD"),
+    
+    MAD("MAD"),
+    
+    OMR("OMR"),
+    
+    QAR("QAR"),
+    
+    SAR("SAR"),
+    
+    SYP("SYP"),
+    
+    TND("TND"),
+    
+    YER("YER"),
+    
+    CLP("CLP"),
+    
+    INR("INR"),
+    
+    AZN("AZN"),
+    
+    RUB("RUB"),
+    
+    BYN("BYN"),
+    
+    BGN("BGN"),
+    
+    NGN("NGN"),
+    
+    BDT("BDT"),
+    
+    CNY("CNY"),
+    
+    BAM("BAM"),
+    
+    CZK("CZK"),
+    
+    DKK("DKK"),
+    
+    CHF("CHF"),
+    
+    MVR("MVR"),
+    
+    BTN("BTN"),
+    
+    XCD("XCD"),
+    
+    BZD("BZD"),
+    
+    HKD("HKD"),
+    
+    IDR("IDR"),
+    
+    JMD("JMD"),
+    
+    MYR("MYR"),
+    
+    NZD("NZD"),
+    
+    PHP("PHP"),
+    
+    SGD("SGD"),
+    
+    TTD("TTD"),
+    
+    XDR("XDR"),
+    
+    ARS("ARS"),
+    
+    BOB("BOB"),
+    
+    COP("COP"),
+    
+    CRC("CRC"),
+    
+    CUP("CUP"),
+    
+    DOP("DOP"),
+    
+    GTQ("GTQ"),
+    
+    HNL("HNL"),
+    
+    MXN("MXN"),
+    
+    NIO("NIO"),
+    
+    PAB("PAB"),
+    
+    PEN("PEN"),
+    
+    PYG("PYG"),
+    
+    UYU("UYU"),
+    
+    VEF("VEF"),
+    
+    IRR("IRR"),
+    
+    XOF("XOF"),
+    
+    CDF("CDF"),
+    
+    XAF("XAF"),
+    
+    HTG("HTG"),
+    
+    ILS("ILS"),
+    
+    HRK("HRK"),
+    
+    HUF("HUF"),
+    
+    AMD("AMD"),
+    
+    ISK("ISK"),
+    
+    JPY("JPY"),
+    
+    GEL("GEL"),
+    
+    KZT("KZT"),
+    
+    KHR("KHR"),
+    
+    KRW("KRW"),
+    
+    KGS("KGS"),
+    
+    LAK("LAK"),
+    
+    MKD("MKD"),
+    
+    MNT("MNT"),
+    
+    BND("BND"),
+    
+    MMK("MMK"),
+    
+    NOK("NOK"),
+    
+    NPR("NPR"),
+    
+    PKR("PKR"),
+    
+    PLN("PLN"),
+    
+    AFN("AFN"),
+    
+    BRL("BRL"),
+    
+    MDL("MDL"),
+    
+    RON("RON"),
+    
+    RWF("RWF"),
+    
+    SEK("SEK"),
+    
+    LKR("LKR"),
+    
+    SOS("SOS"),
+    
+    ALL("ALL"),
+    
+    RSD("RSD"),
+    
+    KES("KES"),
+    
+    TJS("TJS"),
+    
+    THB("THB"),
+    
+    ERN("ERN"),
+    
+    TMT("TMT"),
+    
+    BWP("BWP"),
+    
+    TRY("TRY"),
+    
+    UAH("UAH"),
+    
+    UZS("UZS"),
+    
+    VND("VND"),
+    
+    MOP("MOP"),
+    
+    TWD("TWD"),
+    
+    BMD("BMD");
+
+    private String value;
+
+    CurrencyEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static CurrencyEnum fromValue(String text) {
+      for (CurrencyEnum b : CurrencyEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<CurrencyEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final CurrencyEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public CurrencyEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return CurrencyEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("Currency")
+  private CurrencyEnum currency = null;
 
   public SubscriptionSummary subscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
@@ -42,13 +374,49 @@ public class SubscriptionSummary {
    * The subscription identifier
    * @return subscriptionId
   **/
-  @ApiModelProperty(value = "The subscription identifier")
+  @ApiModelProperty(required = true, value = "The subscription identifier")
   public String getSubscriptionId() {
     return subscriptionId;
   }
 
   public void setSubscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
+  }
+
+  public SubscriptionSummary status(StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Status
+   * @return status
+  **/
+  @ApiModelProperty(required = true, value = "Status")
+  public StatusEnum getStatus() {
+    return status;
+  }
+
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
+  public SubscriptionSummary currency(CurrencyEnum currency) {
+    this.currency = currency;
+    return this;
+  }
+
+   /**
+   * Currency
+   * @return currency
+  **/
+  @ApiModelProperty(required = true, value = "Currency")
+  public CurrencyEnum getCurrency() {
+    return currency;
+  }
+
+  public void setCurrency(CurrencyEnum currency) {
+    this.currency = currency;
   }
 
 
@@ -61,12 +429,14 @@ public class SubscriptionSummary {
       return false;
     }
     SubscriptionSummary subscriptionSummary = (SubscriptionSummary) o;
-    return Objects.equals(this.subscriptionId, subscriptionSummary.subscriptionId);
+    return Objects.equals(this.subscriptionId, subscriptionSummary.subscriptionId) &&
+        Objects.equals(this.status, subscriptionSummary.status) &&
+        Objects.equals(this.currency, subscriptionSummary.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionId);
+    return Objects.hash(subscriptionId, status, currency);
   }
 
 
@@ -76,6 +446,8 @@ public class SubscriptionSummary {
     sb.append("class SubscriptionSummary {\n");
     
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
