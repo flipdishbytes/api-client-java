@@ -32,7 +32,7 @@ import java.util.List;
  * Create App store app
  */
 @ApiModel(description = "Create App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T13:07:50.797Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T14:20:35.913Z")
 public class CreateAppStoreApp {
   @SerializedName("Details")
   private String details = null;
@@ -260,6 +260,9 @@ public class CreateAppStoreApp {
 
   @SerializedName("Support")
   private AppStoreAppSupportInfo support = null;
+
+  @SerializedName("ExternalFunctionActionUrl")
+  private String externalFunctionActionUrl = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -583,6 +586,24 @@ public class CreateAppStoreApp {
     this.support = support;
   }
 
+  public CreateAppStoreApp externalFunctionActionUrl(String externalFunctionActionUrl) {
+    this.externalFunctionActionUrl = externalFunctionActionUrl;
+    return this;
+  }
+
+   /**
+   * Action URL for external functions, used for handling Portal configuration action buttons
+   * @return externalFunctionActionUrl
+  **/
+  @ApiModelProperty(value = "Action URL for external functions, used for handling Portal configuration action buttons")
+  public String getExternalFunctionActionUrl() {
+    return externalFunctionActionUrl;
+  }
+
+  public void setExternalFunctionActionUrl(String externalFunctionActionUrl) {
+    this.externalFunctionActionUrl = externalFunctionActionUrl;
+  }
+
   public CreateAppStoreApp name(String name) {
     this.name = name;
     return this;
@@ -720,6 +741,7 @@ public class CreateAppStoreApp {
         Objects.equals(this.teammateAppAccessLevel, createAppStoreApp.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, createAppStoreApp.permissionsType) &&
         Objects.equals(this.support, createAppStoreApp.support) &&
+        Objects.equals(this.externalFunctionActionUrl, createAppStoreApp.externalFunctionActionUrl) &&
         Objects.equals(this.name, createAppStoreApp.name) &&
         Objects.equals(this.description, createAppStoreApp.description) &&
         Objects.equals(this.isEnabled, createAppStoreApp.isEnabled) &&
@@ -730,7 +752,7 @@ public class CreateAppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -748,6 +770,7 @@ public class CreateAppStoreApp {
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    support: ").append(toIndentedString(support)).append("\n");
+    sb.append("    externalFunctionActionUrl: ").append(toIndentedString(externalFunctionActionUrl)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

@@ -33,7 +33,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T13:07:50.797Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T14:20:35.913Z")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -337,6 +337,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("Support")
   private AppStoreAppSupportInfo support = null;
+
+  @SerializedName("ExternalFunctionActionUrl")
+  private String externalFunctionActionUrl = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -835,6 +838,24 @@ public class AppStoreAppConfiguration {
     this.support = support;
   }
 
+  public AppStoreAppConfiguration externalFunctionActionUrl(String externalFunctionActionUrl) {
+    this.externalFunctionActionUrl = externalFunctionActionUrl;
+    return this;
+  }
+
+   /**
+   * Action URL for external functions, used for handling Portal configuration action buttons
+   * @return externalFunctionActionUrl
+  **/
+  @ApiModelProperty(value = "Action URL for external functions, used for handling Portal configuration action buttons")
+  public String getExternalFunctionActionUrl() {
+    return externalFunctionActionUrl;
+  }
+
+  public void setExternalFunctionActionUrl(String externalFunctionActionUrl) {
+    this.externalFunctionActionUrl = externalFunctionActionUrl;
+  }
+
   public AppStoreAppConfiguration name(String name) {
     this.name = name;
     return this;
@@ -963,6 +984,7 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.teammateAppAccessLevel, appStoreAppConfiguration.teammateAppAccessLevel) &&
         Objects.equals(this.permissionsType, appStoreAppConfiguration.permissionsType) &&
         Objects.equals(this.support, appStoreAppConfiguration.support) &&
+        Objects.equals(this.externalFunctionActionUrl, appStoreAppConfiguration.externalFunctionActionUrl) &&
         Objects.equals(this.name, appStoreAppConfiguration.name) &&
         Objects.equals(this.description, appStoreAppConfiguration.description) &&
         Objects.equals(this.categories, appStoreAppConfiguration.categories) &&
@@ -972,7 +994,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, name, description, categories, countries, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, name, description, categories, countries, developerName);
   }
 
 
@@ -999,6 +1021,7 @@ public class AppStoreAppConfiguration {
     sb.append("    teammateAppAccessLevel: ").append(toIndentedString(teammateAppAccessLevel)).append("\n");
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    support: ").append(toIndentedString(support)).append("\n");
+    sb.append("    externalFunctionActionUrl: ").append(toIndentedString(externalFunctionActionUrl)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    categories: ").append(toIndentedString(categories)).append("\n");

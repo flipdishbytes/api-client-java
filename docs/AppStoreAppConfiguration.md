@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
 **permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
 **support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information |  [optional]
+**externalFunctionActionUrl** | **String** | Action URL for external functions, used for handling Portal configuration action buttons |  [optional]
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
