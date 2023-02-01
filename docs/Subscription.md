@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **subscriptionId** | **String** | The subscription identifier | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
+**nextInvoiceAmount** | **Long** | Next invoice amount |  [optional]
+**nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 
 
 <a name="StatusEnum"></a>

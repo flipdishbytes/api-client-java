@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T12:31:41.756Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-01T13:07:50.797Z")
 public class SubscriptionSummary {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -365,6 +366,12 @@ public class SubscriptionSummary {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
+  @SerializedName("NextInvoiceAmount")
+  private Long nextInvoiceAmount = null;
+
+  @SerializedName("NextInvoiceBillingDate")
+  private OffsetDateTime nextInvoiceBillingDate = null;
+
   public SubscriptionSummary subscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
@@ -419,6 +426,42 @@ public class SubscriptionSummary {
     this.currency = currency;
   }
 
+  public SubscriptionSummary nextInvoiceAmount(Long nextInvoiceAmount) {
+    this.nextInvoiceAmount = nextInvoiceAmount;
+    return this;
+  }
+
+   /**
+   * Next invoice amount
+   * @return nextInvoiceAmount
+  **/
+  @ApiModelProperty(value = "Next invoice amount")
+  public Long getNextInvoiceAmount() {
+    return nextInvoiceAmount;
+  }
+
+  public void setNextInvoiceAmount(Long nextInvoiceAmount) {
+    this.nextInvoiceAmount = nextInvoiceAmount;
+  }
+
+  public SubscriptionSummary nextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
+    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
+    return this;
+  }
+
+   /**
+   * Next invoice billing date
+   * @return nextInvoiceBillingDate
+  **/
+  @ApiModelProperty(value = "Next invoice billing date")
+  public OffsetDateTime getNextInvoiceBillingDate() {
+    return nextInvoiceBillingDate;
+  }
+
+  public void setNextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
+    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -431,12 +474,14 @@ public class SubscriptionSummary {
     SubscriptionSummary subscriptionSummary = (SubscriptionSummary) o;
     return Objects.equals(this.subscriptionId, subscriptionSummary.subscriptionId) &&
         Objects.equals(this.status, subscriptionSummary.status) &&
-        Objects.equals(this.currency, subscriptionSummary.currency);
+        Objects.equals(this.currency, subscriptionSummary.currency) &&
+        Objects.equals(this.nextInvoiceAmount, subscriptionSummary.nextInvoiceAmount) &&
+        Objects.equals(this.nextInvoiceBillingDate, subscriptionSummary.nextInvoiceBillingDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionId, status, currency);
+    return Objects.hash(subscriptionId, status, currency, nextInvoiceAmount, nextInvoiceBillingDate);
   }
 
 
@@ -448,6 +493,8 @@ public class SubscriptionSummary {
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
+    sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");
+    sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }
