@@ -32,7 +32,7 @@ import java.util.List;
  * App store app
  */
 @ApiModel(description = "App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-03T14:50:32.441Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-08T11:24:43.671Z")
 public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
@@ -324,6 +324,9 @@ public class AppStoreApp {
 
   @SerializedName("ExternalFunctionActionUrl")
   private String externalFunctionActionUrl = null;
+
+  @SerializedName("ExternalFunctionSignatureKey")
+  private String externalFunctionSignatureKey = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -737,6 +740,24 @@ public class AppStoreApp {
     this.externalFunctionActionUrl = externalFunctionActionUrl;
   }
 
+  public AppStoreApp externalFunctionSignatureKey(String externalFunctionSignatureKey) {
+    this.externalFunctionSignatureKey = externalFunctionSignatureKey;
+    return this;
+  }
+
+   /**
+   * Signing key for external function action calls
+   * @return externalFunctionSignatureKey
+  **/
+  @ApiModelProperty(value = "Signing key for external function action calls")
+  public String getExternalFunctionSignatureKey() {
+    return externalFunctionSignatureKey;
+  }
+
+  public void setExternalFunctionSignatureKey(String externalFunctionSignatureKey) {
+    this.externalFunctionSignatureKey = externalFunctionSignatureKey;
+  }
+
   public AppStoreApp name(String name) {
     this.name = name;
     return this;
@@ -879,6 +900,7 @@ public class AppStoreApp {
         Objects.equals(this.permissionsType, appStoreApp.permissionsType) &&
         Objects.equals(this.support, appStoreApp.support) &&
         Objects.equals(this.externalFunctionActionUrl, appStoreApp.externalFunctionActionUrl) &&
+        Objects.equals(this.externalFunctionSignatureKey, appStoreApp.externalFunctionSignatureKey) &&
         Objects.equals(this.name, appStoreApp.name) &&
         Objects.equals(this.description, appStoreApp.description) &&
         Objects.equals(this.isEnabled, appStoreApp.isEnabled) &&
@@ -889,7 +911,7 @@ public class AppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(id, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -912,6 +934,7 @@ public class AppStoreApp {
     sb.append("    permissionsType: ").append(toIndentedString(permissionsType)).append("\n");
     sb.append("    support: ").append(toIndentedString(support)).append("\n");
     sb.append("    externalFunctionActionUrl: ").append(toIndentedString(externalFunctionActionUrl)).append("\n");
+    sb.append("    externalFunctionSignatureKey: ").append(toIndentedString(externalFunctionSignatureKey)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

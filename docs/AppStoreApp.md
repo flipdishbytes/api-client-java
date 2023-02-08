@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
 **support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information |  [optional]
 **externalFunctionActionUrl** | **String** | Action URL for external functions, used for handling Portal configuration action buttons |  [optional]
+**externalFunctionSignatureKey** | **String** | Signing key for external function action calls |  [optional]
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **isEnabled** | **Boolean** | Is application enabled |  [optional]
