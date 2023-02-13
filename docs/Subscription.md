@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **subscriptionId** | **String** | The subscription identifier | 
+**name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **nextInvoiceAmount** | **Long** | Next invoice amount |  [optional]

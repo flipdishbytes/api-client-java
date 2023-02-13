@@ -29,10 +29,13 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-08T11:24:43.671Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-13T11:06:58.762Z")
 public class SubscriptionSummary {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
+
+  @SerializedName("Name")
+  private String name = null;
 
   /**
    * Status
@@ -390,6 +393,24 @@ public class SubscriptionSummary {
     this.subscriptionId = subscriptionId;
   }
 
+  public SubscriptionSummary name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public SubscriptionSummary status(StatusEnum status) {
     this.status = status;
     return this;
@@ -473,6 +494,7 @@ public class SubscriptionSummary {
     }
     SubscriptionSummary subscriptionSummary = (SubscriptionSummary) o;
     return Objects.equals(this.subscriptionId, subscriptionSummary.subscriptionId) &&
+        Objects.equals(this.name, subscriptionSummary.name) &&
         Objects.equals(this.status, subscriptionSummary.status) &&
         Objects.equals(this.currency, subscriptionSummary.currency) &&
         Objects.equals(this.nextInvoiceAmount, subscriptionSummary.nextInvoiceAmount) &&
@@ -481,7 +503,7 @@ public class SubscriptionSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionId, status, currency, nextInvoiceAmount, nextInvoiceBillingDate);
+    return Objects.hash(subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate);
   }
 
 
@@ -491,6 +513,7 @@ public class SubscriptionSummary {
     sb.append("class SubscriptionSummary {\n");
     
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");

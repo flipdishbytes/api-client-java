@@ -28,7 +28,7 @@ import java.io.IOException;
  * Predefined answer
  */
 @ApiModel(description = "Predefined answer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-08T11:24:43.671Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-13T11:06:58.762Z")
 public class PredefinedAnswer {
   @SerializedName("Id")
   private Integer id = null;
