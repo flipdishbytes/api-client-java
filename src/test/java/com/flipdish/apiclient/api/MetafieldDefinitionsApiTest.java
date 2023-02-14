@@ -41,9 +41,9 @@ public class MetafieldDefinitionsApiTest {
 
     
     /**
-     * Create a Metafield Definition
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -59,9 +59,9 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Get a Metafield Definition for the specified owner entity and key.
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -77,9 +77,9 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Get Metafield Definitions for the specified owner entity.
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -97,9 +97,9 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -113,9 +113,9 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Get OwnerEntity Definition Recommendations
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -133,9 +133,9 @@ public class MetafieldDefinitionsApiTest {
     }
     
     /**
-     * Update a Metafield Definition
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

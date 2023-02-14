@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-[**getMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getMetafieldDefinitionByKey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
-[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
-[**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-[**getOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getOwnerEntityRecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
-[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+[**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**getMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getMetafieldDefinitionByKey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
+[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | 
+[**getOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getOwnerEntityRecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | 
+[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 
 
 <a name="createMetafieldDefinition"></a>
 # **createMetafieldDefinition**
 > RestApiResultMetafieldDefinition createMetafieldDefinition(appId, ownerEntity, createMetafieldDefinition)
 
-Create a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -73,9 +71,7 @@ Name | Type | Description  | Notes
 # **getMetafieldDefinitionByKey**
 > RestApiResultMetafieldDefinition getMetafieldDefinitionByKey(appId, ownerEntity, key)
 
-Get a Metafield Definition for the specified owner entity and key.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -130,9 +126,7 @@ Name | Type | Description  | Notes
 # **getMetafieldDefinitions**
 > RestApiPaginationResultMetafieldDefinition getMetafieldDefinitions(appId, ownerEntity, searchTerm, page, limit)
 
-Get Metafield Definitions for the specified owner entity.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -191,9 +185,7 @@ Name | Type | Description  | Notes
 # **getOwnerEntityConfigurations**
 > OwnerEntityConfigurations getOwnerEntityConfigurations(appId)
 
-Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -244,9 +236,7 @@ Name | Type | Description  | Notes
 # **getOwnerEntityRecommendations**
 > RestApiPaginationResultMetafieldDefinitionRecommendation getOwnerEntityRecommendations(appId, ownerEntity, searchTerm, page, limit)
 
-Get OwnerEntity Definition Recommendations
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -305,9 +295,7 @@ Name | Type | Description  | Notes
 # **updateMetafieldDefinition**
 > RestApiResultMetafieldDefinition updateMetafieldDefinition(appId, ownerEntity, key, updateMetafieldDefinition)
 
-Update a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

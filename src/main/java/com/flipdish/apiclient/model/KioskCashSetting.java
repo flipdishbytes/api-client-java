@@ -28,7 +28,7 @@ import java.io.IOException;
  * Model containing result of Kiosk cash setting
  */
 @ApiModel(description = "Model containing result of Kiosk cash setting")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T09:37:20.863Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T16:07:52.302Z")
 public class KioskCashSetting {
   @SerializedName("CashPaymentEnabled")
   private Boolean cashPaymentEnabled = null;

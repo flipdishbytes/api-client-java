@@ -28,7 +28,7 @@ import java.io.IOException;
  * Valid Value
  */
 @ApiModel(description = "Valid Value")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T09:37:20.863Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T16:07:52.302Z")
 public class ValidValue {
   @SerializedName("Code")
   private String code = null;

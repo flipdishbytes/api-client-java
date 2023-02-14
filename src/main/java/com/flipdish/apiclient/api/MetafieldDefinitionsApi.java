@@ -140,8 +140,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Create a Metafield Definition
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param createMetafieldDefinition  (required)
@@ -154,8 +154,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Create a Metafield Definition
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param createMetafieldDefinition  (required)
@@ -169,8 +169,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Create a Metafield Definition (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param createMetafieldDefinition  (required)
@@ -283,8 +283,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get a Metafield Definition for the specified owner entity and key.
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
@@ -297,8 +297,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get a Metafield Definition for the specified owner entity and key.
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
@@ -312,8 +312,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get a Metafield Definition for the specified owner entity and key. (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
@@ -428,8 +428,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get Metafield Definitions for the specified owner entity.
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -444,8 +444,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get Metafield Definitions for the specified owner entity.
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -461,8 +461,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get Metafield Definitions for the specified owner entity. (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -563,8 +563,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @return OwnerEntityConfigurations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -575,8 +575,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @return ApiResponse&lt;OwnerEntityConfigurations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -588,8 +588,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -702,8 +702,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Definition Recommendations
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -718,8 +718,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Definition Recommendations
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -735,8 +735,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Get OwnerEntity Definition Recommendations (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param searchTerm  (optional)
@@ -857,8 +857,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Update a Metafield Definition
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
@@ -872,8 +872,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Update a Metafield Definition
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
@@ -888,8 +888,8 @@ public class MetafieldDefinitionsApi {
     }
 
     /**
-     * Update a Metafield Definition (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param ownerEntity  (required)
      * @param key  (required)
