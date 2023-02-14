@@ -103,7 +103,7 @@ public class HomeApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      * 
      *

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **nextInvoiceAmount** | **Long** | Next invoice amount |  [optional]
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
+**user** | **String** | User |  [optional]
 
 
 <a name="StatusEnum"></a>

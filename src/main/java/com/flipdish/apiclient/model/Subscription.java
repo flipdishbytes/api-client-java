@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-13T11:53:43.706Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T09:37:20.863Z")
 public class Subscription {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -375,6 +375,9 @@ public class Subscription {
   @SerializedName("NextInvoiceBillingDate")
   private OffsetDateTime nextInvoiceBillingDate = null;
 
+  @SerializedName("User")
+  private String user = null;
+
   public Subscription subscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
@@ -483,6 +486,24 @@ public class Subscription {
     this.nextInvoiceBillingDate = nextInvoiceBillingDate;
   }
 
+  public Subscription user(String user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * User
+   * @return user
+  **/
+  @ApiModelProperty(value = "User")
+  public String getUser() {
+    return user;
+  }
+
+  public void setUser(String user) {
+    this.user = user;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -498,12 +519,13 @@ public class Subscription {
         Objects.equals(this.status, subscription.status) &&
         Objects.equals(this.currency, subscription.currency) &&
         Objects.equals(this.nextInvoiceAmount, subscription.nextInvoiceAmount) &&
-        Objects.equals(this.nextInvoiceBillingDate, subscription.nextInvoiceBillingDate);
+        Objects.equals(this.nextInvoiceBillingDate, subscription.nextInvoiceBillingDate) &&
+        Objects.equals(this.user, subscription.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate);
+    return Objects.hash(subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user);
   }
 
 
@@ -518,6 +540,7 @@ public class Subscription {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");
     sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();
   }

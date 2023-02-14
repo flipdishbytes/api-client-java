@@ -620,7 +620,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      * 
      * @return RestApiResultOktaPortalFeatureFlag
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -631,7 +631,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      * 
      * @return ApiResponse&lt;RestApiResultOktaPortalFeatureFlag&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -643,7 +643,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Okta Portal feature flag value (asynchronously)
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
