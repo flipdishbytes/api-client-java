@@ -28,7 +28,7 @@ import java.io.IOException;
  * Accept
  */
 @ApiModel(description = "Accept")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-14T16:07:52.302Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T09:39:00.761Z")
 public class Accept {
   @SerializedName("EstimatedMinutesForDelivery")
   private Integer estimatedMinutesForDelivery = null;
