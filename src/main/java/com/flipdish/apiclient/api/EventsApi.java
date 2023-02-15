@@ -71,6 +71,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -81,7 +83,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getCustomerEventsCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getCustomerEventsCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -106,6 +108,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -150,7 +156,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getCustomerEventsValidateBeforeCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getCustomerEventsValidateBeforeCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'customerId' is set
         if (customerId == null) {
@@ -158,7 +164,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getCustomerEventsCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getCustomerEventsCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -175,6 +181,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -183,8 +191,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getCustomerEvents(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getCustomerEventsWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getCustomerEvents(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getCustomerEventsWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -200,6 +208,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -208,8 +218,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getCustomerEventsWithHttpInfo(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getCustomerEventsValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getCustomerEventsWithHttpInfo(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getCustomerEventsValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -226,6 +236,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -235,7 +247,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getCustomerEventsAsync(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getCustomerEventsAsync(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -256,7 +268,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getCustomerEventsValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getCustomerEventsValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -273,6 +285,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -283,7 +297,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getEventsCall(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getEventsCall(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -311,6 +325,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -355,10 +373,10 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getEventsValidateBeforeCall(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getEventsValidateBeforeCall(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = getEventsCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getEventsCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -376,6 +394,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -384,8 +404,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getEvents(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getEventsWithHttpInfo(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getEvents(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getEventsWithHttpInfo(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -402,6 +422,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -410,8 +432,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getEventsWithHttpInfo(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getEventsValidateBeforeCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getEventsWithHttpInfo(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getEventsValidateBeforeCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -429,6 +451,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -438,7 +462,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEventsAsync(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEventsAsync(Integer whiteLabelId, Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -459,7 +483,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getEventsValidateBeforeCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getEventsValidateBeforeCall(whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -598,6 +622,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId2 Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -608,7 +634,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getMenuEventsCall(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getMenuEventsCall(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId2, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -633,6 +659,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId2 != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId2));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -677,7 +707,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getMenuEventsValidateBeforeCall(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getMenuEventsValidateBeforeCall(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId2, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'menuId' is set
         if (menuId == null) {
@@ -685,7 +715,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getMenuEventsCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMenuEventsCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -702,6 +732,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId2 Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -710,8 +742,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getMenuEvents(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getMenuEventsWithHttpInfo(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getMenuEvents(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId2, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getMenuEventsWithHttpInfo(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -727,6 +759,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId2 Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -735,8 +769,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getMenuEventsWithHttpInfo(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getMenuEventsValidateBeforeCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getMenuEventsWithHttpInfo(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId2, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getMenuEventsValidateBeforeCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -753,6 +787,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId2 Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -762,7 +798,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMenuEventsAsync(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMenuEventsAsync(Integer menuId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId2, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -783,7 +819,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getMenuEventsValidateBeforeCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMenuEventsValidateBeforeCall(menuId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -799,6 +835,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -809,7 +847,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOrderEventsCall(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getOrderEventsCall(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -834,6 +872,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -878,7 +920,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOrderEventsValidateBeforeCall(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getOrderEventsValidateBeforeCall(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'orderId' is set
         if (orderId == null) {
@@ -886,7 +928,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getOrderEventsCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderEventsCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -903,6 +945,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -911,8 +955,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getOrderEvents(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getOrderEventsWithHttpInfo(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getOrderEvents(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getOrderEventsWithHttpInfo(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -928,6 +972,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -936,8 +982,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getOrderEventsWithHttpInfo(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getOrderEventsValidateBeforeCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getOrderEventsWithHttpInfo(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getOrderEventsValidateBeforeCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -954,6 +1000,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -963,7 +1011,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOrderEventsAsync(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getOrderEventsAsync(Integer orderId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId2, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -984,7 +1032,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOrderEventsValidateBeforeCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderEventsValidateBeforeCall(orderId, limit, page, start, end, orderId2, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1000,6 +1048,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1010,7 +1060,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOrderEventsByCustomerCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getOrderEventsByCustomerCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1036,6 +1086,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -1080,7 +1134,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOrderEventsByCustomerValidateBeforeCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getOrderEventsByCustomerValidateBeforeCall(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'customerId' is set
         if (customerId == null) {
@@ -1088,7 +1142,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getOrderEventsByCustomerCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderEventsByCustomerCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1105,6 +1159,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1113,8 +1169,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getOrderEventsByCustomer(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getOrderEventsByCustomerWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getOrderEventsByCustomer(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getOrderEventsByCustomerWithHttpInfo(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -1130,6 +1186,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1138,8 +1196,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getOrderEventsByCustomerWithHttpInfo(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getOrderEventsByCustomerValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getOrderEventsByCustomerWithHttpInfo(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getOrderEventsByCustomerValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1156,6 +1214,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1165,7 +1225,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOrderEventsByCustomerAsync(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getOrderEventsByCustomerAsync(Integer customerId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1186,7 +1246,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOrderEventsByCustomerValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrderEventsByCustomerValidateBeforeCall(customerId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1202,6 +1262,8 @@ public class EventsApi {
      * @param storeId2 Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1212,7 +1274,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStoreEventsCall(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStoreEventsCall(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1237,6 +1299,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -1281,7 +1347,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStoreEventsValidateBeforeCall(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStoreEventsValidateBeforeCall(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
@@ -1289,7 +1355,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getStoreEventsCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoreEventsCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1306,6 +1372,8 @@ public class EventsApi {
      * @param storeId2 Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1314,8 +1382,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getStoreEvents(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getStoreEventsWithHttpInfo(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getStoreEvents(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getStoreEventsWithHttpInfo(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -1331,6 +1399,8 @@ public class EventsApi {
      * @param storeId2 Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1339,8 +1409,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getStoreEventsWithHttpInfo(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getStoreEventsValidateBeforeCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getStoreEventsWithHttpInfo(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getStoreEventsValidateBeforeCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1357,6 +1427,8 @@ public class EventsApi {
      * @param storeId2 Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1366,7 +1438,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreEventsAsync(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoreEventsAsync(Integer storeId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId2, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1387,7 +1459,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStoreEventsValidateBeforeCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoreEventsValidateBeforeCall(storeId, limit, page, start, end, orderId, storeId2, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1403,6 +1475,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId2 Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1413,7 +1487,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUserEventsCall(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUserEventsCall(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1438,6 +1512,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId2 != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId2));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -1482,7 +1560,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUserEventsValidateBeforeCall(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUserEventsValidateBeforeCall(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -1490,7 +1568,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getUserEventsCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUserEventsCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1507,6 +1585,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId2 Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1515,8 +1595,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getUserEvents(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getUserEventsWithHttpInfo(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getUserEvents(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getUserEventsWithHttpInfo(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -1532,6 +1612,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId2 Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1540,8 +1622,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getUserEventsWithHttpInfo(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getUserEventsValidateBeforeCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getUserEventsWithHttpInfo(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getUserEventsValidateBeforeCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1558,6 +1640,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId2 Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1567,7 +1651,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUserEventsAsync(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUserEventsAsync(Integer userId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId2, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1588,7 +1672,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUserEventsValidateBeforeCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUserEventsValidateBeforeCall(userId, limit, page, start, end, orderId, storeId, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1604,6 +1688,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1614,7 +1700,7 @@ public class EventsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getWhiteLabelEventsCall(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getWhiteLabelEventsCall(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1639,6 +1725,10 @@ public class EventsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
         if (userId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userId", userId));
+        if (menuId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("menuId", menuId));
+        if (campaignId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("campaignId", campaignId));
         if (userEmail != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("userEmail", userEmail));
         if (userName != null)
@@ -1683,7 +1773,7 @@ public class EventsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getWhiteLabelEventsValidateBeforeCall(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getWhiteLabelEventsValidateBeforeCall(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'whitelabelId' is set
         if (whitelabelId == null) {
@@ -1691,7 +1781,7 @@ public class EventsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getWhiteLabelEventsCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getWhiteLabelEventsCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1708,6 +1798,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1716,8 +1808,8 @@ public class EventsApi {
      * @return RestApiEventSearchPaginationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiEventSearchPaginationResult getWhiteLabelEvents(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        ApiResponse<RestApiEventSearchPaginationResult> resp = getWhiteLabelEventsWithHttpInfo(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    public RestApiEventSearchPaginationResult getWhiteLabelEvents(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        ApiResponse<RestApiEventSearchPaginationResult> resp = getWhiteLabelEventsWithHttpInfo(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
         return resp.getData();
     }
 
@@ -1733,6 +1825,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1741,8 +1835,8 @@ public class EventsApi {
      * @return ApiResponse&lt;RestApiEventSearchPaginationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiEventSearchPaginationResult> getWhiteLabelEventsWithHttpInfo(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
-        com.squareup.okhttp.Call call = getWhiteLabelEventsValidateBeforeCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
+    public ApiResponse<RestApiEventSearchPaginationResult> getWhiteLabelEventsWithHttpInfo(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId) throws ApiException {
+        com.squareup.okhttp.Call call = getWhiteLabelEventsValidateBeforeCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, null, null);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1759,6 +1853,8 @@ public class EventsApi {
      * @param storeId Events that have Store Id (optional)
      * @param storeGroupId Events that have Store Group Id (optional)
      * @param userId Events that have User Id (optional)
+     * @param menuId Events that have Menu Id (optional)
+     * @param campaignId Events that have Campaign Id (optional)
      * @param userEmail Events that have User Email (optional)
      * @param userName Events that have User Name (optional)
      * @param voucherCode Events that have voucher code (optional)
@@ -1768,7 +1864,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getWhiteLabelEventsAsync(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getWhiteLabelEventsAsync(Integer whitelabelId, Integer limit, Integer page, OffsetDateTime start, OffsetDateTime end, Integer orderId, Integer storeId, Integer storeGroupId, Integer userId, Integer menuId, Integer campaignId, String userEmail, String userName, String voucherCode, List<String> eventType, String flipdishEventId, final ApiCallback<RestApiEventSearchPaginationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1789,7 +1885,7 @@ public class EventsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getWhiteLabelEventsValidateBeforeCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getWhiteLabelEventsValidateBeforeCall(whitelabelId, limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiEventSearchPaginationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

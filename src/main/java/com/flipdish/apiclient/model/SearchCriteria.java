@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Search Criteria for Audit Logs
  */
 @ApiModel(description = "Search Criteria for Audit Logs")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T09:39:00.761Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T11:52:43.990Z")
 public class SearchCriteria {
   @SerializedName("Limit")
   private Integer limit = null;
@@ -56,6 +56,12 @@ public class SearchCriteria {
 
   @SerializedName("UserId")
   private Integer userId = null;
+
+  @SerializedName("MenuId")
+  private Integer menuId = null;
+
+  @SerializedName("CampaignId")
+  private Integer campaignId = null;
 
   @SerializedName("UserEmail")
   private String userEmail = null;
@@ -216,6 +222,42 @@ public class SearchCriteria {
     this.userId = userId;
   }
 
+  public SearchCriteria menuId(Integer menuId) {
+    this.menuId = menuId;
+    return this;
+  }
+
+   /**
+   * Events that have Menu Id
+   * @return menuId
+  **/
+  @ApiModelProperty(value = "Events that have Menu Id")
+  public Integer getMenuId() {
+    return menuId;
+  }
+
+  public void setMenuId(Integer menuId) {
+    this.menuId = menuId;
+  }
+
+  public SearchCriteria campaignId(Integer campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+   /**
+   * Events that have Campaign Id
+   * @return campaignId
+  **/
+  @ApiModelProperty(value = "Events that have Campaign Id")
+  public Integer getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Integer campaignId) {
+    this.campaignId = campaignId;
+  }
+
   public SearchCriteria userEmail(String userEmail) {
     this.userEmail = userEmail;
     return this;
@@ -332,6 +374,8 @@ public class SearchCriteria {
         Objects.equals(this.storeId, searchCriteria.storeId) &&
         Objects.equals(this.storeGroupId, searchCriteria.storeGroupId) &&
         Objects.equals(this.userId, searchCriteria.userId) &&
+        Objects.equals(this.menuId, searchCriteria.menuId) &&
+        Objects.equals(this.campaignId, searchCriteria.campaignId) &&
         Objects.equals(this.userEmail, searchCriteria.userEmail) &&
         Objects.equals(this.userName, searchCriteria.userName) &&
         Objects.equals(this.voucherCode, searchCriteria.voucherCode) &&
@@ -341,7 +385,7 @@ public class SearchCriteria {
 
   @Override
   public int hashCode() {
-    return Objects.hash(limit, page, start, end, orderId, storeId, storeGroupId, userId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    return Objects.hash(limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
   }
 
 
@@ -358,6 +402,8 @@ public class SearchCriteria {
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
+    sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    userEmail: ").append(toIndentedString(userEmail)).append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    voucherCode: ").append(toIndentedString(voucherCode)).append("\n");
