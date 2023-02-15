@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T11:52:43.990Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T15:50:54.402Z")
 public class SubscriptionSummary {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -378,6 +378,9 @@ public class SubscriptionSummary {
   @SerializedName("User")
   private String user = null;
 
+  @SerializedName("DefaultPaymentDescription")
+  private String defaultPaymentDescription = null;
+
   public SubscriptionSummary subscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
@@ -495,13 +498,31 @@ public class SubscriptionSummary {
    * User
    * @return user
   **/
-  @ApiModelProperty(value = "User")
+  @ApiModelProperty(required = true, value = "User")
   public String getUser() {
     return user;
   }
 
   public void setUser(String user) {
     this.user = user;
+  }
+
+  public SubscriptionSummary defaultPaymentDescription(String defaultPaymentDescription) {
+    this.defaultPaymentDescription = defaultPaymentDescription;
+    return this;
+  }
+
+   /**
+   * Default payment description
+   * @return defaultPaymentDescription
+  **/
+  @ApiModelProperty(required = true, value = "Default payment description")
+  public String getDefaultPaymentDescription() {
+    return defaultPaymentDescription;
+  }
+
+  public void setDefaultPaymentDescription(String defaultPaymentDescription) {
+    this.defaultPaymentDescription = defaultPaymentDescription;
   }
 
 
@@ -520,12 +541,13 @@ public class SubscriptionSummary {
         Objects.equals(this.currency, subscriptionSummary.currency) &&
         Objects.equals(this.nextInvoiceAmount, subscriptionSummary.nextInvoiceAmount) &&
         Objects.equals(this.nextInvoiceBillingDate, subscriptionSummary.nextInvoiceBillingDate) &&
-        Objects.equals(this.user, subscriptionSummary.user);
+        Objects.equals(this.user, subscriptionSummary.user) &&
+        Objects.equals(this.defaultPaymentDescription, subscriptionSummary.defaultPaymentDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user);
+    return Objects.hash(subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription);
   }
 
 
@@ -541,6 +563,7 @@ public class SubscriptionSummary {
     sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");
     sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    defaultPaymentDescription: ").append(toIndentedString(defaultPaymentDescription)).append("\n");
     sb.append("}");
     return sb.toString();
   }

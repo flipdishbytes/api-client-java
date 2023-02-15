@@ -31,7 +31,7 @@ import java.util.List;
  * Represents a request to update bank account information details
  */
 @ApiModel(description = "Represents a request to update bank account information details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T11:52:43.990Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T15:50:54.402Z")
 public class BankAccountDetailsUpdateRequest {
   @SerializedName("BankAddress")
   private String bankAddress = null;

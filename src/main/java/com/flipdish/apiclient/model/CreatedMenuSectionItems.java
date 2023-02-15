@@ -31,7 +31,7 @@ import java.util.List;
  * Response for the creation of multiple Menu Section Items
  */
 @ApiModel(description = "Response for the creation of multiple Menu Section Items")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T11:52:43.990Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T15:50:54.402Z")
 public class CreatedMenuSectionItems {
   @SerializedName("MenuSectionItems")
   private List<MenuSectionItem> menuSectionItems = null;

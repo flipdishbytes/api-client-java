@@ -28,7 +28,7 @@ import java.io.IOException;
  * Result of configuration action execution
  */
 @ApiModel(description = "Result of configuration action execution")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T11:52:43.990Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-15T15:50:54.402Z")
 public class ExecuteConfigurationActionResult {
   @SerializedName("ErrorMessage")
   private String errorMessage = null;
