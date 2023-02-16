@@ -467,6 +467,135 @@ public class AppStoreDeveloperApi {
         return call;
     }
     /**
+     * Build call for getExternalFunctionSigningKey
+     * @param oauthAppId OAuth App identifier (required)
+     * @param appStoreAppId App store app id (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getExternalFunctionSigningKeyCall(String oauthAppId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key"
+            .replaceAll("\\{" + "oauthAppId" + "\\}", apiClient.escapeString(oauthAppId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getExternalFunctionSigningKeyValidateBeforeCall(String oauthAppId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'oauthAppId' is set
+        if (oauthAppId == null) {
+            throw new ApiException("Missing the required parameter 'oauthAppId' when calling getExternalFunctionSigningKey(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling getExternalFunctionSigningKey(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getExternalFunctionSigningKeyCall(oauthAppId, appStoreAppId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get external function action signing key for app
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param oauthAppId OAuth App identifier (required)
+     * @param appStoreAppId App store app id (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void getExternalFunctionSigningKey(String oauthAppId, String appStoreAppId) throws ApiException {
+        getExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
+    }
+
+    /**
+     * Get external function action signing key for app
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param oauthAppId OAuth App identifier (required)
+     * @param appStoreAppId App store app id (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> getExternalFunctionSigningKeyWithHttpInfo(String oauthAppId, String appStoreAppId) throws ApiException {
+        com.squareup.okhttp.Call call = getExternalFunctionSigningKeyValidateBeforeCall(oauthAppId, appStoreAppId, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Get external function action signing key for app (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param oauthAppId OAuth App identifier (required)
+     * @param appStoreAppId App store app id (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getExternalFunctionSigningKeyAsync(String oauthAppId, String appStoreAppId, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getExternalFunctionSigningKeyValidateBeforeCall(oauthAppId, appStoreAppId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for updateAppStoreApp
      * @param oauthAppId OAuth App identifier (required)
      * @param appStoreAppId App store app id (required)

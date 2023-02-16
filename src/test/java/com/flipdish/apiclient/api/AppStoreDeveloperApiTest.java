@@ -92,6 +92,23 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
+     * Get external function action signing key for app
+     *
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getExternalFunctionSigningKeyTest() throws ApiException {
+        String oauthAppId = null;
+        String appStoreAppId = null;
+        api.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Update App store app
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
