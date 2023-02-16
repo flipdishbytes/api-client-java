@@ -31,7 +31,7 @@ import java.util.List;
  * Create fulfillment states configuration
  */
 @ApiModel(description = "Create fulfillment states configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-16T08:44:07.506Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-16T10:52:24.288Z")
 public class CreateFulfillmentStatesConfiguration {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
