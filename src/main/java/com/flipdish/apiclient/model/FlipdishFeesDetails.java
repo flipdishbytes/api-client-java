@@ -28,13 +28,16 @@ import java.io.IOException;
  * Fees breakdown
  */
 @ApiModel(description = "Fees breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T11:22:53.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
 public class FlipdishFeesDetails {
   @SerializedName("OnlineSalesFees")
   private Double onlineSalesFees = null;
 
   @SerializedName("CashSalesFees")
   private Double cashSalesFees = null;
+
+  @SerializedName("PosSalesFees")
+  private Double posSalesFees = null;
 
   @SerializedName("TotalSalesFees")
   private Double totalSalesFees = null;
@@ -44,6 +47,9 @@ public class FlipdishFeesDetails {
 
   @SerializedName("CashSalesRefundedFees")
   private Double cashSalesRefundedFees = null;
+
+  @SerializedName("PosSalesRefundedFees")
+  private Double posSalesRefundedFees = null;
 
   @SerializedName("SalesFeesVat")
   private Double salesFeesVat = null;
@@ -85,6 +91,24 @@ public class FlipdishFeesDetails {
 
   public void setCashSalesFees(Double cashSalesFees) {
     this.cashSalesFees = cashSalesFees;
+  }
+
+  public FlipdishFeesDetails posSalesFees(Double posSalesFees) {
+    this.posSalesFees = posSalesFees;
+    return this;
+  }
+
+   /**
+   * Fees of POS sales
+   * @return posSalesFees
+  **/
+  @ApiModelProperty(value = "Fees of POS sales")
+  public Double getPosSalesFees() {
+    return posSalesFees;
+  }
+
+  public void setPosSalesFees(Double posSalesFees) {
+    this.posSalesFees = posSalesFees;
   }
 
   public FlipdishFeesDetails totalSalesFees(Double totalSalesFees) {
@@ -141,6 +165,24 @@ public class FlipdishFeesDetails {
     this.cashSalesRefundedFees = cashSalesRefundedFees;
   }
 
+  public FlipdishFeesDetails posSalesRefundedFees(Double posSalesRefundedFees) {
+    this.posSalesRefundedFees = posSalesRefundedFees;
+    return this;
+  }
+
+   /**
+   * Fees on refunds for POS sales
+   * @return posSalesRefundedFees
+  **/
+  @ApiModelProperty(value = "Fees on refunds for POS sales")
+  public Double getPosSalesRefundedFees() {
+    return posSalesRefundedFees;
+  }
+
+  public void setPosSalesRefundedFees(Double posSalesRefundedFees) {
+    this.posSalesRefundedFees = posSalesRefundedFees;
+  }
+
   public FlipdishFeesDetails salesFeesVat(Double salesFeesVat) {
     this.salesFeesVat = salesFeesVat;
     return this;
@@ -189,16 +231,18 @@ public class FlipdishFeesDetails {
     FlipdishFeesDetails flipdishFeesDetails = (FlipdishFeesDetails) o;
     return Objects.equals(this.onlineSalesFees, flipdishFeesDetails.onlineSalesFees) &&
         Objects.equals(this.cashSalesFees, flipdishFeesDetails.cashSalesFees) &&
+        Objects.equals(this.posSalesFees, flipdishFeesDetails.posSalesFees) &&
         Objects.equals(this.totalSalesFees, flipdishFeesDetails.totalSalesFees) &&
         Objects.equals(this.onlineSalesRefundedFees, flipdishFeesDetails.onlineSalesRefundedFees) &&
         Objects.equals(this.cashSalesRefundedFees, flipdishFeesDetails.cashSalesRefundedFees) &&
+        Objects.equals(this.posSalesRefundedFees, flipdishFeesDetails.posSalesRefundedFees) &&
         Objects.equals(this.salesFeesVat, flipdishFeesDetails.salesFeesVat) &&
         Objects.equals(this.totalFees, flipdishFeesDetails.totalFees);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(onlineSalesFees, cashSalesFees, totalSalesFees, onlineSalesRefundedFees, cashSalesRefundedFees, salesFeesVat, totalFees);
+    return Objects.hash(onlineSalesFees, cashSalesFees, posSalesFees, totalSalesFees, onlineSalesRefundedFees, cashSalesRefundedFees, posSalesRefundedFees, salesFeesVat, totalFees);
   }
 
 
@@ -209,9 +253,11 @@ public class FlipdishFeesDetails {
     
     sb.append("    onlineSalesFees: ").append(toIndentedString(onlineSalesFees)).append("\n");
     sb.append("    cashSalesFees: ").append(toIndentedString(cashSalesFees)).append("\n");
+    sb.append("    posSalesFees: ").append(toIndentedString(posSalesFees)).append("\n");
     sb.append("    totalSalesFees: ").append(toIndentedString(totalSalesFees)).append("\n");
     sb.append("    onlineSalesRefundedFees: ").append(toIndentedString(onlineSalesRefundedFees)).append("\n");
     sb.append("    cashSalesRefundedFees: ").append(toIndentedString(cashSalesRefundedFees)).append("\n");
+    sb.append("    posSalesRefundedFees: ").append(toIndentedString(posSalesRefundedFees)).append("\n");
     sb.append("    salesFeesVat: ").append(toIndentedString(salesFeesVat)).append("\n");
     sb.append("    totalFees: ").append(toIndentedString(totalFees)).append("\n");
     sb.append("}");

@@ -43,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T11:22:53.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
