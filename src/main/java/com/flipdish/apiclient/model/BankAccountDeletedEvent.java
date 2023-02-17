@@ -16,6 +16,7 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.BankAccount;
+import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,10 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-16T10:52:24.288Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T11:22:53.818Z")
 public class BankAccountDeletedEvent {
   @SerializedName("BankAccount")
   private BankAccount bankAccount = null;
+
+  @SerializedName("User")
+  private UserEventInfo user = null;
 
   @SerializedName("EventName")
   private String eventName = null;
@@ -70,6 +74,24 @@ public class BankAccountDeletedEvent {
 
   public void setBankAccount(BankAccount bankAccount) {
     this.bankAccount = bankAccount;
+  }
+
+  public BankAccountDeletedEvent user(UserEventInfo user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * Updated by user
+   * @return user
+  **/
+  @ApiModelProperty(value = "Updated by user")
+  public UserEventInfo getUser() {
+    return user;
+  }
+
+  public void setUser(UserEventInfo user) {
+    this.user = user;
   }
 
   public BankAccountDeletedEvent eventName(String eventName) {
@@ -191,6 +213,7 @@ public class BankAccountDeletedEvent {
     }
     BankAccountDeletedEvent bankAccountDeletedEvent = (BankAccountDeletedEvent) o;
     return Objects.equals(this.bankAccount, bankAccountDeletedEvent.bankAccount) &&
+        Objects.equals(this.user, bankAccountDeletedEvent.user) &&
         Objects.equals(this.eventName, bankAccountDeletedEvent.eventName) &&
         Objects.equals(this.flipdishEventId, bankAccountDeletedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, bankAccountDeletedEvent.createTime) &&
@@ -201,7 +224,7 @@ public class BankAccountDeletedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bankAccount, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(bankAccount, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -211,6 +234,7 @@ public class BankAccountDeletedEvent {
     sb.append("class BankAccountDeletedEvent {\n");
     
     sb.append("    bankAccount: ").append(toIndentedString(bankAccount)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
