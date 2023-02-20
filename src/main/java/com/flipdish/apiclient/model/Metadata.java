@@ -28,7 +28,7 @@ import java.io.IOException;
  * Metadata
  */
 @ApiModel(description = "Metadata")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:54:04.410Z")
 public class Metadata {
   @SerializedName("MenuEntityId")
   private Integer menuEntityId = null;
