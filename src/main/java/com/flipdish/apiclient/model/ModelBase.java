@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiModel;
  * Model base
  */
 @ApiModel(description = "Model base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class ModelBase {
 
   @Override

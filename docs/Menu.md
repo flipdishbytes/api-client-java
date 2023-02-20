@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **locked** | **Boolean** | Locked: is menu locked against modifcation |  [optional]
 **menuSections** | [**List&lt;MenuSection&gt;**](MenuSection.md) | Menu sections (startes, main etc) |  [optional]
 **taxRates** | [**List&lt;MenuTaxRate&gt;**](MenuTaxRate.md) | Menu tax rates |  [optional]
+**appId** | **String** | Identifier of App the menu is attached to |  [optional]
 **displaySectionLinks** | **Boolean** | Display menu section link on UI |  [optional]
 **menuSectionBehaviour** | [**MenuSectionBehaviourEnum**](#MenuSectionBehaviourEnum) | Menu section behaviour |  [optional]
 **taxType** | [**TaxTypeEnum**](#TaxTypeEnum) | Tax type |  [optional]

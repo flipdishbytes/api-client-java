@@ -28,7 +28,7 @@ import java.io.IOException;
  * Chargebacks breakdown
  */
 @ApiModel(description = "Chargebacks breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class ChargebackDetails {
   @SerializedName("ChargebackAmount")
   private Double chargebackAmount = null;

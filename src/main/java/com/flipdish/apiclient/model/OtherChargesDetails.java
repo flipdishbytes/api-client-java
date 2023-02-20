@@ -28,7 +28,7 @@ import java.io.IOException;
  * Breakdown of other charges
  */
 @ApiModel(description = "Breakdown of other charges")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class OtherChargesDetails {
   @SerializedName("TotalOtherCharges")
   private Double totalOtherCharges = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Update Store Group
  */
 @ApiModel(description = "Update Store Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class StoreGroupBase {
   @SerializedName("Name")
   private String name = null;

@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu
  */
 @ApiModel(description = "Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class Menu {
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -61,6 +61,9 @@ public class Menu {
 
   @SerializedName("TaxRates")
   private List<MenuTaxRate> taxRates = null;
+
+  @SerializedName("AppId")
+  private String appId = null;
 
   @SerializedName("DisplaySectionLinks")
   private Boolean displaySectionLinks = null;
@@ -343,6 +346,24 @@ public class Menu {
     this.taxRates = taxRates;
   }
 
+  public Menu appId(String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * Identifier of App the menu is attached to
+   * @return appId
+  **/
+  @ApiModelProperty(value = "Identifier of App the menu is attached to")
+  public String getAppId() {
+    return appId;
+  }
+
+  public void setAppId(String appId) {
+    this.appId = appId;
+  }
+
   public Menu displaySectionLinks(Boolean displaySectionLinks) {
     this.displaySectionLinks = displaySectionLinks;
     return this;
@@ -416,6 +437,7 @@ public class Menu {
         Objects.equals(this.locked, menu.locked) &&
         Objects.equals(this.menuSections, menu.menuSections) &&
         Objects.equals(this.taxRates, menu.taxRates) &&
+        Objects.equals(this.appId, menu.appId) &&
         Objects.equals(this.displaySectionLinks, menu.displaySectionLinks) &&
         Objects.equals(this.menuSectionBehaviour, menu.menuSectionBehaviour) &&
         Objects.equals(this.taxType, menu.taxType);
@@ -423,7 +445,7 @@ public class Menu {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuId, modifiedTime, versionNumber, imageName, imageUrl, name, locked, menuSections, taxRates, displaySectionLinks, menuSectionBehaviour, taxType);
+    return Objects.hash(menuId, modifiedTime, versionNumber, imageName, imageUrl, name, locked, menuSections, taxRates, appId, displaySectionLinks, menuSectionBehaviour, taxType);
   }
 
 
@@ -441,6 +463,7 @@ public class Menu {
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    menuSections: ").append(toIndentedString(menuSections)).append("\n");
     sb.append("    taxRates: ").append(toIndentedString(taxRates)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    displaySectionLinks: ").append(toIndentedString(displaySectionLinks)).append("\n");
     sb.append("    menuSectionBehaviour: ").append(toIndentedString(menuSectionBehaviour)).append("\n");
     sb.append("    taxType: ").append(toIndentedString(taxType)).append("\n");

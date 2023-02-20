@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * GoogleAddressComponent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-17T14:37:39.956Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:12:14.674Z")
 public class GoogleAddressComponent {
   @SerializedName("Long_name")
   private String longName = null;
