@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="getSubscriptionsForApp"></a>
 # **getSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, storeId)
+> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId)
 
 Get list of subscriptions for an App
 
@@ -88,9 +88,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | App Id
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store id to filter subscriptions (optional)
 try {
-    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, storeId);
+    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionsForApp");
@@ -103,7 +102,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store id to filter subscriptions (optional) |
 
 ### Return type
 

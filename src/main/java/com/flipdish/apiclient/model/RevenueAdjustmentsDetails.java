@@ -28,10 +28,13 @@ import java.io.IOException;
  * Revenue Adjustments breakdown
  */
 @ApiModel(description = "Revenue Adjustments breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-20T11:54:04.410Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-21T07:40:50.162Z")
 public class RevenueAdjustmentsDetails {
   @SerializedName("OnlineSalesRefundedAmount")
   private Double onlineSalesRefundedAmount = null;
+
+  @SerializedName("PosSalesRefundedAmount")
+  private Double posSalesRefundedAmount = null;
 
   @SerializedName("CashSalesRefundedAmount")
   private Double cashSalesRefundedAmount = null;
@@ -67,6 +70,24 @@ public class RevenueAdjustmentsDetails {
 
   public void setOnlineSalesRefundedAmount(Double onlineSalesRefundedAmount) {
     this.onlineSalesRefundedAmount = onlineSalesRefundedAmount;
+  }
+
+  public RevenueAdjustmentsDetails posSalesRefundedAmount(Double posSalesRefundedAmount) {
+    this.posSalesRefundedAmount = posSalesRefundedAmount;
+    return this;
+  }
+
+   /**
+   * POS Online sales refunds
+   * @return posSalesRefundedAmount
+  **/
+  @ApiModelProperty(value = "POS Online sales refunds")
+  public Double getPosSalesRefundedAmount() {
+    return posSalesRefundedAmount;
+  }
+
+  public void setPosSalesRefundedAmount(Double posSalesRefundedAmount) {
+    this.posSalesRefundedAmount = posSalesRefundedAmount;
   }
 
   public RevenueAdjustmentsDetails cashSalesRefundedAmount(Double cashSalesRefundedAmount) {
@@ -188,6 +209,7 @@ public class RevenueAdjustmentsDetails {
     }
     RevenueAdjustmentsDetails revenueAdjustmentsDetails = (RevenueAdjustmentsDetails) o;
     return Objects.equals(this.onlineSalesRefundedAmount, revenueAdjustmentsDetails.onlineSalesRefundedAmount) &&
+        Objects.equals(this.posSalesRefundedAmount, revenueAdjustmentsDetails.posSalesRefundedAmount) &&
         Objects.equals(this.cashSalesRefundedAmount, revenueAdjustmentsDetails.cashSalesRefundedAmount) &&
         Objects.equals(this.customerCashFees, revenueAdjustmentsDetails.customerCashFees) &&
         Objects.equals(this.refundsCount, revenueAdjustmentsDetails.refundsCount) &&
@@ -198,7 +220,7 @@ public class RevenueAdjustmentsDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(onlineSalesRefundedAmount, cashSalesRefundedAmount, customerCashFees, refundsCount, payGreenSalesAmount, payGreenProcessingFees, totalOnlineRevenueAdjustments);
+    return Objects.hash(onlineSalesRefundedAmount, posSalesRefundedAmount, cashSalesRefundedAmount, customerCashFees, refundsCount, payGreenSalesAmount, payGreenProcessingFees, totalOnlineRevenueAdjustments);
   }
 
 
@@ -208,6 +230,7 @@ public class RevenueAdjustmentsDetails {
     sb.append("class RevenueAdjustmentsDetails {\n");
     
     sb.append("    onlineSalesRefundedAmount: ").append(toIndentedString(onlineSalesRefundedAmount)).append("\n");
+    sb.append("    posSalesRefundedAmount: ").append(toIndentedString(posSalesRefundedAmount)).append("\n");
     sb.append("    cashSalesRefundedAmount: ").append(toIndentedString(cashSalesRefundedAmount)).append("\n");
     sb.append("    customerCashFees: ").append(toIndentedString(customerCashFees)).append("\n");
     sb.append("    refundsCount: ").append(toIndentedString(refundsCount)).append("\n");
