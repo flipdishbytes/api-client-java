@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getSubscriptionById**](SubscriptionsApi.md#getSubscriptionById) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
+[**getSubscriptionInvoices**](SubscriptionsApi.md#getSubscriptionInvoices) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices | Get list of invoices for a subscription by id
 [**getSubscriptionsForApp**](SubscriptionsApi.md#getSubscriptionsForApp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 
 
@@ -39,6 +40,61 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| App Id |
+ **subscriptionId** | **String**| Subscription Id |
+
+### Return type
+
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getSubscriptionInvoices"></a>
+# **getSubscriptionInvoices**
+> RestApiResultSubscription getSubscriptionInvoices(appId, subscriptionId)
+
+Get list of invoices for a subscription by id
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.SubscriptionsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+SubscriptionsApi apiInstance = new SubscriptionsApi();
+String appId = "appId_example"; // String | App Id
+String subscriptionId = "subscriptionId_example"; // String | Subscription Id
+try {
+    RestApiResultSubscription result = apiInstance.getSubscriptionInvoices(appId, subscriptionId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubscriptionsApi#getSubscriptionInvoices");
     e.printStackTrace();
 }
 ```

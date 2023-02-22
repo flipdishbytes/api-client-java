@@ -192,6 +192,139 @@ public class SubscriptionsApi {
         return call;
     }
     /**
+     * Build call for getSubscriptionInvoices
+     * @param appId App Id (required)
+     * @param subscriptionId Subscription Id (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getSubscriptionInvoicesCall(String appId, String subscriptionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "subscriptionId" + "\\}", apiClient.escapeString(subscriptionId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getSubscriptionInvoicesValidateBeforeCall(String appId, String subscriptionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getSubscriptionInvoices(Async)");
+        }
+        
+        // verify the required parameter 'subscriptionId' is set
+        if (subscriptionId == null) {
+            throw new ApiException("Missing the required parameter 'subscriptionId' when calling getSubscriptionInvoices(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesCall(appId, subscriptionId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get list of invoices for a subscription by id
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId App Id (required)
+     * @param subscriptionId Subscription Id (required)
+     * @return RestApiResultSubscription
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultSubscription getSubscriptionInvoices(String appId, String subscriptionId) throws ApiException {
+        ApiResponse<RestApiResultSubscription> resp = getSubscriptionInvoicesWithHttpInfo(appId, subscriptionId);
+        return resp.getData();
+    }
+
+    /**
+     * Get list of invoices for a subscription by id
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId App Id (required)
+     * @param subscriptionId Subscription Id (required)
+     * @return ApiResponse&lt;RestApiResultSubscription&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultSubscription> getSubscriptionInvoicesWithHttpInfo(String appId, String subscriptionId) throws ApiException {
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get list of invoices for a subscription by id (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
+     * @param appId App Id (required)
+     * @param subscriptionId Subscription Id (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getSubscriptionInvoicesAsync(String appId, String subscriptionId, final ApiCallback<RestApiResultSubscription> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getSubscriptionsForApp
      * @param appId App Id (required)
      * @param progressListener Progress listener
