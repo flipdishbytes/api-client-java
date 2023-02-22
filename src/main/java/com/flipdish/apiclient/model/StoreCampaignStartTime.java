@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store campaign start time
  */
 @ApiModel(description = "Store campaign start time")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-22T11:53:35.677Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-22T15:57:23.167Z")
 public class StoreCampaignStartTime {
   @SerializedName("StoreId")
   private Integer storeId = null;

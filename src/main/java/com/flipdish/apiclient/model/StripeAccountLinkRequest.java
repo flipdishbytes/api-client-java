@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a request for Stripe account link creation
  */
 @ApiModel(description = "Represents a request for Stripe account link creation")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-22T11:53:35.677Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-22T15:57:23.167Z")
 public class StripeAccountLinkRequest {
   @SerializedName("StripeId")
   private String stripeId = null;
