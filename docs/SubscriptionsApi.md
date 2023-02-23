@@ -66,11 +66,11 @@ Name | Type | Description  | Notes
 
 <a name="getSubscriptionInvoices"></a>
 # **getSubscriptionInvoices**
-> RestApiResultSubscription getSubscriptionInvoices(appId, subscriptionId)
+> RestApiPaginationResultInvoice getSubscriptionInvoices(appId, subscriptionId, limit, startingAfterId)
 
 Get list of invoices for a subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
+[BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
 
 ### Example
 ```java
@@ -90,8 +90,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | App Id
 String subscriptionId = "subscriptionId_example"; // String | Subscription Id
+Integer limit = 56; // Integer | Limit of invoices to return
+String startingAfterId = "startingAfterId_example"; // String | Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId=in_xxx in order to fetch the next page of the invoices list.
 try {
-    RestApiResultSubscription result = apiInstance.getSubscriptionInvoices(appId, subscriptionId);
+    RestApiPaginationResultInvoice result = apiInstance.getSubscriptionInvoices(appId, subscriptionId, limit, startingAfterId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionInvoices");
@@ -105,10 +107,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
  **subscriptionId** | **String**| Subscription Id |
+ **limit** | **Integer**| Limit of invoices to return | [optional]
+ **startingAfterId** | **String**| Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. | [optional]
 
 ### Return type
 
-[**RestApiResultSubscription**](RestApiResultSubscription.md)
+[**RestApiPaginationResultInvoice**](RestApiPaginationResultInvoice.md)
 
 ### Authorization
 

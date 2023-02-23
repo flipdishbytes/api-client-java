@@ -30,6 +30,7 @@ import java.io.IOException;
 import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiPaginationResultInvoice;
 import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
@@ -195,12 +196,14 @@ public class SubscriptionsApi {
      * Build call for getSubscriptionInvoices
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
+     * @param limit Limit of invoices to return (optional)
+     * @param startingAfterId Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getSubscriptionInvoicesCall(String appId, String subscriptionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getSubscriptionInvoicesCall(String appId, String subscriptionId, Integer limit, String startingAfterId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -210,6 +213,10 @@ public class SubscriptionsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (startingAfterId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("startingAfterId", startingAfterId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -244,7 +251,7 @@ public class SubscriptionsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getSubscriptionInvoicesValidateBeforeCall(String appId, String subscriptionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getSubscriptionInvoicesValidateBeforeCall(String appId, String subscriptionId, Integer limit, String startingAfterId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -257,48 +264,54 @@ public class SubscriptionsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getSubscriptionInvoicesCall(appId, subscriptionId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesCall(appId, subscriptionId, limit, startingAfterId, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
      * Get list of invoices for a subscription by id
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
-     * @return RestApiResultSubscription
+     * @param limit Limit of invoices to return (optional)
+     * @param startingAfterId Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
+     * @return RestApiPaginationResultInvoice
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultSubscription getSubscriptionInvoices(String appId, String subscriptionId) throws ApiException {
-        ApiResponse<RestApiResultSubscription> resp = getSubscriptionInvoicesWithHttpInfo(appId, subscriptionId);
+    public RestApiPaginationResultInvoice getSubscriptionInvoices(String appId, String subscriptionId, Integer limit, String startingAfterId) throws ApiException {
+        ApiResponse<RestApiPaginationResultInvoice> resp = getSubscriptionInvoicesWithHttpInfo(appId, subscriptionId, limit, startingAfterId);
         return resp.getData();
     }
 
     /**
      * Get list of invoices for a subscription by id
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
-     * @return ApiResponse&lt;RestApiResultSubscription&gt;
+     * @param limit Limit of invoices to return (optional)
+     * @param startingAfterId Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
+     * @return ApiResponse&lt;RestApiPaginationResultInvoice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultSubscription> getSubscriptionInvoicesWithHttpInfo(String appId, String subscriptionId) throws ApiException {
-        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
+    public ApiResponse<RestApiPaginationResultInvoice> getSubscriptionInvoicesWithHttpInfo(String appId, String subscriptionId, Integer limit, String startingAfterId) throws ApiException {
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, limit, startingAfterId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultInvoice>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      * Get list of invoices for a subscription by id (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
+     * @param limit Limit of invoices to return (optional)
+     * @param startingAfterId Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSubscriptionInvoicesAsync(String appId, String subscriptionId, final ApiCallback<RestApiResultSubscription> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSubscriptionInvoicesAsync(String appId, String subscriptionId, Integer limit, String startingAfterId, final ApiCallback<RestApiPaginationResultInvoice> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -319,8 +332,8 @@ public class SubscriptionsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
+        com.squareup.okhttp.Call call = getSubscriptionInvoicesValidateBeforeCall(appId, subscriptionId, limit, startingAfterId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultInvoice>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
