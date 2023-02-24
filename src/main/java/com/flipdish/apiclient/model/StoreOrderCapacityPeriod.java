@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a single order capacity period
  */
 @ApiModel(description = "Represents a single order capacity period")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-23T15:42:27.630Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-24T08:38:08.440Z")
 public class StoreOrderCapacityPeriod {
   @SerializedName("MaxOrderNumberPerStoreInterval")
   private Integer maxOrderNumberPerStoreInterval = null;

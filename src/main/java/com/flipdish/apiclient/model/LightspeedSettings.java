@@ -31,7 +31,7 @@ import java.util.Map;
  * Ligthspeed store settings
  */
 @ApiModel(description = "Ligthspeed store settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-23T15:42:27.630Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-24T08:38:08.440Z")
 public class LightspeedSettings {
   @SerializedName("CompanyId")
   private String companyId = null;
