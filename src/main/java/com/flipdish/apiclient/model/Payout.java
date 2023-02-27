@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-24T08:38:08.440Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-27T12:15:10.228Z")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -457,8 +457,14 @@ public class Payout {
   @SerializedName("OnlineSalesFees")
   private Double onlineSalesFees = null;
 
+  @SerializedName("PosSalesFees")
+  private Double posSalesFees = null;
+
   @SerializedName("OnlineSalesRefundedAmount")
   private Double onlineSalesRefundedAmount = null;
+
+  @SerializedName("PosSalesRefundedAmount")
+  private Double posSalesRefundedAmount = null;
 
   @SerializedName("OnlineSalesTax")
   private Double onlineSalesTax = null;
@@ -486,6 +492,9 @@ public class Payout {
 
   @SerializedName("ChargebackAmount")
   private Double chargebackAmount = null;
+
+  @SerializedName("PosSalesChargebackAmount")
+  private Double posSalesChargebackAmount = null;
 
   @SerializedName("ChargebackRefundedFees")
   private Double chargebackRefundedFees = null;
@@ -847,6 +856,24 @@ public class Payout {
     this.onlineSalesFees = onlineSalesFees;
   }
 
+  public Payout posSalesFees(Double posSalesFees) {
+    this.posSalesFees = posSalesFees;
+    return this;
+  }
+
+   /**
+   * Payout online sales fees
+   * @return posSalesFees
+  **/
+  @ApiModelProperty(value = "Payout online sales fees")
+  public Double getPosSalesFees() {
+    return posSalesFees;
+  }
+
+  public void setPosSalesFees(Double posSalesFees) {
+    this.posSalesFees = posSalesFees;
+  }
+
   public Payout onlineSalesRefundedAmount(Double onlineSalesRefundedAmount) {
     this.onlineSalesRefundedAmount = onlineSalesRefundedAmount;
     return this;
@@ -863,6 +890,24 @@ public class Payout {
 
   public void setOnlineSalesRefundedAmount(Double onlineSalesRefundedAmount) {
     this.onlineSalesRefundedAmount = onlineSalesRefundedAmount;
+  }
+
+  public Payout posSalesRefundedAmount(Double posSalesRefundedAmount) {
+    this.posSalesRefundedAmount = posSalesRefundedAmount;
+    return this;
+  }
+
+   /**
+   * POS Payout online sales refunded amount
+   * @return posSalesRefundedAmount
+  **/
+  @ApiModelProperty(value = "POS Payout online sales refunded amount")
+  public Double getPosSalesRefundedAmount() {
+    return posSalesRefundedAmount;
+  }
+
+  public void setPosSalesRefundedAmount(Double posSalesRefundedAmount) {
+    this.posSalesRefundedAmount = posSalesRefundedAmount;
   }
 
   public Payout onlineSalesTax(Double onlineSalesTax) {
@@ -1027,6 +1072,24 @@ public class Payout {
     this.chargebackAmount = chargebackAmount;
   }
 
+  public Payout posSalesChargebackAmount(Double posSalesChargebackAmount) {
+    this.posSalesChargebackAmount = posSalesChargebackAmount;
+    return this;
+  }
+
+   /**
+   * POS Payout chargeback amount
+   * @return posSalesChargebackAmount
+  **/
+  @ApiModelProperty(value = "POS Payout chargeback amount")
+  public Double getPosSalesChargebackAmount() {
+    return posSalesChargebackAmount;
+  }
+
+  public void setPosSalesChargebackAmount(Double posSalesChargebackAmount) {
+    this.posSalesChargebackAmount = posSalesChargebackAmount;
+  }
+
   public Payout chargebackRefundedFees(Double chargebackRefundedFees) {
     this.chargebackRefundedFees = chargebackRefundedFees;
     return this;
@@ -1164,7 +1227,9 @@ public class Payout {
         Objects.equals(this.onlineSalesServiceCharges, payout.onlineSalesServiceCharges) &&
         Objects.equals(this.onlineSalesRefundedFees, payout.onlineSalesRefundedFees) &&
         Objects.equals(this.onlineSalesFees, payout.onlineSalesFees) &&
+        Objects.equals(this.posSalesFees, payout.posSalesFees) &&
         Objects.equals(this.onlineSalesRefundedAmount, payout.onlineSalesRefundedAmount) &&
+        Objects.equals(this.posSalesRefundedAmount, payout.posSalesRefundedAmount) &&
         Objects.equals(this.onlineSalesTax, payout.onlineSalesTax) &&
         Objects.equals(this.totalOnlineRevenue, payout.totalOnlineRevenue) &&
         Objects.equals(this.cashSalesFees, payout.cashSalesFees) &&
@@ -1174,6 +1239,7 @@ public class Payout {
         Objects.equals(this.totalFees, payout.totalFees) &&
         Objects.equals(this.totalOnlineRevenueAdjustments, payout.totalOnlineRevenueAdjustments) &&
         Objects.equals(this.chargebackAmount, payout.chargebackAmount) &&
+        Objects.equals(this.posSalesChargebackAmount, payout.posSalesChargebackAmount) &&
         Objects.equals(this.chargebackRefundedFees, payout.chargebackRefundedFees) &&
         Objects.equals(this.totalChargebackCost, payout.totalChargebackCost) &&
         Objects.equals(this.totalOtherCharges, payout.totalOtherCharges) &&
@@ -1184,7 +1250,7 @@ public class Payout {
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, onlineSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
   }
 
 
@@ -1212,7 +1278,9 @@ public class Payout {
     sb.append("    onlineSalesServiceCharges: ").append(toIndentedString(onlineSalesServiceCharges)).append("\n");
     sb.append("    onlineSalesRefundedFees: ").append(toIndentedString(onlineSalesRefundedFees)).append("\n");
     sb.append("    onlineSalesFees: ").append(toIndentedString(onlineSalesFees)).append("\n");
+    sb.append("    posSalesFees: ").append(toIndentedString(posSalesFees)).append("\n");
     sb.append("    onlineSalesRefundedAmount: ").append(toIndentedString(onlineSalesRefundedAmount)).append("\n");
+    sb.append("    posSalesRefundedAmount: ").append(toIndentedString(posSalesRefundedAmount)).append("\n");
     sb.append("    onlineSalesTax: ").append(toIndentedString(onlineSalesTax)).append("\n");
     sb.append("    totalOnlineRevenue: ").append(toIndentedString(totalOnlineRevenue)).append("\n");
     sb.append("    cashSalesFees: ").append(toIndentedString(cashSalesFees)).append("\n");
@@ -1222,6 +1290,7 @@ public class Payout {
     sb.append("    totalFees: ").append(toIndentedString(totalFees)).append("\n");
     sb.append("    totalOnlineRevenueAdjustments: ").append(toIndentedString(totalOnlineRevenueAdjustments)).append("\n");
     sb.append("    chargebackAmount: ").append(toIndentedString(chargebackAmount)).append("\n");
+    sb.append("    posSalesChargebackAmount: ").append(toIndentedString(posSalesChargebackAmount)).append("\n");
     sb.append("    chargebackRefundedFees: ").append(toIndentedString(chargebackRefundedFees)).append("\n");
     sb.append("    totalChargebackCost: ").append(toIndentedString(totalChargebackCost)).append("\n");
     sb.append("    totalOtherCharges: ").append(toIndentedString(totalOtherCharges)).append("\n");

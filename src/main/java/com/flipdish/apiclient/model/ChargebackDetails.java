@@ -28,10 +28,13 @@ import java.io.IOException;
  * Chargebacks breakdown
  */
 @ApiModel(description = "Chargebacks breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-24T08:38:08.440Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-27T12:15:10.228Z")
 public class ChargebackDetails {
   @SerializedName("ChargebackAmount")
   private Double chargebackAmount = null;
+
+  @SerializedName("PosSalesChargebackAmount")
+  private Double posSalesChargebackAmount = null;
 
   @SerializedName("ChargebackRefundedFees")
   private Double chargebackRefundedFees = null;
@@ -58,6 +61,24 @@ public class ChargebackDetails {
 
   public void setChargebackAmount(Double chargebackAmount) {
     this.chargebackAmount = chargebackAmount;
+  }
+
+  public ChargebackDetails posSalesChargebackAmount(Double posSalesChargebackAmount) {
+    this.posSalesChargebackAmount = posSalesChargebackAmount;
+    return this;
+  }
+
+   /**
+   * POS Chargeback amount
+   * @return posSalesChargebackAmount
+  **/
+  @ApiModelProperty(value = "POS Chargeback amount")
+  public Double getPosSalesChargebackAmount() {
+    return posSalesChargebackAmount;
+  }
+
+  public void setPosSalesChargebackAmount(Double posSalesChargebackAmount) {
+    this.posSalesChargebackAmount = posSalesChargebackAmount;
   }
 
   public ChargebackDetails chargebackRefundedFees(Double chargebackRefundedFees) {
@@ -125,6 +146,7 @@ public class ChargebackDetails {
     }
     ChargebackDetails chargebackDetails = (ChargebackDetails) o;
     return Objects.equals(this.chargebackAmount, chargebackDetails.chargebackAmount) &&
+        Objects.equals(this.posSalesChargebackAmount, chargebackDetails.posSalesChargebackAmount) &&
         Objects.equals(this.chargebackRefundedFees, chargebackDetails.chargebackRefundedFees) &&
         Objects.equals(this.chargebacksCount, chargebackDetails.chargebacksCount) &&
         Objects.equals(this.totalChargebackCost, chargebackDetails.totalChargebackCost);
@@ -132,7 +154,7 @@ public class ChargebackDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(chargebackAmount, chargebackRefundedFees, chargebacksCount, totalChargebackCost);
+    return Objects.hash(chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, chargebacksCount, totalChargebackCost);
   }
 
 
@@ -142,6 +164,7 @@ public class ChargebackDetails {
     sb.append("class ChargebackDetails {\n");
     
     sb.append("    chargebackAmount: ").append(toIndentedString(chargebackAmount)).append("\n");
+    sb.append("    posSalesChargebackAmount: ").append(toIndentedString(posSalesChargebackAmount)).append("\n");
     sb.append("    chargebackRefundedFees: ").append(toIndentedString(chargebackRefundedFees)).append("\n");
     sb.append("    chargebacksCount: ").append(toIndentedString(chargebacksCount)).append("\n");
     sb.append("    totalChargebackCost: ").append(toIndentedString(totalChargebackCost)).append("\n");

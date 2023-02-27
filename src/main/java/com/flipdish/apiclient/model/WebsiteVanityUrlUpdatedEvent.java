@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Website vanity url
  */
 @ApiModel(description = "Website vanity url")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-24T08:38:08.440Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-27T12:15:10.228Z")
 public class WebsiteVanityUrlUpdatedEvent {
   @SerializedName("Description")
   private String description = null;
