@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getSubscriptionById"></a>
 # **getSubscriptionById**
-> Subscription getSubscriptionById(appId, subscriptionId)
+> RestApiResultSubscription getSubscriptionById(appId, subscriptionId)
 
 Get subscription by id
 
@@ -36,7 +36,7 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | App Id
 String subscriptionId = "subscriptionId_example"; // String | Subscription Id
 try {
-    Subscription result = apiInstance.getSubscriptionById(appId, subscriptionId);
+    RestApiResultSubscription result = apiInstance.getSubscriptionById(appId, subscriptionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionById");
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Subscription**](Subscription.md)
+[**RestApiResultSubscription**](RestApiResultSubscription.md)
 
 ### Authorization
 

@@ -31,8 +31,8 @@ import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultInvoice;
+import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.Subscription;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -135,11 +135,11 @@ public class SubscriptionsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
-     * @return Subscription
+     * @return RestApiResultSubscription
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Subscription getSubscriptionById(String appId, String subscriptionId) throws ApiException {
-        ApiResponse<Subscription> resp = getSubscriptionByIdWithHttpInfo(appId, subscriptionId);
+    public RestApiResultSubscription getSubscriptionById(String appId, String subscriptionId) throws ApiException {
+        ApiResponse<RestApiResultSubscription> resp = getSubscriptionByIdWithHttpInfo(appId, subscriptionId);
         return resp.getData();
     }
 
@@ -148,12 +148,12 @@ public class SubscriptionsApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (required)
-     * @return ApiResponse&lt;Subscription&gt;
+     * @return ApiResponse&lt;RestApiResultSubscription&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Subscription> getSubscriptionByIdWithHttpInfo(String appId, String subscriptionId) throws ApiException {
+    public ApiResponse<RestApiResultSubscription> getSubscriptionByIdWithHttpInfo(String appId, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = getSubscriptionByIdValidateBeforeCall(appId, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<Subscription>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +166,7 @@ public class SubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSubscriptionByIdAsync(String appId, String subscriptionId, final ApiCallback<Subscription> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSubscriptionByIdAsync(String appId, String subscriptionId, final ApiCallback<RestApiResultSubscription> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -188,7 +188,7 @@ public class SubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = getSubscriptionByIdValidateBeforeCall(appId, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Subscription>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultSubscription>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

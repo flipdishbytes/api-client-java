@@ -18,8 +18,8 @@ import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultInvoice;
+import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.Subscription;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -49,7 +49,7 @@ public class SubscriptionsApiTest {
     public void getSubscriptionByIdTest() throws ApiException {
         String appId = null;
         String subscriptionId = null;
-        Subscription response = api.getSubscriptionById(appId, subscriptionId);
+        RestApiResultSubscription response = api.getSubscriptionById(appId, subscriptionId);
 
         // TODO: test validations
     }
