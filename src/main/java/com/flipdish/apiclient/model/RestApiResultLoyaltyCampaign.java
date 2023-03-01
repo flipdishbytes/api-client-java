@@ -29,7 +29,7 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-28T11:04:51.646Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-01T10:14:16.335Z")
 public class RestApiResultLoyaltyCampaign {
   @SerializedName("Data")
   private LoyaltyCampaign data = null;

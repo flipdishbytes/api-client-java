@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * A single data point in timeline graphs related to APM
  */
 @ApiModel(description = "A single data point in timeline graphs related to APM")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-02-28T11:04:51.646Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-01T10:14:16.335Z")
 public class ApmCurrencyDataPoint {
   @SerializedName("PeriodStart")
   private OffsetDateTime periodStart = null;
