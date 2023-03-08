@@ -37,7 +37,7 @@ public class InvoicesApiTest {
     /**
      * Get list of invoices
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+     * [BETA - this endpoint is under development, do not use it in your production system]
      *
      * @throws ApiException
      *          if the Api call fails

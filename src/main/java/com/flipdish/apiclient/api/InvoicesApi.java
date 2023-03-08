@@ -131,7 +131,7 @@ public class InvoicesApi {
 
     /**
      * Get list of invoices
-     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
      * @param limit Limit of invoices to return (optional)
@@ -146,7 +146,7 @@ public class InvoicesApi {
 
     /**
      * Get list of invoices
-     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
      * @param limit Limit of invoices to return (optional)
@@ -162,7 +162,7 @@ public class InvoicesApi {
 
     /**
      * Get list of invoices (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
      * @param limit Limit of invoices to return (optional)
