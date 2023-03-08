@@ -28,13 +28,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Rest api pagination result
+ * Rest api finance search pagination result
  */
-@ApiModel(description = "Rest api pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-01T14:53:22.563Z")
-public class RestApiPaginationResultInvoice {
-  @SerializedName("Page")
-  private Integer page = null;
+@ApiModel(description = "Rest api finance search pagination result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-08T09:47:03.335Z")
+public class RestApiFinanceSearchPaginationResultInvoice {
+  @SerializedName("NextPage")
+  private String nextPage = null;
 
   @SerializedName("Limit")
   private Integer limit = null;
@@ -45,25 +45,25 @@ public class RestApiPaginationResultInvoice {
   @SerializedName("Data")
   private List<Invoice> data = new ArrayList<Invoice>();
 
-  public RestApiPaginationResultInvoice page(Integer page) {
-    this.page = page;
+  public RestApiFinanceSearchPaginationResultInvoice nextPage(String nextPage) {
+    this.nextPage = nextPage;
     return this;
   }
 
    /**
-   * Current page index
-   * @return page
+   * Next page
+   * @return nextPage
   **/
-  @ApiModelProperty(required = true, value = "Current page index")
-  public Integer getPage() {
-    return page;
+  @ApiModelProperty(required = true, value = "Next page")
+  public String getNextPage() {
+    return nextPage;
   }
 
-  public void setPage(Integer page) {
-    this.page = page;
+  public void setNextPage(String nextPage) {
+    this.nextPage = nextPage;
   }
 
-  public RestApiPaginationResultInvoice limit(Integer limit) {
+  public RestApiFinanceSearchPaginationResultInvoice limit(Integer limit) {
     this.limit = limit;
     return this;
   }
@@ -81,7 +81,7 @@ public class RestApiPaginationResultInvoice {
     this.limit = limit;
   }
 
-  public RestApiPaginationResultInvoice totalRecordCount(Integer totalRecordCount) {
+  public RestApiFinanceSearchPaginationResultInvoice totalRecordCount(Integer totalRecordCount) {
     this.totalRecordCount = totalRecordCount;
     return this;
   }
@@ -99,12 +99,12 @@ public class RestApiPaginationResultInvoice {
     this.totalRecordCount = totalRecordCount;
   }
 
-  public RestApiPaginationResultInvoice data(List<Invoice> data) {
+  public RestApiFinanceSearchPaginationResultInvoice data(List<Invoice> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiPaginationResultInvoice addDataItem(Invoice dataItem) {
+  public RestApiFinanceSearchPaginationResultInvoice addDataItem(Invoice dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -131,25 +131,25 @@ public class RestApiPaginationResultInvoice {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiPaginationResultInvoice restApiPaginationResultInvoice = (RestApiPaginationResultInvoice) o;
-    return Objects.equals(this.page, restApiPaginationResultInvoice.page) &&
-        Objects.equals(this.limit, restApiPaginationResultInvoice.limit) &&
-        Objects.equals(this.totalRecordCount, restApiPaginationResultInvoice.totalRecordCount) &&
-        Objects.equals(this.data, restApiPaginationResultInvoice.data);
+    RestApiFinanceSearchPaginationResultInvoice restApiFinanceSearchPaginationResultInvoice = (RestApiFinanceSearchPaginationResultInvoice) o;
+    return Objects.equals(this.nextPage, restApiFinanceSearchPaginationResultInvoice.nextPage) &&
+        Objects.equals(this.limit, restApiFinanceSearchPaginationResultInvoice.limit) &&
+        Objects.equals(this.totalRecordCount, restApiFinanceSearchPaginationResultInvoice.totalRecordCount) &&
+        Objects.equals(this.data, restApiFinanceSearchPaginationResultInvoice.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(page, limit, totalRecordCount, data);
+    return Objects.hash(nextPage, limit, totalRecordCount, data);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiPaginationResultInvoice {\n");
+    sb.append("class RestApiFinanceSearchPaginationResultInvoice {\n");
     
-    sb.append("    page: ").append(toIndentedString(page)).append("\n");
+    sb.append("    nextPage: ").append(toIndentedString(nextPage)).append("\n");
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
     sb.append("    totalRecordCount: ").append(toIndentedString(totalRecordCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");

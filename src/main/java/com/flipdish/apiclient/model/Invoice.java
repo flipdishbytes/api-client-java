@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Invoice
  */
 @ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-01T14:53:22.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-08T09:47:03.335Z")
 public class Invoice {
   @SerializedName("InvoiceId")
   private String invoiceId = null;
@@ -368,6 +368,9 @@ public class Invoice {
   @SerializedName("Status")
   private StatusEnum status = null;
 
+  @SerializedName("SubscriptionId")
+  private String subscriptionId = null;
+
   @SerializedName("DueDate")
   private OffsetDateTime dueDate = null;
 
@@ -464,6 +467,24 @@ public class Invoice {
     this.status = status;
   }
 
+  public Invoice subscriptionId(String subscriptionId) {
+    this.subscriptionId = subscriptionId;
+    return this;
+  }
+
+   /**
+   * The subscription identifier
+   * @return subscriptionId
+  **/
+  @ApiModelProperty(value = "The subscription identifier")
+  public String getSubscriptionId() {
+    return subscriptionId;
+  }
+
+  public void setSubscriptionId(String subscriptionId) {
+    this.subscriptionId = subscriptionId;
+  }
+
   public Invoice dueDate(OffsetDateTime dueDate) {
     this.dueDate = dueDate;
     return this;
@@ -515,13 +536,14 @@ public class Invoice {
         Objects.equals(this.total, invoice.total) &&
         Objects.equals(this.currency, invoice.currency) &&
         Objects.equals(this.status, invoice.status) &&
+        Objects.equals(this.subscriptionId, invoice.subscriptionId) &&
         Objects.equals(this.dueDate, invoice.dueDate) &&
         Objects.equals(this.pdfLink, invoice.pdfLink);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(invoiceId, number, total, currency, status, dueDate, pdfLink);
+    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, dueDate, pdfLink);
   }
 
 
@@ -535,6 +557,7 @@ public class Invoice {
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
     sb.append("    pdfLink: ").append(toIndentedString(pdfLink)).append("\n");
     sb.append("}");

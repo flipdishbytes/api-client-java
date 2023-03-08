@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **total** | **Long** | Total |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
+**subscriptionId** | **String** | The subscription identifier |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) | Due Date |  [optional]
 **pdfLink** | **String** | Pdf Link | 
 
