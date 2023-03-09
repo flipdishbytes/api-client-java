@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Invoice
  */
 @ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-08T14:35:29.788Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-09T10:43:04.129Z")
 public class Invoice {
   @SerializedName("InvoiceId")
   private String invoiceId = null;
@@ -38,7 +38,7 @@ public class Invoice {
   private String number = null;
 
   @SerializedName("Total")
-  private Long total = null;
+  private Double total = null;
 
   /**
    * Currency
@@ -413,7 +413,7 @@ public class Invoice {
     this.number = number;
   }
 
-  public Invoice total(Long total) {
+  public Invoice total(Double total) {
     this.total = total;
     return this;
   }
@@ -423,11 +423,11 @@ public class Invoice {
    * @return total
   **/
   @ApiModelProperty(value = "Total")
-  public Long getTotal() {
+  public Double getTotal() {
     return total;
   }
 
-  public void setTotal(Long total) {
+  public void setTotal(Double total) {
     this.total = total;
   }
 

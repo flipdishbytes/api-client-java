@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-08T14:35:29.788Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-09T10:43:04.129Z")
 public class Subscription {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -370,7 +370,7 @@ public class Subscription {
   private CurrencyEnum currency = null;
 
   @SerializedName("NextInvoiceAmount")
-  private Long nextInvoiceAmount = null;
+  private Double nextInvoiceAmount = null;
 
   @SerializedName("NextInvoiceBillingDate")
   private OffsetDateTime nextInvoiceBillingDate = null;
@@ -453,7 +453,7 @@ public class Subscription {
     this.currency = currency;
   }
 
-  public Subscription nextInvoiceAmount(Long nextInvoiceAmount) {
+  public Subscription nextInvoiceAmount(Double nextInvoiceAmount) {
     this.nextInvoiceAmount = nextInvoiceAmount;
     return this;
   }
@@ -463,11 +463,11 @@ public class Subscription {
    * @return nextInvoiceAmount
   **/
   @ApiModelProperty(value = "Next invoice amount")
-  public Long getNextInvoiceAmount() {
+  public Double getNextInvoiceAmount() {
     return nextInvoiceAmount;
   }
 
-  public void setNextInvoiceAmount(Long nextInvoiceAmount) {
+  public void setNextInvoiceAmount(Double nextInvoiceAmount) {
     this.nextInvoiceAmount = nextInvoiceAmount;
   }
 

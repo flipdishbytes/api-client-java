@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invoiceId** | **String** | The invoice identifier | 
 **number** | **String** | Invoice number | 
-**total** | **Long** | Total |  [optional]
+**total** | **Double** | Total |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **subscriptionId** | **String** | The subscription identifier |  [optional]

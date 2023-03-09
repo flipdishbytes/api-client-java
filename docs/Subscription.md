@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
-**nextInvoiceAmount** | **Long** | Next invoice amount |  [optional]
+**nextInvoiceAmount** | **Double** | Next invoice amount |  [optional]
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **user** | **String** | User | 
 **defaultPaymentDescription** | **String** | Default payment description | 
