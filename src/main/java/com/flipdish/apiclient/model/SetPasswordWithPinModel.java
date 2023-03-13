@@ -28,13 +28,16 @@ import java.io.IOException;
  * Set password with PIN model
  */
 @ApiModel(description = "Set password with PIN model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-13T10:36:30.836Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-13T11:15:37.946Z")
 public class SetPasswordWithPinModel {
   @SerializedName("Pin")
   private Integer pin = null;
 
   @SerializedName("NewPassword")
   private String newPassword = null;
+
+  @SerializedName("RecaptchaToken")
+  private String recaptchaToken = null;
 
   public SetPasswordWithPinModel pin(Integer pin) {
     this.pin = pin;
@@ -72,6 +75,24 @@ public class SetPasswordWithPinModel {
     this.newPassword = newPassword;
   }
 
+  public SetPasswordWithPinModel recaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+    return this;
+  }
+
+   /**
+   * Google Recaptcha Token
+   * @return recaptchaToken
+  **/
+  @ApiModelProperty(value = "Google Recaptcha Token")
+  public String getRecaptchaToken() {
+    return recaptchaToken;
+  }
+
+  public void setRecaptchaToken(String recaptchaToken) {
+    this.recaptchaToken = recaptchaToken;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +104,13 @@ public class SetPasswordWithPinModel {
     }
     SetPasswordWithPinModel setPasswordWithPinModel = (SetPasswordWithPinModel) o;
     return Objects.equals(this.pin, setPasswordWithPinModel.pin) &&
-        Objects.equals(this.newPassword, setPasswordWithPinModel.newPassword);
+        Objects.equals(this.newPassword, setPasswordWithPinModel.newPassword) &&
+        Objects.equals(this.recaptchaToken, setPasswordWithPinModel.recaptchaToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pin, newPassword);
+    return Objects.hash(pin, newPassword, recaptchaToken);
   }
 
 
@@ -99,6 +121,7 @@ public class SetPasswordWithPinModel {
     
     sb.append("    pin: ").append(toIndentedString(pin)).append("\n");
     sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
+    sb.append("    recaptchaToken: ").append(toIndentedString(recaptchaToken)).append("\n");
     sb.append("}");
     return sb.toString();
   }

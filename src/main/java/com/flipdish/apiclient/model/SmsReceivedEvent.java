@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Sms received event
  */
 @ApiModel(description = "Sms received event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-13T10:36:30.836Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-13T11:15:37.946Z")
 public class SmsReceivedEvent {
   @SerializedName("EventName")
   private String eventName = null;
