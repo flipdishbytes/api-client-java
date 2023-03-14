@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**products** | [**List&lt;SubscriptionProduct&gt;**](SubscriptionProduct.md) | Products | 
 **subscriptionId** | **String** | The subscription identifier | 
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
