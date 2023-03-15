@@ -28,7 +28,7 @@ import java.io.IOException;
  * Rest api string result
  */
 @ApiModel(description = "Rest api string result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-14T11:56:50.547Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-15T12:49:11.568Z")
 public class RestApiStringResult {
   @SerializedName("Data")
   private String data = null;
