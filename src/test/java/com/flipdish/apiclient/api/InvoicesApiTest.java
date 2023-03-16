@@ -48,7 +48,8 @@ public class InvoicesApiTest {
         String subscriptionId = null;
         Integer limit = null;
         String pageId = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId);
+        Boolean excludeNotOwnedInvoices = null;
+        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
 
         // TODO: test validations
     }
