@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Update Mobile Apps Status
  */
 @ApiModel(description = "Update Mobile Apps Status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-16T09:12:36.543Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-16T11:32:15.881Z")
 public class UpdateMobileAppsSubmissionStatus {
   @SerializedName("MobileAppsSubmissionStatusId")
   private Integer mobileAppsSubmissionStatusId = null;

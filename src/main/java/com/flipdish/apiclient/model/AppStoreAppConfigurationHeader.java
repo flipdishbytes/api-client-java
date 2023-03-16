@@ -28,7 +28,7 @@ import java.io.IOException;
  * App store app configuration header information
  */
 @ApiModel(description = "App store app configuration header information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-16T09:12:36.543Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-16T11:32:15.881Z")
 public class AppStoreAppConfigurationHeader {
   @SerializedName("AppStoreAppId")
   private String appStoreAppId = null;
