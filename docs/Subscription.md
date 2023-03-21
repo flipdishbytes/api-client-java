@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **products** | [**List&lt;SubscriptionProduct&gt;**](SubscriptionProduct.md) | Products | 
+**upcomingInvoiceItems** | [**List&lt;InvoiceItem&gt;**](InvoiceItem.md) | Upcoming invoice items | 
 **subscriptionId** | **String** | The subscription identifier | 
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 

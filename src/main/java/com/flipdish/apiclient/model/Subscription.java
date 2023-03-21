@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.InvoiceItem;
 import com.flipdish.apiclient.model.SubscriptionProduct;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -32,10 +33,13 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-21T10:17:54.927Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-21T17:27:42.213Z")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();
+
+  @SerializedName("UpcomingInvoiceItems")
+  private List<InvoiceItem> upcomingInvoiceItems = new ArrayList<InvoiceItem>();
 
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -410,6 +414,29 @@ public class Subscription {
     this.products = products;
   }
 
+  public Subscription upcomingInvoiceItems(List<InvoiceItem> upcomingInvoiceItems) {
+    this.upcomingInvoiceItems = upcomingInvoiceItems;
+    return this;
+  }
+
+  public Subscription addUpcomingInvoiceItemsItem(InvoiceItem upcomingInvoiceItemsItem) {
+    this.upcomingInvoiceItems.add(upcomingInvoiceItemsItem);
+    return this;
+  }
+
+   /**
+   * Upcoming invoice items
+   * @return upcomingInvoiceItems
+  **/
+  @ApiModelProperty(required = true, value = "Upcoming invoice items")
+  public List<InvoiceItem> getUpcomingInvoiceItems() {
+    return upcomingInvoiceItems;
+  }
+
+  public void setUpcomingInvoiceItems(List<InvoiceItem> upcomingInvoiceItems) {
+    this.upcomingInvoiceItems = upcomingInvoiceItems;
+  }
+
   public Subscription subscriptionId(String subscriptionId) {
     this.subscriptionId = subscriptionId;
     return this;
@@ -565,6 +592,7 @@ public class Subscription {
     }
     Subscription subscription = (Subscription) o;
     return Objects.equals(this.products, subscription.products) &&
+        Objects.equals(this.upcomingInvoiceItems, subscription.upcomingInvoiceItems) &&
         Objects.equals(this.subscriptionId, subscription.subscriptionId) &&
         Objects.equals(this.name, subscription.name) &&
         Objects.equals(this.status, subscription.status) &&
@@ -577,7 +605,7 @@ public class Subscription {
 
   @Override
   public int hashCode() {
-    return Objects.hash(products, subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription);
+    return Objects.hash(products, upcomingInvoiceItems, subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription);
   }
 
 
@@ -587,6 +615,7 @@ public class Subscription {
     sb.append("class Subscription {\n");
     
     sb.append("    products: ").append(toIndentedString(products)).append("\n");
+    sb.append("    upcomingInvoiceItems: ").append(toIndentedString(upcomingInvoiceItems)).append("\n");
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
