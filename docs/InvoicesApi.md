@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInvoices"></a>
 # **getInvoices**
-> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices)
+> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo)
 
 Get list of invoices
 
@@ -33,11 +33,13 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 InvoicesApi apiInstance = new InvoicesApi();
 String appId = "appId_example"; // String | App Id
 String subscriptionId = "subscriptionId_example"; // String | Subscription Id (optional)
-Integer limit = 56; // Integer | Limit of invoices to return
-String pageId = "pageId_example"; // String | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call
-Boolean excludeNotOwnedInvoices = true; // Boolean | Exclude not owned invoices. Set to true to only view your invoices
+Integer limit = 56; // Integer | Limit of invoices to return (optional)
+String pageId = "pageId_example"; // String | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+Boolean excludeNotOwnedInvoices = true; // Boolean | Exclude not owned invoices. Set to true to only view your invoices (optional)
+OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | Filter starting from this date (optional)
+OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | Filter ending from this date (optional)
 try {
-    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
+    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#getInvoices");
@@ -51,9 +53,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
  **subscriptionId** | **String**| Subscription Id (optional) | [optional]
- **limit** | **Integer**| Limit of invoices to return | [optional]
- **pageId** | **String**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call | [optional]
- **excludeNotOwnedInvoices** | **Boolean**| Exclude not owned invoices. Set to true to only view your invoices | [optional]
+ **limit** | **Integer**| Limit of invoices to return (optional) | [optional]
+ **pageId** | **String**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) | [optional]
+ **excludeNotOwnedInvoices** | **Boolean**| Exclude not owned invoices. Set to true to only view your invoices (optional) | [optional]
+ **dateFrom** | **OffsetDateTime**| Filter starting from this date (optional) | [optional]
+ **dateTo** | **OffsetDateTime**| Filter ending from this date (optional) | [optional]
 
 ### Return type
 

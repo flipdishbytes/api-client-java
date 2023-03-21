@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiFinanceSearchPaginationResultInvoice;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -49,7 +50,9 @@ public class InvoicesApiTest {
         Integer limit = null;
         String pageId = null;
         Boolean excludeNotOwnedInvoices = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
+        OffsetDateTime dateFrom = null;
+        OffsetDateTime dateTo = null;
+        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
 
         // TODO: test validations
     }

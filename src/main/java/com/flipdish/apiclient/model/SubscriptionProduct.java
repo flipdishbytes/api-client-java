@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.SubscriptionStore;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,12 +24,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Product
  */
 @ApiModel(description = "Product")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-16T11:32:15.881Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-21T10:17:54.927Z")
 public class SubscriptionProduct {
   @SerializedName("ProductId")
   private String productId = null;
@@ -98,6 +101,9 @@ public class SubscriptionProduct {
 
   @SerializedName("PaymentFrequency")
   private PaymentFrequencyEnum paymentFrequency = null;
+
+  @SerializedName("Stores")
+  private List<SubscriptionStore> stores = null;
 
   public SubscriptionProduct productId(String productId) {
     this.productId = productId;
@@ -207,6 +213,32 @@ public class SubscriptionProduct {
     this.paymentFrequency = paymentFrequency;
   }
 
+  public SubscriptionProduct stores(List<SubscriptionStore> stores) {
+    this.stores = stores;
+    return this;
+  }
+
+  public SubscriptionProduct addStoresItem(SubscriptionStore storesItem) {
+    if (this.stores == null) {
+      this.stores = new ArrayList<SubscriptionStore>();
+    }
+    this.stores.add(storesItem);
+    return this;
+  }
+
+   /**
+   * Stores
+   * @return stores
+  **/
+  @ApiModelProperty(value = "Stores")
+  public List<SubscriptionStore> getStores() {
+    return stores;
+  }
+
+  public void setStores(List<SubscriptionStore> stores) {
+    this.stores = stores;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -222,12 +254,13 @@ public class SubscriptionProduct {
         Objects.equals(this.quantity, subscriptionProduct.quantity) &&
         Objects.equals(this.pricePerUnit, subscriptionProduct.pricePerUnit) &&
         Objects.equals(this.priceTotal, subscriptionProduct.priceTotal) &&
-        Objects.equals(this.paymentFrequency, subscriptionProduct.paymentFrequency);
+        Objects.equals(this.paymentFrequency, subscriptionProduct.paymentFrequency) &&
+        Objects.equals(this.stores, subscriptionProduct.stores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productId, name, quantity, pricePerUnit, priceTotal, paymentFrequency);
+    return Objects.hash(productId, name, quantity, pricePerUnit, priceTotal, paymentFrequency, stores);
   }
 
 
@@ -242,6 +275,7 @@ public class SubscriptionProduct {
     sb.append("    pricePerUnit: ").append(toIndentedString(pricePerUnit)).append("\n");
     sb.append("    priceTotal: ").append(toIndentedString(priceTotal)).append("\n");
     sb.append("    paymentFrequency: ").append(toIndentedString(paymentFrequency)).append("\n");
+    sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiFinanceSearchPaginationResultInvoice;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -60,15 +61,17 @@ public class InvoicesApi {
      * Build call for getInvoices
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional)
+     * @param limit Limit of invoices to return (optional) (optional)
+     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
+     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
+     * @param dateFrom Filter starting from this date (optional) (optional)
+     * @param dateTo Filter ending from this date (optional) (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getInvoicesCall(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getInvoicesCall(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, OffsetDateTime dateFrom, OffsetDateTime dateTo, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -85,6 +88,10 @@ public class InvoicesApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("pageId", pageId));
         if (excludeNotOwnedInvoices != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("excludeNotOwnedInvoices", excludeNotOwnedInvoices));
+        if (dateFrom != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("dateFrom", dateFrom));
+        if (dateTo != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("dateTo", dateTo));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -119,7 +126,7 @@ public class InvoicesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getInvoicesValidateBeforeCall(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getInvoicesValidateBeforeCall(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, OffsetDateTime dateFrom, OffsetDateTime dateTo, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -127,7 +134,7 @@ public class InvoicesApi {
         }
         
 
-        com.squareup.okhttp.Call call = getInvoicesCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getInvoicesCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, progressListener, progressRequestListener);
         return call;
 
     }
@@ -137,14 +144,16 @@ public class InvoicesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional)
+     * @param limit Limit of invoices to return (optional) (optional)
+     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
+     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
+     * @param dateFrom Filter starting from this date (optional) (optional)
+     * @param dateTo Filter ending from this date (optional) (optional)
      * @return RestApiFinanceSearchPaginationResultInvoice
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiFinanceSearchPaginationResultInvoice getInvoices(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices) throws ApiException {
-        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> resp = getInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices);
+    public RestApiFinanceSearchPaginationResultInvoice getInvoices(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, OffsetDateTime dateFrom, OffsetDateTime dateTo) throws ApiException {
+        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> resp = getInvoicesWithHttpInfo(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
         return resp.getData();
     }
 
@@ -153,14 +162,16 @@ public class InvoicesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional)
+     * @param limit Limit of invoices to return (optional) (optional)
+     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
+     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
+     * @param dateFrom Filter starting from this date (optional) (optional)
+     * @param dateTo Filter ending from this date (optional) (optional)
      * @return ApiResponse&lt;RestApiFinanceSearchPaginationResultInvoice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiFinanceSearchPaginationResultInvoice> getInvoicesWithHttpInfo(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices) throws ApiException {
-        com.squareup.okhttp.Call call = getInvoicesValidateBeforeCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, null, null);
+    public ApiResponse<RestApiFinanceSearchPaginationResultInvoice> getInvoicesWithHttpInfo(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, OffsetDateTime dateFrom, OffsetDateTime dateTo) throws ApiException {
+        com.squareup.okhttp.Call call = getInvoicesValidateBeforeCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, null, null);
         Type localVarReturnType = new TypeToken<RestApiFinanceSearchPaginationResultInvoice>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -170,14 +181,16 @@ public class InvoicesApi {
      * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId App Id (required)
      * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional)
+     * @param limit Limit of invoices to return (optional) (optional)
+     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
+     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
+     * @param dateFrom Filter starting from this date (optional) (optional)
+     * @param dateTo Filter ending from this date (optional) (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getInvoicesAsync(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, final ApiCallback<RestApiFinanceSearchPaginationResultInvoice> callback) throws ApiException {
+    public com.squareup.okhttp.Call getInvoicesAsync(String appId, String subscriptionId, Integer limit, String pageId, Boolean excludeNotOwnedInvoices, OffsetDateTime dateFrom, OffsetDateTime dateTo, final ApiCallback<RestApiFinanceSearchPaginationResultInvoice> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -198,7 +211,7 @@ public class InvoicesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getInvoicesValidateBeforeCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getInvoicesValidateBeforeCall(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiFinanceSearchPaginationResultInvoice>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
