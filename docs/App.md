@@ -192,6 +192,7 @@ CREATEAPPSTOREAPPCONFIGURATION | &quot;CreateAppStoreAppConfiguration&quot;
 VIEWAPPSTOREAPPCONFIGURATION | &quot;ViewAppStoreAppConfiguration&quot;
 UPDATEAPPSTOREAPPCONFIGURATION | &quot;UpdateAppStoreAppConfiguration&quot;
 DELETEAPPSTOREAPPCONFIGURATION | &quot;DeleteAppStoreAppConfiguration&quot;
+UPDATEAPPSTOREAPPCONFIGURATIONSETTINGS | &quot;UpdateAppStoreAppConfigurationSettings&quot;
 VIEWSALESCHANNELS | &quot;ViewSalesChannels&quot;
 EDITSALESCHANNELS | &quot;EditSalesChannels&quot;
 VIEWPAYGREENWHITELABELCONFIGURATION | &quot;ViewPayGreenWhiteLabelConfiguration&quot;

@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-21T17:27:42.213Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-22T11:29:54.948Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -417,6 +417,8 @@ public class App {
     UPDATEAPPSTOREAPPCONFIGURATION("UpdateAppStoreAppConfiguration"),
     
     DELETEAPPSTOREAPPCONFIGURATION("DeleteAppStoreAppConfiguration"),
+    
+    UPDATEAPPSTOREAPPCONFIGURATIONSETTINGS("UpdateAppStoreAppConfigurationSettings"),
     
     VIEWSALESCHANNELS("ViewSalesChannels"),
     
