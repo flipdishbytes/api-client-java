@@ -52,7 +52,8 @@ public class InvoicesApiTest {
         Boolean excludeNotOwnedInvoices = null;
         OffsetDateTime dateFrom = null;
         OffsetDateTime dateTo = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
+        String invoiceNumber = null;
+        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber);
 
         // TODO: test validations
     }

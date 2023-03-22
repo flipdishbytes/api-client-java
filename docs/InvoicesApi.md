@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInvoices"></a>
 # **getInvoices**
-> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo)
+> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber)
 
 Get list of invoices
 
@@ -38,8 +38,9 @@ String pageId = "pageId_example"; // String | Id for use in pagination. Use the 
 Boolean excludeNotOwnedInvoices = true; // Boolean | Exclude not owned invoices. Set to true to only view your invoices (optional)
 OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | Filter starting from this date (optional)
 OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | Filter ending from this date (optional)
+String invoiceNumber = "invoiceNumber_example"; // String | Invoice number (optional)
 try {
-    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo);
+    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#getInvoices");
@@ -58,6 +59,7 @@ Name | Type | Description  | Notes
  **excludeNotOwnedInvoices** | **Boolean**| Exclude not owned invoices. Set to true to only view your invoices (optional) | [optional]
  **dateFrom** | **OffsetDateTime**| Filter starting from this date (optional) | [optional]
  **dateTo** | **OffsetDateTime**| Filter ending from this date (optional) | [optional]
+ **invoiceNumber** | **String**| Invoice number (optional) | [optional]
 
 ### Return type
 

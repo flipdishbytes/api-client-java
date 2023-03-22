@@ -28,7 +28,7 @@ import java.io.IOException;
  * Update Driver Profile
  */
 @ApiModel(description = "Update Driver Profile")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-22T12:16:24.015Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-22T15:03:03.636Z")
 public class UpdateDriverProfileModel {
   @SerializedName("Name")
   private String name = null;
