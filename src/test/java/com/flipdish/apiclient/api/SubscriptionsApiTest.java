@@ -65,7 +65,8 @@ public class SubscriptionsApiTest {
     public void getSubscriptionsForAppTest() throws ApiException {
         String appId = null;
         Boolean excludeNotOwnedSubscriptions = null;
-        RestApiArrayResultSubscriptionSummary response = api.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions);
+        List<Integer> storeId = null;
+        RestApiArrayResultSubscriptionSummary response = api.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
 
         // TODO: test validations
     }

@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="getSubscriptionsForApp"></a>
 # **getSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions)
+> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId)
 
 Get list of subscriptions for an App
 
@@ -89,8 +89,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | App Id
 Boolean excludeNotOwnedSubscriptions = true; // Boolean | Exclude not owned subscriptions. Set to true to only view your subscriptions
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store Ids
 try {
-    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions);
+    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionsForApp");
@@ -104,6 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
  **excludeNotOwnedSubscriptions** | **Boolean**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store Ids | [optional]
 
 ### Return type
 
