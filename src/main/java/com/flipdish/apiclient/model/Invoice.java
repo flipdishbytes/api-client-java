@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Invoice
  */
 @ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-23T09:23:36.320Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-23T12:28:13.209Z")
 public class Invoice {
   @SerializedName("InvoiceId")
   private String invoiceId = null;
@@ -371,8 +371,11 @@ public class Invoice {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
 
-  @SerializedName("DueDate")
-  private OffsetDateTime dueDate = null;
+  @SerializedName("PaidAt")
+  private OffsetDateTime paidAt = null;
+
+  @SerializedName("FinalisedAt")
+  private OffsetDateTime finalisedAt = null;
 
   @SerializedName("PdfLink")
   private String pdfLink = null;
@@ -485,22 +488,40 @@ public class Invoice {
     this.subscriptionId = subscriptionId;
   }
 
-  public Invoice dueDate(OffsetDateTime dueDate) {
-    this.dueDate = dueDate;
+  public Invoice paidAt(OffsetDateTime paidAt) {
+    this.paidAt = paidAt;
     return this;
   }
 
    /**
-   * Due Date
-   * @return dueDate
+   * Paid At
+   * @return paidAt
   **/
-  @ApiModelProperty(value = "Due Date")
-  public OffsetDateTime getDueDate() {
-    return dueDate;
+  @ApiModelProperty(value = "Paid At")
+  public OffsetDateTime getPaidAt() {
+    return paidAt;
   }
 
-  public void setDueDate(OffsetDateTime dueDate) {
-    this.dueDate = dueDate;
+  public void setPaidAt(OffsetDateTime paidAt) {
+    this.paidAt = paidAt;
+  }
+
+  public Invoice finalisedAt(OffsetDateTime finalisedAt) {
+    this.finalisedAt = finalisedAt;
+    return this;
+  }
+
+   /**
+   * Finalised At
+   * @return finalisedAt
+  **/
+  @ApiModelProperty(value = "Finalised At")
+  public OffsetDateTime getFinalisedAt() {
+    return finalisedAt;
+  }
+
+  public void setFinalisedAt(OffsetDateTime finalisedAt) {
+    this.finalisedAt = finalisedAt;
   }
 
   public Invoice pdfLink(String pdfLink) {
@@ -537,13 +558,14 @@ public class Invoice {
         Objects.equals(this.currency, invoice.currency) &&
         Objects.equals(this.status, invoice.status) &&
         Objects.equals(this.subscriptionId, invoice.subscriptionId) &&
-        Objects.equals(this.dueDate, invoice.dueDate) &&
+        Objects.equals(this.paidAt, invoice.paidAt) &&
+        Objects.equals(this.finalisedAt, invoice.finalisedAt) &&
         Objects.equals(this.pdfLink, invoice.pdfLink);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, dueDate, pdfLink);
+    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, paidAt, finalisedAt, pdfLink);
   }
 
 
@@ -558,7 +580,8 @@ public class Invoice {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
-    sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
+    sb.append("    paidAt: ").append(toIndentedString(paidAt)).append("\n");
+    sb.append("    finalisedAt: ").append(toIndentedString(finalisedAt)).append("\n");
     sb.append("    pdfLink: ").append(toIndentedString(pdfLink)).append("\n");
     sb.append("}");
     return sb.toString();

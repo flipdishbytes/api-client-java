@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **subscriptionId** | **String** | The subscription identifier |  [optional]
-**dueDate** | [**OffsetDateTime**](OffsetDateTime.md) | Due Date |  [optional]
+**paidAt** | [**OffsetDateTime**](OffsetDateTime.md) | Paid At |  [optional]
+**finalisedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Finalised At |  [optional]
 **pdfLink** | **String** | Pdf Link | 
 
 
