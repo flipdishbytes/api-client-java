@@ -88,8 +88,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | App Id
-Boolean excludeNotOwnedSubscriptions = true; // Boolean | Exclude not owned subscriptions. Set to true to only view your subscriptions
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store Ids
+Boolean excludeNotOwnedSubscriptions = true; // Boolean | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store Ids (optional)
 try {
     RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
     System.out.println(result);
@@ -104,8 +104,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App Id |
- **excludeNotOwnedSubscriptions** | **Boolean**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional]
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store Ids | [optional]
+ **excludeNotOwnedSubscriptions** | **Boolean**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store Ids (optional) | [optional]
 
 ### Return type
 

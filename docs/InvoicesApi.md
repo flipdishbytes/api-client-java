@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInvoices"></a>
 # **getInvoices**
-> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber)
+> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId)
 
 Get list of invoices
 
@@ -39,8 +39,9 @@ Boolean excludeNotOwnedInvoices = true; // Boolean | Exclude not owned invoices.
 OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | Filter starting from this date (optional)
 OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | Filter ending from this date (optional)
 String invoiceNumber = "invoiceNumber_example"; // String | Invoice number (optional)
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store Ids (optional)
 try {
-    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber);
+    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#getInvoices");
@@ -60,6 +61,7 @@ Name | Type | Description  | Notes
  **dateFrom** | **OffsetDateTime**| Filter starting from this date (optional) | [optional]
  **dateTo** | **OffsetDateTime**| Filter ending from this date (optional) | [optional]
  **invoiceNumber** | **String**| Invoice number (optional) | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store Ids (optional) | [optional]
 
 ### Return type
 

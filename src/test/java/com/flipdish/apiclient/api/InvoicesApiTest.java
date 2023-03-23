@@ -53,7 +53,8 @@ public class InvoicesApiTest {
         OffsetDateTime dateFrom = null;
         OffsetDateTime dateTo = null;
         String invoiceNumber = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber);
+        List<Integer> storeId = null;
+        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
 
         // TODO: test validations
     }
