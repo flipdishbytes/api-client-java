@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Search Criteria for Audit Logs
  */
 @ApiModel(description = "Search Criteria for Audit Logs")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-23T12:28:13.209Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-30T11:28:14.196+01:00")
 public class SearchCriteria {
   @SerializedName("Limit")
   private Integer limit = null;
@@ -50,6 +50,9 @@ public class SearchCriteria {
 
   @SerializedName("StoreId")
   private Integer storeId = null;
+
+  @SerializedName("StoreIdList")
+  private List<Integer> storeIdList = null;
 
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;
@@ -184,6 +187,32 @@ public class SearchCriteria {
 
   public void setStoreId(Integer storeId) {
     this.storeId = storeId;
+  }
+
+  public SearchCriteria storeIdList(List<Integer> storeIdList) {
+    this.storeIdList = storeIdList;
+    return this;
+  }
+
+  public SearchCriteria addStoreIdListItem(Integer storeIdListItem) {
+    if (this.storeIdList == null) {
+      this.storeIdList = new ArrayList<Integer>();
+    }
+    this.storeIdList.add(storeIdListItem);
+    return this;
+  }
+
+   /**
+   * Events that have Store Id List
+   * @return storeIdList
+  **/
+  @ApiModelProperty(value = "Events that have Store Id List")
+  public List<Integer> getStoreIdList() {
+    return storeIdList;
+  }
+
+  public void setStoreIdList(List<Integer> storeIdList) {
+    this.storeIdList = storeIdList;
   }
 
   public SearchCriteria storeGroupId(Integer storeGroupId) {
@@ -372,6 +401,7 @@ public class SearchCriteria {
         Objects.equals(this.end, searchCriteria.end) &&
         Objects.equals(this.orderId, searchCriteria.orderId) &&
         Objects.equals(this.storeId, searchCriteria.storeId) &&
+        Objects.equals(this.storeIdList, searchCriteria.storeIdList) &&
         Objects.equals(this.storeGroupId, searchCriteria.storeGroupId) &&
         Objects.equals(this.userId, searchCriteria.userId) &&
         Objects.equals(this.menuId, searchCriteria.menuId) &&
@@ -385,7 +415,7 @@ public class SearchCriteria {
 
   @Override
   public int hashCode() {
-    return Objects.hash(limit, page, start, end, orderId, storeId, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
+    return Objects.hash(limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId);
   }
 
 
@@ -400,6 +430,7 @@ public class SearchCriteria {
     sb.append("    end: ").append(toIndentedString(end)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    storeIdList: ").append(toIndentedString(storeIdList)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");

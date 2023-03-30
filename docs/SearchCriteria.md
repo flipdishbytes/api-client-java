@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **end** | [**OffsetDateTime**](OffsetDateTime.md) | End date |  [optional]
 **orderId** | **Integer** | Events that have Order Id |  [optional]
 **storeId** | **Integer** | Events that have Store Id |  [optional]
+**storeIdList** | **List&lt;Integer&gt;** | Events that have Store Id List |  [optional]
 **storeGroupId** | **Integer** | Events that have Store Group Id |  [optional]
 **userId** | **Integer** | Events that have User Id |  [optional]
 **menuId** | **Integer** | Events that have Menu Id |  [optional]

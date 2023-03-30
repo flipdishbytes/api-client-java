@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Invoice
  */
 @ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-23T12:28:13.209Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-30T11:28:14.196+01:00")
 public class Invoice {
   @SerializedName("InvoiceId")
   private String invoiceId = null;
@@ -380,6 +380,12 @@ public class Invoice {
   @SerializedName("PdfLink")
   private String pdfLink = null;
 
+  @SerializedName("HostedUrl")
+  private String hostedUrl = null;
+
+  @SerializedName("Overdue")
+  private Boolean overdue = null;
+
   public Invoice invoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
     return this;
@@ -542,6 +548,42 @@ public class Invoice {
     this.pdfLink = pdfLink;
   }
 
+  public Invoice hostedUrl(String hostedUrl) {
+    this.hostedUrl = hostedUrl;
+    return this;
+  }
+
+   /**
+   * Hosted Url
+   * @return hostedUrl
+  **/
+  @ApiModelProperty(required = true, value = "Hosted Url")
+  public String getHostedUrl() {
+    return hostedUrl;
+  }
+
+  public void setHostedUrl(String hostedUrl) {
+    this.hostedUrl = hostedUrl;
+  }
+
+  public Invoice overdue(Boolean overdue) {
+    this.overdue = overdue;
+    return this;
+  }
+
+   /**
+   * Overdue
+   * @return overdue
+  **/
+  @ApiModelProperty(required = true, value = "Overdue")
+  public Boolean isOverdue() {
+    return overdue;
+  }
+
+  public void setOverdue(Boolean overdue) {
+    this.overdue = overdue;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -560,12 +602,14 @@ public class Invoice {
         Objects.equals(this.subscriptionId, invoice.subscriptionId) &&
         Objects.equals(this.paidAt, invoice.paidAt) &&
         Objects.equals(this.finalisedAt, invoice.finalisedAt) &&
-        Objects.equals(this.pdfLink, invoice.pdfLink);
+        Objects.equals(this.pdfLink, invoice.pdfLink) &&
+        Objects.equals(this.hostedUrl, invoice.hostedUrl) &&
+        Objects.equals(this.overdue, invoice.overdue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, paidAt, finalisedAt, pdfLink);
+    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, paidAt, finalisedAt, pdfLink, hostedUrl, overdue);
   }
 
 
@@ -583,6 +627,8 @@ public class Invoice {
     sb.append("    paidAt: ").append(toIndentedString(paidAt)).append("\n");
     sb.append("    finalisedAt: ").append(toIndentedString(finalisedAt)).append("\n");
     sb.append("    pdfLink: ").append(toIndentedString(pdfLink)).append("\n");
+    sb.append("    hostedUrl: ").append(toIndentedString(hostedUrl)).append("\n");
+    sb.append("    overdue: ").append(toIndentedString(overdue)).append("\n");
     sb.append("}");
     return sb.toString();
   }

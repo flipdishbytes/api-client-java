@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **paidAt** | [**OffsetDateTime**](OffsetDateTime.md) | Paid At |  [optional]
 **finalisedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Finalised At |  [optional]
 **pdfLink** | **String** | Pdf Link | 
+**hostedUrl** | **String** | Hosted Url | 
+**overdue** | **Boolean** | Overdue | 
 
 
 <a name="CurrencyEnum"></a>

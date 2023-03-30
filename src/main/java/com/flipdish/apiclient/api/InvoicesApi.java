@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import org.threeten.bp.OffsetDateTime;
+import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiFinanceSearchPaginationResultInvoice;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
