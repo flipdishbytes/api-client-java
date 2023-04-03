@@ -31,7 +31,7 @@ import java.util.List;
  * List of field definitions per country
  */
 @ApiModel(description = "List of field definitions per country")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-03-30T16:02:01.465+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-03T10:31:00.711+01:00")
 public class CountryWithAccountFieldsDefinitions {
   @SerializedName("CountryCode")
   private String countryCode = null;
