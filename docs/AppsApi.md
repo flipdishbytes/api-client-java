@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 <a name="setAppHostname"></a>
 # **setAppHostname**
-> RestApiStringResult setAppHostname(appId, hostname, isEmbed)
+> RestApiStringResult setAppHostname(appId, hostname, isEmbed, isNextGenWeb)
 
 Set the application hostname.
 
@@ -462,8 +462,9 @@ AppsApi apiInstance = new AppsApi();
 String appId = "appId_example"; // String | Application identifier.
 String hostname = "hostname_example"; // String | The new Hostname.
 Boolean isEmbed = true; // Boolean | Will the website be embedded
+Boolean isNextGenWeb = true; // Boolean | Enables the NextGen web editor
 try {
-    RestApiStringResult result = apiInstance.setAppHostname(appId, hostname, isEmbed);
+    RestApiStringResult result = apiInstance.setAppHostname(appId, hostname, isEmbed, isNextGenWeb);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#setAppHostname");
@@ -478,6 +479,7 @@ Name | Type | Description  | Notes
  **appId** | **String**| Application identifier. |
  **hostname** | **String**| The new Hostname. |
  **isEmbed** | **Boolean**| Will the website be embedded | [optional]
+ **isNextGenWeb** | **Boolean**| Enables the NextGen web editor | [optional]
 
 ### Return type
 

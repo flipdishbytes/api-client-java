@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **nextInvoiceAmount** | **Double** | Next invoice amount |  [optional]
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **user** | **String** | User | 
-**defaultPaymentDescription** | **String** | Default payment description | 
+**defaultPaymentDescription** | **String** | Default payment description |  [optional]
 
 
 <a name="StatusEnum"></a>

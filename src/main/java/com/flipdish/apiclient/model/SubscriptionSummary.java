@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-03T10:31:00.711+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-05T09:54:41.239+01:00")
 public class SubscriptionSummary {
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -516,7 +516,7 @@ public class SubscriptionSummary {
    * Default payment description
    * @return defaultPaymentDescription
   **/
-  @ApiModelProperty(required = true, value = "Default payment description")
+  @ApiModelProperty(value = "Default payment description")
   public String getDefaultPaymentDescription() {
     return defaultPaymentDescription;
   }
