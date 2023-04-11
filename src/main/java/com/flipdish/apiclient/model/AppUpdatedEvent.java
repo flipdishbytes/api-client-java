@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.App;
 import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -31,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Application updated event
  */
 @ApiModel(description = "Application updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-11T10:30:09.283+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-11T11:33:52.191+01:00")
 public class AppUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -50,6 +51,9 @@ public class AppUpdatedEvent {
 
   @SerializedName("User")
   private UserEventInfo user = null;
+
+  @SerializedName("App")
+  private App app = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -174,6 +178,24 @@ public class AppUpdatedEvent {
     this.user = user;
   }
 
+  public AppUpdatedEvent app(App app) {
+    this.app = app;
+    return this;
+  }
+
+   /**
+   * App - Whitelabel config
+   * @return app
+  **/
+  @ApiModelProperty(value = "App - Whitelabel config")
+  public App getApp() {
+    return app;
+  }
+
+  public void setApp(App app) {
+    this.app = app;
+  }
+
   public AppUpdatedEvent flipdishEventId(UUID flipdishEventId) {
     this.flipdishEventId = flipdishEventId;
     return this;
@@ -280,6 +302,7 @@ public class AppUpdatedEvent {
         Objects.equals(this.appName, appUpdatedEvent.appName) &&
         Objects.equals(this.countryId, appUpdatedEvent.countryId) &&
         Objects.equals(this.user, appUpdatedEvent.user) &&
+        Objects.equals(this.app, appUpdatedEvent.app) &&
         Objects.equals(this.flipdishEventId, appUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appUpdatedEvent.createTime) &&
         Objects.equals(this.position, appUpdatedEvent.position) &&
@@ -289,7 +312,7 @@ public class AppUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, changes, appName, countryId, user, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, changes, appName, countryId, user, app, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -304,6 +327,7 @@ public class AppUpdatedEvent {
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    app: ").append(toIndentedString(app)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
