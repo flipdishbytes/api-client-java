@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-11T11:33:52.191+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-12T13:27:55.789+01:00")
 public class RestApiArrayResultAppStoreAppConfigurationSummary {
   @SerializedName("Data")
   private List<AppStoreAppConfigurationSummary> data = new ArrayList<AppStoreAppConfigurationSummary>();

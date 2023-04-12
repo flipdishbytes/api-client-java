@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **chargebacks** | [**ChargebackDetails**](ChargebackDetails.md) | Chargebacks breakdown |  [optional]
 **otherCharges** | [**OtherChargesDetails**](OtherChargesDetails.md) | Breakdown of other charges |  [optional]
 **balance** | [**BalanceDetails**](BalanceDetails.md) | Period opening and closing balance |  [optional]
+**posRevenue** | [**PosRevenueDetails**](PosRevenueDetails.md) | Breakdown of POS charges |  [optional]
 
 
 

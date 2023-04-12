@@ -19,6 +19,7 @@ import com.flipdish.apiclient.model.BalanceDetails;
 import com.flipdish.apiclient.model.ChargebackDetails;
 import com.flipdish.apiclient.model.FlipdishFeesDetails;
 import com.flipdish.apiclient.model.OtherChargesDetails;
+import com.flipdish.apiclient.model.PosRevenueDetails;
 import com.flipdish.apiclient.model.RevenueAdjustmentsDetails;
 import com.flipdish.apiclient.model.RevenueDetail;
 import com.google.gson.TypeAdapter;
@@ -34,7 +35,7 @@ import java.io.IOException;
  * Payout details for a single store
  */
 @ApiModel(description = "Payout details for a single store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-11T11:33:52.191+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-12T13:27:55.789+01:00")
 public class PayoutStore {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -65,6 +66,9 @@ public class PayoutStore {
 
   @SerializedName("Balance")
   private BalanceDetails balance = null;
+
+  @SerializedName("PosRevenue")
+  private PosRevenueDetails posRevenue = null;
 
   public PayoutStore storeId(Integer storeId) {
     this.storeId = storeId;
@@ -237,6 +241,24 @@ public class PayoutStore {
     this.balance = balance;
   }
 
+  public PayoutStore posRevenue(PosRevenueDetails posRevenue) {
+    this.posRevenue = posRevenue;
+    return this;
+  }
+
+   /**
+   * Breakdown of POS charges
+   * @return posRevenue
+  **/
+  @ApiModelProperty(value = "Breakdown of POS charges")
+  public PosRevenueDetails getPosRevenue() {
+    return posRevenue;
+  }
+
+  public void setPosRevenue(PosRevenueDetails posRevenue) {
+    this.posRevenue = posRevenue;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -256,12 +278,13 @@ public class PayoutStore {
         Objects.equals(this.flipdishFees, payoutStore.flipdishFees) &&
         Objects.equals(this.chargebacks, payoutStore.chargebacks) &&
         Objects.equals(this.otherCharges, payoutStore.otherCharges) &&
-        Objects.equals(this.balance, payoutStore.balance);
+        Objects.equals(this.balance, payoutStore.balance) &&
+        Objects.equals(this.posRevenue, payoutStore.posRevenue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeName, amount, onlineRevenue, revenue, revenueAdjustments, flipdishFees, chargebacks, otherCharges, balance);
+    return Objects.hash(storeId, storeName, amount, onlineRevenue, revenue, revenueAdjustments, flipdishFees, chargebacks, otherCharges, balance, posRevenue);
   }
 
 
@@ -280,6 +303,7 @@ public class PayoutStore {
     sb.append("    chargebacks: ").append(toIndentedString(chargebacks)).append("\n");
     sb.append("    otherCharges: ").append(toIndentedString(otherCharges)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
+    sb.append("    posRevenue: ").append(toIndentedString(posRevenue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
