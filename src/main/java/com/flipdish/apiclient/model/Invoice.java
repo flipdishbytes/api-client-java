@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Invoice
  */
 @ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-12T16:27:47.176+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
 public class Invoice {
   @SerializedName("InvoiceId")
   private String invoiceId = null;
@@ -317,15 +317,15 @@ public class Invoice {
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    DRAFT("draft"),
+    DRAFT("Draft"),
     
-    OPEN("open"),
+    OPEN("Open"),
     
-    PAID("paid"),
+    PAID("Paid"),
     
-    UNCOLLECTIBLE("uncollectible"),
+    UNCOLLECTIBLE("UnCollectible"),
     
-    VOID("void");
+    VOID("Void");
 
     private String value;
 

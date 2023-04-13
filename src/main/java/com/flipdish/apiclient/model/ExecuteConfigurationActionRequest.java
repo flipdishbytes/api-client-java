@@ -28,7 +28,7 @@ import java.io.IOException;
  * Execute Configuration
  */
 @ApiModel(description = "Execute Configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-12T16:27:47.176+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
 public class ExecuteConfigurationActionRequest {
   @SerializedName("Key")
   private String key = null;

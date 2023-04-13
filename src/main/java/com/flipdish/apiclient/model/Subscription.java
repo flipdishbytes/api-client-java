@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-12T16:27:47.176+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();
@@ -52,19 +52,19 @@ public class Subscription {
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    INCOMPLETE("incomplete"),
+    INCOMPLETE("Incomplete"),
     
-    INCOMPLETE_EXPIRED("incomplete_expired"),
+    INCOMPLETEEXPIRED("IncompleteExpired"),
     
-    TRIALING("trialing"),
+    TRIALING("Trialing"),
     
-    ACTIVE("active"),
+    ACTIVE("Active"),
     
-    PAST_DUE("past_due"),
+    PASTDUE("PastDue"),
     
-    CANCELED("canceled"),
+    CANCELED("Canceled"),
     
-    UNPAID("unpaid");
+    UNPAID("Unpaid");
 
     private String value;
 

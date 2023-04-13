@@ -140,11 +140,11 @@ BMD | &quot;BMD&quot;
 ## Enum: StatusEnum
 Name | Value
 ---- | -----
-DRAFT | &quot;draft&quot;
-OPEN | &quot;open&quot;
-PAID | &quot;paid&quot;
-UNCOLLECTIBLE | &quot;uncollectible&quot;
-VOID | &quot;void&quot;
+DRAFT | &quot;Draft&quot;
+OPEN | &quot;Open&quot;
+PAID | &quot;Paid&quot;
+UNCOLLECTIBLE | &quot;UnCollectible&quot;
+VOID | &quot;Void&quot;
 
 
 

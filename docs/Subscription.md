@@ -20,13 +20,13 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 Name | Value
 ---- | -----
-INCOMPLETE | &quot;incomplete&quot;
-INCOMPLETE_EXPIRED | &quot;incomplete_expired&quot;
-TRIALING | &quot;trialing&quot;
-ACTIVE | &quot;active&quot;
-PAST_DUE | &quot;past_due&quot;
-CANCELED | &quot;canceled&quot;
-UNPAID | &quot;unpaid&quot;
+INCOMPLETE | &quot;Incomplete&quot;
+INCOMPLETEEXPIRED | &quot;IncompleteExpired&quot;
+TRIALING | &quot;Trialing&quot;
+ACTIVE | &quot;Active&quot;
+PASTDUE | &quot;PastDue&quot;
+CANCELED | &quot;Canceled&quot;
+UNPAID | &quot;Unpaid&quot;
 
 
 <a name="CurrencyEnum"></a>
