@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Pre order config updated
  */
 @ApiModel(description = "Store Pre order config updated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class StorePreOrderConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

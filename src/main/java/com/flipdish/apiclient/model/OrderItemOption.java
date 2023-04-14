@@ -32,7 +32,7 @@ import java.util.UUID;
  * Order item option
  */
 @ApiModel(description = "Order item option")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class OrderItemOption {
   @SerializedName("Metadata")
   private Map<String, String> metadata = null;

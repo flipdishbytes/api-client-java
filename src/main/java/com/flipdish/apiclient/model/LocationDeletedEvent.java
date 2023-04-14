@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Event for logging the deleting of Locations
  */
 @ApiModel(description = "Event for logging the deleting of Locations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class LocationDeletedEvent {
   @SerializedName("LocationId")
   private Integer locationId = null;

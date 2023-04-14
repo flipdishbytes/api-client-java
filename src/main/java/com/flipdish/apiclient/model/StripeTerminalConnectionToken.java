@@ -28,7 +28,7 @@ import java.io.IOException;
  * Stripe Terminal Connection Token
  */
 @ApiModel(description = "Stripe Terminal Connection Token")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class StripeTerminalConnectionToken {
   @SerializedName("Token")
   private String token = null;

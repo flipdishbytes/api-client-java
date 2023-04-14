@@ -28,7 +28,7 @@ import java.io.IOException;
  * Password reset model
  */
 @ApiModel(description = "Password reset model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class PasswordResetModel {
   @SerializedName("TokenId")
   private String tokenId = null;

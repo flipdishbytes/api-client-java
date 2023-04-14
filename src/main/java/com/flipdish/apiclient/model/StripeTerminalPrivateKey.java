@@ -28,7 +28,7 @@ import java.io.IOException;
  * Stripe Terminal Private Key
  */
 @ApiModel(description = "Stripe Terminal Private Key")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T13:05:13.306+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T15:55:12.138+01:00")
 public class StripeTerminalPrivateKey {
   @SerializedName("Location")
   private String location = null;
