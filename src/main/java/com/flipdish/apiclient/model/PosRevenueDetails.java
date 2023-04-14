@@ -28,13 +28,19 @@ import java.io.IOException;
  * Breakdown of POS charges
  */
 @ApiModel(description = "Breakdown of POS charges")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class PosRevenueDetails {
   @SerializedName("PosSalesAmount")
   private Double posSalesAmount = null;
 
+  @SerializedName("PosSalesTax")
+  private Double posSalesTax = null;
+
   @SerializedName("PosSalesTips")
   private Double posSalesTips = null;
+
+  @SerializedName("TotalPosRevenue")
+  private Double totalPosRevenue = null;
 
   public PosRevenueDetails posSalesAmount(Double posSalesAmount) {
     this.posSalesAmount = posSalesAmount;
@@ -52,6 +58,24 @@ public class PosRevenueDetails {
 
   public void setPosSalesAmount(Double posSalesAmount) {
     this.posSalesAmount = posSalesAmount;
+  }
+
+  public PosRevenueDetails posSalesTax(Double posSalesTax) {
+    this.posSalesTax = posSalesTax;
+    return this;
+  }
+
+   /**
+   * POS sale Tax for the store
+   * @return posSalesTax
+  **/
+  @ApiModelProperty(value = "POS sale Tax for the store")
+  public Double getPosSalesTax() {
+    return posSalesTax;
+  }
+
+  public void setPosSalesTax(Double posSalesTax) {
+    this.posSalesTax = posSalesTax;
   }
 
   public PosRevenueDetails posSalesTips(Double posSalesTips) {
@@ -72,6 +96,24 @@ public class PosRevenueDetails {
     this.posSalesTips = posSalesTips;
   }
 
+  public PosRevenueDetails totalPosRevenue(Double totalPosRevenue) {
+    this.totalPosRevenue = totalPosRevenue;
+    return this;
+  }
+
+   /**
+   * POS Total Revenue for the store
+   * @return totalPosRevenue
+  **/
+  @ApiModelProperty(value = "POS Total Revenue for the store")
+  public Double getTotalPosRevenue() {
+    return totalPosRevenue;
+  }
+
+  public void setTotalPosRevenue(Double totalPosRevenue) {
+    this.totalPosRevenue = totalPosRevenue;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +125,14 @@ public class PosRevenueDetails {
     }
     PosRevenueDetails posRevenueDetails = (PosRevenueDetails) o;
     return Objects.equals(this.posSalesAmount, posRevenueDetails.posSalesAmount) &&
-        Objects.equals(this.posSalesTips, posRevenueDetails.posSalesTips);
+        Objects.equals(this.posSalesTax, posRevenueDetails.posSalesTax) &&
+        Objects.equals(this.posSalesTips, posRevenueDetails.posSalesTips) &&
+        Objects.equals(this.totalPosRevenue, posRevenueDetails.totalPosRevenue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(posSalesAmount, posSalesTips);
+    return Objects.hash(posSalesAmount, posSalesTax, posSalesTips, totalPosRevenue);
   }
 
 
@@ -98,7 +142,9 @@ public class PosRevenueDetails {
     sb.append("class PosRevenueDetails {\n");
     
     sb.append("    posSalesAmount: ").append(toIndentedString(posSalesAmount)).append("\n");
+    sb.append("    posSalesTax: ").append(toIndentedString(posSalesTax)).append("\n");
     sb.append("    posSalesTips: ").append(toIndentedString(posSalesTips)).append("\n");
+    sb.append("    totalPosRevenue: ").append(toIndentedString(totalPosRevenue)).append("\n");
     sb.append("}");
     return sb.toString();
   }

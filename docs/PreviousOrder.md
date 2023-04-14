@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **totalAmount** | **Double** |  |  [optional]
 **items** | [**List&lt;PreviousOrderItem&gt;**](PreviousOrderItem.md) |  |  [optional]
 **taxRates** | [**List&lt;TaxRate&gt;**](TaxRate.md) |  |  [optional]
+**whiteLabelId** | **Integer** |  |  [optional]
 
 
 <a name="CurrencyEnum"></a>

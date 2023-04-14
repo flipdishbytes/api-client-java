@@ -18,7 +18,7 @@ import com.flipdish.apiclient.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

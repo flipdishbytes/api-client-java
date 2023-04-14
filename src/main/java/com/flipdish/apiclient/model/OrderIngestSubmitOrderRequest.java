@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Generic model for ingesting external orders from   3rd parties into the system
  */
 @ApiModel(description = "Generic model for ingesting external orders from   3rd parties into the system")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class OrderIngestSubmitOrderRequest {
   /**
    * [Required] Indicated the name from where the request is coming from

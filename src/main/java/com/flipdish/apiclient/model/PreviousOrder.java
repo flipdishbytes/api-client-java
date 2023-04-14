@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PreviousOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class PreviousOrder {
   @SerializedName("DeliveryType")
   private String deliveryType = null;
@@ -364,6 +364,9 @@ public class PreviousOrder {
 
   @SerializedName("TaxRates")
   private List<TaxRate> taxRates = null;
+
+  @SerializedName("WhiteLabelId")
+  private Integer whiteLabelId = null;
 
   public PreviousOrder deliveryType(String deliveryType) {
     this.deliveryType = deliveryType;
@@ -759,6 +762,24 @@ public class PreviousOrder {
     this.taxRates = taxRates;
   }
 
+  public PreviousOrder whiteLabelId(Integer whiteLabelId) {
+    this.whiteLabelId = whiteLabelId;
+    return this;
+  }
+
+   /**
+   * Get whiteLabelId
+   * @return whiteLabelId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getWhiteLabelId() {
+    return whiteLabelId;
+  }
+
+  public void setWhiteLabelId(Integer whiteLabelId) {
+    this.whiteLabelId = whiteLabelId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -789,12 +810,13 @@ public class PreviousOrder {
         Objects.equals(this.totalTax, previousOrder.totalTax) &&
         Objects.equals(this.totalAmount, previousOrder.totalAmount) &&
         Objects.equals(this.items, previousOrder.items) &&
-        Objects.equals(this.taxRates, previousOrder.taxRates);
+        Objects.equals(this.taxRates, previousOrder.taxRates) &&
+        Objects.equals(this.whiteLabelId, previousOrder.whiteLabelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, totalTax, totalAmount, items, taxRates);
+    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, totalTax, totalAmount, items, taxRates, whiteLabelId);
   }
 
 
@@ -824,6 +846,7 @@ public class PreviousOrder {
     sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("    taxRates: ").append(toIndentedString(taxRates)).append("\n");
+    sb.append("    whiteLabelId: ").append(toIndentedString(whiteLabelId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

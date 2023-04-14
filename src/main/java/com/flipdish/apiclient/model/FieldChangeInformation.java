@@ -28,7 +28,7 @@ import java.io.IOException;
  * Change information for a field
  */
 @ApiModel(description = "Change information for a field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class FieldChangeInformation {
   @SerializedName("Path")
   private String path = null;

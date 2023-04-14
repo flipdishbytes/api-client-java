@@ -28,7 +28,7 @@ import java.io.IOException;
  * Client Device summary (header fields)
  */
 @ApiModel(description = "Client Device summary (header fields)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-13T14:59:37.453+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-14T12:11:55.205+01:00")
 public class ClientDeviceSummary {
   @SerializedName("DeviceModel")
   private String deviceModel = null;
