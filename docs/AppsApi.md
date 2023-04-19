@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
 [**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
+[**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | Toggle Next Gen Web
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
 
 
@@ -641,6 +642,61 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| Application identifier. |
  **vanityUrl** | **String**| Vanity url |
+
+### Return type
+
+[**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="toggleNextGenWeb"></a>
+# **toggleNextGenWeb**
+> RestApiStringResult toggleNextGenWeb(appId, hostname, isNextGenWeb)
+
+Toggle Next Gen Web
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+String hostname = "hostname_example"; // String | 
+Boolean isNextGenWeb = true; // Boolean | 
+try {
+    RestApiStringResult result = apiInstance.toggleNextGenWeb(appId, hostname, isNextGenWeb);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#toggleNextGenWeb");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **hostname** | **String**|  |
+ **isNextGenWeb** | **Boolean**|  |
 
 ### Return type
 

@@ -245,6 +245,24 @@ public class AppsApiTest {
     }
     
     /**
+     * Toggle Next Gen Web
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void toggleNextGenWebTest() throws ApiException {
+        String appId = null;
+        String hostname = null;
+        Boolean isNextGenWeb = null;
+        RestApiStringResult response = api.toggleNextGenWeb(appId, hostname, isNextGenWeb);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Set the application logo \\ icon
      *
      * 
