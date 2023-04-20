@@ -1617,13 +1617,14 @@ public class AppsApi {
      * Build call for toggleNextGenWeb
      * @param appId  (required)
      * @param hostname  (required)
+     * @param vanityUrl  (required)
      * @param isNextGenWeb  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call toggleNextGenWebCall(String appId, String hostname, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call toggleNextGenWebCall(String appId, String hostname, String vanityUrl, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1634,6 +1635,8 @@ public class AppsApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (hostname != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("hostname", hostname));
+        if (vanityUrl != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("vanityUrl", vanityUrl));
         if (isNextGenWeb != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("isNextGenWeb", isNextGenWeb));
 
@@ -1670,7 +1673,7 @@ public class AppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call toggleNextGenWebValidateBeforeCall(String appId, String hostname, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call toggleNextGenWebValidateBeforeCall(String appId, String hostname, String vanityUrl, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -1682,13 +1685,18 @@ public class AppsApi {
             throw new ApiException("Missing the required parameter 'hostname' when calling toggleNextGenWeb(Async)");
         }
         
+        // verify the required parameter 'vanityUrl' is set
+        if (vanityUrl == null) {
+            throw new ApiException("Missing the required parameter 'vanityUrl' when calling toggleNextGenWeb(Async)");
+        }
+        
         // verify the required parameter 'isNextGenWeb' is set
         if (isNextGenWeb == null) {
             throw new ApiException("Missing the required parameter 'isNextGenWeb' when calling toggleNextGenWeb(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = toggleNextGenWebCall(appId, hostname, isNextGenWeb, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = toggleNextGenWebCall(appId, hostname, vanityUrl, isNextGenWeb, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1698,12 +1706,13 @@ public class AppsApi {
      * 
      * @param appId  (required)
      * @param hostname  (required)
+     * @param vanityUrl  (required)
      * @param isNextGenWeb  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiStringResult toggleNextGenWeb(String appId, String hostname, Boolean isNextGenWeb) throws ApiException {
-        ApiResponse<RestApiStringResult> resp = toggleNextGenWebWithHttpInfo(appId, hostname, isNextGenWeb);
+    public RestApiStringResult toggleNextGenWeb(String appId, String hostname, String vanityUrl, Boolean isNextGenWeb) throws ApiException {
+        ApiResponse<RestApiStringResult> resp = toggleNextGenWebWithHttpInfo(appId, hostname, vanityUrl, isNextGenWeb);
         return resp.getData();
     }
 
@@ -1712,12 +1721,13 @@ public class AppsApi {
      * 
      * @param appId  (required)
      * @param hostname  (required)
+     * @param vanityUrl  (required)
      * @param isNextGenWeb  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiStringResult> toggleNextGenWebWithHttpInfo(String appId, String hostname, Boolean isNextGenWeb) throws ApiException {
-        com.squareup.okhttp.Call call = toggleNextGenWebValidateBeforeCall(appId, hostname, isNextGenWeb, null, null);
+    public ApiResponse<RestApiStringResult> toggleNextGenWebWithHttpInfo(String appId, String hostname, String vanityUrl, Boolean isNextGenWeb) throws ApiException {
+        com.squareup.okhttp.Call call = toggleNextGenWebValidateBeforeCall(appId, hostname, vanityUrl, isNextGenWeb, null, null);
         Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1727,12 +1737,13 @@ public class AppsApi {
      * 
      * @param appId  (required)
      * @param hostname  (required)
+     * @param vanityUrl  (required)
      * @param isNextGenWeb  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call toggleNextGenWebAsync(String appId, String hostname, Boolean isNextGenWeb, final ApiCallback<RestApiStringResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call toggleNextGenWebAsync(String appId, String hostname, String vanityUrl, Boolean isNextGenWeb, final ApiCallback<RestApiStringResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1753,7 +1764,7 @@ public class AppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = toggleNextGenWebValidateBeforeCall(appId, hostname, isNextGenWeb, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = toggleNextGenWebValidateBeforeCall(appId, hostname, vanityUrl, isNextGenWeb, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

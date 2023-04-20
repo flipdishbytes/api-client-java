@@ -256,8 +256,9 @@ public class AppsApiTest {
     public void toggleNextGenWebTest() throws ApiException {
         String appId = null;
         String hostname = null;
+        String vanityUrl = null;
         Boolean isNextGenWeb = null;
-        RestApiStringResult response = api.toggleNextGenWeb(appId, hostname, isNextGenWeb);
+        RestApiStringResult response = api.toggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb);
 
         // TODO: test validations
     }

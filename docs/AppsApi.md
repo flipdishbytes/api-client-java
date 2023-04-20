@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 <a name="toggleNextGenWeb"></a>
 # **toggleNextGenWeb**
-> RestApiStringResult toggleNextGenWeb(appId, hostname, isNextGenWeb)
+> RestApiStringResult toggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb)
 
 Toggle Next Gen Web
 
@@ -680,9 +680,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 AppsApi apiInstance = new AppsApi();
 String appId = "appId_example"; // String | 
 String hostname = "hostname_example"; // String | 
+String vanityUrl = "vanityUrl_example"; // String | 
 Boolean isNextGenWeb = true; // Boolean | 
 try {
-    RestApiStringResult result = apiInstance.toggleNextGenWeb(appId, hostname, isNextGenWeb);
+    RestApiStringResult result = apiInstance.toggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#toggleNextGenWeb");
@@ -696,6 +697,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **hostname** | **String**|  |
+ **vanityUrl** | **String**|  |
  **isNextGenWeb** | **Boolean**|  |
 
 ### Return type
