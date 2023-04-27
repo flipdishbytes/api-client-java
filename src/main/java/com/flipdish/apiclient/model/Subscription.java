@@ -33,13 +33,13 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T11:41:42.137+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-04-27T14:23:14.820+01:00")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();
 
   @SerializedName("UpcomingInvoiceItems")
-  private List<InvoiceItem> upcomingInvoiceItems = new ArrayList<InvoiceItem>();
+  private List<InvoiceItem> upcomingInvoiceItems = null;
 
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -391,6 +391,9 @@ public class Subscription {
   @SerializedName("DefaultPaymentDescription")
   private String defaultPaymentDescription = null;
 
+  @SerializedName("CancellationDate")
+  private OffsetDateTime cancellationDate = null;
+
   public Subscription products(List<SubscriptionProduct> products) {
     this.products = products;
     return this;
@@ -420,6 +423,9 @@ public class Subscription {
   }
 
   public Subscription addUpcomingInvoiceItemsItem(InvoiceItem upcomingInvoiceItemsItem) {
+    if (this.upcomingInvoiceItems == null) {
+      this.upcomingInvoiceItems = new ArrayList<InvoiceItem>();
+    }
     this.upcomingInvoiceItems.add(upcomingInvoiceItemsItem);
     return this;
   }
@@ -428,7 +434,7 @@ public class Subscription {
    * Upcoming invoice items
    * @return upcomingInvoiceItems
   **/
-  @ApiModelProperty(required = true, value = "Upcoming invoice items")
+  @ApiModelProperty(value = "Upcoming invoice items")
   public List<InvoiceItem> getUpcomingInvoiceItems() {
     return upcomingInvoiceItems;
   }
@@ -581,6 +587,24 @@ public class Subscription {
     this.defaultPaymentDescription = defaultPaymentDescription;
   }
 
+  public Subscription cancellationDate(OffsetDateTime cancellationDate) {
+    this.cancellationDate = cancellationDate;
+    return this;
+  }
+
+   /**
+   * Cancellation Date
+   * @return cancellationDate
+  **/
+  @ApiModelProperty(value = "Cancellation Date")
+  public OffsetDateTime getCancellationDate() {
+    return cancellationDate;
+  }
+
+  public void setCancellationDate(OffsetDateTime cancellationDate) {
+    this.cancellationDate = cancellationDate;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -600,12 +624,13 @@ public class Subscription {
         Objects.equals(this.nextInvoiceAmount, subscription.nextInvoiceAmount) &&
         Objects.equals(this.nextInvoiceBillingDate, subscription.nextInvoiceBillingDate) &&
         Objects.equals(this.user, subscription.user) &&
-        Objects.equals(this.defaultPaymentDescription, subscription.defaultPaymentDescription);
+        Objects.equals(this.defaultPaymentDescription, subscription.defaultPaymentDescription) &&
+        Objects.equals(this.cancellationDate, subscription.cancellationDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(products, upcomingInvoiceItems, subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription);
+    return Objects.hash(products, upcomingInvoiceItems, subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription, cancellationDate);
   }
 
 
@@ -624,6 +649,7 @@ public class Subscription {
     sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    defaultPaymentDescription: ").append(toIndentedString(defaultPaymentDescription)).append("\n");
+    sb.append("    cancellationDate: ").append(toIndentedString(cancellationDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

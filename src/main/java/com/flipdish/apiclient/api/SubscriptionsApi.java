@@ -263,7 +263,7 @@ public class SubscriptionsApi {
 
     /**
      * Get list of subscriptions for an App
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
      * @param appId App Id (required)
      * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
      * @param storeId Store Ids (optional) (optional)
@@ -277,7 +277,7 @@ public class SubscriptionsApi {
 
     /**
      * Get list of subscriptions for an App
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
      * @param appId App Id (required)
      * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
      * @param storeId Store Ids (optional) (optional)
@@ -292,7 +292,7 @@ public class SubscriptionsApi {
 
     /**
      * Get list of subscriptions for an App (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
      * @param appId App Id (required)
      * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
      * @param storeId Store Ids (optional) (optional)

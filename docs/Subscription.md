@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **products** | [**List&lt;SubscriptionProduct&gt;**](SubscriptionProduct.md) | Products | 
-**upcomingInvoiceItems** | [**List&lt;InvoiceItem&gt;**](InvoiceItem.md) | Upcoming invoice items | 
+**upcomingInvoiceItems** | [**List&lt;InvoiceItem&gt;**](InvoiceItem.md) | Upcoming invoice items |  [optional]
 **subscriptionId** | **String** | The subscription identifier | 
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **user** | **String** | User | 
 **defaultPaymentDescription** | **String** | Default payment description |  [optional]
+**cancellationDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancellation Date |  [optional]
 
 
 <a name="StatusEnum"></a>

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **user** | **String** | User | 
 **defaultPaymentDescription** | **String** | Default payment description |  [optional]
+**cancellationDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancellation Date |  [optional]
 
 
 <a name="StatusEnum"></a>
