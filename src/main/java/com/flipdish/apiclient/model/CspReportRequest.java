@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * CspReportRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-02T11:42:55.643+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-02T12:38:25.257+01:00")
 public class CspReportRequest {
   @SerializedName("Csp-report")
   private CspReport cspReport = null;
