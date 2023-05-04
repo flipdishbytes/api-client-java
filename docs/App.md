@@ -74,6 +74,7 @@ UPDATEORDERSREJECT | &quot;UpdateOrdersReject&quot;
 UPDATEORDERSREFUND | &quot;UpdateOrdersRefund&quot;
 UPDATEORDERSDISPATCH | &quot;UpdateOrdersDispatch&quot;
 VIEWSTORES | &quot;ViewStores&quot;
+CREATESTORES | &quot;CreateStores&quot;
 EDITSTORES | &quot;EditStores&quot;
 VIEWSTORESOPENINGHOURS | &quot;ViewStoresOpeningHours&quot;
 UPDATESTORESOPENFORCOLLECTIONORDELIVERY | &quot;UpdateStoresOpenForCollectionOrDelivery&quot;
