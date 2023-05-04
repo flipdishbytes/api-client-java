@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api pagination result
  */
 @ApiModel(description = "Rest api pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-04T11:50:47.682+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-04T13:16:13.759+01:00")
 public class RestApiPaginationResultStoreGroupExtended {
   @SerializedName("Page")
   private Integer page = null;

@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-04T11:50:47.682+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-04T13:16:13.759+01:00")
 public class MenuItemOptionSetDeletedEvent {
   @SerializedName("MenuId")
   private Integer menuId = null;
