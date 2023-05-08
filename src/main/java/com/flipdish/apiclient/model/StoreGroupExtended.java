@@ -32,8 +32,14 @@ import java.util.List;
  * Store Group Extended
  */
 @ApiModel(description = "Store Group Extended")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T12:04:35.553+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-08T11:08:14.033+01:00")
 public class StoreGroupExtended {
+  @SerializedName("DeliveryMenuMessage")
+  private String deliveryMenuMessage = null;
+
+  @SerializedName("PickupMenuMessage")
+  private String pickupMenuMessage = null;
+
   @SerializedName("TotalStores")
   private Integer totalStores = null;
 
@@ -327,6 +333,42 @@ public class StoreGroupExtended {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
+  public StoreGroupExtended deliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+    return this;
+  }
+
+   /**
+   * Delivery Menu Message
+   * @return deliveryMenuMessage
+  **/
+  @ApiModelProperty(value = "Delivery Menu Message")
+  public String getDeliveryMenuMessage() {
+    return deliveryMenuMessage;
+  }
+
+  public void setDeliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+  }
+
+  public StoreGroupExtended pickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+    return this;
+  }
+
+   /**
+   * Pickup Menu Message
+   * @return pickupMenuMessage
+  **/
+  @ApiModelProperty(value = "Pickup Menu Message")
+  public String getPickupMenuMessage() {
+    return pickupMenuMessage;
+  }
+
+  public void setPickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+  }
+
   public StoreGroupExtended totalStores(Integer totalStores) {
     this.totalStores = totalStores;
     return this;
@@ -497,7 +539,9 @@ public class StoreGroupExtended {
       return false;
     }
     StoreGroupExtended storeGroupExtended = (StoreGroupExtended) o;
-    return Objects.equals(this.totalStores, storeGroupExtended.totalStores) &&
+    return Objects.equals(this.deliveryMenuMessage, storeGroupExtended.deliveryMenuMessage) &&
+        Objects.equals(this.pickupMenuMessage, storeGroupExtended.pickupMenuMessage) &&
+        Objects.equals(this.totalStores, storeGroupExtended.totalStores) &&
         Objects.equals(this.groupedCoordinates, storeGroupExtended.groupedCoordinates) &&
         Objects.equals(this.storeHeaders, storeGroupExtended.storeHeaders) &&
         Objects.equals(this.storeGroupId, storeGroupExtended.storeGroupId) &&
@@ -509,7 +553,7 @@ public class StoreGroupExtended {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalStores, groupedCoordinates, storeHeaders, storeGroupId, generalRating, generalRatingCount, name, currency);
+    return Objects.hash(deliveryMenuMessage, pickupMenuMessage, totalStores, groupedCoordinates, storeHeaders, storeGroupId, generalRating, generalRatingCount, name, currency);
   }
 
 
@@ -518,6 +562,8 @@ public class StoreGroupExtended {
     StringBuilder sb = new StringBuilder();
     sb.append("class StoreGroupExtended {\n");
     
+    sb.append("    deliveryMenuMessage: ").append(toIndentedString(deliveryMenuMessage)).append("\n");
+    sb.append("    pickupMenuMessage: ").append(toIndentedString(pickupMenuMessage)).append("\n");
     sb.append("    totalStores: ").append(toIndentedString(totalStores)).append("\n");
     sb.append("    groupedCoordinates: ").append(toIndentedString(groupedCoordinates)).append("\n");
     sb.append("    storeHeaders: ").append(toIndentedString(storeHeaders)).append("\n");

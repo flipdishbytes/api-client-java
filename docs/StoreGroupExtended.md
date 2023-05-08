@@ -4,6 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**deliveryMenuMessage** | **String** | Delivery Menu Message |  [optional]
+**pickupMenuMessage** | **String** | Pickup Menu Message |  [optional]
 **totalStores** | **Integer** | Total Amount of Stores |  [optional]
 **groupedCoordinates** | [**List&lt;GroupedCoordinates&gt;**](GroupedCoordinates.md) | Grouped store coordinates |  [optional]
 **storeHeaders** | [**List&lt;StoreHeader&gt;**](StoreHeader.md) | Store Headers associated with Store Group |  [optional]

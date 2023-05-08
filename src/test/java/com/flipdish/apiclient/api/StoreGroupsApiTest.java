@@ -128,6 +128,24 @@ public class StoreGroupsApiTest {
     }
     
     /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setMenuMessagePerDeliveryTypeTest() throws ApiException {
+        Integer storeGroupId = null;
+        String deliveryType = null;
+        String menuMessage = null;
+        api.setMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Updates Store Group
      *
      * 

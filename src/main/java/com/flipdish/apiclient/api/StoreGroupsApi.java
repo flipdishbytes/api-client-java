@@ -724,6 +724,144 @@ public class StoreGroupsApi {
         return call;
     }
     /**
+     * Build call for setMenuMessagePerDeliveryType
+     * @param storeGroupId  (required)
+     * @param deliveryType  (required)
+     * @param menuMessage  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeCall(Integer storeGroupId, String deliveryType, String menuMessage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = menuMessage;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType"
+            .replaceAll("\\{" + "storeGroupId" + "\\}", apiClient.escapeString(storeGroupId.toString()))
+            .replaceAll("\\{" + "deliveryType" + "\\}", apiClient.escapeString(deliveryType.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeValidateBeforeCall(Integer storeGroupId, String deliveryType, String menuMessage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeGroupId' is set
+        if (storeGroupId == null) {
+            throw new ApiException("Missing the required parameter 'storeGroupId' when calling setMenuMessagePerDeliveryType(Async)");
+        }
+        
+        // verify the required parameter 'deliveryType' is set
+        if (deliveryType == null) {
+            throw new ApiException("Missing the required parameter 'deliveryType' when calling setMenuMessagePerDeliveryType(Async)");
+        }
+        
+        // verify the required parameter 'menuMessage' is set
+        if (menuMessage == null) {
+            throw new ApiException("Missing the required parameter 'menuMessage' when calling setMenuMessagePerDeliveryType(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeCall(storeGroupId, deliveryType, menuMessage, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param storeGroupId  (required)
+     * @param deliveryType  (required)
+     * @param menuMessage  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void setMenuMessagePerDeliveryType(Integer storeGroupId, String deliveryType, String menuMessage) throws ApiException {
+        setMenuMessagePerDeliveryTypeWithHttpInfo(storeGroupId, deliveryType, menuMessage);
+    }
+
+    /**
+     * 
+     * 
+     * @param storeGroupId  (required)
+     * @param deliveryType  (required)
+     * @param menuMessage  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> setMenuMessagePerDeliveryTypeWithHttpInfo(Integer storeGroupId, String deliveryType, String menuMessage) throws ApiException {
+        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeValidateBeforeCall(storeGroupId, deliveryType, menuMessage, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param storeGroupId  (required)
+     * @param deliveryType  (required)
+     * @param menuMessage  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeAsync(Integer storeGroupId, String deliveryType, String menuMessage, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeValidateBeforeCall(storeGroupId, deliveryType, menuMessage, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for updateStoreGroup
      * @param storeGroupId Store Group Id (required)
      * @param storeGroup Store Group Delta (required)
