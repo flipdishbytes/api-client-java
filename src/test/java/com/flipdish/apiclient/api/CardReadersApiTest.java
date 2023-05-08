@@ -23,7 +23,6 @@ import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
 import com.flipdish.apiclient.model.RestApiResultCardReader;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
-import com.flipdish.apiclient.model.RestApiResultStripeTerminalPrivateKey;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UnRegisterCardReaderRequest;
 import org.junit.Test;
@@ -42,22 +41,6 @@ public class CardReadersApiTest {
 
     private final CardReadersApi api = new CardReadersApi();
 
-    
-    /**
-     * Get Authorization Key for Stripe Terminal
-     *
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void authorizeStripeTerminalTest() throws ApiException {
-        String appId = null;
-        RestApiResultStripeTerminalPrivateKey response = api.authorizeStripeTerminal(appId);
-
-        // TODO: test validations
-    }
     
     /**
      * Cancel currently initiated install update for bluetooth terminal
