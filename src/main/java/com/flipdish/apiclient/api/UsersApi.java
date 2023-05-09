@@ -249,7 +249,7 @@ public class UsersApi {
     }
 
     /**
-     * Get role names
+     * 
      * 
      * @return RestApiStringArrayResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -260,7 +260,7 @@ public class UsersApi {
     }
 
     /**
-     * Get role names
+     * 
      * 
      * @return ApiResponse&lt;RestApiStringArrayResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -272,7 +272,7 @@ public class UsersApi {
     }
 
     /**
-     * Get role names (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

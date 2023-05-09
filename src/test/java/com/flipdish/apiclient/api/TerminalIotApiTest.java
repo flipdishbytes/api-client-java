@@ -36,9 +36,9 @@ public class TerminalIotApiTest {
 
     
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

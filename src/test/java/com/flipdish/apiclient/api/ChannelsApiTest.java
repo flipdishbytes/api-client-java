@@ -41,7 +41,7 @@ public class ChannelsApiTest {
 
     
     /**
-     * Assign a given AppId to a Sales Channel
+     * 
      *
      * 
      *
@@ -58,7 +58,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Assign a Store to a Sales Channel
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Attachs the specified store to the given sales channel.
+     * 
      *
      * 
      *
@@ -94,7 +94,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Detaches all the stores from the given sales channel.
+     * 
      *
      * 
      *
@@ -111,7 +111,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Detaches the specified store from the given sales channel.
+     * 
      *
      * 
      *
@@ -129,7 +129,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of sales channels that are assigned to a given AppId
+     * 
      *
      * 
      *
@@ -145,7 +145,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of sales channels that are not yet assigned to a given AppId
+     * 
      *
      * 
      *
@@ -161,7 +161,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a Sales Channel by Id.
+     * 
      *
      * 
      *
@@ -178,7 +178,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of enabled Channels
+     * 
      *
      * 
      *
@@ -194,7 +194,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
+     * 
      *
      * 
      *
@@ -211,7 +211,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Returns a list of store ids attached to the given channel type for the specified app.
+     * 
      *
      * 
      *
@@ -228,7 +228,7 @@ public class ChannelsApiTest {
     }
     
     /**
-     * Unassign a Store from a Sales Channel
+     * 
      *
      * 
      *

@@ -61,8 +61,8 @@ public class AddressApi {
 
     /**
      * Build call for formByApp
-     * @param appId Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param appId  (required)
+     * @param language  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -127,10 +127,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
      * 
-     * @param appId Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param appId  (required)
+     * @param language  (optional)
      * @return RestApiResultAddressFormResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -140,10 +140,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
      * 
-     * @param appId Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param appId  (required)
+     * @param language  (optional)
      * @return ApiResponse&lt;RestApiResultAddressFormResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -154,10 +154,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param appId  (required)
+     * @param language  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -190,8 +190,8 @@ public class AddressApi {
     }
     /**
      * Build call for formByCountry
-     * @param countryCode The 2 letter ISO country code, e.g.: IE. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param countryCode  (required)
+     * @param language  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -256,10 +256,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
      * 
-     * @param countryCode The 2 letter ISO country code, e.g.: IE. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param countryCode  (required)
+     * @param language  (optional)
      * @return RestApiResultAddressFormResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -269,10 +269,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
      * 
-     * @param countryCode The 2 letter ISO country code, e.g.: IE. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param countryCode  (required)
+     * @param language  (optional)
      * @return ApiResponse&lt;RestApiResultAddressFormResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -283,10 +283,10 @@ public class AddressApi {
     }
 
     /**
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param countryCode The 2 letter ISO country code, e.g.: IE. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param countryCode  (required)
+     * @param language  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -319,8 +319,8 @@ public class AddressApi {
     }
     /**
      * Build call for formatGoogleAddress
-     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param googleAddress  (required)
+     * @param language  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -384,10 +384,10 @@ public class AddressApi {
     }
 
     /**
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
-     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param googleAddress  (required)
+     * @param language  (optional)
      * @return RestApiResultAddressFormResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -397,10 +397,10 @@ public class AddressApi {
     }
 
     /**
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      * 
-     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * 
+     * @param googleAddress  (required)
+     * @param language  (optional)
      * @return ApiResponse&lt;RestApiResultAddressFormResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -411,10 +411,10 @@ public class AddressApi {
     }
 
     /**
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param googleAddress A Google address object, as it is returned from the maps API. (required)
-     * @param language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param googleAddress  (required)
+     * @param language  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -506,7 +506,7 @@ public class AddressApi {
     }
 
     /**
-     * Retuns a list of localised countries
+     * 
      * 
      * @param language  (optional)
      * @return RestApiResultCountryFormResponse
@@ -518,7 +518,7 @@ public class AddressApi {
     }
 
     /**
-     * Retuns a list of localised countries
+     * 
      * 
      * @param language  (optional)
      * @return ApiResponse&lt;RestApiResultCountryFormResponse&gt;
@@ -531,7 +531,7 @@ public class AddressApi {
     }
 
     /**
-     * Retuns a list of localised countries (asynchronously)
+     *  (asynchronously)
      * 
      * @param language  (optional)
      * @param callback The callback to be executed when the API call finishes

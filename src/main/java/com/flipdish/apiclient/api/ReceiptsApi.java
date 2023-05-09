@@ -121,7 +121,7 @@ public class ReceiptsApi {
     }
 
     /**
-     * Returns all receipt information for a given orderId
+     * 
      * 
      * @param orderId  (required)
      * @return GetReceiptByOrderIdQueryResponse
@@ -133,7 +133,7 @@ public class ReceiptsApi {
     }
 
     /**
-     * Returns all receipt information for a given orderId
+     * 
      * 
      * @param orderId  (required)
      * @return ApiResponse&lt;GetReceiptByOrderIdQueryResponse&gt;
@@ -146,7 +146,7 @@ public class ReceiptsApi {
     }
 
     /**
-     * Returns all receipt information for a given orderId (asynchronously)
+     *  (asynchronously)
      * 
      * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes

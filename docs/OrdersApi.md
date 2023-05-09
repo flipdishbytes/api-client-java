@@ -4,28 +4,26 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
-[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
-[**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
-[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
-[**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
-[**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
-[**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
-[**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
-[**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
-[**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
-[**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
+[**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | 
+[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | 
+[**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | 
+[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | 
+[**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | 
+[**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | 
+[**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | 
+[**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | 
+[**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
+[**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | 
 
 
 <a name="acceptOrder"></a>
 # **acceptOrder**
 > acceptOrder(id, acceptObject)
 
-Accept order
 
-To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
 
 ### Example
 ```java
@@ -43,8 +41,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer id = 56; // Integer | Order identifier
-Accept acceptObject = new Accept(); // Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
+Integer id = 56; // Integer | 
+Accept acceptObject = new Accept(); // Accept | 
 try {
     apiInstance.acceptOrder(id, acceptObject);
 } catch (ApiException e) {
@@ -57,8 +55,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Order identifier |
- **acceptObject** | [**Accept**](Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) |
+ **id** | **Integer**|  |
+ **acceptObject** | [**Accept**](Accept.md)|  |
 
 ### Return type
 
@@ -77,9 +75,7 @@ null (empty response body)
 # **dispatchOrder**
 > dispatchOrder(id)
 
-Dispatch order
 
-To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
 
 ### Example
 ```java
@@ -97,7 +93,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer id = 56; // Integer | Order identifier
+Integer id = 56; // Integer | 
 try {
     apiInstance.dispatchOrder(id);
 } catch (ApiException e) {
@@ -110,7 +106,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Order identifier |
+ **id** | **Integer**|  |
 
 ### Return type
 
@@ -129,9 +125,7 @@ null (empty response body)
 # **getDeliveryInformation**
 > RestApiResultOrderDeliveryInformation getDeliveryInformation(orderId)
 
-Get order delivery information
 
-Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```java
@@ -149,7 +143,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer orderId = 56; // Integer | Flipdish Order Id
+Integer orderId = 56; // Integer | 
 try {
     RestApiResultOrderDeliveryInformation result = apiInstance.getDeliveryInformation(orderId);
     System.out.println(result);
@@ -163,7 +157,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Flipdish Order Id |
+ **orderId** | **Integer**|  |
 
 ### Return type
 
@@ -182,9 +176,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentState**
 > RestApiResultOrderFulfillmentStatus getFulfillmentState(orderId)
 
-Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
 
 ### Example
 ```java
@@ -202,7 +194,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer orderId = 56; // Integer | Flipdish Order Id
+Integer orderId = 56; // Integer | 
 try {
     RestApiResultOrderFulfillmentStatus result = apiInstance.getFulfillmentState(orderId);
     System.out.println(result);
@@ -216,7 +208,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Flipdish Order Id |
+ **orderId** | **Integer**|  |
 
 ### Return type
 
@@ -235,9 +227,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatusWithDetailsAndActions**
 > RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatusWithDetailsAndActions(orderId)
 
-Get order fulfillment state with actionable details like default next state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
 
 ### Example
 ```java
@@ -255,7 +245,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer orderId = 56; // Integer | Flipdish Order Id
+Integer orderId = 56; // Integer | 
 try {
     RestApiResultOrderFulfillmentStatusWithConfigurationActions result = apiInstance.getFulfillmentStatusWithDetailsAndActions(orderId);
     System.out.println(result);
@@ -269,7 +259,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Flipdish Order Id |
+ **orderId** | **Integer**|  |
 
 ### Return type
 
@@ -288,7 +278,7 @@ Name | Type | Description  | Notes
 # **getOrderById**
 > RestApiResultOrder getOrderById(id)
 
-Get order by ID
+
 
 ### Example
 ```java
@@ -306,7 +296,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer id = 56; // Integer | Order identifier
+Integer id = 56; // Integer | 
 try {
     RestApiResultOrder result = apiInstance.getOrderById(id);
     System.out.println(result);
@@ -320,7 +310,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Order identifier |
+ **id** | **Integer**|  |
 
 ### Return type
 
@@ -339,7 +329,7 @@ Name | Type | Description  | Notes
 # **getOrders**
 > RestApiPaginationResultOrder getOrders(physicalRestaurantId, state, from, to, page, limit)
 
-Get orders by filter
+
 
 ### Example
 ```java
@@ -357,12 +347,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | Physical restaurant identifiers
-List<String> state = Arrays.asList("state_example"); // List<String> | Order states
-OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | Order has been placed after this parameter value
-OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Order has been placed before this parameter value
-Integer page = 56; // Integer | Requested page number
-Integer limit = 56; // Integer | Requested page limit
+List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | 
+List<String> state = Arrays.asList("state_example"); // List<String> | 
+OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | 
+OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 try {
     RestApiPaginationResultOrder result = apiInstance.getOrders(physicalRestaurantId, state, from, to, page, limit);
     System.out.println(result);
@@ -376,12 +366,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)| Physical restaurant identifiers | [optional]
- **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
- **from** | **OffsetDateTime**| Order has been placed after this parameter value | [optional]
- **to** | **OffsetDateTime**| Order has been placed before this parameter value | [optional]
- **page** | **Integer**| Requested page number | [optional]
- **limit** | **Integer**| Requested page limit | [optional]
+ **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **from** | **OffsetDateTime**|  | [optional]
+ **to** | **OffsetDateTime**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
 
 ### Return type
 
@@ -400,7 +390,7 @@ Name | Type | Description  | Notes
 # **getOrdersSummary**
 > RestApiPaginationResultOrderSummary getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to)
 
-[PRIVATE API] Get summary of orders by filter
+
 
 ### Example
 ```java
@@ -418,17 +408,17 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-String appId = "appId_example"; // String | App Name Id
-String searchQuery = "searchQuery_example"; // String | Query string
-List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | Physical restaurant identifiers
-List<String> state = Arrays.asList("state_example"); // List<String> | Order states
-Integer page = 56; // Integer | Requested page number
-Integer limit = 56; // Integer | Requested page limit
+String appId = "appId_example"; // String | 
+String searchQuery = "searchQuery_example"; // String | 
+List<Integer> physicalRestaurantId = Arrays.asList(56); // List<Integer> | 
+List<String> state = Arrays.asList("state_example"); // List<String> | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 Boolean orderByRequestedForTime = true; // Boolean | 
 List<String> channels = Arrays.asList("channels_example"); // List<String> | 
-List<Integer> orderIds = Arrays.asList(56); // List<Integer> | Filter by the given orders
-OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | Filter by date from
-OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Filter by date to
+List<Integer> orderIds = Arrays.asList(56); // List<Integer> | 
+OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | 
+OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | 
 try {
     RestApiPaginationResultOrderSummary result = apiInstance.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
     System.out.println(result);
@@ -442,17 +432,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **searchQuery** | **String**| Query string | [optional]
- **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)| Physical restaurant identifiers | [optional]
- **state** | [**List&lt;String&gt;**](String.md)| Order states | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
- **page** | **Integer**| Requested page number | [optional]
- **limit** | **Integer**| Requested page limit | [optional]
+ **appId** | **String**|  |
+ **searchQuery** | **String**|  | [optional]
+ **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
  **orderByRequestedForTime** | **Boolean**|  | [optional]
  **channels** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Unknown, Ios, Android, Web, Kiosk, Pos, TelephoneCall, Sms, PwaAndroid, PwaIos, Google]
- **orderIds** | [**List&lt;Integer&gt;**](Integer.md)| Filter by the given orders | [optional]
- **from** | **OffsetDateTime**| Filter by date from | [optional]
- **to** | **OffsetDateTime**| Filter by date to | [optional]
+ **orderIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **from** | **OffsetDateTime**|  | [optional]
+ **to** | **OffsetDateTime**|  | [optional]
 
 ### Return type
 
@@ -471,9 +461,7 @@ Name | Type | Description  | Notes
 # **refundOrder**
 > refundOrder(id, refundObject)
 
-Refund order
 
-To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
 
 ### Example
 ```java
@@ -491,7 +479,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer id = 56; // Integer | Order identifier
+Integer id = 56; // Integer | 
 Refund refundObject = new Refund(); // Refund | 
 try {
     apiInstance.refundOrder(id, refundObject);
@@ -505,7 +493,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Order identifier |
+ **id** | **Integer**|  |
  **refundObject** | [**Refund**](Refund.md)|  |
 
 ### Return type
@@ -525,9 +513,7 @@ null (empty response body)
 # **rejectOrder**
 > rejectOrder(id, rejectObject)
 
-Reject order
 
-To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
 
 ### Example
 ```java
@@ -545,7 +531,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer id = 56; // Integer | Order identifier
+Integer id = 56; // Integer | 
 Reject rejectObject = new Reject(); // Reject | 
 try {
     apiInstance.rejectOrder(id, rejectObject);
@@ -559,7 +545,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| Order identifier |
+ **id** | **Integer**|  |
  **rejectObject** | [**Reject**](Reject.md)|  |
 
 ### Return type
@@ -579,9 +565,7 @@ null (empty response body)
 # **searchFulfillmentStatuses**
 > RestApiArrayResultOrderFulfillmentStatus searchFulfillmentStatuses(appId, orderIds)
 
-Get fulfillment status for a list of orders
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
 
 ### Example
 ```java
@@ -599,8 +583,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-String appId = "appId_example"; // String | App Id
-String orderIds = "orderIds_example"; // String | Flipdish Order Id list, comma separated
+String appId = "appId_example"; // String | 
+String orderIds = "orderIds_example"; // String | 
 try {
     RestApiArrayResultOrderFulfillmentStatus result = apiInstance.searchFulfillmentStatuses(appId, orderIds);
     System.out.println(result);
@@ -614,8 +598,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **orderIds** | **String**| Flipdish Order Id list, comma separated |
+ **appId** | **String**|  |
+ **orderIds** | **String**|  |
 
 ### Return type
 
@@ -634,9 +618,7 @@ Name | Type | Description  | Notes
 # **updateDeliveryInformation**
 > updateDeliveryInformation(orderId, deliveryInformation)
 
-Add/update delivery-related information to an order
 
-Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```java
@@ -654,8 +636,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer orderId = 56; // Integer | Flipdish Order Id
-OrderDeliveryInformationBase deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | Delivery Information
+Integer orderId = 56; // Integer | 
+OrderDeliveryInformationBase deliveryInformation = new OrderDeliveryInformationBase(); // OrderDeliveryInformationBase | 
 try {
     apiInstance.updateDeliveryInformation(orderId, deliveryInformation);
 } catch (ApiException e) {
@@ -668,8 +650,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Flipdish Order Id |
- **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)| Delivery Information |
+ **orderId** | **Integer**|  |
+ **deliveryInformation** | [**OrderDeliveryInformationBase**](OrderDeliveryInformationBase.md)|  |
 
 ### Return type
 
@@ -688,9 +670,7 @@ null (empty response body)
 # **updateFulfillmentState**
 > updateFulfillmentState(orderId, fulfillmentStatusRequest)
 
-Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
 
 ### Example
 ```java
@@ -708,8 +688,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrdersApi apiInstance = new OrdersApi();
-Integer orderId = 56; // Integer | Flipdish Order Id
-OrderFulfillmentStatusUpdate fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | Fulfillment Status
+Integer orderId = 56; // Integer | 
+OrderFulfillmentStatusUpdate fulfillmentStatusRequest = new OrderFulfillmentStatusUpdate(); // OrderFulfillmentStatusUpdate | 
 try {
     apiInstance.updateFulfillmentState(orderId, fulfillmentStatusRequest);
 } catch (ApiException e) {
@@ -722,8 +702,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Flipdish Order Id |
- **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)| Fulfillment Status |
+ **orderId** | **Integer**|  |
+ **fulfillmentStatusRequest** | [**OrderFulfillmentStatusUpdate**](OrderFulfillmentStatusUpdate.md)|  |
 
 ### Return type
 

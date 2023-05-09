@@ -60,7 +60,7 @@ public class OrderBatchingConfigurationApi {
 
     /**
      * Build call for get
-     * @param storeId Store Id (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -123,9 +123,9 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Returns order batching configuration for a specific store
      * 
-     * @param storeId Store Id (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiResultOrderBatchingConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -135,9 +135,9 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Returns order batching configuration for a specific store
      * 
-     * @param storeId Store Id (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultOrderBatchingConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,9 +148,9 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Returns order batching configuration for a specific store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,8 +183,8 @@ public class OrderBatchingConfigurationApi {
     }
     /**
      * Build call for post
-     * @param storeId Store Id (required)
-     * @param setOrderBatchingConfiguration SetOrderBatchingConfiguration (required)
+     * @param storeId  (required)
+     * @param setOrderBatchingConfiguration  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -252,10 +252,10 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Sets order batching configuration for a specific store
      * 
-     * @param storeId Store Id (required)
-     * @param setOrderBatchingConfiguration SetOrderBatchingConfiguration (required)
+     * 
+     * @param storeId  (required)
+     * @param setOrderBatchingConfiguration  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void post(Integer storeId, SetOrderBatchingConfiguration setOrderBatchingConfiguration) throws ApiException {
@@ -263,10 +263,10 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Sets order batching configuration for a specific store
      * 
-     * @param storeId Store Id (required)
-     * @param setOrderBatchingConfiguration SetOrderBatchingConfiguration (required)
+     * 
+     * @param storeId  (required)
+     * @param setOrderBatchingConfiguration  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -276,10 +276,10 @@ public class OrderBatchingConfigurationApi {
     }
 
     /**
-     * Sets order batching configuration for a specific store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (required)
-     * @param setOrderBatchingConfiguration SetOrderBatchingConfiguration (required)
+     * @param storeId  (required)
+     * @param setOrderBatchingConfiguration  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -61,10 +61,10 @@ public class OrderBatchesApi {
 
     /**
      * Build call for getAllOrderBatches
-     * @param appId App Id (required)
-     * @param storeIds List of store Ids (optional)
-     * @param createdFrom Start date for retrieving the entries (optional)
-     * @param createdTo End date for retrieving the entries (optional)
+     * @param appId  (required)
+     * @param storeIds  (optional)
+     * @param createdFrom  (optional)
+     * @param createdTo  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -133,12 +133,12 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns order batches
-     * Entries are sorted by date, from the most recent. At most 100 entries are returned.
-     * @param appId App Id (required)
-     * @param storeIds List of store Ids (optional)
-     * @param createdFrom Start date for retrieving the entries (optional)
-     * @param createdTo End date for retrieving the entries (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeIds  (optional)
+     * @param createdFrom  (optional)
+     * @param createdTo  (optional)
      * @return RestApiArrayResultOrderBatch
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,12 +148,12 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns order batches
-     * Entries are sorted by date, from the most recent. At most 100 entries are returned.
-     * @param appId App Id (required)
-     * @param storeIds List of store Ids (optional)
-     * @param createdFrom Start date for retrieving the entries (optional)
-     * @param createdTo End date for retrieving the entries (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeIds  (optional)
+     * @param createdFrom  (optional)
+     * @param createdTo  (optional)
      * @return ApiResponse&lt;RestApiArrayResultOrderBatch&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -164,12 +164,12 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns order batches (asynchronously)
-     * Entries are sorted by date, from the most recent. At most 100 entries are returned.
-     * @param appId App Id (required)
-     * @param storeIds List of store Ids (optional)
-     * @param createdFrom Start date for retrieving the entries (optional)
-     * @param createdTo End date for retrieving the entries (optional)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param storeIds  (optional)
+     * @param createdFrom  (optional)
+     * @param createdTo  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -202,8 +202,8 @@ public class OrderBatchesApi {
     }
     /**
      * Build call for getOrderBatch
-     * @param appId App Id (required)
-     * @param orderBatchId Order Batch Id (required)
+     * @param appId  (required)
+     * @param orderBatchId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -272,10 +272,10 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns the order batch details
      * 
-     * @param appId App Id (required)
-     * @param orderBatchId Order Batch Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderBatchId  (required)
      * @return RestApiResultOrderBatch
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -285,10 +285,10 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns the order batch details
      * 
-     * @param appId App Id (required)
-     * @param orderBatchId Order Batch Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderBatchId  (required)
      * @return ApiResponse&lt;RestApiResultOrderBatch&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -299,10 +299,10 @@ public class OrderBatchesApi {
     }
 
     /**
-     * Returns the order batch details (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param orderBatchId Order Batch Id (required)
+     * @param appId  (required)
+     * @param orderBatchId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

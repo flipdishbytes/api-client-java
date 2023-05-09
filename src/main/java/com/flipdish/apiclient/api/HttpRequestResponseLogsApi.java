@@ -60,13 +60,13 @@ public class HttpRequestResponseLogsApi {
 
     /**
      * Build call for getLogs
-     * @param start Start date time (required)
-     * @param end End date time (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param filterByUserId User id (optional) (optional)
-     * @param guid Id of the log (optional)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param filterByUserId  (optional)
+     * @param guid  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -151,15 +151,15 @@ public class HttpRequestResponseLogsApi {
     }
 
     /**
-     * Get API interaction logs
      * 
-     * @param start Start date time (required)
-     * @param end End date time (required)
+     * 
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param filterByUserId User id (optional) (optional)
-     * @param guid Id of the log (optional)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param filterByUserId  (optional)
+     * @param guid  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultHttpRequestAndResponseLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -169,15 +169,15 @@ public class HttpRequestResponseLogsApi {
     }
 
     /**
-     * Get API interaction logs
      * 
-     * @param start Start date time (required)
-     * @param end End date time (required)
+     * 
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param filterByUserId User id (optional) (optional)
-     * @param guid Id of the log (optional)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param filterByUserId  (optional)
+     * @param guid  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultHttpRequestAndResponseLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -188,15 +188,15 @@ public class HttpRequestResponseLogsApi {
     }
 
     /**
-     * Get API interaction logs (asynchronously)
+     *  (asynchronously)
      * 
-     * @param start Start date time (required)
-     * @param end End date time (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param filterByUserId User id (optional) (optional)
-     * @param guid Id of the log (optional)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param filterByUserId  (optional)
+     * @param guid  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

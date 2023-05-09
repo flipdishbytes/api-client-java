@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLocation**](LocationApi.md#createLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
-[**deleteLocation**](LocationApi.md#deleteLocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
-[**mapLocationToExternalId**](LocationApi.md#mapLocationToExternalId) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | Set or unset External Location Id on a Location
-[**moveLocation**](LocationApi.md#moveLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
-[**updateLocation**](LocationApi.md#updateLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
+[**createLocation**](LocationApi.md#createLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | 
+[**deleteLocation**](LocationApi.md#deleteLocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | 
+[**mapLocationToExternalId**](LocationApi.md#mapLocationToExternalId) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | 
+[**moveLocation**](LocationApi.md#moveLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | 
+[**updateLocation**](LocationApi.md#updateLocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | 
 
 
 <a name="createLocation"></a>
 # **createLocation**
 > Object createLocation(createLocationInput, locationAreaId, appId, storeId)
 
-Create a Location i.e: Table, Hotel Room, Car park space
+
 
 ### Example
 ```java
@@ -33,10 +33,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-List<CreateLocation> createLocationInput = Arrays.asList(new CreateLocation()); // List<CreateLocation> | Input data for creating the Location
-Integer locationAreaId = 56; // Integer | Id of the Location area where the Location belongs
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+List<CreateLocation> createLocationInput = Arrays.asList(new CreateLocation()); // List<CreateLocation> | 
+Integer locationAreaId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.createLocation(createLocationInput, locationAreaId, appId, storeId);
     System.out.println(result);
@@ -50,10 +50,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)| Input data for creating the Location |
- **locationAreaId** | **Integer**| Id of the Location area where the Location belongs |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **createLocationInput** | [**List&lt;CreateLocation&gt;**](CreateLocation.md)|  |
+ **locationAreaId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **deleteLocation**
 > Object deleteLocation(locationId, locationAreaId, appId, storeId)
 
-Set a Location as deleted
+
 
 ### Example
 ```java
@@ -90,10 +90,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-Integer locationId = 56; // Integer | Id of the Location that will be moved
-Integer locationAreaId = 56; // Integer | Id of the Location Area that the Location belong
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+Integer locationId = 56; // Integer | 
+Integer locationAreaId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.deleteLocation(locationId, locationAreaId, appId, storeId);
     System.out.println(result);
@@ -107,10 +107,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **Integer**| Id of the Location that will be moved |
- **locationAreaId** | **Integer**| Id of the Location Area that the Location belong |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **locationId** | **Integer**|  |
+ **locationAreaId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 # **mapLocationToExternalId**
 > RestApiResultMappedLocation mapLocationToExternalId(locationId, locationAreaId, appId, storeId, externalLocationId)
 
-Set or unset External Location Id on a Location
+
 
 ### Example
 ```java
@@ -147,11 +147,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-Integer locationId = 56; // Integer | Id of the Location that will be mapped
-Integer locationAreaId = 56; // Integer | Id of the Location Area that the Location belong
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
-String externalLocationId = "externalLocationId_example"; // String | External Id to be mapped to the location
+Integer locationId = 56; // Integer | 
+Integer locationAreaId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
+String externalLocationId = "externalLocationId_example"; // String | 
 try {
     RestApiResultMappedLocation result = apiInstance.mapLocationToExternalId(locationId, locationAreaId, appId, storeId, externalLocationId);
     System.out.println(result);
@@ -165,11 +165,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **Integer**| Id of the Location that will be mapped |
- **locationAreaId** | **Integer**| Id of the Location Area that the Location belong |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
- **externalLocationId** | **String**| External Id to be mapped to the location | [optional]
+ **locationId** | **Integer**|  |
+ **locationAreaId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
+ **externalLocationId** | **String**|  | [optional]
 
 ### Return type
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 # **moveLocation**
 > Object moveLocation(locationId, locationAreaId, newLocationAreaId, appId, storeId)
 
-Move a Location to a different location Area
+
 
 ### Example
 ```java
@@ -206,11 +206,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-Integer locationId = 56; // Integer | Id of the Location that will be moved
-Integer locationAreaId = 56; // Integer | Id of the new Location area that it should be moved to
-Integer newLocationAreaId = 56; // Integer | Id of the new Location area that it should be moved to
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+Integer locationId = 56; // Integer | 
+Integer locationAreaId = 56; // Integer | 
+Integer newLocationAreaId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.moveLocation(locationId, locationAreaId, newLocationAreaId, appId, storeId);
     System.out.println(result);
@@ -224,11 +224,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationId** | **Integer**| Id of the Location that will be moved |
- **locationAreaId** | **Integer**| Id of the new Location area that it should be moved to |
- **newLocationAreaId** | **Integer**| Id of the new Location area that it should be moved to |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **locationId** | **Integer**|  |
+ **locationAreaId** | **Integer**|  |
+ **newLocationAreaId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 # **updateLocation**
 > RestApiResultLocationAreaLocation updateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId)
 
-Update a Location i.e: Table, Hotel Room, Car park space
+
 
 ### Example
 ```java
@@ -265,11 +265,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationApi apiInstance = new LocationApi();
-CreateLocation updateLocationInput = new CreateLocation(); // CreateLocation | Input data for updating the Location
-Integer locationAreaId = 56; // Integer | Id of the Location area where the Location belongs
-Integer locationId = 56; // Integer | Id of the Location to be updated
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+CreateLocation updateLocationInput = new CreateLocation(); // CreateLocation | 
+Integer locationAreaId = 56; // Integer | 
+Integer locationId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     RestApiResultLocationAreaLocation result = apiInstance.updateLocation(updateLocationInput, locationAreaId, locationId, appId, storeId);
     System.out.println(result);
@@ -283,11 +283,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateLocationInput** | [**CreateLocation**](CreateLocation.md)| Input data for updating the Location |
- **locationAreaId** | **Integer**| Id of the Location area where the Location belongs |
- **locationId** | **Integer**| Id of the Location to be updated |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **updateLocationInput** | [**CreateLocation**](CreateLocation.md)|  |
+ **locationAreaId** | **Integer**|  |
+ **locationId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 

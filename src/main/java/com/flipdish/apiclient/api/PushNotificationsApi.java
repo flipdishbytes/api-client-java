@@ -61,7 +61,7 @@ public class PushNotificationsApi {
     /**
      * Build call for deletePushNotification
      * @param appId  (required)
-     * @param scheduledPushNotificationId ID of Scheduled push notifiaction to delete (required)
+     * @param scheduledPushNotificationId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -130,10 +130,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      * 
      * @param appId  (required)
-     * @param scheduledPushNotificationId ID of Scheduled push notifiaction to delete (required)
+     * @param scheduledPushNotificationId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deletePushNotification(String appId, Integer scheduledPushNotificationId) throws ApiException {
@@ -141,10 +141,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      * 
      * @param appId  (required)
-     * @param scheduledPushNotificationId ID of Scheduled push notifiaction to delete (required)
+     * @param scheduledPushNotificationId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -154,10 +154,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param scheduledPushNotificationId ID of Scheduled push notifiaction to delete (required)
+     * @param scheduledPushNotificationId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -258,7 +258,7 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      * 
      * @param appId  (required)
      * @param page  (optional)
@@ -272,7 +272,7 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      * 
      * @param appId  (required)
      * @param page  (optional)
@@ -287,7 +287,7 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param page  (optional)
@@ -324,8 +324,8 @@ public class PushNotificationsApi {
     }
     /**
      * Build call for schedulePushNotification
-     * @param appId Application Id (required)
-     * @param notification Notification to send (required)
+     * @param appId  (required)
+     * @param notification  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -393,10 +393,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
      * 
-     * @param appId Application Id (required)
-     * @param notification Notification to send (required)
+     * 
+     * @param appId  (required)
+     * @param notification  (required)
      * @return RestApiResultPushNotificationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -406,10 +406,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers
      * 
-     * @param appId Application Id (required)
-     * @param notification Notification to send (required)
+     * 
+     * @param appId  (required)
+     * @param notification  (required)
      * @return ApiResponse&lt;RestApiResultPushNotificationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -420,10 +420,10 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Push notification to cutomers (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (required)
-     * @param notification Notification to send (required)
+     * @param appId  (required)
+     * @param notification  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -456,9 +456,9 @@ public class PushNotificationsApi {
     }
     /**
      * Build call for updatePushNotification
-     * @param appId Application Id (required)
-     * @param scheduledPushNotificationId Notification Id (required)
-     * @param notification Notification to send (required)
+     * @param appId  (required)
+     * @param scheduledPushNotificationId  (required)
+     * @param notification  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -532,11 +532,11 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Update the push notification
      * 
-     * @param appId Application Id (required)
-     * @param scheduledPushNotificationId Notification Id (required)
-     * @param notification Notification to send (required)
+     * 
+     * @param appId  (required)
+     * @param scheduledPushNotificationId  (required)
+     * @param notification  (required)
      * @return RestApiResultPushNotificationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -546,11 +546,11 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Update the push notification
      * 
-     * @param appId Application Id (required)
-     * @param scheduledPushNotificationId Notification Id (required)
-     * @param notification Notification to send (required)
+     * 
+     * @param appId  (required)
+     * @param scheduledPushNotificationId  (required)
+     * @param notification  (required)
      * @return ApiResponse&lt;RestApiResultPushNotificationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -561,11 +561,11 @@ public class PushNotificationsApi {
     }
 
     /**
-     * [PRIVATE] Update the push notification (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (required)
-     * @param scheduledPushNotificationId Notification Id (required)
-     * @param notification Notification to send (required)
+     * @param appId  (required)
+     * @param scheduledPushNotificationId  (required)
+     * @param notification  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

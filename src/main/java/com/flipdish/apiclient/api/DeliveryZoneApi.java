@@ -61,8 +61,8 @@ public class DeliveryZoneApi {
 
     /**
      * Build call for addDeliveryZone
-     * @param storeId Store Id to which the delivery zone will be added (required)
-     * @param deliveryZoneBase Optional delivery zone, if not supplied will create a default zone (required)
+     * @param storeId  (required)
+     * @param deliveryZoneBase  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -130,10 +130,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Adds a delivery zone to the store id
      * 
-     * @param storeId Store Id to which the delivery zone will be added (required)
-     * @param deliveryZoneBase Optional delivery zone, if not supplied will create a default zone (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneBase  (required)
      * @return RestApiResultDeliveryZone
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -143,10 +143,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Adds a delivery zone to the store id
      * 
-     * @param storeId Store Id to which the delivery zone will be added (required)
-     * @param deliveryZoneBase Optional delivery zone, if not supplied will create a default zone (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneBase  (required)
      * @return ApiResponse&lt;RestApiResultDeliveryZone&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -157,10 +157,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Adds a delivery zone to the store id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id to which the delivery zone will be added (required)
-     * @param deliveryZoneBase Optional delivery zone, if not supplied will create a default zone (required)
+     * @param storeId  (required)
+     * @param deliveryZoneBase  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -193,7 +193,7 @@ public class DeliveryZoneApi {
     }
     /**
      * Build call for getDeliveryZones
-     * @param storeId Store Id to which the delivery zones are associated (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -256,9 +256,9 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Get all the delivery zones associated with a store
      * 
-     * @param storeId Store Id to which the delivery zones are associated (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiArrayResultDeliveryZone
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -268,9 +268,9 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Get all the delivery zones associated with a store
      * 
-     * @param storeId Store Id to which the delivery zones are associated (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiArrayResultDeliveryZone&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -281,9 +281,9 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Get all the delivery zones associated with a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id to which the delivery zones are associated (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -316,8 +316,8 @@ public class DeliveryZoneApi {
     }
     /**
      * Build call for removeDeliveryZone
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be removed (required)
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -386,10 +386,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Removes the existing delivery zone
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be removed (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void removeDeliveryZone(Integer storeId, Integer deliveryZoneId) throws ApiException {
@@ -397,10 +397,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Removes the existing delivery zone
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be removed (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -410,10 +410,10 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Removes the existing delivery zone (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be removed (required)
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -445,9 +445,9 @@ public class DeliveryZoneApi {
     }
     /**
      * Build call for updateDeliveryZone
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be updated (required)
-     * @param deliveryZone Delta of delivery zone parameters that need to be changed (required)
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
+     * @param deliveryZone  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -521,11 +521,11 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Updates the existing delivery zone
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be updated (required)
-     * @param deliveryZone Delta of delivery zone parameters that need to be changed (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
+     * @param deliveryZone  (required)
      * @return RestApiResultDeliveryZone
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -535,11 +535,11 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Updates the existing delivery zone
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be updated (required)
-     * @param deliveryZone Delta of delivery zone parameters that need to be changed (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
+     * @param deliveryZone  (required)
      * @return ApiResponse&lt;RestApiResultDeliveryZone&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -550,11 +550,11 @@ public class DeliveryZoneApi {
     }
 
     /**
-     * Updates the existing delivery zone (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id to which the delivery zone belongs (required)
-     * @param deliveryZoneId Delivery zone id to be updated (required)
-     * @param deliveryZone Delta of delivery zone parameters that need to be changed (required)
+     * @param storeId  (required)
+     * @param deliveryZoneId  (required)
+     * @param deliveryZone  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

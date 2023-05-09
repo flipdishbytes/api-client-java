@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
-[**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
-[**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-[**getExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getExternalFunctionSigningKey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | Get external function action signing key for app
-[**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
-[**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
+[**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
+[**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
+[**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**getExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getExternalFunctionSigningKey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
+[**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 
 
 <a name="appVerificationUpdate"></a>
 # **appVerificationUpdate**
 > appVerificationUpdate(oauthAppId, appStoreAppId, verificationStatus)
 
-Update App store app verification
 
-[BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
 ### Example
 ```java
@@ -36,9 +34,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
-String verificationStatus = "verificationStatus_example"; // String | New verification status
+String oauthAppId = "oauthAppId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
+String verificationStatus = "verificationStatus_example"; // String | 
 try {
     apiInstance.appVerificationUpdate(oauthAppId, appStoreAppId, verificationStatus);
 } catch (ApiException e) {
@@ -51,9 +49,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
- **verificationStatus** | **String**| New verification status | [enum: Draft, Submitted, Verified]
+ **oauthAppId** | **String**|  |
+ **appStoreAppId** | **String**|  |
+ **verificationStatus** | **String**|  | [enum: Draft, Submitted, Verified]
 
 ### Return type
 
@@ -72,9 +70,7 @@ null (empty response body)
 # **createAppStoreApp**
 > RestApiResultAppStoreApp createAppStoreApp(oauthAppId, createAppStoreApp)
 
-Create App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -92,8 +88,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-CreateAppStoreApp createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | App store app
+String oauthAppId = "oauthAppId_example"; // String | 
+CreateAppStoreApp createAppStoreApp = new CreateAppStoreApp(); // CreateAppStoreApp | 
 try {
     RestApiResultAppStoreApp result = apiInstance.createAppStoreApp(oauthAppId, createAppStoreApp);
     System.out.println(result);
@@ -107,8 +103,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)| App store app |
+ **oauthAppId** | **String**|  |
+ **createAppStoreApp** | [**CreateAppStoreApp**](CreateAppStoreApp.md)|  |
 
 ### Return type
 
@@ -127,9 +123,7 @@ Name | Type | Description  | Notes
 # **deleteAppStoreApp**
 > RestApiStringResult deleteAppStoreApp(oauthAppId, appStoreAppId)
 
-Delete App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -147,8 +141,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String oauthAppId = "oauthAppId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.deleteAppStoreApp(oauthAppId, appStoreAppId);
     System.out.println(result);
@@ -162,8 +156,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
+ **oauthAppId** | **String**|  |
+ **appStoreAppId** | **String**|  |
 
 ### Return type
 
@@ -182,9 +176,7 @@ Name | Type | Description  | Notes
 # **getExternalFunctionSigningKey**
 > getExternalFunctionSigningKey(oauthAppId, appStoreAppId)
 
-Get external function action signing key for app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -202,8 +194,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String oauthAppId = "oauthAppId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
 try {
     apiInstance.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
 } catch (ApiException e) {
@@ -216,8 +208,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
+ **oauthAppId** | **String**|  |
+ **appStoreAppId** | **String**|  |
 
 ### Return type
 
@@ -236,9 +228,7 @@ null (empty response body)
 # **updateAppStoreApp**
 > updateAppStoreApp(oauthAppId, appStoreAppId, appStoreApp)
 
-Update App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -256,9 +246,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
-UpdateAppStoreApp appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | Update App store app
+String oauthAppId = "oauthAppId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
+UpdateAppStoreApp appStoreApp = new UpdateAppStoreApp(); // UpdateAppStoreApp | 
 try {
     apiInstance.updateAppStoreApp(oauthAppId, appStoreAppId, appStoreApp);
 } catch (ApiException e) {
@@ -271,9 +261,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
- **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)| Update App store app |
+ **oauthAppId** | **String**|  |
+ **appStoreAppId** | **String**|  |
+ **appStoreApp** | [**UpdateAppStoreApp**](UpdateAppStoreApp.md)|  |
 
 ### Return type
 
@@ -292,7 +282,7 @@ null (empty response body)
 # **uploadAppStoreAppLogo**
 > uploadAppStoreAppLogo(oauthAppId, appStoreAppId, image)
 
-Upload the App store app logo \\ icon
+
 
 ### Example
 ```java
@@ -310,8 +300,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String appStoreAppId = "appStoreAppId_example"; // String | App store app id
+String oauthAppId = "oauthAppId_example"; // String | 
+String appStoreAppId = "appStoreAppId_example"; // String | 
 File image = new File("/path/to/file.txt"); // File | App Store App Logo
 try {
     apiInstance.uploadAppStoreAppLogo(oauthAppId, appStoreAppId, image);
@@ -325,8 +315,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **appStoreAppId** | **String**| App store app id |
+ **oauthAppId** | **String**|  |
+ **appStoreAppId** | **String**|  |
  **image** | **File**| App Store App Logo |
 
 ### Return type

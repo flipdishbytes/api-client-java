@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCrossSellMenuItems**](CrossSellApi.md#getCrossSellMenuItems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | Get all Menu items by MenuId for cross sells
+[**getCrossSellMenuItems**](CrossSellApi.md#getCrossSellMenuItems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 
 
 <a name="getCrossSellMenuItems"></a>
 # **getCrossSellMenuItems**
 > RestApiResultCrossSellMenuItems getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId)
 
-Get all Menu items by MenuId for cross sells
 
-Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -31,10 +29,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CrossSellApi apiInstance = new CrossSellApi();
-Integer menuId = 56; // Integer | Requested MenuId
-List<Integer> menuItemId = Arrays.asList(56); // List<Integer> | Selected Menu items
-Integer limit = 56; // Integer | Set the limit of items returned
-Double totalValue = 3.4D; // Double | Get the total cost of items in the basket
+Integer menuId = 56; // Integer | 
+List<Integer> menuItemId = Arrays.asList(56); // List<Integer> | 
+Integer limit = 56; // Integer | 
+Double totalValue = 3.4D; // Double | 
 String appId = "appId_example"; // String | 
 try {
     RestApiResultCrossSellMenuItems result = apiInstance.getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
@@ -49,10 +47,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Requested MenuId |
- **menuItemId** | [**List&lt;Integer&gt;**](Integer.md)| Selected Menu items |
- **limit** | **Integer**| Set the limit of items returned |
- **totalValue** | **Double**| Get the total cost of items in the basket |
+ **menuId** | **Integer**|  |
+ **menuItemId** | [**List&lt;Integer&gt;**](Integer.md)|  |
+ **limit** | **Integer**|  |
+ **totalValue** | **Double**|  |
  **appId** | **String**|  |
 
 ### Return type

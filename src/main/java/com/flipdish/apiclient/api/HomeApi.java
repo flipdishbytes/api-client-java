@@ -61,8 +61,8 @@ public class HomeApi {
 
     /**
      * Build call for completeHomeAction
-     * @param appId App Name Id (required)
-     * @param homeActionId Id of the action (required)
+     * @param appId  (required)
+     * @param homeActionId  (required)
      * @param isDismissed  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -139,10 +139,10 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action
      * 
-     * @param appId App Name Id (required)
-     * @param homeActionId Id of the action (required)
+     * 
+     * @param appId  (required)
+     * @param homeActionId  (required)
      * @param isDismissed  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -153,10 +153,10 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action
      * 
-     * @param appId App Name Id (required)
-     * @param homeActionId Id of the action (required)
+     * 
+     * @param appId  (required)
+     * @param homeActionId  (required)
      * @param isDismissed  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -168,10 +168,10 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param homeActionId Id of the action (required)
+     * @param appId  (required)
+     * @param homeActionId  (required)
      * @param isDismissed  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -261,7 +261,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action
+     * 
      * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -272,7 +272,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action
+     * 
      * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -284,7 +284,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Complete Home Action (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -318,7 +318,7 @@ public class HomeApi {
     }
     /**
      * Build call for getHomeActions
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -381,9 +381,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Actions
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultHomeAction
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -393,9 +393,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Actions
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultHomeAction&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -406,9 +406,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Actions (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -441,7 +441,7 @@ public class HomeApi {
     }
     /**
      * Build call for getHomeStatistics
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -504,9 +504,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Statistics
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return RestApiResultHomeStatistics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -516,9 +516,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Statistics
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultHomeStatistics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -529,9 +529,9 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Home Statistics (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -620,7 +620,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+     * 
      * 
      * @return RestApiResultOktaPortalFeatureFlag
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -631,7 +631,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+     * 
      * 
      * @return ApiResponse&lt;RestApiResultOktaPortalFeatureFlag&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -643,7 +643,7 @@ public class HomeApi {
     }
 
     /**
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

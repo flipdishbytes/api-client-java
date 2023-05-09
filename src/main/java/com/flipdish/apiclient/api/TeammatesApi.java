@@ -63,8 +63,8 @@ public class TeammatesApi {
 
     /**
      * Build call for createTeammate
-     * @param appId Application identifier (required)
-     * @param teammate teammate model (required)
+     * @param appId  (required)
+     * @param teammate  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -132,10 +132,10 @@ public class TeammatesApi {
     }
 
     /**
-     * Create teammate and send an invite.
      * 
-     * @param appId Application identifier (required)
-     * @param teammate teammate model (required)
+     * 
+     * @param appId  (required)
+     * @param teammate  (required)
      * @return RestApiResultTeammate
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -145,10 +145,10 @@ public class TeammatesApi {
     }
 
     /**
-     * Create teammate and send an invite.
      * 
-     * @param appId Application identifier (required)
-     * @param teammate teammate model (required)
+     * 
+     * @param appId  (required)
+     * @param teammate  (required)
      * @return ApiResponse&lt;RestApiResultTeammate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -159,10 +159,10 @@ public class TeammatesApi {
     }
 
     /**
-     * Create teammate and send an invite. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param teammate teammate model (required)
+     * @param appId  (required)
+     * @param teammate  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -265,7 +265,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Delete teammate
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -276,7 +276,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Delete teammate
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -289,7 +289,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Delete teammate (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -394,7 +394,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get a teammates by email address
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -407,7 +407,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get a teammates by email address
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -421,7 +421,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get a teammates by email address (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -520,7 +520,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get all teammates
+     * 
      * 
      * @param appId  (required)
      * @return RestApiArrayResultTeammate
@@ -532,7 +532,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get all teammates
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultTeammate&gt;
@@ -545,7 +545,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Get all teammates (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -650,7 +650,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Redeem one-time code from invitation
+     * 
      * 
      * @param otc  (required)
      * @param appId  (required)
@@ -663,7 +663,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Redeem one-time code from invitation
+     * 
      * 
      * @param otc  (required)
      * @param appId  (required)
@@ -677,7 +677,7 @@ public class TeammatesApi {
     }
 
     /**
-     * Redeem one-time code from invitation (asynchronously)
+     *  (asynchronously)
      * 
      * @param otc  (required)
      * @param appId  (required)
@@ -713,9 +713,9 @@ public class TeammatesApi {
     }
     /**
      * Build call for updateTeammate
-     * @param appId Application identifier (required)
-     * @param id teammate identifier (required)
-     * @param teammate teammate model (required)
+     * @param appId  (required)
+     * @param id  (required)
+     * @param teammate  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -789,11 +789,11 @@ public class TeammatesApi {
     }
 
     /**
-     * Update teammates (this method does not support Deltas!)
      * 
-     * @param appId Application identifier (required)
-     * @param id teammate identifier (required)
-     * @param teammate teammate model (required)
+     * 
+     * @param appId  (required)
+     * @param id  (required)
+     * @param teammate  (required)
      * @return RestApiResultTeammate
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -803,11 +803,11 @@ public class TeammatesApi {
     }
 
     /**
-     * Update teammates (this method does not support Deltas!)
      * 
-     * @param appId Application identifier (required)
-     * @param id teammate identifier (required)
-     * @param teammate teammate model (required)
+     * 
+     * @param appId  (required)
+     * @param id  (required)
+     * @param teammate  (required)
      * @return ApiResponse&lt;RestApiResultTeammate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -818,11 +818,11 @@ public class TeammatesApi {
     }
 
     /**
-     * Update teammates (this method does not support Deltas!) (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param id teammate identifier (required)
-     * @param teammate teammate model (required)
+     * @param appId  (required)
+     * @param id  (required)
+     * @param teammate  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

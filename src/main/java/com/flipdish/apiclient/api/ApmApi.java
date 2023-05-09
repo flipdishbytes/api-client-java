@@ -64,7 +64,7 @@ public class ApmApi {
 
     /**
      * Build call for getApmStatus
-     * @param appId App Id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -127,9 +127,9 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
      * 
-     * @param appId App Id (required)
+     * 
+     * @param appId  (required)
      * @return RestApiResultApmStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -139,9 +139,9 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
      * 
-     * @param appId App Id (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultApmStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -152,9 +152,9 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -187,8 +187,8 @@ public class ApmApi {
     }
     /**
      * Build call for getBasicStatistics
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -253,10 +253,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Basic Statistics
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @return RestApiResultApmStatistics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -266,10 +266,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Basic Statistics
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiResultApmStatistics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -280,10 +280,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Basic Statistics (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -316,8 +316,8 @@ public class ApmApi {
     }
     /**
      * Build call for getCalendarWeekStatistics
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -382,10 +382,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calendar statistics
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @return RestApiArrayResultApmHourlyDataPoint
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -395,10 +395,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calendar statistics
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultApmHourlyDataPoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -409,10 +409,10 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calendar statistics (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -445,10 +445,10 @@ public class ApmApi {
     }
     /**
      * Build call for getCallsStatistics
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -521,12 +521,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calls Statistics
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @return RestApiArrayResultApmDataPoint
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -536,12 +536,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calls Statistics
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultApmDataPoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -552,12 +552,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Calls Statistics (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -590,10 +590,10 @@ public class ApmApi {
     }
     /**
      * Build call for getOrderStatistics
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -666,12 +666,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @return RestApiArrayResultApmCurrencyDataPoint
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -681,12 +681,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultApmCurrencyDataPoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -697,12 +697,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get Order Statistics (Value of Orders) (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param aggregateDataBy Aggregate data by day \\ week (required)
-     * @param dataPointLimit Amount of data points per request (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -735,10 +735,10 @@ public class ApmApi {
     }
     /**
      * Build call for getPaginatedCallList
-     * @param appId App Id (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -807,12 +807,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get paginated APM call list
      * 
-     * @param appId App Id (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeId  (optional)
      * @return RestApiPaginationResultPhoneCall
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -822,12 +822,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get paginated APM call list
      * 
-     * @param appId App Id (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeId List of stores to search by (optional)
+     * 
+     * @param appId  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultPhoneCall&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -838,12 +838,12 @@ public class ApmApi {
     }
 
     /**
-     * [PRIVATE API] Get paginated APM call list (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeId List of stores to search by (optional)
+     * @param appId  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

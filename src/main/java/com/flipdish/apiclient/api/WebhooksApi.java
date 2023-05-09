@@ -65,8 +65,8 @@ public class WebhooksApi {
 
     /**
      * Build call for createWebhookSubscription
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -141,10 +141,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Create a webhook subscription for you Oauth App
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @return RestApiIntegerResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -155,10 +155,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Create a webhook subscription for you Oauth App
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiIntegerResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -170,10 +170,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Create a webhook subscription for you Oauth App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -207,9 +207,9 @@ public class WebhooksApi {
     }
     /**
      * Build call for createWebhookSubscriptionEventNames
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -291,11 +291,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Add event name to your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -304,11 +304,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Add event name to your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -319,11 +319,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Add event name to your webhook subscription (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -356,8 +356,8 @@ public class WebhooksApi {
     }
     /**
      * Build call for deleteWebhookSubscription
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -433,10 +433,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Delete you webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -445,10 +445,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Delete you webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -459,10 +459,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Delete you webhook subscription (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -495,9 +495,9 @@ public class WebhooksApi {
     }
     /**
      * Build call for deleteWebhookSubscriptionEventName
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -579,11 +579,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Remove event name to your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -592,11 +592,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Remove event name to your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -607,11 +607,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Remove event name to your webhook subscription (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param eventName Webhook subscription event name (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param eventName  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -707,7 +707,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscription event names
+     * 
      * 
      * @param appId  (required)
      * @return RestApiStringArrayResult
@@ -719,7 +719,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscription event names
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringArrayResult&gt;
@@ -732,7 +732,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscription event names (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -767,8 +767,8 @@ public class WebhooksApi {
     }
     /**
      * Build call for getWebhookEventNamesBySubscriptionId
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -844,10 +844,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Get your webhook subscriptions selected event names
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @return RestApiStringArrayResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -858,10 +858,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Get your webhook subscriptions selected event names
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringArrayResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -873,10 +873,10 @@ public class WebhooksApi {
     }
 
     /**
-     * Get your webhook subscriptions selected event names (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -997,7 +997,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get a sample event from a webhook subscription
+     * 
      * 
      * @param eventName  (required)
      * @param appId  (required)
@@ -1013,7 +1013,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get a sample event from a webhook subscription
+     * 
      * 
      * @param eventName  (required)
      * @param appId  (required)
@@ -1030,7 +1030,7 @@ public class WebhooksApi {
     }
 
     /**
-     * Get a sample event from a webhook subscription (asynchronously)
+     *  (asynchronously)
      * 
      * @param eventName  (required)
      * @param appId  (required)
@@ -1069,13 +1069,13 @@ public class WebhooksApi {
     }
     /**
      * Build call for getWebhookLogs
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param start Start time (required)
-     * @param end End time (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1168,15 +1168,15 @@ public class WebhooksApi {
     }
 
     /**
-     * Get logs for your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param start Start time (required)
-     * @param end End time (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultWebhookLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1186,15 +1186,15 @@ public class WebhooksApi {
     }
 
     /**
-     * Get logs for your webhook subscription
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param start Start time (required)
-     * @param end End time (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultWebhookLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1205,15 +1205,15 @@ public class WebhooksApi {
     }
 
     /**
-     * Get logs for your webhook subscription (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param start Start time (required)
-     * @param end End time (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param start  (required)
+     * @param end  (required)
      * @param appId  (required)
-     * @param page Page number (optional)
-     * @param limit Page size (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1246,7 +1246,7 @@ public class WebhooksApi {
     }
     /**
      * Build call for getWebhookSubscriptions
-     * @param oauthAppId Oauth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param page  (optional)
      * @param limit  (optional)
@@ -1322,9 +1322,9 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscriptions by your Oauth App id
      * 
-     * @param oauthAppId Oauth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param page  (optional)
      * @param limit  (optional)
@@ -1337,9 +1337,9 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscriptions by your Oauth App id
      * 
-     * @param oauthAppId Oauth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param page  (optional)
      * @param limit  (optional)
@@ -1353,9 +1353,9 @@ public class WebhooksApi {
     }
 
     /**
-     * Get all webhook subscriptions by your Oauth App id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param page  (optional)
      * @param limit  (optional)
@@ -1391,9 +1391,9 @@ public class WebhooksApi {
     }
     /**
      * Build call for updateWebhookSubscription
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1474,11 +1474,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Update a webhook subscription object
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1487,11 +1487,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Update a webhook subscription object
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1502,11 +1502,11 @@ public class WebhooksApi {
     }
 
     /**
-     * Update a webhook subscription object (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Oauth App identifier (required)
-     * @param webhookSubscriptionId Webhook subscription identifier (required)
-     * @param webhookSubscription Webhook subscription object (required)
+     * @param oauthAppId  (required)
+     * @param webhookSubscriptionId  (required)
+     * @param webhookSubscription  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

@@ -36,7 +36,7 @@ public class PaymentIntentsApiTest {
 
     
     /**
-     * Returns stripe payment intent for a given id
+     * 
      *
      * 
      *

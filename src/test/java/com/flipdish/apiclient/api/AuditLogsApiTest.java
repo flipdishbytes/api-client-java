@@ -36,9 +36,9 @@ public class AuditLogsApiTest {
 
     
     /**
-     * Create an order audit log event
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,9 +53,9 @@ public class AuditLogsApiTest {
     }
     
     /**
-     * Create a store audit log event
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

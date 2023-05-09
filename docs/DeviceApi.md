@@ -4,19 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignDevice**](DeviceApi.md#assignDevice) | **POST** /api/v1.0/{appId}/devices/assign | Assign device to AppId. Device must have been enrolled before
-[**enrollDevice**](DeviceApi.md#enrollDevice) | **POST** /api/v1.0/{appId}/devices/enroll | Enroll a new device - this returns a PIN code for actually assigning it later
-[**getDeviceDetails**](DeviceApi.md#getDeviceDetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | Get details for a device by model and deviceid
-[**searchDevices**](DeviceApi.md#searchDevices) | **GET** /api/v1.0/{appId}/devices/search | Search devices by AppId and optionally storeId
+[**assignDevice**](DeviceApi.md#assignDevice) | **POST** /api/v1.0/{appId}/devices/assign | 
+[**enrollDevice**](DeviceApi.md#enrollDevice) | **POST** /api/v1.0/{appId}/devices/enroll | 
+[**getDeviceDetails**](DeviceApi.md#getDeviceDetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | 
+[**searchDevices**](DeviceApi.md#searchDevices) | **GET** /api/v1.0/{appId}/devices/search | 
 
 
 <a name="assignDevice"></a>
 # **assignDevice**
 > RestApiResultClientDeviceEnrollmentResult assignDevice(appId, assignDeviceRequest)
 
-Assign device to AppId. Device must have been enrolled before
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -34,8 +32,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeviceApi apiInstance = new DeviceApi();
-String appId = "appId_example"; // String | App Id
-ClientDeviceAssignEnrolledDevice assignDeviceRequest = new ClientDeviceAssignEnrolledDevice(); // ClientDeviceAssignEnrolledDevice | Assign request
+String appId = "appId_example"; // String | 
+ClientDeviceAssignEnrolledDevice assignDeviceRequest = new ClientDeviceAssignEnrolledDevice(); // ClientDeviceAssignEnrolledDevice | 
 try {
     RestApiResultClientDeviceEnrollmentResult result = apiInstance.assignDevice(appId, assignDeviceRequest);
     System.out.println(result);
@@ -49,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **assignDeviceRequest** | [**ClientDeviceAssignEnrolledDevice**](ClientDeviceAssignEnrolledDevice.md)| Assign request |
+ **appId** | **String**|  |
+ **assignDeviceRequest** | [**ClientDeviceAssignEnrolledDevice**](ClientDeviceAssignEnrolledDevice.md)|  |
 
 ### Return type
 
@@ -69,9 +67,7 @@ Name | Type | Description  | Notes
 # **enrollDevice**
 > RestApiResultClientDeviceEnrollmentResult enrollDevice(appId, deviceEnrollmentRequest)
 
-Enroll a new device - this returns a PIN code for actually assigning it later
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -89,8 +85,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeviceApi apiInstance = new DeviceApi();
-String appId = "appId_example"; // String | App Id - not for the device, only for permission checking
-ClientDeviceEnroll deviceEnrollmentRequest = new ClientDeviceEnroll(); // ClientDeviceEnroll | Request object for enrolling device
+String appId = "appId_example"; // String | 
+ClientDeviceEnroll deviceEnrollmentRequest = new ClientDeviceEnroll(); // ClientDeviceEnroll | 
 try {
     RestApiResultClientDeviceEnrollmentResult result = apiInstance.enrollDevice(appId, deviceEnrollmentRequest);
     System.out.println(result);
@@ -104,8 +100,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id - not for the device, only for permission checking |
- **deviceEnrollmentRequest** | [**ClientDeviceEnroll**](ClientDeviceEnroll.md)| Request object for enrolling device |
+ **appId** | **String**|  |
+ **deviceEnrollmentRequest** | [**ClientDeviceEnroll**](ClientDeviceEnroll.md)|  |
 
 ### Return type
 
@@ -124,9 +120,7 @@ Name | Type | Description  | Notes
 # **getDeviceDetails**
 > RestApiResultClientDevice getDeviceDetails(appId, deviceModel, deviceId)
 
-Get details for a device by model and deviceid
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -144,9 +138,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeviceApi apiInstance = new DeviceApi();
-String appId = "appId_example"; // String | App Id
-String deviceModel = "deviceModel_example"; // String | Device Model
-String deviceId = "deviceId_example"; // String | Device Id
+String appId = "appId_example"; // String | 
+String deviceModel = "deviceModel_example"; // String | 
+String deviceId = "deviceId_example"; // String | 
 try {
     RestApiResultClientDevice result = apiInstance.getDeviceDetails(appId, deviceModel, deviceId);
     System.out.println(result);
@@ -160,9 +154,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **deviceModel** | **String**| Device Model |
- **deviceId** | **String**| Device Id |
+ **appId** | **String**|  |
+ **deviceModel** | **String**|  |
+ **deviceId** | **String**|  |
 
 ### Return type
 
@@ -181,9 +175,7 @@ Name | Type | Description  | Notes
 # **searchDevices**
 > RestApiArrayResultClientDeviceSummary searchDevices(appId, storeId, deviceModel)
 
-Search devices by AppId and optionally storeId
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -201,9 +193,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeviceApi apiInstance = new DeviceApi();
-String appId = "appId_example"; // String | App Id
-Integer storeId = 56; // Integer | Store Id (optional)
-String deviceModel = "deviceModel_example"; // String | Device Model (optional)
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
+String deviceModel = "deviceModel_example"; // String | 
 try {
     RestApiArrayResultClientDeviceSummary result = apiInstance.searchDevices(appId, storeId, deviceModel);
     System.out.println(result);
@@ -217,9 +209,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **storeId** | **Integer**| Store Id (optional) | [optional]
- **deviceModel** | **String**| Device Model (optional) | [optional]
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  | [optional]
+ **deviceModel** | **String**|  | [optional]
 
 ### Return type
 

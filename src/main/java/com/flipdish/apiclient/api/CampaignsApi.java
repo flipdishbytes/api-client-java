@@ -65,8 +65,8 @@ public class CampaignsApi {
 
     /**
      * Build call for createLoyaltyCampaign
-     * @param appId App Name Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * @param appId  (required)
+     * @param campaign  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -134,10 +134,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates loyalty campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaign  (required)
      * @return RestApiResultLoyaltyCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,10 +147,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates loyalty campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaign  (required)
      * @return ApiResponse&lt;RestApiResultLoyaltyCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -161,10 +161,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates loyalty campaign (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * @param appId  (required)
+     * @param campaign  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,8 +197,8 @@ public class CampaignsApi {
     }
     /**
      * Build call for createRetentionCampaign
-     * @param appId App Name Id (required)
-     * @param campaign Retention campaign details (required)
+     * @param appId  (required)
+     * @param campaign  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -266,10 +266,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates retention campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Retention campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaign  (required)
      * @return RestApiResultRetentionCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -279,10 +279,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates retention campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Retention campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaign  (required)
      * @return ApiResponse&lt;RestApiResultRetentionCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -293,10 +293,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Creates retention campaign (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param campaign Retention campaign details (required)
+     * @param appId  (required)
+     * @param campaign  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -329,7 +329,7 @@ public class CampaignsApi {
     }
     /**
      * Build call for getLoyaltyCampaignsForApp
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -392,9 +392,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultLoyaltyCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -404,9 +404,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultLoyaltyCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -417,9 +417,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for app (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -452,8 +452,8 @@ public class CampaignsApi {
     }
     /**
      * Build call for getLoyaltyCampaignsForStore
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -522,10 +522,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for store
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return RestApiArrayResultLoyaltyCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -535,10 +535,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for store
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiArrayResultLoyaltyCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -549,10 +549,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets loyalty campaigns for store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -585,7 +585,7 @@ public class CampaignsApi {
     }
     /**
      * Build call for getRetentionCampaignsForApp
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -648,9 +648,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultRetentionCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -660,9 +660,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultRetentionCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -673,9 +673,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for app (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -708,8 +708,8 @@ public class CampaignsApi {
     }
     /**
      * Build call for getRetentionCampaignsForStore
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -778,10 +778,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for store
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return RestApiArrayResultRetentionCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -791,10 +791,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for store
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiArrayResultRetentionCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -805,10 +805,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets retention campaigns for store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -841,7 +841,7 @@ public class CampaignsApi {
     }
     /**
      * Build call for getStoreList
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param onlyPublished  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -907,9 +907,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets list of stores for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @param onlyPublished  (optional)
      * @return RestApiArrayResultStoreListItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -920,9 +920,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets list of stores for app
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @param onlyPublished  (optional)
      * @return ApiResponse&lt;RestApiArrayResultStoreListItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -934,9 +934,9 @@ public class CampaignsApi {
     }
 
     /**
-     * Gets list of stores for app (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param onlyPublished  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -970,8 +970,8 @@ public class CampaignsApi {
     }
     /**
      * Build call for removeCampaign
-     * @param appId App Name Id (required)
-     * @param campaignId Campaign Id (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1040,10 +1040,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Deletes a campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Campaign Id (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void removeCampaign(String appId, Integer campaignId) throws ApiException {
@@ -1051,10 +1051,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Deletes a campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Campaign Id (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1064,10 +1064,10 @@ public class CampaignsApi {
     }
 
     /**
-     * Deletes a campaign (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Campaign Id (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1099,9 +1099,9 @@ public class CampaignsApi {
     }
     /**
      * Build call for updateLoyaltyCampaign
-     * @param appId App Name Id (required)
-     * @param campaignId Loyalty campaign Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1175,11 +1175,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates loyalty campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Loyalty campaign Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @return RestApiResultLoyaltyCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1189,11 +1189,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates loyalty campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Loyalty campaign Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @return ApiResponse&lt;RestApiResultLoyaltyCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1204,11 +1204,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates loyalty campaign (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Loyalty campaign Id (required)
-     * @param campaign Loyalty campaign details (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1241,9 +1241,9 @@ public class CampaignsApi {
     }
     /**
      * Build call for updateRetentionCampaign
-     * @param appId App Name Id (required)
-     * @param campaignId Retention campaign Id (required)
-     * @param campaign Retention campaign details (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1317,11 +1317,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates retention campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Retention campaign Id (required)
-     * @param campaign Retention campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @return RestApiResultRetentionCampaign
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1331,11 +1331,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates retention campaign
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Retention campaign Id (required)
-     * @param campaign Retention campaign details (required)
+     * 
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @return ApiResponse&lt;RestApiResultRetentionCampaign&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1346,11 +1346,11 @@ public class CampaignsApi {
     }
 
     /**
-     * Updates retention campaign (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param campaignId Retention campaign Id (required)
-     * @param campaign Retention campaign details (required)
+     * @param appId  (required)
+     * @param campaignId  (required)
+     * @param campaign  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

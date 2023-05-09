@@ -38,7 +38,7 @@ public class HomeApiTest {
 
     
     /**
-     * [PRIVATE API] Complete Home Action
+     * 
      *
      * 
      *
@@ -56,7 +56,7 @@ public class HomeApiTest {
     }
     
     /**
-     * [PRIVATE API] Complete Home Action
+     * 
      *
      * 
      *
@@ -71,7 +71,7 @@ public class HomeApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Home Actions
+     * 
      *
      * 
      *
@@ -87,7 +87,7 @@ public class HomeApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Home Statistics
+     * 
      *
      * 
      *
@@ -103,7 +103,7 @@ public class HomeApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+     * 
      *
      * 
      *

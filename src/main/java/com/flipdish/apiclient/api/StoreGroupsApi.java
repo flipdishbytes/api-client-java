@@ -63,8 +63,8 @@ public class StoreGroupsApi {
 
     /**
      * Build call for createStoreGroup
-     * @param appNameId App Name Id (required)
-     * @param storeGroup Store group definition (required)
+     * @param appNameId  (required)
+     * @param storeGroup  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -132,10 +132,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Creates a Store Group  It will be attached to an existing App
      * 
-     * @param appNameId App Name Id (required)
-     * @param storeGroup Store group definition (required)
+     * 
+     * @param appNameId  (required)
+     * @param storeGroup  (required)
      * @return RestApiResultStoreGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -145,10 +145,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Creates a Store Group  It will be attached to an existing App
      * 
-     * @param appNameId App Name Id (required)
-     * @param storeGroup Store group definition (required)
+     * 
+     * @param appNameId  (required)
+     * @param storeGroup  (required)
      * @return ApiResponse&lt;RestApiResultStoreGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -159,10 +159,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Creates a Store Group  It will be attached to an existing App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appNameId App Name Id (required)
-     * @param storeGroup Store group definition (required)
+     * @param appNameId  (required)
+     * @param storeGroup  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -195,7 +195,7 @@ public class StoreGroupsApi {
     }
     /**
      * Build call for getStoreGroup
-     * @param storeGroupId Store Group Id (required)
+     * @param storeGroupId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -258,9 +258,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a Store Groups
      * 
-     * @param storeGroupId Store Group Id (required)
+     * 
+     * @param storeGroupId  (required)
      * @return RestApiResultStoreGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -270,9 +270,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a Store Groups
      * 
-     * @param storeGroupId Store Group Id (required)
+     * 
+     * @param storeGroupId  (required)
      * @return ApiResponse&lt;RestApiResultStoreGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -283,9 +283,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a Store Groups (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeGroupId Store Group Id (required)
+     * @param storeGroupId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -318,10 +318,10 @@ public class StoreGroupsApi {
     }
     /**
      * Build call for getStoreGroups
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -390,12 +390,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a paginated list of Store Groups
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultStoreGroup
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -405,12 +405,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a paginated list of Store Groups
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStoreGroup&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -421,12 +421,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Returns a paginated list of Store Groups (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -459,10 +459,10 @@ public class StoreGroupsApi {
     }
     /**
      * Build call for getStoreGroupsExtended
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param groupingRadius  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -534,12 +534,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param groupingRadius  (optional)
      * @return RestApiPaginationResultStoreGroupExtended
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -550,12 +550,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param groupingRadius  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStoreGroupExtended&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -567,12 +567,12 @@ public class StoreGroupsApi {
     }
 
     /**
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appNameId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appNameId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param groupingRadius  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -606,7 +606,7 @@ public class StoreGroupsApi {
     }
     /**
      * Build call for removeStoreGroup
-     * @param storeGroupId Store Group Id (required)
+     * @param storeGroupId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -669,9 +669,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
      * 
-     * @param storeGroupId Store Group Id (required)
+     * 
+     * @param storeGroupId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void removeStoreGroup(Integer storeGroupId) throws ApiException {
@@ -679,9 +679,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
      * 
-     * @param storeGroupId Store Group Id (required)
+     * 
+     * @param storeGroupId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -691,9 +691,9 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeGroupId Store Group Id (required)
+     * @param storeGroupId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -863,8 +863,8 @@ public class StoreGroupsApi {
     }
     /**
      * Build call for updateStoreGroup
-     * @param storeGroupId Store Group Id (required)
-     * @param storeGroup Store Group Delta (required)
+     * @param storeGroupId  (required)
+     * @param storeGroup  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -932,10 +932,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Updates Store Group
      * 
-     * @param storeGroupId Store Group Id (required)
-     * @param storeGroup Store Group Delta (required)
+     * 
+     * @param storeGroupId  (required)
+     * @param storeGroup  (required)
      * @return RestApiResultStoreGroupBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -945,10 +945,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Updates Store Group
      * 
-     * @param storeGroupId Store Group Id (required)
-     * @param storeGroup Store Group Delta (required)
+     * 
+     * @param storeGroupId  (required)
+     * @param storeGroup  (required)
      * @return ApiResponse&lt;RestApiResultStoreGroupBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -959,10 +959,10 @@ public class StoreGroupsApi {
     }
 
     /**
-     * Updates Store Group (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeGroupId Store Group Id (required)
-     * @param storeGroup Store Group Delta (required)
+     * @param storeGroupId  (required)
+     * @param storeGroup  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

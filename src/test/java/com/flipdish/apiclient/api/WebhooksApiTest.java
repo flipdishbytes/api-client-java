@@ -42,7 +42,7 @@ public class WebhooksApiTest {
 
     
     /**
-     * Create a webhook subscription for you Oauth App
+     * 
      *
      * 
      *
@@ -60,7 +60,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Add event name to your webhook subscription
+     * 
      *
      * 
      *
@@ -79,7 +79,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Delete you webhook subscription
+     * 
      *
      * 
      *
@@ -97,7 +97,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Remove event name to your webhook subscription
+     * 
      *
      * 
      *
@@ -116,7 +116,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Get all webhook subscription event names
+     * 
      *
      * 
      *
@@ -132,7 +132,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Get your webhook subscriptions selected event names
+     * 
      *
      * 
      *
@@ -150,7 +150,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Get a sample event from a webhook subscription
+     * 
      *
      * 
      *
@@ -170,7 +170,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Get logs for your webhook subscription
+     * 
      *
      * 
      *
@@ -192,7 +192,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Get all webhook subscriptions by your Oauth App id
+     * 
      *
      * 
      *
@@ -211,7 +211,7 @@ public class WebhooksApiTest {
     }
     
     /**
-     * Update a webhook subscription object
+     * 
      *
      * 
      *

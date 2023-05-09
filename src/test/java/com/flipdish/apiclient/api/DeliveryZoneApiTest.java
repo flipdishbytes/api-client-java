@@ -38,7 +38,7 @@ public class DeliveryZoneApiTest {
 
     
     /**
-     * Adds a delivery zone to the store id
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class DeliveryZoneApiTest {
     }
     
     /**
-     * Get all the delivery zones associated with a store
+     * 
      *
      * 
      *
@@ -71,7 +71,7 @@ public class DeliveryZoneApiTest {
     }
     
     /**
-     * Removes the existing delivery zone
+     * 
      *
      * 
      *
@@ -88,7 +88,7 @@ public class DeliveryZoneApiTest {
     }
     
     /**
-     * Updates the existing delivery zone
+     * 
      *
      * 
      *

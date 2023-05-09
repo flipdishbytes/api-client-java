@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**formByApp**](AddressApi.md#formByApp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
-[**formByCountry**](AddressApi.md#formByCountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
-[**formatGoogleAddress**](AddressApi.md#formatGoogleAddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-[**getCountries**](AddressApi.md#getCountries) | **GET** /api/v1.0/address/countries | Retuns a list of localised countries
+[**formByApp**](AddressApi.md#formByApp) | **GET** /api/v1.0/app/{appId}/address/form | 
+[**formByCountry**](AddressApi.md#formByCountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
+[**formatGoogleAddress**](AddressApi.md#formatGoogleAddress) | **POST** /api/v1.0/address/google | 
+[**getCountries**](AddressApi.md#getCountries) | **GET** /api/v1.0/address/countries | 
 
 
 <a name="formByApp"></a>
 # **formByApp**
 > RestApiResultAddressFormResponse formByApp(appId, language)
 
-Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+
 
 ### Example
 ```java
@@ -32,8 +32,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AddressApi apiInstance = new AddressApi();
-String appId = "appId_example"; // String | Application (WhiteLabel) Id (WhiteLabelId or AppNameId).
-String language = "language_example"; // String | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
+String appId = "appId_example"; // String | 
+String language = "language_example"; // String | 
 try {
     RestApiResultAddressFormResponse result = apiInstance.formByApp(appId, language);
     System.out.println(result);
@@ -47,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application (WhiteLabel) Id (WhiteLabelId or AppNameId). |
- **language** | **String**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
+ **appId** | **String**|  |
+ **language** | **String**|  | [optional]
 
 ### Return type
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 # **formByCountry**
 > RestApiResultAddressFormResponse formByCountry(countryCode, language)
 
-Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+
 
 ### Example
 ```java
@@ -85,8 +85,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AddressApi apiInstance = new AddressApi();
-String countryCode = "countryCode_example"; // String | The 2 letter ISO country code, e.g.: IE.
-String language = "language_example"; // String | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
+String countryCode = "countryCode_example"; // String | 
+String language = "language_example"; // String | 
 try {
     RestApiResultAddressFormResponse result = apiInstance.formByCountry(countryCode, language);
     System.out.println(result);
@@ -100,8 +100,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countryCode** | **String**| The 2 letter ISO country code, e.g.: IE. |
- **language** | **String**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
+ **countryCode** | **String**|  |
+ **language** | **String**|  | [optional]
 
 ### Return type
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 # **formatGoogleAddress**
 > RestApiResultAddressFormResponse formatGoogleAddress(googleAddress, language)
 
-Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+
 
 ### Example
 ```java
@@ -138,8 +138,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AddressApi apiInstance = new AddressApi();
-GoogleAddress googleAddress = new GoogleAddress(); // GoogleAddress | A Google address object, as it is returned from the maps API.
-String language = "language_example"; // String | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
+GoogleAddress googleAddress = new GoogleAddress(); // GoogleAddress | 
+String language = "language_example"; // String | 
 try {
     RestApiResultAddressFormResponse result = apiInstance.formatGoogleAddress(googleAddress, language);
     System.out.println(result);
@@ -153,8 +153,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **googleAddress** | [**GoogleAddress**](GoogleAddress.md)| A Google address object, as it is returned from the maps API. |
- **language** | **String**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
+ **googleAddress** | [**GoogleAddress**](GoogleAddress.md)|  |
+ **language** | **String**|  | [optional]
 
 ### Return type
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 # **getCountries**
 > RestApiResultCountryFormResponse getCountries(language)
 
-Retuns a list of localised countries
+
 
 ### Example
 ```java

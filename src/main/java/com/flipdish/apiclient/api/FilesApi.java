@@ -127,7 +127,7 @@ public class FilesApi {
     }
 
     /**
-     * Get file from storage
+     * 
      * 
      * @param appId  (required)
      * @param fileId  (required)
@@ -140,7 +140,7 @@ public class FilesApi {
     }
 
     /**
-     * Get file from storage
+     * 
      * 
      * @param appId  (required)
      * @param fileId  (required)
@@ -154,7 +154,7 @@ public class FilesApi {
     }
 
     /**
-     * Get file from storage (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param fileId  (required)

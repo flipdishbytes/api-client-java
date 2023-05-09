@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**completeHomeAction**](HomeApi.md#completeHomeAction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
-[**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
-[**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
-[**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+[**completeHomeAction**](HomeApi.md#completeHomeAction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | 
+[**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | 
+[**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | 
+[**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | 
+[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | 
 
 
 <a name="completeHomeAction"></a>
 # **completeHomeAction**
 > Object completeHomeAction(appId, homeActionId, isDismissed)
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```java
@@ -33,8 +33,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HomeApi apiInstance = new HomeApi();
-String appId = "appId_example"; // String | App Name Id
-Integer homeActionId = 56; // Integer | Id of the action
+String appId = "appId_example"; // String | 
+Integer homeActionId = 56; // Integer | 
 Boolean isDismissed = true; // Boolean | 
 try {
     Object result = apiInstance.completeHomeAction(appId, homeActionId, isDismissed);
@@ -49,8 +49,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **homeActionId** | **Integer**| Id of the action |
+ **appId** | **String**|  |
+ **homeActionId** | **Integer**|  |
  **isDismissed** | **Boolean**|  |
 
 ### Return type
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **dismissOldPortalAction**
 > Object dismissOldPortalAction()
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```java
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 # **getHomeActions**
 > RestApiArrayResultHomeAction getHomeActions(appId)
 
-[PRIVATE API] Get Home Actions
+
 
 ### Example
 ```java
@@ -135,7 +135,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HomeApi apiInstance = new HomeApi();
-String appId = "appId_example"; // String | App Name Id
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultHomeAction result = apiInstance.getHomeActions(appId);
     System.out.println(result);
@@ -149,7 +149,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 # **getHomeStatistics**
 > RestApiResultHomeStatistics getHomeStatistics(appId)
 
-[PRIVATE API] Get Home Statistics
+
 
 ### Example
 ```java
@@ -186,7 +186,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HomeApi apiInstance = new HomeApi();
-String appId = "appId_example"; // String | App Name Id
+String appId = "appId_example"; // String | 
 try {
     RestApiResultHomeStatistics result = apiInstance.getHomeStatistics(appId);
     System.out.println(result);
@@ -200,7 +200,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 # **getOktaPortalFeatureFlag**
 > RestApiResultOktaPortalFeatureFlag getOktaPortalFeatureFlag()
 
-[PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+
 
 ### Example
 ```java

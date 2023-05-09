@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**initializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializeBankAccountConnectedAccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
+[**initializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializeBankAccountConnectedAccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | 
 
 
 <a name="initializeBankAccountConnectedAccount"></a>
 # **initializeBankAccountConnectedAccount**
 > RestApiResultBankAccountDetail initializeBankAccountConnectedAccount(accounts)
 
-Create a new Bank Account and Stripe connected account
+
 
 ### Example
 ```java
@@ -29,7 +29,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StripeCustomConnectAdminApi apiInstance = new StripeCustomConnectAdminApi();
-List<Integer> accounts = Arrays.asList(new List<Integer>()); // List<Integer> | Accounts to be initialized in stripe
+List<Integer> accounts = Arrays.asList(new List<Integer>()); // List<Integer> | 
 try {
     RestApiResultBankAccountDetail result = apiInstance.initializeBankAccountConnectedAccount(accounts);
     System.out.println(result);
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accounts** | **List&lt;Integer&gt;**| Accounts to be initialized in stripe |
+ **accounts** | **List&lt;Integer&gt;**|  |
 
 ### Return type
 

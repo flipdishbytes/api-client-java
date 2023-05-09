@@ -127,7 +127,7 @@ public class DriversApi {
     }
 
     /**
-     * Add driver token
+     * 
      * 
      * @param updateDriverToken  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -137,7 +137,7 @@ public class DriversApi {
     }
 
     /**
-     * Add driver token
+     * 
      * 
      * @param updateDriverToken  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -149,7 +149,7 @@ public class DriversApi {
     }
 
     /**
-     * Add driver token (asynchronously)
+     *  (asynchronously)
      * 
      * @param updateDriverToken  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -239,7 +239,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver profile image
+     * 
      * 
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -248,7 +248,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver profile image
+     * 
      * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -259,7 +259,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver profile image (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -292,7 +292,7 @@ public class DriversApi {
     }
     /**
      * Build call for driverLogin
-     * @param driverLoginModel Driver request login code model (required)
+     * @param driverLoginModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -354,9 +354,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Login with phone number and pin
      * 
-     * @param driverLoginModel Driver request login code model (required)
+     * 
+     * @param driverLoginModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void driverLogin(DriverLoginModel driverLoginModel) throws ApiException {
@@ -364,9 +364,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Login with phone number and pin
      * 
-     * @param driverLoginModel Driver request login code model (required)
+     * 
+     * @param driverLoginModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -376,9 +376,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Login with phone number and pin (asynchronously)
+     *  (asynchronously)
      * 
-     * @param driverLoginModel Driver request login code model (required)
+     * @param driverLoginModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -410,7 +410,7 @@ public class DriversApi {
     }
     /**
      * Build call for driverRequestLoginCodeSms
-     * @param driverRequestLoginPinModel Driver request login code model (required)
+     * @param driverRequestLoginPinModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -472,9 +472,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
      * 
-     * @param driverRequestLoginPinModel Driver request login code model (required)
+     * 
+     * @param driverRequestLoginPinModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void driverRequestLoginCodeSms(DriverRequestLoginPinModel driverRequestLoginPinModel) throws ApiException {
@@ -482,9 +482,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
      * 
-     * @param driverRequestLoginPinModel Driver request login code model (required)
+     * 
+     * @param driverRequestLoginPinModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -494,9 +494,9 @@ public class DriversApi {
     }
 
     /**
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code (asynchronously)
+     *  (asynchronously)
      * 
-     * @param driverRequestLoginPinModel Driver request login code model (required)
+     * @param driverRequestLoginPinModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -584,7 +584,7 @@ public class DriversApi {
     }
 
     /**
-     * Get driver profile
+     * 
      * 
      * @return RestApiResultDriver
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -595,7 +595,7 @@ public class DriversApi {
     }
 
     /**
-     * Get driver profile
+     * 
      * 
      * @return ApiResponse&lt;RestApiResultDriver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -607,7 +607,7 @@ public class DriversApi {
     }
 
     /**
-     * Get driver profile (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -697,7 +697,7 @@ public class DriversApi {
     }
 
     /**
-     * Get stores for driver
+     * 
      * 
      * @return RestApiArrayResultDriverStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -708,7 +708,7 @@ public class DriversApi {
     }
 
     /**
-     * Get stores for driver
+     * 
      * 
      * @return ApiResponse&lt;RestApiArrayResultDriverStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -720,7 +720,7 @@ public class DriversApi {
     }
 
     /**
-     * Get stores for driver (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -816,7 +816,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver token
+     * 
      * 
      * @param removeDriverToken  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -826,7 +826,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver token
+     * 
      * 
      * @param removeDriverToken  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -838,7 +838,7 @@ public class DriversApi {
     }
 
     /**
-     * Delete driver token (asynchronously)
+     *  (asynchronously)
      * 
      * @param removeDriverToken  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1057,7 +1057,7 @@ public class DriversApi {
     }
 
     /**
-     * Set driver profile image and returns it&#39;s url
+     * 
      * 
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1068,7 +1068,7 @@ public class DriversApi {
     }
 
     /**
-     * Set driver profile image and returns it&#39;s url
+     * 
      * 
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1080,7 +1080,7 @@ public class DriversApi {
     }
 
     /**
-     * Set driver profile image and returns it&#39;s url (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1114,7 +1114,7 @@ public class DriversApi {
     }
     /**
      * Build call for updateDeliveryTrackingStatus
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param deliveryTrackingStatus  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1184,9 +1184,9 @@ public class DriversApi {
     }
 
     /**
-     * Change delivery tracking status and return the updated status.
-     * ...
-     * @param orderId Order identifier (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @param deliveryTrackingStatus  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1197,9 +1197,9 @@ public class DriversApi {
     }
 
     /**
-     * Change delivery tracking status and return the updated status.
-     * ...
-     * @param orderId Order identifier (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @param deliveryTrackingStatus  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1211,9 +1211,9 @@ public class DriversApi {
     }
 
     /**
-     * Change delivery tracking status and return the updated status. (asynchronously)
-     * ...
-     * @param orderId Order identifier (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
      * @param deliveryTrackingStatus  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1247,7 +1247,7 @@ public class DriversApi {
     }
     /**
      * Build call for updateDriverProfile
-     * @param updateDriverProfile Update the driver profile (i.e Name) (required)
+     * @param updateDriverProfile  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1309,9 +1309,9 @@ public class DriversApi {
     }
 
     /**
-     * Update driver profile
      * 
-     * @param updateDriverProfile Update the driver profile (i.e Name) (required)
+     * 
+     * @param updateDriverProfile  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateDriverProfile(UpdateDriverProfileModel updateDriverProfile) throws ApiException {
@@ -1319,9 +1319,9 @@ public class DriversApi {
     }
 
     /**
-     * Update driver profile
      * 
-     * @param updateDriverProfile Update the driver profile (i.e Name) (required)
+     * 
+     * @param updateDriverProfile  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1331,9 +1331,9 @@ public class DriversApi {
     }
 
     /**
-     * Update driver profile (asynchronously)
+     *  (asynchronously)
      * 
-     * @param updateDriverProfile Update the driver profile (i.e Name) (required)
+     * @param updateDriverProfile  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

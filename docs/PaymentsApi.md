@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderPaymentInformation**](PaymentsApi.md#getOrderPaymentInformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
+[**getOrderPaymentInformation**](PaymentsApi.md#getOrderPaymentInformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
 
 
 <a name="getOrderPaymentInformation"></a>
 # **getOrderPaymentInformation**
 > RestApiResultOrderPaymentInformation getOrderPaymentInformation(orderId)
 
-Returns payment refund information related to the order with the order id
+
 
 ### Example
 ```java
@@ -29,7 +29,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
-Integer orderId = 56; // Integer | Order identifier
+Integer orderId = 56; // Integer | 
 try {
     RestApiResultOrderPaymentInformation result = apiInstance.getOrderPaymentInformation(orderId);
     System.out.println(result);
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Order identifier |
+ **orderId** | **Integer**|  |
 
 ### Return type
 

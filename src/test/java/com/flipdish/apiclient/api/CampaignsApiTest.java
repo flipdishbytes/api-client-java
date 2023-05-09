@@ -42,7 +42,7 @@ public class CampaignsApiTest {
 
     
     /**
-     * Creates loyalty campaign
+     * 
      *
      * 
      *
@@ -59,7 +59,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Creates retention campaign
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Gets loyalty campaigns for app
+     * 
      *
      * 
      *
@@ -92,7 +92,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Gets loyalty campaigns for store
+     * 
      *
      * 
      *
@@ -109,7 +109,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Gets retention campaigns for app
+     * 
      *
      * 
      *
@@ -125,7 +125,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Gets retention campaigns for store
+     * 
      *
      * 
      *
@@ -142,7 +142,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Gets list of stores for app
+     * 
      *
      * 
      *
@@ -159,7 +159,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Deletes a campaign
+     * 
      *
      * 
      *
@@ -176,7 +176,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Updates loyalty campaign
+     * 
      *
      * 
      *
@@ -194,7 +194,7 @@ public class CampaignsApiTest {
     }
     
     /**
-     * Updates retention campaign
+     * 
      *
      * 
      *

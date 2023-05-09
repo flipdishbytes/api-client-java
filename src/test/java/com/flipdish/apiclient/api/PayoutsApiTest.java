@@ -43,7 +43,7 @@ public class PayoutsApiTest {
 
     
     /**
-     * Get Payout details broken down by Store
+     * 
      *
      * 
      *
@@ -61,7 +61,7 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payout&#39;s chargebacks
+     * 
      *
      * 
      *
@@ -82,7 +82,7 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payout&#39;s orders
+     * 
      *
      * 
      *
@@ -103,7 +103,7 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payout&#39;s other charges
+     * 
      *
      * 
      *
@@ -124,7 +124,7 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payout&#39;s refunds
+     * 
      *
      * 
      *
@@ -145,9 +145,9 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payout summaries
+     * 
      *
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -165,9 +165,9 @@ public class PayoutsApiTest {
     }
     
     /**
-     * Get list of payouts
+     * 
      *
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

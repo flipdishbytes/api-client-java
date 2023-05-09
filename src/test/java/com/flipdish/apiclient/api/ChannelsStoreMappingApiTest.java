@@ -37,7 +37,7 @@ public class ChannelsStoreMappingApiTest {
 
     
     /**
-     * Gets the relationship between Flipdish Store and Channel Store
+     * 
      *
      * 
      *
@@ -54,7 +54,7 @@ public class ChannelsStoreMappingApiTest {
     }
     
     /**
-     * Sets the relationship between Flipdish Store and Channel Store
+     * 
      *
      * 
      *

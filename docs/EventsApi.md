@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerEvents**](EventsApi.md#getCustomerEvents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | Get customer events  For technical reasons, the number of records returned is limited to 100.
-[**getEvents**](EventsApi.md#getEvents) | **GET** /api/v1.0/{appId}/events | Get events  For technical reasons, the number of records returned is limited to 100.
-[**getEventsById**](EventsApi.md#getEventsById) | **GET** /api/v1.0/{appId}/events/{eventId} | Get event by Id  For technical reasons, the number of records returned is limited to 100.
-[**getMenuEvents**](EventsApi.md#getMenuEvents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | Get menu events  For technical reasons, the number of records returned is limited to 100.
-[**getOrderEvents**](EventsApi.md#getOrderEvents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | Get order events  For technical reasons, the number of records returned is limited to 100.
-[**getOrderEventsByCustomer**](EventsApi.md#getOrderEventsByCustomer) | **GET** /api/v1.0/{appId}/events/order | Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-[**getStoreEvents**](EventsApi.md#getStoreEvents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
-[**getUserEvents**](EventsApi.md#getUserEvents) | **GET** /api/v1.0/{appId}/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
-[**getWhiteLabelEvents**](EventsApi.md#getWhiteLabelEvents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+[**getCustomerEvents**](EventsApi.md#getCustomerEvents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
+[**getEvents**](EventsApi.md#getEvents) | **GET** /api/v1.0/{appId}/events | 
+[**getEventsById**](EventsApi.md#getEventsById) | **GET** /api/v1.0/{appId}/events/{eventId} | 
+[**getMenuEvents**](EventsApi.md#getMenuEvents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | 
+[**getOrderEvents**](EventsApi.md#getOrderEvents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | 
+[**getOrderEventsByCustomer**](EventsApi.md#getOrderEventsByCustomer) | **GET** /api/v1.0/{appId}/events/order | 
+[**getStoreEvents**](EventsApi.md#getStoreEvents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | 
+[**getUserEvents**](EventsApi.md#getUserEvents) | **GET** /api/v1.0/{appId}/events/user/{userId} | 
+[**getWhiteLabelEvents**](EventsApi.md#getWhiteLabelEvents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
 
 
 <a name="getCustomerEvents"></a>
 # **getCustomerEvents**
 > RestApiEventSearchPaginationResult getCustomerEvents(appId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get customer events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -38,7 +38,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer customerId = 56; // Integer | Customer identifier identifier
+Integer customerId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -69,7 +69,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **customerId** | **Integer**| Customer identifier identifier |
+ **customerId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 # **getEvents**
 > RestApiEventSearchPaginationResult getEvents(appId, whiteLabelId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -123,8 +123,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer whiteLabelId = 56; // Integer | White Label Id
-Integer customerId = 56; // Integer | Customer Id
+Integer whiteLabelId = 56; // Integer | 
+Integer customerId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -155,8 +155,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **whiteLabelId** | **Integer**| White Label Id | [optional]
- **customerId** | **Integer**| Customer Id | [optional]
+ **whiteLabelId** | **Integer**|  | [optional]
+ **customerId** | **Integer**|  | [optional]
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 # **getEventsById**
 > EventSearchResult getEventsById(eventId, appId)
 
-Get event by Id  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -209,7 +209,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
-UUID eventId = new UUID(); // UUID | Event identifier (Guid)
+UUID eventId = new UUID(); // UUID | 
 String appId = "appId_example"; // String | 
 try {
     EventSearchResult result = apiInstance.getEventsById(eventId, appId);
@@ -224,7 +224,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventId** | [**UUID**](.md)| Event identifier (Guid) |
+ **eventId** | [**UUID**](.md)|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 # **getMenuEvents**
 > RestApiEventSearchPaginationResult getMenuEvents(appId, menuId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId2, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get menu events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -263,7 +263,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer menuId = 56; // Integer | Menu Identifier
+Integer menuId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -294,7 +294,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **menuId** | **Integer**| Menu Identifier |
+ **menuId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 # **getOrderEvents**
 > RestApiEventSearchPaginationResult getOrderEvents(appId, orderId, limit, page, start, end, orderId2, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get order events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -348,7 +348,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer orderId = 56; // Integer | Order identifier
+Integer orderId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -379,7 +379,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **orderId** | **Integer**| Order identifier |
+ **orderId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 # **getOrderEventsByCustomer**
 > RestApiEventSearchPaginationResult getOrderEventsByCustomer(appId, customerId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -433,7 +433,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer customerId = 56; // Integer | Customer identifier
+Integer customerId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -464,7 +464,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **customerId** | **Integer**| Customer identifier |
+ **customerId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 # **getStoreEvents**
 > RestApiEventSearchPaginationResult getStoreEvents(appId, storeId, limit, page, start, end, orderId, storeId2, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get store events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -518,7 +518,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer storeId = 56; // Integer | Id of the store
+Integer storeId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -549,7 +549,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **storeId** | **Integer**| Id of the store |
+ **storeId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -584,7 +584,7 @@ Name | Type | Description  | Notes
 # **getUserEvents**
 > RestApiEventSearchPaginationResult getUserEvents(appId, userId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId2, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get user events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -603,7 +603,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer userId = 56; // Integer | User identifier
+Integer userId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -634,7 +634,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **userId** | **Integer**| User identifier |
+ **userId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 # **getWhiteLabelEvents**
 > RestApiEventSearchPaginationResult getWhiteLabelEvents(appId, whitelabelId, limit, page, start, end, orderId, storeId, storeIdList, storeGroupId, userId, menuId, campaignId, userEmail, userName, voucherCode, eventType, flipdishEventId)
 
-Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```java
@@ -688,7 +688,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 EventsApi apiInstance = new EventsApi();
 String appId = "appId_example"; // String | 
-Integer whitelabelId = 56; // Integer | White Label Identifier
+Integer whitelabelId = 56; // Integer | 
 Integer limit = 56; // Integer | The maximum elements to return
 Integer page = 56; // Integer | The index of the page to return, starting by 1
 OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date
@@ -719,7 +719,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **whitelabelId** | **Integer**| White Label Identifier |
+ **whitelabelId** | **Integer**|  |
  **limit** | **Integer**| The maximum elements to return | [optional]
  **page** | **Integer**| The index of the page to return, starting by 1 | [optional]
  **start** | **OffsetDateTime**| Start date | [optional]

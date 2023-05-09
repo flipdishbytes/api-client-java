@@ -40,7 +40,7 @@ public class VouchersApiTest {
 
     
     /**
-     * [PRIVATE API] Create voucher
+     * 
      *
      * 
      *
@@ -57,7 +57,7 @@ public class VouchersApiTest {
     }
     
     /**
-     * [PRIVATE API] Get voucher by identifier
+     * 
      *
      * 
      *
@@ -73,7 +73,7 @@ public class VouchersApiTest {
     }
     
     /**
-     * [PRIVATE API] Get voucher stats by identifier
+     * 
      *
      * 
      *
@@ -91,7 +91,7 @@ public class VouchersApiTest {
     }
     
     /**
-     * [PRIVATE API] Get vouchers summaries for App Id
+     * 
      *
      * 
      *
@@ -114,7 +114,7 @@ public class VouchersApiTest {
     }
     
     /**
-     * [PRIVATE API] Updates voucher
+     * 
      *
      * 
      *

@@ -143,7 +143,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get Payout details broken down by Store
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -157,7 +157,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get Payout details broken down by Store
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -172,7 +172,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get Payout details broken down by Store (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -295,7 +295,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s chargebacks
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -312,7 +312,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s chargebacks
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -330,7 +330,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s chargebacks (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -456,7 +456,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s orders
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -473,7 +473,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s orders
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -491,7 +491,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s orders (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -617,7 +617,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s other charges
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -634,7 +634,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s other charges
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -652,7 +652,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s other charges (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -778,7 +778,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s refunds
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -795,7 +795,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s refunds
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -813,7 +813,7 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout&#39;s refunds (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -928,8 +928,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout summaries
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)
@@ -944,8 +944,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout summaries
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)
@@ -961,8 +961,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payout summaries (asynchronously)
-     * BETA - this endpoint is under development, do not use it in your production system
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)
@@ -1081,8 +1081,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payouts
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)
@@ -1099,8 +1099,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payouts
-     * BETA - this endpoint is under development, do not use it in your production system
+     * 
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)
@@ -1118,8 +1118,8 @@ public class PayoutsApi {
     }
 
     /**
-     * Get list of payouts (asynchronously)
-     * BETA - this endpoint is under development, do not use it in your production system
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param startDate  (optional)
      * @param endDate  (optional)

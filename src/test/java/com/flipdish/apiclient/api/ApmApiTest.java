@@ -41,7 +41,7 @@ public class ApmApiTest {
 
     
     /**
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+     * 
      *
      * 
      *
@@ -57,7 +57,7 @@ public class ApmApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Basic Statistics
+     * 
      *
      * 
      *
@@ -74,7 +74,7 @@ public class ApmApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Calendar statistics
+     * 
      *
      * 
      *
@@ -91,7 +91,7 @@ public class ApmApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Calls Statistics
+     * 
      *
      * 
      *
@@ -110,7 +110,7 @@ public class ApmApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
+     * 
      *
      * 
      *
@@ -129,7 +129,7 @@ public class ApmApiTest {
     }
     
     /**
-     * [PRIVATE API] Get paginated APM call list
+     * 
      *
      * 
      *

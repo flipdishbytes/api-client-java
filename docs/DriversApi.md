@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | Add driver token
-[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | Delete driver profile image
-[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | [PRIVATE] Login with phone number and pin
-[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | [PRIVATE] Request an SMS to be sent to the driver with their login code
-[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | Get driver profile
-[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | Get stores for driver
-[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | Delete driver token
+[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
+[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | 
+[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
+[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | 
+[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
 [**setDriverPresenceForStore**](DriversApi.md#setDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | Set driver profile image and returns it&#39;s url
-[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | Change delivery tracking status and return the updated status.
-[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | Update driver profile
+[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
+[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
 
 
 <a name="addDriverNotificationToken"></a>
 # **addDriverNotificationToken**
 > addDriverNotificationToken(updateDriverToken)
 
-Add driver token
+
 
 ### Example
 ```java
@@ -71,7 +71,7 @@ null (empty response body)
 # **deleteDriverProfileImage**
 > deleteDriverProfileImage()
 
-Delete driver profile image
+
 
 ### Example
 ```java
@@ -117,7 +117,7 @@ null (empty response body)
 # **driverLogin**
 > driverLogin(driverLoginModel)
 
-[PRIVATE] Login with phone number and pin
+
 
 ### Example
 ```java
@@ -135,7 +135,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
-DriverLoginModel driverLoginModel = new DriverLoginModel(); // DriverLoginModel | Driver request login code model
+DriverLoginModel driverLoginModel = new DriverLoginModel(); // DriverLoginModel | 
 try {
     apiInstance.driverLogin(driverLoginModel);
 } catch (ApiException e) {
@@ -148,7 +148,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driverLoginModel** | [**DriverLoginModel**](DriverLoginModel.md)| Driver request login code model |
+ **driverLoginModel** | [**DriverLoginModel**](DriverLoginModel.md)|  |
 
 ### Return type
 
@@ -167,7 +167,7 @@ null (empty response body)
 # **driverRequestLoginCodeSms**
 > driverRequestLoginCodeSms(driverRequestLoginPinModel)
 
-[PRIVATE] Request an SMS to be sent to the driver with their login code
+
 
 ### Example
 ```java
@@ -185,7 +185,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
-DriverRequestLoginPinModel driverRequestLoginPinModel = new DriverRequestLoginPinModel(); // DriverRequestLoginPinModel | Driver request login code model
+DriverRequestLoginPinModel driverRequestLoginPinModel = new DriverRequestLoginPinModel(); // DriverRequestLoginPinModel | 
 try {
     apiInstance.driverRequestLoginCodeSms(driverRequestLoginPinModel);
 } catch (ApiException e) {
@@ -198,7 +198,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driverRequestLoginPinModel** | [**DriverRequestLoginPinModel**](DriverRequestLoginPinModel.md)| Driver request login code model |
+ **driverRequestLoginPinModel** | [**DriverRequestLoginPinModel**](DriverRequestLoginPinModel.md)|  |
 
 ### Return type
 
@@ -217,7 +217,7 @@ null (empty response body)
 # **getDriverProfile**
 > RestApiResultDriver getDriverProfile()
 
-Get driver profile
+
 
 ### Example
 ```java
@@ -264,7 +264,7 @@ This endpoint does not need any parameter.
 # **getStoresForDriver**
 > RestApiArrayResultDriverStore getStoresForDriver()
 
-Get stores for driver
+
 
 ### Example
 ```java
@@ -311,7 +311,7 @@ This endpoint does not need any parameter.
 # **removeDriverNotificationToken**
 > removeDriverNotificationToken(removeDriverToken)
 
-Delete driver token
+
 
 ### Example
 ```java
@@ -413,7 +413,7 @@ null (empty response body)
 # **setDriverProfileImage**
 > RestApiStringResult setDriverProfileImage()
 
-Set driver profile image and returns it&#39;s url
+
 
 ### Example
 ```java
@@ -460,9 +460,7 @@ This endpoint does not need any parameter.
 # **updateDeliveryTrackingStatus**
 > RestApiStringResult updateDeliveryTrackingStatus(orderId, deliveryTrackingStatus)
 
-Change delivery tracking status and return the updated status.
 
-...
 
 ### Example
 ```java
@@ -480,7 +478,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
-Integer orderId = 56; // Integer | Order identifier
+Integer orderId = 56; // Integer | 
 String deliveryTrackingStatus = "deliveryTrackingStatus_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.updateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
@@ -495,7 +493,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Integer**| Order identifier |
+ **orderId** | **Integer**|  |
  **deliveryTrackingStatus** | **String**|  | [enum: Unassigned, Unaccepted, Accepted, Carrying, OnTheWay, ArrivedAtLocation, Delivered, CannotDeliver]
 
 ### Return type
@@ -515,7 +513,7 @@ Name | Type | Description  | Notes
 # **updateDriverProfile**
 > updateDriverProfile(updateDriverProfile)
 
-Update driver profile
+
 
 ### Example
 ```java
@@ -533,7 +531,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
-UpdateDriverProfileModel updateDriverProfile = new UpdateDriverProfileModel(); // UpdateDriverProfileModel | Update the driver profile (i.e Name)
+UpdateDriverProfileModel updateDriverProfile = new UpdateDriverProfileModel(); // UpdateDriverProfileModel | 
 try {
     apiInstance.updateDriverProfile(updateDriverProfile);
 } catch (ApiException e) {
@@ -546,7 +544,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateDriverProfile** | [**UpdateDriverProfileModel**](UpdateDriverProfileModel.md)| Update the driver profile (i.e Name) |
+ **updateDriverProfile** | [**UpdateDriverProfileModel**](UpdateDriverProfileModel.md)|  |
 
 ### Return type
 

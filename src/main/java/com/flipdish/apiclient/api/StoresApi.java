@@ -89,7 +89,7 @@ public class StoresApi {
 
     /**
      * Build call for archiveStore
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -152,9 +152,9 @@ public class StoresApi {
     }
 
     /**
-     * Archive store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void archiveStore(Integer storeId) throws ApiException {
@@ -162,9 +162,9 @@ public class StoresApi {
     }
 
     /**
-     * Archive store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -174,9 +174,9 @@ public class StoresApi {
     }
 
     /**
-     * Archive store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -208,8 +208,8 @@ public class StoresApi {
     }
     /**
      * Build call for assignMenu
-     * @param storeId Store identifier (required)
-     * @param menuId Id of Menu to assign to store (required)
+     * @param storeId  (required)
+     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -278,10 +278,10 @@ public class StoresApi {
     }
 
     /**
-     * Assign Menu to Store
      * 
-     * @param storeId Store identifier (required)
-     * @param menuId Id of Menu to assign to store (required)
+     * 
+     * @param storeId  (required)
+     * @param menuId  (required)
      * @return RestApiArrayResultRestApiDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -291,10 +291,10 @@ public class StoresApi {
     }
 
     /**
-     * Assign Menu to Store
      * 
-     * @param storeId Store identifier (required)
-     * @param menuId Id of Menu to assign to store (required)
+     * 
+     * @param storeId  (required)
+     * @param menuId  (required)
      * @return ApiResponse&lt;RestApiArrayResultRestApiDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -305,10 +305,10 @@ public class StoresApi {
     }
 
     /**
-     * Assign Menu to Store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param menuId Id of Menu to assign to store (required)
+     * @param storeId  (required)
+     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -341,8 +341,8 @@ public class StoresApi {
     }
     /**
      * Build call for cloneStore
-     * @param storeId Store identifier (required)
-     * @param settings Settings for cloning the store (required)
+     * @param storeId  (required)
+     * @param settings  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -410,10 +410,10 @@ public class StoresApi {
     }
 
     /**
-     * Clone store with store clone settings
      * 
-     * @param storeId Store identifier (required)
-     * @param settings Settings for cloning the store (required)
+     * 
+     * @param storeId  (required)
+     * @param settings  (required)
      * @return RestApiResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -423,10 +423,10 @@ public class StoresApi {
     }
 
     /**
-     * Clone store with store clone settings
      * 
-     * @param storeId Store identifier (required)
-     * @param settings Settings for cloning the store (required)
+     * 
+     * @param storeId  (required)
+     * @param settings  (required)
      * @return ApiResponse&lt;RestApiResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -437,10 +437,10 @@ public class StoresApi {
     }
 
     /**
-     * Clone store with store clone settings (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param settings Settings for cloning the store (required)
+     * @param storeId  (required)
+     * @param settings  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -473,8 +473,8 @@ public class StoresApi {
     }
     /**
      * Build call for configureStoreServiceCharge
-     * @param storeId Store identifier (required)
-     * @param serviceCharge Service charge (required)
+     * @param storeId  (required)
+     * @param serviceCharge  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -542,10 +542,10 @@ public class StoresApi {
     }
 
     /**
-     * Configure Store Service Charge; Idempotent Operation
      * 
-     * @param storeId Store identifier (required)
-     * @param serviceCharge Service charge (required)
+     * 
+     * @param storeId  (required)
+     * @param serviceCharge  (required)
      * @return RestApiResultServiceCharge
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -555,10 +555,10 @@ public class StoresApi {
     }
 
     /**
-     * Configure Store Service Charge; Idempotent Operation
      * 
-     * @param storeId Store identifier (required)
-     * @param serviceCharge Service charge (required)
+     * 
+     * @param storeId  (required)
+     * @param serviceCharge  (required)
      * @return ApiResponse&lt;RestApiResultServiceCharge&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -569,10 +569,10 @@ public class StoresApi {
     }
 
     /**
-     * Configure Store Service Charge; Idempotent Operation (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param serviceCharge Service charge (required)
+     * @param storeId  (required)
+     * @param serviceCharge  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -605,8 +605,8 @@ public class StoresApi {
     }
     /**
      * Build call for createBusinessHoursOverrideByStoreId
-     * @param storeId Store identifier (required)
-     * @param businessHoursOverride Business Hours Override (required)
+     * @param storeId  (required)
+     * @param businessHoursOverride  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -674,10 +674,10 @@ public class StoresApi {
     }
 
     /**
-     * Create Business Hours Override for a store
      * 
-     * @param storeId Store identifier (required)
-     * @param businessHoursOverride Business Hours Override (required)
+     * 
+     * @param storeId  (required)
+     * @param businessHoursOverride  (required)
      * @return RestApiResultBusinessHoursOverride
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -687,10 +687,10 @@ public class StoresApi {
     }
 
     /**
-     * Create Business Hours Override for a store
      * 
-     * @param storeId Store identifier (required)
-     * @param businessHoursOverride Business Hours Override (required)
+     * 
+     * @param storeId  (required)
+     * @param businessHoursOverride  (required)
      * @return ApiResponse&lt;RestApiResultBusinessHoursOverride&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -701,10 +701,10 @@ public class StoresApi {
     }
 
     /**
-     * Create Business Hours Override for a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param businessHoursOverride Business Hours Override (required)
+     * @param storeId  (required)
+     * @param businessHoursOverride  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -737,8 +737,8 @@ public class StoresApi {
     }
     /**
      * Build call for createStore
-     * @param storeGroupId Store Group identifier (required)
-     * @param store Store (required)
+     * @param storeGroupId  (required)
+     * @param store  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -807,10 +807,10 @@ public class StoresApi {
     }
 
     /**
-     * Create store with Store Group identifier
      * 
-     * @param storeGroupId Store Group identifier (required)
-     * @param store Store (required)
+     * 
+     * @param storeGroupId  (required)
+     * @param store  (required)
      * @return RestApiResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -820,10 +820,10 @@ public class StoresApi {
     }
 
     /**
-     * Create store with Store Group identifier
      * 
-     * @param storeGroupId Store Group identifier (required)
-     * @param store Store (required)
+     * 
+     * @param storeGroupId  (required)
+     * @param store  (required)
      * @return ApiResponse&lt;RestApiResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -834,10 +834,10 @@ public class StoresApi {
     }
 
     /**
-     * Create store with Store Group identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeGroupId Store Group identifier (required)
-     * @param store Store (required)
+     * @param storeGroupId  (required)
+     * @param store  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -940,7 +940,7 @@ public class StoresApi {
     }
 
     /**
-     * Delete Business Hours Override for a store
+     * 
      * 
      * @param storeId  (required)
      * @param businessHoursOverrideId  (required)
@@ -953,7 +953,7 @@ public class StoresApi {
     }
 
     /**
-     * Delete Business Hours Override for a store
+     * 
      * 
      * @param storeId  (required)
      * @param businessHoursOverrideId  (required)
@@ -967,7 +967,7 @@ public class StoresApi {
     }
 
     /**
-     * Delete Business Hours Override for a store (asynchronously)
+     *  (asynchronously)
      * 
      * @param storeId  (required)
      * @param businessHoursOverrideId  (required)
@@ -1003,7 +1003,7 @@ public class StoresApi {
     }
     /**
      * Build call for getBankAccountForStore
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1066,9 +1066,9 @@ public class StoresApi {
     }
 
     /**
-     * Get Stores Bank Account Id
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiResultAssignedBankAccount
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1078,9 +1078,9 @@ public class StoresApi {
     }
 
     /**
-     * Get Stores Bank Account Id
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultAssignedBankAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1091,9 +1091,9 @@ public class StoresApi {
     }
 
     /**
-     * Get Stores Bank Account Id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1126,8 +1126,8 @@ public class StoresApi {
     }
     /**
      * Build call for getBusinessHours
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1196,10 +1196,10 @@ public class StoresApi {
     }
 
     /**
-     * Get Business hours
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return RestApiArrayResultBusinessHoursPeriod
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1209,10 +1209,10 @@ public class StoresApi {
     }
 
     /**
-     * Get Business hours
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return ApiResponse&lt;RestApiArrayResultBusinessHoursPeriod&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1223,10 +1223,10 @@ public class StoresApi {
     }
 
     /**
-     * Get Business hours (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1259,10 +1259,10 @@ public class StoresApi {
     }
     /**
      * Build call for getBusinessHoursOverrideByStoreId
-     * @param storeId Store identifier (required)
-     * @param after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param storeId  (required)
+     * @param after  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1331,12 +1331,12 @@ public class StoresApi {
     }
 
     /**
-     * Get business hours overrides by store identifier
      * 
-     * @param storeId Store identifier (required)
-     * @param after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param storeId  (required)
+     * @param after  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultBusinessHoursOverride
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1346,12 +1346,12 @@ public class StoresApi {
     }
 
     /**
-     * Get business hours overrides by store identifier
      * 
-     * @param storeId Store identifier (required)
-     * @param after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param storeId  (required)
+     * @param after  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultBusinessHoursOverride&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1362,12 +1362,12 @@ public class StoresApi {
     }
 
     /**
-     * Get business hours overrides by store identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param storeId  (required)
+     * @param after  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1400,8 +1400,8 @@ public class StoresApi {
     }
     /**
      * Build call for getEndOfDayReport
-     * @param storeId Store identifier (required)
-     * @param date Store identifier (optional)
+     * @param storeId  (required)
+     * @param date  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1466,10 +1466,10 @@ public class StoresApi {
     }
 
     /**
-     * Get store end of day report
      * 
-     * @param storeId Store identifier (required)
-     * @param date Store identifier (optional)
+     * 
+     * @param storeId  (required)
+     * @param date  (optional)
      * @return RestApiResultStoreEndOfDayReport
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1479,10 +1479,10 @@ public class StoresApi {
     }
 
     /**
-     * Get store end of day report
      * 
-     * @param storeId Store identifier (required)
-     * @param date Store identifier (optional)
+     * 
+     * @param storeId  (required)
+     * @param date  (optional)
      * @return ApiResponse&lt;RestApiResultStoreEndOfDayReport&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1493,10 +1493,10 @@ public class StoresApi {
     }
 
     /**
-     * Get store end of day report (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param date Store identifier (optional)
+     * @param storeId  (required)
+     * @param date  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1529,8 +1529,8 @@ public class StoresApi {
     }
     /**
      * Build call for getPreOrderConfig
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1599,10 +1599,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return RestApiResultPreOrderConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1612,10 +1612,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return ApiResponse&lt;RestApiResultPreOrderConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1626,10 +1626,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the pre order config for a store, by type (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1662,8 +1662,8 @@ public class StoresApi {
     }
     /**
      * Build call for getPreOrderPreview
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param preOrderConfigLeadTimeMinutes Lead Time in Minutes (optional)
      * @param preOrderConfigIntervalMinutes Interval in minutes (optional)
      * @param preOrderConfigMaxOrderAheadDays Max Days to order ahead (optional)
@@ -1762,10 +1762,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the Preview times of the pre-order configuration
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param preOrderConfigLeadTimeMinutes Lead Time in Minutes (optional)
      * @param preOrderConfigIntervalMinutes Interval in minutes (optional)
      * @param preOrderConfigMaxOrderAheadDays Max Days to order ahead (optional)
@@ -1785,10 +1785,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the Preview times of the pre-order configuration
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param preOrderConfigLeadTimeMinutes Lead Time in Minutes (optional)
      * @param preOrderConfigIntervalMinutes Interval in minutes (optional)
      * @param preOrderConfigMaxOrderAheadDays Max Days to order ahead (optional)
@@ -1809,10 +1809,10 @@ public class StoresApi {
     }
 
     /**
-     * Get the Preview times of the pre-order configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param preOrderConfigLeadTimeMinutes Lead Time in Minutes (optional)
      * @param preOrderConfigIntervalMinutes Interval in minutes (optional)
      * @param preOrderConfigMaxOrderAheadDays Max Days to order ahead (optional)
@@ -1855,8 +1855,8 @@ public class StoresApi {
     }
     /**
      * Build call for getProcessingFeeConfigsByStoreId
-     * @param storeId Store identifier (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param storeId  (required)
+     * @param appNameId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1921,10 +1921,10 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier
      * 
-     * @param storeId Store identifier (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * 
+     * @param storeId  (required)
+     * @param appNameId  (optional)
      * @return RestApiArrayResultProcessingFeeConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1934,10 +1934,10 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier
      * 
-     * @param storeId Store identifier (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * 
+     * @param storeId  (required)
+     * @param appNameId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultProcessingFeeConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1948,10 +1948,10 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param storeId  (required)
+     * @param appNameId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1984,9 +1984,9 @@ public class StoresApi {
     }
     /**
      * Build call for getProcessingFeeConfigsByStoreIdAndPaymentAccountType
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param paymentAccountType  (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param appNameId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2057,11 +2057,11 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @param paymentAccountType  (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param appNameId  (optional)
      * @return RestApiResultProcessingFeeConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2071,11 +2071,11 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @param paymentAccountType  (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param appNameId  (optional)
      * @return ApiResponse&lt;RestApiResultProcessingFeeConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2086,11 +2086,11 @@ public class StoresApi {
     }
 
     /**
-     * Get processing fee configs by store identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param paymentAccountType  (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param appNameId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2123,7 +2123,7 @@ public class StoresApi {
     }
     /**
      * Build call for getStoreById
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2186,9 +2186,9 @@ public class StoresApi {
     }
 
     /**
-     * Get store by identifier
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2198,9 +2198,9 @@ public class StoresApi {
     }
 
     /**
-     * Get store by identifier
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2211,9 +2211,9 @@ public class StoresApi {
     }
 
     /**
-     * Get store by identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2246,7 +2246,7 @@ public class StoresApi {
     }
     /**
      * Build call for getStoreFeeConfig
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2309,9 +2309,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store feeConfig
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return StoreFeeConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2321,9 +2321,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store feeConfig
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;StoreFeeConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2334,9 +2334,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store feeConfig (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2369,7 +2369,7 @@ public class StoresApi {
     }
     /**
      * Build call for getStoreHeadersByAppId
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param storeNameQuery  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -2441,9 +2441,9 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @param storeNameQuery  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -2456,9 +2456,9 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id
      * 
-     * @param appId App Name Id (required)
+     * 
+     * @param appId  (required)
      * @param storeNameQuery  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -2472,9 +2472,9 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
+     * @param appId  (required)
      * @param storeNameQuery  (optional)
      * @param page  (optional)
      * @param limit  (optional)
@@ -2510,8 +2510,8 @@ public class StoresApi {
     }
     /**
      * Build call for getStoreNetSales
-     * @param appId App Name Id (required)
-     * @param storeId Store Ids (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2581,10 +2581,10 @@ public class StoresApi {
     }
 
     /**
-     * Get stores statistics by app name id and storeIds
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Ids (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return RestApiArrayResultStoreStatistics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2594,10 +2594,10 @@ public class StoresApi {
     }
 
     /**
-     * Get stores statistics by app name id and storeIds
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Ids (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiArrayResultStoreStatistics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2608,10 +2608,10 @@ public class StoresApi {
     }
 
     /**
-     * Get stores statistics by app name id and storeIds (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Ids (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2644,7 +2644,7 @@ public class StoresApi {
     }
     /**
      * Build call for getStoreServiceCharge
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2707,9 +2707,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store Service Charge
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ServiceCharge
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2719,9 +2719,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store Service Charge
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;ServiceCharge&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2732,9 +2732,9 @@ public class StoresApi {
     }
 
     /**
-     * Retrieve Store Service Charge (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2767,10 +2767,10 @@ public class StoresApi {
     }
     /**
      * Build call for getStores
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeGroupId Store Group Id (optional)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeGroupId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2835,12 +2835,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores, excluding archived ones
      * 
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeGroupId Store Group Id (optional)
+     * 
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeGroupId  (optional)
      * @return RestApiPaginationResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2850,12 +2850,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores, excluding archived ones
      * 
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeGroupId Store Group Id (optional)
+     * 
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeGroupId  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2866,12 +2866,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores, excluding archived ones (asynchronously)
+     *  (asynchronously)
      * 
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param storeGroupId Store Group Id (optional)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param storeGroupId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2904,10 +2904,10 @@ public class StoresApi {
     }
     /**
      * Build call for getStoresByAppId
-     * @param appId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2976,12 +2976,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2991,12 +2991,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3007,12 +3007,12 @@ public class StoresApi {
     }
 
     /**
-     * Get all stores by app name id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Search query (optional)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3045,10 +3045,10 @@ public class StoresApi {
     }
     /**
      * Build call for getStoresByStoreIdWithValidations
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param appId  (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3122,12 +3122,12 @@ public class StoresApi {
     }
 
     /**
-     * Get store validation by storeIds
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @param appId  (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultStoreValidationConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3137,12 +3137,12 @@ public class StoresApi {
     }
 
     /**
-     * Get store validation by storeIds
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @param appId  (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStoreValidationConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3153,12 +3153,12 @@ public class StoresApi {
     }
 
     /**
-     * Get store validation by storeIds (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param appId  (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3191,7 +3191,7 @@ public class StoresApi {
     }
     /**
      * Build call for publishStore
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3254,9 +3254,9 @@ public class StoresApi {
     }
 
     /**
-     * Publish store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void publishStore(Integer storeId) throws ApiException {
@@ -3264,9 +3264,9 @@ public class StoresApi {
     }
 
     /**
-     * Publish store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3276,9 +3276,9 @@ public class StoresApi {
     }
 
     /**
-     * Publish store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3310,9 +3310,9 @@ public class StoresApi {
     }
     /**
      * Build call for setBusinessHours
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
-     * @param businessHoursPeriod Business Hours Period (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param businessHoursPeriod  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3386,11 +3386,11 @@ public class StoresApi {
     }
 
     /**
-     * Set Business hours
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
-     * @param businessHoursPeriod Business Hours Period (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param businessHoursPeriod  (required)
      * @return RestApiResultBusinessHoursPeriod
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3400,11 +3400,11 @@ public class StoresApi {
     }
 
     /**
-     * Set Business hours
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
-     * @param businessHoursPeriod Business Hours Period (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param businessHoursPeriod  (required)
      * @return ApiResponse&lt;RestApiResultBusinessHoursPeriod&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3415,11 +3415,11 @@ public class StoresApi {
     }
 
     /**
-     * Set Business hours (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery type (required)
-     * @param businessHoursPeriod Business Hours Period (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param businessHoursPeriod  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3452,9 +3452,9 @@ public class StoresApi {
     }
     /**
      * Build call for setPreOrdeEnabled
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param enabled Update pre order config values (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param enabled  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3530,11 +3530,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param enabled Update pre order config values (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param enabled  (required)
      * @return RestApiArrayResultRestApiDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3544,11 +3544,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param enabled Update pre order config values (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param enabled  (required)
      * @return ApiResponse&lt;RestApiArrayResultRestApiDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3559,11 +3559,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param enabled Update pre order config values (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param enabled  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3596,7 +3596,7 @@ public class StoresApi {
     }
     /**
      * Build call for unpublishStore
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3659,9 +3659,9 @@ public class StoresApi {
     }
 
     /**
-     * Unpublish store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void unpublishStore(Integer storeId) throws ApiException {
@@ -3669,9 +3669,9 @@ public class StoresApi {
     }
 
     /**
-     * Unpublish store
      * 
-     * @param storeId Store identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3681,9 +3681,9 @@ public class StoresApi {
     }
 
     /**
-     * Unpublish store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3715,9 +3715,9 @@ public class StoresApi {
     }
     /**
      * Build call for updatePreOrderConfig
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param preOrderConfig Update pre order config values (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param preOrderConfig  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3791,11 +3791,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param preOrderConfig Update pre order config values (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param preOrderConfig  (required)
      * @return RestApiArrayResultRestApiDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3805,11 +3805,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param preOrderConfig Update pre order config values (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param preOrderConfig  (required)
      * @return ApiResponse&lt;RestApiArrayResultRestApiDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3820,11 +3820,11 @@ public class StoresApi {
     }
 
     /**
-     * UPDATE pre order config for a store, by type (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param preOrderConfig Update pre order config values (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param preOrderConfig  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3857,8 +3857,8 @@ public class StoresApi {
     }
     /**
      * Build call for updateStore
-     * @param storeId Store Group identifier (required)
-     * @param store Store (required)
+     * @param storeId  (required)
+     * @param store  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3926,10 +3926,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store by identifier
      * 
-     * @param storeId Store Group identifier (required)
-     * @param store Store (required)
+     * 
+     * @param storeId  (required)
+     * @param store  (required)
      * @return RestApiResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3939,10 +3939,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store by identifier
      * 
-     * @param storeId Store Group identifier (required)
-     * @param store Store (required)
+     * 
+     * @param storeId  (required)
+     * @param store  (required)
      * @return ApiResponse&lt;RestApiResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3953,10 +3953,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store by identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Group identifier (required)
-     * @param store Store (required)
+     * @param storeId  (required)
+     * @param store  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3989,8 +3989,8 @@ public class StoresApi {
     }
     /**
      * Build call for updateStoreAddress
-     * @param storeId Store identifier (required)
-     * @param storeAddress Store address (required)
+     * @param storeId  (required)
+     * @param storeAddress  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -4058,10 +4058,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address
      * 
-     * @param storeId Store identifier (required)
-     * @param storeAddress Store address (required)
+     * 
+     * @param storeId  (required)
+     * @param storeAddress  (required)
      * @return RestApiResultStoreAddress
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4071,10 +4071,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address
      * 
-     * @param storeId Store identifier (required)
-     * @param storeAddress Store address (required)
+     * 
+     * @param storeId  (required)
+     * @param storeAddress  (required)
      * @return ApiResponse&lt;RestApiResultStoreAddress&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4085,10 +4085,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param storeAddress Store address (required)
+     * @param storeId  (required)
+     * @param storeAddress  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4121,9 +4121,9 @@ public class StoresApi {
     }
     /**
      * Build call for updateStoreAddressCoordinates
-     * @param storeId Store identifier (required)
-     * @param coordinates Store address coordinates (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param storeId  (required)
+     * @param coordinates  (required)
+     * @param appNameId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -4193,11 +4193,11 @@ public class StoresApi {
     }
 
     /**
-     * Update store address coordinates
      * 
-     * @param storeId Store identifier (required)
-     * @param coordinates Store address coordinates (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * 
+     * @param storeId  (required)
+     * @param coordinates  (required)
+     * @param appNameId  (optional)
      * @return RestApiResultCoordinates
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4207,11 +4207,11 @@ public class StoresApi {
     }
 
     /**
-     * Update store address coordinates
      * 
-     * @param storeId Store identifier (required)
-     * @param coordinates Store address coordinates (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * 
+     * @param storeId  (required)
+     * @param coordinates  (required)
+     * @param appNameId  (optional)
      * @return ApiResponse&lt;RestApiResultCoordinates&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4222,11 +4222,11 @@ public class StoresApi {
     }
 
     /**
-     * Update store address coordinates (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param coordinates Store address coordinates (required)
-     * @param appNameId App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param storeId  (required)
+     * @param coordinates  (required)
+     * @param appNameId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4259,8 +4259,8 @@ public class StoresApi {
     }
     /**
      * Build call for updateStoreAddressForm
-     * @param storeId Store identifier (required)
-     * @param address Store address (required)
+     * @param storeId  (required)
+     * @param address  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -4328,10 +4328,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address
      * 
-     * @param storeId Store identifier (required)
-     * @param address Store address (required)
+     * 
+     * @param storeId  (required)
+     * @param address  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4341,10 +4341,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address
      * 
-     * @param storeId Store identifier (required)
-     * @param address Store address (required)
+     * 
+     * @param storeId  (required)
+     * @param address  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -4355,10 +4355,10 @@ public class StoresApi {
     }
 
     /**
-     * Update store address (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param address Store address (required)
+     * @param storeId  (required)
+     * @param address  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

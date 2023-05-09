@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
-[**post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
+[**get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
+[**post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | 
 
 
 <a name="get"></a>
 # **get**
 > RestApiResultOrderBatchingConfiguration get(storeId)
 
-Returns order batching configuration for a specific store
+
 
 ### Example
 ```java
@@ -30,7 +30,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchingConfigurationApi apiInstance = new OrderBatchingConfigurationApi();
-Integer storeId = 56; // Integer | Store Id
+Integer storeId = 56; // Integer | 
 try {
     RestApiResultOrderBatchingConfiguration result = apiInstance.get(storeId);
     System.out.println(result);
@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 # **post**
 > post(storeId, setOrderBatchingConfiguration)
 
-Sets order batching configuration for a specific store
+
 
 ### Example
 ```java
@@ -81,8 +81,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchingConfigurationApi apiInstance = new OrderBatchingConfigurationApi();
-Integer storeId = 56; // Integer | Store Id
-SetOrderBatchingConfiguration setOrderBatchingConfiguration = new SetOrderBatchingConfiguration(); // SetOrderBatchingConfiguration | SetOrderBatchingConfiguration
+Integer storeId = 56; // Integer | 
+SetOrderBatchingConfiguration setOrderBatchingConfiguration = new SetOrderBatchingConfiguration(); // SetOrderBatchingConfiguration | 
 try {
     apiInstance.post(storeId, setOrderBatchingConfiguration);
 } catch (ApiException e) {
@@ -95,8 +95,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id |
- **setOrderBatchingConfiguration** | [**SetOrderBatchingConfiguration**](SetOrderBatchingConfiguration.md)| SetOrderBatchingConfiguration |
+ **storeId** | **Integer**|  |
+ **setOrderBatchingConfiguration** | [**SetOrderBatchingConfiguration**](SetOrderBatchingConfiguration.md)|  |
 
 ### Return type
 

@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
-[**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
-[**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
-[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
-[**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+[**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
+[**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
+[**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
+[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
+[**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
 [**setMenuMessagePerDeliveryType**](StoreGroupsApi.md#setMenuMessagePerDeliveryType) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
-[**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
+[**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
 
 <a name="createStoreGroup"></a>
 # **createStoreGroup**
 > RestApiResultStoreGroup createStoreGroup(appNameId, storeGroup)
 
-Creates a Store Group  It will be attached to an existing App
+
 
 ### Example
 ```java
@@ -35,8 +35,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-String appNameId = "appNameId_example"; // String | App Name Id
-StoreGroupBase storeGroup = new StoreGroupBase(); // StoreGroupBase | Store group definition
+String appNameId = "appNameId_example"; // String | 
+StoreGroupBase storeGroup = new StoreGroupBase(); // StoreGroupBase | 
 try {
     RestApiResultStoreGroup result = apiInstance.createStoreGroup(appNameId, storeGroup);
     System.out.println(result);
@@ -50,8 +50,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appNameId** | **String**| App Name Id |
- **storeGroup** | [**StoreGroupBase**](StoreGroupBase.md)| Store group definition |
+ **appNameId** | **String**|  |
+ **storeGroup** | [**StoreGroupBase**](StoreGroupBase.md)|  |
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **getStoreGroup**
 > RestApiResultStoreGroup getStoreGroup(storeGroupId)
 
-Returns a Store Groups
+
 
 ### Example
 ```java
@@ -88,7 +88,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-Integer storeGroupId = 56; // Integer | Store Group Id
+Integer storeGroupId = 56; // Integer | 
 try {
     RestApiResultStoreGroup result = apiInstance.getStoreGroup(storeGroupId);
     System.out.println(result);
@@ -102,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeGroupId** | **Integer**| Store Group Id |
+ **storeGroupId** | **Integer**|  |
 
 ### Return type
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 # **getStoreGroups**
 > RestApiPaginationResultStoreGroup getStoreGroups(appNameId, searchQuery, page, limit)
 
-Returns a paginated list of Store Groups
+
 
 ### Example
 ```java
@@ -139,10 +139,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-String appNameId = "appNameId_example"; // String | App Name Id
-String searchQuery = "searchQuery_example"; // String | Search query
-Integer page = 56; // Integer | Requested page index
-Integer limit = 56; // Integer | Requested page limit
+String appNameId = "appNameId_example"; // String | 
+String searchQuery = "searchQuery_example"; // String | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 try {
     RestApiPaginationResultStoreGroup result = apiInstance.getStoreGroups(appNameId, searchQuery, page, limit);
     System.out.println(result);
@@ -156,10 +156,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appNameId** | **String**| App Name Id |
- **searchQuery** | **String**| Search query | [optional]
- **page** | **Integer**| Requested page index | [optional]
- **limit** | **Integer**| Requested page limit | [optional]
+ **appNameId** | **String**|  |
+ **searchQuery** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
 
 ### Return type
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 # **getStoreGroupsExtended**
 > RestApiPaginationResultStoreGroupExtended getStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius)
 
-[PRIVATE API] Returns a paginated list of Extended Store Groups
+
 
 ### Example
 ```java
@@ -196,10 +196,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-String appNameId = "appNameId_example"; // String | App Name Id
-String searchQuery = "searchQuery_example"; // String | Search query
-Integer page = 56; // Integer | Requested page index
-Integer limit = 56; // Integer | Requested page limit
+String appNameId = "appNameId_example"; // String | 
+String searchQuery = "searchQuery_example"; // String | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 Integer groupingRadius = 56; // Integer | 
 try {
     RestApiPaginationResultStoreGroupExtended result = apiInstance.getStoreGroupsExtended(appNameId, searchQuery, page, limit, groupingRadius);
@@ -214,10 +214,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appNameId** | **String**| App Name Id |
- **searchQuery** | **String**| Search query | [optional]
- **page** | **Integer**| Requested page index | [optional]
- **limit** | **Integer**| Requested page limit | [optional]
+ **appNameId** | **String**|  |
+ **searchQuery** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
  **groupingRadius** | **Integer**|  | [optional]
 
 ### Return type
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 # **removeStoreGroup**
 > removeStoreGroup(storeGroupId)
 
-Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+
 
 ### Example
 ```java
@@ -255,7 +255,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-Integer storeGroupId = 56; // Integer | Store Group Id
+Integer storeGroupId = 56; // Integer | 
 try {
     apiInstance.removeStoreGroup(storeGroupId);
 } catch (ApiException e) {
@@ -268,7 +268,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeGroupId** | **Integer**| Store Group Id |
+ **storeGroupId** | **Integer**|  |
 
 ### Return type
 
@@ -341,7 +341,7 @@ null (empty response body)
 # **updateStoreGroup**
 > RestApiResultStoreGroupBase updateStoreGroup(storeGroupId, storeGroup)
 
-Updates Store Group
+
 
 ### Example
 ```java
@@ -359,8 +359,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
-Integer storeGroupId = 56; // Integer | Store Group Id
-StoreGroupBase storeGroup = new StoreGroupBase(); // StoreGroupBase | Store Group Delta
+Integer storeGroupId = 56; // Integer | 
+StoreGroupBase storeGroup = new StoreGroupBase(); // StoreGroupBase | 
 try {
     RestApiResultStoreGroupBase result = apiInstance.updateStoreGroup(storeGroupId, storeGroup);
     System.out.println(result);
@@ -374,8 +374,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeGroupId** | **Integer**| Store Group Id |
- **storeGroup** | [**StoreGroupBase**](StoreGroupBase.md)| Store Group Delta |
+ **storeGroupId** | **Integer**|  |
+ **storeGroup** | [**StoreGroupBase**](StoreGroupBase.md)|  |
 
 ### Return type
 

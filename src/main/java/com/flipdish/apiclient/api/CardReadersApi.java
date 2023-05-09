@@ -143,8 +143,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel currently initiated install update for bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -155,8 +155,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel currently initiated install update for bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -169,8 +169,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel currently initiated install update for bluetooth terminal (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -275,8 +275,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel terminals action
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @return RestApiResultCardReader
@@ -288,8 +288,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel terminals action
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultCardReader&gt;
@@ -302,8 +302,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Cancel terminals action (asynchronously)
-     * Can only be called by Kiosk
+     *  (asynchronously)
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -408,8 +408,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get reader
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @return RestApiResultCardReader
@@ -421,8 +421,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get reader
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultCardReader&gt;
@@ -435,8 +435,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get reader (asynchronously)
-     * Can only be called by Kiosk
+     *  (asynchronously)
+     * 
      * @param readerId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -540,8 +540,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Location ID for Stripe Terminal
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param geoPointRequest  (required)
      * @param appId  (required)
      * @return RestApiResultStripeTerminalLocation
@@ -553,8 +553,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Location ID for Stripe Terminal
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param geoPointRequest  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultStripeTerminalLocation&gt;
@@ -567,8 +567,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Location ID for Stripe Terminal (asynchronously)
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param geoPointRequest  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -673,8 +673,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get the status of the bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @return RestApiResultBluetoothTerminalStatus
@@ -686,8 +686,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get the status of the bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @return ApiResponse&lt;RestApiResultBluetoothTerminalStatus&gt;
@@ -700,8 +700,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get the status of the bluetooth terminal (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -799,8 +799,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Connection Token For a Stripe Terminal
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param appId  (required)
      * @return RestApiResultStripeTerminalConnectionToken
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -811,8 +811,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Connection Token For a Stripe Terminal
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultStripeTerminalConnectionToken&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -824,8 +824,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Get Connection Token For a Stripe Terminal (asynchronously)
-     * Can only be called by Kiosk
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -936,8 +936,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Trigger check for Bluetooth device update on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -948,8 +948,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Trigger check for Bluetooth device update on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -962,8 +962,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Trigger check for Bluetooth device update on Kiosk (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1075,8 +1075,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate stripe terminal pairing mode
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1087,8 +1087,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate stripe terminal pairing mode
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1101,8 +1101,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate stripe terminal pairing mode (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1214,8 +1214,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Kiosk Update Install for bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1226,8 +1226,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Kiosk Update Install for bluetooth terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1240,8 +1240,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Kiosk Update Install for bluetooth terminal (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param terminalType  (required)
@@ -1352,8 +1352,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Stripe terminal to Process Payment Intent
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param request  (required)
      * @param readerId  (required)
      * @param appId  (required)
@@ -1366,8 +1366,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Stripe terminal to Process Payment Intent
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param request  (required)
      * @param readerId  (required)
      * @param appId  (required)
@@ -1381,8 +1381,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Initiate Stripe terminal to Process Payment Intent (asynchronously)
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param request  (required)
      * @param readerId  (required)
      * @param appId  (required)
@@ -1619,8 +1619,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Un-register terminal by deleting it from stripe
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param request  (required)
      * @param appId  (required)
      * @return RestApiResultCardReader
@@ -1632,8 +1632,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Un-register terminal by deleting it from stripe
-     * Can only be called by Kiosk
+     * 
+     * 
      * @param request  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultCardReader&gt;
@@ -1646,8 +1646,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Un-register terminal by deleting it from stripe (asynchronously)
-     * Can only be called by Kiosk
+     *  (asynchronously)
+     * 
      * @param request  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1752,8 +1752,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Unpair the currently paired stripe terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1763,8 +1763,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Unpair the currently paired stripe terminal
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1776,8 +1776,8 @@ public class CardReadersApi {
     }
 
     /**
-     * Unpair the currently paired stripe terminal (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param callback The callback to be executed when the API call finishes

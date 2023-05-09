@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addOrderAuditLog**](AuditLogsApi.md#addOrderAuditLog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | Create an order audit log event
-[**addStoreAuditLogEvent**](AuditLogsApi.md#addStoreAuditLogEvent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | Create a store audit log event
+[**addOrderAuditLog**](AuditLogsApi.md#addOrderAuditLog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
+[**addStoreAuditLogEvent**](AuditLogsApi.md#addStoreAuditLogEvent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | 
 
 
 <a name="addOrderAuditLog"></a>
 # **addOrderAuditLog**
 > addOrderAuditLog(orderId, externalEventCreate)
 
-Create an order audit log event
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -66,9 +64,7 @@ null (empty response body)
 # **addStoreAuditLogEvent**
 > addStoreAuditLogEvent(storeId, externalEventCreate)
 
-Create a store audit log event
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

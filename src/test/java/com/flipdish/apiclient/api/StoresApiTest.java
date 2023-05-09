@@ -66,7 +66,7 @@ public class StoresApiTest {
 
     
     /**
-     * Archive store
+     * 
      *
      * 
      *
@@ -82,7 +82,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Assign Menu to Store
+     * 
      *
      * 
      *
@@ -99,7 +99,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Clone store with store clone settings
+     * 
      *
      * 
      *
@@ -116,7 +116,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Configure Store Service Charge; Idempotent Operation
+     * 
      *
      * 
      *
@@ -133,7 +133,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Create Business Hours Override for a store
+     * 
      *
      * 
      *
@@ -150,7 +150,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Create store with Store Group identifier
+     * 
      *
      * 
      *
@@ -167,7 +167,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Delete Business Hours Override for a store
+     * 
      *
      * 
      *
@@ -184,7 +184,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get Stores Bank Account Id
+     * 
      *
      * 
      *
@@ -200,7 +200,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get Business hours
+     * 
      *
      * 
      *
@@ -217,7 +217,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get business hours overrides by store identifier
+     * 
      *
      * 
      *
@@ -236,7 +236,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get store end of day report
+     * 
      *
      * 
      *
@@ -253,7 +253,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get the pre order config for a store, by type
+     * 
      *
      * 
      *
@@ -270,7 +270,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get the Preview times of the pre-order configuration
+     * 
      *
      * 
      *
@@ -297,7 +297,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get processing fee configs by store identifier
+     * 
      *
      * 
      *
@@ -314,7 +314,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get processing fee configs by store identifier
+     * 
      *
      * 
      *
@@ -332,7 +332,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get store by identifier
+     * 
      *
      * 
      *
@@ -348,7 +348,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Retrieve Store feeConfig
+     * 
      *
      * 
      *
@@ -364,7 +364,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get all stores by app name id
+     * 
      *
      * 
      *
@@ -383,7 +383,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get stores statistics by app name id and storeIds
+     * 
      *
      * 
      *
@@ -400,7 +400,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Retrieve Store Service Charge
+     * 
      *
      * 
      *
@@ -416,7 +416,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get all stores, excluding archived ones
+     * 
      *
      * 
      *
@@ -435,7 +435,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get all stores by app name id
+     * 
      *
      * 
      *
@@ -454,7 +454,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Get store validation by storeIds
+     * 
      *
      * 
      *
@@ -473,7 +473,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Publish store
+     * 
      *
      * 
      *
@@ -489,7 +489,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Set Business hours
+     * 
      *
      * 
      *
@@ -507,7 +507,7 @@ public class StoresApiTest {
     }
     
     /**
-     * UPDATE pre order config for a store, by type
+     * 
      *
      * 
      *
@@ -525,7 +525,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Unpublish store
+     * 
      *
      * 
      *
@@ -541,7 +541,7 @@ public class StoresApiTest {
     }
     
     /**
-     * UPDATE pre order config for a store, by type
+     * 
      *
      * 
      *
@@ -559,7 +559,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Update store by identifier
+     * 
      *
      * 
      *
@@ -576,7 +576,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Update store address
+     * 
      *
      * 
      *
@@ -593,7 +593,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Update store address coordinates
+     * 
      *
      * 
      *
@@ -611,7 +611,7 @@ public class StoresApiTest {
     }
     
     /**
-     * Update store address
+     * 
      *
      * 
      *

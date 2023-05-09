@@ -37,9 +37,9 @@ public class SubscriptionsApiTest {
 
     
     /**
-     * Get subscription by id
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,9 +54,9 @@ public class SubscriptionsApiTest {
     }
     
     /**
-     * Get list of subscriptions for an App
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

@@ -36,7 +36,7 @@ public class AuthorizationTokensApiTest {
 
     
     /**
-     * Get authorization tokens
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class AuthorizationTokensApiTest {
     }
     
     /**
-     * Revoke token
+     * 
      *
      * 
      *

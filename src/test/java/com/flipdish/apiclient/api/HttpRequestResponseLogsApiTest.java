@@ -37,7 +37,7 @@ public class HttpRequestResponseLogsApiTest {
 
     
     /**
-     * Get API interaction logs
+     * 
      *
      * 
      *

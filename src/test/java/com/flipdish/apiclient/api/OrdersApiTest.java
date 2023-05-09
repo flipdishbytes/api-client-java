@@ -48,9 +48,9 @@ public class OrdersApiTest {
 
     
     /**
-     * Accept order
+     * 
      *
-     * To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -65,9 +65,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Dispatch order
+     * 
      *
-     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -81,9 +81,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order delivery information
+     * 
      *
-     * Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -97,9 +97,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order fulfillment state
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -113,9 +113,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order fulfillment state with actionable details like default next state
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -129,7 +129,7 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get order by ID
+     * 
      *
      * 
      *
@@ -145,7 +145,7 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get orders by filter
+     * 
      *
      * 
      *
@@ -166,7 +166,7 @@ public class OrdersApiTest {
     }
     
     /**
-     * [PRIVATE API] Get summary of orders by filter
+     * 
      *
      * 
      *
@@ -192,9 +192,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Refund order
+     * 
      *
-     * To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -209,9 +209,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Reject order
+     * 
      *
-     * To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -226,9 +226,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Get fulfillment status for a list of orders
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -243,9 +243,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Add/update delivery-related information to an order
+     * 
      *
-     * Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -260,9 +260,9 @@ public class OrdersApiTest {
     }
     
     /**
-     * Update fulfillment status information to an order
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

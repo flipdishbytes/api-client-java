@@ -60,7 +60,7 @@ public class TipsApi {
 
     /**
      * Build call for tipConfigGet
-     * @param storeId Store Id (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -123,9 +123,9 @@ public class TipsApi {
     }
 
     /**
-     * Returns current tip configuration for a store
      * 
-     * @param storeId Store Id (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiResultTipConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -135,9 +135,9 @@ public class TipsApi {
     }
 
     /**
-     * Returns current tip configuration for a store
      * 
-     * @param storeId Store Id (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultTipConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,9 +148,9 @@ public class TipsApi {
     }
 
     /**
-     * Returns current tip configuration for a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,8 +183,8 @@ public class TipsApi {
     }
     /**
      * Build call for tipConfigUpsert
-     * @param storeId Store Id (required)
-     * @param updateConfig Update Configuration (required)
+     * @param storeId  (required)
+     * @param updateConfig  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -252,10 +252,10 @@ public class TipsApi {
     }
 
     /**
-     * Update or insert current tip configuration for a store
      * 
-     * @param storeId Store Id (required)
-     * @param updateConfig Update Configuration (required)
+     * 
+     * @param storeId  (required)
+     * @param updateConfig  (required)
      * @return RestApiResultTipConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -265,10 +265,10 @@ public class TipsApi {
     }
 
     /**
-     * Update or insert current tip configuration for a store
      * 
-     * @param storeId Store Id (required)
-     * @param updateConfig Update Configuration (required)
+     * 
+     * @param storeId  (required)
+     * @param updateConfig  (required)
      * @return ApiResponse&lt;RestApiResultTipConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -279,10 +279,10 @@ public class TipsApi {
     }
 
     /**
-     * Update or insert current tip configuration for a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (required)
-     * @param updateConfig Update Configuration (required)
+     * @param storeId  (required)
+     * @param updateConfig  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

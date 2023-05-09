@@ -60,15 +60,15 @@ public class InvoicesApi {
 
     /**
      * Build call for getInvoices
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional) (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param dateFrom Filter starting from this date (optional) (optional)
-     * @param dateTo Filter ending from this date (optional) (optional)
-     * @param invoiceNumber Invoice number (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * @param appId  (required)
+     * @param subscriptionId  (optional)
+     * @param limit  (optional)
+     * @param pageId  (optional)
+     * @param excludeNotOwnedInvoices  (optional)
+     * @param dateFrom  (optional)
+     * @param dateTo  (optional)
+     * @param invoiceNumber  (optional)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -147,17 +147,17 @@ public class InvoicesApi {
     }
 
     /**
-     * Get list of invoices
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional) (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param dateFrom Filter starting from this date (optional) (optional)
-     * @param dateTo Filter ending from this date (optional) (optional)
-     * @param invoiceNumber Invoice number (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (optional)
+     * @param limit  (optional)
+     * @param pageId  (optional)
+     * @param excludeNotOwnedInvoices  (optional)
+     * @param dateFrom  (optional)
+     * @param dateTo  (optional)
+     * @param invoiceNumber  (optional)
+     * @param storeId  (optional)
      * @return RestApiFinanceSearchPaginationResultInvoice
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -167,17 +167,17 @@ public class InvoicesApi {
     }
 
     /**
-     * Get list of invoices
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional) (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param dateFrom Filter starting from this date (optional) (optional)
-     * @param dateTo Filter ending from this date (optional) (optional)
-     * @param invoiceNumber Invoice number (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (optional)
+     * @param limit  (optional)
+     * @param pageId  (optional)
+     * @param excludeNotOwnedInvoices  (optional)
+     * @param dateFrom  (optional)
+     * @param dateTo  (optional)
+     * @param invoiceNumber  (optional)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiFinanceSearchPaginationResultInvoice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -188,17 +188,17 @@ public class InvoicesApi {
     }
 
     /**
-     * Get list of invoices (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (optional) (optional)
-     * @param limit Limit of invoices to return (optional) (optional)
-     * @param pageId Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param excludeNotOwnedInvoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param dateFrom Filter starting from this date (optional) (optional)
-     * @param dateTo Filter ending from this date (optional) (optional)
-     * @param invoiceNumber Invoice number (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (optional)
+     * @param limit  (optional)
+     * @param pageId  (optional)
+     * @param excludeNotOwnedInvoices  (optional)
+     * @param dateFrom  (optional)
+     * @param dateTo  (optional)
+     * @param invoiceNumber  (optional)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

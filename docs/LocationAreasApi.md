@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
-[**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
-[**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
+[**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | 
+[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | 
 
 
 <a name="createLocationArea"></a>
 # **createLocationArea**
 > Object createLocationArea(locationAreaInput, appId, storeId)
 
-Create a Location Area, i.e: Room, Floor, Parking lot
+
 
 ### Example
 ```java
@@ -32,9 +32,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationAreasApi apiInstance = new LocationAreasApi();
-CreateLocationArea locationAreaInput = new CreateLocationArea(); // CreateLocationArea | Input data for creating the Location Area
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+CreateLocationArea locationAreaInput = new CreateLocationArea(); // CreateLocationArea | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.createLocationArea(locationAreaInput, appId, storeId);
     System.out.println(result);
@@ -48,9 +48,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaInput** | [**CreateLocationArea**](CreateLocationArea.md)| Input data for creating the Location Area |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **locationAreaInput** | [**CreateLocationArea**](CreateLocationArea.md)|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **getLocationArea**
 > RestApiResultLocationAreaWithLocations getLocationArea(locationAreaId, appId, storeId)
 
-Retrieve a Location Area
+
 
 ### Example
 ```java
@@ -87,9 +87,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationAreasApi apiInstance = new LocationAreasApi();
-Integer locationAreaId = 56; // Integer | Id of the Location Area
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+Integer locationAreaId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     RestApiResultLocationAreaWithLocations result = apiInstance.getLocationArea(locationAreaId, appId, storeId);
     System.out.println(result);
@@ -103,9 +103,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaId** | **Integer**| Id of the Location Area |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **locationAreaId** | **Integer**|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 # **getLocationAreasForStore**
 > RestApiArrayResultLocationAreaWithLocations getLocationAreasForStore(appId, storeId)
 
-Retrieve all Location Areas for a Store
+
 
 ### Example
 ```java
@@ -142,8 +142,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationAreasApi apiInstance = new LocationAreasApi();
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     RestApiArrayResultLocationAreaWithLocations result = apiInstance.getLocationAreasForStore(appId, storeId);
     System.out.println(result);
@@ -157,8 +157,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 # **updateLocationArea**
 > RestApiResultLocationArea updateLocationArea(locationAreaInput, appId, storeId, locationAreaId)
 
-Update a Location Area, i.e: Room, Floor, Car park space
+
 
 ### Example
 ```java
@@ -195,9 +195,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LocationAreasApi apiInstance = new LocationAreasApi();
-UpdateLocationArea locationAreaInput = new UpdateLocationArea(); // UpdateLocationArea | Input data for updating the Location Area
-String appId = "appId_example"; // String | AppId i.e: (fd1234)
-Integer storeId = 56; // Integer | Id of the Store
+UpdateLocationArea locationAreaInput = new UpdateLocationArea(); // UpdateLocationArea | 
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 String locationAreaId = "locationAreaId_example"; // String | 
 try {
     RestApiResultLocationArea result = apiInstance.updateLocationArea(locationAreaInput, appId, storeId, locationAreaId);
@@ -212,9 +212,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **locationAreaInput** | [**UpdateLocationArea**](UpdateLocationArea.md)| Input data for updating the Location Area |
- **appId** | **String**| AppId i.e: (fd1234) |
- **storeId** | **Integer**| Id of the Store |
+ **locationAreaInput** | [**UpdateLocationArea**](UpdateLocationArea.md)|  |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
  **locationAreaId** | **String**|  |
 
 ### Return type

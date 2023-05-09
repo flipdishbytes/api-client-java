@@ -36,9 +36,9 @@ public class CrossSellApiTest {
 
     
     /**
-     * Get all Menu items by MenuId for cross sells
+     * 
      *
-     * Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

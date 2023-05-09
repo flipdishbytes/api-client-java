@@ -48,7 +48,7 @@ public class MobileAppsApiTest {
 
     
     /**
-     * Get sales channel configuration
+     * 
      *
      * 
      *
@@ -64,7 +64,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Get statistics mobile apps
+     * 
      *
      * 
      *
@@ -81,7 +81,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Get submission details mobile apps
+     * 
      *
      * 
      *
@@ -97,7 +97,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Get submission status mobile apps
+     * 
      *
      * 
      *
@@ -114,7 +114,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Publish mobile apps
+     * 
      *
      * 
      *
@@ -132,7 +132,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Re-submission form mobile apps
+     * 
      *
      * 
      *
@@ -149,7 +149,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Submission form mobile apps
+     * 
      *
      * 
      *
@@ -166,7 +166,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Unpublish mobile apps
+     * 
      *
      * 
      *
@@ -184,7 +184,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Update the application sales channel configuration
+     * 
      *
      * 
      *
@@ -201,7 +201,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Update submission status
+     * 
      *
      * 
      *
@@ -219,7 +219,7 @@ public class MobileAppsApiTest {
     }
     
     /**
-     * Upload image mobile apps
+     * 
      *
      * 
      *

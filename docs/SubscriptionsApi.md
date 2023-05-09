@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSubscriptionById**](SubscriptionsApi.md#getSubscriptionById) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-[**getSubscriptionsForApp**](SubscriptionsApi.md#getSubscriptionsForApp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
+[**getSubscriptionById**](SubscriptionsApi.md#getSubscriptionById) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
+[**getSubscriptionsForApp**](SubscriptionsApi.md#getSubscriptionsForApp) | **GET** /api/v1.0/{appId}/subscriptions | 
 
 
 <a name="getSubscriptionById"></a>
 # **getSubscriptionById**
 > RestApiResultSubscription getSubscriptionById(appId, subscriptionId)
 
-Get subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -32,8 +30,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 SubscriptionsApi apiInstance = new SubscriptionsApi();
-String appId = "appId_example"; // String | App Id
-String subscriptionId = "subscriptionId_example"; // String | Subscription Id
+String appId = "appId_example"; // String | 
+String subscriptionId = "subscriptionId_example"; // String | 
 try {
     RestApiResultSubscription result = apiInstance.getSubscriptionById(appId, subscriptionId);
     System.out.println(result);
@@ -47,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **subscriptionId** | **String**| Subscription Id |
+ **appId** | **String**|  |
+ **subscriptionId** | **String**|  |
 
 ### Return type
 
@@ -67,9 +65,7 @@ Name | Type | Description  | Notes
 # **getSubscriptionsForApp**
 > RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId)
 
-Get list of subscriptions for an App
 
-[BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
 
 ### Example
 ```java
@@ -87,9 +83,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 SubscriptionsApi apiInstance = new SubscriptionsApi();
-String appId = "appId_example"; // String | App Id
-Boolean excludeNotOwnedSubscriptions = true; // Boolean | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | Store Ids (optional)
+String appId = "appId_example"; // String | 
+Boolean excludeNotOwnedSubscriptions = true; // Boolean | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
     System.out.println(result);
@@ -103,9 +99,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **excludeNotOwnedSubscriptions** | **Boolean**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional]
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| Store Ids (optional) | [optional]
+ **appId** | **String**|  |
+ **excludeNotOwnedSubscriptions** | **Boolean**|  | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 

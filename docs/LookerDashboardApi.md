@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**lookerDashboardGetAll**](LookerDashboardApi.md#lookerDashboardGetAll) | **GET** /api/v1.0/{appId}/looker/dashboards | Get all dashboards
+[**lookerDashboardGetAll**](LookerDashboardApi.md#lookerDashboardGetAll) | **GET** /api/v1.0/{appId}/looker/dashboards | 
 
 
 <a name="lookerDashboardGetAll"></a>
 # **lookerDashboardGetAll**
 > lookerDashboardGetAll(appId)
 
-Get all dashboards
+
 
 ### Example
 ```java

@@ -37,7 +37,7 @@ public class StoreOrderCapacityApiTest {
 
     
     /**
-     * Get store&#39;s order capacity configuration
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class StoreOrderCapacityApiTest {
     }
     
     /**
-     * Create or update a store&#39;s order capacity configuration
+     * 
      *
      * 
      *

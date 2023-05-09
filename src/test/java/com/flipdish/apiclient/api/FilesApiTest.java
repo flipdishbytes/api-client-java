@@ -34,7 +34,7 @@ public class FilesApiTest {
 
     
     /**
-     * Get file from storage
+     * 
      *
      * 
      *

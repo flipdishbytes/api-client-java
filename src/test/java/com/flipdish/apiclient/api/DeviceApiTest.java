@@ -40,9 +40,9 @@ public class DeviceApiTest {
 
     
     /**
-     * Assign device to AppId. Device must have been enrolled before
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -57,9 +57,9 @@ public class DeviceApiTest {
     }
     
     /**
-     * Enroll a new device - this returns a PIN code for actually assigning it later
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -74,9 +74,9 @@ public class DeviceApiTest {
     }
     
     /**
-     * Get details for a device by model and deviceid
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -92,9 +92,9 @@ public class DeviceApiTest {
     }
     
     /**
-     * Search devices by AppId and optionally storeId
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

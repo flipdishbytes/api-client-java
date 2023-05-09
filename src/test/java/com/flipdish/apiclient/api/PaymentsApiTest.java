@@ -36,7 +36,7 @@ public class PaymentsApiTest {
 
     
     /**
-     * Returns payment refund information related to the order with the order id
+     * 
      *
      * 
      *

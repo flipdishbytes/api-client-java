@@ -42,7 +42,7 @@ public class StripeCustomConnectApiTest {
 
     
     /**
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
      * 
      *
@@ -59,7 +59,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Gets a single-use Stripe URL for the given account
+     * 
      *
      * 
      *
@@ -94,7 +94,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Gets a list of stripe custom connect ids information
+     * 
      *
      * 
      *
@@ -111,7 +111,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Gets the current verification status of the given connected account
+     * 
      *
      * 
      *
@@ -128,7 +128,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Update bank account&#39;s BusinessType and create a Stripe Connected Account
+     * 
      *
      * 
      *
@@ -163,7 +163,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Update bank account details
+     * 
      *
      * 
      *
@@ -181,7 +181,7 @@ public class StripeCustomConnectApiTest {
     }
     
     /**
-     * Update Stripe Connection Account&#39;s payout schedule
+     * 
      *
      * 
      *

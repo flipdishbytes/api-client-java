@@ -40,9 +40,9 @@ public class AppStoreDeveloperApiTest {
 
     
     /**
-     * Update App store app verification
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -58,9 +58,9 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
-     * Create App store app
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -75,9 +75,9 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
-     * Delete App store app
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -92,9 +92,9 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
-     * Get external function action signing key for app
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -109,9 +109,9 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
-     * Update App store app
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -127,7 +127,7 @@ public class AppStoreDeveloperApiTest {
     }
     
     /**
-     * Upload the App store app logo \\ icon
+     * 
      *
      * 
      *

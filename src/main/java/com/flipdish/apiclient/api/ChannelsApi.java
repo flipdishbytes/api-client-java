@@ -64,8 +64,8 @@ public class ChannelsApi {
 
     /**
      * Build call for assignAppIdToSalesChannel
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -134,10 +134,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a given AppId to a Sales Channel
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,10 +147,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a given AppId to a Sales Channel
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -161,10 +161,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a given AppId to a Sales Channel (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,9 +197,9 @@ public class ChannelsApi {
     }
     /**
      * Build call for assignStoreToChannel
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -276,11 +276,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a Store to a Sales Channel
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -290,11 +290,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a Store to a Sales Channel
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -305,11 +305,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Assign a Store to a Sales Channel (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -342,9 +342,9 @@ public class ChannelsApi {
     }
     /**
      * Build call for attachStoreToSalesChannel
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to attach. (required)
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -422,11 +422,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Attachs the specified store to the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to attach. (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -438,11 +438,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Attachs the specified store to the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to attach. (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -455,11 +455,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Attachs the specified store to the given sales channel. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to attach. (required)
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -494,8 +494,8 @@ public class ChannelsApi {
     }
     /**
      * Build call for detachAllStoresFromSalesChannel
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -567,10 +567,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches all the stores from the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -582,10 +582,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches all the stores from the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -598,10 +598,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches all the stores from the given sales channel. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -636,9 +636,9 @@ public class ChannelsApi {
     }
     /**
      * Build call for detachStoreFromSalesChannel
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to detach. (required)
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -716,11 +716,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches the specified store from the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to detach. (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -732,11 +732,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches the specified store from the given sales channel.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to detach. (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -749,11 +749,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Detaches the specified store from the given sales channel. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param storeId Store Id (Phyisical Restaurant) to detach. (required)
+     * @param appId  (required)
+     * @param channelId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -788,7 +788,7 @@ public class ChannelsApi {
     }
     /**
      * Build call for getAssignedChannels
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -851,9 +851,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given AppId
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -863,9 +863,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given AppId
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -876,9 +876,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are assigned to a given AppId (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -911,7 +911,7 @@ public class ChannelsApi {
     }
     /**
      * Build call for getAvailableChannels
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -974,9 +974,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are not yet assigned to a given AppId
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -986,9 +986,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are not yet assigned to a given AppId
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -999,9 +999,9 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of sales channels that are not yet assigned to a given AppId (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameIdxxx) (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1034,8 +1034,8 @@ public class ChannelsApi {
     }
     /**
      * Build call for getChannel
-     * @param id ChannelId (required)
-     * @param appId AppId (required)
+     * @param id  (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1104,10 +1104,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a Sales Channel by Id.
      * 
-     * @param id ChannelId (required)
-     * @param appId AppId (required)
+     * 
+     * @param id  (required)
+     * @param appId  (required)
      * @return RestApiResultChannel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1117,10 +1117,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a Sales Channel by Id.
      * 
-     * @param id ChannelId (required)
-     * @param appId AppId (required)
+     * 
+     * @param id  (required)
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultChannel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1131,10 +1131,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a Sales Channel by Id. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param id ChannelId (required)
-     * @param appId AppId (required)
+     * @param id  (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1230,7 +1230,7 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of enabled Channels
+     * 
      * 
      * @param appId  (required)
      * @return RestApiArrayResultChannel
@@ -1242,7 +1242,7 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of enabled Channels
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultChannel&gt;
@@ -1255,7 +1255,7 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of enabled Channels (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1290,8 +1290,8 @@ public class ChannelsApi {
     }
     /**
      * Build call for getStoresAssignedToChannel
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1360,10 +1360,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return RestApiArrayResultStoreChannelAssignment
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1373,10 +1373,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;RestApiArrayResultStoreChannelAssignment&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1387,10 +1387,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1423,8 +1423,8 @@ public class ChannelsApi {
     }
     /**
      * Build call for getStoresBySalesChannel
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1496,10 +1496,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of store ids attached to the given channel type for the specified app.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -1511,10 +1511,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of store ids attached to the given channel type for the specified app.
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * 
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -1527,10 +1527,10 @@ public class ChannelsApi {
     }
 
     /**
-     * Returns a list of store ids attached to the given channel type for the specified app. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (AppNameId) (required)
-     * @param channelId Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1565,9 +1565,9 @@ public class ChannelsApi {
     }
     /**
      * Build call for unassignStoreFromChannel
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1644,11 +1644,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Unassign a Store from a Sales Channel
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1658,11 +1658,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Unassign a Store from a Sales Channel
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1673,11 +1673,11 @@ public class ChannelsApi {
     }
 
     /**
-     * Unassign a Store from a Sales Channel (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Id (123, 456) (required)
-     * @param appId AppId (AppNameIdxxx) (required)
-     * @param channelId Channel Id (123, 456) (required)
+     * @param storeId  (required)
+     * @param appId  (required)
+     * @param channelId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

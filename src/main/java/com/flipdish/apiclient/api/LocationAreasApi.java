@@ -63,9 +63,9 @@ public class LocationAreasApi {
 
     /**
      * Build call for createLocationArea
-     * @param locationAreaInput Input data for creating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -139,11 +139,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Create a Location Area, i.e: Room, Floor, Parking lot
      * 
-     * @param locationAreaInput Input data for creating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -153,11 +153,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Create a Location Area, i.e: Room, Floor, Parking lot
      * 
-     * @param locationAreaInput Input data for creating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -168,11 +168,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Create a Location Area, i.e: Room, Floor, Parking lot (asynchronously)
+     *  (asynchronously)
      * 
-     * @param locationAreaInput Input data for creating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -205,9 +205,9 @@ public class LocationAreasApi {
     }
     /**
      * Build call for getLocationArea
-     * @param locationAreaId Id of the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaId  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -282,11 +282,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve a Location Area
      * 
-     * @param locationAreaId Id of the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaId  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return RestApiResultLocationAreaWithLocations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -296,11 +296,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve a Location Area
      * 
-     * @param locationAreaId Id of the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaId  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultLocationAreaWithLocations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -311,11 +311,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve a Location Area (asynchronously)
+     *  (asynchronously)
      * 
-     * @param locationAreaId Id of the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaId  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -348,8 +348,8 @@ public class LocationAreasApi {
     }
     /**
      * Build call for getLocationAreasForStore
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -418,10 +418,10 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve all Location Areas for a Store
      * 
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return RestApiArrayResultLocationAreaWithLocations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -431,10 +431,10 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve all Location Areas for a Store
      * 
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiArrayResultLocationAreaWithLocations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -445,10 +445,10 @@ public class LocationAreasApi {
     }
 
     /**
-     * Retrieve all Location Areas for a Store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -481,9 +481,9 @@ public class LocationAreasApi {
     }
     /**
      * Build call for updateLocationArea
-     * @param locationAreaInput Input data for updating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param locationAreaId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -564,11 +564,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Update a Location Area, i.e: Room, Floor, Car park space
      * 
-     * @param locationAreaInput Input data for updating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param locationAreaId  (required)
      * @return RestApiResultLocationArea
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -579,11 +579,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Update a Location Area, i.e: Room, Floor, Car park space
      * 
-     * @param locationAreaInput Input data for updating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * 
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param locationAreaId  (required)
      * @return ApiResponse&lt;RestApiResultLocationArea&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -595,11 +595,11 @@ public class LocationAreasApi {
     }
 
     /**
-     * Update a Location Area, i.e: Room, Floor, Car park space (asynchronously)
+     *  (asynchronously)
      * 
-     * @param locationAreaInput Input data for updating the Location Area (required)
-     * @param appId AppId i.e: (fd1234) (required)
-     * @param storeId Id of the Store (required)
+     * @param locationAreaInput  (required)
+     * @param appId  (required)
+     * @param storeId  (required)
      * @param locationAreaId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

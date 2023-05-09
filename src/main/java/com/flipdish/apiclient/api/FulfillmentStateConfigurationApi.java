@@ -64,8 +64,8 @@ public class FulfillmentStateConfigurationApi {
 
     /**
      * Build call for createFulfillmentStatesConfig
-     * @param appId App id (required)
-     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
+     * @param appId  (required)
+     * @param fulfillmentStateConfiguration  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -133,10 +133,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Create fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param fulfillmentStateConfiguration  (required)
      * @return RestApiResultFulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -146,10 +146,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Create fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param fulfillmentStateConfiguration  (required)
      * @return ApiResponse&lt;RestApiResultFulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -160,10 +160,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Create fulfillment configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param fulfillmentStateConfiguration Fulfillment state configuration (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param fulfillmentStateConfiguration  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -196,8 +196,8 @@ public class FulfillmentStateConfigurationApi {
     }
     /**
      * Build call for deleteFulfillmentStatesConfig
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
+     * @param appId  (required)
+     * @param configId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -266,10 +266,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Delete fulfillment states configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -279,10 +279,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Delete fulfillment states configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -293,10 +293,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Delete fulfillment states configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -329,8 +329,8 @@ public class FulfillmentStateConfigurationApi {
     }
     /**
      * Build call for getFulfillmentStatesConfiguration
-     * @param appId App id (required)
-     * @param configId Fulfillment configuration id (required)
+     * @param appId  (required)
+     * @param configId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -399,10 +399,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @return FulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -412,10 +412,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @return ApiResponse&lt;FulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -426,10 +426,10 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment configuration id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -462,7 +462,7 @@ public class FulfillmentStateConfigurationApi {
     }
     /**
      * Build call for getFulfillmentStatesConfigurationTemplate
-     * @param appId App id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -525,9 +525,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration template
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return FulfillmentStatesConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -537,9 +537,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration template
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;FulfillmentStatesConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -550,9 +550,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Get fulfillment configuration template (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -585,7 +585,7 @@ public class FulfillmentStateConfigurationApi {
     }
     /**
      * Build call for searchFulfillmentStatesConfigurations
-     * @param appId App id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -648,9 +648,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * List fulfillment configurations for AppId
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultFulfillmentStatesConfigurationSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -660,9 +660,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * List fulfillment configurations for AppId
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultFulfillmentStatesConfigurationSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -673,9 +673,9 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * List fulfillment configurations for AppId (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -708,9 +708,9 @@ public class FulfillmentStateConfigurationApi {
     }
     /**
      * Build call for updateFulfillmentStatesConfig
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
-     * @param updateFulfillmentStatesConfiguration Update fulfillment states configuration (required)
+     * @param appId  (required)
+     * @param configId  (required)
+     * @param updateFulfillmentStatesConfiguration  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -784,11 +784,11 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Update fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
-     * @param updateFulfillmentStatesConfiguration Update fulfillment states configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
+     * @param updateFulfillmentStatesConfiguration  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateFulfillmentStatesConfig(String appId, String configId, UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration) throws ApiException {
@@ -796,11 +796,11 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Update fulfillment configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
-     * @param updateFulfillmentStatesConfiguration Update fulfillment states configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
+     * @param updateFulfillmentStatesConfiguration  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -810,11 +810,11 @@ public class FulfillmentStateConfigurationApi {
     }
 
     /**
-     * Update fulfillment configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param configId Fulfillment states configuration id (required)
-     * @param updateFulfillmentStatesConfiguration Update fulfillment states configuration (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param configId  (required)
+     * @param updateFulfillmentStatesConfiguration  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

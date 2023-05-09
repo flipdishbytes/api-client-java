@@ -130,7 +130,7 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     * 
      * 
      * @param appStoreAppId  (required)
      * @return Object
@@ -142,7 +142,7 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     * 
      * 
      * @param appStoreAppId  (required)
      * @return ApiResponse&lt;Object&gt;
@@ -155,7 +155,7 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code (asynchronously)
+     *  (asynchronously)
      * 
      * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -190,8 +190,8 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for createAppStoreConfig
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -260,10 +260,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Create App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @return RestApiResultAppStoreAppConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -273,10 +273,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Create App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @return ApiResponse&lt;RestApiResultAppStoreAppConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -287,10 +287,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Create App store app configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -323,9 +323,9 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for deleteAppStoreConfig
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -400,11 +400,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -414,11 +414,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -429,11 +429,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Delete App store app configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -466,10 +466,10 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for executeConfigurationAction
-     * @param appId App Id (required)
-     * @param appStoreAppId AppStore App Id (required)
-     * @param configId AppStore App configuration Id (required)
-     * @param executeConfigurationActionRequest Action request details (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param executeConfigurationActionRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -549,12 +549,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Execute configuration action on a configuration item (eg. handle button press)
      * 
-     * @param appId App Id (required)
-     * @param appStoreAppId AppStore App Id (required)
-     * @param configId AppStore App configuration Id (required)
-     * @param executeConfigurationActionRequest Action request details (required)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param executeConfigurationActionRequest  (required)
      * @return ExecuteConfigurationActionResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -564,12 +564,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Execute configuration action on a configuration item (eg. handle button press)
      * 
-     * @param appId App Id (required)
-     * @param appStoreAppId AppStore App Id (required)
-     * @param configId AppStore App configuration Id (required)
-     * @param executeConfigurationActionRequest Action request details (required)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param executeConfigurationActionRequest  (required)
      * @return ApiResponse&lt;ExecuteConfigurationActionResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -580,12 +580,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Execute configuration action on a configuration item (eg. handle button press) (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Id (required)
-     * @param appStoreAppId AppStore App Id (required)
-     * @param configId AppStore App configuration Id (required)
-     * @param executeConfigurationActionRequest Action request details (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param executeConfigurationActionRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -618,9 +618,9 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for getAppStoreConfig
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -695,11 +695,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @return AppStoreAppConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -709,11 +709,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @return ApiResponse&lt;AppStoreAppConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -724,11 +724,11 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get App store app configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -761,8 +761,8 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for getConfiguredAppSingleApp
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -831,10 +831,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store app configurations for one App store app
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @return RestApiArrayResultAppStoreAppConfigurationSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -844,10 +844,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store app configurations for one App store app
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @return ApiResponse&lt;RestApiArrayResultAppStoreAppConfigurationSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -858,10 +858,10 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store app configurations for one App store app (asynchronously)
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -894,7 +894,7 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for getConfiguredApps
-     * @param appId App id (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -957,9 +957,9 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store apps which have been configured
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultAppStoreAppConfigurationHeader
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -969,9 +969,9 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store apps which have been configured
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultAppStoreAppConfigurationHeader&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -982,9 +982,9 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Get list of App store apps which have been configured (asynchronously)
-     * [ALPHA - this endpoint is not ready to be consumed]
-     * @param appId App id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1017,10 +1017,10 @@ public class AppStoreConfigurationsApi {
     }
     /**
      * Build call for updateAppStoreConfig
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
-     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param updateAppStoreAppConfiguration  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1100,12 +1100,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
-     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param updateAppStoreAppConfiguration  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateAppStoreConfig(String appId, String appStoreAppId, String configId, UpdateAppStoreAppConfiguration updateAppStoreAppConfiguration) throws ApiException {
@@ -1113,12 +1113,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update App store app configuration
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
-     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param updateAppStoreAppConfiguration  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1128,12 +1128,12 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update App store app configuration (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App id (required)
-     * @param appStoreAppId App store app id (required)
-     * @param configId App store app configuration id (required)
-     * @param updateAppStoreAppConfiguration Update App store app configuration (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param configId  (required)
+     * @param updateAppStoreAppConfiguration  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1248,8 +1248,8 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update AppStore App Configuration values, specified settings only
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param configId  (required)
@@ -1261,8 +1261,8 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update AppStore App Configuration values, specified settings only
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param configId  (required)
@@ -1276,8 +1276,8 @@ public class AppStoreConfigurationsApi {
     }
 
     /**
-     * Update AppStore App Configuration values, specified settings only (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param configId  (required)

@@ -40,7 +40,7 @@ public class StoreGroupsApiTest {
 
     
     /**
-     * Creates a Store Group  It will be attached to an existing App
+     * 
      *
      * 
      *
@@ -57,7 +57,7 @@ public class StoreGroupsApiTest {
     }
     
     /**
-     * Returns a Store Groups
+     * 
      *
      * 
      *
@@ -73,7 +73,7 @@ public class StoreGroupsApiTest {
     }
     
     /**
-     * Returns a paginated list of Store Groups
+     * 
      *
      * 
      *
@@ -92,7 +92,7 @@ public class StoreGroupsApiTest {
     }
     
     /**
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
+     * 
      *
      * 
      *
@@ -112,7 +112,7 @@ public class StoreGroupsApiTest {
     }
     
     /**
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+     * 
      *
      * 
      *
@@ -146,7 +146,7 @@ public class StoreGroupsApiTest {
     }
     
     /**
-     * Updates Store Group
+     * 
      *
      * 
      *

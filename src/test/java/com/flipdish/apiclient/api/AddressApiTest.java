@@ -38,7 +38,7 @@ public class AddressApiTest {
 
     
     /**
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class AddressApiTest {
     }
     
     /**
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+     * 
      *
      * 
      *
@@ -72,7 +72,7 @@ public class AddressApiTest {
     }
     
     /**
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+     * 
      *
      * 
      *
@@ -89,7 +89,7 @@ public class AddressApiTest {
     }
     
     /**
-     * Retuns a list of localised countries
+     * 
      *
      * 
      *

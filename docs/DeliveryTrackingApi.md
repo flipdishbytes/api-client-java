@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignDriverToOrder**](DeliveryTrackingApi.md#assignDriverToOrder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
-[**assignDriverToOrders**](DeliveryTrackingApi.md#assignDriverToOrders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | Assign driver to multiple orders
-[**getDrivers**](DeliveryTrackingApi.md#getDrivers) | **GET** /api/v1.0/{appId}/drivers | [PRIVATE] Get drivers by App
-[**inviteDriverToApp**](DeliveryTrackingApi.md#inviteDriverToApp) | **POST** /api/v1.0/{appId}/drivers | [PRIVATE] Invite driver
-[**removeDriverFromApp**](DeliveryTrackingApi.md#removeDriverFromApp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | [PRIVATE] Unassign driver from app
-[**unassignDriverFromOrder**](DeliveryTrackingApi.md#unassignDriverFromOrder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | [PRIVATE] Unassign driver from order
+[**assignDriverToOrder**](DeliveryTrackingApi.md#assignDriverToOrder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | 
+[**assignDriverToOrders**](DeliveryTrackingApi.md#assignDriverToOrders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | 
+[**getDrivers**](DeliveryTrackingApi.md#getDrivers) | **GET** /api/v1.0/{appId}/drivers | 
+[**inviteDriverToApp**](DeliveryTrackingApi.md#inviteDriverToApp) | **POST** /api/v1.0/{appId}/drivers | 
+[**removeDriverFromApp**](DeliveryTrackingApi.md#removeDriverFromApp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | 
+[**unassignDriverFromOrder**](DeliveryTrackingApi.md#unassignDriverFromOrder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | 
 
 
 <a name="assignDriverToOrder"></a>
 # **assignDriverToOrder**
 > assignDriverToOrder(appId, orderId, driverId)
 
-[PRIVATE] Assign driver to order
+
 
 ### Example
 ```java
@@ -34,9 +34,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-Integer orderId = 56; // Integer | Order Id
-Integer driverId = 56; // Integer | Driver Id
+String appId = "appId_example"; // String | 
+Integer orderId = 56; // Integer | 
+Integer driverId = 56; // Integer | 
 try {
     apiInstance.assignDriverToOrder(appId, orderId, driverId);
 } catch (ApiException e) {
@@ -49,9 +49,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **orderId** | **Integer**| Order Id |
- **driverId** | **Integer**| Driver Id |
+ **appId** | **String**|  |
+ **orderId** | **Integer**|  |
+ **driverId** | **Integer**|  |
 
 ### Return type
 
@@ -70,7 +70,7 @@ null (empty response body)
 # **assignDriverToOrders**
 > assignDriverToOrders(appId, driverId, orderIdAndSequenceNumbers)
 
-Assign driver to multiple orders
+
 
 ### Example
 ```java
@@ -88,9 +88,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-Integer driverId = 56; // Integer | Driver Id
-List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers = Arrays.asList(new OrderIdAndSequenceNumber()); // List<OrderIdAndSequenceNumber> | Array of object containing OrderId and Sequence
+String appId = "appId_example"; // String | 
+Integer driverId = 56; // Integer | 
+List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers = Arrays.asList(new OrderIdAndSequenceNumber()); // List<OrderIdAndSequenceNumber> | 
 try {
     apiInstance.assignDriverToOrders(appId, driverId, orderIdAndSequenceNumbers);
 } catch (ApiException e) {
@@ -103,9 +103,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **driverId** | **Integer**| Driver Id |
- **orderIdAndSequenceNumbers** | [**List&lt;OrderIdAndSequenceNumber&gt;**](OrderIdAndSequenceNumber.md)| Array of object containing OrderId and Sequence |
+ **appId** | **String**|  |
+ **driverId** | **Integer**|  |
+ **orderIdAndSequenceNumbers** | [**List&lt;OrderIdAndSequenceNumber&gt;**](OrderIdAndSequenceNumber.md)|  |
 
 ### Return type
 
@@ -124,7 +124,7 @@ null (empty response body)
 # **getDrivers**
 > RestApiArrayResultDriver getDrivers(appId, name, phoneNumber, storeId, presence)
 
-[PRIVATE] Get drivers by App
+
 
 ### Example
 ```java
@@ -142,11 +142,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-String name = "name_example"; // String | Driver's username
-String phoneNumber = "phoneNumber_example"; // String | Driver's phone number
-Integer storeId = 56; // Integer | Store Id
-String presence = "presence_example"; // String | Offline/Online
+String appId = "appId_example"; // String | 
+String name = "name_example"; // String | 
+String phoneNumber = "phoneNumber_example"; // String | 
+Integer storeId = 56; // Integer | 
+String presence = "presence_example"; // String | 
 try {
     RestApiArrayResultDriver result = apiInstance.getDrivers(appId, name, phoneNumber, storeId, presence);
     System.out.println(result);
@@ -160,11 +160,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **name** | **String**| Driver&#39;s username | [optional]
- **phoneNumber** | **String**| Driver&#39;s phone number | [optional]
- **storeId** | **Integer**| Store Id | [optional]
- **presence** | **String**| Offline/Online | [optional] [enum: Offline, Online]
+ **appId** | **String**|  |
+ **name** | **String**|  | [optional]
+ **phoneNumber** | **String**|  | [optional]
+ **storeId** | **Integer**|  | [optional]
+ **presence** | **String**|  | [optional] [enum: Offline, Online]
 
 ### Return type
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 # **inviteDriverToApp**
 > RestApiResultDriver inviteDriverToApp(appId, driverInvitation)
 
-[PRIVATE] Invite driver
+
 
 ### Example
 ```java
@@ -201,8 +201,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-DriverInvitation driverInvitation = new DriverInvitation(); // DriverInvitation | Driver invitation model
+String appId = "appId_example"; // String | 
+DriverInvitation driverInvitation = new DriverInvitation(); // DriverInvitation | 
 try {
     RestApiResultDriver result = apiInstance.inviteDriverToApp(appId, driverInvitation);
     System.out.println(result);
@@ -216,8 +216,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **driverInvitation** | [**DriverInvitation**](DriverInvitation.md)| Driver invitation model |
+ **appId** | **String**|  |
+ **driverInvitation** | [**DriverInvitation**](DriverInvitation.md)|  |
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 # **removeDriverFromApp**
 > removeDriverFromApp(appId, driverId)
 
-[PRIVATE] Unassign driver from app
+
 
 ### Example
 ```java
@@ -254,8 +254,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-Integer driverId = 56; // Integer | Driver Id
+String appId = "appId_example"; // String | 
+Integer driverId = 56; // Integer | 
 try {
     apiInstance.removeDriverFromApp(appId, driverId);
 } catch (ApiException e) {
@@ -268,8 +268,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **driverId** | **Integer**| Driver Id |
+ **appId** | **String**|  |
+ **driverId** | **Integer**|  |
 
 ### Return type
 
@@ -288,7 +288,7 @@ null (empty response body)
 # **unassignDriverFromOrder**
 > unassignDriverFromOrder(appId, orderId)
 
-[PRIVATE] Unassign driver from order
+
 
 ### Example
 ```java
@@ -306,8 +306,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DeliveryTrackingApi apiInstance = new DeliveryTrackingApi();
-String appId = "appId_example"; // String | Application identifier
-Integer orderId = 56; // Integer | Order Id
+String appId = "appId_example"; // String | 
+Integer orderId = 56; // Integer | 
 try {
     apiInstance.unassignDriverFromOrder(appId, orderId);
 } catch (ApiException e) {
@@ -320,8 +320,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **orderId** | **Integer**| Order Id |
+ **appId** | **String**|  |
+ **orderId** | **Integer**|  |
 
 ### Return type
 

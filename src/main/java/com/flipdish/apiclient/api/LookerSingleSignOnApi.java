@@ -59,9 +59,9 @@ public class LookerSingleSignOnApi {
 
     /**
      * Build call for getSSOEndpoint
-     * @param appId AppNameId (required)
-     * @param embedPath Embed URL of the dashboard (required)
-     * @param filters Filters that will be passed to the dashboard (optional)
+     * @param appId  (required)
+     * @param embedPath  (required)
+     * @param filters  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -133,11 +133,11 @@ public class LookerSingleSignOnApi {
     }
 
     /**
-     * Get the generic single sign on embed URL for Looker dashboards
      * 
-     * @param appId AppNameId (required)
-     * @param embedPath Embed URL of the dashboard (required)
-     * @param filters Filters that will be passed to the dashboard (optional)
+     * 
+     * @param appId  (required)
+     * @param embedPath  (required)
+     * @param filters  (optional)
      * @return DashboardEmbed
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,11 +147,11 @@ public class LookerSingleSignOnApi {
     }
 
     /**
-     * Get the generic single sign on embed URL for Looker dashboards
      * 
-     * @param appId AppNameId (required)
-     * @param embedPath Embed URL of the dashboard (required)
-     * @param filters Filters that will be passed to the dashboard (optional)
+     * 
+     * @param appId  (required)
+     * @param embedPath  (required)
+     * @param filters  (optional)
      * @return ApiResponse&lt;DashboardEmbed&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -162,11 +162,11 @@ public class LookerSingleSignOnApi {
     }
 
     /**
-     * Get the generic single sign on embed URL for Looker dashboards (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId AppNameId (required)
-     * @param embedPath Embed URL of the dashboard (required)
-     * @param filters Filters that will be passed to the dashboard (optional)
+     * @param appId  (required)
+     * @param embedPath  (required)
+     * @param filters  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

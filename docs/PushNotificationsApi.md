@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletePushNotification**](PushNotificationsApi.md#deletePushNotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
-[**getPushNotifications**](PushNotificationsApi.md#getPushNotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**schedulePushNotification**](PushNotificationsApi.md#schedulePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**updatePushNotification**](PushNotificationsApi.md#updatePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
+[**deletePushNotification**](PushNotificationsApi.md#deletePushNotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
+[**getPushNotifications**](PushNotificationsApi.md#getPushNotifications) | **GET** /api/v1.0/{appId}/pushnotifications | 
+[**schedulePushNotification**](PushNotificationsApi.md#schedulePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications | 
+[**updatePushNotification**](PushNotificationsApi.md#updatePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
 
 
 <a name="deletePushNotification"></a>
 # **deletePushNotification**
 > deletePushNotification(appId, scheduledPushNotificationId)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```java
@@ -33,7 +33,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PushNotificationsApi apiInstance = new PushNotificationsApi();
 String appId = "appId_example"; // String | 
-Integer scheduledPushNotificationId = 56; // Integer | ID of Scheduled push notifiaction to delete
+Integer scheduledPushNotificationId = 56; // Integer | 
 try {
     apiInstance.deletePushNotification(appId, scheduledPushNotificationId);
 } catch (ApiException e) {
@@ -47,7 +47,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **scheduledPushNotificationId** | **Integer**| ID of Scheduled push notifiaction to delete |
+ **scheduledPushNotificationId** | **Integer**|  |
 
 ### Return type
 
@@ -66,7 +66,7 @@ null (empty response body)
 # **getPushNotifications**
 > RestApiPaginationResultPushNotificationResponse getPushNotifications(appId, page, limit)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```java
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 # **schedulePushNotification**
 > RestApiResultPushNotificationResponse schedulePushNotification(appId, notification)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```java
@@ -139,8 +139,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PushNotificationsApi apiInstance = new PushNotificationsApi();
-String appId = "appId_example"; // String | Application Id
-PushNotificationRequest notification = new PushNotificationRequest(); // PushNotificationRequest | Notification to send
+String appId = "appId_example"; // String | 
+PushNotificationRequest notification = new PushNotificationRequest(); // PushNotificationRequest | 
 try {
     RestApiResultPushNotificationResponse result = apiInstance.schedulePushNotification(appId, notification);
     System.out.println(result);
@@ -154,8 +154,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id |
- **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)| Notification to send |
+ **appId** | **String**|  |
+ **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)|  |
 
 ### Return type
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 # **updatePushNotification**
 > RestApiResultPushNotificationResponse updatePushNotification(appId, scheduledPushNotificationId, notification)
 
-[PRIVATE] Update the push notification
+
 
 ### Example
 ```java
@@ -192,9 +192,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PushNotificationsApi apiInstance = new PushNotificationsApi();
-String appId = "appId_example"; // String | Application Id
-Integer scheduledPushNotificationId = 56; // Integer | Notification Id
-PushNotificationRequest notification = new PushNotificationRequest(); // PushNotificationRequest | Notification to send
+String appId = "appId_example"; // String | 
+Integer scheduledPushNotificationId = 56; // Integer | 
+PushNotificationRequest notification = new PushNotificationRequest(); // PushNotificationRequest | 
 try {
     RestApiResultPushNotificationResponse result = apiInstance.updatePushNotification(appId, scheduledPushNotificationId, notification);
     System.out.println(result);
@@ -208,9 +208,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id |
- **scheduledPushNotificationId** | **Integer**| Notification Id |
- **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)| Notification to send |
+ **appId** | **String**|  |
+ **scheduledPushNotificationId** | **Integer**|  |
+ **notification** | [**PushNotificationRequest**](PushNotificationRequest.md)|  |
 
 ### Return type
 

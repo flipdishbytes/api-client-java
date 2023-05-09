@@ -67,7 +67,7 @@ public class AppsApi {
 
     /**
      * Build call for getApp
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -130,9 +130,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return RestApiResultApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -142,9 +142,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -155,9 +155,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -190,7 +190,7 @@ public class AppsApi {
     }
     /**
      * Build call for getAppHostnameStatus
-     * @param appId Application identifier. (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -253,9 +253,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application hostname DNS delegation states for A and CNAME records.
-     * A domain might be ready but still need 10 minutes to work properly because of HAProxy.
-     * @param appId Application identifier. (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return RestApiResultDnsRecordInformation
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -265,9 +265,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application hostname DNS delegation states for A and CNAME records.
-     * A domain might be ready but still need 10 minutes to work properly because of HAProxy.
-     * @param appId Application identifier. (required)
+     * 
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultDnsRecordInformation&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -278,9 +278,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application hostname DNS delegation states for A and CNAME records. (asynchronously)
-     * A domain might be ready but still need 10 minutes to work properly because of HAProxy.
-     * @param appId Application identifier. (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -378,7 +378,7 @@ public class AppsApi {
     }
 
     /**
-     * Get Apps
+     * 
      * 
      * @param nameFilter  (optional)
      * @param page  (optional)
@@ -392,7 +392,7 @@ public class AppsApi {
     }
 
     /**
-     * Get Apps
+     * 
      * 
      * @param nameFilter  (optional)
      * @param page  (optional)
@@ -407,7 +407,7 @@ public class AppsApi {
     }
 
     /**
-     * Get Apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param nameFilter  (optional)
      * @param page  (optional)
@@ -444,7 +444,7 @@ public class AppsApi {
     }
     /**
      * Build call for getCompliance
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -507,9 +507,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application compliance configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return RestApiResultAppCompliance
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -519,9 +519,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application compliance configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultAppCompliance&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -532,9 +532,9 @@ public class AppsApi {
     }
 
     /**
-     * Get the application compliance configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -567,7 +567,7 @@ public class AppsApi {
     }
     /**
      * Build call for getPanaceaVanityUrl
-     * @param appId Application identifier. (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -630,9 +630,9 @@ public class AppsApi {
     }
 
     /**
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
      * 
-     * @param appId Application identifier. (required)
+     * 
+     * @param appId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -642,9 +642,9 @@ public class AppsApi {
     }
 
     /**
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
      * 
-     * @param appId Application identifier. (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -655,9 +655,9 @@ public class AppsApi {
     }
 
     /**
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl] (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier. (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -746,7 +746,7 @@ public class AppsApi {
     }
 
     /**
-     * Get all supported countries.
+     * 
      * 
      * @return RestApiArrayResultSupportedCountry
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -757,7 +757,7 @@ public class AppsApi {
     }
 
     /**
-     * Get all supported countries.
+     * 
      * 
      * @return ApiResponse&lt;RestApiArrayResultSupportedCountry&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -769,7 +769,7 @@ public class AppsApi {
     }
 
     /**
-     * Get all supported countries. (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -803,7 +803,7 @@ public class AppsApi {
     }
     /**
      * Build call for isPanaceaVanityUrlAvailable
-     * @param vanityUrl Vanity url to check (required)
+     * @param vanityUrl  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -874,9 +874,9 @@ public class AppsApi {
     }
 
     /**
-     * Is panacea vanity url available
-     * Minimum length of 3 characters
-     * @param vanityUrl Vanity url to check (required)
+     * 
+     * 
+     * @param vanityUrl  (required)
      * @param appId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -887,9 +887,9 @@ public class AppsApi {
     }
 
     /**
-     * Is panacea vanity url available
-     * Minimum length of 3 characters
-     * @param vanityUrl Vanity url to check (required)
+     * 
+     * 
+     * @param vanityUrl  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -901,9 +901,9 @@ public class AppsApi {
     }
 
     /**
-     * Is panacea vanity url available (asynchronously)
-     * Minimum length of 3 characters
-     * @param vanityUrl Vanity url to check (required)
+     *  (asynchronously)
+     * 
+     * @param vanityUrl  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -937,8 +937,8 @@ public class AppsApi {
     }
     /**
      * Build call for setAppConfig
-     * @param appId Application identifier (required)
-     * @param appConfigUpdate Changes to the configuration (required)
+     * @param appId  (required)
+     * @param appConfigUpdate  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1006,10 +1006,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application configuration
      * 
-     * @param appId Application identifier (required)
-     * @param appConfigUpdate Changes to the configuration (required)
+     * 
+     * @param appId  (required)
+     * @param appConfigUpdate  (required)
      * @return RestApiResultApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1019,10 +1019,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application configuration
      * 
-     * @param appId Application identifier (required)
-     * @param appConfigUpdate Changes to the configuration (required)
+     * 
+     * @param appId  (required)
+     * @param appConfigUpdate  (required)
      * @return ApiResponse&lt;RestApiResultApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1033,10 +1033,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param appConfigUpdate Changes to the configuration (required)
+     * @param appId  (required)
+     * @param appConfigUpdate  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1069,10 +1069,10 @@ public class AppsApi {
     }
     /**
      * Build call for setAppHostname
-     * @param appId Application identifier. (required)
-     * @param hostname The new Hostname. (required)
-     * @param isEmbed Will the website be embedded (optional)
-     * @param isNextGenWeb Enables the NextGen web editor (optional)
+     * @param appId  (required)
+     * @param hostname  (required)
+     * @param isEmbed  (optional)
+     * @param isNextGenWeb  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1146,12 +1146,12 @@ public class AppsApi {
     }
 
     /**
-     * Set the application hostname.
-     * If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
-     * @param appId Application identifier. (required)
-     * @param hostname The new Hostname. (required)
-     * @param isEmbed Will the website be embedded (optional)
-     * @param isNextGenWeb Enables the NextGen web editor (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param hostname  (required)
+     * @param isEmbed  (optional)
+     * @param isNextGenWeb  (optional)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1161,12 +1161,12 @@ public class AppsApi {
     }
 
     /**
-     * Set the application hostname.
-     * If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
-     * @param appId Application identifier. (required)
-     * @param hostname The new Hostname. (required)
-     * @param isEmbed Will the website be embedded (optional)
-     * @param isNextGenWeb Enables the NextGen web editor (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param hostname  (required)
+     * @param isEmbed  (optional)
+     * @param isNextGenWeb  (optional)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1177,12 +1177,12 @@ public class AppsApi {
     }
 
     /**
-     * Set the application hostname. (asynchronously)
-     * If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
-     * @param appId Application identifier. (required)
-     * @param hostname The new Hostname. (required)
-     * @param isEmbed Will the website be embedded (optional)
-     * @param isNextGenWeb Enables the NextGen web editor (optional)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param hostname  (required)
+     * @param isEmbed  (optional)
+     * @param isNextGenWeb  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1215,8 +1215,8 @@ public class AppsApi {
     }
     /**
      * Build call for setAppLanguages
-     * @param appId Application identifier (required)
-     * @param languages New list of languages (required)
+     * @param appId  (required)
+     * @param languages  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1284,10 +1284,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application languages
      * 
-     * @param appId Application identifier (required)
-     * @param languages New list of languages (required)
+     * 
+     * @param appId  (required)
+     * @param languages  (required)
      * @return RestApiResultApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1297,10 +1297,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application languages
      * 
-     * @param appId Application identifier (required)
-     * @param languages New list of languages (required)
+     * 
+     * @param appId  (required)
+     * @param languages  (required)
      * @return ApiResponse&lt;RestApiResultApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1311,10 +1311,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application languages (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param languages New list of languages (required)
+     * @param appId  (required)
+     * @param languages  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1347,8 +1347,8 @@ public class AppsApi {
     }
     /**
      * Build call for setCompliance
-     * @param appId Application identifier (required)
-     * @param complianceType Compliance type (required)
+     * @param appId  (required)
+     * @param complianceType  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1418,10 +1418,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application compliance configuration
      * 
-     * @param appId Application identifier (required)
-     * @param complianceType Compliance type (required)
+     * 
+     * @param appId  (required)
+     * @param complianceType  (required)
      * @return RestApiResultAppCompliance
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1431,10 +1431,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application compliance configuration
      * 
-     * @param appId Application identifier (required)
-     * @param complianceType Compliance type (required)
+     * 
+     * @param appId  (required)
+     * @param complianceType  (required)
      * @return ApiResponse&lt;RestApiResultAppCompliance&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1445,10 +1445,10 @@ public class AppsApi {
     }
 
     /**
-     * Set the application compliance configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param complianceType Compliance type (required)
+     * @param appId  (required)
+     * @param complianceType  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1481,8 +1481,8 @@ public class AppsApi {
     }
     /**
      * Build call for setPanaceaVanityUrl
-     * @param appId Application identifier. (required)
-     * @param vanityUrl Vanity url (required)
+     * @param appId  (required)
+     * @param vanityUrl  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1552,10 +1552,10 @@ public class AppsApi {
     }
 
     /**
-     * Set panacea vanity url
-     * Minimum length of 3 characters
-     * @param appId Application identifier. (required)
-     * @param vanityUrl Vanity url (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param vanityUrl  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1565,10 +1565,10 @@ public class AppsApi {
     }
 
     /**
-     * Set panacea vanity url
-     * Minimum length of 3 characters
-     * @param appId Application identifier. (required)
-     * @param vanityUrl Vanity url (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param vanityUrl  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1579,10 +1579,10 @@ public class AppsApi {
     }
 
     /**
-     * Set panacea vanity url (asynchronously)
-     * Minimum length of 3 characters
-     * @param appId Application identifier. (required)
-     * @param vanityUrl Vanity url (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param vanityUrl  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1702,7 +1702,7 @@ public class AppsApi {
     }
 
     /**
-     * Toggle Next Gen Web
+     * 
      * 
      * @param appId  (required)
      * @param hostname  (required)
@@ -1717,7 +1717,7 @@ public class AppsApi {
     }
 
     /**
-     * Toggle Next Gen Web
+     * 
      * 
      * @param appId  (required)
      * @param hostname  (required)
@@ -1733,7 +1733,7 @@ public class AppsApi {
     }
 
     /**
-     * Toggle Next Gen Web (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param hostname  (required)
@@ -1771,7 +1771,7 @@ public class AppsApi {
     }
     /**
      * Build call for uploadAppLogo
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param image App Logo (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1842,9 +1842,9 @@ public class AppsApi {
     }
 
     /**
-     * Set the application logo \\ icon
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @param image App Logo (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1853,9 +1853,9 @@ public class AppsApi {
     }
 
     /**
-     * Set the application logo \\ icon
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @param image App Logo (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1866,9 +1866,9 @@ public class AppsApi {
     }
 
     /**
-     * Set the application logo \\ icon (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param image App Logo (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

@@ -59,10 +59,10 @@ public class CrossSellApi {
 
     /**
      * Build call for getCrossSellMenuItems
-     * @param menuId Requested MenuId (required)
-     * @param menuItemId Selected Menu items (required)
-     * @param limit Set the limit of items returned (required)
-     * @param totalValue Get the total cost of items in the basket (required)
+     * @param menuId  (required)
+     * @param menuItemId  (required)
+     * @param limit  (required)
+     * @param totalValue  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -154,12 +154,12 @@ public class CrossSellApi {
     }
 
     /**
-     * Get all Menu items by MenuId for cross sells
-     * Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
-     * @param menuId Requested MenuId (required)
-     * @param menuItemId Selected Menu items (required)
-     * @param limit Set the limit of items returned (required)
-     * @param totalValue Get the total cost of items in the basket (required)
+     * 
+     * 
+     * @param menuId  (required)
+     * @param menuItemId  (required)
+     * @param limit  (required)
+     * @param totalValue  (required)
      * @param appId  (required)
      * @return RestApiResultCrossSellMenuItems
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -170,12 +170,12 @@ public class CrossSellApi {
     }
 
     /**
-     * Get all Menu items by MenuId for cross sells
-     * Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
-     * @param menuId Requested MenuId (required)
-     * @param menuItemId Selected Menu items (required)
-     * @param limit Set the limit of items returned (required)
-     * @param totalValue Get the total cost of items in the basket (required)
+     * 
+     * 
+     * @param menuId  (required)
+     * @param menuItemId  (required)
+     * @param limit  (required)
+     * @param totalValue  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultCrossSellMenuItems&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -187,12 +187,12 @@ public class CrossSellApi {
     }
 
     /**
-     * Get all Menu items by MenuId for cross sells (asynchronously)
-     * Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
-     * @param menuId Requested MenuId (required)
-     * @param menuItemId Selected Menu items (required)
-     * @param limit Set the limit of items returned (required)
-     * @param totalValue Get the total cost of items in the basket (required)
+     *  (asynchronously)
+     * 
+     * @param menuId  (required)
+     * @param menuItemId  (required)
+     * @param limit  (required)
+     * @param totalValue  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

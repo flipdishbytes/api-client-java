@@ -41,9 +41,9 @@ public class FulfillmentStateConfigurationApiTest {
 
     
     /**
-     * Create fulfillment configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -58,9 +58,9 @@ public class FulfillmentStateConfigurationApiTest {
     }
     
     /**
-     * Delete fulfillment states configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -75,9 +75,9 @@ public class FulfillmentStateConfigurationApiTest {
     }
     
     /**
-     * Get fulfillment configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -92,9 +92,9 @@ public class FulfillmentStateConfigurationApiTest {
     }
     
     /**
-     * Get fulfillment configuration template
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -108,9 +108,9 @@ public class FulfillmentStateConfigurationApiTest {
     }
     
     /**
-     * List fulfillment configurations for AppId
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -124,9 +124,9 @@ public class FulfillmentStateConfigurationApiTest {
     }
     
     /**
-     * Update fulfillment configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllOrderBatches**](OrderBatchesApi.md#getAllOrderBatches) | **GET** /api/v1.0/{appId}/order-batches | Returns order batches
-[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | Returns the order batch details
+[**getAllOrderBatches**](OrderBatchesApi.md#getAllOrderBatches) | **GET** /api/v1.0/{appId}/order-batches | 
+[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
 
 
 <a name="getAllOrderBatches"></a>
 # **getAllOrderBatches**
 > RestApiArrayResultOrderBatch getAllOrderBatches(appId, storeIds, createdFrom, createdTo)
 
-Returns order batches
 
-Entries are sorted by date, from the most recent. At most 100 entries are returned.
 
 ### Example
 ```java
@@ -32,10 +30,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchesApi apiInstance = new OrderBatchesApi();
-String appId = "appId_example"; // String | App Id
-List<Integer> storeIds = Arrays.asList(56); // List<Integer> | List of store Ids
-OffsetDateTime createdFrom = OffsetDateTime.now(); // OffsetDateTime | Start date for retrieving the entries
-OffsetDateTime createdTo = OffsetDateTime.now(); // OffsetDateTime | End date for retrieving the entries
+String appId = "appId_example"; // String | 
+List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
+OffsetDateTime createdFrom = OffsetDateTime.now(); // OffsetDateTime | 
+OffsetDateTime createdTo = OffsetDateTime.now(); // OffsetDateTime | 
 try {
     RestApiArrayResultOrderBatch result = apiInstance.getAllOrderBatches(appId, storeIds, createdFrom, createdTo);
     System.out.println(result);
@@ -49,10 +47,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **storeIds** | [**List&lt;Integer&gt;**](Integer.md)| List of store Ids | [optional]
- **createdFrom** | **OffsetDateTime**| Start date for retrieving the entries | [optional]
- **createdTo** | **OffsetDateTime**| End date for retrieving the entries | [optional]
+ **appId** | **String**|  |
+ **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **createdFrom** | **OffsetDateTime**|  | [optional]
+ **createdTo** | **OffsetDateTime**|  | [optional]
 
 ### Return type
 
@@ -71,7 +69,7 @@ Name | Type | Description  | Notes
 # **getOrderBatch**
 > RestApiResultOrderBatch getOrderBatch(appId, orderBatchId)
 
-Returns the order batch details
+
 
 ### Example
 ```java
@@ -89,8 +87,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OrderBatchesApi apiInstance = new OrderBatchesApi();
-String appId = "appId_example"; // String | App Id
-Integer orderBatchId = 56; // Integer | Order Batch Id
+String appId = "appId_example"; // String | 
+Integer orderBatchId = 56; // Integer | 
 try {
     RestApiResultOrderBatch result = apiInstance.getOrderBatch(appId, orderBatchId);
     System.out.println(result);
@@ -104,8 +102,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **orderBatchId** | **Integer**| Order Batch Id |
+ **appId** | **String**|  |
+ **orderBatchId** | **Integer**|  |
 
 ### Return type
 

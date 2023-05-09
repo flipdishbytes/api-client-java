@@ -36,7 +36,7 @@ public class LookerSingleSignOnApiTest {
 
     
     /**
-     * Get the generic single sign on embed URL for Looker dashboards
+     * 
      *
      * 
      *

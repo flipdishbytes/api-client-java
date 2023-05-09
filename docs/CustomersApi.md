@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
-[**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
+[**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+[**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
 
 <a name="getCustomerById"></a>
 # **getCustomerById**
 > RestApiResultCustomer getCustomerById(appId, customerId)
 
-Get customer of an app by Id
+
 
 ### Example
 ```java
@@ -30,8 +30,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CustomersApi apiInstance = new CustomersApi();
-String appId = "appId_example"; // String | App Name Id
-Integer customerId = 56; // Integer | Customer Id
+String appId = "appId_example"; // String | 
+Integer customerId = 56; // Integer | 
 try {
     RestApiResultCustomer result = apiInstance.getCustomerById(appId, customerId);
     System.out.println(result);
@@ -45,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **customerId** | **Integer**| Customer Id |
+ **appId** | **String**|  |
+ **customerId** | **Integer**|  |
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **updateCustomerById**
 > RestApiResultCustomer updateCustomerById(appId, customerId, updateCustomer)
 
-Update customer of an app by Id
+
 
 ### Example
 ```java
@@ -83,9 +83,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CustomersApi apiInstance = new CustomersApi();
-String appId = "appId_example"; // String | App Name Id
-Integer customerId = 56; // Integer | Customer Id
-CustomerUpdateModel updateCustomer = new CustomerUpdateModel(); // CustomerUpdateModel | Updated customer information
+String appId = "appId_example"; // String | 
+Integer customerId = 56; // Integer | 
+CustomerUpdateModel updateCustomer = new CustomerUpdateModel(); // CustomerUpdateModel | 
 try {
     RestApiResultCustomer result = apiInstance.updateCustomerById(appId, customerId, updateCustomer);
     System.out.println(result);
@@ -99,9 +99,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **customerId** | **Integer**| Customer Id |
- **updateCustomer** | [**CustomerUpdateModel**](CustomerUpdateModel.md)| Updated customer information |
+ **appId** | **String**|  |
+ **customerId** | **Integer**|  |
+ **updateCustomer** | [**CustomerUpdateModel**](CustomerUpdateModel.md)|  |
 
 ### Return type
 

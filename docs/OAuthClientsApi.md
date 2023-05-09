@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
-[**createOAuthApp**](OAuthClientsApi.md#createOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
-[**deleteOAuthApp**](OAuthClientsApi.md#deleteOAuthApp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
-[**getOAuthApps**](OAuthClientsApi.md#getOAuthApps) | **GET** /api/v1.0/{appId}/oauthclients | Get all OAuth Apps
-[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Get OAuth App by identifier
-[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
-[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
-[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
+[**createOAuthApp**](OAuthClientsApi.md#createOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients | 
+[**deleteOAuthApp**](OAuthClientsApi.md#deleteOAuthApp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+[**getOAuthApps**](OAuthClientsApi.md#getOAuthApps) | **GET** /api/v1.0/{appId}/oauthclients | 
+[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | 
+[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | 
+[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
 [**oAuthClientsGetApplications**](OAuthClientsApi.md#oAuthClientsGetApplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
-[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
-[**updateOAuthApp**](OAuthClientsApi.md#updateOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
+[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | 
+[**updateOAuthApp**](OAuthClientsApi.md#updateOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
 
 
 <a name="addRedirectUri"></a>
 # **addRedirectUri**
 > RestApiResultOauthClientRedirectUri addRedirectUri(oauthAppId, uri, appId)
 
-Create OAuth App redirect uri
+
 
 ### Example
 ```java
@@ -39,8 +39,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-String uri = "uri_example"; // String | Redirect uri
+String oauthAppId = "oauthAppId_example"; // String | 
+String uri = "uri_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiResultOauthClientRedirectUri result = apiInstance.addRedirectUri(oauthAppId, uri, appId);
@@ -55,8 +55,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **uri** | **String**| Redirect uri |
+ **oauthAppId** | **String**|  |
+ **uri** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 # **createOAuthApp**
 > createOAuthApp(oAuthApp, appId)
 
-Create OAuth App
+
 
 ### Example
 ```java
@@ -94,7 +94,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-OAuthApp oAuthApp = new OAuthApp(); // OAuthApp | OAuth App
+OAuthApp oAuthApp = new OAuthApp(); // OAuthApp | 
 String appId = "appId_example"; // String | 
 try {
     apiInstance.createOAuthApp(oAuthApp, appId);
@@ -108,7 +108,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oAuthApp** | [**OAuthApp**](OAuthApp.md)| OAuth App |
+ **oAuthApp** | [**OAuthApp**](OAuthApp.md)|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -128,7 +128,7 @@ null (empty response body)
 # **deleteOAuthApp**
 > deleteOAuthApp(oauthAppId, appId)
 
-Delete OAuth App
+
 
 ### Example
 ```java
@@ -146,7 +146,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
+String oauthAppId = "oauthAppId_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     apiInstance.deleteOAuthApp(oauthAppId, appId);
@@ -160,7 +160,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
+ **oauthAppId** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -180,7 +180,7 @@ null (empty response body)
 # **getOAuthApps**
 > RestApiArrayResultOAuthApp getOAuthApps(appId, oauthAppName)
 
-Get all OAuth Apps
+
 
 ### Example
 ```java
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 # **getOAuthClientByClientId**
 > RestApiResultOAuthApp getOAuthClientByClientId(oauthAppId, appId)
 
-Get OAuth App by identifier
+
 
 ### Example
 ```java
@@ -251,7 +251,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
+String oauthAppId = "oauthAppId_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiResultOAuthApp result = apiInstance.getOAuthClientByClientId(oauthAppId, appId);
@@ -266,7 +266,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
+ **oauthAppId** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 # **getOAuthClientSecret**
 > RestApiStringResult getOAuthClientSecret(oauthAppId, appId)
 
-Get OAuth App secret key
+
 
 ### Example
 ```java
@@ -304,7 +304,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
+String oauthAppId = "oauthAppId_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.getOAuthClientSecret(oauthAppId, appId);
@@ -319,7 +319,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
+ **oauthAppId** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 # **getOauthAccessToken**
 > RestApiStringResult getOauthAccessToken(oauthAppId, appId)
 
-Get OAuth access token for App
+
 
 ### Example
 ```java
@@ -357,7 +357,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
+String oauthAppId = "oauthAppId_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.getOauthAccessToken(oauthAppId, appId);
@@ -372,7 +372,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
+ **oauthAppId** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 # **getRedirectUris**
 > RestApiArrayResultOauthClientRedirectUri getRedirectUris(oauthAppId, appId)
 
-Get OAuth App redirect uris
+
 
 ### Example
 ```java
@@ -410,7 +410,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
+String oauthAppId = "oauthAppId_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultOauthClientRedirectUri result = apiInstance.getRedirectUris(oauthAppId, appId);
@@ -425,7 +425,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
+ **oauthAppId** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 # **removeRedirectUri**
 > removeRedirectUri(oauthAppId, uriId, appId)
 
-Delete OAuth App redirect uri
+
 
 ### Example
 ```java
@@ -514,8 +514,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-Integer uriId = 56; // Integer | Redirect uri identifier
+String oauthAppId = "oauthAppId_example"; // String | 
+Integer uriId = 56; // Integer | 
 String appId = "appId_example"; // String | 
 try {
     apiInstance.removeRedirectUri(oauthAppId, uriId, appId);
@@ -529,8 +529,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **uriId** | **Integer**| Redirect uri identifier |
+ **oauthAppId** | **String**|  |
+ **uriId** | **Integer**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -550,7 +550,7 @@ null (empty response body)
 # **updateOAuthApp**
 > updateOAuthApp(oauthAppId, oAuthApp, appId)
 
-Update OAuth App
+
 
 ### Example
 ```java
@@ -568,8 +568,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 OAuthClientsApi apiInstance = new OAuthClientsApi();
-String oauthAppId = "oauthAppId_example"; // String | OAuth App identifier
-OAuthApp oAuthApp = new OAuthApp(); // OAuthApp | OAuth App
+String oauthAppId = "oauthAppId_example"; // String | 
+OAuthApp oAuthApp = new OAuthApp(); // OAuthApp | 
 String appId = "appId_example"; // String | 
 try {
     apiInstance.updateOAuthApp(oauthAppId, oAuthApp, appId);
@@ -583,8 +583,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauthAppId** | **String**| OAuth App identifier |
- **oAuthApp** | [**OAuthApp**](OAuthApp.md)| OAuth App |
+ **oauthAppId** | **String**|  |
+ **oAuthApp** | [**OAuthApp**](OAuthApp.md)|  |
  **appId** | **String**|  |
 
 ### Return type

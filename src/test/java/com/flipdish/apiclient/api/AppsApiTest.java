@@ -44,7 +44,7 @@ public class AppsApiTest {
 
     
     /**
-     * Get the application configuration
+     * 
      *
      * 
      *
@@ -60,9 +60,9 @@ public class AppsApiTest {
     }
     
     /**
-     * Get the application hostname DNS delegation states for A and CNAME records.
+     * 
      *
-     * A domain might be ready but still need 10 minutes to work properly because of HAProxy.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -76,7 +76,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Get Apps
+     * 
      *
      * 
      *
@@ -94,7 +94,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Get the application compliance configuration
+     * 
      *
      * 
      *
@@ -110,7 +110,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+     * 
      *
      * 
      *
@@ -126,7 +126,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Get all supported countries.
+     * 
      *
      * 
      *
@@ -141,9 +141,9 @@ public class AppsApiTest {
     }
     
     /**
-     * Is panacea vanity url available
+     * 
      *
-     * Minimum length of 3 characters
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -158,7 +158,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Set the application configuration
+     * 
      *
      * 
      *
@@ -175,9 +175,9 @@ public class AppsApiTest {
     }
     
     /**
-     * Set the application hostname.
+     * 
      *
-     * If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -194,7 +194,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Set the application languages
+     * 
      *
      * 
      *
@@ -211,7 +211,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Set the application compliance configuration
+     * 
      *
      * 
      *
@@ -228,9 +228,9 @@ public class AppsApiTest {
     }
     
     /**
-     * Set panacea vanity url
+     * 
      *
-     * Minimum length of 3 characters
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -245,7 +245,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Toggle Next Gen Web
+     * 
      *
      * 
      *
@@ -264,7 +264,7 @@ public class AppsApiTest {
     }
     
     /**
-     * Set the application logo \\ icon
+     * 
      *
      * 
      *

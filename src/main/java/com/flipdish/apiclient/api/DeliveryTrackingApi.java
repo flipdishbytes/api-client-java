@@ -61,9 +61,9 @@ public class DeliveryTrackingApi {
 
     /**
      * Build call for assignDriverToOrder
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
-     * @param driverId Driver Id (required)
+     * @param appId  (required)
+     * @param orderId  (required)
+     * @param driverId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -138,11 +138,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Assign driver to order
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
-     * @param driverId Driver Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderId  (required)
+     * @param driverId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void assignDriverToOrder(String appId, Integer orderId, Integer driverId) throws ApiException {
@@ -150,11 +150,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Assign driver to order
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
-     * @param driverId Driver Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderId  (required)
+     * @param driverId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -164,11 +164,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Assign driver to order (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
-     * @param driverId Driver Id (required)
+     * @param appId  (required)
+     * @param orderId  (required)
+     * @param driverId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -200,9 +200,9 @@ public class DeliveryTrackingApi {
     }
     /**
      * Build call for assignDriverToOrders
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
-     * @param orderIdAndSequenceNumbers Array of object containing OrderId and Sequence (required)
+     * @param appId  (required)
+     * @param driverId  (required)
+     * @param orderIdAndSequenceNumbers  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -276,11 +276,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * Assign driver to multiple orders
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
-     * @param orderIdAndSequenceNumbers Array of object containing OrderId and Sequence (required)
+     * 
+     * @param appId  (required)
+     * @param driverId  (required)
+     * @param orderIdAndSequenceNumbers  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void assignDriverToOrders(String appId, Integer driverId, List<OrderIdAndSequenceNumber> orderIdAndSequenceNumbers) throws ApiException {
@@ -288,11 +288,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * Assign driver to multiple orders
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
-     * @param orderIdAndSequenceNumbers Array of object containing OrderId and Sequence (required)
+     * 
+     * @param appId  (required)
+     * @param driverId  (required)
+     * @param orderIdAndSequenceNumbers  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -302,11 +302,11 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * Assign driver to multiple orders (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
-     * @param orderIdAndSequenceNumbers Array of object containing OrderId and Sequence (required)
+     * @param appId  (required)
+     * @param driverId  (required)
+     * @param orderIdAndSequenceNumbers  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -338,11 +338,11 @@ public class DeliveryTrackingApi {
     }
     /**
      * Build call for getDrivers
-     * @param appId Application identifier (required)
-     * @param name Driver&#39;s username (optional)
-     * @param phoneNumber Driver&#39;s phone number (optional)
-     * @param storeId Store Id (optional)
-     * @param presence Offline/Online (optional)
+     * @param appId  (required)
+     * @param name  (optional)
+     * @param phoneNumber  (optional)
+     * @param storeId  (optional)
+     * @param presence  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -413,13 +413,13 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Get drivers by App
      * 
-     * @param appId Application identifier (required)
-     * @param name Driver&#39;s username (optional)
-     * @param phoneNumber Driver&#39;s phone number (optional)
-     * @param storeId Store Id (optional)
-     * @param presence Offline/Online (optional)
+     * 
+     * @param appId  (required)
+     * @param name  (optional)
+     * @param phoneNumber  (optional)
+     * @param storeId  (optional)
+     * @param presence  (optional)
      * @return RestApiArrayResultDriver
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -429,13 +429,13 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Get drivers by App
      * 
-     * @param appId Application identifier (required)
-     * @param name Driver&#39;s username (optional)
-     * @param phoneNumber Driver&#39;s phone number (optional)
-     * @param storeId Store Id (optional)
-     * @param presence Offline/Online (optional)
+     * 
+     * @param appId  (required)
+     * @param name  (optional)
+     * @param phoneNumber  (optional)
+     * @param storeId  (optional)
+     * @param presence  (optional)
      * @return ApiResponse&lt;RestApiArrayResultDriver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -446,13 +446,13 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Get drivers by App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param name Driver&#39;s username (optional)
-     * @param phoneNumber Driver&#39;s phone number (optional)
-     * @param storeId Store Id (optional)
-     * @param presence Offline/Online (optional)
+     * @param appId  (required)
+     * @param name  (optional)
+     * @param phoneNumber  (optional)
+     * @param storeId  (optional)
+     * @param presence  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -485,8 +485,8 @@ public class DeliveryTrackingApi {
     }
     /**
      * Build call for inviteDriverToApp
-     * @param appId Application identifier (required)
-     * @param driverInvitation Driver invitation model (required)
+     * @param appId  (required)
+     * @param driverInvitation  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -554,10 +554,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Invite driver
      * 
-     * @param appId Application identifier (required)
-     * @param driverInvitation Driver invitation model (required)
+     * 
+     * @param appId  (required)
+     * @param driverInvitation  (required)
      * @return RestApiResultDriver
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -567,10 +567,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Invite driver
      * 
-     * @param appId Application identifier (required)
-     * @param driverInvitation Driver invitation model (required)
+     * 
+     * @param appId  (required)
+     * @param driverInvitation  (required)
      * @return ApiResponse&lt;RestApiResultDriver&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -581,10 +581,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Invite driver (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param driverInvitation Driver invitation model (required)
+     * @param appId  (required)
+     * @param driverInvitation  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -617,8 +617,8 @@ public class DeliveryTrackingApi {
     }
     /**
      * Build call for removeDriverFromApp
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
+     * @param appId  (required)
+     * @param driverId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -687,10 +687,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from app
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
+     * 
+     * @param appId  (required)
+     * @param driverId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void removeDriverFromApp(String appId, Integer driverId) throws ApiException {
@@ -698,10 +698,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from app
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
+     * 
+     * @param appId  (required)
+     * @param driverId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -711,10 +711,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from app (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param driverId Driver Id (required)
+     * @param appId  (required)
+     * @param driverId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -746,8 +746,8 @@ public class DeliveryTrackingApi {
     }
     /**
      * Build call for unassignDriverFromOrder
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
+     * @param appId  (required)
+     * @param orderId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -816,10 +816,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from order
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void unassignDriverFromOrder(String appId, Integer orderId) throws ApiException {
@@ -827,10 +827,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from order
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
+     * 
+     * @param appId  (required)
+     * @param orderId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -840,10 +840,10 @@ public class DeliveryTrackingApi {
     }
 
     /**
-     * [PRIVATE] Unassign driver from order (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param orderId Order Id (required)
+     * @param appId  (required)
+     * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

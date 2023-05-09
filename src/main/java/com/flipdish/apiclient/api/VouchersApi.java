@@ -63,8 +63,8 @@ public class VouchersApi {
 
     /**
      * Build call for createVoucher
-     * @param appId App Name Id (required)
-     * @param voucher Voucher Details (required)
+     * @param appId  (required)
+     * @param voucher  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -132,10 +132,10 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Create voucher
      * 
-     * @param appId App Name Id (required)
-     * @param voucher Voucher Details (required)
+     * 
+     * @param appId  (required)
+     * @param voucher  (required)
      * @return RestApiResultVoucherWithStats
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -145,10 +145,10 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Create voucher
      * 
-     * @param appId App Name Id (required)
-     * @param voucher Voucher Details (required)
+     * 
+     * @param appId  (required)
+     * @param voucher  (required)
      * @return ApiResponse&lt;RestApiResultVoucherWithStats&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -159,10 +159,10 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Create voucher (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param voucher Voucher Details (required)
+     * @param appId  (required)
+     * @param voucher  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -195,7 +195,7 @@ public class VouchersApi {
     }
     /**
      * Build call for getVoucherById
-     * @param voucherId Id of the voucher (required)
+     * @param voucherId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -258,9 +258,9 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher by identifier
      * 
-     * @param voucherId Id of the voucher (required)
+     * 
+     * @param voucherId  (required)
      * @return RestApiResultVoucherWithStats
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -270,9 +270,9 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher by identifier
      * 
-     * @param voucherId Id of the voucher (required)
+     * 
+     * @param voucherId  (required)
      * @return ApiResponse&lt;RestApiResultVoucherWithStats&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -283,9 +283,9 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher by identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param voucherId Id of the voucher (required)
+     * @param voucherId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -318,9 +318,9 @@ public class VouchersApi {
     }
     /**
      * Build call for getVoucherStatsById
-     * @param voucherId Id of the voucher (required)
-     * @param aggregateDataBy Aggregate data by day \\ week \\ month (required)
-     * @param dataPointLimit Amount of data points per request (optional)
+     * @param voucherId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -392,11 +392,11 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher stats by identifier
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param aggregateDataBy Aggregate data by day \\ week \\ month (required)
-     * @param dataPointLimit Amount of data points per request (optional)
+     * 
+     * @param voucherId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
      * @return RestApiArrayResultVoucherDataPoint
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -406,11 +406,11 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher stats by identifier
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param aggregateDataBy Aggregate data by day \\ week \\ month (required)
-     * @param dataPointLimit Amount of data points per request (optional)
+     * 
+     * @param voucherId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
      * @return ApiResponse&lt;RestApiArrayResultVoucherDataPoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -421,11 +421,11 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get voucher stats by identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param aggregateDataBy Aggregate data by day \\ week \\ month (required)
-     * @param dataPointLimit Amount of data points per request (optional)
+     * @param voucherId  (required)
+     * @param aggregateDataBy  (required)
+     * @param dataPointLimit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -458,14 +458,14 @@ public class VouchersApi {
     }
     /**
      * Build call for getVouchers
-     * @param appId Application Id (required)
-     * @param pageIndex Page Number (optional)
-     * @param pageSize Page Size (optional)
-     * @param searchCodes Search by Voucher Code\\s (optional)
-     * @param statusSearch Search by Status (optional)
-     * @param typeSearch Search by Type (optional)
-     * @param subTypeSearch Search by Sub Type (optional)
-     * @param storeIds Search by Store Ids (optional)
+     * @param appId  (required)
+     * @param pageIndex  (optional)
+     * @param pageSize  (optional)
+     * @param searchCodes  (optional)
+     * @param statusSearch  (optional)
+     * @param typeSearch  (optional)
+     * @param subTypeSearch  (optional)
+     * @param storeIds  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -542,16 +542,16 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get vouchers summaries for App Id
      * 
-     * @param appId Application Id (required)
-     * @param pageIndex Page Number (optional)
-     * @param pageSize Page Size (optional)
-     * @param searchCodes Search by Voucher Code\\s (optional)
-     * @param statusSearch Search by Status (optional)
-     * @param typeSearch Search by Type (optional)
-     * @param subTypeSearch Search by Sub Type (optional)
-     * @param storeIds Search by Store Ids (optional)
+     * 
+     * @param appId  (required)
+     * @param pageIndex  (optional)
+     * @param pageSize  (optional)
+     * @param searchCodes  (optional)
+     * @param statusSearch  (optional)
+     * @param typeSearch  (optional)
+     * @param subTypeSearch  (optional)
+     * @param storeIds  (optional)
      * @return RestApiPaginationResultVoucherSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -561,16 +561,16 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get vouchers summaries for App Id
      * 
-     * @param appId Application Id (required)
-     * @param pageIndex Page Number (optional)
-     * @param pageSize Page Size (optional)
-     * @param searchCodes Search by Voucher Code\\s (optional)
-     * @param statusSearch Search by Status (optional)
-     * @param typeSearch Search by Type (optional)
-     * @param subTypeSearch Search by Sub Type (optional)
-     * @param storeIds Search by Store Ids (optional)
+     * 
+     * @param appId  (required)
+     * @param pageIndex  (optional)
+     * @param pageSize  (optional)
+     * @param searchCodes  (optional)
+     * @param statusSearch  (optional)
+     * @param typeSearch  (optional)
+     * @param subTypeSearch  (optional)
+     * @param storeIds  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultVoucherSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -581,16 +581,16 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Get vouchers summaries for App Id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application Id (required)
-     * @param pageIndex Page Number (optional)
-     * @param pageSize Page Size (optional)
-     * @param searchCodes Search by Voucher Code\\s (optional)
-     * @param statusSearch Search by Status (optional)
-     * @param typeSearch Search by Type (optional)
-     * @param subTypeSearch Search by Sub Type (optional)
-     * @param storeIds Search by Store Ids (optional)
+     * @param appId  (required)
+     * @param pageIndex  (optional)
+     * @param pageSize  (optional)
+     * @param searchCodes  (optional)
+     * @param statusSearch  (optional)
+     * @param typeSearch  (optional)
+     * @param subTypeSearch  (optional)
+     * @param storeIds  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -623,12 +623,12 @@ public class VouchersApi {
     }
     /**
      * Build call for updateVoucher
-     * @param voucherId Id of the voucher (required)
-     * @param voucher Updated details for the voucher (required)
-     * @param storeId List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param percentValue Percent voucher value (can have 1 of 3) (optional)
-     * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
-     * @param freeItemId Free Item Id (can have 1 of 3) (optional)
+     * @param voucherId  (required)
+     * @param voucher  (required)
+     * @param storeId  (optional)
+     * @param percentValue  (optional)
+     * @param lumpValue  (optional)
+     * @param freeItemId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -704,14 +704,14 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Updates voucher
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param voucher Updated details for the voucher (required)
-     * @param storeId List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param percentValue Percent voucher value (can have 1 of 3) (optional)
-     * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
-     * @param freeItemId Free Item Id (can have 1 of 3) (optional)
+     * 
+     * @param voucherId  (required)
+     * @param voucher  (required)
+     * @param storeId  (optional)
+     * @param percentValue  (optional)
+     * @param lumpValue  (optional)
+     * @param freeItemId  (optional)
      * @return RestApiResultVoucherWithStats
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -721,14 +721,14 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Updates voucher
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param voucher Updated details for the voucher (required)
-     * @param storeId List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param percentValue Percent voucher value (can have 1 of 3) (optional)
-     * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
-     * @param freeItemId Free Item Id (can have 1 of 3) (optional)
+     * 
+     * @param voucherId  (required)
+     * @param voucher  (required)
+     * @param storeId  (optional)
+     * @param percentValue  (optional)
+     * @param lumpValue  (optional)
+     * @param freeItemId  (optional)
      * @return ApiResponse&lt;RestApiResultVoucherWithStats&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -739,14 +739,14 @@ public class VouchersApi {
     }
 
     /**
-     * [PRIVATE API] Updates voucher (asynchronously)
+     *  (asynchronously)
      * 
-     * @param voucherId Id of the voucher (required)
-     * @param voucher Updated details for the voucher (required)
-     * @param storeId List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param percentValue Percent voucher value (can have 1 of 3) (optional)
-     * @param lumpValue Lump voucher value (can have 1 of 3) (optional)
-     * @param freeItemId Free Item Id (can have 1 of 3) (optional)
+     * @param voucherId  (required)
+     * @param voucher  (required)
+     * @param storeId  (optional)
+     * @param percentValue  (optional)
+     * @param lumpValue  (optional)
+     * @param freeItemId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

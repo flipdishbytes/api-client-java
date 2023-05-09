@@ -59,7 +59,7 @@ public class PaymentsApi {
 
     /**
      * Build call for getOrderPaymentInformation
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -122,9 +122,9 @@ public class PaymentsApi {
     }
 
     /**
-     * Returns payment refund information related to the order with the order id
      * 
-     * @param orderId Order identifier (required)
+     * 
+     * @param orderId  (required)
      * @return RestApiResultOrderPaymentInformation
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -134,9 +134,9 @@ public class PaymentsApi {
     }
 
     /**
-     * Returns payment refund information related to the order with the order id
      * 
-     * @param orderId Order identifier (required)
+     * 
+     * @param orderId  (required)
      * @return ApiResponse&lt;RestApiResultOrderPaymentInformation&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,9 +147,9 @@ public class PaymentsApi {
     }
 
     /**
-     * Returns payment refund information related to the order with the order id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -35,7 +35,7 @@ public class LookerDashboardApiTest {
 
     
     /**
-     * Get all dashboards
+     * 
      *
      * 
      *

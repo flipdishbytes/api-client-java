@@ -48,7 +48,7 @@ public class AccountsApiTest {
 
     
     /**
-     * Answer a signup question
+     * 
      *
      * 
      *
@@ -65,7 +65,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Change password
+     * 
      *
      * 
      *
@@ -81,7 +81,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Change password
+     * 
      *
      * 
      *
@@ -97,7 +97,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Create account with email address and store name
+     * 
      *
      * 
      *
@@ -113,7 +113,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Gets the current account detail
+     * 
      *
      * 
      *
@@ -128,7 +128,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * [PRIVATE API] Get timezones localised to users language
+     * 
      *
      * 
      *
@@ -143,7 +143,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Login with username and password
+     * 
      *
      * 
      *
@@ -159,7 +159,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Login with SSO token
+     * 
      *
      * 
      *
@@ -174,7 +174,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Login with email and pin
+     * 
      *
      * 
      *
@@ -190,7 +190,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Log out. It removes Flipdish authorization Cookie.
+     * 
      *
      * 
      *
@@ -205,7 +205,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Reset password with token.
+     * 
      *
      * 
      *
@@ -221,7 +221,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Validate recaptcha from flipdish portal
+     * 
      *
      * 
      *
@@ -237,7 +237,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Request login PIN. The server sends the PIN to the email address.
+     * 
      *
      * 
      *
@@ -253,7 +253,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Request password reset. Flipdish system will send a token via email.
+     * 
      *
      * 
      *
@@ -269,7 +269,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Request Password Reset PIN. The server sends the PIN to the email address.
+     * 
      *
      * 
      *
@@ -285,7 +285,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Skip a signup question
+     * 
      *
      * 
      *
@@ -301,7 +301,7 @@ public class AccountsApiTest {
     }
     
     /**
-     * Update account with name and language
+     * 
      *
      * 
      *

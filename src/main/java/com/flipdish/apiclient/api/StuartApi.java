@@ -61,8 +61,8 @@ public class StuartApi {
 
     /**
      * Build call for stuartCancelJob
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -132,10 +132,10 @@ public class StuartApi {
     }
 
     /**
-     * Cancel a stuart job
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * 
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -145,10 +145,10 @@ public class StuartApi {
     }
 
     /**
-     * Cancel a stuart job
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * 
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -159,10 +159,10 @@ public class StuartApi {
     }
 
     /**
-     * Cancel a stuart job (asynchronously)
+     *  (asynchronously)
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -195,8 +195,8 @@ public class StuartApi {
     }
     /**
      * Build call for stuartGetJob
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -266,10 +266,10 @@ public class StuartApi {
     }
 
     /**
-     * Get start job details
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * 
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @return RestApiResultJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -279,10 +279,10 @@ public class StuartApi {
     }
 
     /**
-     * Get start job details
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * 
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -293,10 +293,10 @@ public class StuartApi {
     }
 
     /**
-     * Get start job details (asynchronously)
+     *  (asynchronously)
      * 
-     * @param jobId Stuart job identifier (required)
-     * @param storeId Store identifier (required)
+     * @param jobId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -329,7 +329,7 @@ public class StuartApi {
     }
     /**
      * Build call for stuartGetStuartSettings
-     * @param storeId Store Identifier (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -392,9 +392,9 @@ public class StuartApi {
     }
 
     /**
-     * Get stuart settings for a store
      * 
-     * @param storeId Store Identifier (required)
+     * 
+     * @param storeId  (required)
      * @return RestApiResultStuartSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -404,9 +404,9 @@ public class StuartApi {
     }
 
     /**
-     * Get stuart settings for a store
      * 
-     * @param storeId Store Identifier (required)
+     * 
+     * @param storeId  (required)
      * @return ApiResponse&lt;RestApiResultStuartSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -417,9 +417,9 @@ public class StuartApi {
     }
 
     /**
-     * Get stuart settings for a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Identifier (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -452,8 +452,8 @@ public class StuartApi {
     }
     /**
      * Build call for stuartPostStuartSettings
-     * @param storeId Store Identifier (required)
-     * @param stuartSettings Stuart settings model (required)
+     * @param storeId  (required)
+     * @param stuartSettings  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -521,10 +521,10 @@ public class StuartApi {
     }
 
     /**
-     * Set stuart settings for a store
      * 
-     * @param storeId Store Identifier (required)
-     * @param stuartSettings Stuart settings model (required)
+     * 
+     * @param storeId  (required)
+     * @param stuartSettings  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -534,10 +534,10 @@ public class StuartApi {
     }
 
     /**
-     * Set stuart settings for a store
      * 
-     * @param storeId Store Identifier (required)
-     * @param stuartSettings Stuart settings model (required)
+     * 
+     * @param storeId  (required)
+     * @param stuartSettings  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -548,10 +548,10 @@ public class StuartApi {
     }
 
     /**
-     * Set stuart settings for a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store Identifier (required)
-     * @param stuartSettings Stuart settings model (required)
+     * @param storeId  (required)
+     * @param stuartSettings  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

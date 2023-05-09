@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getKioskIotConnection**](KioskIotApi.md#getKioskIotConnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-[**queryTelemetrySeries**](KioskIotApi.md#queryTelemetrySeries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
+[**getKioskIotConnection**](KioskIotApi.md#getKioskIotConnection) | **POST** /api/v1.0/kioskiot/connect | 
+[**queryTelemetrySeries**](KioskIotApi.md#queryTelemetrySeries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
 
 
 <a name="getKioskIotConnection"></a>
 # **getKioskIotConnection**
 > RestApiResultKioskIotConnectionParameters getKioskIotConnection()
 
-Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -61,9 +59,7 @@ This endpoint does not need any parameter.
 # **queryTelemetrySeries**
 > RestApiResultTelemetrySeriesResult queryTelemetrySeries(appId, queryParams)
 
-Get the IoT time series values for a given Kiosk Id, properties and time range
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

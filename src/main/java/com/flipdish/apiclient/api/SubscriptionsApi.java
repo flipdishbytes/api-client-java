@@ -60,8 +60,8 @@ public class SubscriptionsApi {
 
     /**
      * Build call for getSubscriptionById
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (required)
+     * @param appId  (required)
+     * @param subscriptionId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -130,10 +130,10 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get subscription by id
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (required)
      * @return RestApiResultSubscription
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -143,10 +143,10 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get subscription by id
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (required)
      * @return ApiResponse&lt;RestApiResultSubscription&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -157,10 +157,10 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get subscription by id (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param subscriptionId Subscription Id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param subscriptionId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -193,9 +193,9 @@ public class SubscriptionsApi {
     }
     /**
      * Build call for getSubscriptionsForApp
-     * @param appId App Id (required)
-     * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * @param appId  (required)
+     * @param excludeNotOwnedSubscriptions  (optional)
+     * @param storeId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -262,11 +262,11 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get list of subscriptions for an App
-     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
-     * @param appId App Id (required)
-     * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param excludeNotOwnedSubscriptions  (optional)
+     * @param storeId  (optional)
      * @return RestApiArrayResultSubscriptionSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -276,11 +276,11 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get list of subscriptions for an App
-     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
-     * @param appId App Id (required)
-     * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param excludeNotOwnedSubscriptions  (optional)
+     * @param storeId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultSubscriptionSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -291,11 +291,11 @@ public class SubscriptionsApi {
     }
 
     /**
-     * Get list of subscriptions for an App (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
-     * @param appId App Id (required)
-     * @param excludeNotOwnedSubscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
-     * @param storeId Store Ids (optional) (optional)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param excludeNotOwnedSubscriptions  (optional)
+     * @param storeId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

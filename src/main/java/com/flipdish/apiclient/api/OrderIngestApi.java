@@ -129,8 +129,8 @@ public class OrderIngestApi {
     }
 
     /**
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
-     * [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+     * 
+     * 
      * @param order  (required)
      * @param appNameId  (required)
      * @return RestApiResultOrderIngestSubmitOrderResponse
@@ -142,8 +142,8 @@ public class OrderIngestApi {
     }
 
     /**
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
-     * [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+     * 
+     * 
      * @param order  (required)
      * @param appNameId  (required)
      * @return ApiResponse&lt;RestApiResultOrderIngestSubmitOrderResponse&gt;
@@ -156,8 +156,8 @@ public class OrderIngestApi {
     }
 
     /**
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem (asynchronously)
-     * [ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
+     *  (asynchronously)
+     * 
      * @param order  (required)
      * @param appNameId  (required)
      * @param callback The callback to be executed when the API call finishes

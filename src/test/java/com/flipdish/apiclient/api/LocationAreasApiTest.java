@@ -40,7 +40,7 @@ public class LocationAreasApiTest {
 
     
     /**
-     * Create a Location Area, i.e: Room, Floor, Parking lot
+     * 
      *
      * 
      *
@@ -58,7 +58,7 @@ public class LocationAreasApiTest {
     }
     
     /**
-     * Retrieve a Location Area
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class LocationAreasApiTest {
     }
     
     /**
-     * Retrieve all Location Areas for a Store
+     * 
      *
      * 
      *
@@ -93,7 +93,7 @@ public class LocationAreasApiTest {
     }
     
     /**
-     * Update a Location Area, i.e: Room, Floor, Car park space
+     * 
      *
      * 
      *

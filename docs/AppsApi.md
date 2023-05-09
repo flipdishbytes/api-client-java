@@ -4,27 +4,27 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
-[**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
-[**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | Get Apps
-[**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
-[**getPanaceaVanityUrl**](AppsApi.md#getPanaceaVanityUrl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-[**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
-[**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
-[**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
-[**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
-[**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
-[**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
-[**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
-[**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | Toggle Next Gen Web
-[**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
+[**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
+[**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
+[**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
+[**getPanaceaVanityUrl**](AppsApi.md#getPanaceaVanityUrl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
+[**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | 
+[**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+[**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
+[**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
+[**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
+[**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+[**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+[**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
 
 <a name="getApp"></a>
 # **getApp**
 > RestApiResultApp getApp(appId)
 
-Get the application configuration
+
 
 ### Example
 ```java
@@ -42,7 +42,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
+String appId = "appId_example"; // String | 
 try {
     RestApiResultApp result = apiInstance.getApp(appId);
     System.out.println(result);
@@ -56,7 +56,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -75,9 +75,7 @@ Name | Type | Description  | Notes
 # **getAppHostnameStatus**
 > RestApiResultDnsRecordInformation getAppHostnameStatus(appId)
 
-Get the application hostname DNS delegation states for A and CNAME records.
 
-A domain might be ready but still need 10 minutes to work properly because of HAProxy.
 
 ### Example
 ```java
@@ -95,7 +93,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier.
+String appId = "appId_example"; // String | 
 try {
     RestApiResultDnsRecordInformation result = apiInstance.getAppHostnameStatus(appId);
     System.out.println(result);
@@ -109,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier. |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -128,7 +126,7 @@ Name | Type | Description  | Notes
 # **getApps**
 > RestApiPaginationResultApp getApps(nameFilter, page, limit)
 
-Get Apps
+
 
 ### Example
 ```java
@@ -183,7 +181,7 @@ Name | Type | Description  | Notes
 # **getCompliance**
 > RestApiResultAppCompliance getCompliance(appId)
 
-Get the application compliance configuration
+
 
 ### Example
 ```java
@@ -201,7 +199,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
+String appId = "appId_example"; // String | 
 try {
     RestApiResultAppCompliance result = apiInstance.getCompliance(appId);
     System.out.println(result);
@@ -215,7 +213,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -234,7 +232,7 @@ Name | Type | Description  | Notes
 # **getPanaceaVanityUrl**
 > RestApiStringResult getPanaceaVanityUrl(appId)
 
-Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+
 
 ### Example
 ```java
@@ -252,7 +250,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier.
+String appId = "appId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.getPanaceaVanityUrl(appId);
     System.out.println(result);
@@ -266,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier. |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -285,7 +283,7 @@ Name | Type | Description  | Notes
 # **getSupportedCountries**
 > RestApiArrayResultSupportedCountry getSupportedCountries()
 
-Get all supported countries.
+
 
 ### Example
 ```java
@@ -332,9 +330,7 @@ This endpoint does not need any parameter.
 # **isPanaceaVanityUrlAvailable**
 > RestApiStringResult isPanaceaVanityUrlAvailable(vanityUrl, appId)
 
-Is panacea vanity url available
 
-Minimum length of 3 characters
 
 ### Example
 ```java
@@ -352,7 +348,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String vanityUrl = "vanityUrl_example"; // String | Vanity url to check
+String vanityUrl = "vanityUrl_example"; // String | 
 String appId = "appId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.isPanaceaVanityUrlAvailable(vanityUrl, appId);
@@ -367,7 +363,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vanityUrl** | **String**| Vanity url to check |
+ **vanityUrl** | **String**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -387,7 +383,7 @@ Name | Type | Description  | Notes
 # **setAppConfig**
 > RestApiResultApp setAppConfig(appId, appConfigUpdate)
 
-Set the application configuration
+
 
 ### Example
 ```java
@@ -405,8 +401,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
-AppConfigUpdateModel appConfigUpdate = new AppConfigUpdateModel(); // AppConfigUpdateModel | Changes to the configuration
+String appId = "appId_example"; // String | 
+AppConfigUpdateModel appConfigUpdate = new AppConfigUpdateModel(); // AppConfigUpdateModel | 
 try {
     RestApiResultApp result = apiInstance.setAppConfig(appId, appConfigUpdate);
     System.out.println(result);
@@ -420,8 +416,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **appConfigUpdate** | [**AppConfigUpdateModel**](AppConfigUpdateModel.md)| Changes to the configuration |
+ **appId** | **String**|  |
+ **appConfigUpdate** | [**AppConfigUpdateModel**](AppConfigUpdateModel.md)|  |
 
 ### Return type
 
@@ -440,9 +436,7 @@ Name | Type | Description  | Notes
 # **setAppHostname**
 > RestApiStringResult setAppHostname(appId, hostname, isEmbed, isNextGenWeb)
 
-Set the application hostname.
 
-If no subdomain is specified in {hostname} &#39;www&#39; will be prepended.
 
 ### Example
 ```java
@@ -460,10 +454,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier.
-String hostname = "hostname_example"; // String | The new Hostname.
-Boolean isEmbed = true; // Boolean | Will the website be embedded
-Boolean isNextGenWeb = true; // Boolean | Enables the NextGen web editor
+String appId = "appId_example"; // String | 
+String hostname = "hostname_example"; // String | 
+Boolean isEmbed = true; // Boolean | 
+Boolean isNextGenWeb = true; // Boolean | 
 try {
     RestApiStringResult result = apiInstance.setAppHostname(appId, hostname, isEmbed, isNextGenWeb);
     System.out.println(result);
@@ -477,10 +471,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier. |
- **hostname** | **String**| The new Hostname. |
- **isEmbed** | **Boolean**| Will the website be embedded | [optional]
- **isNextGenWeb** | **Boolean**| Enables the NextGen web editor | [optional]
+ **appId** | **String**|  |
+ **hostname** | **String**|  |
+ **isEmbed** | **Boolean**|  | [optional]
+ **isNextGenWeb** | **Boolean**|  | [optional]
 
 ### Return type
 
@@ -499,7 +493,7 @@ Name | Type | Description  | Notes
 # **setAppLanguages**
 > RestApiResultApp setAppLanguages(appId, languages)
 
-Set the application languages
+
 
 ### Example
 ```java
@@ -517,8 +511,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
-List<Language> languages = Arrays.asList(new Language()); // List<Language> | New list of languages
+String appId = "appId_example"; // String | 
+List<Language> languages = Arrays.asList(new Language()); // List<Language> | 
 try {
     RestApiResultApp result = apiInstance.setAppLanguages(appId, languages);
     System.out.println(result);
@@ -532,8 +526,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **languages** | [**List&lt;Language&gt;**](Language.md)| New list of languages |
+ **appId** | **String**|  |
+ **languages** | [**List&lt;Language&gt;**](Language.md)|  |
 
 ### Return type
 
@@ -552,7 +546,7 @@ Name | Type | Description  | Notes
 # **setCompliance**
 > RestApiResultAppCompliance setCompliance(appId, complianceType)
 
-Set the application compliance configuration
+
 
 ### Example
 ```java
@@ -570,8 +564,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
-String complianceType = "complianceType_example"; // String | Compliance type
+String appId = "appId_example"; // String | 
+String complianceType = "complianceType_example"; // String | 
 try {
     RestApiResultAppCompliance result = apiInstance.setCompliance(appId, complianceType);
     System.out.println(result);
@@ -585,8 +579,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **complianceType** | **String**| Compliance type | [enum: Default, GdprCompliance]
+ **appId** | **String**|  |
+ **complianceType** | **String**|  | [enum: Default, GdprCompliance]
 
 ### Return type
 
@@ -605,9 +599,7 @@ Name | Type | Description  | Notes
 # **setPanaceaVanityUrl**
 > RestApiStringResult setPanaceaVanityUrl(appId, vanityUrl)
 
-Set panacea vanity url
 
-Minimum length of 3 characters
 
 ### Example
 ```java
@@ -625,8 +617,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier.
-String vanityUrl = "vanityUrl_example"; // String | Vanity url
+String appId = "appId_example"; // String | 
+String vanityUrl = "vanityUrl_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.setPanaceaVanityUrl(appId, vanityUrl);
     System.out.println(result);
@@ -640,8 +632,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier. |
- **vanityUrl** | **String**| Vanity url |
+ **appId** | **String**|  |
+ **vanityUrl** | **String**|  |
 
 ### Return type
 
@@ -660,7 +652,7 @@ Name | Type | Description  | Notes
 # **toggleNextGenWeb**
 > RestApiStringResult toggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb)
 
-Toggle Next Gen Web
+
 
 ### Example
 ```java
@@ -717,7 +709,7 @@ Name | Type | Description  | Notes
 # **uploadAppLogo**
 > uploadAppLogo(appId, image)
 
-Set the application logo \\ icon
+
 
 ### Example
 ```java
@@ -735,7 +727,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppsApi apiInstance = new AppsApi();
-String appId = "appId_example"; // String | Application identifier
+String appId = "appId_example"; // String | 
 File image = new File("/path/to/file.txt"); // File | App Logo
 try {
     apiInstance.uploadAppLogo(appId, image);
@@ -749,7 +741,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
+ **appId** | **String**|  |
  **image** | **File**| App Logo |
 
 ### Return type

@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
-[**deleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deleteFulfillmentStatesConfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
-[**getFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
-[**getFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfigurationTemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
-[**searchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchFulfillmentStatesConfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
-[**updateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updateFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
+[**createFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | 
+[**deleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deleteFulfillmentStatesConfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+[**getFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+[**getFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfigurationTemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | 
+[**searchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchFulfillmentStatesConfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | 
+[**updateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updateFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
 
 
 <a name="createFulfillmentStatesConfig"></a>
 # **createFulfillmentStatesConfig**
 > RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration)
 
-Create fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -36,8 +34,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
-CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration = new CreateFulfillmentStatesConfiguration(); // CreateFulfillmentStatesConfiguration | Fulfillment state configuration
+String appId = "appId_example"; // String | 
+CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration = new CreateFulfillmentStatesConfiguration(); // CreateFulfillmentStatesConfiguration | 
 try {
     RestApiResultFulfillmentStatesConfiguration result = apiInstance.createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
     System.out.println(result);
@@ -51,8 +49,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
- **fulfillmentStateConfiguration** | [**CreateFulfillmentStatesConfiguration**](CreateFulfillmentStatesConfiguration.md)| Fulfillment state configuration |
+ **appId** | **String**|  |
+ **fulfillmentStateConfiguration** | [**CreateFulfillmentStatesConfiguration**](CreateFulfillmentStatesConfiguration.md)|  |
 
 ### Return type
 
@@ -71,9 +69,7 @@ Name | Type | Description  | Notes
 # **deleteFulfillmentStatesConfig**
 > RestApiStringResult deleteFulfillmentStatesConfig(appId, configId)
 
-Delete fulfillment states configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -91,8 +87,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
-String configId = "configId_example"; // String | Fulfillment states configuration id
+String appId = "appId_example"; // String | 
+String configId = "configId_example"; // String | 
 try {
     RestApiStringResult result = apiInstance.deleteFulfillmentStatesConfig(appId, configId);
     System.out.println(result);
@@ -106,8 +102,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
- **configId** | **String**| Fulfillment states configuration id |
+ **appId** | **String**|  |
+ **configId** | **String**|  |
 
 ### Return type
 
@@ -126,9 +122,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatesConfiguration**
 > FulfillmentStatesConfiguration getFulfillmentStatesConfiguration(appId, configId)
 
-Get fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -146,8 +140,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
-String configId = "configId_example"; // String | Fulfillment configuration id
+String appId = "appId_example"; // String | 
+String configId = "configId_example"; // String | 
 try {
     FulfillmentStatesConfiguration result = apiInstance.getFulfillmentStatesConfiguration(appId, configId);
     System.out.println(result);
@@ -161,8 +155,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
- **configId** | **String**| Fulfillment configuration id |
+ **appId** | **String**|  |
+ **configId** | **String**|  |
 
 ### Return type
 
@@ -181,9 +175,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatesConfigurationTemplate**
 > FulfillmentStatesConfiguration getFulfillmentStatesConfigurationTemplate(appId)
 
-Get fulfillment configuration template
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -201,7 +193,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
+String appId = "appId_example"; // String | 
 try {
     FulfillmentStatesConfiguration result = apiInstance.getFulfillmentStatesConfigurationTemplate(appId);
     System.out.println(result);
@@ -215,7 +207,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -234,9 +226,7 @@ Name | Type | Description  | Notes
 # **searchFulfillmentStatesConfigurations**
 > RestApiArrayResultFulfillmentStatesConfigurationSummary searchFulfillmentStatesConfigurations(appId)
 
-List fulfillment configurations for AppId
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -254,7 +244,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultFulfillmentStatesConfigurationSummary result = apiInstance.searchFulfillmentStatesConfigurations(appId);
     System.out.println(result);
@@ -268,7 +258,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -287,9 +277,7 @@ Name | Type | Description  | Notes
 # **updateFulfillmentStatesConfig**
 > updateFulfillmentStatesConfig(appId, configId, updateFulfillmentStatesConfiguration)
 
-Update fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -307,9 +295,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentStateConfigurationApi apiInstance = new FulfillmentStateConfigurationApi();
-String appId = "appId_example"; // String | App id
-String configId = "configId_example"; // String | Fulfillment states configuration id
-UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration = new UpdateFulfillmentStatesConfiguration(); // UpdateFulfillmentStatesConfiguration | Update fulfillment states configuration
+String appId = "appId_example"; // String | 
+String configId = "configId_example"; // String | 
+UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration = new UpdateFulfillmentStatesConfiguration(); // UpdateFulfillmentStatesConfiguration | 
 try {
     apiInstance.updateFulfillmentStatesConfig(appId, configId, updateFulfillmentStatesConfiguration);
 } catch (ApiException e) {
@@ -322,9 +310,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
- **configId** | **String**| Fulfillment states configuration id |
- **updateFulfillmentStatesConfiguration** | [**UpdateFulfillmentStatesConfiguration**](UpdateFulfillmentStatesConfiguration.md)| Update fulfillment states configuration |
+ **appId** | **String**|  |
+ **configId** | **String**|  |
+ **updateFulfillmentStatesConfiguration** | [**UpdateFulfillmentStatesConfiguration**](UpdateFulfillmentStatesConfiguration.md)|  |
 
 ### Return type
 

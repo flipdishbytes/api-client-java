@@ -38,7 +38,7 @@ public class StuartApiTest {
 
     
     /**
-     * Cancel a stuart job
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class StuartApiTest {
     }
     
     /**
-     * Get start job details
+     * 
      *
      * 
      *
@@ -72,7 +72,7 @@ public class StuartApiTest {
     }
     
     /**
-     * Get stuart settings for a store
+     * 
      *
      * 
      *
@@ -88,7 +88,7 @@ public class StuartApiTest {
     }
     
     /**
-     * Set stuart settings for a store
+     * 
      *
      * 
      *

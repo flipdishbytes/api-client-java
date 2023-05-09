@@ -115,8 +115,8 @@ public class TerminalIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @return RestApiResultKioskIotConnectionParameters
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -126,8 +126,8 @@ public class TerminalIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @return ApiResponse&lt;RestApiResultKioskIotConnectionParameters&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -138,8 +138,8 @@ public class TerminalIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

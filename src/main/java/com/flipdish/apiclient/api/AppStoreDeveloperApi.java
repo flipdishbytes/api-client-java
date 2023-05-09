@@ -63,9 +63,9 @@ public class AppStoreDeveloperApi {
 
     /**
      * Build call for appVerificationUpdate
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param verificationStatus New verification status (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param verificationStatus  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -141,11 +141,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app verification
-     * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param verificationStatus New verification status (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param verificationStatus  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void appVerificationUpdate(String oauthAppId, String appStoreAppId, String verificationStatus) throws ApiException {
@@ -153,11 +153,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app verification
-     * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param verificationStatus New verification status (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param verificationStatus  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -167,11 +167,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app verification (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param verificationStatus New verification status (required)
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param verificationStatus  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -203,8 +203,8 @@ public class AppStoreDeveloperApi {
     }
     /**
      * Build call for createAppStoreApp
-     * @param oauthAppId OAuth App identifier (required)
-     * @param createAppStoreApp App store app (required)
+     * @param oauthAppId  (required)
+     * @param createAppStoreApp  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -272,10 +272,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Create App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param createAppStoreApp App store app (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param createAppStoreApp  (required)
      * @return RestApiResultAppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -285,10 +285,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Create App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param createAppStoreApp App store app (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param createAppStoreApp  (required)
      * @return ApiResponse&lt;RestApiResultAppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -299,10 +299,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Create App store app (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param createAppStoreApp App store app (required)
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param createAppStoreApp  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -335,8 +335,8 @@ public class AppStoreDeveloperApi {
     }
     /**
      * Build call for deleteAppStoreApp
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -405,10 +405,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Delete App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -418,10 +418,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Delete App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -432,10 +432,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Delete App store app (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -468,8 +468,8 @@ public class AppStoreDeveloperApi {
     }
     /**
      * Build call for getExternalFunctionSigningKey
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -538,10 +538,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Get external function action signing key for app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getExternalFunctionSigningKey(String oauthAppId, String appStoreAppId) throws ApiException {
@@ -549,10 +549,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Get external function action signing key for app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -562,10 +562,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Get external function action signing key for app (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -597,9 +597,9 @@ public class AppStoreDeveloperApi {
     }
     /**
      * Build call for updateAppStoreApp
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param appStoreApp Update App store app (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreApp  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -673,11 +673,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param appStoreApp Update App store app (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreApp  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateAppStoreApp(String oauthAppId, String appStoreAppId, UpdateAppStoreApp appStoreApp) throws ApiException {
@@ -685,11 +685,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param appStoreApp Update App store app (required)
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreApp  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -699,11 +699,11 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Update App store app (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
-     * @param appStoreApp Update App store app (required)
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreApp  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -735,8 +735,8 @@ public class AppStoreDeveloperApi {
     }
     /**
      * Build call for uploadAppStoreAppLogo
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param image App Store App Logo (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -813,10 +813,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Upload the App store app logo \\ icon
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param image App Store App Logo (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -825,10 +825,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Upload the App store app logo \\ icon
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param image App Store App Logo (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -839,10 +839,10 @@ public class AppStoreDeveloperApi {
     }
 
     /**
-     * Upload the App store app logo \\ icon (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param appStoreAppId App store app id (required)
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
      * @param image App Store App Logo (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

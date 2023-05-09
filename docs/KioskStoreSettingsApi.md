@@ -4,8 +4,8 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getAllKioskSettingsForStore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
-[**getAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getAllStoreSettingsForKioskHydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
+[**getAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getAllKioskSettingsForStore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | 
+[**getAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getAllStoreSettingsForKioskHydra) | **GET** /api/v1.0/kioskstoresettings | 
 [**updateCashSettingForKiosk**](KioskStoreSettingsApi.md#updateCashSettingForKiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 # **getAllKioskSettingsForStore**
 > RestApiResultStoreKioskSettings getAllKioskSettingsForStore(storeId, appId)
 
-Get all kiosk settings associated with a store
+
 
 ### Example
 ```java
@@ -31,8 +31,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 KioskStoreSettingsApi apiInstance = new KioskStoreSettingsApi();
-Integer storeId = 56; // Integer | Store identifier
-String appId = "appId_example"; // String | App Name Id
+Integer storeId = 56; // Integer | 
+String appId = "appId_example"; // String | 
 try {
     RestApiResultStoreKioskSettings result = apiInstance.getAllKioskSettingsForStore(storeId, appId);
     System.out.println(result);
@@ -46,8 +46,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store identifier |
- **appId** | **String**| App Name Id |
+ **storeId** | **Integer**|  |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **getAllStoreSettingsForKioskHydra**
 > RestApiResultKioskStoreSettings getAllStoreSettingsForKioskHydra()
 
-[For Kiosk use only] Get all stores connected to a Kiosk
+
 
 ### Example
 ```java

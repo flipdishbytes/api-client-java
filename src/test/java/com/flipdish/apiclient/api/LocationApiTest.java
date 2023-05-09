@@ -39,7 +39,7 @@ public class LocationApiTest {
 
     
     /**
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
      * 
      *
@@ -58,7 +58,7 @@ public class LocationApiTest {
     }
     
     /**
-     * Set a Location as deleted
+     * 
      *
      * 
      *
@@ -77,7 +77,7 @@ public class LocationApiTest {
     }
     
     /**
-     * Set or unset External Location Id on a Location
+     * 
      *
      * 
      *
@@ -97,7 +97,7 @@ public class LocationApiTest {
     }
     
     /**
-     * Move a Location to a different location Area
+     * 
      *
      * 
      *
@@ -117,7 +117,7 @@ public class LocationApiTest {
     }
     
     /**
-     * Update a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
      * 
      *

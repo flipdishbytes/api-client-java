@@ -37,7 +37,7 @@ public class PushNotificationsApiTest {
 
     
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
      * 
      *
@@ -54,7 +54,7 @@ public class PushNotificationsApiTest {
     }
     
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
      * 
      *
@@ -72,7 +72,7 @@ public class PushNotificationsApiTest {
     }
     
     /**
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
      * 
      *
@@ -89,7 +89,7 @@ public class PushNotificationsApiTest {
     }
     
     /**
-     * [PRIVATE] Update the push notification
+     * 
      *
      * 
      *

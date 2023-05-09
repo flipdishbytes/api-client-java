@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLoyaltyCampaign**](CampaignsApi.md#createLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | Creates loyalty campaign
-[**createRetentionCampaign**](CampaignsApi.md#createRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | Creates retention campaign
-[**getLoyaltyCampaignsForApp**](CampaignsApi.md#getLoyaltyCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | Gets loyalty campaigns for app
-[**getLoyaltyCampaignsForStore**](CampaignsApi.md#getLoyaltyCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | Gets loyalty campaigns for store
-[**getRetentionCampaignsForApp**](CampaignsApi.md#getRetentionCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/retention | Gets retention campaigns for app
-[**getRetentionCampaignsForStore**](CampaignsApi.md#getRetentionCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | Gets retention campaigns for store
-[**getStoreList**](CampaignsApi.md#getStoreList) | **GET** /api/v1.0/{appId}/campaigns/stores | Gets list of stores for app
-[**removeCampaign**](CampaignsApi.md#removeCampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
-[**updateLoyaltyCampaign**](CampaignsApi.md#updateLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
-[**updateRetentionCampaign**](CampaignsApi.md#updateRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
+[**createLoyaltyCampaign**](CampaignsApi.md#createLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
+[**createRetentionCampaign**](CampaignsApi.md#createRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+[**getLoyaltyCampaignsForApp**](CampaignsApi.md#getLoyaltyCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
+[**getLoyaltyCampaignsForStore**](CampaignsApi.md#getLoyaltyCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
+[**getRetentionCampaignsForApp**](CampaignsApi.md#getRetentionCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
+[**getRetentionCampaignsForStore**](CampaignsApi.md#getRetentionCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | 
+[**getStoreList**](CampaignsApi.md#getStoreList) | **GET** /api/v1.0/{appId}/campaigns/stores | 
+[**removeCampaign**](CampaignsApi.md#removeCampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | 
+[**updateLoyaltyCampaign**](CampaignsApi.md#updateLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | 
+[**updateRetentionCampaign**](CampaignsApi.md#updateRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | 
 
 
 <a name="createLoyaltyCampaign"></a>
 # **createLoyaltyCampaign**
 > RestApiResultLoyaltyCampaign createLoyaltyCampaign(appId, campaign)
 
-Creates loyalty campaign
+
 
 ### Example
 ```java
@@ -38,8 +38,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-LoyaltyCampaignBase campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | Loyalty campaign details
+String appId = "appId_example"; // String | 
+LoyaltyCampaignBase campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | 
 try {
     RestApiResultLoyaltyCampaign result = apiInstance.createLoyaltyCampaign(appId, campaign);
     System.out.println(result);
@@ -53,8 +53,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)| Loyalty campaign details |
+ **appId** | **String**|  |
+ **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)|  |
 
 ### Return type
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **createRetentionCampaign**
 > RestApiResultRetentionCampaign createRetentionCampaign(appId, campaign)
 
-Creates retention campaign
+
 
 ### Example
 ```java
@@ -91,8 +91,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-RetentionCampaignBase campaign = new RetentionCampaignBase(); // RetentionCampaignBase | Retention campaign details
+String appId = "appId_example"; // String | 
+RetentionCampaignBase campaign = new RetentionCampaignBase(); // RetentionCampaignBase | 
 try {
     RestApiResultRetentionCampaign result = apiInstance.createRetentionCampaign(appId, campaign);
     System.out.println(result);
@@ -106,8 +106,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)| Retention campaign details |
+ **appId** | **String**|  |
+ **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)|  |
 
 ### Return type
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 # **getLoyaltyCampaignsForApp**
 > RestApiArrayResultLoyaltyCampaign getLoyaltyCampaignsForApp(appId)
 
-Gets loyalty campaigns for app
+
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultLoyaltyCampaign result = apiInstance.getLoyaltyCampaignsForApp(appId);
     System.out.println(result);
@@ -158,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 # **getLoyaltyCampaignsForStore**
 > RestApiArrayResultLoyaltyCampaign getLoyaltyCampaignsForStore(appId, storeId)
 
-Gets loyalty campaigns for store
+
 
 ### Example
 ```java
@@ -195,8 +195,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-Integer storeId = 56; // Integer | Store Id
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     RestApiArrayResultLoyaltyCampaign result = apiInstance.getLoyaltyCampaignsForStore(appId, storeId);
     System.out.println(result);
@@ -210,8 +210,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **storeId** | **Integer**| Store Id |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 # **getRetentionCampaignsForApp**
 > RestApiArrayResultRetentionCampaign getRetentionCampaignsForApp(appId)
 
-Gets retention campaigns for app
+
 
 ### Example
 ```java
@@ -248,7 +248,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultRetentionCampaign result = apiInstance.getRetentionCampaignsForApp(appId);
     System.out.println(result);
@@ -262,7 +262,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 # **getRetentionCampaignsForStore**
 > RestApiArrayResultRetentionCampaign getRetentionCampaignsForStore(appId, storeId)
 
-Gets retention campaigns for store
+
 
 ### Example
 ```java
@@ -299,8 +299,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-Integer storeId = 56; // Integer | Store Id
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
 try {
     RestApiArrayResultRetentionCampaign result = apiInstance.getRetentionCampaignsForStore(appId, storeId);
     System.out.println(result);
@@ -314,8 +314,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **storeId** | **Integer**| Store Id |
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 # **getStoreList**
 > RestApiArrayResultStoreListItem getStoreList(appId, onlyPublished)
 
-Gets list of stores for app
+
 
 ### Example
 ```java
@@ -352,7 +352,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
+String appId = "appId_example"; // String | 
 Boolean onlyPublished = true; // Boolean | 
 try {
     RestApiArrayResultStoreListItem result = apiInstance.getStoreList(appId, onlyPublished);
@@ -367,7 +367,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
+ **appId** | **String**|  |
  **onlyPublished** | **Boolean**|  | [optional]
 
 ### Return type
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 # **removeCampaign**
 > removeCampaign(appId, campaignId)
 
-Deletes a campaign
+
 
 ### Example
 ```java
@@ -405,8 +405,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-Integer campaignId = 56; // Integer | Campaign Id
+String appId = "appId_example"; // String | 
+Integer campaignId = 56; // Integer | 
 try {
     apiInstance.removeCampaign(appId, campaignId);
 } catch (ApiException e) {
@@ -419,8 +419,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **campaignId** | **Integer**| Campaign Id |
+ **appId** | **String**|  |
+ **campaignId** | **Integer**|  |
 
 ### Return type
 
@@ -439,7 +439,7 @@ null (empty response body)
 # **updateLoyaltyCampaign**
 > RestApiResultLoyaltyCampaign updateLoyaltyCampaign(appId, campaignId, campaign)
 
-Updates loyalty campaign
+
 
 ### Example
 ```java
@@ -457,9 +457,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-Integer campaignId = 56; // Integer | Loyalty campaign Id
-LoyaltyCampaignBase campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | Loyalty campaign details
+String appId = "appId_example"; // String | 
+Integer campaignId = 56; // Integer | 
+LoyaltyCampaignBase campaign = new LoyaltyCampaignBase(); // LoyaltyCampaignBase | 
 try {
     RestApiResultLoyaltyCampaign result = apiInstance.updateLoyaltyCampaign(appId, campaignId, campaign);
     System.out.println(result);
@@ -473,9 +473,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **campaignId** | **Integer**| Loyalty campaign Id |
- **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)| Loyalty campaign details |
+ **appId** | **String**|  |
+ **campaignId** | **Integer**|  |
+ **campaign** | [**LoyaltyCampaignBase**](LoyaltyCampaignBase.md)|  |
 
 ### Return type
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 # **updateRetentionCampaign**
 > RestApiResultRetentionCampaign updateRetentionCampaign(appId, campaignId, campaign)
 
-Updates retention campaign
+
 
 ### Example
 ```java
@@ -512,9 +512,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
-String appId = "appId_example"; // String | App Name Id
-Integer campaignId = 56; // Integer | Retention campaign Id
-RetentionCampaignBase campaign = new RetentionCampaignBase(); // RetentionCampaignBase | Retention campaign details
+String appId = "appId_example"; // String | 
+Integer campaignId = 56; // Integer | 
+RetentionCampaignBase campaign = new RetentionCampaignBase(); // RetentionCampaignBase | 
 try {
     RestApiResultRetentionCampaign result = apiInstance.updateRetentionCampaign(appId, campaignId, campaign);
     System.out.println(result);
@@ -528,9 +528,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **campaignId** | **Integer**| Retention campaign Id |
- **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)| Retention campaign details |
+ **appId** | **String**|  |
+ **campaignId** | **Integer**|  |
+ **campaign** | [**RetentionCampaignBase**](RetentionCampaignBase.md)|  |
 
 ### Return type
 

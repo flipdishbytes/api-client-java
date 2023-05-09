@@ -59,10 +59,10 @@ public class AuthorizationTokensApi {
 
     /**
      * Build call for getAuthorizationTokens
-     * @param oauthAppId Client identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -135,12 +135,12 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Get authorization tokens
      * 
-     * @param oauthAppId Client identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultOAuthTokenModel
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -150,12 +150,12 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Get authorization tokens
      * 
-     * @param oauthAppId Client identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultOAuthTokenModel&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -166,12 +166,12 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Get authorization tokens (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId Client identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -204,7 +204,7 @@ public class AuthorizationTokensApi {
     }
     /**
      * Build call for revokeToken
-     * @param key Token identifier key (required)
+     * @param key  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -274,9 +274,9 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Revoke token
      * 
-     * @param key Token identifier key (required)
+     * 
+     * @param key  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -285,9 +285,9 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Revoke token
      * 
-     * @param key Token identifier key (required)
+     * 
+     * @param key  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -298,9 +298,9 @@ public class AuthorizationTokensApi {
     }
 
     /**
-     * Revoke token (asynchronously)
+     *  (asynchronously)
      * 
-     * @param key Token identifier key (required)
+     * @param key  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

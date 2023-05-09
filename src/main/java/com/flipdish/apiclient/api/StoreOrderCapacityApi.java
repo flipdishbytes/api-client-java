@@ -60,9 +60,9 @@ public class StoreOrderCapacityApi {
 
     /**
      * Build call for getStoreOrderCapacity
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
-     * @param deliveryType Delivery / Pickup (required)
+     * @param appId  (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -137,11 +137,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Get store&#39;s order capacity configuration
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
-     * @param deliveryType Delivery / Pickup (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return RestApiResultStoreOrderCapacityConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -151,11 +151,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Get store&#39;s order capacity configuration
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
-     * @param deliveryType Delivery / Pickup (required)
+     * 
+     * @param appId  (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @return ApiResponse&lt;RestApiResultStoreOrderCapacityConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -166,11 +166,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Get store&#39;s order capacity configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param storeId Store Id (required)
-     * @param deliveryType Delivery / Pickup (required)
+     * @param appId  (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -203,9 +203,9 @@ public class StoreOrderCapacityApi {
     }
     /**
      * Build call for updateStoreOrderCapacityConfig
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery / Pickup (required)
-     * @param newOrderCapacityConfig new order capacity configuration (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param newOrderCapacityConfig  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -287,11 +287,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Create or update a store&#39;s order capacity configuration
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery / Pickup (required)
-     * @param newOrderCapacityConfig new order capacity configuration (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param newOrderCapacityConfig  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -300,11 +300,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Create or update a store&#39;s order capacity configuration
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery / Pickup (required)
-     * @param newOrderCapacityConfig new order capacity configuration (required)
+     * 
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param newOrderCapacityConfig  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -315,11 +315,11 @@ public class StoreOrderCapacityApi {
     }
 
     /**
-     * Create or update a store&#39;s order capacity configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param deliveryType Delivery / Pickup (required)
-     * @param newOrderCapacityConfig new order capacity configuration (required)
+     * @param storeId  (required)
+     * @param deliveryType  (required)
+     * @param newOrderCapacityConfig  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

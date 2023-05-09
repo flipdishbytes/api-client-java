@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPreviousOrderCountForStore**](UsersApi.md#getPreviousOrderCountForStore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
-[**getRoles**](UsersApi.md#getRoles) | **GET** /api/v1.0/users/roles | Get role names
+[**getRoles**](UsersApi.md#getRoles) | **GET** /api/v1.0/users/roles | 
 
 
 <a name="getPreviousOrderCountForStore"></a>
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **getRoles**
 > RestApiStringArrayResult getRoles()
 
-Get role names
+
 
 ### Example
 ```java

@@ -63,7 +63,7 @@ public class EventsApi {
     /**
      * Build call for getCustomerEvents
      * @param appId  (required)
-     * @param customerId Customer identifier identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -180,10 +180,10 @@ public class EventsApi {
     }
 
     /**
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -209,10 +209,10 @@ public class EventsApi {
     }
 
     /**
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -239,10 +239,10 @@ public class EventsApi {
     }
 
     /**
-     * Get customer events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -292,8 +292,8 @@ public class EventsApi {
     /**
      * Build call for getEvents
      * @param appId  (required)
-     * @param whiteLabelId White Label Id (optional)
-     * @param customerId Customer Id (optional)
+     * @param whiteLabelId  (optional)
+     * @param customerId  (optional)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -408,11 +408,11 @@ public class EventsApi {
     }
 
     /**
-     * Get events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param whiteLabelId White Label Id (optional)
-     * @param customerId Customer Id (optional)
+     * @param whiteLabelId  (optional)
+     * @param customerId  (optional)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -438,11 +438,11 @@ public class EventsApi {
     }
 
     /**
-     * Get events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param whiteLabelId White Label Id (optional)
-     * @param customerId Customer Id (optional)
+     * @param whiteLabelId  (optional)
+     * @param customerId  (optional)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -469,11 +469,11 @@ public class EventsApi {
     }
 
     /**
-     * Get events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param whiteLabelId White Label Id (optional)
-     * @param customerId Customer Id (optional)
+     * @param whiteLabelId  (optional)
+     * @param customerId  (optional)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -522,7 +522,7 @@ public class EventsApi {
     }
     /**
      * Build call for getEventsById
-     * @param eventId Event identifier (Guid) (required)
+     * @param eventId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -592,9 +592,9 @@ public class EventsApi {
     }
 
     /**
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
      * 
-     * @param eventId Event identifier (Guid) (required)
+     * 
+     * @param eventId  (required)
      * @param appId  (required)
      * @return EventSearchResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -605,9 +605,9 @@ public class EventsApi {
     }
 
     /**
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
      * 
-     * @param eventId Event identifier (Guid) (required)
+     * 
+     * @param eventId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;EventSearchResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -619,9 +619,9 @@ public class EventsApi {
     }
 
     /**
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param eventId Event identifier (Guid) (required)
+     * @param eventId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -656,7 +656,7 @@ public class EventsApi {
     /**
      * Build call for getMenuEvents
      * @param appId  (required)
-     * @param menuId Menu Identifier (required)
+     * @param menuId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -773,10 +773,10 @@ public class EventsApi {
     }
 
     /**
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param menuId Menu Identifier (required)
+     * @param menuId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -802,10 +802,10 @@ public class EventsApi {
     }
 
     /**
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param menuId Menu Identifier (required)
+     * @param menuId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -832,10 +832,10 @@ public class EventsApi {
     }
 
     /**
-     * Get menu events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param menuId Menu Identifier (required)
+     * @param menuId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -885,7 +885,7 @@ public class EventsApi {
     /**
      * Build call for getOrderEvents
      * @param appId  (required)
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1002,10 +1002,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1031,10 +1031,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1061,10 +1061,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param orderId Order identifier (required)
+     * @param orderId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1114,7 +1114,7 @@ public class EventsApi {
     /**
      * Build call for getOrderEventsByCustomer
      * @param appId  (required)
-     * @param customerId Customer identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1232,10 +1232,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1261,10 +1261,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1291,10 +1291,10 @@ public class EventsApi {
     }
 
     /**
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param customerId Customer identifier (required)
+     * @param customerId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1344,7 +1344,7 @@ public class EventsApi {
     /**
      * Build call for getStoreEvents
      * @param appId  (required)
-     * @param storeId Id of the store (required)
+     * @param storeId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1461,10 +1461,10 @@ public class EventsApi {
     }
 
     /**
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param storeId Id of the store (required)
+     * @param storeId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1490,10 +1490,10 @@ public class EventsApi {
     }
 
     /**
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param storeId Id of the store (required)
+     * @param storeId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1520,10 +1520,10 @@ public class EventsApi {
     }
 
     /**
-     * Get store events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param storeId Id of the store (required)
+     * @param storeId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1573,7 +1573,7 @@ public class EventsApi {
     /**
      * Build call for getUserEvents
      * @param appId  (required)
-     * @param userId User identifier (required)
+     * @param userId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1690,10 +1690,10 @@ public class EventsApi {
     }
 
     /**
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param userId User identifier (required)
+     * @param userId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1719,10 +1719,10 @@ public class EventsApi {
     }
 
     /**
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param userId User identifier (required)
+     * @param userId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1749,10 +1749,10 @@ public class EventsApi {
     }
 
     /**
-     * Get user events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param userId User identifier (required)
+     * @param userId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1802,7 +1802,7 @@ public class EventsApi {
     /**
      * Build call for getWhiteLabelEvents
      * @param appId  (required)
-     * @param whitelabelId White Label Identifier (required)
+     * @param whitelabelId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1919,10 +1919,10 @@ public class EventsApi {
     }
 
     /**
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param whitelabelId White Label Identifier (required)
+     * @param whitelabelId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1948,10 +1948,10 @@ public class EventsApi {
     }
 
     /**
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+     * 
      * 
      * @param appId  (required)
-     * @param whitelabelId White Label Identifier (required)
+     * @param whitelabelId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)
@@ -1978,10 +1978,10 @@ public class EventsApi {
     }
 
     /**
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100. (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param whitelabelId White Label Identifier (required)
+     * @param whitelabelId  (required)
      * @param limit The maximum elements to return (optional)
      * @param page The index of the page to return, starting by 1 (optional)
      * @param start Start date (optional)

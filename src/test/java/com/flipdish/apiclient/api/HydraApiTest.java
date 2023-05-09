@@ -45,7 +45,7 @@ public class HydraApiTest {
 
     
     /**
-     * Assign an EMV terminal to a kiosk
+     * 
      *
      * 
      *
@@ -63,7 +63,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -81,7 +81,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -116,7 +116,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -134,7 +134,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -152,7 +152,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -174,7 +174,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -190,7 +190,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -207,9 +207,9 @@ public class HydraApiTest {
     }
     
     /**
-     * Get the status of Cash Payment Method on Kiosk
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -239,7 +239,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -254,7 +254,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -271,7 +271,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -288,7 +288,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -306,7 +306,7 @@ public class HydraApiTest {
     }
     
     /**
-     * List EMV terminals belonging to the given AppNameId
+     * 
      *
      * 
      *
@@ -322,7 +322,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -340,7 +340,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -357,7 +357,7 @@ public class HydraApiTest {
     }
     
     /**
-     * [Private]
+     * 
      *
      * 
      *
@@ -374,7 +374,7 @@ public class HydraApiTest {
     }
     
     /**
-     * Unassign the currently assigned EMV terminal from a kiosk
+     * 
      *
      * 
      *
@@ -391,9 +391,9 @@ public class HydraApiTest {
     }
     
     /**
-     * Update the Cash Payment Method Visibility on Kiosk
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

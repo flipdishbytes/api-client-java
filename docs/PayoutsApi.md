@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPayout**](PayoutsApi.md#getPayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
-[**getPayoutChargebacks**](PayoutsApi.md#getPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout&#39;s chargebacks
-[**getPayoutOrders**](PayoutsApi.md#getPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout&#39;s orders
-[**getPayoutOtherCharges**](PayoutsApi.md#getPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | Get list of payout&#39;s other charges
-[**getPayoutRefunds**](PayoutsApi.md#getPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout&#39;s refunds
-[**getPayoutSummaries**](PayoutsApi.md#getPayoutSummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
-[**getPayouts**](PayoutsApi.md#getPayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
+[**getPayout**](PayoutsApi.md#getPayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
+[**getPayoutChargebacks**](PayoutsApi.md#getPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
+[**getPayoutOrders**](PayoutsApi.md#getPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
+[**getPayoutOtherCharges**](PayoutsApi.md#getPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | 
+[**getPayoutRefunds**](PayoutsApi.md#getPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | 
+[**getPayoutSummaries**](PayoutsApi.md#getPayoutSummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | 
+[**getPayouts**](PayoutsApi.md#getPayouts) | **GET** /api/v1.0/{appId}/payouts | 
 
 
 <a name="getPayout"></a>
 # **getPayout**
 > PayoutDetail getPayout(appId, bankAccountId, payoutId)
 
-Get Payout details broken down by Store
+
 
 ### Example
 ```java
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **getPayoutChargebacks**
 > RestApiPaginationResultPayoutChargeback getPayoutChargebacks(appId, bankAccountId, payoutId, page, limit, storeIds)
 
-Get list of payout&#39;s chargebacks
+
 
 ### Example
 ```java
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 # **getPayoutOrders**
 > RestApiPaginationResultPayoutOrder getPayoutOrders(appId, bankAccountId, payoutId, page, limit, storeIds)
 
-Get list of payout&#39;s orders
+
 
 ### Example
 ```java
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 # **getPayoutOtherCharges**
 > RestApiPaginationResultPayoutOtherCharge getPayoutOtherCharges(appId, bankAccountId, payoutId, page, limit, storeIds)
 
-Get list of payout&#39;s other charges
+
 
 ### Example
 ```java
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 # **getPayoutRefunds**
 > RestApiPaginationResultPayoutRefund getPayoutRefunds(appId, bankAccountId, payoutId, page, limit, storeIds)
 
-Get list of payout&#39;s refunds
+
 
 ### Example
 ```java
@@ -316,9 +316,7 @@ Name | Type | Description  | Notes
 # **getPayoutSummaries**
 > RestApiArrayResultPayoutSummary getPayoutSummaries(appId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates)
 
-Get list of payout summaries
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```java
@@ -377,9 +375,7 @@ Name | Type | Description  | Notes
 # **getPayouts**
 > RestApiPaginationResultPayout getPayouts(appId, startDate, endDate, page, limit, payoutRequestIdsBankAccountIds, payoutRequestIdsStates)
 
-Get list of payouts
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```java

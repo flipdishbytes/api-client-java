@@ -71,8 +71,8 @@ public class OrdersApi {
 
     /**
      * Build call for acceptOrder
-     * @param id Order identifier (required)
-     * @param acceptObject Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param id  (required)
+     * @param acceptObject  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -140,10 +140,10 @@ public class OrdersApi {
     }
 
     /**
-     * Accept order
-     * To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
-     * @param acceptObject Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * 
+     * 
+     * @param id  (required)
+     * @param acceptObject  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void acceptOrder(Integer id, Accept acceptObject) throws ApiException {
@@ -151,10 +151,10 @@ public class OrdersApi {
     }
 
     /**
-     * Accept order
-     * To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
-     * @param acceptObject Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * 
+     * 
+     * @param id  (required)
+     * @param acceptObject  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -164,10 +164,10 @@ public class OrdersApi {
     }
 
     /**
-     * Accept order (asynchronously)
-     * To accept an order, you create an &#x60;accept&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
-     * @param acceptObject Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     *  (asynchronously)
+     * 
+     * @param id  (required)
+     * @param acceptObject  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -199,7 +199,7 @@ public class OrdersApi {
     }
     /**
      * Build call for dispatchOrder
-     * @param id Order identifier (required)
+     * @param id  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -262,9 +262,9 @@ public class OrdersApi {
     }
 
     /**
-     * Dispatch order
-     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void dispatchOrder(Integer id) throws ApiException {
@@ -272,9 +272,9 @@ public class OrdersApi {
     }
 
     /**
-     * Dispatch order
-     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -284,9 +284,9 @@ public class OrdersApi {
     }
 
     /**
-     * Dispatch order (asynchronously)
-     * To dispatch an order send a POST request with &#x60;Id&#x60; path parameter which identifies the order.
-     * @param id Order identifier (required)
+     *  (asynchronously)
+     * 
+     * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -318,7 +318,7 @@ public class OrdersApi {
     }
     /**
      * Build call for getDeliveryInformation
-     * @param orderId Flipdish Order Id (required)
+     * @param orderId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -381,9 +381,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information
-     * Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return RestApiResultOrderDeliveryInformation
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -393,9 +393,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information
-     * Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return ApiResponse&lt;RestApiResultOrderDeliveryInformation&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -406,9 +406,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order delivery information (asynchronously)
-     * Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -441,7 +441,7 @@ public class OrdersApi {
     }
     /**
      * Build call for getFulfillmentState
-     * @param orderId Flipdish Order Id (required)
+     * @param orderId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -504,9 +504,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return RestApiResultOrderFulfillmentStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -516,9 +516,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return ApiResponse&lt;RestApiResultOrderFulfillmentStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -529,9 +529,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment state.
-     * @param orderId Flipdish Order Id (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -564,7 +564,7 @@ public class OrdersApi {
     }
     /**
      * Build call for getFulfillmentStatusWithDetailsAndActions
-     * @param orderId Flipdish Order Id (required)
+     * @param orderId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -627,9 +627,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state with actionable details like default next state
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return RestApiResultOrderFulfillmentStatusWithConfigurationActions
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -639,9 +639,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state with actionable details like default next state
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
-     * @param orderId Flipdish Order Id (required)
+     * 
+     * 
+     * @param orderId  (required)
      * @return ApiResponse&lt;RestApiResultOrderFulfillmentStatusWithConfigurationActions&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -652,9 +652,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order fulfillment state with actionable details like default next state (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns an order&#39;s fulfillment status and details about possible states.
-     * @param orderId Flipdish Order Id (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -687,7 +687,7 @@ public class OrdersApi {
     }
     /**
      * Build call for getOrderById
-     * @param id Order identifier (required)
+     * @param id  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -750,9 +750,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order by ID
      * 
-     * @param id Order identifier (required)
+     * 
+     * @param id  (required)
      * @return RestApiResultOrder
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -762,9 +762,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order by ID
      * 
-     * @param id Order identifier (required)
+     * 
+     * @param id  (required)
      * @return ApiResponse&lt;RestApiResultOrder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -775,9 +775,9 @@ public class OrdersApi {
     }
 
     /**
-     * Get order by ID (asynchronously)
+     *  (asynchronously)
      * 
-     * @param id Order identifier (required)
+     * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -810,12 +810,12 @@ public class OrdersApi {
     }
     /**
      * Build call for getOrders
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param from Order has been placed after this parameter value (optional)
-     * @param to Order has been placed before this parameter value (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -884,14 +884,14 @@ public class OrdersApi {
     }
 
     /**
-     * Get orders by filter
      * 
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param from Order has been placed after this parameter value (optional)
-     * @param to Order has been placed before this parameter value (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return RestApiPaginationResultOrder
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -901,14 +901,14 @@ public class OrdersApi {
     }
 
     /**
-     * Get orders by filter
      * 
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param from Order has been placed after this parameter value (optional)
-     * @param to Order has been placed before this parameter value (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultOrder&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -919,14 +919,14 @@ public class OrdersApi {
     }
 
     /**
-     * Get orders by filter (asynchronously)
+     *  (asynchronously)
      * 
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param from Order has been placed after this parameter value (optional)
-     * @param to Order has been placed before this parameter value (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -959,17 +959,17 @@ public class OrdersApi {
     }
     /**
      * Build call for getOrdersSummary
-     * @param appId App Name Id (required)
-     * @param searchQuery Query string (optional)
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param orderByRequestedForTime  (optional)
      * @param channels  (optional)
-     * @param orderIds Filter by the given orders (optional)
-     * @param from Filter by date from (optional)
-     * @param to Filter by date to (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1052,19 +1052,19 @@ public class OrdersApi {
     }
 
     /**
-     * [PRIVATE API] Get summary of orders by filter
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Query string (optional)
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param orderByRequestedForTime  (optional)
      * @param channels  (optional)
-     * @param orderIds Filter by the given orders (optional)
-     * @param from Filter by date from (optional)
-     * @param to Filter by date to (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
      * @return RestApiPaginationResultOrderSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1074,19 +1074,19 @@ public class OrdersApi {
     }
 
     /**
-     * [PRIVATE API] Get summary of orders by filter
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Query string (optional)
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param orderByRequestedForTime  (optional)
      * @param channels  (optional)
-     * @param orderIds Filter by the given orders (optional)
-     * @param from Filter by date from (optional)
-     * @param to Filter by date to (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultOrderSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1097,19 +1097,19 @@ public class OrdersApi {
     }
 
     /**
-     * [PRIVATE API] Get summary of orders by filter (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param searchQuery Query string (optional)
-     * @param physicalRestaurantId Physical restaurant identifiers (optional)
-     * @param state Order states (optional)
-     * @param page Requested page number (optional)
-     * @param limit Requested page limit (optional)
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
      * @param orderByRequestedForTime  (optional)
      * @param channels  (optional)
-     * @param orderIds Filter by the given orders (optional)
-     * @param from Filter by date from (optional)
-     * @param to Filter by date to (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1142,7 +1142,7 @@ public class OrdersApi {
     }
     /**
      * Build call for refundOrder
-     * @param id Order identifier (required)
+     * @param id  (required)
      * @param refundObject  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1211,9 +1211,9 @@ public class OrdersApi {
     }
 
     /**
-     * Refund order
-     * To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @param refundObject  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1222,9 +1222,9 @@ public class OrdersApi {
     }
 
     /**
-     * Refund order
-     * To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @param refundObject  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1235,9 +1235,9 @@ public class OrdersApi {
     }
 
     /**
-     * Refund order (asynchronously)
-     * To refund an order, you create a &#x60;refund&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     *  (asynchronously)
+     * 
+     * @param id  (required)
      * @param refundObject  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1270,7 +1270,7 @@ public class OrdersApi {
     }
     /**
      * Build call for rejectOrder
-     * @param id Order identifier (required)
+     * @param id  (required)
      * @param rejectObject  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1339,9 +1339,9 @@ public class OrdersApi {
     }
 
     /**
-     * Reject order
-     * To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @param rejectObject  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1350,9 +1350,9 @@ public class OrdersApi {
     }
 
     /**
-     * Reject order
-     * To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     * 
+     * 
+     * @param id  (required)
      * @param rejectObject  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1363,9 +1363,9 @@ public class OrdersApi {
     }
 
     /**
-     * Reject order (asynchronously)
-     * To reject an order, you create a &#x60;reject&#x60; object and send it to Flipdish API using HTTP POST method. &#x60;Id&#x60; path parameter identifies the order.
-     * @param id Order identifier (required)
+     *  (asynchronously)
+     * 
+     * @param id  (required)
      * @param rejectObject  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1398,8 +1398,8 @@ public class OrdersApi {
     }
     /**
      * Build call for searchFulfillmentStatuses
-     * @param appId App Id (required)
-     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * @param appId  (required)
+     * @param orderIds  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1469,10 +1469,10 @@ public class OrdersApi {
     }
 
     /**
-     * Get fulfillment status for a list of orders
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
-     * @param appId App Id (required)
-     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param orderIds  (required)
      * @return RestApiArrayResultOrderFulfillmentStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1482,10 +1482,10 @@ public class OrdersApi {
     }
 
     /**
-     * Get fulfillment status for a list of orders
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
-     * @param appId App Id (required)
-     * @param orderIds Flipdish Order Id list, comma separated (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param orderIds  (required)
      * @return ApiResponse&lt;RestApiArrayResultOrderFulfillmentStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1496,10 +1496,10 @@ public class OrdersApi {
     }
 
     /**
-     * Get fulfillment status for a list of orders (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
-     * @param appId App Id (required)
-     * @param orderIds Flipdish Order Id list, comma separated (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param orderIds  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1532,8 +1532,8 @@ public class OrdersApi {
     }
     /**
      * Build call for updateDeliveryInformation
-     * @param orderId Flipdish Order Id (required)
-     * @param deliveryInformation Delivery Information (required)
+     * @param orderId  (required)
+     * @param deliveryInformation  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1601,10 +1601,10 @@ public class OrdersApi {
     }
 
     /**
-     * Add/update delivery-related information to an order
-     * Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
-     * @param deliveryInformation Delivery Information (required)
+     * 
+     * 
+     * @param orderId  (required)
+     * @param deliveryInformation  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateDeliveryInformation(Integer orderId, OrderDeliveryInformationBase deliveryInformation) throws ApiException {
@@ -1612,10 +1612,10 @@ public class OrdersApi {
     }
 
     /**
-     * Add/update delivery-related information to an order
-     * Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
-     * @param deliveryInformation Delivery Information (required)
+     * 
+     * 
+     * @param orderId  (required)
+     * @param deliveryInformation  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1625,10 +1625,10 @@ public class OrdersApi {
     }
 
     /**
-     * Add/update delivery-related information to an order (asynchronously)
-     * Returns an order&#39;s delivery information. This would be used to display the latest known delivery information on a screen.
-     * @param orderId Flipdish Order Id (required)
-     * @param deliveryInformation Delivery Information (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
+     * @param deliveryInformation  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1660,8 +1660,8 @@ public class OrdersApi {
     }
     /**
      * Build call for updateFulfillmentState
-     * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest Fulfillment Status (required)
+     * @param orderId  (required)
+     * @param fulfillmentStatusRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1729,10 +1729,10 @@ public class OrdersApi {
     }
 
     /**
-     * Update fulfillment status information to an order
-     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
-     * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest Fulfillment Status (required)
+     * 
+     * 
+     * @param orderId  (required)
+     * @param fulfillmentStatusRequest  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateFulfillmentState(Integer orderId, OrderFulfillmentStatusUpdate fulfillmentStatusRequest) throws ApiException {
@@ -1740,10 +1740,10 @@ public class OrdersApi {
     }
 
     /**
-     * Update fulfillment status information to an order
-     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
-     * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest Fulfillment Status (required)
+     * 
+     * 
+     * @param orderId  (required)
+     * @param fulfillmentStatusRequest  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1753,10 +1753,10 @@ public class OrdersApi {
     }
 
     /**
-     * Update fulfillment status information to an order (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system] Updates an order&#39;s fulfillment states.
-     * @param orderId Flipdish Order Id (required)
-     * @param fulfillmentStatusRequest Fulfillment Status (required)
+     *  (asynchronously)
+     * 
+     * @param orderId  (required)
+     * @param fulfillmentStatusRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

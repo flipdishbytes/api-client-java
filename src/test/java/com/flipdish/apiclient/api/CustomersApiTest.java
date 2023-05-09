@@ -37,7 +37,7 @@ public class CustomersApiTest {
 
     
     /**
-     * Get customer of an app by Id
+     * 
      *
      * 
      *
@@ -54,7 +54,7 @@ public class CustomersApiTest {
     }
     
     /**
-     * Update customer of an app by Id
+     * 
      *
      * 
      *

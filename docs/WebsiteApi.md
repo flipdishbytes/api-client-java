@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addTestimonial**](WebsiteApi.md#addTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | Add a testimonial
-[**deleteTestimonial**](WebsiteApi.md#deleteTestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Delete a testimonial
-[**deleteWebsiteImage**](WebsiteApi.md#deleteWebsiteImage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | Delete Website Image
-[**editTestimonial**](WebsiteApi.md#editTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Edit a testimonial
-[**getIndexConfiguration**](WebsiteApi.md#getIndexConfiguration) | **GET** /api/v1.0/{appId}/website/index | Get Index Configuration
-[**setIndexConfiguration**](WebsiteApi.md#setIndexConfiguration) | **POST** /api/v1.0/{appId}/website/index | Set Index Configuration
-[**uploadWebsiteImage**](WebsiteApi.md#uploadWebsiteImage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | Upload Website Image
-[**websiteCheckNow**](WebsiteApi.md#websiteCheckNow) | **GET** /api/v1.0/{appId}/website/dnscheck | Triggers a Check DNS Process
+[**addTestimonial**](WebsiteApi.md#addTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | 
+[**deleteTestimonial**](WebsiteApi.md#deleteTestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+[**deleteWebsiteImage**](WebsiteApi.md#deleteWebsiteImage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | 
+[**editTestimonial**](WebsiteApi.md#editTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+[**getIndexConfiguration**](WebsiteApi.md#getIndexConfiguration) | **GET** /api/v1.0/{appId}/website/index | 
+[**setIndexConfiguration**](WebsiteApi.md#setIndexConfiguration) | **POST** /api/v1.0/{appId}/website/index | 
+[**uploadWebsiteImage**](WebsiteApi.md#uploadWebsiteImage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
+[**websiteCheckNow**](WebsiteApi.md#websiteCheckNow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 
 
 <a name="addTestimonial"></a>
 # **addTestimonial**
 > RestApiResultWebsiteTestimonial addTestimonial(appId, testimonial)
 
-Add a testimonial
+
 
 ### Example
 ```java
@@ -36,8 +36,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-WebsiteTestimonialBase testimonial = new WebsiteTestimonialBase(); // WebsiteTestimonialBase | Testimonial to be added
+String appId = "appId_example"; // String | 
+WebsiteTestimonialBase testimonial = new WebsiteTestimonialBase(); // WebsiteTestimonialBase | 
 try {
     RestApiResultWebsiteTestimonial result = apiInstance.addTestimonial(appId, testimonial);
     System.out.println(result);
@@ -51,8 +51,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **testimonial** | [**WebsiteTestimonialBase**](WebsiteTestimonialBase.md)| Testimonial to be added |
+ **appId** | **String**|  |
+ **testimonial** | [**WebsiteTestimonialBase**](WebsiteTestimonialBase.md)|  |
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **deleteTestimonial**
 > deleteTestimonial(appId, testimonialId)
 
-Delete a testimonial
+
 
 ### Example
 ```java
@@ -89,8 +89,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-Integer testimonialId = 56; // Integer | Id of the testimonial to delete
+String appId = "appId_example"; // String | 
+Integer testimonialId = 56; // Integer | 
 try {
     apiInstance.deleteTestimonial(appId, testimonialId);
 } catch (ApiException e) {
@@ -103,8 +103,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **testimonialId** | **Integer**| Id of the testimonial to delete |
+ **appId** | **String**|  |
+ **testimonialId** | **Integer**|  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ null (empty response body)
 # **deleteWebsiteImage**
 > deleteWebsiteImage(appId, imageId)
 
-Delete Website Image
+
 
 ### Example
 ```java
@@ -141,8 +141,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-Integer imageId = 56; // Integer | Id of the image
+String appId = "appId_example"; // String | 
+Integer imageId = 56; // Integer | 
 try {
     apiInstance.deleteWebsiteImage(appId, imageId);
 } catch (ApiException e) {
@@ -155,8 +155,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **imageId** | **Integer**| Id of the image |
+ **appId** | **String**|  |
+ **imageId** | **Integer**|  |
 
 ### Return type
 
@@ -175,7 +175,7 @@ null (empty response body)
 # **editTestimonial**
 > RestApiResultWebsiteTestimonial editTestimonial(appId, testimonialId, testimonial)
 
-Edit a testimonial
+
 
 ### Example
 ```java
@@ -193,9 +193,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-Integer testimonialId = 56; // Integer | Id of the testimonial to edit
-WebsiteTestimonialBase testimonial = new WebsiteTestimonialBase(); // WebsiteTestimonialBase | New values of the testimonial
+String appId = "appId_example"; // String | 
+Integer testimonialId = 56; // Integer | 
+WebsiteTestimonialBase testimonial = new WebsiteTestimonialBase(); // WebsiteTestimonialBase | 
 try {
     RestApiResultWebsiteTestimonial result = apiInstance.editTestimonial(appId, testimonialId, testimonial);
     System.out.println(result);
@@ -209,9 +209,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **testimonialId** | **Integer**| Id of the testimonial to edit |
- **testimonial** | [**WebsiteTestimonialBase**](WebsiteTestimonialBase.md)| New values of the testimonial |
+ **appId** | **String**|  |
+ **testimonialId** | **Integer**|  |
+ **testimonial** | [**WebsiteTestimonialBase**](WebsiteTestimonialBase.md)|  |
 
 ### Return type
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 # **getIndexConfiguration**
 > RestApiResultIndexPage getIndexConfiguration(appId)
 
-Get Index Configuration
+
 
 ### Example
 ```java
@@ -248,7 +248,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
+String appId = "appId_example"; // String | 
 try {
     RestApiResultIndexPage result = apiInstance.getIndexConfiguration(appId);
     System.out.println(result);
@@ -262,7 +262,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 # **setIndexConfiguration**
 > RestApiResultIndexPageBase setIndexConfiguration(appId, indexPage)
 
-Set Index Configuration
+
 
 ### Example
 ```java
@@ -299,8 +299,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-IndexPageBase indexPage = new IndexPageBase(); // IndexPageBase | New index page definition
+String appId = "appId_example"; // String | 
+IndexPageBase indexPage = new IndexPageBase(); // IndexPageBase | 
 try {
     RestApiResultIndexPageBase result = apiInstance.setIndexConfiguration(appId, indexPage);
     System.out.println(result);
@@ -314,8 +314,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **indexPage** | [**IndexPageBase**](IndexPageBase.md)| New index page definition |
+ **appId** | **String**|  |
+ **indexPage** | [**IndexPageBase**](IndexPageBase.md)|  |
 
 ### Return type
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 # **uploadWebsiteImage**
 > RestApiResultWebsiteImage uploadWebsiteImage(appId, imageLocation, image)
 
-Upload Website Image
+
 
 ### Example
 ```java
@@ -352,8 +352,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | Application identifier
-String imageLocation = "imageLocation_example"; // String | Section for which to upload the image
+String appId = "appId_example"; // String | 
+String imageLocation = "imageLocation_example"; // String | 
 File image = new File("/path/to/file.txt"); // File | App Logo
 try {
     RestApiResultWebsiteImage result = apiInstance.uploadWebsiteImage(appId, imageLocation, image);
@@ -368,8 +368,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application identifier |
- **imageLocation** | **String**| Section for which to upload the image | [enum: IndexHeader, IndexAboutSectionLeft, IndexAboutSectionRight, IndexGallery, IndexOpeningHoursHeader, IndexTestimonialsHeader]
+ **appId** | **String**|  |
+ **imageLocation** | **String**|  | [enum: IndexHeader, IndexAboutSectionLeft, IndexAboutSectionRight, IndexGallery, IndexOpeningHoursHeader, IndexTestimonialsHeader]
  **image** | **File**| App Logo |
 
 ### Return type
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 # **websiteCheckNow**
 > websiteCheckNow(appId)
 
-Triggers a Check DNS Process
+
 
 ### Example
 ```java

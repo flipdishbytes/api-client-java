@@ -42,7 +42,7 @@ public class WebsiteApiTest {
 
     
     /**
-     * Add a testimonial
+     * 
      *
      * 
      *
@@ -59,7 +59,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Delete a testimonial
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Delete Website Image
+     * 
      *
      * 
      *
@@ -93,7 +93,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Edit a testimonial
+     * 
      *
      * 
      *
@@ -111,7 +111,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Get Index Configuration
+     * 
      *
      * 
      *
@@ -127,7 +127,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Set Index Configuration
+     * 
      *
      * 
      *
@@ -144,7 +144,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Upload Website Image
+     * 
      *
      * 
      *
@@ -162,7 +162,7 @@ public class WebsiteApiTest {
     }
     
     /**
-     * Triggers a Check DNS Process
+     * 
      *
      * 
      *

@@ -71,8 +71,8 @@ public class AccountsApi {
 
     /**
      * Build call for answerSignUpQuestion
-     * @param signupStepAction Signup step action (required)
-     * @param answerId Identifier of the answer (required)
+     * @param signupStepAction  (required)
+     * @param answerId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -140,10 +140,10 @@ public class AccountsApi {
     }
 
     /**
-     * Answer a signup question
      * 
-     * @param signupStepAction Signup step action (required)
-     * @param answerId Identifier of the answer (required)
+     * 
+     * @param signupStepAction  (required)
+     * @param answerId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void answerSignUpQuestion(String signupStepAction, Integer answerId) throws ApiException {
@@ -151,10 +151,10 @@ public class AccountsApi {
     }
 
     /**
-     * Answer a signup question
      * 
-     * @param signupStepAction Signup step action (required)
-     * @param answerId Identifier of the answer (required)
+     * 
+     * @param signupStepAction  (required)
+     * @param answerId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -164,10 +164,10 @@ public class AccountsApi {
     }
 
     /**
-     * Answer a signup question (asynchronously)
+     *  (asynchronously)
      * 
-     * @param signupStepAction Signup step action (required)
-     * @param answerId Identifier of the answer (required)
+     * @param signupStepAction  (required)
+     * @param answerId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -199,7 +199,7 @@ public class AccountsApi {
     }
     /**
      * Build call for changePassword
-     * @param changePasswordModel Change password model (required)
+     * @param changePasswordModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -261,9 +261,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password
      * 
-     * @param changePasswordModel Change password model (required)
+     * 
+     * @param changePasswordModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void changePassword(ChangePasswordModel changePasswordModel) throws ApiException {
@@ -271,9 +271,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password
      * 
-     * @param changePasswordModel Change password model (required)
+     * 
+     * @param changePasswordModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -283,9 +283,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password (asynchronously)
+     *  (asynchronously)
      * 
-     * @param changePasswordModel Change password model (required)
+     * @param changePasswordModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -317,7 +317,7 @@ public class AccountsApi {
     }
     /**
      * Build call for changePasswordWithPin
-     * @param changePasswordModel Change password model (required)
+     * @param changePasswordModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -379,9 +379,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password
      * 
-     * @param changePasswordModel Change password model (required)
+     * 
+     * @param changePasswordModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void changePasswordWithPin(SetPasswordWithPinModel changePasswordModel) throws ApiException {
@@ -389,9 +389,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password
      * 
-     * @param changePasswordModel Change password model (required)
+     * 
+     * @param changePasswordModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -401,9 +401,9 @@ public class AccountsApi {
     }
 
     /**
-     * Change password (asynchronously)
+     *  (asynchronously)
      * 
-     * @param changePasswordModel Change password model (required)
+     * @param changePasswordModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -435,7 +435,7 @@ public class AccountsApi {
     }
     /**
      * Build call for createAccount
-     * @param createAccountModel Create account model (required)
+     * @param createAccountModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -497,9 +497,9 @@ public class AccountsApi {
     }
 
     /**
-     * Create account with email address and store name
      * 
-     * @param createAccountModel Create account model (required)
+     * 
+     * @param createAccountModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void createAccount(CreateAccountModel createAccountModel) throws ApiException {
@@ -507,9 +507,9 @@ public class AccountsApi {
     }
 
     /**
-     * Create account with email address and store name
      * 
-     * @param createAccountModel Create account model (required)
+     * 
+     * @param createAccountModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -519,9 +519,9 @@ public class AccountsApi {
     }
 
     /**
-     * Create account with email address and store name (asynchronously)
+     *  (asynchronously)
      * 
-     * @param createAccountModel Create account model (required)
+     * @param createAccountModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -609,7 +609,7 @@ public class AccountsApi {
     }
 
     /**
-     * Gets the current account detail
+     * 
      * 
      * @return RestApiResultAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -620,7 +620,7 @@ public class AccountsApi {
     }
 
     /**
-     * Gets the current account detail
+     * 
      * 
      * @return ApiResponse&lt;RestApiResultAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -632,7 +632,7 @@ public class AccountsApi {
     }
 
     /**
-     * Gets the current account detail (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -722,7 +722,7 @@ public class AccountsApi {
     }
 
     /**
-     * [PRIVATE API] Get timezones localised to users language
+     * 
      * 
      * @return RestApiArrayResultLocalisedTimeZone
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -733,7 +733,7 @@ public class AccountsApi {
     }
 
     /**
-     * [PRIVATE API] Get timezones localised to users language
+     * 
      * 
      * @return ApiResponse&lt;RestApiArrayResultLocalisedTimeZone&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -745,7 +745,7 @@ public class AccountsApi {
     }
 
     /**
-     * [PRIVATE API] Get timezones localised to users language (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -779,7 +779,7 @@ public class AccountsApi {
     }
     /**
      * Build call for login
-     * @param loginModel Login model (required)
+     * @param loginModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -841,9 +841,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password
      * 
-     * @param loginModel Login model (required)
+     * 
+     * @param loginModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void login(LoginModel loginModel) throws ApiException {
@@ -851,9 +851,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password
      * 
-     * @param loginModel Login model (required)
+     * 
+     * @param loginModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -863,9 +863,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with username and password (asynchronously)
+     *  (asynchronously)
      * 
-     * @param loginModel Login model (required)
+     * @param loginModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -953,7 +953,7 @@ public class AccountsApi {
     }
 
     /**
-     * Login with SSO token
+     * 
      * 
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -962,7 +962,7 @@ public class AccountsApi {
     }
 
     /**
-     * Login with SSO token
+     * 
      * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -973,7 +973,7 @@ public class AccountsApi {
     }
 
     /**
-     * Login with SSO token (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1006,7 +1006,7 @@ public class AccountsApi {
     }
     /**
      * Build call for loginWithPin
-     * @param loginModel Login with pin model (required)
+     * @param loginModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1068,9 +1068,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with email and pin
      * 
-     * @param loginModel Login with pin model (required)
+     * 
+     * @param loginModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void loginWithPin(LoginWithPinModel loginModel) throws ApiException {
@@ -1078,9 +1078,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with email and pin
      * 
-     * @param loginModel Login with pin model (required)
+     * 
+     * @param loginModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1090,9 +1090,9 @@ public class AccountsApi {
     }
 
     /**
-     * Login with email and pin (asynchronously)
+     *  (asynchronously)
      * 
-     * @param loginModel Login with pin model (required)
+     * @param loginModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1180,7 +1180,7 @@ public class AccountsApi {
     }
 
     /**
-     * Log out. It removes Flipdish authorization Cookie.
+     * 
      * 
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1189,7 +1189,7 @@ public class AccountsApi {
     }
 
     /**
-     * Log out. It removes Flipdish authorization Cookie.
+     * 
      * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1200,7 +1200,7 @@ public class AccountsApi {
     }
 
     /**
-     * Log out. It removes Flipdish authorization Cookie. (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1233,7 +1233,7 @@ public class AccountsApi {
     }
     /**
      * Build call for passwordResetWithToken
-     * @param passwordResetModel Password reset model (required)
+     * @param passwordResetModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1295,9 +1295,9 @@ public class AccountsApi {
     }
 
     /**
-     * Reset password with token.
      * 
-     * @param passwordResetModel Password reset model (required)
+     * 
+     * @param passwordResetModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void passwordResetWithToken(PasswordResetModel passwordResetModel) throws ApiException {
@@ -1305,9 +1305,9 @@ public class AccountsApi {
     }
 
     /**
-     * Reset password with token.
      * 
-     * @param passwordResetModel Password reset model (required)
+     * 
+     * @param passwordResetModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1317,9 +1317,9 @@ public class AccountsApi {
     }
 
     /**
-     * Reset password with token. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param passwordResetModel Password reset model (required)
+     * @param passwordResetModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1351,7 +1351,7 @@ public class AccountsApi {
     }
     /**
      * Build call for recaptchaValidate
-     * @param token Request token (required)
+     * @param token  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1415,9 +1415,9 @@ public class AccountsApi {
     }
 
     /**
-     * Validate recaptcha from flipdish portal
      * 
-     * @param token Request token (required)
+     * 
+     * @param token  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void recaptchaValidate(String token) throws ApiException {
@@ -1425,9 +1425,9 @@ public class AccountsApi {
     }
 
     /**
-     * Validate recaptcha from flipdish portal
      * 
-     * @param token Request token (required)
+     * 
+     * @param token  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1437,9 +1437,9 @@ public class AccountsApi {
     }
 
     /**
-     * Validate recaptcha from flipdish portal (asynchronously)
+     *  (asynchronously)
      * 
-     * @param token Request token (required)
+     * @param token  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1471,7 +1471,7 @@ public class AccountsApi {
     }
     /**
      * Build call for requestLoginPin
-     * @param requestLoginPinRequest Request login PIN request (required)
+     * @param requestLoginPinRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1533,9 +1533,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request login PIN. The server sends the PIN to the email address.
      * 
-     * @param requestLoginPinRequest Request login PIN request (required)
+     * 
+     * @param requestLoginPinRequest  (required)
      * @return RequestLoginPinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1545,9 +1545,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request login PIN. The server sends the PIN to the email address.
      * 
-     * @param requestLoginPinRequest Request login PIN request (required)
+     * 
+     * @param requestLoginPinRequest  (required)
      * @return ApiResponse&lt;RequestLoginPinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1558,9 +1558,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request login PIN. The server sends the PIN to the email address. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param requestLoginPinRequest Request login PIN request (required)
+     * @param requestLoginPinRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1593,7 +1593,7 @@ public class AccountsApi {
     }
     /**
      * Build call for requestPasswordReset
-     * @param requestPasswordResetModel Request password reset model (required)
+     * @param requestPasswordResetModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1655,9 +1655,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request password reset. Flipdish system will send a token via email.
      * 
-     * @param requestPasswordResetModel Request password reset model (required)
+     * 
+     * @param requestPasswordResetModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void requestPasswordReset(RequestPasswordResetModel requestPasswordResetModel) throws ApiException {
@@ -1665,9 +1665,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request password reset. Flipdish system will send a token via email.
      * 
-     * @param requestPasswordResetModel Request password reset model (required)
+     * 
+     * @param requestPasswordResetModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1677,9 +1677,9 @@ public class AccountsApi {
     }
 
     /**
-     * Request password reset. Flipdish system will send a token via email. (asynchronously)
+     *  (asynchronously)
      * 
-     * @param requestPasswordResetModel Request password reset model (required)
+     * @param requestPasswordResetModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1773,7 +1773,7 @@ public class AccountsApi {
     }
 
     /**
-     * Request Password Reset PIN. The server sends the PIN to the email address.
+     * 
      * 
      * @param requestPasswordResetRequest  (required)
      * @return RequestPasswordResetPinResponse
@@ -1785,7 +1785,7 @@ public class AccountsApi {
     }
 
     /**
-     * Request Password Reset PIN. The server sends the PIN to the email address.
+     * 
      * 
      * @param requestPasswordResetRequest  (required)
      * @return ApiResponse&lt;RequestPasswordResetPinResponse&gt;
@@ -1798,7 +1798,7 @@ public class AccountsApi {
     }
 
     /**
-     * Request Password Reset PIN. The server sends the PIN to the email address. (asynchronously)
+     *  (asynchronously)
      * 
      * @param requestPasswordResetRequest  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1833,7 +1833,7 @@ public class AccountsApi {
     }
     /**
      * Build call for skipSignupStep
-     * @param signupStepAction Signup step action (required)
+     * @param signupStepAction  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1896,9 +1896,9 @@ public class AccountsApi {
     }
 
     /**
-     * Skip a signup question
      * 
-     * @param signupStepAction Signup step action (required)
+     * 
+     * @param signupStepAction  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void skipSignupStep(String signupStepAction) throws ApiException {
@@ -1906,9 +1906,9 @@ public class AccountsApi {
     }
 
     /**
-     * Skip a signup question
      * 
-     * @param signupStepAction Signup step action (required)
+     * 
+     * @param signupStepAction  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1918,9 +1918,9 @@ public class AccountsApi {
     }
 
     /**
-     * Skip a signup question (asynchronously)
+     *  (asynchronously)
      * 
-     * @param signupStepAction Signup step action (required)
+     * @param signupStepAction  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1952,7 +1952,7 @@ public class AccountsApi {
     }
     /**
      * Build call for updateAccount
-     * @param updateAccountModel Update account model (required)
+     * @param updateAccountModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2014,9 +2014,9 @@ public class AccountsApi {
     }
 
     /**
-     * Update account with name and language
      * 
-     * @param updateAccountModel Update account model (required)
+     * 
+     * @param updateAccountModel  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateAccount(AccountDetailBase updateAccountModel) throws ApiException {
@@ -2024,9 +2024,9 @@ public class AccountsApi {
     }
 
     /**
-     * Update account with name and language
      * 
-     * @param updateAccountModel Update account model (required)
+     * 
+     * @param updateAccountModel  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2036,9 +2036,9 @@ public class AccountsApi {
     }
 
     /**
-     * Update account with name and language (asynchronously)
+     *  (asynchronously)
      * 
-     * @param updateAccountModel Update account model (required)
+     * @param updateAccountModel  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

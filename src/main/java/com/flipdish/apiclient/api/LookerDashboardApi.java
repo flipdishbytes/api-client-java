@@ -121,7 +121,7 @@ public class LookerDashboardApi {
     }
 
     /**
-     * Get all dashboards
+     * 
      * 
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -131,7 +131,7 @@ public class LookerDashboardApi {
     }
 
     /**
-     * Get all dashboards
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -143,7 +143,7 @@ public class LookerDashboardApi {
     }
 
     /**
-     * Get all dashboards (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes

@@ -65,8 +65,8 @@ public class WebsiteApi {
 
     /**
      * Build call for addTestimonial
-     * @param appId Application identifier (required)
-     * @param testimonial Testimonial to be added (required)
+     * @param appId  (required)
+     * @param testimonial  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -134,10 +134,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Add a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonial Testimonial to be added (required)
+     * 
+     * @param appId  (required)
+     * @param testimonial  (required)
      * @return RestApiResultWebsiteTestimonial
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,10 +147,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Add a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonial Testimonial to be added (required)
+     * 
+     * @param appId  (required)
+     * @param testimonial  (required)
      * @return ApiResponse&lt;RestApiResultWebsiteTestimonial&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -161,10 +161,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Add a testimonial (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param testimonial Testimonial to be added (required)
+     * @param appId  (required)
+     * @param testimonial  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,8 +197,8 @@ public class WebsiteApi {
     }
     /**
      * Build call for deleteTestimonial
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to delete (required)
+     * @param appId  (required)
+     * @param testimonialId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -267,10 +267,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to delete (required)
+     * 
+     * @param appId  (required)
+     * @param testimonialId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteTestimonial(String appId, Integer testimonialId) throws ApiException {
@@ -278,10 +278,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to delete (required)
+     * 
+     * @param appId  (required)
+     * @param testimonialId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -291,10 +291,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete a testimonial (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to delete (required)
+     * @param appId  (required)
+     * @param testimonialId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -326,8 +326,8 @@ public class WebsiteApi {
     }
     /**
      * Build call for deleteWebsiteImage
-     * @param appId Application identifier (required)
-     * @param imageId Id of the image (required)
+     * @param appId  (required)
+     * @param imageId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -396,10 +396,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete Website Image
      * 
-     * @param appId Application identifier (required)
-     * @param imageId Id of the image (required)
+     * 
+     * @param appId  (required)
+     * @param imageId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteWebsiteImage(String appId, Integer imageId) throws ApiException {
@@ -407,10 +407,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete Website Image
      * 
-     * @param appId Application identifier (required)
-     * @param imageId Id of the image (required)
+     * 
+     * @param appId  (required)
+     * @param imageId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -420,10 +420,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Delete Website Image (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param imageId Id of the image (required)
+     * @param appId  (required)
+     * @param imageId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -455,9 +455,9 @@ public class WebsiteApi {
     }
     /**
      * Build call for editTestimonial
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to edit (required)
-     * @param testimonial New values of the testimonial (required)
+     * @param appId  (required)
+     * @param testimonialId  (required)
+     * @param testimonial  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -531,11 +531,11 @@ public class WebsiteApi {
     }
 
     /**
-     * Edit a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to edit (required)
-     * @param testimonial New values of the testimonial (required)
+     * 
+     * @param appId  (required)
+     * @param testimonialId  (required)
+     * @param testimonial  (required)
      * @return RestApiResultWebsiteTestimonial
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -545,11 +545,11 @@ public class WebsiteApi {
     }
 
     /**
-     * Edit a testimonial
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to edit (required)
-     * @param testimonial New values of the testimonial (required)
+     * 
+     * @param appId  (required)
+     * @param testimonialId  (required)
+     * @param testimonial  (required)
      * @return ApiResponse&lt;RestApiResultWebsiteTestimonial&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -560,11 +560,11 @@ public class WebsiteApi {
     }
 
     /**
-     * Edit a testimonial (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param testimonialId Id of the testimonial to edit (required)
-     * @param testimonial New values of the testimonial (required)
+     * @param appId  (required)
+     * @param testimonialId  (required)
+     * @param testimonial  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -597,7 +597,7 @@ public class WebsiteApi {
     }
     /**
      * Build call for getIndexConfiguration
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -660,9 +660,9 @@ public class WebsiteApi {
     }
 
     /**
-     * Get Index Configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return RestApiResultIndexPage
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -672,9 +672,9 @@ public class WebsiteApi {
     }
 
     /**
-     * Get Index Configuration
      * 
-     * @param appId Application identifier (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultIndexPage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -685,9 +685,9 @@ public class WebsiteApi {
     }
 
     /**
-     * Get Index Configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -720,8 +720,8 @@ public class WebsiteApi {
     }
     /**
      * Build call for setIndexConfiguration
-     * @param appId Application identifier (required)
-     * @param indexPage New index page definition (required)
+     * @param appId  (required)
+     * @param indexPage  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -789,10 +789,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Set Index Configuration
      * 
-     * @param appId Application identifier (required)
-     * @param indexPage New index page definition (required)
+     * 
+     * @param appId  (required)
+     * @param indexPage  (required)
      * @return RestApiResultIndexPageBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -802,10 +802,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Set Index Configuration
      * 
-     * @param appId Application identifier (required)
-     * @param indexPage New index page definition (required)
+     * 
+     * @param appId  (required)
+     * @param indexPage  (required)
      * @return ApiResponse&lt;RestApiResultIndexPageBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -816,10 +816,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Set Index Configuration (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param indexPage New index page definition (required)
+     * @param appId  (required)
+     * @param indexPage  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -852,8 +852,8 @@ public class WebsiteApi {
     }
     /**
      * Build call for uploadWebsiteImage
-     * @param appId Application identifier (required)
-     * @param imageLocation Section for which to upload the image (required)
+     * @param appId  (required)
+     * @param imageLocation  (required)
      * @param image App Logo (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -930,10 +930,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Upload Website Image
      * 
-     * @param appId Application identifier (required)
-     * @param imageLocation Section for which to upload the image (required)
+     * 
+     * @param appId  (required)
+     * @param imageLocation  (required)
      * @param image App Logo (required)
      * @return RestApiResultWebsiteImage
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -944,10 +944,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Upload Website Image
      * 
-     * @param appId Application identifier (required)
-     * @param imageLocation Section for which to upload the image (required)
+     * 
+     * @param appId  (required)
+     * @param imageLocation  (required)
      * @param image App Logo (required)
      * @return ApiResponse&lt;RestApiResultWebsiteImage&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -959,10 +959,10 @@ public class WebsiteApi {
     }
 
     /**
-     * Upload Website Image (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId Application identifier (required)
-     * @param imageLocation Section for which to upload the image (required)
+     * @param appId  (required)
+     * @param imageLocation  (required)
      * @param image App Logo (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1059,7 +1059,7 @@ public class WebsiteApi {
     }
 
     /**
-     * Triggers a Check DNS Process
+     * 
      * 
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1069,7 +1069,7 @@ public class WebsiteApi {
     }
 
     /**
-     * Triggers a Check DNS Process
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1081,7 +1081,7 @@ public class WebsiteApi {
     }
 
     /**
-     * Triggers a Check DNS Process (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes

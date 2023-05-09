@@ -38,7 +38,7 @@ public class KioskStoreSettingsApiTest {
 
     
     /**
-     * Get all kiosk settings associated with a store
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class KioskStoreSettingsApiTest {
     }
     
     /**
-     * [For Kiosk use only] Get all stores connected to a Kiosk
+     * 
      *
      * 
      *

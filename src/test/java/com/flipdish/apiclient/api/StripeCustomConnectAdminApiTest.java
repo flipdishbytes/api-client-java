@@ -36,7 +36,7 @@ public class StripeCustomConnectAdminApiTest {
 
     
     /**
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
      * 
      *

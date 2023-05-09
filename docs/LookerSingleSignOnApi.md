@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
+[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | 
 
 
 <a name="getSSOEndpoint"></a>
 # **getSSOEndpoint**
 > DashboardEmbed getSSOEndpoint(appId, embedPath, filters)
 
-Get the generic single sign on embed URL for Looker dashboards
+
 
 ### Example
 ```java
@@ -29,9 +29,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 LookerSingleSignOnApi apiInstance = new LookerSingleSignOnApi();
-String appId = "appId_example"; // String | AppNameId
-String embedPath = "embedPath_example"; // String | Embed URL of the dashboard
-String filters = "filters_example"; // String | Filters that will be passed to the dashboard
+String appId = "appId_example"; // String | 
+String embedPath = "embedPath_example"; // String | 
+String filters = "filters_example"; // String | 
 try {
     DashboardEmbed result = apiInstance.getSSOEndpoint(appId, embedPath, filters);
     System.out.println(result);
@@ -45,9 +45,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| AppNameId |
- **embedPath** | **String**| Embed URL of the dashboard |
- **filters** | **String**| Filters that will be passed to the dashboard | [optional]
+ **appId** | **String**|  |
+ **embedPath** | **String**|  |
+ **filters** | **String**|  | [optional]
 
 ### Return type
 

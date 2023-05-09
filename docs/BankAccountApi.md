@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachBankAccountToStore**](BankAccountApi.md#attachBankAccountToStore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
-[**createBankAccount**](BankAccountApi.md#createBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts | Create a new Bank Account and attach to this App
-[**deleteBankAccount**](BankAccountApi.md#deleteBankAccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Delete BankAccount
-[**getBankAccountById**](BankAccountApi.md#getBankAccountById) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Get BankAccount Detail by Id
-[**getBankAccounts**](BankAccountApi.md#getBankAccounts) | **GET** /api/v1.0/{appId}/bankaccounts | Get List of BankAccounts for WL
-[**getCountriesWithFieldDefinitions**](BankAccountApi.md#getCountriesWithFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | Get bank account fields definitions
-[**getFieldDefinitions**](BankAccountApi.md#getFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
-[**updateBankAccount**](BankAccountApi.md#updateBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Update BankAccount
-[**updateBankAccountState**](BankAccountApi.md#updateBankAccountState) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | [PRIVATE API] Update State of Bank Account
+[**attachBankAccountToStore**](BankAccountApi.md#attachBankAccountToStore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | 
+[**createBankAccount**](BankAccountApi.md#createBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts | 
+[**deleteBankAccount**](BankAccountApi.md#deleteBankAccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**getBankAccountById**](BankAccountApi.md#getBankAccountById) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**getBankAccounts**](BankAccountApi.md#getBankAccounts) | **GET** /api/v1.0/{appId}/bankaccounts | 
+[**getCountriesWithFieldDefinitions**](BankAccountApi.md#getCountriesWithFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | 
+[**getFieldDefinitions**](BankAccountApi.md#getFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | 
+[**updateBankAccount**](BankAccountApi.md#updateBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**updateBankAccountState**](BankAccountApi.md#updateBankAccountState) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | 
 
 
 <a name="attachBankAccountToStore"></a>
 # **attachBankAccountToStore**
 > attachBankAccountToStore(appId, bankAccountId, storeId)
 
-[PRIVATE API] Attach Bank Account to Store
+
 
 ### Example
 ```java
@@ -37,9 +37,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
-Integer bankAccountId = 56; // Integer | Id of account to be updated
-Integer storeId = 56; // Integer | Store to be attached to Bank account
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
 try {
     apiInstance.attachBankAccountToStore(appId, bankAccountId, storeId);
 } catch (ApiException e) {
@@ -52,9 +52,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
- **bankAccountId** | **Integer**| Id of account to be updated |
- **storeId** | **Integer**| Store to be attached to Bank account |
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -73,7 +73,7 @@ null (empty response body)
 # **createBankAccount**
 > RestApiResultBankAccountDetail createBankAccount(appId, account)
 
-Create a new Bank Account and attach to this App
+
 
 ### Example
 ```java
@@ -91,8 +91,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
-BankAccountCreate account = new BankAccountCreate(); // BankAccountCreate | Account to be created
+String appId = "appId_example"; // String | 
+BankAccountCreate account = new BankAccountCreate(); // BankAccountCreate | 
 try {
     RestApiResultBankAccountDetail result = apiInstance.createBankAccount(appId, account);
     System.out.println(result);
@@ -106,8 +106,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
- **account** | [**BankAccountCreate**](BankAccountCreate.md)| Account to be created |
+ **appId** | **String**|  |
+ **account** | [**BankAccountCreate**](BankAccountCreate.md)|  |
 
 ### Return type
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 # **deleteBankAccount**
 > deleteBankAccount(appId, bankAccountId)
 
-Delete BankAccount
+
 
 ### Example
 ```java
@@ -144,8 +144,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
-Integer bankAccountId = 56; // Integer | Id of account to be marked as deleted
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
 try {
     apiInstance.deleteBankAccount(appId, bankAccountId);
 } catch (ApiException e) {
@@ -158,8 +158,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
- **bankAccountId** | **Integer**| Id of account to be marked as deleted |
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
 
 ### Return type
 
@@ -178,7 +178,7 @@ null (empty response body)
 # **getBankAccountById**
 > RestApiResultBankAccountDetail getBankAccountById(bankAccountId, appId)
 
-Get BankAccount Detail by Id
+
 
 ### Example
 ```java
@@ -196,7 +196,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-Integer bankAccountId = 56; // Integer | Id of account
+Integer bankAccountId = 56; // Integer | 
 String appId = "appId_example"; // String | 
 try {
     RestApiResultBankAccountDetail result = apiInstance.getBankAccountById(bankAccountId, appId);
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankAccountId** | **Integer**| Id of account |
+ **bankAccountId** | **Integer**|  |
  **appId** | **String**|  |
 
 ### Return type
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 # **getBankAccounts**
 > RestApiArrayResultBankAccountSummary getBankAccounts(appId)
 
-Get List of BankAccounts for WL
+
 
 ### Example
 ```java
@@ -249,7 +249,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultBankAccountSummary result = apiInstance.getBankAccounts(appId);
     System.out.println(result);
@@ -263,7 +263,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 # **getCountriesWithFieldDefinitions**
 > RestApiArrayResultCountryWithAccountFieldsDefinitions getCountriesWithFieldDefinitions(appId)
 
-Get bank account fields definitions
+
 
 ### Example
 ```java
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 # **getFieldDefinitions**
 > RestApiResultAccountFieldsDefinitions getFieldDefinitions(appId)
 
-Get bank account fields definitions
+
 
 ### Example
 ```java
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 # **updateBankAccount**
 > updateBankAccount(appId, bankAccountId, account)
 
-Update BankAccount
+
 
 ### Example
 ```java
@@ -402,9 +402,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
-Integer bankAccountId = 56; // Integer | Id of account to be updated
-BankAccountCreate account = new BankAccountCreate(); // BankAccountCreate | Details to update account with
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
+BankAccountCreate account = new BankAccountCreate(); // BankAccountCreate | 
 try {
     apiInstance.updateBankAccount(appId, bankAccountId, account);
 } catch (ApiException e) {
@@ -417,9 +417,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
- **bankAccountId** | **Integer**| Id of account to be updated |
- **account** | [**BankAccountCreate**](BankAccountCreate.md)| Details to update account with |
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
+ **account** | [**BankAccountCreate**](BankAccountCreate.md)|  |
 
 ### Return type
 
@@ -438,7 +438,7 @@ null (empty response body)
 # **updateBankAccountState**
 > updateBankAccountState(appId, bankAccountId, state, reason)
 
-[PRIVATE API] Update State of Bank Account
+
 
 ### Example
 ```java
@@ -456,10 +456,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-String appId = "appId_example"; // String | App Name
-Integer bankAccountId = 56; // Integer | Id of account to be updated
-String state = "state_example"; // String | New state
-String reason = "reason_example"; // String | Reason for state change, Mandatory for rejections
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
+String state = "state_example"; // String | 
+String reason = "reason_example"; // String | 
 try {
     apiInstance.updateBankAccountState(appId, bankAccountId, state, reason);
 } catch (ApiException e) {
@@ -472,10 +472,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name |
- **bankAccountId** | **Integer**| Id of account to be updated |
- **state** | **String**| New state |
- **reason** | **String**| Reason for state change, Mandatory for rejections |
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
+ **state** | **String**|  |
+ **reason** | **String**|  |
 
 ### Return type
 

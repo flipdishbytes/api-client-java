@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**downloadFile**](FilesApi.md#downloadFile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
+[**downloadFile**](FilesApi.md#downloadFile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 
 
 <a name="downloadFile"></a>
 # **downloadFile**
 > String downloadFile(appId, fileId)
 
-Get file from storage
+
 
 ### Example
 ```java

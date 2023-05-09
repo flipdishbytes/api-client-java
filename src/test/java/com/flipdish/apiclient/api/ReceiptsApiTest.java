@@ -35,7 +35,7 @@ public class ReceiptsApiTest {
 
     
     /**
-     * Returns all receipt information for a given orderId
+     * 
      *
      * 
      *

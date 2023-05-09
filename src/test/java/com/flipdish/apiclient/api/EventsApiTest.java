@@ -39,7 +39,7 @@ public class EventsApiTest {
 
     
     /**
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -72,7 +72,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -106,7 +106,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -123,7 +123,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -156,7 +156,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -189,7 +189,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -222,7 +222,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -255,7 +255,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *
@@ -288,7 +288,7 @@ public class EventsApiTest {
     }
     
     /**
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * 
      *

@@ -65,8 +65,8 @@ public class StripeCustomConnectApi {
 
     /**
      * Build call for createBankAccountAndConnectedAccount
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * @param appId  (required)
+     * @param account  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -134,10 +134,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * 
+     * @param appId  (required)
+     * @param account  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -147,10 +147,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * 
+     * @param appId  (required)
+     * @param account  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -161,10 +161,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * @param appId  (required)
+     * @param account  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,8 +197,8 @@ public class StripeCustomConnectApi {
     }
     /**
      * Build call for createStripeConnectedAccount
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -267,10 +267,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @return RestApiResultStripeConnectedAccount
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -280,10 +280,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @return ApiResponse&lt;RestApiResultStripeConnectedAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -294,10 +294,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -330,8 +330,8 @@ public class StripeCustomConnectApi {
     }
     /**
      * Build call for createStripeConnectedAccountLink
-     * @param appId App Name (required)
-     * @param stripeConnectedAccountId Stripe Connected Account Id (required)
+     * @param appId  (required)
+     * @param stripeConnectedAccountId  (required)
      * @param stripeAccountLinkRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -406,10 +406,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a single-use Stripe URL for the given account
      * 
-     * @param appId App Name (required)
-     * @param stripeConnectedAccountId Stripe Connected Account Id (required)
+     * 
+     * @param appId  (required)
+     * @param stripeConnectedAccountId  (required)
      * @param stripeAccountLinkRequest  (required)
      * @return RestApiResultStripeConnectedAccount
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -420,10 +420,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a single-use Stripe URL for the given account
      * 
-     * @param appId App Name (required)
-     * @param stripeConnectedAccountId Stripe Connected Account Id (required)
+     * 
+     * @param appId  (required)
+     * @param stripeConnectedAccountId  (required)
      * @param stripeAccountLinkRequest  (required)
      * @return ApiResponse&lt;RestApiResultStripeConnectedAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -435,10 +435,10 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a single-use Stripe URL for the given account (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param stripeConnectedAccountId Stripe Connected Account Id (required)
+     * @param appId  (required)
+     * @param stripeConnectedAccountId  (required)
      * @param stripeAccountLinkRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -542,7 +542,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a list of stripe custom connect ids information
+     * 
      * 
      * @param storeId  (required)
      * @param appId  (required)
@@ -555,7 +555,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a list of stripe custom connect ids information
+     * 
      * 
      * @param storeId  (required)
      * @param appId  (required)
@@ -569,7 +569,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets a list of stripe custom connect ids information (asynchronously)
+     *  (asynchronously)
      * 
      * @param storeId  (required)
      * @param appId  (required)
@@ -676,7 +676,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets the current verification status of the given connected account
+     * 
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)
@@ -689,7 +689,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets the current verification status of the given connected account
+     * 
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)
@@ -703,7 +703,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Gets the current verification status of the given connected account (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)
@@ -739,9 +739,9 @@ public class StripeCustomConnectApi {
     }
     /**
      * Build call for setBankAccountBusinessType
-     * @param appId App Name (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param businessType Bank Account business type (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param businessType  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -815,11 +815,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account&#39;s BusinessType and create a Stripe Connected Account
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param businessType Bank Account business type (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param businessType  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -829,11 +829,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account&#39;s BusinessType and create a Stripe Connected Account
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param businessType Bank Account business type (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param businessType  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -844,11 +844,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account&#39;s BusinessType and create a Stripe Connected Account (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param businessType Bank Account business type (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param businessType  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1015,9 +1015,9 @@ public class StripeCustomConnectApi {
     }
     /**
      * Build call for updateBankAccountDetails
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param updateRequest fields to be updated (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param updateRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1091,11 +1091,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account details
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param updateRequest fields to be updated (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param updateRequest  (required)
      * @return RestApiResultStripeConnectedAccount
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1105,11 +1105,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account details
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param updateRequest fields to be updated (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param updateRequest  (required)
      * @return ApiResponse&lt;RestApiResultStripeConnectedAccount&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1120,11 +1120,11 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update bank account details (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param bankAccountId Bank Account Id (required)
-     * @param updateRequest fields to be updated (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param updateRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1234,7 +1234,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update Stripe Connection Account&#39;s payout schedule
+     * 
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)
@@ -1248,7 +1248,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update Stripe Connection Account&#39;s payout schedule
+     * 
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)
@@ -1263,7 +1263,7 @@ public class StripeCustomConnectApi {
     }
 
     /**
-     * Update Stripe Connection Account&#39;s payout schedule (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param stripeConnectedAccountId  (required)

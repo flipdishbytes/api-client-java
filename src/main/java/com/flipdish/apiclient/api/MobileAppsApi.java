@@ -134,7 +134,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get sales channel configuration
+     * 
      * 
      * @param appId  (required)
      * @return RestApiResultAppConfigSalesChannel
@@ -146,7 +146,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get sales channel configuration
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultAppConfigSalesChannel&gt;
@@ -159,7 +159,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get sales channel configuration (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -265,7 +265,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get statistics mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param platformTypes  (required)
@@ -278,7 +278,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get statistics mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param platformTypes  (required)
@@ -292,7 +292,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get statistics mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param platformTypes  (required)
@@ -391,7 +391,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission details mobile apps
+     * 
      * 
      * @param appId  (required)
      * @return RestApiResultMobileAppsSubmissionDetails
@@ -403,7 +403,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission details mobile apps
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultMobileAppsSubmissionDetails&gt;
@@ -416,7 +416,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission details mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -521,7 +521,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission status mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -534,7 +534,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission status mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -548,7 +548,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Get submission status mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -657,7 +657,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Publish mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -671,7 +671,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Publish mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -686,7 +686,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Publish mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -792,7 +792,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Re-submission form mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -805,7 +805,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Re-submission form mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -819,7 +819,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Re-submission form mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -924,7 +924,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Submission form mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -937,7 +937,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Submission form mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -951,7 +951,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Submission form mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param mobileAppsSubmission  (required)
@@ -1060,7 +1060,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Unpublish mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1074,7 +1074,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Unpublish mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1089,7 +1089,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Unpublish mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1195,7 +1195,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update the application sales channel configuration
+     * 
      * 
      * @param appId  (required)
      * @param appConfigSalesChannel  (required)
@@ -1208,7 +1208,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update the application sales channel configuration
+     * 
      * 
      * @param appId  (required)
      * @param appConfigSalesChannel  (required)
@@ -1222,7 +1222,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update the application sales channel configuration (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param appConfigSalesChannel  (required)
@@ -1334,7 +1334,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update submission status
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1348,7 +1348,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update submission status
+     * 
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1363,7 +1363,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Update submission status (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param submissionId  (required)
@@ -1471,7 +1471,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Upload image mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param image Mobile Apps image (required)
@@ -1484,7 +1484,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Upload image mobile apps
+     * 
      * 
      * @param appId  (required)
      * @param image Mobile Apps image (required)
@@ -1498,7 +1498,7 @@ public class MobileAppsApi {
     }
 
     /**
-     * Upload image mobile apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param image Mobile Apps image (required)

@@ -41,7 +41,7 @@ public class OAuthClientsApiTest {
 
     
     /**
-     * Create OAuth App redirect uri
+     * 
      *
      * 
      *
@@ -59,7 +59,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Create OAuth App
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Delete OAuth App
+     * 
      *
      * 
      *
@@ -93,7 +93,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Get all OAuth Apps
+     * 
      *
      * 
      *
@@ -110,7 +110,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Get OAuth App by identifier
+     * 
      *
      * 
      *
@@ -127,7 +127,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Get OAuth App secret key
+     * 
      *
      * 
      *
@@ -144,7 +144,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Get OAuth access token for App
+     * 
      *
      * 
      *
@@ -161,7 +161,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Get OAuth App redirect uris
+     * 
      *
      * 
      *
@@ -194,7 +194,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Delete OAuth App redirect uri
+     * 
      *
      * 
      *
@@ -212,7 +212,7 @@ public class OAuthClientsApiTest {
     }
     
     /**
-     * Update OAuth App
+     * 
      *
      * 
      *

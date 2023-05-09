@@ -38,9 +38,9 @@ public class OrderBatchesApiTest {
 
     
     /**
-     * Returns order batches
+     * 
      *
-     * Entries are sorted by date, from the most recent. At most 100 entries are returned.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -57,7 +57,7 @@ public class OrderBatchesApiTest {
     }
     
     /**
-     * Returns the order batch details
+     * 
      *
      * 
      *

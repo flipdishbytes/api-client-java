@@ -60,7 +60,7 @@ public class AppStoreApi {
 
     /**
      * Build call for getAppStoreApp
-     * @param appStoreAppId App store app id (required)
+     * @param appStoreAppId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -123,9 +123,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Get App store app
-     * App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appStoreAppId  (required)
      * @return AppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -135,9 +135,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Get App store app
-     * App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App store app id (required)
+     * 
+     * 
+     * @param appStoreAppId  (required)
      * @return ApiResponse&lt;AppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,9 +148,9 @@ public class AppStoreApi {
     }
 
     /**
-     * Get App store app (asynchronously)
-     * App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appStoreAppId App store app id (required)
+     *  (asynchronously)
+     * 
+     * @param appStoreAppId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,10 +183,10 @@ public class AppStoreApi {
     }
     /**
      * Build call for getAppStoreApps
-     * @param search Query App store app name (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     * @param search  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param excludeNotOwned  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -256,12 +256,12 @@ public class AppStoreApi {
     }
 
     /**
-     * Get list of App store app summaries
-     * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query App store app name (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     * 
+     * 
+     * @param search  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param excludeNotOwned  (optional)
      * @return RestApiPaginationResultAppStoreAppSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -271,12 +271,12 @@ public class AppStoreApi {
     }
 
     /**
-     * Get list of App store app summaries
-     * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query App store app name (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     * 
+     * 
+     * @param search  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param excludeNotOwned  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultAppStoreAppSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -287,12 +287,12 @@ public class AppStoreApi {
     }
 
     /**
-     * Get list of App store app summaries (asynchronously)
-     * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
-     * @param search Query App store app name (required)
-     * @param page Requested page index (optional)
-     * @param limit Requested page limit (optional)
-     * @param excludeNotOwned Exclude App store apps that user is not the owner off (optional)
+     *  (asynchronously)
+     * 
+     * @param search  (required)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param excludeNotOwned  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

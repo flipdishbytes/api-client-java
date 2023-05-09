@@ -40,7 +40,7 @@ public class TeammatesApiTest {
 
     
     /**
-     * Create teammate and send an invite.
+     * 
      *
      * 
      *
@@ -57,7 +57,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * Delete teammate
+     * 
      *
      * 
      *
@@ -74,7 +74,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * Get a teammates by email address
+     * 
      *
      * 
      *
@@ -91,7 +91,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * Get all teammates
+     * 
      *
      * 
      *
@@ -107,7 +107,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * Redeem one-time code from invitation
+     * 
      *
      * 
      *
@@ -124,7 +124,7 @@ public class TeammatesApiTest {
     }
     
     /**
-     * Update teammates (this method does not support Deltas!)
+     * 
      *
      * 
      *

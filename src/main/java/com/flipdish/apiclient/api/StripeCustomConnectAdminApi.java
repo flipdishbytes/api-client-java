@@ -59,7 +59,7 @@ public class StripeCustomConnectAdminApi {
 
     /**
      * Build call for initializeBankAccountConnectedAccount
-     * @param accounts Accounts to be initialized in stripe (required)
+     * @param accounts  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -121,9 +121,9 @@ public class StripeCustomConnectAdminApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account
      * 
-     * @param accounts Accounts to be initialized in stripe (required)
+     * 
+     * @param accounts  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -133,9 +133,9 @@ public class StripeCustomConnectAdminApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account
      * 
-     * @param accounts Accounts to be initialized in stripe (required)
+     * 
+     * @param accounts  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -146,9 +146,9 @@ public class StripeCustomConnectAdminApi {
     }
 
     /**
-     * Create a new Bank Account and Stripe connected account (asynchronously)
+     *  (asynchronously)
      * 
-     * @param accounts Accounts to be initialized in stripe (required)
+     * @param accounts  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

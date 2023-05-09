@@ -63,9 +63,9 @@ public class BankAccountApi {
 
     /**
      * Build call for attachBankAccountToStore
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param storeId Store to be attached to Bank account (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -140,11 +140,11 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Attach Bank Account to Store
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param storeId Store to be attached to Bank account (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param storeId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void attachBankAccountToStore(String appId, Integer bankAccountId, Integer storeId) throws ApiException {
@@ -152,11 +152,11 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Attach Bank Account to Store
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param storeId Store to be attached to Bank account (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param storeId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -166,11 +166,11 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Attach Bank Account to Store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param storeId Store to be attached to Bank account (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param storeId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -202,8 +202,8 @@ public class BankAccountApi {
     }
     /**
      * Build call for createBankAccount
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * @param appId  (required)
+     * @param account  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -271,10 +271,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Create a new Bank Account and attach to this App
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * 
+     * @param appId  (required)
+     * @param account  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -284,10 +284,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Create a new Bank Account and attach to this App
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * 
+     * @param appId  (required)
+     * @param account  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -298,10 +298,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Create a new Bank Account and attach to this App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param account Account to be created (required)
+     * @param appId  (required)
+     * @param account  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -334,8 +334,8 @@ public class BankAccountApi {
     }
     /**
      * Build call for deleteBankAccount
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be marked as deleted (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -404,10 +404,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Delete BankAccount
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be marked as deleted (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteBankAccount(String appId, Integer bankAccountId) throws ApiException {
@@ -415,10 +415,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Delete BankAccount
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be marked as deleted (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -428,10 +428,10 @@ public class BankAccountApi {
     }
 
     /**
-     * Delete BankAccount (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be marked as deleted (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -463,7 +463,7 @@ public class BankAccountApi {
     }
     /**
      * Build call for getBankAccountById
-     * @param bankAccountId Id of account (required)
+     * @param bankAccountId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -533,9 +533,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get BankAccount Detail by Id
      * 
-     * @param bankAccountId Id of account (required)
+     * 
+     * @param bankAccountId  (required)
      * @param appId  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -546,9 +546,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get BankAccount Detail by Id
      * 
-     * @param bankAccountId Id of account (required)
+     * 
+     * @param bankAccountId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -560,9 +560,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get BankAccount Detail by Id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param bankAccountId Id of account (required)
+     * @param bankAccountId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -596,7 +596,7 @@ public class BankAccountApi {
     }
     /**
      * Build call for getBankAccounts
-     * @param appId App Name (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -659,9 +659,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get List of BankAccounts for WL
      * 
-     * @param appId App Name (required)
+     * 
+     * @param appId  (required)
      * @return RestApiArrayResultBankAccountSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -671,9 +671,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get List of BankAccounts for WL
      * 
-     * @param appId App Name (required)
+     * 
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultBankAccountSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -684,9 +684,9 @@ public class BankAccountApi {
     }
 
     /**
-     * Get List of BankAccounts for WL (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -782,7 +782,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions
+     * 
      * 
      * @param appId  (required)
      * @return RestApiArrayResultCountryWithAccountFieldsDefinitions
@@ -794,7 +794,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultCountryWithAccountFieldsDefinitions&gt;
@@ -807,7 +807,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -905,7 +905,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions
+     * 
      * 
      * @param appId  (required)
      * @return RestApiResultAccountFieldsDefinitions
@@ -917,7 +917,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultAccountFieldsDefinitions&gt;
@@ -930,7 +930,7 @@ public class BankAccountApi {
     }
 
     /**
-     * Get bank account fields definitions (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -965,9 +965,9 @@ public class BankAccountApi {
     }
     /**
      * Build call for updateBankAccount
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param account Details to update account with (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param account  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1041,11 +1041,11 @@ public class BankAccountApi {
     }
 
     /**
-     * Update BankAccount
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param account Details to update account with (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param account  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateBankAccount(String appId, Integer bankAccountId, BankAccountCreate account) throws ApiException {
@@ -1053,11 +1053,11 @@ public class BankAccountApi {
     }
 
     /**
-     * Update BankAccount
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param account Details to update account with (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param account  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1067,11 +1067,11 @@ public class BankAccountApi {
     }
 
     /**
-     * Update BankAccount (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param account Details to update account with (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param account  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1103,10 +1103,10 @@ public class BankAccountApi {
     }
     /**
      * Build call for updateBankAccountState
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param state New state (required)
-     * @param reason Reason for state change, Mandatory for rejections (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param state  (required)
+     * @param reason  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1189,12 +1189,12 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Update State of Bank Account
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param state New state (required)
-     * @param reason Reason for state change, Mandatory for rejections (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param state  (required)
+     * @param reason  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
      */
@@ -1204,12 +1204,12 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Update State of Bank Account
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param state New state (required)
-     * @param reason Reason for state change, Mandatory for rejections (required)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param state  (required)
+     * @param reason  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -1221,12 +1221,12 @@ public class BankAccountApi {
     }
 
     /**
-     * [PRIVATE API] Update State of Bank Account (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name (required)
-     * @param bankAccountId Id of account to be updated (required)
-     * @param state New state (required)
-     * @param reason Reason for state change, Mandatory for rejections (required)
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param state  (required)
+     * @param reason  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

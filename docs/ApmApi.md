@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getApmStatus**](ApmApi.md#getApmStatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
-[**getBasicStatistics**](ApmApi.md#getBasicStatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
-[**getCalendarWeekStatistics**](ApmApi.md#getCalendarWeekStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
-[**getCallsStatistics**](ApmApi.md#getCallsStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-[**getOrderStatistics**](ApmApi.md#getOrderStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
-[**getPaginatedCallList**](ApmApi.md#getPaginatedCallList) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
+[**getApmStatus**](ApmApi.md#getApmStatus) | **GET** /api/v1.0/{appId}/apm/status | 
+[**getBasicStatistics**](ApmApi.md#getBasicStatistics) | **GET** /api/v1.0/{appId}/apm/statistics | 
+[**getCalendarWeekStatistics**](ApmApi.md#getCalendarWeekStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | 
+[**getCallsStatistics**](ApmApi.md#getCallsStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | 
+[**getOrderStatistics**](ApmApi.md#getOrderStatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | 
+[**getPaginatedCallList**](ApmApi.md#getPaginatedCallList) | **GET** /api/v1.0/{appId}/apm/calls | 
 
 
 <a name="getApmStatus"></a>
 # **getApmStatus**
 > RestApiResultApmStatus getApmStatus(appId)
 
-[PRIVATE API] Returns true if APM is enabled on at least one store in an application
+
 
 ### Example
 ```java
@@ -34,7 +34,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
+String appId = "appId_example"; // String | 
 try {
     RestApiResultApmStatus result = apiInstance.getApmStatus(appId);
     System.out.println(result);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 # **getBasicStatistics**
 > RestApiResultApmStatistics getBasicStatistics(appId, storeId)
 
-[PRIVATE API] Get Basic Statistics
+
 
 ### Example
 ```java
@@ -85,8 +85,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of stores to search by
+String appId = "appId_example"; // String | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiResultApmStatistics result = apiInstance.getBasicStatistics(appId, storeId);
     System.out.println(result);
@@ -100,8 +100,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of stores to search by | [optional]
+ **appId** | **String**|  |
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 # **getCalendarWeekStatistics**
 > RestApiArrayResultApmHourlyDataPoint getCalendarWeekStatistics(appId, storeId)
 
-[PRIVATE API] Get Calendar statistics
+
 
 ### Example
 ```java
@@ -138,8 +138,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of stores to search by
+String appId = "appId_example"; // String | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiArrayResultApmHourlyDataPoint result = apiInstance.getCalendarWeekStatistics(appId, storeId);
     System.out.println(result);
@@ -153,8 +153,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of stores to search by | [optional]
+ **appId** | **String**|  |
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 # **getCallsStatistics**
 > RestApiArrayResultApmDataPoint getCallsStatistics(appId, aggregateDataBy, dataPointLimit, storeId)
 
-[PRIVATE API] Get Calls Statistics
+
 
 ### Example
 ```java
@@ -191,10 +191,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
-String aggregateDataBy = "aggregateDataBy_example"; // String | Aggregate data by day \\ week
-Integer dataPointLimit = 56; // Integer | Amount of data points per request
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of stores to search by
+String appId = "appId_example"; // String | 
+String aggregateDataBy = "aggregateDataBy_example"; // String | 
+Integer dataPointLimit = 56; // Integer | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiArrayResultApmDataPoint result = apiInstance.getCallsStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
     System.out.println(result);
@@ -208,10 +208,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **aggregateDataBy** | **String**| Aggregate data by day \\ week | [enum: Daily, Weekly, Monthly]
- **dataPointLimit** | **Integer**| Amount of data points per request | [optional]
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of stores to search by | [optional]
+ **appId** | **String**|  |
+ **aggregateDataBy** | **String**|  | [enum: Daily, Weekly, Monthly]
+ **dataPointLimit** | **Integer**|  | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 # **getOrderStatistics**
 > RestApiArrayResultApmCurrencyDataPoint getOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId)
 
-[PRIVATE API] Get Order Statistics (Value of Orders)
+
 
 ### Example
 ```java
@@ -248,10 +248,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
-String aggregateDataBy = "aggregateDataBy_example"; // String | Aggregate data by day \\ week
-Integer dataPointLimit = 56; // Integer | Amount of data points per request
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of stores to search by
+String appId = "appId_example"; // String | 
+String aggregateDataBy = "aggregateDataBy_example"; // String | 
+Integer dataPointLimit = 56; // Integer | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiArrayResultApmCurrencyDataPoint result = apiInstance.getOrderStatistics(appId, aggregateDataBy, dataPointLimit, storeId);
     System.out.println(result);
@@ -265,10 +265,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **aggregateDataBy** | **String**| Aggregate data by day \\ week | [enum: Daily, Weekly, Monthly]
- **dataPointLimit** | **Integer**| Amount of data points per request | [optional]
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of stores to search by | [optional]
+ **appId** | **String**|  |
+ **aggregateDataBy** | **String**|  | [enum: Daily, Weekly, Monthly]
+ **dataPointLimit** | **Integer**|  | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 # **getPaginatedCallList**
 > RestApiPaginationResultPhoneCall getPaginatedCallList(appId, page, limit, storeId)
 
-[PRIVATE API] Get paginated APM call list
+
 
 ### Example
 ```java
@@ -305,10 +305,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ApmApi apiInstance = new ApmApi();
-String appId = "appId_example"; // String | App Id
-Integer page = 56; // Integer | Requested page index
-Integer limit = 56; // Integer | Requested page limit
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of stores to search by
+String appId = "appId_example"; // String | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiPaginationResultPhoneCall result = apiInstance.getPaginatedCallList(appId, page, limit, storeId);
     System.out.println(result);
@@ -322,10 +322,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Id |
- **page** | **Integer**| Requested page index | [optional]
- **limit** | **Integer**| Requested page limit | [optional]
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of stores to search by | [optional]
+ **appId** | **String**|  |
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 

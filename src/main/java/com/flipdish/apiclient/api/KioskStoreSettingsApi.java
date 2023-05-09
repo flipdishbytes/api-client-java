@@ -61,8 +61,8 @@ public class KioskStoreSettingsApi {
 
     /**
      * Build call for getAllKioskSettingsForStore
-     * @param storeId Store identifier (required)
-     * @param appId App Name Id (required)
+     * @param storeId  (required)
+     * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -131,10 +131,10 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * Get all kiosk settings associated with a store
      * 
-     * @param storeId Store identifier (required)
-     * @param appId App Name Id (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
      * @return RestApiResultStoreKioskSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -144,10 +144,10 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * Get all kiosk settings associated with a store
      * 
-     * @param storeId Store identifier (required)
-     * @param appId App Name Id (required)
+     * 
+     * @param storeId  (required)
+     * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultStoreKioskSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -158,10 +158,10 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * Get all kiosk settings associated with a store (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeId Store identifier (required)
-     * @param appId App Name Id (required)
+     * @param storeId  (required)
+     * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -250,7 +250,7 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * [For Kiosk use only] Get all stores connected to a Kiosk
+     * 
      * 
      * @return RestApiResultKioskStoreSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -261,7 +261,7 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * [For Kiosk use only] Get all stores connected to a Kiosk
+     * 
      * 
      * @return ApiResponse&lt;RestApiResultKioskStoreSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -273,7 +273,7 @@ public class KioskStoreSettingsApi {
     }
 
     /**
-     * [For Kiosk use only] Get all stores connected to a Kiosk (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

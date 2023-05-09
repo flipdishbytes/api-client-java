@@ -42,7 +42,7 @@ public class DriversApiTest {
 
     
     /**
-     * Add driver token
+     * 
      *
      * 
      *
@@ -58,7 +58,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Delete driver profile image
+     * 
      *
      * 
      *
@@ -73,7 +73,7 @@ public class DriversApiTest {
     }
     
     /**
-     * [PRIVATE] Login with phone number and pin
+     * 
      *
      * 
      *
@@ -89,7 +89,7 @@ public class DriversApiTest {
     }
     
     /**
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
+     * 
      *
      * 
      *
@@ -105,7 +105,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Get driver profile
+     * 
      *
      * 
      *
@@ -120,7 +120,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Get stores for driver
+     * 
      *
      * 
      *
@@ -135,7 +135,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Delete driver token
+     * 
      *
      * 
      *
@@ -168,7 +168,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Set driver profile image and returns it&#39;s url
+     * 
      *
      * 
      *
@@ -183,9 +183,9 @@ public class DriversApiTest {
     }
     
     /**
-     * Change delivery tracking status and return the updated status.
+     * 
      *
-     * ...
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -200,7 +200,7 @@ public class DriversApiTest {
     }
     
     /**
-     * Update driver profile
+     * 
      *
      * 
      *

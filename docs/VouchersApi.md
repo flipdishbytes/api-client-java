@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createVoucher**](VouchersApi.md#createVoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
-[**getVoucherById**](VouchersApi.md#getVoucherById) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
-[**getVoucherStatsById**](VouchersApi.md#getVoucherStatsById) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
-[**getVouchers**](VouchersApi.md#getVouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
-[**updateVoucher**](VouchersApi.md#updateVoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
+[**createVoucher**](VouchersApi.md#createVoucher) | **POST** /api/v1.0/vouchers/{appId} | 
+[**getVoucherById**](VouchersApi.md#getVoucherById) | **GET** /api/v1.0/vouchers/{voucherId} | 
+[**getVoucherStatsById**](VouchersApi.md#getVoucherStatsById) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
+[**getVouchers**](VouchersApi.md#getVouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+[**updateVoucher**](VouchersApi.md#updateVoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 
 
 <a name="createVoucher"></a>
 # **createVoucher**
 > RestApiResultVoucherWithStats createVoucher(appId, voucher)
 
-[PRIVATE API] Create voucher
+
 
 ### Example
 ```java
@@ -33,8 +33,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
-String appId = "appId_example"; // String | App Name Id
-CreateVoucher voucher = new CreateVoucher(); // CreateVoucher | Voucher Details
+String appId = "appId_example"; // String | 
+CreateVoucher voucher = new CreateVoucher(); // CreateVoucher | 
 try {
     RestApiResultVoucherWithStats result = apiInstance.createVoucher(appId, voucher);
     System.out.println(result);
@@ -48,8 +48,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App Name Id |
- **voucher** | [**CreateVoucher**](CreateVoucher.md)| Voucher Details |
+ **appId** | **String**|  |
+ **voucher** | [**CreateVoucher**](CreateVoucher.md)|  |
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 # **getVoucherById**
 > RestApiResultVoucherWithStats getVoucherById(voucherId)
 
-[PRIVATE API] Get voucher by identifier
+
 
 ### Example
 ```java
@@ -86,7 +86,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
-Integer voucherId = 56; // Integer | Id of the voucher
+Integer voucherId = 56; // Integer | 
 try {
     RestApiResultVoucherWithStats result = apiInstance.getVoucherById(voucherId);
     System.out.println(result);
@@ -100,7 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voucherId** | **Integer**| Id of the voucher |
+ **voucherId** | **Integer**|  |
 
 ### Return type
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 # **getVoucherStatsById**
 > RestApiArrayResultVoucherDataPoint getVoucherStatsById(voucherId, aggregateDataBy, dataPointLimit)
 
-[PRIVATE API] Get voucher stats by identifier
+
 
 ### Example
 ```java
@@ -137,9 +137,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
-Integer voucherId = 56; // Integer | Id of the voucher
-String aggregateDataBy = "aggregateDataBy_example"; // String | Aggregate data by day \\ week \\ month
-Integer dataPointLimit = 56; // Integer | Amount of data points per request
+Integer voucherId = 56; // Integer | 
+String aggregateDataBy = "aggregateDataBy_example"; // String | 
+Integer dataPointLimit = 56; // Integer | 
 try {
     RestApiArrayResultVoucherDataPoint result = apiInstance.getVoucherStatsById(voucherId, aggregateDataBy, dataPointLimit);
     System.out.println(result);
@@ -153,9 +153,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voucherId** | **Integer**| Id of the voucher |
- **aggregateDataBy** | **String**| Aggregate data by day \\ week \\ month | [enum: Daily, Weekly, Monthly]
- **dataPointLimit** | **Integer**| Amount of data points per request | [optional]
+ **voucherId** | **Integer**|  |
+ **aggregateDataBy** | **String**|  | [enum: Daily, Weekly, Monthly]
+ **dataPointLimit** | **Integer**|  | [optional]
 
 ### Return type
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 # **getVouchers**
 > RestApiPaginationResultVoucherSummary getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds)
 
-[PRIVATE API] Get vouchers summaries for App Id
+
 
 ### Example
 ```java
@@ -192,14 +192,14 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
-String appId = "appId_example"; // String | Application Id
-Integer pageIndex = 56; // Integer | Page Number
-Integer pageSize = 56; // Integer | Page Size
-List<String> searchCodes = Arrays.asList("searchCodes_example"); // List<String> | Search by Voucher Code\\s
-List<String> statusSearch = Arrays.asList("statusSearch_example"); // List<String> | Search by Status
-List<String> typeSearch = Arrays.asList("typeSearch_example"); // List<String> | Search by Type
-List<String> subTypeSearch = Arrays.asList("subTypeSearch_example"); // List<String> | Search by Sub Type
-List<Integer> storeIds = Arrays.asList(56); // List<Integer> | Search by Store Ids
+String appId = "appId_example"; // String | 
+Integer pageIndex = 56; // Integer | 
+Integer pageSize = 56; // Integer | 
+List<String> searchCodes = Arrays.asList("searchCodes_example"); // List<String> | 
+List<String> statusSearch = Arrays.asList("statusSearch_example"); // List<String> | 
+List<String> typeSearch = Arrays.asList("typeSearch_example"); // List<String> | 
+List<String> subTypeSearch = Arrays.asList("subTypeSearch_example"); // List<String> | 
+List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiPaginationResultVoucherSummary result = apiInstance.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
     System.out.println(result);
@@ -213,14 +213,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id |
- **pageIndex** | **Integer**| Page Number | [optional]
- **pageSize** | **Integer**| Page Size | [optional]
- **searchCodes** | [**List&lt;String&gt;**](String.md)| Search by Voucher Code\\s | [optional]
- **statusSearch** | [**List&lt;String&gt;**](String.md)| Search by Status | [optional] [enum: Valid, NotYetValid, Expired, Used, Disabled]
- **typeSearch** | [**List&lt;String&gt;**](String.md)| Search by Type | [optional] [enum: PercentageDiscount, LumpDiscount, AddItem, CreditNote]
- **subTypeSearch** | [**List&lt;String&gt;**](String.md)| Search by Sub Type | [optional] [enum: None, SignUp, Loyalty, Loyalty25, Retention, SecondaryRetention, Custom]
- **storeIds** | [**List&lt;Integer&gt;**](Integer.md)| Search by Store Ids | [optional]
+ **appId** | **String**|  |
+ **pageIndex** | **Integer**|  | [optional]
+ **pageSize** | **Integer**|  | [optional]
+ **searchCodes** | [**List&lt;String&gt;**](String.md)|  | [optional]
+ **statusSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Valid, NotYetValid, Expired, Used, Disabled]
+ **typeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: PercentageDiscount, LumpDiscount, AddItem, CreditNote]
+ **subTypeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: None, SignUp, Loyalty, Loyalty25, Retention, SecondaryRetention, Custom]
+ **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 # **updateVoucher**
 > RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId)
 
-[PRIVATE API] Updates voucher
+
 
 ### Example
 ```java
@@ -257,12 +257,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
-Integer voucherId = 56; // Integer | Id of the voucher
-VoucherBase voucher = new VoucherBase(); // VoucherBase | Updated details for the voucher
-List<Integer> storeId = Arrays.asList(56); // List<Integer> | List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility.
-Integer percentValue = 56; // Integer | Percent voucher value (can have 1 of 3)
-Double lumpValue = 3.4D; // Double | Lump voucher value (can have 1 of 3)
-Integer freeItemId = 56; // Integer | Free Item Id (can have 1 of 3)
+Integer voucherId = 56; // Integer | 
+VoucherBase voucher = new VoucherBase(); // VoucherBase | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
+Integer percentValue = 56; // Integer | 
+Double lumpValue = 3.4D; // Double | 
+Integer freeItemId = 56; // Integer | 
 try {
     RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
     System.out.println(result);
@@ -276,12 +276,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **voucherId** | **Integer**| Id of the voucher |
- **voucher** | [**VoucherBase**](VoucherBase.md)| Updated details for the voucher |
- **storeId** | [**List&lt;Integer&gt;**](Integer.md)| List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. | [optional]
- **percentValue** | **Integer**| Percent voucher value (can have 1 of 3) | [optional]
- **lumpValue** | **Double**| Lump voucher value (can have 1 of 3) | [optional]
- **freeItemId** | **Integer**| Free Item Id (can have 1 of 3) | [optional]
+ **voucherId** | **Integer**|  |
+ **voucher** | [**VoucherBase**](VoucherBase.md)|  |
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **percentValue** | **Integer**|  | [optional]
+ **lumpValue** | **Double**|  | [optional]
+ **freeItemId** | **Integer**|  | [optional]
 
 ### Return type
 

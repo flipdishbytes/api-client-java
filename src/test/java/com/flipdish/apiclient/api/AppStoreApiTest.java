@@ -37,9 +37,9 @@ public class AppStoreApiTest {
 
     
     /**
-     * Get App store app
+     * 
      *
-     * App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,9 +53,9 @@ public class AppStoreApiTest {
     }
     
     /**
-     * Get list of App store app summaries
+     * 
      *
-     * Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

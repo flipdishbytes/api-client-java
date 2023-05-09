@@ -128,8 +128,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create an order audit log event
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param orderId  (required)
      * @param externalEventCreate  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -139,8 +139,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create an order audit log event
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param orderId  (required)
      * @param externalEventCreate  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -152,8 +152,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create an order audit log event (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param orderId  (required)
      * @param externalEventCreate  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -256,8 +256,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create a store audit log event
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param storeId  (required)
      * @param externalEventCreate  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -267,8 +267,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create a store audit log event
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param storeId  (required)
      * @param externalEventCreate  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -280,8 +280,8 @@ public class AuditLogsApi {
     }
 
     /**
-     * Create a store audit log event (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param storeId  (required)
      * @param externalEventCreate  (required)
      * @param callback The callback to be executed when the API call finishes

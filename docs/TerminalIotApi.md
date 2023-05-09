@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTerminalIotConnection**](TerminalIotApi.md#getTerminalIotConnection) | **POST** /api/v1.0/terminaliot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+[**getTerminalIotConnection**](TerminalIotApi.md#getTerminalIotConnection) | **POST** /api/v1.0/terminaliot/connect | 
 
 
 <a name="getTerminalIotConnection"></a>
 # **getTerminalIotConnection**
 > RestApiResultKioskIotConnectionParameters getTerminalIotConnection()
 
-Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

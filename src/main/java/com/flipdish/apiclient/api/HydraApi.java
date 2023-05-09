@@ -145,7 +145,7 @@ public class HydraApi {
     }
 
     /**
-     * Assign an EMV terminal to a kiosk
+     * 
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -157,7 +157,7 @@ public class HydraApi {
     }
 
     /**
-     * Assign an EMV terminal to a kiosk
+     * 
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -171,7 +171,7 @@ public class HydraApi {
     }
 
     /**
-     * Assign an EMV terminal to a kiosk (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -284,7 +284,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -298,7 +298,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -313,7 +313,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -427,7 +427,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -441,7 +441,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -456,7 +456,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -699,7 +699,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -713,7 +713,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -728,7 +728,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -842,7 +842,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -856,7 +856,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -871,7 +871,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -993,7 +993,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -1011,7 +1011,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -1030,7 +1030,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param deviceType  (required)
@@ -1134,7 +1134,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @return RestApiResultPaymentTerminalDetails
@@ -1146,7 +1146,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultPaymentTerminalDetails&gt;
@@ -1159,7 +1159,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1264,7 +1264,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param orderId  (required)
      * @param appId  (required)
@@ -1277,7 +1277,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param orderId  (required)
      * @param appId  (required)
@@ -1291,7 +1291,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param orderId  (required)
      * @param appId  (required)
@@ -1397,8 +1397,8 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Method on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @return RestApiArrayResultKioskCashPaymentSettings
@@ -1410,8 +1410,8 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Method on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @return ApiResponse&lt;RestApiArrayResultKioskCashPaymentSettings&gt;
@@ -1424,8 +1424,8 @@ public class HydraApi {
     }
 
     /**
-     * Get the status of Cash Payment Method on Kiosk (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1629,7 +1629,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @return RestApiResultHydraConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1640,7 +1640,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @return ApiResponse&lt;RestApiResultHydraConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1652,7 +1652,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1755,7 +1755,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param emv  (required)
@@ -1768,7 +1768,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param emv  (required)
@@ -1782,7 +1782,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param emv  (required)
@@ -1888,7 +1888,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -1901,7 +1901,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -1915,7 +1915,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param id  (required)
@@ -2028,7 +2028,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -2042,7 +2042,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -2057,7 +2057,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param storeId  (required)
@@ -2157,7 +2157,7 @@ public class HydraApi {
     }
 
     /**
-     * List EMV terminals belonging to the given AppNameId
+     * 
      * 
      * @param appId  (required)
      * @return RestApiArrayResultEmvTerminalWithAssignments
@@ -2169,7 +2169,7 @@ public class HydraApi {
     }
 
     /**
-     * List EMV terminals belonging to the given AppNameId
+     * 
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultEmvTerminalWithAssignments&gt;
@@ -2182,7 +2182,7 @@ public class HydraApi {
     }
 
     /**
-     * List EMV terminals belonging to the given AppNameId (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2286,7 +2286,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param deviceId  (required)
      * @param hydraUserType  (optional)
@@ -2298,7 +2298,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param deviceId  (required)
      * @param hydraUserType  (optional)
@@ -2312,7 +2312,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param deviceId  (required)
      * @param hydraUserType  (optional)
@@ -2417,7 +2417,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param hydraRegistration  (required)
@@ -2430,7 +2430,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param hydraRegistration  (required)
@@ -2444,7 +2444,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param hydraRegistration  (required)
@@ -2550,7 +2550,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2561,7 +2561,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private]
+     * 
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2574,7 +2574,7 @@ public class HydraApi {
     }
 
     /**
-     * [Private] (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param deviceId  (required)
@@ -2679,7 +2679,7 @@ public class HydraApi {
     }
 
     /**
-     * Unassign the currently assigned EMV terminal from a kiosk
+     * 
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -2690,7 +2690,7 @@ public class HydraApi {
     }
 
     /**
-     * Unassign the currently assigned EMV terminal from a kiosk
+     * 
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -2703,7 +2703,7 @@ public class HydraApi {
     }
 
     /**
-     * Unassign the currently assigned EMV terminal from a kiosk (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param hydraConfigId  (required)
@@ -2817,8 +2817,8 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Method Visibility on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param isCashEnabled  (required)
@@ -2829,8 +2829,8 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Method Visibility on Kiosk
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param isCashEnabled  (required)
@@ -2843,8 +2843,8 @@ public class HydraApi {
     }
 
     /**
-     * Update the Cash Payment Method Visibility on Kiosk (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param deviceId  (required)
      * @param isCashEnabled  (required)

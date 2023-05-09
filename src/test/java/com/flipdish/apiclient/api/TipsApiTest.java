@@ -37,7 +37,7 @@ public class TipsApiTest {
 
     
     /**
-     * Returns current tip configuration for a store
+     * 
      *
      * 
      *
@@ -53,7 +53,7 @@ public class TipsApiTest {
     }
     
     /**
-     * Update or insert current tip configuration for a store
+     * 
      *
      * 
      *

@@ -139,7 +139,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s chargebacks as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -154,7 +154,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s chargebacks as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -170,7 +170,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s chargebacks as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -288,7 +288,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s orders as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -303,7 +303,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s orders as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -319,7 +319,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s orders as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -437,7 +437,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s other charges as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -452,7 +452,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s other charges as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -468,7 +468,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s other charges as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -586,7 +586,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s refunds as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -601,7 +601,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s refunds as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -617,7 +617,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export a list of payout&#39;s refunds as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -735,7 +735,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payout&#39;s details as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -750,7 +750,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payout&#39;s details as CSV
+     * 
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -766,7 +766,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payout&#39;s details as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param bankAccountId  (required)
@@ -879,7 +879,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payouts as CSV
+     * 
      * 
      * @param appId  (required)
      * @param startDate  (optional)
@@ -895,7 +895,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payouts as CSV
+     * 
      * 
      * @param appId  (required)
      * @param startDate  (optional)
@@ -912,7 +912,7 @@ public class PayoutsExportApi {
     }
 
     /**
-     * Export payouts as CSV (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param startDate  (optional)

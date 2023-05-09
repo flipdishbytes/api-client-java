@@ -44,7 +44,7 @@ public class AppStoreConfigurationsApiTest {
 
     
     /**
-     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+     * 
      *
      * 
      *
@@ -60,9 +60,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Create App store app configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -77,9 +77,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Delete App store app configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -95,7 +95,7 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Execute configuration action on a configuration item (eg. handle button press)
+     * 
      *
      * 
      *
@@ -114,9 +114,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Get App store app configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -132,9 +132,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Get list of App store app configurations for one App store app
+     * 
      *
-     * [ALPHA - this endpoint is not ready to be consumed]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -149,9 +149,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Get list of App store apps which have been configured
+     * 
      *
-     * [ALPHA - this endpoint is not ready to be consumed]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -165,9 +165,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Update App store app configuration
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -184,9 +184,9 @@ public class AppStoreConfigurationsApiTest {
     }
     
     /**
-     * Update AppStore App Configuration values, specified settings only
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

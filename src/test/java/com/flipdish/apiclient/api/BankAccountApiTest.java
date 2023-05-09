@@ -40,7 +40,7 @@ public class BankAccountApiTest {
 
     
     /**
-     * [PRIVATE API] Attach Bank Account to Store
+     * 
      *
      * 
      *
@@ -58,7 +58,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Create a new Bank Account and attach to this App
+     * 
      *
      * 
      *
@@ -75,7 +75,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Delete BankAccount
+     * 
      *
      * 
      *
@@ -92,7 +92,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Get BankAccount Detail by Id
+     * 
      *
      * 
      *
@@ -109,7 +109,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Get List of BankAccounts for WL
+     * 
      *
      * 
      *
@@ -125,7 +125,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Get bank account fields definitions
+     * 
      *
      * 
      *
@@ -141,7 +141,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Get bank account fields definitions
+     * 
      *
      * 
      *
@@ -157,7 +157,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * Update BankAccount
+     * 
      *
      * 
      *
@@ -175,7 +175,7 @@ public class BankAccountApiTest {
     }
     
     /**
-     * [PRIVATE API] Update State of Bank Account
+     * 
      *
      * 
      *

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
+[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
 
 
 <a name="getLogs"></a>
 # **getLogs**
 > RestApiPaginationResultHttpRequestAndResponseLog getLogs(start, end, appId, filterByUserId, guid, page, limit)
 
-Get API interaction logs
+
 
 ### Example
 ```java
@@ -29,13 +29,13 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HttpRequestResponseLogsApi apiInstance = new HttpRequestResponseLogsApi();
-OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | Start date time
-OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | End date time
+OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | 
+OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | 
 String appId = "appId_example"; // String | 
-Integer filterByUserId = 56; // Integer | User id (optional)
-String guid = "guid_example"; // String | Id of the log
-Integer page = 56; // Integer | Page number
-Integer limit = 56; // Integer | Page size
+Integer filterByUserId = 56; // Integer | 
+String guid = "guid_example"; // String | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 try {
     RestApiPaginationResultHttpRequestAndResponseLog result = apiInstance.getLogs(start, end, appId, filterByUserId, guid, page, limit);
     System.out.println(result);
@@ -49,13 +49,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **OffsetDateTime**| Start date time |
- **end** | **OffsetDateTime**| End date time |
+ **start** | **OffsetDateTime**|  |
+ **end** | **OffsetDateTime**|  |
  **appId** | **String**|  |
- **filterByUserId** | **Integer**| User id (optional) | [optional]
- **guid** | **String**| Id of the log | [optional]
- **page** | **Integer**| Page number | [optional]
- **limit** | **Integer**| Page size | [optional]
+ **filterByUserId** | **Integer**|  | [optional]
+ **guid** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
 
 ### Return type
 

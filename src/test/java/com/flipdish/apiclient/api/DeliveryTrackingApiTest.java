@@ -38,7 +38,7 @@ public class DeliveryTrackingApiTest {
 
     
     /**
-     * [PRIVATE] Assign driver to order
+     * 
      *
      * 
      *
@@ -56,7 +56,7 @@ public class DeliveryTrackingApiTest {
     }
     
     /**
-     * Assign driver to multiple orders
+     * 
      *
      * 
      *
@@ -74,7 +74,7 @@ public class DeliveryTrackingApiTest {
     }
     
     /**
-     * [PRIVATE] Get drivers by App
+     * 
      *
      * 
      *
@@ -94,7 +94,7 @@ public class DeliveryTrackingApiTest {
     }
     
     /**
-     * [PRIVATE] Invite driver
+     * 
      *
      * 
      *
@@ -111,7 +111,7 @@ public class DeliveryTrackingApiTest {
     }
     
     /**
-     * [PRIVATE] Unassign driver from app
+     * 
      *
      * 
      *
@@ -128,7 +128,7 @@ public class DeliveryTrackingApiTest {
     }
     
     /**
-     * [PRIVATE] Unassign driver from order
+     * 
      *
      * 
      *

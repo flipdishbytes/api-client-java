@@ -36,7 +36,7 @@ public class PayoutsExportApiTest {
 
     
     /**
-     * Export a list of payout&#39;s chargebacks as CSV
+     * 
      *
      * 
      *
@@ -55,7 +55,7 @@ public class PayoutsExportApiTest {
     }
     
     /**
-     * Export a list of payout&#39;s orders as CSV
+     * 
      *
      * 
      *
@@ -74,7 +74,7 @@ public class PayoutsExportApiTest {
     }
     
     /**
-     * Export a list of payout&#39;s other charges as CSV
+     * 
      *
      * 
      *
@@ -93,7 +93,7 @@ public class PayoutsExportApiTest {
     }
     
     /**
-     * Export a list of payout&#39;s refunds as CSV
+     * 
      *
      * 
      *
@@ -112,7 +112,7 @@ public class PayoutsExportApiTest {
     }
     
     /**
-     * Export payout&#39;s details as CSV
+     * 
      *
      * 
      *
@@ -131,7 +131,7 @@ public class PayoutsExportApiTest {
     }
     
     /**
-     * Export payouts as CSV
+     * 
      *
      * 
      *

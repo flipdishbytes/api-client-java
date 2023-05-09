@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getProcessingFeeConfigsByStoreIds) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+[**getProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getProcessingFeeConfigsByStoreIds) | **GET** /api/v1.0/processingfeeconfigs | 
 
 
 <a name="getProcessingFeeConfigsByStoreIds"></a>
 # **getProcessingFeeConfigsByStoreIds**
 > RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds(storeIds)
 
-Get processing fee configs by store identifiers
+
 
 ### Example
 ```java
@@ -29,7 +29,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ProcessingFeeConfigsApi apiInstance = new ProcessingFeeConfigsApi();
-List<Integer> storeIds = Arrays.asList(56); // List<Integer> | Store identifiers
+List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
 try {
     RestApiArrayResultProcessingFeeConfig result = apiInstance.getProcessingFeeConfigsByStoreIds(storeIds);
     System.out.println(result);
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeIds** | [**List&lt;Integer&gt;**](Integer.md)| Store identifiers |
+ **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  |
 
 ### Return type
 

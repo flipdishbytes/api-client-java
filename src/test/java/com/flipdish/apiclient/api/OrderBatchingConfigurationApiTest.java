@@ -37,7 +37,7 @@ public class OrderBatchingConfigurationApiTest {
 
     
     /**
-     * Returns order batching configuration for a specific store
+     * 
      *
      * 
      *
@@ -53,7 +53,7 @@ public class OrderBatchingConfigurationApiTest {
     }
     
     /**
-     * Sets order batching configuration for a specific store
+     * 
      *
      * 
      *

@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPaymentIntent**](PaymentIntentsApi.md#getPaymentIntent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
+[**getPaymentIntent**](PaymentIntentsApi.md#getPaymentIntent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
 
 
 <a name="getPaymentIntent"></a>
 # **getPaymentIntent**
 > RestApiResultPaymentIntent getPaymentIntent(paymentIntentId)
 
-Returns stripe payment intent for a given id
+
 
 ### Example
 ```java
@@ -29,7 +29,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentIntentsApi apiInstance = new PaymentIntentsApi();
-String paymentIntentId = "paymentIntentId_example"; // String | Stripe payment intent identifier
+String paymentIntentId = "paymentIntentId_example"; // String | 
 try {
     RestApiResultPaymentIntent result = apiInstance.getPaymentIntent(paymentIntentId);
     System.out.println(result);
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentIntentId** | **String**| Stripe payment intent identifier |
+ **paymentIntentId** | **String**|  |
 
 ### Return type
 

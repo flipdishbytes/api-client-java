@@ -63,8 +63,8 @@ public class DeviceApi {
 
     /**
      * Build call for assignDevice
-     * @param appId App Id (required)
-     * @param assignDeviceRequest Assign request (required)
+     * @param appId  (required)
+     * @param assignDeviceRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -132,10 +132,10 @@ public class DeviceApi {
     }
 
     /**
-     * Assign device to AppId. Device must have been enrolled before
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param assignDeviceRequest Assign request (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param assignDeviceRequest  (required)
      * @return RestApiResultClientDeviceEnrollmentResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -145,10 +145,10 @@ public class DeviceApi {
     }
 
     /**
-     * Assign device to AppId. Device must have been enrolled before
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param assignDeviceRequest Assign request (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param assignDeviceRequest  (required)
      * @return ApiResponse&lt;RestApiResultClientDeviceEnrollmentResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -159,10 +159,10 @@ public class DeviceApi {
     }
 
     /**
-     * Assign device to AppId. Device must have been enrolled before (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param assignDeviceRequest Assign request (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param assignDeviceRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -195,8 +195,8 @@ public class DeviceApi {
     }
     /**
      * Build call for enrollDevice
-     * @param appId App Id - not for the device, only for permission checking (required)
-     * @param deviceEnrollmentRequest Request object for enrolling device (required)
+     * @param appId  (required)
+     * @param deviceEnrollmentRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -264,10 +264,10 @@ public class DeviceApi {
     }
 
     /**
-     * Enroll a new device - this returns a PIN code for actually assigning it later
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id - not for the device, only for permission checking (required)
-     * @param deviceEnrollmentRequest Request object for enrolling device (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceEnrollmentRequest  (required)
      * @return RestApiResultClientDeviceEnrollmentResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -277,10 +277,10 @@ public class DeviceApi {
     }
 
     /**
-     * Enroll a new device - this returns a PIN code for actually assigning it later
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id - not for the device, only for permission checking (required)
-     * @param deviceEnrollmentRequest Request object for enrolling device (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceEnrollmentRequest  (required)
      * @return ApiResponse&lt;RestApiResultClientDeviceEnrollmentResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -291,10 +291,10 @@ public class DeviceApi {
     }
 
     /**
-     * Enroll a new device - this returns a PIN code for actually assigning it later (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id - not for the device, only for permission checking (required)
-     * @param deviceEnrollmentRequest Request object for enrolling device (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param deviceEnrollmentRequest  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -327,9 +327,9 @@ public class DeviceApi {
     }
     /**
      * Build call for getDeviceDetails
-     * @param appId App Id (required)
-     * @param deviceModel Device Model (required)
-     * @param deviceId Device Id (required)
+     * @param appId  (required)
+     * @param deviceModel  (required)
+     * @param deviceId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -404,11 +404,11 @@ public class DeviceApi {
     }
 
     /**
-     * Get details for a device by model and deviceid
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param deviceModel Device Model (required)
-     * @param deviceId Device Id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceModel  (required)
+     * @param deviceId  (required)
      * @return RestApiResultClientDevice
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -418,11 +418,11 @@ public class DeviceApi {
     }
 
     /**
-     * Get details for a device by model and deviceid
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param deviceModel Device Model (required)
-     * @param deviceId Device Id (required)
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceModel  (required)
+     * @param deviceId  (required)
      * @return ApiResponse&lt;RestApiResultClientDevice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -433,11 +433,11 @@ public class DeviceApi {
     }
 
     /**
-     * Get details for a device by model and deviceid (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param deviceModel Device Model (required)
-     * @param deviceId Device Id (required)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param deviceModel  (required)
+     * @param deviceId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -470,9 +470,9 @@ public class DeviceApi {
     }
     /**
      * Build call for searchDevices
-     * @param appId App Id (required)
-     * @param storeId Store Id (optional) (optional)
-     * @param deviceModel Device Model (optional) (optional)
+     * @param appId  (required)
+     * @param storeId  (optional)
+     * @param deviceModel  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -539,11 +539,11 @@ public class DeviceApi {
     }
 
     /**
-     * Search devices by AppId and optionally storeId
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param storeId Store Id (optional) (optional)
-     * @param deviceModel Device Model (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
+     * @param deviceModel  (optional)
      * @return RestApiArrayResultClientDeviceSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -553,11 +553,11 @@ public class DeviceApi {
     }
 
     /**
-     * Search devices by AppId and optionally storeId
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param storeId Store Id (optional) (optional)
-     * @param deviceModel Device Model (optional) (optional)
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
+     * @param deviceModel  (optional)
      * @return ApiResponse&lt;RestApiArrayResultClientDeviceSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -568,11 +568,11 @@ public class DeviceApi {
     }
 
     /**
-     * Search devices by AppId and optionally storeId (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
-     * @param appId App Id (required)
-     * @param storeId Store Id (optional) (optional)
-     * @param deviceModel Device Model (optional) (optional)
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param storeId  (optional)
+     * @param deviceModel  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

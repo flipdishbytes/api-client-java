@@ -64,8 +64,8 @@ public class OAuthClientsApi {
 
     /**
      * Build call for addRedirectUri
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uri Redirect uri (required)
+     * @param oauthAppId  (required)
+     * @param uri  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -140,10 +140,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App redirect uri
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uri Redirect uri (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param uri  (required)
      * @param appId  (required)
      * @return RestApiResultOauthClientRedirectUri
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -154,10 +154,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App redirect uri
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uri Redirect uri (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param uri  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultOauthClientRedirectUri&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -169,10 +169,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App redirect uri (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uri Redirect uri (required)
+     * @param oauthAppId  (required)
+     * @param uri  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -206,7 +206,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for createOAuthApp
-     * @param oAuthApp OAuth App (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -275,9 +275,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App
      * 
-     * @param oAuthApp OAuth App (required)
+     * 
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -286,9 +286,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App
      * 
-     * @param oAuthApp OAuth App (required)
+     * 
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -299,9 +299,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Create OAuth App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oAuthApp OAuth App (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -334,7 +334,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for deleteOAuthApp
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -404,9 +404,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -415,9 +415,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -428,9 +428,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -529,7 +529,7 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get all OAuth Apps
+     * 
      * 
      * @param appId  (required)
      * @param oauthAppName  (optional)
@@ -542,7 +542,7 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get all OAuth Apps
+     * 
      * 
      * @param appId  (required)
      * @param oauthAppName  (optional)
@@ -556,7 +556,7 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get all OAuth Apps (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param oauthAppName  (optional)
@@ -592,7 +592,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for getOAuthClientByClientId
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -662,9 +662,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App by identifier
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return RestApiResultOAuthApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -675,9 +675,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App by identifier
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiResultOAuthApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -689,9 +689,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App by identifier (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -725,7 +725,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for getOAuthClientSecret
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -795,9 +795,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App secret key
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -808,9 +808,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App secret key
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -822,9 +822,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App secret key (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -858,7 +858,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for getOauthAccessToken
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -928,9 +928,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth access token for App
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -941,9 +941,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth access token for App
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -955,9 +955,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth access token for App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -991,7 +991,7 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for getRedirectUris
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1061,9 +1061,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App redirect uris
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return RestApiArrayResultOauthClientRedirectUri
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1074,9 +1074,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App redirect uris
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * 
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultOauthClientRedirectUri&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1088,9 +1088,9 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Get OAuth App redirect uris (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
+     * @param oauthAppId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1247,8 +1247,8 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for removeRedirectUri
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uriId Redirect uri identifier (required)
+     * @param oauthAppId  (required)
+     * @param uriId  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1324,10 +1324,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App redirect uri
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uriId Redirect uri identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param uriId  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1336,10 +1336,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App redirect uri
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uriId Redirect uri identifier (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param uriId  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1350,10 +1350,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Delete OAuth App redirect uri (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param uriId Redirect uri identifier (required)
+     * @param oauthAppId  (required)
+     * @param uriId  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1386,8 +1386,8 @@ public class OAuthClientsApi {
     }
     /**
      * Build call for updateOAuthApp
-     * @param oauthAppId OAuth App identifier (required)
-     * @param oAuthApp OAuth App (required)
+     * @param oauthAppId  (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1462,10 +1462,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Update OAuth App
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param oAuthApp OAuth App (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1474,10 +1474,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Update OAuth App
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param oAuthApp OAuth App (required)
+     * 
+     * @param oauthAppId  (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1488,10 +1488,10 @@ public class OAuthClientsApi {
     }
 
     /**
-     * Update OAuth App (asynchronously)
+     *  (asynchronously)
      * 
-     * @param oauthAppId OAuth App identifier (required)
-     * @param oAuthApp OAuth App (required)
+     * @param oauthAppId  (required)
+     * @param oAuthApp  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

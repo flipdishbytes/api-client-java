@@ -59,7 +59,7 @@ public class ProcessingFeeConfigsApi {
 
     /**
      * Build call for getProcessingFeeConfigsByStoreIds
-     * @param storeIds Store identifiers (required)
+     * @param storeIds  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -123,9 +123,9 @@ public class ProcessingFeeConfigsApi {
     }
 
     /**
-     * Get processing fee configs by store identifiers
      * 
-     * @param storeIds Store identifiers (required)
+     * 
+     * @param storeIds  (required)
      * @return RestApiArrayResultProcessingFeeConfig
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -135,9 +135,9 @@ public class ProcessingFeeConfigsApi {
     }
 
     /**
-     * Get processing fee configs by store identifiers
      * 
-     * @param storeIds Store identifiers (required)
+     * 
+     * @param storeIds  (required)
      * @return ApiResponse&lt;RestApiArrayResultProcessingFeeConfig&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,9 +148,9 @@ public class ProcessingFeeConfigsApi {
     }
 
     /**
-     * Get processing fee configs by store identifiers (asynchronously)
+     *  (asynchronously)
      * 
-     * @param storeIds Store identifiers (required)
+     * @param storeIds  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

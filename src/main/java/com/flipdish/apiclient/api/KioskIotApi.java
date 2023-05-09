@@ -117,8 +117,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @return RestApiResultKioskIotConnectionParameters
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -128,8 +128,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @return ApiResponse&lt;RestApiResultKioskIotConnectionParameters&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -140,8 +140,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -243,8 +243,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param queryParams  (required)
      * @return RestApiResultTelemetrySeriesResult
@@ -256,8 +256,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param queryParams  (required)
      * @return ApiResponse&lt;RestApiResultTelemetrySeriesResult&gt;
@@ -270,8 +270,8 @@ public class KioskIotApi {
     }
 
     /**
-     * Get the IoT time series values for a given Kiosk Id, properties and time range (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param queryParams  (required)
      * @param callback The callback to be executed when the API call finishes

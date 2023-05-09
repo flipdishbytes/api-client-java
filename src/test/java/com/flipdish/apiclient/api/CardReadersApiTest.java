@@ -43,9 +43,9 @@ public class CardReadersApiTest {
 
     
     /**
-     * Cancel currently initiated install update for bluetooth terminal
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -61,9 +61,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Cancel terminals action
+     * 
      *
-     * Can only be called by Kiosk
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -78,9 +78,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Get reader
+     * 
      *
-     * Can only be called by Kiosk
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -95,9 +95,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Get Location ID for Stripe Terminal
+     * 
      *
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -112,9 +112,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Get the status of the bluetooth terminal
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -129,9 +129,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Get Connection Token For a Stripe Terminal
+     * 
      *
-     * Can only be called by Kiosk
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -145,9 +145,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Trigger check for Bluetooth device update on Kiosk
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -163,9 +163,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Initiate stripe terminal pairing mode
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -181,9 +181,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Initiate Kiosk Update Install for bluetooth terminal
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -199,9 +199,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Initiate Stripe terminal to Process Payment Intent
+     * 
      *
-     * Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -234,9 +234,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Un-register terminal by deleting it from stripe
+     * 
      *
-     * Can only be called by Kiosk
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -251,9 +251,9 @@ public class CardReadersApiTest {
     }
     
     /**
-     * Unpair the currently paired stripe terminal
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

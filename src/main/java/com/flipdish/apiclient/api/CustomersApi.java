@@ -60,8 +60,8 @@ public class CustomersApi {
 
     /**
      * Build call for getCustomerById
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
+     * @param appId  (required)
+     * @param customerId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -130,10 +130,10 @@ public class CustomersApi {
     }
 
     /**
-     * Get customer of an app by Id
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
+     * 
+     * @param appId  (required)
+     * @param customerId  (required)
      * @return RestApiResultCustomer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -143,10 +143,10 @@ public class CustomersApi {
     }
 
     /**
-     * Get customer of an app by Id
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
+     * 
+     * @param appId  (required)
+     * @param customerId  (required)
      * @return ApiResponse&lt;RestApiResultCustomer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -157,10 +157,10 @@ public class CustomersApi {
     }
 
     /**
-     * Get customer of an app by Id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
+     * @param appId  (required)
+     * @param customerId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -193,9 +193,9 @@ public class CustomersApi {
     }
     /**
      * Build call for updateCustomerById
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
-     * @param updateCustomer Updated customer information (required)
+     * @param appId  (required)
+     * @param customerId  (required)
+     * @param updateCustomer  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -269,11 +269,11 @@ public class CustomersApi {
     }
 
     /**
-     * Update customer of an app by Id
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
-     * @param updateCustomer Updated customer information (required)
+     * 
+     * @param appId  (required)
+     * @param customerId  (required)
+     * @param updateCustomer  (required)
      * @return RestApiResultCustomer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -283,11 +283,11 @@ public class CustomersApi {
     }
 
     /**
-     * Update customer of an app by Id
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
-     * @param updateCustomer Updated customer information (required)
+     * 
+     * @param appId  (required)
+     * @param customerId  (required)
+     * @param updateCustomer  (required)
      * @return ApiResponse&lt;RestApiResultCustomer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -298,11 +298,11 @@ public class CustomersApi {
     }
 
     /**
-     * Update customer of an app by Id (asynchronously)
+     *  (asynchronously)
      * 
-     * @param appId App Name Id (required)
-     * @param customerId Customer Id (required)
-     * @param updateCustomer Updated customer information (required)
+     * @param appId  (required)
+     * @param customerId  (required)
+     * @param updateCustomer  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

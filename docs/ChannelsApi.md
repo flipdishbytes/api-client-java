@@ -4,25 +4,25 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
-[**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-[**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
-[**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
-[**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
-[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
-[**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | Returns a Sales Channel by Id.
-[**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | Returns a list of enabled Channels
-[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
-[**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | 
+[**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | 
+[**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | 
+[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | 
+[**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
+[**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | 
+[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | 
+[**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
 
 
 <a name="assignAppIdToSalesChannel"></a>
 # **assignAppIdToSalesChannel**
 > Object assignAppIdToSalesChannel(appId, channelId)
 
-Assign a given AppId to a Sales Channel
+
 
 ### Example
 ```java
@@ -40,8 +40,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameIdxxx)
-Integer channelId = 56; // Integer | Channel Id (123, 456)
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     Object result = apiInstance.assignAppIdToSalesChannel(appId, channelId);
     System.out.println(result);
@@ -55,8 +55,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameIdxxx) |
- **channelId** | **Integer**| Channel Id (123, 456) |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **assignStoreToChannel**
 > Object assignStoreToChannel(storeId, appId, channelId)
 
-Assign a Store to a Sales Channel
+
 
 ### Example
 ```java
@@ -93,9 +93,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-Integer storeId = 56; // Integer | Store Id (123, 456)
-String appId = "appId_example"; // String | AppId (AppNameIdxxx)
-Integer channelId = 56; // Integer | Channel Id (123, 456)
+Integer storeId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     Object result = apiInstance.assignStoreToChannel(storeId, appId, channelId);
     System.out.println(result);
@@ -109,9 +109,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id (123, 456) |
- **appId** | **String**| AppId (AppNameIdxxx) |
- **channelId** | **Integer**| Channel Id (123, 456) |
+ **storeId** | **Integer**|  |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 # **attachStoreToSalesChannel**
 > Object attachStoreToSalesChannel(appId, channelId, storeId)
 
-Attachs the specified store to the given sales channel.
+
 
 ### Example
 ```java
@@ -148,9 +148,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameId)
-Integer channelId = 56; // Integer | Type of sales channel (Android, IOS, Web, etc.)
-Integer storeId = 56; // Integer | Store Id (Phyisical Restaurant) to attach.
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.attachStoreToSalesChannel(appId, channelId, storeId);
     System.out.println(result);
@@ -164,9 +164,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameId) |
- **channelId** | **Integer**| Type of sales channel (Android, IOS, Web, etc.) |
- **storeId** | **Integer**| Store Id (Phyisical Restaurant) to attach. |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 # **detachAllStoresFromSalesChannel**
 > Object detachAllStoresFromSalesChannel(appId, channelId)
 
-Detaches all the stores from the given sales channel.
+
 
 ### Example
 ```java
@@ -203,8 +203,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameId)
-Integer channelId = 56; // Integer | Type of sales channel (Android, IOS, Web, etc.)
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     Object result = apiInstance.detachAllStoresFromSalesChannel(appId, channelId);
     System.out.println(result);
@@ -218,8 +218,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameId) |
- **channelId** | **Integer**| Type of sales channel (Android, IOS, Web, etc.) |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 # **detachStoreFromSalesChannel**
 > Object detachStoreFromSalesChannel(appId, channelId, storeId)
 
-Detaches the specified store from the given sales channel.
+
 
 ### Example
 ```java
@@ -256,9 +256,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameId)
-Integer channelId = 56; // Integer | Type of sales channel (Android, IOS, Web, etc.)
-Integer storeId = 56; // Integer | Store Id (Phyisical Restaurant) to detach.
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
 try {
     Object result = apiInstance.detachStoreFromSalesChannel(appId, channelId, storeId);
     System.out.println(result);
@@ -272,9 +272,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameId) |
- **channelId** | **Integer**| Type of sales channel (Android, IOS, Web, etc.) |
- **storeId** | **Integer**| Store Id (Phyisical Restaurant) to detach. |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
+ **storeId** | **Integer**|  |
 
 ### Return type
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 # **getAssignedChannels**
 > RestApiArrayResultChannel getAssignedChannels(appId)
 
-Returns a list of sales channels that are assigned to a given AppId
+
 
 ### Example
 ```java
@@ -311,7 +311,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameIdxxx)
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultChannel result = apiInstance.getAssignedChannels(appId);
     System.out.println(result);
@@ -325,7 +325,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameIdxxx) |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 # **getAvailableChannels**
 > RestApiArrayResultChannel getAvailableChannels(appId)
 
-Returns a list of sales channels that are not yet assigned to a given AppId
+
 
 ### Example
 ```java
@@ -362,7 +362,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameIdxxx)
+String appId = "appId_example"; // String | 
 try {
     RestApiArrayResultChannel result = apiInstance.getAvailableChannels(appId);
     System.out.println(result);
@@ -376,7 +376,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameIdxxx) |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 # **getChannel**
 > RestApiResultChannel getChannel(id, appId)
 
-Returns a Sales Channel by Id.
+
 
 ### Example
 ```java
@@ -413,8 +413,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-Integer id = 56; // Integer | ChannelId
-String appId = "appId_example"; // String | AppId
+Integer id = 56; // Integer | 
+String appId = "appId_example"; // String | 
 try {
     RestApiResultChannel result = apiInstance.getChannel(id, appId);
     System.out.println(result);
@@ -428,8 +428,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| ChannelId |
- **appId** | **String**| AppId |
+ **id** | **Integer**|  |
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 # **getChannels**
 > RestApiArrayResultChannel getChannels(appId)
 
-Returns a list of enabled Channels
+
 
 ### Example
 ```java
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 # **getStoresAssignedToChannel**
 > RestApiArrayResultStoreChannelAssignment getStoresAssignedToChannel(appId, channelId)
 
-Returns a list of stores of an AppId that are assigned to a given Sales Channel
+
 
 ### Example
 ```java
@@ -517,8 +517,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameId)
-Integer channelId = 56; // Integer | Sales channel (Android, IOS, Web, etc.)
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     RestApiArrayResultStoreChannelAssignment result = apiInstance.getStoresAssignedToChannel(appId, channelId);
     System.out.println(result);
@@ -532,8 +532,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameId) |
- **channelId** | **Integer**| Sales channel (Android, IOS, Web, etc.) |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 # **getStoresBySalesChannel**
 > Response getStoresBySalesChannel(appId, channelId)
 
-Returns a list of store ids attached to the given channel type for the specified app.
+
 
 ### Example
 ```java
@@ -570,8 +570,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-String appId = "appId_example"; // String | Application Id (AppNameId)
-Integer channelId = 56; // Integer | Type of sales channel (Android, IOS, Web, etc.)
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     Response result = apiInstance.getStoresBySalesChannel(appId, channelId);
     System.out.println(result);
@@ -585,8 +585,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| Application Id (AppNameId) |
- **channelId** | **Integer**| Type of sales channel (Android, IOS, Web, etc.) |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 # **unassignStoreFromChannel**
 > Object unassignStoreFromChannel(storeId, appId, channelId)
 
-Unassign a Store from a Sales Channel
+
 
 ### Example
 ```java
@@ -623,9 +623,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ChannelsApi apiInstance = new ChannelsApi();
-Integer storeId = 56; // Integer | Store Id (123, 456)
-String appId = "appId_example"; // String | AppId (AppNameIdxxx)
-Integer channelId = 56; // Integer | Channel Id (123, 456)
+Integer storeId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer channelId = 56; // Integer | 
 try {
     Object result = apiInstance.unassignStoreFromChannel(storeId, appId, channelId);
     System.out.println(result);
@@ -639,9 +639,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**| Store Id (123, 456) |
- **appId** | **String**| AppId (AppNameIdxxx) |
- **channelId** | **Integer**| Channel Id (123, 456) |
+ **storeId** | **Integer**|  |
+ **appId** | **String**|  |
+ **channelId** | **Integer**|  |
 
 ### Return type
 
