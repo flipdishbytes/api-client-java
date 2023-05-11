@@ -33,7 +33,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T10:54:46.452+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T15:29:36.203+01:00")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -110,6 +110,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("OAuthAppId")
   private String oauthAppId = null;
+
+  @SerializedName("Internal")
+  private Boolean internal = null;
 
   @SerializedName("Details")
   private String details = null;
@@ -671,6 +674,24 @@ public class AppStoreAppConfiguration {
     this.oauthAppId = oauthAppId;
   }
 
+  public AppStoreAppConfiguration internal(Boolean internal) {
+    this.internal = internal;
+    return this;
+  }
+
+   /**
+   * Internal
+   * @return internal
+  **/
+  @ApiModelProperty(required = true, value = "Internal")
+  public Boolean isInternal() {
+    return internal;
+  }
+
+  public void setInternal(Boolean internal) {
+    this.internal = internal;
+  }
+
   public AppStoreAppConfiguration details(String details) {
     this.details = details;
     return this;
@@ -996,6 +1017,7 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.verificationStatus, appStoreAppConfiguration.verificationStatus) &&
         Objects.equals(this.logo, appStoreAppConfiguration.logo) &&
         Objects.equals(this.oauthAppId, appStoreAppConfiguration.oauthAppId) &&
+        Objects.equals(this.internal, appStoreAppConfiguration.internal) &&
         Objects.equals(this.details, appStoreAppConfiguration.details) &&
         Objects.equals(this.configurationType, appStoreAppConfiguration.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreAppConfiguration.storeSelectorType) &&
@@ -1016,7 +1038,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, categories, countries, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, internal, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, categories, countries, developerName);
   }
 
 
@@ -1034,6 +1056,7 @@ public class AppStoreAppConfiguration {
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
+    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
     sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");

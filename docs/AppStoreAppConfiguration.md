@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **logo** | **String** | Logo |  [optional]
 **oauthAppId** | **String** | OAuth App identifier | 
+**internal** | **Boolean** | Internal | 
 **details** | **String** | Details | 
 **configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
 **storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 

@@ -32,13 +32,10 @@ import java.util.List;
  * App store app
  */
 @ApiModel(description = "App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T10:54:46.452+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T15:29:36.203+01:00")
 public class AppStoreApp {
   @SerializedName("Id")
   private String id = null;
-
-  @SerializedName("Internal")
-  private Boolean internal = null;
 
   /**
    * Application verification status
@@ -97,6 +94,9 @@ public class AppStoreApp {
 
   @SerializedName("OAuthAppId")
   private String oauthAppId = null;
+
+  @SerializedName("Internal")
+  private Boolean internal = null;
 
   @SerializedName("Details")
   private String details = null;
@@ -501,24 +501,6 @@ public class AppStoreApp {
     this.id = id;
   }
 
-  public AppStoreApp internal(Boolean internal) {
-    this.internal = internal;
-    return this;
-  }
-
-   /**
-   * Internal
-   * @return internal
-  **/
-  @ApiModelProperty(required = true, value = "Internal")
-  public Boolean isInternal() {
-    return internal;
-  }
-
-  public void setInternal(Boolean internal) {
-    this.internal = internal;
-  }
-
   public AppStoreApp verificationStatus(VerificationStatusEnum verificationStatus) {
     this.verificationStatus = verificationStatus;
     return this;
@@ -571,6 +553,24 @@ public class AppStoreApp {
 
   public void setOauthAppId(String oauthAppId) {
     this.oauthAppId = oauthAppId;
+  }
+
+  public AppStoreApp internal(Boolean internal) {
+    this.internal = internal;
+    return this;
+  }
+
+   /**
+   * Internal
+   * @return internal
+  **/
+  @ApiModelProperty(required = true, value = "Internal")
+  public Boolean isInternal() {
+    return internal;
+  }
+
+  public void setInternal(Boolean internal) {
+    this.internal = internal;
   }
 
   public AppStoreApp details(String details) {
@@ -908,10 +908,10 @@ public class AppStoreApp {
     }
     AppStoreApp appStoreApp = (AppStoreApp) o;
     return Objects.equals(this.id, appStoreApp.id) &&
-        Objects.equals(this.internal, appStoreApp.internal) &&
         Objects.equals(this.verificationStatus, appStoreApp.verificationStatus) &&
         Objects.equals(this.logo, appStoreApp.logo) &&
         Objects.equals(this.oauthAppId, appStoreApp.oauthAppId) &&
+        Objects.equals(this.internal, appStoreApp.internal) &&
         Objects.equals(this.details, appStoreApp.details) &&
         Objects.equals(this.configurationType, appStoreApp.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreApp.storeSelectorType) &&
@@ -933,7 +933,7 @@ public class AppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, internal, verificationStatus, logo, oauthAppId, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(id, verificationStatus, logo, oauthAppId, internal, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -943,10 +943,10 @@ public class AppStoreApp {
     sb.append("class AppStoreApp {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    oauthAppId: ").append(toIndentedString(oauthAppId)).append("\n");
+    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
     sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
