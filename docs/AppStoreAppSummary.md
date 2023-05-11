@@ -4,9 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Unique App store app id |  [optional]
+**id** | **String** | Unique App store app id | 
 **verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **logo** | **String** | Logo |  [optional]
+**internal** | **Boolean** | Internal | 
 **name** | **String** | Name | 
 **description** | **String** | Description | 
 **isEnabled** | **Boolean** | Is application enabled |  [optional]

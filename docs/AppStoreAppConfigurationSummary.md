@@ -8,8 +8,9 @@ Name | Type | Description | Notes
 **appId** | **String** | App Id | 
 **isEnabled** | **Boolean** | Is enabled | 
 **stores** | [**List&lt;ConfiguredStore&gt;**](ConfiguredStore.md) | List of stores | 
-**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type |  [optional]
-**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type |  [optional]
+**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type | 
+**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
+**internal** | **Boolean** | Internal | 
 **appStoreAppId** | **String** | Unique App store app id | 
 **name** | **String** | Name of Appstore app | 
 **description** | **String** | Description | 

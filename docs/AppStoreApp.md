@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique App store app id | 
+**internal** | **Boolean** | Internal | 
 **verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
 **logo** | **String** | Logo |  [optional]
 **oauthAppId** | **String** | OAuth App identifier | 

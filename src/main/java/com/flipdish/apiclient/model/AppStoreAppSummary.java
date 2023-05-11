@@ -30,7 +30,7 @@ import java.util.List;
  * App store app summary information
  */
 @ApiModel(description = "App store app summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:33:12.094+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T10:54:46.452+01:00")
 public class AppStoreAppSummary {
   @SerializedName("Id")
   private String id = null;
@@ -89,6 +89,9 @@ public class AppStoreAppSummary {
 
   @SerializedName("Logo")
   private String logo = null;
+
+  @SerializedName("Internal")
+  private Boolean internal = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -251,7 +254,7 @@ public class AppStoreAppSummary {
    * Unique App store app id
    * @return id
   **/
-  @ApiModelProperty(value = "Unique App store app id")
+  @ApiModelProperty(required = true, value = "Unique App store app id")
   public String getId() {
     return id;
   }
@@ -294,6 +297,24 @@ public class AppStoreAppSummary {
 
   public void setLogo(String logo) {
     this.logo = logo;
+  }
+
+  public AppStoreAppSummary internal(Boolean internal) {
+    this.internal = internal;
+    return this;
+  }
+
+   /**
+   * Internal
+   * @return internal
+  **/
+  @ApiModelProperty(required = true, value = "Internal")
+  public Boolean isInternal() {
+    return internal;
+  }
+
+  public void setInternal(Boolean internal) {
+    this.internal = internal;
   }
 
   public AppStoreAppSummary name(String name) {
@@ -427,6 +448,7 @@ public class AppStoreAppSummary {
     return Objects.equals(this.id, appStoreAppSummary.id) &&
         Objects.equals(this.verificationStatus, appStoreAppSummary.verificationStatus) &&
         Objects.equals(this.logo, appStoreAppSummary.logo) &&
+        Objects.equals(this.internal, appStoreAppSummary.internal) &&
         Objects.equals(this.name, appStoreAppSummary.name) &&
         Objects.equals(this.description, appStoreAppSummary.description) &&
         Objects.equals(this.isEnabled, appStoreAppSummary.isEnabled) &&
@@ -437,7 +459,7 @@ public class AppStoreAppSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, verificationStatus, logo, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(id, verificationStatus, logo, internal, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -449,6 +471,7 @@ public class AppStoreAppSummary {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
+    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

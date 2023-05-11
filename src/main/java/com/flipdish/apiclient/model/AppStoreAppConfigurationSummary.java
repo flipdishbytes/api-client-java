@@ -31,7 +31,7 @@ import java.util.List;
  * App store app configuration summary information
  */
 @ApiModel(description = "App store app configuration summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-09T15:33:12.094+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-11T10:54:46.452+01:00")
 public class AppStoreAppConfigurationSummary {
   @SerializedName("Id")
   private String id = null;
@@ -147,6 +147,9 @@ public class AppStoreAppConfigurationSummary {
   @SerializedName("StoreSelectorType")
   private StoreSelectorTypeEnum storeSelectorType = null;
 
+  @SerializedName("Internal")
+  private Boolean internal = null;
+
   @SerializedName("AppStoreAppId")
   private String appStoreAppId = null;
 
@@ -248,7 +251,7 @@ public class AppStoreAppConfigurationSummary {
    * Configuration type
    * @return configurationType
   **/
-  @ApiModelProperty(value = "Configuration type")
+  @ApiModelProperty(required = true, value = "Configuration type")
   public ConfigurationTypeEnum getConfigurationType() {
     return configurationType;
   }
@@ -266,13 +269,31 @@ public class AppStoreAppConfigurationSummary {
    * Store selector type
    * @return storeSelectorType
   **/
-  @ApiModelProperty(value = "Store selector type")
+  @ApiModelProperty(required = true, value = "Store selector type")
   public StoreSelectorTypeEnum getStoreSelectorType() {
     return storeSelectorType;
   }
 
   public void setStoreSelectorType(StoreSelectorTypeEnum storeSelectorType) {
     this.storeSelectorType = storeSelectorType;
+  }
+
+  public AppStoreAppConfigurationSummary internal(Boolean internal) {
+    this.internal = internal;
+    return this;
+  }
+
+   /**
+   * Internal
+   * @return internal
+  **/
+  @ApiModelProperty(required = true, value = "Internal")
+  public Boolean isInternal() {
+    return internal;
+  }
+
+  public void setInternal(Boolean internal) {
+    this.internal = internal;
   }
 
   public AppStoreAppConfigurationSummary appStoreAppId(String appStoreAppId) {
@@ -381,6 +402,7 @@ public class AppStoreAppConfigurationSummary {
         Objects.equals(this.stores, appStoreAppConfigurationSummary.stores) &&
         Objects.equals(this.configurationType, appStoreAppConfigurationSummary.configurationType) &&
         Objects.equals(this.storeSelectorType, appStoreAppConfigurationSummary.storeSelectorType) &&
+        Objects.equals(this.internal, appStoreAppConfigurationSummary.internal) &&
         Objects.equals(this.appStoreAppId, appStoreAppConfigurationSummary.appStoreAppId) &&
         Objects.equals(this.name, appStoreAppConfigurationSummary.name) &&
         Objects.equals(this.description, appStoreAppConfigurationSummary.description) &&
@@ -390,7 +412,7 @@ public class AppStoreAppConfigurationSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, isEnabled, stores, configurationType, storeSelectorType, appStoreAppId, name, description, logo, developerName);
+    return Objects.hash(id, appId, isEnabled, stores, configurationType, storeSelectorType, internal, appStoreAppId, name, description, logo, developerName);
   }
 
 
@@ -405,6 +427,7 @@ public class AppStoreAppConfigurationSummary {
     sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    storeSelectorType: ").append(toIndentedString(storeSelectorType)).append("\n");
+    sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
