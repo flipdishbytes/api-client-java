@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
-[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
-[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | 
-[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
-[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | 
-[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
-[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
-[**setDriverPresenceForStore**](DriversApi.md#setDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
-[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
-[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
+[**driversAddDriverNotificationToken**](DriversApi.md#driversAddDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
+[**driversDeleteDriverProfileImage**](DriversApi.md#driversDeleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**driversDriverLogin**](DriversApi.md#driversDriverLogin) | **POST** /api/v1.0/drivers/login | 
+[**driversDriverRequestLoginCodeSms**](DriversApi.md#driversDriverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
+[**driversGetDriverProfile**](DriversApi.md#driversGetDriverProfile) | **GET** /api/v1.0/drivers/profile | 
+[**driversGetStoresForDriver**](DriversApi.md#driversGetStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**driversRemoveDriverNotificationToken**](DriversApi.md#driversRemoveDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
+[**driversSetDriverPresenceForStore**](DriversApi.md#driversSetDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
+[**driversSetDriverProfileImage**](DriversApi.md#driversSetDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
+[**driversUpdateDeliveryTrackingStatus**](DriversApi.md#driversUpdateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**driversUpdateDriverProfile**](DriversApi.md#driversUpdateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
 
 
-<a name="addDriverNotificationToken"></a>
-# **addDriverNotificationToken**
-> addDriverNotificationToken(updateDriverToken)
+<a name="driversAddDriverNotificationToken"></a>
+# **driversAddDriverNotificationToken**
+> Object driversAddDriverNotificationToken(updateDriverToken)
 
 
 
@@ -41,9 +41,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 DriversApi apiInstance = new DriversApi();
 UpdateDriverNotificationToken updateDriverToken = new UpdateDriverNotificationToken(); // UpdateDriverNotificationToken | 
 try {
-    apiInstance.addDriverNotificationToken(updateDriverToken);
+    Object result = apiInstance.driversAddDriverNotificationToken(updateDriverToken);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#addDriverNotificationToken");
+    System.err.println("Exception when calling DriversApi#driversAddDriverNotificationToken");
     e.printStackTrace();
 }
 ```
@@ -56,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -67,9 +68,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="deleteDriverProfileImage"></a>
-# **deleteDriverProfileImage**
-> deleteDriverProfileImage()
+<a name="driversDeleteDriverProfileImage"></a>
+# **driversDeleteDriverProfileImage**
+> Object driversDeleteDriverProfileImage()
 
 
 
@@ -90,9 +91,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
 try {
-    apiInstance.deleteDriverProfileImage();
+    Object result = apiInstance.driversDeleteDriverProfileImage();
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#deleteDriverProfileImage");
+    System.err.println("Exception when calling DriversApi#driversDeleteDriverProfileImage");
     e.printStackTrace();
 }
 ```
@@ -102,7 +104,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -113,9 +115,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="driverLogin"></a>
-# **driverLogin**
-> driverLogin(driverLoginModel)
+<a name="driversDriverLogin"></a>
+# **driversDriverLogin**
+> Object driversDriverLogin(driverLoginModel)
 
 
 
@@ -137,9 +139,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 DriversApi apiInstance = new DriversApi();
 DriverLoginModel driverLoginModel = new DriverLoginModel(); // DriverLoginModel | 
 try {
-    apiInstance.driverLogin(driverLoginModel);
+    Object result = apiInstance.driversDriverLogin(driverLoginModel);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#driverLogin");
+    System.err.println("Exception when calling DriversApi#driversDriverLogin");
     e.printStackTrace();
 }
 ```
@@ -152,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -163,9 +166,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="driverRequestLoginCodeSms"></a>
-# **driverRequestLoginCodeSms**
-> driverRequestLoginCodeSms(driverRequestLoginPinModel)
+<a name="driversDriverRequestLoginCodeSms"></a>
+# **driversDriverRequestLoginCodeSms**
+> Object driversDriverRequestLoginCodeSms(driverRequestLoginPinModel)
 
 
 
@@ -187,9 +190,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 DriversApi apiInstance = new DriversApi();
 DriverRequestLoginPinModel driverRequestLoginPinModel = new DriverRequestLoginPinModel(); // DriverRequestLoginPinModel | 
 try {
-    apiInstance.driverRequestLoginCodeSms(driverRequestLoginPinModel);
+    Object result = apiInstance.driversDriverRequestLoginCodeSms(driverRequestLoginPinModel);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#driverRequestLoginCodeSms");
+    System.err.println("Exception when calling DriversApi#driversDriverRequestLoginCodeSms");
     e.printStackTrace();
 }
 ```
@@ -202,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -213,9 +217,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getDriverProfile"></a>
-# **getDriverProfile**
-> RestApiResultDriver getDriverProfile()
+<a name="driversGetDriverProfile"></a>
+# **driversGetDriverProfile**
+> Object driversGetDriverProfile()
 
 
 
@@ -236,10 +240,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
 try {
-    RestApiResultDriver result = apiInstance.getDriverProfile();
+    Object result = apiInstance.driversGetDriverProfile();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#getDriverProfile");
+    System.err.println("Exception when calling DriversApi#driversGetDriverProfile");
     e.printStackTrace();
 }
 ```
@@ -249,7 +253,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiResultDriver**](RestApiResultDriver.md)
+**Object**
 
 ### Authorization
 
@@ -260,9 +264,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getStoresForDriver"></a>
-# **getStoresForDriver**
-> RestApiArrayResultDriverStore getStoresForDriver()
+<a name="driversGetStoresForDriver"></a>
+# **driversGetStoresForDriver**
+> Object driversGetStoresForDriver()
 
 
 
@@ -283,10 +287,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
 try {
-    RestApiArrayResultDriverStore result = apiInstance.getStoresForDriver();
+    Object result = apiInstance.driversGetStoresForDriver();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#getStoresForDriver");
+    System.err.println("Exception when calling DriversApi#driversGetStoresForDriver");
     e.printStackTrace();
 }
 ```
@@ -296,7 +300,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiArrayResultDriverStore**](RestApiArrayResultDriverStore.md)
+**Object**
 
 ### Authorization
 
@@ -307,9 +311,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="removeDriverNotificationToken"></a>
-# **removeDriverNotificationToken**
-> removeDriverNotificationToken(removeDriverToken)
+<a name="driversRemoveDriverNotificationToken"></a>
+# **driversRemoveDriverNotificationToken**
+> Object driversRemoveDriverNotificationToken(removeDriverToken)
 
 
 
@@ -331,9 +335,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 DriversApi apiInstance = new DriversApi();
 UpdateDriverNotificationToken removeDriverToken = new UpdateDriverNotificationToken(); // UpdateDriverNotificationToken | 
 try {
-    apiInstance.removeDriverNotificationToken(removeDriverToken);
+    Object result = apiInstance.driversRemoveDriverNotificationToken(removeDriverToken);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#removeDriverNotificationToken");
+    System.err.println("Exception when calling DriversApi#driversRemoveDriverNotificationToken");
     e.printStackTrace();
 }
 ```
@@ -346,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -357,9 +362,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setDriverPresenceForStore"></a>
-# **setDriverPresenceForStore**
-> setDriverPresenceForStore(storeId, presence)
+<a name="driversSetDriverPresenceForStore"></a>
+# **driversSetDriverPresenceForStore**
+> Object driversSetDriverPresenceForStore(storeId, presence)
 
 
 
@@ -382,9 +387,10 @@ DriversApi apiInstance = new DriversApi();
 Integer storeId = 56; // Integer | 
 String presence = "presence_example"; // String | 
 try {
-    apiInstance.setDriverPresenceForStore(storeId, presence);
+    Object result = apiInstance.driversSetDriverPresenceForStore(storeId, presence);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#setDriverPresenceForStore");
+    System.err.println("Exception when calling DriversApi#driversSetDriverPresenceForStore");
     e.printStackTrace();
 }
 ```
@@ -398,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -409,9 +415,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setDriverProfileImage"></a>
-# **setDriverProfileImage**
-> RestApiStringResult setDriverProfileImage()
+<a name="driversSetDriverProfileImage"></a>
+# **driversSetDriverProfileImage**
+> Object driversSetDriverProfileImage()
 
 
 
@@ -432,10 +438,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 DriversApi apiInstance = new DriversApi();
 try {
-    RestApiStringResult result = apiInstance.setDriverProfileImage();
+    Object result = apiInstance.driversSetDriverProfileImage();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#setDriverProfileImage");
+    System.err.println("Exception when calling DriversApi#driversSetDriverProfileImage");
     e.printStackTrace();
 }
 ```
@@ -445,7 +451,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+**Object**
 
 ### Authorization
 
@@ -456,9 +462,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateDeliveryTrackingStatus"></a>
-# **updateDeliveryTrackingStatus**
-> RestApiStringResult updateDeliveryTrackingStatus(orderId, deliveryTrackingStatus)
+<a name="driversUpdateDeliveryTrackingStatus"></a>
+# **driversUpdateDeliveryTrackingStatus**
+> Object driversUpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus)
 
 
 
@@ -481,10 +487,10 @@ DriversApi apiInstance = new DriversApi();
 Integer orderId = 56; // Integer | 
 String deliveryTrackingStatus = "deliveryTrackingStatus_example"; // String | 
 try {
-    RestApiStringResult result = apiInstance.updateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
+    Object result = apiInstance.driversUpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#updateDeliveryTrackingStatus");
+    System.err.println("Exception when calling DriversApi#driversUpdateDeliveryTrackingStatus");
     e.printStackTrace();
 }
 ```
@@ -498,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+**Object**
 
 ### Authorization
 
@@ -509,9 +515,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateDriverProfile"></a>
-# **updateDriverProfile**
-> updateDriverProfile(updateDriverProfile)
+<a name="driversUpdateDriverProfile"></a>
+# **driversUpdateDriverProfile**
+> Object driversUpdateDriverProfile(updateDriverProfile)
 
 
 
@@ -533,9 +539,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 DriversApi apiInstance = new DriversApi();
 UpdateDriverProfileModel updateDriverProfile = new UpdateDriverProfileModel(); // UpdateDriverProfileModel | 
 try {
-    apiInstance.updateDriverProfile(updateDriverProfile);
+    Object result = apiInstance.driversUpdateDriverProfile(updateDriverProfile);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DriversApi#updateDriverProfile");
+    System.err.println("Exception when calling DriversApi#driversUpdateDriverProfile");
     e.printStackTrace();
 }
 ```
@@ -548,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
