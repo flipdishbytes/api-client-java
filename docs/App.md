@@ -105,7 +105,6 @@ UPDATEMENUITEMSHIDETEMPORARILY | &quot;UpdateMenuItemsHideTemporarily&quot;
 EDITMENUIMAGE | &quot;EditMenuImage&quot;
 VIEWVOUCHERS | &quot;ViewVouchers&quot;
 EDITVOUCHERS | &quot;EditVouchers&quot;
-UPDATEVOUCHERSEXTENDDISABLE | &quot;UpdateVouchersExtendDisable&quot;
 VIEWWEBSITECONTENT | &quot;ViewWebsiteContent&quot;
 EDITWEBSITECONTENT | &quot;EditWebsiteContent&quot;
 VIEWWEBSITEDNSVERIFIED | &quot;ViewWebsiteDnsVerified&quot;

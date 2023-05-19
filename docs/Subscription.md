@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **products** | [**List&lt;SubscriptionProduct&gt;**](SubscriptionProduct.md) | Products | 
 **upcomingInvoiceItems** | [**List&lt;InvoiceItem&gt;**](InvoiceItem.md) | Upcoming invoice items |  [optional]
+**upcomingInvoiceDiscounts** | [**List&lt;InvoiceDiscount&gt;**](InvoiceDiscount.md) | Upcoming invoice discounts |  [optional]
 **subscriptionId** | **String** | The subscription identifier | 
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
