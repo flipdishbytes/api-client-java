@@ -1072,13 +1072,12 @@ public class AppsApi {
      * @param appId  (required)
      * @param hostname  (required)
      * @param isEmbed  (optional)
-     * @param isNextGenWeb  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setAppHostnameCall(String appId, String hostname, Boolean isEmbed, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setAppHostnameCall(String appId, String hostname, Boolean isEmbed, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1091,8 +1090,6 @@ public class AppsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("hostname", hostname));
         if (isEmbed != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("isEmbed", isEmbed));
-        if (isNextGenWeb != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("isNextGenWeb", isNextGenWeb));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1127,7 +1124,7 @@ public class AppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setAppHostnameValidateBeforeCall(String appId, String hostname, Boolean isEmbed, Boolean isNextGenWeb, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setAppHostnameValidateBeforeCall(String appId, String hostname, Boolean isEmbed, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -1140,7 +1137,7 @@ public class AppsApi {
         }
         
 
-        com.squareup.okhttp.Call call = setAppHostnameCall(appId, hostname, isEmbed, isNextGenWeb, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setAppHostnameCall(appId, hostname, isEmbed, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1151,12 +1148,11 @@ public class AppsApi {
      * @param appId  (required)
      * @param hostname  (required)
      * @param isEmbed  (optional)
-     * @param isNextGenWeb  (optional)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiStringResult setAppHostname(String appId, String hostname, Boolean isEmbed, Boolean isNextGenWeb) throws ApiException {
-        ApiResponse<RestApiStringResult> resp = setAppHostnameWithHttpInfo(appId, hostname, isEmbed, isNextGenWeb);
+    public RestApiStringResult setAppHostname(String appId, String hostname, Boolean isEmbed) throws ApiException {
+        ApiResponse<RestApiStringResult> resp = setAppHostnameWithHttpInfo(appId, hostname, isEmbed);
         return resp.getData();
     }
 
@@ -1166,12 +1162,11 @@ public class AppsApi {
      * @param appId  (required)
      * @param hostname  (required)
      * @param isEmbed  (optional)
-     * @param isNextGenWeb  (optional)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiStringResult> setAppHostnameWithHttpInfo(String appId, String hostname, Boolean isEmbed, Boolean isNextGenWeb) throws ApiException {
-        com.squareup.okhttp.Call call = setAppHostnameValidateBeforeCall(appId, hostname, isEmbed, isNextGenWeb, null, null);
+    public ApiResponse<RestApiStringResult> setAppHostnameWithHttpInfo(String appId, String hostname, Boolean isEmbed) throws ApiException {
+        com.squareup.okhttp.Call call = setAppHostnameValidateBeforeCall(appId, hostname, isEmbed, null, null);
         Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1182,12 +1177,11 @@ public class AppsApi {
      * @param appId  (required)
      * @param hostname  (required)
      * @param isEmbed  (optional)
-     * @param isNextGenWeb  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setAppHostnameAsync(String appId, String hostname, Boolean isEmbed, Boolean isNextGenWeb, final ApiCallback<RestApiStringResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call setAppHostnameAsync(String appId, String hostname, Boolean isEmbed, final ApiCallback<RestApiStringResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1208,7 +1202,7 @@ public class AppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setAppHostnameValidateBeforeCall(appId, hostname, isEmbed, isNextGenWeb, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setAppHostnameValidateBeforeCall(appId, hostname, isEmbed, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

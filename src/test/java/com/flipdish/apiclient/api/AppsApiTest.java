@@ -187,8 +187,7 @@ public class AppsApiTest {
         String appId = null;
         String hostname = null;
         Boolean isEmbed = null;
-        Boolean isNextGenWeb = null;
-        RestApiStringResult response = api.setAppHostname(appId, hostname, isEmbed, isNextGenWeb);
+        RestApiStringResult response = api.setAppHostname(appId, hostname, isEmbed);
 
         // TODO: test validations
     }
