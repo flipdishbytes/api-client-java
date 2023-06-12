@@ -99,6 +99,7 @@ EPS | &quot;Eps&quot;
 EMV | &quot;Emv&quot;
 PAYPAL | &quot;PayPal&quot;
 PAYGREEN | &quot;PayGreen&quot;
+GOOGLEWALLETTOKEN | &quot;GoogleWalletToken&quot;
 
 
 <a name="PaymentStatusEnum"></a>

@@ -838,7 +838,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **Integer**|  |
- **paymentAccountType** | **String**|  | [enum: Card, Cash, Ideal, Bancontact, Giropay, Eps, Emv, PayPal, PayGreen]
+ **paymentAccountType** | **String**|  | [enum: Card, Cash, Ideal, Bancontact, Giropay, Eps, Emv, PayPal, PayGreen, GoogleWalletToken]
  **appNameId** | **String**|  | [optional]
 
 ### Return type
