@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**nextInvoiceAmount** | **Double** | Next invoice amount |  [optional]
+**nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **subscriptionId** | **String** | The subscription identifier | 
 **name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
-**nextInvoiceAmount** | **Double** | Next invoice amount |  [optional]
-**nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **user** | **String** | User | 
 **defaultPaymentDescription** | **String** | Default payment description |  [optional]
 **cancellationDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancellation Date |  [optional]

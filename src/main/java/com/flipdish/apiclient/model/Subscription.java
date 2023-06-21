@@ -18,6 +18,7 @@ import java.util.Arrays;
 import com.flipdish.apiclient.model.InvoiceDiscount;
 import com.flipdish.apiclient.model.InvoiceItem;
 import com.flipdish.apiclient.model.SubscriptionProduct;
+import com.flipdish.apiclient.model.UpcomingInvoice;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -34,16 +35,25 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:29:56.987+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T07:59:36.337+01:00")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();
+
+  @SerializedName("NextInvoiceAmount")
+  private Double nextInvoiceAmount = null;
+
+  @SerializedName("NextInvoiceBillingDate")
+  private OffsetDateTime nextInvoiceBillingDate = null;
 
   @SerializedName("UpcomingInvoiceItems")
   private List<InvoiceItem> upcomingInvoiceItems = null;
 
   @SerializedName("UpcomingInvoiceDiscounts")
   private List<InvoiceDiscount> upcomingInvoiceDiscounts = null;
+
+  @SerializedName("UpcomingInvoice")
+  private UpcomingInvoice upcomingInvoice = null;
 
   @SerializedName("SubscriptionId")
   private String subscriptionId = null;
@@ -383,12 +393,6 @@ public class Subscription {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
-  @SerializedName("NextInvoiceAmount")
-  private Double nextInvoiceAmount = null;
-
-  @SerializedName("NextInvoiceBillingDate")
-  private OffsetDateTime nextInvoiceBillingDate = null;
-
   @SerializedName("User")
   private String user = null;
 
@@ -419,6 +423,42 @@ public class Subscription {
 
   public void setProducts(List<SubscriptionProduct> products) {
     this.products = products;
+  }
+
+  public Subscription nextInvoiceAmount(Double nextInvoiceAmount) {
+    this.nextInvoiceAmount = nextInvoiceAmount;
+    return this;
+  }
+
+   /**
+   * Next invoice amount
+   * @return nextInvoiceAmount
+  **/
+  @ApiModelProperty(value = "Next invoice amount")
+  public Double getNextInvoiceAmount() {
+    return nextInvoiceAmount;
+  }
+
+  public void setNextInvoiceAmount(Double nextInvoiceAmount) {
+    this.nextInvoiceAmount = nextInvoiceAmount;
+  }
+
+  public Subscription nextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
+    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
+    return this;
+  }
+
+   /**
+   * Next invoice billing date
+   * @return nextInvoiceBillingDate
+  **/
+  @ApiModelProperty(value = "Next invoice billing date")
+  public OffsetDateTime getNextInvoiceBillingDate() {
+    return nextInvoiceBillingDate;
+  }
+
+  public void setNextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
+    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
   }
 
   public Subscription upcomingInvoiceItems(List<InvoiceItem> upcomingInvoiceItems) {
@@ -471,6 +511,24 @@ public class Subscription {
 
   public void setUpcomingInvoiceDiscounts(List<InvoiceDiscount> upcomingInvoiceDiscounts) {
     this.upcomingInvoiceDiscounts = upcomingInvoiceDiscounts;
+  }
+
+  public Subscription upcomingInvoice(UpcomingInvoice upcomingInvoice) {
+    this.upcomingInvoice = upcomingInvoice;
+    return this;
+  }
+
+   /**
+   * Upcoming invoice
+   * @return upcomingInvoice
+  **/
+  @ApiModelProperty(value = "Upcoming invoice")
+  public UpcomingInvoice getUpcomingInvoice() {
+    return upcomingInvoice;
+  }
+
+  public void setUpcomingInvoice(UpcomingInvoice upcomingInvoice) {
+    this.upcomingInvoice = upcomingInvoice;
   }
 
   public Subscription subscriptionId(String subscriptionId) {
@@ -545,42 +603,6 @@ public class Subscription {
     this.currency = currency;
   }
 
-  public Subscription nextInvoiceAmount(Double nextInvoiceAmount) {
-    this.nextInvoiceAmount = nextInvoiceAmount;
-    return this;
-  }
-
-   /**
-   * Next invoice amount
-   * @return nextInvoiceAmount
-  **/
-  @ApiModelProperty(value = "Next invoice amount")
-  public Double getNextInvoiceAmount() {
-    return nextInvoiceAmount;
-  }
-
-  public void setNextInvoiceAmount(Double nextInvoiceAmount) {
-    this.nextInvoiceAmount = nextInvoiceAmount;
-  }
-
-  public Subscription nextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
-    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
-    return this;
-  }
-
-   /**
-   * Next invoice billing date
-   * @return nextInvoiceBillingDate
-  **/
-  @ApiModelProperty(value = "Next invoice billing date")
-  public OffsetDateTime getNextInvoiceBillingDate() {
-    return nextInvoiceBillingDate;
-  }
-
-  public void setNextInvoiceBillingDate(OffsetDateTime nextInvoiceBillingDate) {
-    this.nextInvoiceBillingDate = nextInvoiceBillingDate;
-  }
-
   public Subscription user(String user) {
     this.user = user;
     return this;
@@ -646,14 +668,15 @@ public class Subscription {
     }
     Subscription subscription = (Subscription) o;
     return Objects.equals(this.products, subscription.products) &&
+        Objects.equals(this.nextInvoiceAmount, subscription.nextInvoiceAmount) &&
+        Objects.equals(this.nextInvoiceBillingDate, subscription.nextInvoiceBillingDate) &&
         Objects.equals(this.upcomingInvoiceItems, subscription.upcomingInvoiceItems) &&
         Objects.equals(this.upcomingInvoiceDiscounts, subscription.upcomingInvoiceDiscounts) &&
+        Objects.equals(this.upcomingInvoice, subscription.upcomingInvoice) &&
         Objects.equals(this.subscriptionId, subscription.subscriptionId) &&
         Objects.equals(this.name, subscription.name) &&
         Objects.equals(this.status, subscription.status) &&
         Objects.equals(this.currency, subscription.currency) &&
-        Objects.equals(this.nextInvoiceAmount, subscription.nextInvoiceAmount) &&
-        Objects.equals(this.nextInvoiceBillingDate, subscription.nextInvoiceBillingDate) &&
         Objects.equals(this.user, subscription.user) &&
         Objects.equals(this.defaultPaymentDescription, subscription.defaultPaymentDescription) &&
         Objects.equals(this.cancellationDate, subscription.cancellationDate);
@@ -661,7 +684,7 @@ public class Subscription {
 
   @Override
   public int hashCode() {
-    return Objects.hash(products, upcomingInvoiceItems, upcomingInvoiceDiscounts, subscriptionId, name, status, currency, nextInvoiceAmount, nextInvoiceBillingDate, user, defaultPaymentDescription, cancellationDate);
+    return Objects.hash(products, nextInvoiceAmount, nextInvoiceBillingDate, upcomingInvoiceItems, upcomingInvoiceDiscounts, upcomingInvoice, subscriptionId, name, status, currency, user, defaultPaymentDescription, cancellationDate);
   }
 
 
@@ -671,14 +694,15 @@ public class Subscription {
     sb.append("class Subscription {\n");
     
     sb.append("    products: ").append(toIndentedString(products)).append("\n");
+    sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");
+    sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
     sb.append("    upcomingInvoiceItems: ").append(toIndentedString(upcomingInvoiceItems)).append("\n");
     sb.append("    upcomingInvoiceDiscounts: ").append(toIndentedString(upcomingInvoiceDiscounts)).append("\n");
+    sb.append("    upcomingInvoice: ").append(toIndentedString(upcomingInvoice)).append("\n");
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    sb.append("    nextInvoiceAmount: ").append(toIndentedString(nextInvoiceAmount)).append("\n");
-    sb.append("    nextInvoiceBillingDate: ").append(toIndentedString(nextInvoiceBillingDate)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    defaultPaymentDescription: ").append(toIndentedString(defaultPaymentDescription)).append("\n");
     sb.append("    cancellationDate: ").append(toIndentedString(cancellationDate)).append("\n");
