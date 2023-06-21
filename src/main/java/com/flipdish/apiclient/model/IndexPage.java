@@ -32,7 +32,7 @@ import java.util.List;
  * Index Page
  */
 @ApiModel(description = "Index Page")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T07:59:36.337+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T11:36:00.630+01:00")
 public class IndexPage {
   @SerializedName("Testimonials")
   private List<WebsiteTestimonial> testimonials = null;
