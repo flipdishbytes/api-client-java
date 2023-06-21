@@ -30,7 +30,7 @@ import java.util.List;
  * Retention campaign base
  */
 @ApiModel(description = "Retention campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T11:36:00.630+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T12:49:34.092+01:00")
 public class RetentionCampaignBase {
   @SerializedName("NotifyCustomerAfterMinutes")
   private Integer notifyCustomerAfterMinutes = null;
