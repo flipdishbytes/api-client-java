@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * UpcomingInvoice
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-21T12:49:34.092+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-26T13:31:25.467+01:00")
 public class UpcomingInvoice {
   @SerializedName("Amount")
   private Double amount = null;
@@ -41,16 +41,16 @@ public class UpcomingInvoice {
   private OffsetDateTime nextBillingDate = null;
 
   @SerializedName("Subtotal")
-  private Long subtotal = null;
+  private Double subtotal = null;
 
   @SerializedName("TotalExcludingTax")
-  private Long totalExcludingTax = null;
+  private Double totalExcludingTax = null;
 
   @SerializedName("AmountDue")
-  private Long amountDue = null;
+  private Double amountDue = null;
 
   @SerializedName("Tax")
-  private Long tax = null;
+  private Double tax = null;
 
   @SerializedName("Items")
   private List<InvoiceItem> items = null;
@@ -94,7 +94,7 @@ public class UpcomingInvoice {
     this.nextBillingDate = nextBillingDate;
   }
 
-  public UpcomingInvoice subtotal(Long subtotal) {
+  public UpcomingInvoice subtotal(Double subtotal) {
     this.subtotal = subtotal;
     return this;
   }
@@ -104,15 +104,15 @@ public class UpcomingInvoice {
    * @return subtotal
   **/
   @ApiModelProperty(required = true, value = "Subtotal")
-  public Long getSubtotal() {
+  public Double getSubtotal() {
     return subtotal;
   }
 
-  public void setSubtotal(Long subtotal) {
+  public void setSubtotal(Double subtotal) {
     this.subtotal = subtotal;
   }
 
-  public UpcomingInvoice totalExcludingTax(Long totalExcludingTax) {
+  public UpcomingInvoice totalExcludingTax(Double totalExcludingTax) {
     this.totalExcludingTax = totalExcludingTax;
     return this;
   }
@@ -122,15 +122,15 @@ public class UpcomingInvoice {
    * @return totalExcludingTax
   **/
   @ApiModelProperty(value = "Total excluding tax")
-  public Long getTotalExcludingTax() {
+  public Double getTotalExcludingTax() {
     return totalExcludingTax;
   }
 
-  public void setTotalExcludingTax(Long totalExcludingTax) {
+  public void setTotalExcludingTax(Double totalExcludingTax) {
     this.totalExcludingTax = totalExcludingTax;
   }
 
-  public UpcomingInvoice amountDue(Long amountDue) {
+  public UpcomingInvoice amountDue(Double amountDue) {
     this.amountDue = amountDue;
     return this;
   }
@@ -140,15 +140,15 @@ public class UpcomingInvoice {
    * @return amountDue
   **/
   @ApiModelProperty(required = true, value = "Amount due")
-  public Long getAmountDue() {
+  public Double getAmountDue() {
     return amountDue;
   }
 
-  public void setAmountDue(Long amountDue) {
+  public void setAmountDue(Double amountDue) {
     this.amountDue = amountDue;
   }
 
-  public UpcomingInvoice tax(Long tax) {
+  public UpcomingInvoice tax(Double tax) {
     this.tax = tax;
     return this;
   }
@@ -158,11 +158,11 @@ public class UpcomingInvoice {
    * @return tax
   **/
   @ApiModelProperty(required = true, value = "Tax")
-  public Long getTax() {
+  public Double getTax() {
     return tax;
   }
 
-  public void setTax(Long tax) {
+  public void setTax(Double tax) {
     this.tax = tax;
   }
 

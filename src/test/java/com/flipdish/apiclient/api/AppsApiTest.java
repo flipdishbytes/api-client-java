@@ -235,6 +235,23 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void setAppStoreNameTest() throws ApiException {
+        String appId = null;
+        String appStoreName = null;
+        api.setAppStoreName(appId, appStoreName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void setComplianceTest() throws ApiException {
         String appId = null;
         String complianceType = null;

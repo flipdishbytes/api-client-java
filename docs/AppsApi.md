@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**setAppStoreName**](AppsApi.md#setAppStoreName) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 [**setSalesforceReferences**](AppsApi.md#setSalesforceReferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
@@ -583,6 +584,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultApp**](RestApiResultApp.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setAppStoreName"></a>
+# **setAppStoreName**
+> setAppStoreName(appId, appStoreName)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+String appStoreName = "appStoreName_example"; // String | 
+try {
+    apiInstance.setAppStoreName(appId, appStoreName);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#setAppStoreName");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **appStoreName** | **String**|  |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
