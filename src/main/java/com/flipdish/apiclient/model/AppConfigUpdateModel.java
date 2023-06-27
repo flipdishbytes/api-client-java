@@ -28,7 +28,7 @@ import java.io.IOException;
  * Application configuration
  */
 @ApiModel(description = "Application configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-26T13:31:25.467+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-27T11:24:10.509+01:00")
 public class AppConfigUpdateModel {
   @SerializedName("Name")
   private String name = null;
@@ -38,6 +38,9 @@ public class AppConfigUpdateModel {
 
   @SerializedName("MainColor")
   private String mainColor = null;
+
+  @SerializedName("KioskPrimaryColour")
+  private String kioskPrimaryColour = null;
 
   /**
    * Application Category
@@ -151,6 +154,24 @@ public class AppConfigUpdateModel {
     this.mainColor = mainColor;
   }
 
+  public AppConfigUpdateModel kioskPrimaryColour(String kioskPrimaryColour) {
+    this.kioskPrimaryColour = kioskPrimaryColour;
+    return this;
+  }
+
+   /**
+   * Primary colour used on the Kiosk
+   * @return kioskPrimaryColour
+  **/
+  @ApiModelProperty(value = "Primary colour used on the Kiosk")
+  public String getKioskPrimaryColour() {
+    return kioskPrimaryColour;
+  }
+
+  public void setKioskPrimaryColour(String kioskPrimaryColour) {
+    this.kioskPrimaryColour = kioskPrimaryColour;
+  }
+
   public AppConfigUpdateModel applicationCategory(ApplicationCategoryEnum applicationCategory) {
     this.applicationCategory = applicationCategory;
     return this;
@@ -218,6 +239,7 @@ public class AppConfigUpdateModel {
     return Objects.equals(this.name, appConfigUpdateModel.name) &&
         Objects.equals(this.hostName, appConfigUpdateModel.hostName) &&
         Objects.equals(this.mainColor, appConfigUpdateModel.mainColor) &&
+        Objects.equals(this.kioskPrimaryColour, appConfigUpdateModel.kioskPrimaryColour) &&
         Objects.equals(this.applicationCategory, appConfigUpdateModel.applicationCategory) &&
         Objects.equals(this.isPanaceaEnabled, appConfigUpdateModel.isPanaceaEnabled) &&
         Objects.equals(this.cookieConsentPromptEnabled, appConfigUpdateModel.cookieConsentPromptEnabled);
@@ -225,7 +247,7 @@ public class AppConfigUpdateModel {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, hostName, mainColor, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
+    return Objects.hash(name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
   }
 
 
@@ -237,6 +259,7 @@ public class AppConfigUpdateModel {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");
+    sb.append("    kioskPrimaryColour: ").append(toIndentedString(kioskPrimaryColour)).append("\n");
     sb.append("    applicationCategory: ").append(toIndentedString(applicationCategory)).append("\n");
     sb.append("    isPanaceaEnabled: ").append(toIndentedString(isPanaceaEnabled)).append("\n");
     sb.append("    cookieConsentPromptEnabled: ").append(toIndentedString(cookieConsentPromptEnabled)).append("\n");

@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-26T13:31:25.467+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-27T11:24:10.509+01:00")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -499,6 +499,9 @@ public class App {
   @SerializedName("MainColor")
   private String mainColor = null;
 
+  @SerializedName("KioskPrimaryColour")
+  private String kioskPrimaryColour = null;
+
   /**
    * Application Category
    */
@@ -895,6 +898,24 @@ public class App {
     this.mainColor = mainColor;
   }
 
+  public App kioskPrimaryColour(String kioskPrimaryColour) {
+    this.kioskPrimaryColour = kioskPrimaryColour;
+    return this;
+  }
+
+   /**
+   * Primary colour used on the Kiosk
+   * @return kioskPrimaryColour
+  **/
+  @ApiModelProperty(value = "Primary colour used on the Kiosk")
+  public String getKioskPrimaryColour() {
+    return kioskPrimaryColour;
+  }
+
+  public void setKioskPrimaryColour(String kioskPrimaryColour) {
+    this.kioskPrimaryColour = kioskPrimaryColour;
+  }
+
   public App applicationCategory(ApplicationCategoryEnum applicationCategory) {
     this.applicationCategory = applicationCategory;
     return this;
@@ -976,6 +997,7 @@ public class App {
         Objects.equals(this.name, app.name) &&
         Objects.equals(this.hostName, app.hostName) &&
         Objects.equals(this.mainColor, app.mainColor) &&
+        Objects.equals(this.kioskPrimaryColour, app.kioskPrimaryColour) &&
         Objects.equals(this.applicationCategory, app.applicationCategory) &&
         Objects.equals(this.isPanaceaEnabled, app.isPanaceaEnabled) &&
         Objects.equals(this.cookieConsentPromptEnabled, app.cookieConsentPromptEnabled);
@@ -983,7 +1005,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
   }
 
 
@@ -1009,6 +1031,7 @@ public class App {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");
+    sb.append("    kioskPrimaryColour: ").append(toIndentedString(kioskPrimaryColour)).append("\n");
     sb.append("    applicationCategory: ").append(toIndentedString(applicationCategory)).append("\n");
     sb.append("    isPanaceaEnabled: ").append(toIndentedString(isPanaceaEnabled)).append("\n");
     sb.append("    cookieConsentPromptEnabled: ").append(toIndentedString(cookieConsentPromptEnabled)).append("\n");
