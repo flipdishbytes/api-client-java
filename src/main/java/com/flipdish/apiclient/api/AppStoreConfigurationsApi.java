@@ -35,6 +35,7 @@ import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSu
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
+import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfigurationsWithSubscriptions;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
@@ -889,6 +890,139 @@ public class AppStoreConfigurationsApi {
 
         com.squareup.okhttp.Call call = getConfiguredAppSingleAppValidateBeforeCall(appId, appStoreAppId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreAppConfigurationSummary>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getConfiguredAppWithSubscriptionsSingleApp
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/appstore/apps_subscriptions/{appStoreAppId}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppValidateBeforeCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getConfiguredAppWithSubscriptionsSingleApp(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling getConfiguredAppWithSubscriptionsSingleApp(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getConfiguredAppWithSubscriptionsSingleAppCall(appId, appStoreAppId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @return RestApiResultAppStoreAppConfigurationsWithSubscriptions
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultAppStoreAppConfigurationsWithSubscriptions getConfiguredAppWithSubscriptionsSingleApp(String appId, String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> resp = getConfiguredAppWithSubscriptionsSingleAppWithHttpInfo(appId, appStoreAppId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @return ApiResponse&lt;RestApiResultAppStoreAppConfigurationsWithSubscriptions&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> getConfiguredAppWithSubscriptionsSingleAppWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
+        com.squareup.okhttp.Call call = getConfiguredAppWithSubscriptionsSingleAppValidateBeforeCall(appId, appStoreAppId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfigurationsWithSubscriptions>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppAsync(String appId, String appStoreAppId, final ApiCallback<RestApiResultAppStoreAppConfigurationsWithSubscriptions> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getConfiguredAppWithSubscriptionsSingleAppValidateBeforeCall(appId, appStoreAppId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfigurationsWithSubscriptions>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
