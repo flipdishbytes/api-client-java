@@ -33,7 +33,7 @@ import java.util.List;
  * App store app configurations
  */
 @ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-27T14:20:46.794+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-28T13:15:45.552+01:00")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -346,6 +346,9 @@ public class AppStoreAppConfiguration {
 
   @SerializedName("ExternalFunctionSignatureKey")
   private String externalFunctionSignatureKey = null;
+
+  @SerializedName("IsPaid")
+  private Boolean isPaid = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -898,6 +901,24 @@ public class AppStoreAppConfiguration {
     this.externalFunctionSignatureKey = externalFunctionSignatureKey;
   }
 
+  public AppStoreAppConfiguration isPaid(Boolean isPaid) {
+    this.isPaid = isPaid;
+    return this;
+  }
+
+   /**
+   * Is Paid
+   * @return isPaid
+  **/
+  @ApiModelProperty(value = "Is Paid")
+  public Boolean isIsPaid() {
+    return isPaid;
+  }
+
+  public void setIsPaid(Boolean isPaid) {
+    this.isPaid = isPaid;
+  }
+
   public AppStoreAppConfiguration name(String name) {
     this.name = name;
     return this;
@@ -1029,6 +1050,7 @@ public class AppStoreAppConfiguration {
         Objects.equals(this.support, appStoreAppConfiguration.support) &&
         Objects.equals(this.externalFunctionActionUrl, appStoreAppConfiguration.externalFunctionActionUrl) &&
         Objects.equals(this.externalFunctionSignatureKey, appStoreAppConfiguration.externalFunctionSignatureKey) &&
+        Objects.equals(this.isPaid, appStoreAppConfiguration.isPaid) &&
         Objects.equals(this.name, appStoreAppConfiguration.name) &&
         Objects.equals(this.description, appStoreAppConfiguration.description) &&
         Objects.equals(this.categories, appStoreAppConfiguration.categories) &&
@@ -1038,7 +1060,7 @@ public class AppStoreAppConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, internal, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, categories, countries, developerName);
+    return Objects.hash(id, appId, appStoreAppId, isEnabled, storeIds, settings, verificationStatus, logo, oauthAppId, internal, details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, isPaid, name, description, categories, countries, developerName);
   }
 
 
@@ -1068,6 +1090,7 @@ public class AppStoreAppConfiguration {
     sb.append("    support: ").append(toIndentedString(support)).append("\n");
     sb.append("    externalFunctionActionUrl: ").append(toIndentedString(externalFunctionActionUrl)).append("\n");
     sb.append("    externalFunctionSignatureKey: ").append(toIndentedString(externalFunctionSignatureKey)).append("\n");
+    sb.append("    isPaid: ").append(toIndentedString(isPaid)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    categories: ").append(toIndentedString(categories)).append("\n");

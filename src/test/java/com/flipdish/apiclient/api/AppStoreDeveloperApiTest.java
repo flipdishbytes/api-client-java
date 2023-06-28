@@ -22,6 +22,7 @@ import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreApp;
+import com.flipdish.apiclient.model.UpdateAppStoreAppExternalProduct;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -100,6 +101,23 @@ public class AppStoreDeveloperApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getAppExternalProductTest() throws ApiException {
+        String oauthAppId = null;
+        String appStoreAppId = null;
+        api.getAppExternalProduct(oauthAppId, appStoreAppId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getExternalFunctionSigningKeyTest() throws ApiException {
         String oauthAppId = null;
         String appStoreAppId = null;
@@ -122,6 +140,24 @@ public class AppStoreDeveloperApiTest {
         String appStoreAppId = null;
         UpdateAppStoreApp appStoreApp = null;
         api.updateAppStoreApp(oauthAppId, appStoreAppId, appStoreApp);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateExternalProductTest() throws ApiException {
+        String oauthAppId = null;
+        String appStoreAppId = null;
+        UpdateAppStoreAppExternalProduct appStoreAppExternalProduct = null;
+        api.updateExternalProduct(oauthAppId, appStoreAppId, appStoreAppExternalProduct);
 
         // TODO: test validations
     }

@@ -28,7 +28,7 @@ import java.io.IOException;
  * UpdateDriver Push Notification Token
  */
 @ApiModel(description = "UpdateDriver Push Notification Token")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-27T14:20:46.794+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-28T13:15:45.552+01:00")
 public class UpdateDriverNotificationToken {
   @SerializedName("PushNotificationsToken")
   private String pushNotificationsToken = null;

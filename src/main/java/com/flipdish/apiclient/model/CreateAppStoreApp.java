@@ -32,7 +32,7 @@ import java.util.List;
  * Create App store app
  */
 @ApiModel(description = "Create App store app")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-27T14:20:46.794+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-06-28T13:15:45.552+01:00")
 public class CreateAppStoreApp {
   @SerializedName("Details")
   private String details = null;
@@ -266,6 +266,9 @@ public class CreateAppStoreApp {
 
   @SerializedName("ExternalFunctionSignatureKey")
   private String externalFunctionSignatureKey = null;
+
+  @SerializedName("IsPaid")
+  private Boolean isPaid = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -625,6 +628,24 @@ public class CreateAppStoreApp {
     this.externalFunctionSignatureKey = externalFunctionSignatureKey;
   }
 
+  public CreateAppStoreApp isPaid(Boolean isPaid) {
+    this.isPaid = isPaid;
+    return this;
+  }
+
+   /**
+   * Is Paid
+   * @return isPaid
+  **/
+  @ApiModelProperty(value = "Is Paid")
+  public Boolean isIsPaid() {
+    return isPaid;
+  }
+
+  public void setIsPaid(Boolean isPaid) {
+    this.isPaid = isPaid;
+  }
+
   public CreateAppStoreApp name(String name) {
     this.name = name;
     return this;
@@ -764,6 +785,7 @@ public class CreateAppStoreApp {
         Objects.equals(this.support, createAppStoreApp.support) &&
         Objects.equals(this.externalFunctionActionUrl, createAppStoreApp.externalFunctionActionUrl) &&
         Objects.equals(this.externalFunctionSignatureKey, createAppStoreApp.externalFunctionSignatureKey) &&
+        Objects.equals(this.isPaid, createAppStoreApp.isPaid) &&
         Objects.equals(this.name, createAppStoreApp.name) &&
         Objects.equals(this.description, createAppStoreApp.description) &&
         Objects.equals(this.isEnabled, createAppStoreApp.isEnabled) &&
@@ -774,7 +796,7 @@ public class CreateAppStoreApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(details, configurationType, storeSelectorType, fieldGroups, setupInstructions, externalSetupLink, teammateAppAccessLevel, permissionsType, support, externalFunctionActionUrl, externalFunctionSignatureKey, isPaid, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -794,6 +816,7 @@ public class CreateAppStoreApp {
     sb.append("    support: ").append(toIndentedString(support)).append("\n");
     sb.append("    externalFunctionActionUrl: ").append(toIndentedString(externalFunctionActionUrl)).append("\n");
     sb.append("    externalFunctionSignatureKey: ").append(toIndentedString(externalFunctionSignatureKey)).append("\n");
+    sb.append("    isPaid: ").append(toIndentedString(isPaid)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

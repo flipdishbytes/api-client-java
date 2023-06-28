@@ -35,6 +35,7 @@ import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreApp;
+import com.flipdish.apiclient.model.UpdateAppStoreAppExternalProduct;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -467,6 +468,135 @@ public class AppStoreDeveloperApi {
         return call;
     }
     /**
+     * Build call for getAppExternalProduct
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getAppExternalProductCall(String oauthAppId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product"
+            .replaceAll("\\{" + "oauthAppId" + "\\}", apiClient.escapeString(oauthAppId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getAppExternalProductValidateBeforeCall(String oauthAppId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'oauthAppId' is set
+        if (oauthAppId == null) {
+            throw new ApiException("Missing the required parameter 'oauthAppId' when calling getAppExternalProduct(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling getAppExternalProduct(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getAppExternalProductCall(oauthAppId, appStoreAppId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void getAppExternalProduct(String oauthAppId, String appStoreAppId) throws ApiException {
+        getAppExternalProductWithHttpInfo(oauthAppId, appStoreAppId);
+    }
+
+    /**
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> getAppExternalProductWithHttpInfo(String oauthAppId, String appStoreAppId) throws ApiException {
+        com.squareup.okhttp.Call call = getAppExternalProductValidateBeforeCall(oauthAppId, appStoreAppId, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getAppExternalProductAsync(String oauthAppId, String appStoreAppId, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getAppExternalProductValidateBeforeCall(oauthAppId, appStoreAppId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for getExternalFunctionSigningKey
      * @param oauthAppId  (required)
      * @param appStoreAppId  (required)
@@ -730,6 +860,144 @@ public class AppStoreDeveloperApi {
         }
 
         com.squareup.okhttp.Call call = updateAppStoreAppValidateBeforeCall(oauthAppId, appStoreAppId, appStoreApp, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for updateExternalProduct
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreAppExternalProduct  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call updateExternalProductCall(String oauthAppId, String appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = appStoreAppExternalProduct;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product"
+            .replaceAll("\\{" + "oauthAppId" + "\\}", apiClient.escapeString(oauthAppId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call updateExternalProductValidateBeforeCall(String oauthAppId, String appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'oauthAppId' is set
+        if (oauthAppId == null) {
+            throw new ApiException("Missing the required parameter 'oauthAppId' when calling updateExternalProduct(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling updateExternalProduct(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppExternalProduct' is set
+        if (appStoreAppExternalProduct == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppExternalProduct' when calling updateExternalProduct(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = updateExternalProductCall(oauthAppId, appStoreAppId, appStoreAppExternalProduct, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreAppExternalProduct  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void updateExternalProduct(String oauthAppId, String appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct) throws ApiException {
+        updateExternalProductWithHttpInfo(oauthAppId, appStoreAppId, appStoreAppExternalProduct);
+    }
+
+    /**
+     * 
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreAppExternalProduct  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> updateExternalProductWithHttpInfo(String oauthAppId, String appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct) throws ApiException {
+        com.squareup.okhttp.Call call = updateExternalProductValidateBeforeCall(oauthAppId, appStoreAppId, appStoreAppExternalProduct, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param oauthAppId  (required)
+     * @param appStoreAppId  (required)
+     * @param appStoreAppExternalProduct  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call updateExternalProductAsync(String oauthAppId, String appStoreAppId, UpdateAppStoreAppExternalProduct appStoreAppExternalProduct, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = updateExternalProductValidateBeforeCall(oauthAppId, appStoreAppId, appStoreAppExternalProduct, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
