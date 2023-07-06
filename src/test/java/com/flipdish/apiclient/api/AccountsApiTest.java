@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AccountDetailBase;
 import com.flipdish.apiclient.model.ChangePasswordModel;
 import com.flipdish.apiclient.model.CreateAccountModel;
+import com.flipdish.apiclient.model.CreateBasicAccountModel;
 import com.flipdish.apiclient.model.LoginModel;
 import com.flipdish.apiclient.model.LoginWithPinModel;
 import com.flipdish.apiclient.model.PasswordResetModel;
@@ -108,6 +109,22 @@ public class AccountsApiTest {
     public void createAccountTest() throws ApiException {
         CreateAccountModel createAccountModel = null;
         api.createAccount(createAccountModel);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createBasicAccountTest() throws ApiException {
+        CreateBasicAccountModel basicAccountModel = null;
+        String response = api.createBasicAccount(basicAccountModel);
 
         // TODO: test validations
     }

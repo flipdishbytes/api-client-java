@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**changePassword**](AccountsApi.md#changePassword) | **PUT** /api/v1.0/accounts/password | 
 [**changePasswordWithPin**](AccountsApi.md#changePasswordWithPin) | **PUT** /api/v1.0/accounts/password/pin | 
 [**createAccount**](AccountsApi.md#createAccount) | **POST** /api/v1.0/accounts | 
+[**createBasicAccount**](AccountsApi.md#createBasicAccount) | **POST** /api/v1.0/accounts/basic-account | 
 [**getAccountDetails**](AccountsApi.md#getAccountDetails) | **GET** /api/v1.0/accounts | 
 [**getLocalisedTimeZones**](AccountsApi.md#getLocalisedTimeZones) | **GET** /api/v1.0/accounts/timezones | 
 [**login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
@@ -215,6 +216,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="createBasicAccount"></a>
+# **createBasicAccount**
+> String createBasicAccount(basicAccountModel)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AccountsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AccountsApi apiInstance = new AccountsApi();
+CreateBasicAccountModel basicAccountModel = new CreateBasicAccountModel(); // CreateBasicAccountModel | 
+try {
+    String result = apiInstance.createBasicAccount(basicAccountModel);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountsApi#createBasicAccount");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **basicAccountModel** | [**CreateBasicAccountModel**](CreateBasicAccountModel.md)|  |
+
+### Return type
+
+**String**
 
 ### Authorization
 
