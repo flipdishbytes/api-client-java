@@ -32,13 +32,16 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra device details
  */
 @ApiModel(description = "Hydra device details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-10T11:00:02.901+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-19T09:55:22.769+01:00")
 public class HydraDeviceDetails {
   @SerializedName("HydraConfigId")
   private Integer hydraConfigId = null;
 
   @SerializedName("DeviceId")
   private String deviceId = null;
+
+  @SerializedName("SerialNumber")
+  private String serialNumber = null;
 
   /**
    * Type of the device
@@ -189,16 +192,34 @@ public class HydraDeviceDetails {
   }
 
    /**
-   * Device Id or Serial Number
+   * Device Id
    * @return deviceId
   **/
-  @ApiModelProperty(value = "Device Id or Serial Number")
+  @ApiModelProperty(value = "Device Id")
   public String getDeviceId() {
     return deviceId;
   }
 
   public void setDeviceId(String deviceId) {
     this.deviceId = deviceId;
+  }
+
+  public HydraDeviceDetails serialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
+    return this;
+  }
+
+   /**
+   * Serial Number
+   * @return serialNumber
+  **/
+  @ApiModelProperty(value = "Serial Number")
+  public String getSerialNumber() {
+    return serialNumber;
+  }
+
+  public void setSerialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
   }
 
   public HydraDeviceDetails deviceType(DeviceTypeEnum deviceType) {
@@ -383,6 +404,7 @@ public class HydraDeviceDetails {
     HydraDeviceDetails hydraDeviceDetails = (HydraDeviceDetails) o;
     return Objects.equals(this.hydraConfigId, hydraDeviceDetails.hydraConfigId) &&
         Objects.equals(this.deviceId, hydraDeviceDetails.deviceId) &&
+        Objects.equals(this.serialNumber, hydraDeviceDetails.serialNumber) &&
         Objects.equals(this.deviceType, hydraDeviceDetails.deviceType) &&
         Objects.equals(this.status, hydraDeviceDetails.status) &&
         Objects.equals(this.deviceName, hydraDeviceDetails.deviceName) &&
@@ -396,7 +418,7 @@ public class HydraDeviceDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(hydraConfigId, deviceId, deviceType, status, deviceName, storeNames, lastPollUtc, version, buildNumber, gitSha, gitBranch);
+    return Objects.hash(hydraConfigId, deviceId, serialNumber, deviceType, status, deviceName, storeNames, lastPollUtc, version, buildNumber, gitSha, gitBranch);
   }
 
 
@@ -407,6 +429,7 @@ public class HydraDeviceDetails {
     
     sb.append("    hydraConfigId: ").append(toIndentedString(hydraConfigId)).append("\n");
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
+    sb.append("    serialNumber: ").append(toIndentedString(serialNumber)).append("\n");
     sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
