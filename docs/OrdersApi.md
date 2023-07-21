@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | 
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | 
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**getReadyToProcess**](OrdersApi.md#getReadyToProcess) | **GET** /api/v1.0/{appId}/orders/ready_to_process | 
 [**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | 
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | 
 [**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
@@ -447,6 +448,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultOrderSummary**](RestApiPaginationResultOrderSummary.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getReadyToProcess"></a>
+# **getReadyToProcess**
+> OrderList getReadyToProcess(appId, storeId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OrdersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OrdersApi apiInstance = new OrdersApi();
+String appId = "appId_example"; // String | 
+List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
+try {
+    OrderList result = apiInstance.getReadyToProcess(appId, storeId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrdersApi#getReadyToProcess");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+
+### Return type
+
+[**OrderList**](OrderList.md)
 
 ### Authorization
 

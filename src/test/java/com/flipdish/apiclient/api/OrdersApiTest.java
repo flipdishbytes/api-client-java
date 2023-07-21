@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.Accept;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
 import com.flipdish.apiclient.model.OrderFulfillmentStatusUpdate;
+import com.flipdish.apiclient.model.OrderList;
 import com.flipdish.apiclient.model.Refund;
 import com.flipdish.apiclient.model.Reject;
 import com.flipdish.apiclient.model.RestApiArrayResultOrderFulfillmentStatus;
@@ -187,6 +188,23 @@ public class OrdersApiTest {
         OffsetDateTime from = null;
         OffsetDateTime to = null;
         RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getReadyToProcessTest() throws ApiException {
+        String appId = null;
+        List<Integer> storeId = null;
+        OrderList response = api.getReadyToProcess(appId, storeId);
 
         // TODO: test validations
     }
