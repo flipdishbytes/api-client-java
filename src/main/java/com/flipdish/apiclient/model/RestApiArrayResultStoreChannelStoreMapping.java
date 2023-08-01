@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-01T12:45:24.090+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-01T16:23:35.547+01:00")
 public class RestApiArrayResultStoreChannelStoreMapping {
   @SerializedName("Data")
   private List<StoreChannelStoreMapping> data = new ArrayList<StoreChannelStoreMapping>();
