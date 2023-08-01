@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getSalesforceReferences**](AppsApi.md#getSalesforceReferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | 
 [**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+[**lookupByWhitelabelId**](AppsApi.md#lookupByWhitelabelId) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
 [**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
@@ -423,6 +424,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="lookupByWhitelabelId"></a>
+# **lookupByWhitelabelId**
+> AppLookup lookupByWhitelabelId(whitelabelId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+Integer whitelabelId = 56; // Integer | 
+try {
+    AppLookup result = apiInstance.lookupByWhitelabelId(whitelabelId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#lookupByWhitelabelId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **whitelabelId** | **Integer**|  |
+
+### Return type
+
+[**AppLookup**](AppLookup.md)
 
 ### Authorization
 

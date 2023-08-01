@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CoordinatesDm
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-07-31T15:44:39.698+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-01T12:45:24.090+01:00")
 public class CoordinatesDm {
   @SerializedName("Latitude")
   private Double latitude = null;

@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
+import com.flipdish.apiclient.model.AppLookup;
 import com.flipdish.apiclient.model.AppSalesforceReferences;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
@@ -170,6 +171,22 @@ public class AppsApiTest {
         String vanityUrl = null;
         String appId = null;
         RestApiStringResult response = api.isPanaceaVanityUrlAvailable(vanityUrl, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void lookupByWhitelabelIdTest() throws ApiException {
+        Integer whitelabelId = null;
+        AppLookup response = api.lookupByWhitelabelId(whitelabelId);
 
         // TODO: test validations
     }
