@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**getEMVTerminalDetails**](HydraApi.md#getEMVTerminalDetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 [**getEmvOrderState**](HydraApi.md#getEmvOrderState) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
 [**getKioskCashPaymentSettings**](HydraApi.md#getKioskCashPaymentSettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
+[**getKioskSettings**](HydraApi.md#getKioskSettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 [**getRegistration**](HydraApi.md#getRegistration) | **GET** /api/v1.0/hydra/registration | 
 [**getSettings**](HydraApi.md#getSettings) | **GET** /api/v1.0/hydra/settings | 
 [**hydraCreateEmv**](HydraApi.md#hydraCreateEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
@@ -25,6 +26,7 @@ Method | HTTP request | Description
 [**unAssign**](HydraApi.md#unAssign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
 [**unassignEmv**](HydraApi.md#unassignEmv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 [**updateKioskCashVisibilitySettings**](HydraApi.md#updateKioskCashVisibilitySettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
+[**updateKioskSettings**](HydraApi.md#updateKioskSettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 
 
 <a name="assignEmv"></a>
@@ -563,6 +565,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultKioskCashPaymentSettings**](RestApiArrayResultKioskCashPaymentSettings.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getKioskSettings"></a>
+# **getKioskSettings**
+> RestApiResultKioskSettings getKioskSettings(appId, deviceId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+String deviceId = "deviceId_example"; // String | 
+try {
+    RestApiResultKioskSettings result = apiInstance.getKioskSettings(appId, deviceId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#getKioskSettings");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **deviceId** | **String**|  |
+
+### Return type
+
+[**RestApiResultKioskSettings**](RestApiResultKioskSettings.md)
 
 ### Authorization
 
@@ -1142,5 +1197,59 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="updateKioskSettings"></a>
+# **updateKioskSettings**
+> updateKioskSettings(appId, deviceId, settings)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+String deviceId = "deviceId_example"; // String | 
+KioskSettings settings = new KioskSettings(); // KioskSettings | 
+try {
+    apiInstance.updateKioskSettings(appId, deviceId, settings);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#updateKioskSettings");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **deviceId** | **String**|  |
+ **settings** | [**KioskSettings**](KioskSettings.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 

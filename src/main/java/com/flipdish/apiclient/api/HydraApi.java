@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.EmvTerminal;
 import com.flipdish.apiclient.model.HydraRegistrationRequest;
+import com.flipdish.apiclient.model.KioskSettings;
 import com.flipdish.apiclient.model.RestApiArrayResultEmvTerminalWithAssignments;
 import com.flipdish.apiclient.model.RestApiArrayResultKioskCashPaymentSettings;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -37,6 +38,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultHydraDeviceDetails;
 import com.flipdish.apiclient.model.RestApiResultHydraConfig;
 import com.flipdish.apiclient.model.RestApiResultHydraDeviceDetails;
 import com.flipdish.apiclient.model.RestApiResultHydraStatus;
+import com.flipdish.apiclient.model.RestApiResultKioskSettings;
 import com.flipdish.apiclient.model.RestApiResultPaymentTerminalDetails;
 import com.flipdish.apiclient.model.RestApiResultPaymentTerminalTransactionDetails;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -1459,6 +1461,139 @@ public class HydraApi {
         return call;
     }
     /**
+     * Build call for getKioskSettings
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getKioskSettingsCall(String appId, String deviceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/kiosksettings/{deviceId}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "deviceId" + "\\}", apiClient.escapeString(deviceId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getKioskSettingsValidateBeforeCall(String appId, String deviceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getKioskSettings(Async)");
+        }
+        
+        // verify the required parameter 'deviceId' is set
+        if (deviceId == null) {
+            throw new ApiException("Missing the required parameter 'deviceId' when calling getKioskSettings(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getKioskSettingsCall(appId, deviceId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @return RestApiResultKioskSettings
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultKioskSettings getKioskSettings(String appId, String deviceId) throws ApiException {
+        ApiResponse<RestApiResultKioskSettings> resp = getKioskSettingsWithHttpInfo(appId, deviceId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @return ApiResponse&lt;RestApiResultKioskSettings&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultKioskSettings> getKioskSettingsWithHttpInfo(String appId, String deviceId) throws ApiException {
+        com.squareup.okhttp.Call call = getKioskSettingsValidateBeforeCall(appId, deviceId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultKioskSettings>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getKioskSettingsAsync(String appId, String deviceId, final ApiCallback<RestApiResultKioskSettings> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getKioskSettingsValidateBeforeCall(appId, deviceId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultKioskSettings>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getRegistration
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -2874,6 +3009,144 @@ public class HydraApi {
         }
 
         com.squareup.okhttp.Call call = updateKioskCashVisibilitySettingsValidateBeforeCall(appId, deviceId, isCashEnabled, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for updateKioskSettings
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param settings  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call updateKioskSettingsCall(String appId, String deviceId, KioskSettings settings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = settings;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/kiosksettings/{deviceId}"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "deviceId" + "\\}", apiClient.escapeString(deviceId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call updateKioskSettingsValidateBeforeCall(String appId, String deviceId, KioskSettings settings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling updateKioskSettings(Async)");
+        }
+        
+        // verify the required parameter 'deviceId' is set
+        if (deviceId == null) {
+            throw new ApiException("Missing the required parameter 'deviceId' when calling updateKioskSettings(Async)");
+        }
+        
+        // verify the required parameter 'settings' is set
+        if (settings == null) {
+            throw new ApiException("Missing the required parameter 'settings' when calling updateKioskSettings(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = updateKioskSettingsCall(appId, deviceId, settings, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param settings  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void updateKioskSettings(String appId, String deviceId, KioskSettings settings) throws ApiException {
+        updateKioskSettingsWithHttpInfo(appId, deviceId, settings);
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param settings  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> updateKioskSettingsWithHttpInfo(String appId, String deviceId, KioskSettings settings) throws ApiException {
+        com.squareup.okhttp.Call call = updateKioskSettingsValidateBeforeCall(appId, deviceId, settings, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param deviceId  (required)
+     * @param settings  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call updateKioskSettingsAsync(String appId, String deviceId, KioskSettings settings, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = updateKioskSettingsValidateBeforeCall(appId, deviceId, settings, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

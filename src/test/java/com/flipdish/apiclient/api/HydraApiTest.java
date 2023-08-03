@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.EmvTerminal;
 import com.flipdish.apiclient.model.HydraRegistrationRequest;
+import com.flipdish.apiclient.model.KioskSettings;
 import com.flipdish.apiclient.model.RestApiArrayResultEmvTerminalWithAssignments;
 import com.flipdish.apiclient.model.RestApiArrayResultKioskCashPaymentSettings;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultHydraDeviceDetails;
 import com.flipdish.apiclient.model.RestApiResultHydraConfig;
 import com.flipdish.apiclient.model.RestApiResultHydraDeviceDetails;
 import com.flipdish.apiclient.model.RestApiResultHydraStatus;
+import com.flipdish.apiclient.model.RestApiResultKioskSettings;
 import com.flipdish.apiclient.model.RestApiResultPaymentTerminalDetails;
 import com.flipdish.apiclient.model.RestApiResultPaymentTerminalTransactionDetails;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -232,6 +234,23 @@ public class HydraApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getKioskSettingsTest() throws ApiException {
+        String appId = null;
+        String deviceId = null;
+        RestApiResultKioskSettings response = api.getKioskSettings(appId, deviceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getRegistrationTest() throws ApiException {
         RestApiResultHydraStatus response = api.getRegistration();
 
@@ -404,6 +423,24 @@ public class HydraApiTest {
         String deviceId = null;
         Boolean isCashEnabled = null;
         api.updateKioskCashVisibilitySettings(appId, deviceId, isCashEnabled);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateKioskSettingsTest() throws ApiException {
+        String appId = null;
+        String deviceId = null;
+        KioskSettings settings = null;
+        api.updateKioskSettings(appId, deviceId, settings);
 
         // TODO: test validations
     }
