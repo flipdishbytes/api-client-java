@@ -34,11 +34,8 @@ import java.util.UUID;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-09T12:56:38.609+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-10T11:40:12.961+01:00")
 public class MenuSectionItem {
-  @SerializedName("MenuItemId")
-  private Integer menuItemId = null;
-
   @SerializedName("ActualPrice")
   private Double actualPrice = null;
 
@@ -201,23 +198,8 @@ public class MenuSectionItem {
   @SerializedName("ImageUrl")
   private String imageUrl = null;
 
-  public MenuSectionItem menuItemId(Integer menuItemId) {
-    this.menuItemId = menuItemId;
-    return this;
-  }
-
-   /**
-   * Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item.
-   * @return menuItemId
-  **/
-  @ApiModelProperty(value = "Menu item identifier. This ID may change at any time. Use `PublicId` if you need a permanent reference to the item.")
-  public Integer getMenuItemId() {
-    return menuItemId;
-  }
-
-  public void setMenuItemId(Integer menuItemId) {
-    this.menuItemId = menuItemId;
-  }
+  @SerializedName("MenuItemId")
+  private Integer menuItemId = null;
 
   public MenuSectionItem actualPrice(Double actualPrice) {
     this.actualPrice = actualPrice;
@@ -603,6 +585,24 @@ public class MenuSectionItem {
     this.imageUrl = imageUrl;
   }
 
+  public MenuSectionItem menuItemId(Integer menuItemId) {
+    this.menuItemId = menuItemId;
+    return this;
+  }
+
+   /**
+   * Menu Item Id
+   * @return menuItemId
+  **/
+  @ApiModelProperty(value = "Menu Item Id")
+  public Integer getMenuItemId() {
+    return menuItemId;
+  }
+
+  public void setMenuItemId(Integer menuItemId) {
+    this.menuItemId = menuItemId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -613,8 +613,7 @@ public class MenuSectionItem {
       return false;
     }
     MenuSectionItem menuSectionItem = (MenuSectionItem) o;
-    return Objects.equals(this.menuItemId, menuSectionItem.menuItemId) &&
-        Objects.equals(this.actualPrice, menuSectionItem.actualPrice) &&
+    return Objects.equals(this.actualPrice, menuSectionItem.actualPrice) &&
         Objects.equals(this.menuItemOptionSets, menuSectionItem.menuItemOptionSets) &&
         Objects.equals(this.dailySpecialHours, menuSectionItem.dailySpecialHours) &&
         Objects.equals(this.publicId, menuSectionItem.publicId) &&
@@ -633,12 +632,13 @@ public class MenuSectionItem {
         Objects.equals(this.cellLayoutType, menuSectionItem.cellLayoutType) &&
         Objects.equals(this.disableVouchers, menuSectionItem.disableVouchers) &&
         Objects.equals(this.imageName, menuSectionItem.imageName) &&
-        Objects.equals(this.imageUrl, menuSectionItem.imageUrl);
+        Objects.equals(this.imageUrl, menuSectionItem.imageUrl) &&
+        Objects.equals(this.menuItemId, menuSectionItem.menuItemId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemId, actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, metadata, catalogItemId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl);
+    return Objects.hash(actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, metadata, catalogItemId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId);
   }
 
 
@@ -647,7 +647,6 @@ public class MenuSectionItem {
     StringBuilder sb = new StringBuilder();
     sb.append("class MenuSectionItem {\n");
     
-    sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
     sb.append("    actualPrice: ").append(toIndentedString(actualPrice)).append("\n");
     sb.append("    menuItemOptionSets: ").append(toIndentedString(menuItemOptionSets)).append("\n");
     sb.append("    dailySpecialHours: ").append(toIndentedString(dailySpecialHours)).append("\n");
@@ -668,6 +667,7 @@ public class MenuSectionItem {
     sb.append("    disableVouchers: ").append(toIndentedString(disableVouchers)).append("\n");
     sb.append("    imageName: ").append(toIndentedString(imageName)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
