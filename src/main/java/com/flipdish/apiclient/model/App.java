@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-15T10:30:43.618+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-15T12:07:08.951+01:00")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -557,6 +557,9 @@ public class App {
   @SerializedName("IsPanaceaEnabled")
   private Boolean isPanaceaEnabled = null;
 
+  @SerializedName("PanaceaVanityUrl")
+  private String panaceaVanityUrl = null;
+
   @SerializedName("CookieConsentPromptEnabled")
   private Boolean cookieConsentPromptEnabled = null;
 
@@ -952,6 +955,24 @@ public class App {
     this.isPanaceaEnabled = isPanaceaEnabled;
   }
 
+  public App panaceaVanityUrl(String panaceaVanityUrl) {
+    this.panaceaVanityUrl = panaceaVanityUrl;
+    return this;
+  }
+
+   /**
+   * In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}
+   * @return panaceaVanityUrl
+  **/
+  @ApiModelProperty(value = "In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}")
+  public String getPanaceaVanityUrl() {
+    return panaceaVanityUrl;
+  }
+
+  public void setPanaceaVanityUrl(String panaceaVanityUrl) {
+    this.panaceaVanityUrl = panaceaVanityUrl;
+  }
+
   public App cookieConsentPromptEnabled(Boolean cookieConsentPromptEnabled) {
     this.cookieConsentPromptEnabled = cookieConsentPromptEnabled;
     return this;
@@ -1000,12 +1021,13 @@ public class App {
         Objects.equals(this.kioskPrimaryColour, app.kioskPrimaryColour) &&
         Objects.equals(this.applicationCategory, app.applicationCategory) &&
         Objects.equals(this.isPanaceaEnabled, app.isPanaceaEnabled) &&
+        Objects.equals(this.panaceaVanityUrl, app.panaceaVanityUrl) &&
         Objects.equals(this.cookieConsentPromptEnabled, app.cookieConsentPromptEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, cookieConsentPromptEnabled);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled);
   }
 
 
@@ -1034,6 +1056,7 @@ public class App {
     sb.append("    kioskPrimaryColour: ").append(toIndentedString(kioskPrimaryColour)).append("\n");
     sb.append("    applicationCategory: ").append(toIndentedString(applicationCategory)).append("\n");
     sb.append("    isPanaceaEnabled: ").append(toIndentedString(isPanaceaEnabled)).append("\n");
+    sb.append("    panaceaVanityUrl: ").append(toIndentedString(panaceaVanityUrl)).append("\n");
     sb.append("    cookieConsentPromptEnabled: ").append(toIndentedString(cookieConsentPromptEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
