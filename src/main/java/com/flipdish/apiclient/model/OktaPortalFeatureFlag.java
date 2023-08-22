@@ -28,7 +28,7 @@ import java.io.IOException;
  * Okta Portal Feature Flag Value
  */
 @ApiModel(description = "Okta Portal Feature Flag Value")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-18T13:04:13.761+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-22T15:18:24.850+01:00")
 public class OktaPortalFeatureFlag {
   @SerializedName("OktaPortalEnabled")
   private Boolean oktaPortalEnabled = null;
