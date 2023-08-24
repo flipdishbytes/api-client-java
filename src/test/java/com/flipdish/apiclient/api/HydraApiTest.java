@@ -144,6 +144,21 @@ public class HydraApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getAblyTokenTest() throws ApiException {
+        api.getAblyToken();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getAttachedDeviceTest() throws ApiException {
         String appId = null;
         String deviceType = null;
