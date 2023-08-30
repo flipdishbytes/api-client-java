@@ -4,9 +4,63 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**customersGetOptOutMarketingLink**](CustomersApi.md#customersGetOptOutMarketingLink) | **POST** /api/v1.0/{appId}/customers/{customerId}/opt-out-link | 
 [**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 [**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
+
+<a name="customersGetOptOutMarketingLink"></a>
+# **customersGetOptOutMarketingLink**
+> Object customersGetOptOutMarketingLink(appId, customerId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CustomersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CustomersApi apiInstance = new CustomersApi();
+String appId = "appId_example"; // String | 
+Integer customerId = 56; // Integer | 
+try {
+    Object result = apiInstance.customersGetOptOutMarketingLink(appId, customerId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CustomersApi#customersGetOptOutMarketingLink");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **customerId** | **Integer**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getCustomerById"></a>
 # **getCustomerById**
