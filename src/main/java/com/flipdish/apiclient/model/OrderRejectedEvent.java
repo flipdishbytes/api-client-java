@@ -16,6 +16,7 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.Order;
+import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Rejected Event
  */
 @ApiModel(description = "Order Rejected Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-31T12:11:57.319+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-31T15:13:05.195+01:00")
 public class OrderRejectedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -44,6 +45,9 @@ public class OrderRejectedEvent {
 
   @SerializedName("Reason")
   private String reason = null;
+
+  @SerializedName("User")
+  private UserEventInfo user = null;
 
   @SerializedName("Order")
   private Order order = null;
@@ -133,6 +137,24 @@ public class OrderRejectedEvent {
 
   public void setReason(String reason) {
     this.reason = reason;
+  }
+
+  public OrderRejectedEvent user(UserEventInfo user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * User who has rejected the order
+   * @return user
+  **/
+  @ApiModelProperty(value = "User who has rejected the order")
+  public UserEventInfo getUser() {
+    return user;
+  }
+
+  public void setUser(UserEventInfo user) {
+    this.user = user;
   }
 
   public OrderRejectedEvent order(Order order) {
@@ -257,6 +279,7 @@ public class OrderRejectedEvent {
         Objects.equals(this.description, orderRejectedEvent.description) &&
         Objects.equals(this.orderRejectedTime, orderRejectedEvent.orderRejectedTime) &&
         Objects.equals(this.reason, orderRejectedEvent.reason) &&
+        Objects.equals(this.user, orderRejectedEvent.user) &&
         Objects.equals(this.order, orderRejectedEvent.order) &&
         Objects.equals(this.flipdishEventId, orderRejectedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderRejectedEvent.createTime) &&
@@ -267,7 +290,7 @@ public class OrderRejectedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, orderRejectedTime, reason, order, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, orderRejectedTime, reason, user, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -280,6 +303,7 @@ public class OrderRejectedEvent {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    orderRejectedTime: ").append(toIndentedString(orderRejectedTime)).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");

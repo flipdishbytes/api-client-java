@@ -16,6 +16,7 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.Order;
+import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Refunded Event
  */
 @ApiModel(description = "Order Refunded Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-31T12:11:57.319+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-08-31T15:13:05.195+01:00")
 public class OrderRefundedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -41,6 +42,9 @@ public class OrderRefundedEvent {
 
   @SerializedName("Description")
   private String description = null;
+
+  @SerializedName("User")
+  private UserEventInfo user = null;
 
   @SerializedName("Order")
   private Order order = null;
@@ -112,6 +116,24 @@ public class OrderRefundedEvent {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public OrderRefundedEvent user(UserEventInfo user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * User who has refunded the order
+   * @return user
+  **/
+  @ApiModelProperty(value = "User who has refunded the order")
+  public UserEventInfo getUser() {
+    return user;
+  }
+
+  public void setUser(UserEventInfo user) {
+    this.user = user;
   }
 
   public OrderRefundedEvent order(Order order) {
@@ -235,6 +257,7 @@ public class OrderRefundedEvent {
     return Objects.equals(this.eventName, orderRefundedEvent.eventName) &&
         Objects.equals(this.refundedAmount, orderRefundedEvent.refundedAmount) &&
         Objects.equals(this.description, orderRefundedEvent.description) &&
+        Objects.equals(this.user, orderRefundedEvent.user) &&
         Objects.equals(this.order, orderRefundedEvent.order) &&
         Objects.equals(this.flipdishEventId, orderRefundedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderRefundedEvent.createTime) &&
@@ -245,7 +268,7 @@ public class OrderRefundedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, refundedAmount, description, order, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, refundedAmount, description, user, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -257,6 +280,7 @@ public class OrderRefundedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    refundedAmount: ").append(toIndentedString(refundedAmount)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
