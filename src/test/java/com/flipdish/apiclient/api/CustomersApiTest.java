@@ -45,23 +45,6 @@ public class CustomersApiTest {
      *          if the Api call fails
      */
     @Test
-    public void customersGetOptOutMarketingLinkTest() throws ApiException {
-        String appId = null;
-        Integer customerId = null;
-        Object response = api.customersGetOptOutMarketingLink(appId, customerId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
     public void getCustomerByIdTest() throws ApiException {
         String appId = null;
         Integer customerId = null;
