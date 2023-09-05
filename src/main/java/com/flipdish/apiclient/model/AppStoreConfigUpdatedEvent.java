@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * AppStore Config Updated event
  */
 @ApiModel(description = "AppStore Config Updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-05T08:50:25.656+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-05T10:15:59.543+01:00")
 public class AppStoreConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

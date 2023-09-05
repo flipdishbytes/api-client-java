@@ -52,6 +52,7 @@ VIEWAPP | &quot;ViewApp&quot;
 CREATEAPP | &quot;CreateApp&quot;
 UPDATEAPP | &quot;UpdateApp&quot;
 EDITAPPASSETS | &quot;EditAppAssets&quot;
+EDITAPPFEATURES | &quot;EditAppFeatures&quot;
 VIEWTEAMMATES | &quot;ViewTeammates&quot;
 EDITTEAMMATES | &quot;EditTeammates&quot;
 CREATETEAMMATEOWNER | &quot;CreateTeammateOwner&quot;
