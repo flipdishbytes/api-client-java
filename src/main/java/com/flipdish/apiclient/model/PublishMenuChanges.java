@@ -30,7 +30,7 @@ import java.util.List;
  * Publish Menu Changes
  */
 @ApiModel(description = "Publish Menu Changes")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:45:02.673+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-11T12:41:59.511Z")
 public class PublishMenuChanges {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;
