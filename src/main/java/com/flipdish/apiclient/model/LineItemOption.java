@@ -32,7 +32,7 @@ import java.util.Map;
  * Defines a single line item option
  */
 @ApiModel(description = "Defines a single line item option")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-15T12:24:04.309Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-19T12:03:09.347Z")
 public class LineItemOption {
   @SerializedName("Id")
   private Integer id = null;

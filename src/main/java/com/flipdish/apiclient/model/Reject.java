@@ -28,7 +28,7 @@ import java.io.IOException;
  * Reject
  */
 @ApiModel(description = "Reject")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-15T12:24:04.309Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-19T12:03:09.347Z")
 public class Reject {
   /**
    * Reject reason.
