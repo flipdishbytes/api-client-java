@@ -29,13 +29,16 @@ import java.io.IOException;
 /**
  * CreateOrderRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-19T12:03:09.347Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-25T10:29:46.115Z")
 public class CreateOrderRequest {
   @SerializedName("LegacyOrderDm")
   private OrderDm legacyOrderDm = null;
 
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
+
+  @SerializedName("CustomerName")
+  private String customerName = null;
 
   @SerializedName("DeliveryLocation")
   private DeliveryLocation deliveryLocation = null;
@@ -76,6 +79,24 @@ public class CreateOrderRequest {
     this.phoneNumber = phoneNumber;
   }
 
+  public CreateOrderRequest customerName(String customerName) {
+    this.customerName = customerName;
+    return this;
+  }
+
+   /**
+   * Get customerName
+   * @return customerName
+  **/
+  @ApiModelProperty(value = "")
+  public String getCustomerName() {
+    return customerName;
+  }
+
+  public void setCustomerName(String customerName) {
+    this.customerName = customerName;
+  }
+
   public CreateOrderRequest deliveryLocation(DeliveryLocation deliveryLocation) {
     this.deliveryLocation = deliveryLocation;
     return this;
@@ -106,12 +127,13 @@ public class CreateOrderRequest {
     CreateOrderRequest createOrderRequest = (CreateOrderRequest) o;
     return Objects.equals(this.legacyOrderDm, createOrderRequest.legacyOrderDm) &&
         Objects.equals(this.phoneNumber, createOrderRequest.phoneNumber) &&
+        Objects.equals(this.customerName, createOrderRequest.customerName) &&
         Objects.equals(this.deliveryLocation, createOrderRequest.deliveryLocation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(legacyOrderDm, phoneNumber, deliveryLocation);
+    return Objects.hash(legacyOrderDm, phoneNumber, customerName, deliveryLocation);
   }
 
 
@@ -122,6 +144,7 @@ public class CreateOrderRequest {
     
     sb.append("    legacyOrderDm: ").append(toIndentedString(legacyOrderDm)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    customerName: ").append(toIndentedString(customerName)).append("\n");
     sb.append("    deliveryLocation: ").append(toIndentedString(deliveryLocation)).append("\n");
     sb.append("}");
     return sb.toString();

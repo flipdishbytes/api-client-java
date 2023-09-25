@@ -28,7 +28,7 @@ import java.io.IOException;
  * Add item details
  */
 @ApiModel(description = "Add item details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-19T12:03:09.347Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-25T10:29:46.115Z")
 public class AddItemDetails {
   @SerializedName("PromotionalItemId")
   private Integer promotionalItemId = null;
