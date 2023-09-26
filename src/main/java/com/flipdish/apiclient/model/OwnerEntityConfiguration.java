@@ -30,7 +30,7 @@ import java.util.List;
  * OwnerEntity information to configure its {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}s
  */
 @ApiModel(description = "OwnerEntity information to configure its {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}s")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-25T10:29:46.115Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-26T11:18:33.265Z")
 public class OwnerEntityConfiguration {
   /**
    * Owner Entity
