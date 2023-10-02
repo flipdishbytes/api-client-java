@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a testimonial base
  */
 @ApiModel(description = "Represents a testimonial base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-26T12:16:22.103Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-02T11:19:45.951Z")
 public class WebsiteTestimonialBase {
   @SerializedName("Author")
   private String author = null;

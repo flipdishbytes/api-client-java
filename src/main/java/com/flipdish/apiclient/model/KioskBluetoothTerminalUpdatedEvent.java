@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk bluetooth terminal unpaired
  */
 @ApiModel(description = "Kiosk bluetooth terminal unpaired")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-26T12:16:22.103Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-02T11:19:45.951Z")
 public class KioskBluetoothTerminalUpdatedEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;

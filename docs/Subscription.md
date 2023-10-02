@@ -16,7 +16,8 @@ Name | Type | Description | Notes
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **user** | **String** | User | 
 **defaultPaymentDescription** | **String** | Default payment description |  [optional]
-**cancellationDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancellation Date |  [optional]
+**cancellationRequestDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancellation Date |  [optional]
+**cancellationDate** | [**OffsetDateTime**](OffsetDateTime.md) | Cancel Date |  [optional]
 
 
 <a name="StatusEnum"></a>

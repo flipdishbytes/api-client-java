@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-09-26T12:16:22.103Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-02T11:19:45.951Z")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();
@@ -399,6 +399,9 @@ public class Subscription {
   @SerializedName("DefaultPaymentDescription")
   private String defaultPaymentDescription = null;
 
+  @SerializedName("CancellationRequestDate")
+  private OffsetDateTime cancellationRequestDate = null;
+
   @SerializedName("CancellationDate")
   private OffsetDateTime cancellationDate = null;
 
@@ -639,16 +642,34 @@ public class Subscription {
     this.defaultPaymentDescription = defaultPaymentDescription;
   }
 
+  public Subscription cancellationRequestDate(OffsetDateTime cancellationRequestDate) {
+    this.cancellationRequestDate = cancellationRequestDate;
+    return this;
+  }
+
+   /**
+   * Cancellation Date
+   * @return cancellationRequestDate
+  **/
+  @ApiModelProperty(value = "Cancellation Date")
+  public OffsetDateTime getCancellationRequestDate() {
+    return cancellationRequestDate;
+  }
+
+  public void setCancellationRequestDate(OffsetDateTime cancellationRequestDate) {
+    this.cancellationRequestDate = cancellationRequestDate;
+  }
+
   public Subscription cancellationDate(OffsetDateTime cancellationDate) {
     this.cancellationDate = cancellationDate;
     return this;
   }
 
    /**
-   * Cancellation Date
+   * Cancel Date
    * @return cancellationDate
   **/
-  @ApiModelProperty(value = "Cancellation Date")
+  @ApiModelProperty(value = "Cancel Date")
   public OffsetDateTime getCancellationDate() {
     return cancellationDate;
   }
@@ -679,12 +700,13 @@ public class Subscription {
         Objects.equals(this.currency, subscription.currency) &&
         Objects.equals(this.user, subscription.user) &&
         Objects.equals(this.defaultPaymentDescription, subscription.defaultPaymentDescription) &&
+        Objects.equals(this.cancellationRequestDate, subscription.cancellationRequestDate) &&
         Objects.equals(this.cancellationDate, subscription.cancellationDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(products, nextInvoiceAmount, nextInvoiceBillingDate, upcomingInvoiceItems, upcomingInvoiceDiscounts, upcomingInvoice, subscriptionId, name, status, currency, user, defaultPaymentDescription, cancellationDate);
+    return Objects.hash(products, nextInvoiceAmount, nextInvoiceBillingDate, upcomingInvoiceItems, upcomingInvoiceDiscounts, upcomingInvoice, subscriptionId, name, status, currency, user, defaultPaymentDescription, cancellationRequestDate, cancellationDate);
   }
 
 
@@ -705,6 +727,7 @@ public class Subscription {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    defaultPaymentDescription: ").append(toIndentedString(defaultPaymentDescription)).append("\n");
+    sb.append("    cancellationRequestDate: ").append(toIndentedString(cancellationRequestDate)).append("\n");
     sb.append("    cancellationDate: ").append(toIndentedString(cancellationDate)).append("\n");
     sb.append("}");
     return sb.toString();
