@@ -28,7 +28,7 @@ import java.io.IOException;
  * User Event Info
  */
 @ApiModel(description = "User Event Info")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-02T11:19:45.951Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-02T15:12:47.675Z")
 public class UserEventInfo {
   @SerializedName("UserId")
   private Integer userId = null;
