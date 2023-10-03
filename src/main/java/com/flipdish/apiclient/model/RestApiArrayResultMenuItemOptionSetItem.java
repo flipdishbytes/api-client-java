@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-03T09:03:01.554Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-03T15:41:38.096Z")
 public class RestApiArrayResultMenuItemOptionSetItem {
   @SerializedName("Data")
   private List<MenuItemOptionSetItem> data = new ArrayList<MenuItemOptionSetItem>();
