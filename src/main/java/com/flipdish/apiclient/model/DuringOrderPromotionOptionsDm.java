@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * DuringOrderPromotionOptionsDm
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-05T10:05:43.253Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-11T08:39:29.925Z")
 public class DuringOrderPromotionOptionsDm {
   /**
    * Gets or Sets duringOrderPromotionType

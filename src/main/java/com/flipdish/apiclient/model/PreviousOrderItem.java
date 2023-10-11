@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * PreviousOrderItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-05T10:05:43.253Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-11T08:39:29.925Z")
 public class PreviousOrderItem {
   @SerializedName("MenuSectionDisplayOrder")
   private Integer menuSectionDisplayOrder = null;

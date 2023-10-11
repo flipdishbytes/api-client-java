@@ -17,7 +17,9 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BusinessHoursOverrideBase;
 import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import com.flipdish.apiclient.model.Coordinates;
+import com.flipdish.apiclient.model.LeadTime;
 import org.threeten.bp.OffsetDateTime;
+import com.flipdish.apiclient.model.OrderLeadTimes;
 import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
@@ -391,6 +393,22 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getStoreLeadTimesTest() throws ApiException {
+        Integer storeId = null;
+        OrderLeadTimes response = api.getStoreLeadTimes(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getStoreNetSalesTest() throws ApiException {
         String appId = null;
         List<Integer> storeId = null;
@@ -520,6 +538,23 @@ public class StoresApiTest {
         String deliveryType = null;
         Boolean enabled = null;
         RestApiArrayResultRestApiDefaultResponse response = api.setPreOrdeEnabled(storeId, deliveryType, enabled);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setStoreLeadTimesTest() throws ApiException {
+        Integer storeId = null;
+        LeadTime leadTime = null;
+        OrderLeadTimes response = api.setStoreLeadTimes(storeId, leadTime);
 
         // TODO: test validations
     }
