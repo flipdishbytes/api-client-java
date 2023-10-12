@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for updating a LocationArea
  */
 @ApiModel(description = "Input model for updating a LocationArea")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-11T08:39:29.925Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-12T09:32:00.967Z")
 public class UpdateLocationArea {
   @SerializedName("LocationAreaId")
   private Integer locationAreaId = null;

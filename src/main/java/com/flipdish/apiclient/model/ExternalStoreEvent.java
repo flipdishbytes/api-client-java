@@ -34,7 +34,7 @@ import org.threeten.bp.OffsetDateTime;
  * External event
  */
 @ApiModel(description = "External event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-11T08:39:29.925Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-12T09:32:00.967Z")
 public class ExternalStoreEvent {
   @SerializedName("EventName")
   private String eventName = null;
