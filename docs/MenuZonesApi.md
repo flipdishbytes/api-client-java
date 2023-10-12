@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addMenuZone**](MenuZonesApi.md#addMenuZone) | **POST** /api/v1.0/menus/{menuId}/zones | 
-[**deleteMenuZone**](MenuZonesApi.md#deleteMenuZone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-[**flipMenuZones**](MenuZonesApi.md#flipMenuZones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | 
-[**getMenuZone**](MenuZonesApi.md#getMenuZone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-[**getMenuZonesForMenu**](MenuZonesApi.md#getMenuZonesForMenu) | **GET** /api/v1.0/menus/{menuId}/zones | 
-[**setMenuSectionMenuZone**](MenuZonesApi.md#setMenuSectionMenuZone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | 
-[**setMenuSectionMenuZone_0**](MenuZonesApi.md#setMenuSectionMenuZone_0) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | 
-[**setMenuZoneName**](MenuZonesApi.md#setMenuZoneName) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | 
-[**updateMenuZone**](MenuZonesApi.md#updateMenuZone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-[**uploadMenuZoneImage**](MenuZonesApi.md#uploadMenuZoneImage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
-[**uploadMenuZoneImage_0**](MenuZonesApi.md#uploadMenuZoneImage_0) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
+[**addMenuZone**](MenuZonesApi.md#addMenuZone) | **POST** /api/v1.0/menus/{menuId}/zones | Adds a new menu zone to a menu.
+[**deleteMenuZone**](MenuZonesApi.md#deleteMenuZone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Deletes a menu zone.
+[**deleteMenuZoneImage**](MenuZonesApi.md#deleteMenuZoneImage) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Deletes a menu zone image.
+[**flipMenuZones**](MenuZonesApi.md#flipMenuZones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | Flips the order of two menu zones.
+[**getMenuZone**](MenuZonesApi.md#getMenuZone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Gets a specific menu zone for a given zone id
+[**getMenuZonesForMenuId**](MenuZonesApi.md#getMenuZonesForMenuId) | **GET** /api/v1.0/menus/{menuId}/zones | Gets all the menu zones for a menu
+[**setMenuSectionMenuZone**](MenuZonesApi.md#setMenuSectionMenuZone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Sets a zone to a menu section.
+[**setMenuZoneDescription**](MenuZonesApi.md#setMenuZoneDescription) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | Sets the description of a menu zone.
+[**setMenuZoneName**](MenuZonesApi.md#setMenuZoneName) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
+[**updateMenuZone**](MenuZonesApi.md#updateMenuZone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
+[**uploadMenuZoneImage**](MenuZonesApi.md#uploadMenuZoneImage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
 
 
 <a name="addMenuZone"></a>
 # **addMenuZone**
 > RestApiResultMenuZone addMenuZone(menuId, menuZone)
 
-
+Adds a new menu zone to a menu.
 
 ### Example
 ```java
@@ -39,8 +39,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
-MenuZone menuZone = new MenuZone(); // MenuZone | 
+Integer menuId = 56; // Integer | The menu id.
+MenuZone menuZone = new MenuZone(); // MenuZone | The object containing the new zone. This is optional and not supplying it will generate an empty default zone.
 try {
     RestApiResultMenuZone result = apiInstance.addMenuZone(menuId, menuZone);
     System.out.println(result);
@@ -54,8 +54,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuZone** | [**MenuZone**](MenuZone.md)|  |
+ **menuId** | **Integer**| The menu id. |
+ **menuZone** | [**MenuZone**](MenuZone.md)| The object containing the new zone. This is optional and not supplying it will generate an empty default zone. |
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **deleteMenuZone**
 > deleteMenuZone(menuZoneId, menuId)
 
-
+Deletes a menu zone.
 
 ### Example
 ```java
@@ -92,7 +92,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
+Integer menuZoneId = 56; // Integer | The menu zone id.
 String menuId = "menuId_example"; // String | 
 try {
     apiInstance.deleteMenuZone(menuZoneId, menuId);
@@ -106,7 +106,59 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
+ **menuZoneId** | **Integer**| The menu zone id. |
+ **menuId** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="deleteMenuZoneImage"></a>
+# **deleteMenuZoneImage**
+> deleteMenuZoneImage(menuZoneId, menuId)
+
+Deletes a menu zone image.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuZonesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuZoneId = 56; // Integer | The zone Id/
+String menuId = "menuId_example"; // String | 
+try {
+    apiInstance.deleteMenuZoneImage(menuZoneId, menuId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuZonesApi#deleteMenuZoneImage");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuZoneId** | **Integer**| The zone Id/ |
  **menuId** | **String**|  |
 
 ### Return type
@@ -126,7 +178,7 @@ null (empty response body)
 # **flipMenuZones**
 > flipMenuZones(menuZoneId, menuZoneI2, menuId)
 
-
+Flips the order of two menu zones.
 
 ### Example
 ```java
@@ -144,8 +196,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-Integer menuZoneI2 = 56; // Integer | 
+Integer menuZoneId = 56; // Integer | Source.
+Integer menuZoneI2 = 56; // Integer | Destination.
 String menuId = "menuId_example"; // String | 
 try {
     apiInstance.flipMenuZones(menuZoneId, menuZoneI2, menuId);
@@ -159,8 +211,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **menuZoneI2** | **Integer**|  |
+ **menuZoneId** | **Integer**| Source. |
+ **menuZoneI2** | **Integer**| Destination. |
  **menuId** | **String**|  |
 
 ### Return type
@@ -180,7 +232,7 @@ null (empty response body)
 # **getMenuZone**
 > RestApiResultMenuZone getMenuZone(menuId, menuZoneId)
 
-
+Gets a specific menu zone for a given zone id
 
 ### Example
 ```java
@@ -198,8 +250,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
-Integer menuZoneId = 56; // Integer | 
+Integer menuId = 56; // Integer | The menu id.
+Integer menuZoneId = 56; // Integer | The menu zone id.
 try {
     RestApiResultMenuZone result = apiInstance.getMenuZone(menuId, menuZoneId);
     System.out.println(result);
@@ -213,8 +265,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuZoneId** | **Integer**|  |
+ **menuId** | **Integer**| The menu id. |
+ **menuZoneId** | **Integer**| The menu zone id. |
 
 ### Return type
 
@@ -229,11 +281,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getMenuZonesForMenu"></a>
-# **getMenuZonesForMenu**
-> RestApiArrayResultMenuZone getMenuZonesForMenu(menuId)
+<a name="getMenuZonesForMenuId"></a>
+# **getMenuZonesForMenuId**
+> RestApiArrayResultMenuZone getMenuZonesForMenuId(menuId)
 
-
+Gets all the menu zones for a menu
 
 ### Example
 ```java
@@ -251,12 +303,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | The menu id to load zones for
 try {
-    RestApiArrayResultMenuZone result = apiInstance.getMenuZonesForMenu(menuId);
+    RestApiArrayResultMenuZone result = apiInstance.getMenuZonesForMenuId(menuId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MenuZonesApi#getMenuZonesForMenu");
+    System.err.println("Exception when calling MenuZonesApi#getMenuZonesForMenuId");
     e.printStackTrace();
 }
 ```
@@ -265,7 +317,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| The menu id to load zones for |
 
 ### Return type
 
@@ -282,9 +334,9 @@ Name | Type | Description  | Notes
 
 <a name="setMenuSectionMenuZone"></a>
 # **setMenuSectionMenuZone**
-> setMenuSectionMenuZone(menuZoneId, description, menuId)
+> setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId)
 
-
+Sets a zone to a menu section.
 
 ### Example
 ```java
@@ -302,11 +354,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-String description = "description_example"; // String | 
+Integer menuZoneId = 56; // Integer | The menu id.
+Integer menuSectionId = 56; // Integer | The menu section id.
 String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.setMenuSectionMenuZone(menuZoneId, description, menuId);
+    apiInstance.setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#setMenuSectionMenuZone");
     e.printStackTrace();
@@ -317,62 +369,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **description** | **String**|  |
- **menuId** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="setMenuSectionMenuZone_0"></a>
-# **setMenuSectionMenuZone_0**
-> setMenuSectionMenuZone_0(menuZoneId, menuSectionId, menuId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenuZonesApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-String menuId = "menuId_example"; // String | 
-try {
-    apiInstance.setMenuSectionMenuZone_0(menuZoneId, menuSectionId, menuId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenuZonesApi#setMenuSectionMenuZone_0");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
+ **menuZoneId** | **Integer**| The menu id. |
+ **menuSectionId** | **Integer**| The menu section id. |
  **menuId** | **String**|  |
 
 ### Return type
@@ -388,11 +386,11 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setMenuZoneName"></a>
-# **setMenuZoneName**
-> setMenuZoneName(menuZoneId, menuZoneName, menuId)
+<a name="setMenuZoneDescription"></a>
+# **setMenuZoneDescription**
+> setMenuZoneDescription(menuZoneId, description, menuId)
 
-
+Sets the description of a menu zone.
 
 ### Example
 ```java
@@ -410,8 +408,62 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-String menuZoneName = "menuZoneName_example"; // String | 
+Integer menuZoneId = 56; // Integer | The zone id.
+String description = "description_example"; // String | The new description. Add as a raw string in the request, without any JSON wrapper.
+String menuId = "menuId_example"; // String | 
+try {
+    apiInstance.setMenuZoneDescription(menuZoneId, description, menuId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenuZonesApi#setMenuZoneDescription");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuZoneId** | **Integer**| The zone id. |
+ **description** | **String**| The new description. Add as a raw string in the request, without any JSON wrapper. |
+ **menuId** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setMenuZoneName"></a>
+# **setMenuZoneName**
+> setMenuZoneName(menuZoneId, menuZoneName, menuId)
+
+Sets the name of a menu zone.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenuZonesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuZoneId = 56; // Integer | The menu zone id.
+String menuZoneName = "menuZoneName_example"; // String | The new name.
 String menuId = "menuId_example"; // String | 
 try {
     apiInstance.setMenuZoneName(menuZoneId, menuZoneName, menuId);
@@ -425,8 +477,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **menuZoneName** | **String**|  |
+ **menuZoneId** | **Integer**| The menu zone id. |
+ **menuZoneName** | **String**| The new name. |
  **menuId** | **String**|  |
 
 ### Return type
@@ -446,7 +498,7 @@ null (empty response body)
 # **updateMenuZone**
 > updateMenuZone(menuId, menuZoneId, menuZone)
 
-
+Updates a menu zone.
 
 ### Example
 ```java
@@ -464,9 +516,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
-Integer menuZoneId = 56; // Integer | 
-MenuZone menuZone = new MenuZone(); // MenuZone | 
+Integer menuId = 56; // Integer | The menu id.
+Integer menuZoneId = 56; // Integer | The menu zone id.
+MenuZone menuZone = new MenuZone(); // MenuZone | The object containing the updated values.
 try {
     apiInstance.updateMenuZone(menuId, menuZoneId, menuZone);
 } catch (ApiException e) {
@@ -479,9 +531,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuZoneId** | **Integer**|  |
- **menuZone** | [**MenuZone**](MenuZone.md)|  |
+ **menuId** | **Integer**| The menu id. |
+ **menuZoneId** | **Integer**| The menu zone id. |
+ **menuZone** | [**MenuZone**](MenuZone.md)| The object containing the updated values. |
 
 ### Return type
 
@@ -500,7 +552,7 @@ null (empty response body)
 # **uploadMenuZoneImage**
 > uploadMenuZoneImage(menuZoneId, file, menuId)
 
-
+Uploads an image for a menu zone.
 
 ### Example
 ```java
@@ -518,8 +570,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-List<HttpPostedFileBase> file = Arrays.asList(new HttpPostedFileBase()); // List<HttpPostedFileBase> | 
+Integer menuZoneId = 56; // Integer | The zone id.
+List<HttpPostedFileBase> file = Arrays.asList(new HttpPostedFileBase()); // List<HttpPostedFileBase> | The file to upload.
 String menuId = "menuId_example"; // String | 
 try {
     apiInstance.uploadMenuZoneImage(menuZoneId, file, menuId);
@@ -533,8 +585,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)|  |
+ **menuZoneId** | **Integer**| The zone id. |
+ **file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)| The file to upload. |
  **menuId** | **String**|  |
 
 ### Return type
@@ -548,57 +600,5 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="uploadMenuZoneImage_0"></a>
-# **uploadMenuZoneImage_0**
-> uploadMenuZoneImage_0(menuZoneId, menuId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenuZonesApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuZoneId = 56; // Integer | 
-String menuId = "menuId_example"; // String | 
-try {
-    apiInstance.uploadMenuZoneImage_0(menuZoneId, menuId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenuZonesApi#uploadMenuZoneImage_0");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuZoneId** | **Integer**|  |
- **menuId** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 

@@ -39,7 +39,7 @@ public class MenuZonesApiTest {
 
     
     /**
-     * 
+     * Adds a new menu zone to a menu.
      *
      * 
      *
@@ -56,7 +56,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * 
+     * Deletes a menu zone.
      *
      * 
      *
@@ -73,7 +73,24 @@ public class MenuZonesApiTest {
     }
     
     /**
+     * Deletes a menu zone image.
+     *
      * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteMenuZoneImageTest() throws ApiException {
+        Integer menuZoneId = null;
+        String menuId = null;
+        api.deleteMenuZoneImage(menuZoneId, menuId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Flips the order of two menu zones.
      *
      * 
      *
@@ -91,7 +108,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * 
+     * Gets a specific menu zone for a given zone id
      *
      * 
      *
@@ -108,7 +125,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * 
+     * Gets all the menu zones for a menu
      *
      * 
      *
@@ -116,15 +133,15 @@ public class MenuZonesApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getMenuZonesForMenuTest() throws ApiException {
+    public void getMenuZonesForMenuIdTest() throws ApiException {
         Integer menuId = null;
-        RestApiArrayResultMenuZone response = api.getMenuZonesForMenu(menuId);
+        RestApiArrayResultMenuZone response = api.getMenuZonesForMenuId(menuId);
 
         // TODO: test validations
     }
     
     /**
-     * 
+     * Sets a zone to a menu section.
      *
      * 
      *
@@ -134,15 +151,15 @@ public class MenuZonesApiTest {
     @Test
     public void setMenuSectionMenuZoneTest() throws ApiException {
         Integer menuZoneId = null;
-        String description = null;
+        Integer menuSectionId = null;
         String menuId = null;
-        api.setMenuSectionMenuZone(menuZoneId, description, menuId);
+        api.setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
 
         // TODO: test validations
     }
     
     /**
-     * 
+     * Sets the description of a menu zone.
      *
      * 
      *
@@ -150,17 +167,17 @@ public class MenuZonesApiTest {
      *          if the Api call fails
      */
     @Test
-    public void setMenuSectionMenuZone_0Test() throws ApiException {
+    public void setMenuZoneDescriptionTest() throws ApiException {
         Integer menuZoneId = null;
-        Integer menuSectionId = null;
+        String description = null;
         String menuId = null;
-        api.setMenuSectionMenuZone_0(menuZoneId, menuSectionId, menuId);
+        api.setMenuZoneDescription(menuZoneId, description, menuId);
 
         // TODO: test validations
     }
     
     /**
-     * 
+     * Sets the name of a menu zone.
      *
      * 
      *
@@ -178,7 +195,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * 
+     * Updates a menu zone.
      *
      * 
      *
@@ -196,7 +213,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * 
+     * Uploads an image for a menu zone.
      *
      * 
      *
@@ -209,23 +226,6 @@ public class MenuZonesApiTest {
         List<HttpPostedFileBase> file = null;
         String menuId = null;
         api.uploadMenuZoneImage(menuZoneId, file, menuId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void uploadMenuZoneImage_0Test() throws ApiException {
-        Integer menuZoneId = null;
-        String menuId = null;
-        api.uploadMenuZoneImage_0(menuZoneId, menuId);
 
         // TODO: test validations
     }
