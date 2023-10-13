@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-12T11:45:51.606Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-13T09:31:51.916Z")
 public class OrderDeliveryTrackingStatusUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -41,6 +41,12 @@ public class OrderDeliveryTrackingStatusUpdatedEvent {
 
   @SerializedName("Order")
   private Order order = null;
+
+  @SerializedName("DeliveryIntegrationName")
+  private String deliveryIntegrationName = null;
+
+  @SerializedName("DeliveryErrorMessage")
+  private String deliveryErrorMessage = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -109,6 +115,42 @@ public class OrderDeliveryTrackingStatusUpdatedEvent {
 
   public void setOrder(Order order) {
     this.order = order;
+  }
+
+  public OrderDeliveryTrackingStatusUpdatedEvent deliveryIntegrationName(String deliveryIntegrationName) {
+    this.deliveryIntegrationName = deliveryIntegrationName;
+    return this;
+  }
+
+   /**
+   * Delivery integration name
+   * @return deliveryIntegrationName
+  **/
+  @ApiModelProperty(value = "Delivery integration name")
+  public String getDeliveryIntegrationName() {
+    return deliveryIntegrationName;
+  }
+
+  public void setDeliveryIntegrationName(String deliveryIntegrationName) {
+    this.deliveryIntegrationName = deliveryIntegrationName;
+  }
+
+  public OrderDeliveryTrackingStatusUpdatedEvent deliveryErrorMessage(String deliveryErrorMessage) {
+    this.deliveryErrorMessage = deliveryErrorMessage;
+    return this;
+  }
+
+   /**
+   * Delivery error message (optional)
+   * @return deliveryErrorMessage
+  **/
+  @ApiModelProperty(value = "Delivery error message (optional)")
+  public String getDeliveryErrorMessage() {
+    return deliveryErrorMessage;
+  }
+
+  public void setDeliveryErrorMessage(String deliveryErrorMessage) {
+    this.deliveryErrorMessage = deliveryErrorMessage;
   }
 
   public OrderDeliveryTrackingStatusUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -214,6 +256,8 @@ public class OrderDeliveryTrackingStatusUpdatedEvent {
     return Objects.equals(this.eventName, orderDeliveryTrackingStatusUpdatedEvent.eventName) &&
         Objects.equals(this.description, orderDeliveryTrackingStatusUpdatedEvent.description) &&
         Objects.equals(this.order, orderDeliveryTrackingStatusUpdatedEvent.order) &&
+        Objects.equals(this.deliveryIntegrationName, orderDeliveryTrackingStatusUpdatedEvent.deliveryIntegrationName) &&
+        Objects.equals(this.deliveryErrorMessage, orderDeliveryTrackingStatusUpdatedEvent.deliveryErrorMessage) &&
         Objects.equals(this.flipdishEventId, orderDeliveryTrackingStatusUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderDeliveryTrackingStatusUpdatedEvent.createTime) &&
         Objects.equals(this.position, orderDeliveryTrackingStatusUpdatedEvent.position) &&
@@ -223,7 +267,7 @@ public class OrderDeliveryTrackingStatusUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, order, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, order, deliveryIntegrationName, deliveryErrorMessage, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -235,6 +279,8 @@ public class OrderDeliveryTrackingStatusUpdatedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    sb.append("    deliveryIntegrationName: ").append(toIndentedString(deliveryIntegrationName)).append("\n");
+    sb.append("    deliveryErrorMessage: ").append(toIndentedString(deliveryErrorMessage)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

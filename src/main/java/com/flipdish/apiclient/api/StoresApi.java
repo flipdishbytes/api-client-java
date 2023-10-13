@@ -38,6 +38,7 @@ import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
 import com.flipdish.apiclient.model.RestApiArrayResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultRestApiDefaultResponse;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreDeliveryZoneFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -62,6 +63,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
+import com.flipdish.apiclient.model.StoreDeliveryZoneFeeConfig;
 import com.flipdish.apiclient.model.StoreFeeConfig;
 
 import java.lang.reflect.Type;
@@ -2247,6 +2249,129 @@ public class StoresApi {
         return call;
     }
     /**
+     * Build call for getStoreDeliveryFeeConfig
+     * @param storeId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getStoreDeliveryFeeConfigCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/feeConfig/deliveryZones"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getStoreDeliveryFeeConfigValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling getStoreDeliveryFeeConfig(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getStoreDeliveryFeeConfigCall(storeId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param storeId  (required)
+     * @return RestApiArrayResultStoreDeliveryZoneFeeConfig
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultStoreDeliveryZoneFeeConfig getStoreDeliveryFeeConfig(Integer storeId) throws ApiException {
+        ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig> resp = getStoreDeliveryFeeConfigWithHttpInfo(storeId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param storeId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultStoreDeliveryZoneFeeConfig&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultStoreDeliveryZoneFeeConfig> getStoreDeliveryFeeConfigWithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = getStoreDeliveryFeeConfigValidateBeforeCall(storeId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStoreDeliveryZoneFeeConfig>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param storeId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getStoreDeliveryFeeConfigAsync(Integer storeId, final ApiCallback<RestApiArrayResultStoreDeliveryZoneFeeConfig> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getStoreDeliveryFeeConfigValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultStoreDeliveryZoneFeeConfig>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getStoreFeeConfig
      * @param storeId  (required)
      * @param progressListener Progress listener
@@ -3430,6 +3555,134 @@ public class StoresApi {
         }
 
         com.squareup.okhttp.Call call = publishStoreValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for putStoreDeliveryFeeConfig
+     * @param storeId  (required)
+     * @param configs  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call putStoreDeliveryFeeConfigCall(Integer storeId, List<StoreDeliveryZoneFeeConfig> configs, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = configs;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/stores/{storeId}/feeConfig/deliveryZones"
+            .replaceAll("\\{" + "storeId" + "\\}", apiClient.escapeString(storeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call putStoreDeliveryFeeConfigValidateBeforeCall(Integer storeId, List<StoreDeliveryZoneFeeConfig> configs, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'storeId' is set
+        if (storeId == null) {
+            throw new ApiException("Missing the required parameter 'storeId' when calling putStoreDeliveryFeeConfig(Async)");
+        }
+        
+        // verify the required parameter 'configs' is set
+        if (configs == null) {
+            throw new ApiException("Missing the required parameter 'configs' when calling putStoreDeliveryFeeConfig(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = putStoreDeliveryFeeConfigCall(storeId, configs, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param storeId  (required)
+     * @param configs  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void putStoreDeliveryFeeConfig(Integer storeId, List<StoreDeliveryZoneFeeConfig> configs) throws ApiException {
+        putStoreDeliveryFeeConfigWithHttpInfo(storeId, configs);
+    }
+
+    /**
+     * 
+     * 
+     * @param storeId  (required)
+     * @param configs  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> putStoreDeliveryFeeConfigWithHttpInfo(Integer storeId, List<StoreDeliveryZoneFeeConfig> configs) throws ApiException {
+        com.squareup.okhttp.Call call = putStoreDeliveryFeeConfigValidateBeforeCall(storeId, configs, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param storeId  (required)
+     * @param configs  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call putStoreDeliveryFeeConfigAsync(Integer storeId, List<StoreDeliveryZoneFeeConfig> configs, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = putStoreDeliveryFeeConfigValidateBeforeCall(storeId, configs, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

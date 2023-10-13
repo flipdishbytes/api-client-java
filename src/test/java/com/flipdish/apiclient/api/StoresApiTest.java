@@ -25,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
 import com.flipdish.apiclient.model.RestApiArrayResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultRestApiDefaultResponse;
+import com.flipdish.apiclient.model.RestApiArrayResultStoreDeliveryZoneFeeConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreStatistics;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -49,6 +50,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
+import com.flipdish.apiclient.model.StoreDeliveryZoneFeeConfig;
 import com.flipdish.apiclient.model.StoreFeeConfig;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -358,6 +360,22 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getStoreDeliveryFeeConfigTest() throws ApiException {
+        Integer storeId = null;
+        RestApiArrayResultStoreDeliveryZoneFeeConfig response = api.getStoreDeliveryFeeConfig(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getStoreFeeConfigTest() throws ApiException {
         Integer storeId = null;
         StoreFeeConfig response = api.getStoreFeeConfig(storeId);
@@ -502,6 +520,23 @@ public class StoresApiTest {
     public void publishStoreTest() throws ApiException {
         Integer storeId = null;
         api.publishStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void putStoreDeliveryFeeConfigTest() throws ApiException {
+        Integer storeId = null;
+        List<StoreDeliveryZoneFeeConfig> configs = null;
+        api.putStoreDeliveryFeeConfig(storeId, configs);
 
         // TODO: test validations
     }

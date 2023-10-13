@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
 [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
 [**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | 
+[**getStoreDeliveryFeeConfig**](StoresApi.md#getStoreDeliveryFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 [**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | 
 [**getStoreLeadTimes**](StoresApi.md#getStoreLeadTimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | 
 [**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
 [**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+[**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -907,6 +909,57 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="getStoreDeliveryFeeConfig"></a>
+# **getStoreDeliveryFeeConfig**
+> RestApiArrayResultStoreDeliveryZoneFeeConfig getStoreDeliveryFeeConfig(storeId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | 
+try {
+    RestApiArrayResultStoreDeliveryZoneFeeConfig result = apiInstance.getStoreDeliveryFeeConfig(storeId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#getStoreDeliveryFeeConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**|  |
+
+### Return type
+
+[**RestApiArrayResultStoreDeliveryZoneFeeConfig**](RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getStoreFeeConfig"></a>
 # **getStoreFeeConfig**
 > StoreFeeConfig getStoreFeeConfig(storeId)
@@ -1389,6 +1442,58 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="putStoreDeliveryFeeConfig"></a>
+# **putStoreDeliveryFeeConfig**
+> putStoreDeliveryFeeConfig(storeId, configs)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | 
+List<StoreDeliveryZoneFeeConfig> configs = Arrays.asList(new StoreDeliveryZoneFeeConfig()); // List<StoreDeliveryZoneFeeConfig> | 
+try {
+    apiInstance.putStoreDeliveryFeeConfig(storeId, configs);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#putStoreDeliveryFeeConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**|  |
+ **configs** | [**List&lt;StoreDeliveryZoneFeeConfig&gt;**](StoreDeliveryZoneFeeConfig.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="setBusinessHours"></a>
