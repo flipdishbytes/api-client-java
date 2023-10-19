@@ -28,10 +28,13 @@ import java.io.IOException;
  * Percent discount details
  */
 @ApiModel(description = "Percent discount details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-18T10:28:07.876Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-19T07:31:02.879Z")
 public class PercentDiscountDetails {
   @SerializedName("PercentageDiscount")
   private Integer percentageDiscount = null;
+
+  @SerializedName("MaxDiscountAmount")
+  private Double maxDiscountAmount = null;
 
   public PercentDiscountDetails percentageDiscount(Integer percentageDiscount) {
     this.percentageDiscount = percentageDiscount;
@@ -51,6 +54,24 @@ public class PercentDiscountDetails {
     this.percentageDiscount = percentageDiscount;
   }
 
+  public PercentDiscountDetails maxDiscountAmount(Double maxDiscountAmount) {
+    this.maxDiscountAmount = maxDiscountAmount;
+    return this;
+  }
+
+   /**
+   * The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro).
+   * @return maxDiscountAmount
+  **/
+  @ApiModelProperty(value = "The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro).")
+  public Double getMaxDiscountAmount() {
+    return maxDiscountAmount;
+  }
+
+  public void setMaxDiscountAmount(Double maxDiscountAmount) {
+    this.maxDiscountAmount = maxDiscountAmount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +82,13 @@ public class PercentDiscountDetails {
       return false;
     }
     PercentDiscountDetails percentDiscountDetails = (PercentDiscountDetails) o;
-    return Objects.equals(this.percentageDiscount, percentDiscountDetails.percentageDiscount);
+    return Objects.equals(this.percentageDiscount, percentDiscountDetails.percentageDiscount) &&
+        Objects.equals(this.maxDiscountAmount, percentDiscountDetails.maxDiscountAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(percentageDiscount);
+    return Objects.hash(percentageDiscount, maxDiscountAmount);
   }
 
 
@@ -76,6 +98,7 @@ public class PercentDiscountDetails {
     sb.append("class PercentDiscountDetails {\n");
     
     sb.append("    percentageDiscount: ").append(toIndentedString(percentageDiscount)).append("\n");
+    sb.append("    maxDiscountAmount: ").append(toIndentedString(maxDiscountAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
