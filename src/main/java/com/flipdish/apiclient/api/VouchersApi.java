@@ -629,12 +629,13 @@ public class VouchersApi {
      * @param percentValue  (optional)
      * @param lumpValue  (optional)
      * @param freeItemId  (optional)
+     * @param maxDiscountAmount  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateVoucherCall(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call updateVoucherCall(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, Double maxDiscountAmount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = voucher;
 
         // create path and map variables
@@ -651,6 +652,8 @@ public class VouchersApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("lumpValue", lumpValue));
         if (freeItemId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("freeItemId", freeItemId));
+        if (maxDiscountAmount != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("maxDiscountAmount", maxDiscountAmount));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -685,7 +688,7 @@ public class VouchersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateVoucherValidateBeforeCall(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateVoucherValidateBeforeCall(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, Double maxDiscountAmount, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'voucherId' is set
         if (voucherId == null) {
@@ -698,7 +701,7 @@ public class VouchersApi {
         }
         
 
-        com.squareup.okhttp.Call call = updateVoucherCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateVoucherCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount, progressListener, progressRequestListener);
         return call;
 
     }
@@ -712,11 +715,12 @@ public class VouchersApi {
      * @param percentValue  (optional)
      * @param lumpValue  (optional)
      * @param freeItemId  (optional)
+     * @param maxDiscountAmount  (optional)
      * @return RestApiResultVoucherWithStats
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultVoucherWithStats updateVoucher(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId) throws ApiException {
-        ApiResponse<RestApiResultVoucherWithStats> resp = updateVoucherWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
+    public RestApiResultVoucherWithStats updateVoucher(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, Double maxDiscountAmount) throws ApiException {
+        ApiResponse<RestApiResultVoucherWithStats> resp = updateVoucherWithHttpInfo(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
         return resp.getData();
     }
 
@@ -729,11 +733,12 @@ public class VouchersApi {
      * @param percentValue  (optional)
      * @param lumpValue  (optional)
      * @param freeItemId  (optional)
+     * @param maxDiscountAmount  (optional)
      * @return ApiResponse&lt;RestApiResultVoucherWithStats&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultVoucherWithStats> updateVoucherWithHttpInfo(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId) throws ApiException {
-        com.squareup.okhttp.Call call = updateVoucherValidateBeforeCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, null, null);
+    public ApiResponse<RestApiResultVoucherWithStats> updateVoucherWithHttpInfo(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, Double maxDiscountAmount) throws ApiException {
+        com.squareup.okhttp.Call call = updateVoucherValidateBeforeCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultVoucherWithStats>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -747,11 +752,12 @@ public class VouchersApi {
      * @param percentValue  (optional)
      * @param lumpValue  (optional)
      * @param freeItemId  (optional)
+     * @param maxDiscountAmount  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateVoucherAsync(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, final ApiCallback<RestApiResultVoucherWithStats> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateVoucherAsync(Integer voucherId, VoucherBase voucher, List<Integer> storeId, Integer percentValue, Double lumpValue, Integer freeItemId, Double maxDiscountAmount, final ApiCallback<RestApiResultVoucherWithStats> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -772,7 +778,7 @@ public class VouchersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateVoucherValidateBeforeCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateVoucherValidateBeforeCall(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultVoucherWithStats>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

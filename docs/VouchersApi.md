@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="updateVoucher"></a>
 # **updateVoucher**
-> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId)
+> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount)
 
 
 
@@ -263,8 +263,9 @@ List<Integer> storeId = Arrays.asList(56); // List<Integer> |
 Integer percentValue = 56; // Integer | 
 Double lumpValue = 3.4D; // Double | 
 Integer freeItemId = 56; // Integer | 
+Double maxDiscountAmount = 3.4D; // Double | 
 try {
-    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
+    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VouchersApi#updateVoucher");
@@ -282,6 +283,7 @@ Name | Type | Description  | Notes
  **percentValue** | **Integer**|  | [optional]
  **lumpValue** | **Double**|  | [optional]
  **freeItemId** | **Integer**|  | [optional]
+ **maxDiscountAmount** | **Double**|  | [optional]
 
 ### Return type
 

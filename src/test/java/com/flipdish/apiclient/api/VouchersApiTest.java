@@ -129,7 +129,8 @@ public class VouchersApiTest {
         Integer percentValue = null;
         Double lumpValue = null;
         Integer freeItemId = null;
-        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId);
+        Double maxDiscountAmount = null;
+        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
 
         // TODO: test validations
     }
