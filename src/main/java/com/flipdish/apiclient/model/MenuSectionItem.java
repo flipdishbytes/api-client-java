@@ -34,7 +34,7 @@ import java.util.UUID;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-20T07:38:47.310Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:26:01.206Z")
 public class MenuSectionItem {
   @SerializedName("ActualPrice")
   private Double actualPrice = null;
@@ -56,6 +56,9 @@ public class MenuSectionItem {
 
   @SerializedName("TaxValue")
   private Double taxValue = null;
+
+  @SerializedName("ExcludeFromVoucherDiscounting")
+  private Boolean excludeFromVoucherDiscounting = null;
 
   @SerializedName("Metadata")
   private List<CreateMetadata> metadata = null;
@@ -343,6 +346,24 @@ public class MenuSectionItem {
     this.taxValue = taxValue;
   }
 
+  public MenuSectionItem excludeFromVoucherDiscounting(Boolean excludeFromVoucherDiscounting) {
+    this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
+    return this;
+  }
+
+   /**
+   * If true, the item is excluded from voucher discount calculations
+   * @return excludeFromVoucherDiscounting
+  **/
+  @ApiModelProperty(value = "If true, the item is excluded from voucher discount calculations")
+  public Boolean isExcludeFromVoucherDiscounting() {
+    return excludeFromVoucherDiscounting;
+  }
+
+  public void setExcludeFromVoucherDiscounting(Boolean excludeFromVoucherDiscounting) {
+    this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
+  }
+
   public MenuSectionItem metadata(List<CreateMetadata> metadata) {
     this.metadata = metadata;
     return this;
@@ -620,6 +641,7 @@ public class MenuSectionItem {
         Objects.equals(this.taxRateName, menuSectionItem.taxRateName) &&
         Objects.equals(this.taxRateId, menuSectionItem.taxRateId) &&
         Objects.equals(this.taxValue, menuSectionItem.taxValue) &&
+        Objects.equals(this.excludeFromVoucherDiscounting, menuSectionItem.excludeFromVoucherDiscounting) &&
         Objects.equals(this.metadata, menuSectionItem.metadata) &&
         Objects.equals(this.catalogItemId, menuSectionItem.catalogItemId) &&
         Objects.equals(this.name, menuSectionItem.name) &&
@@ -638,7 +660,7 @@ public class MenuSectionItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, metadata, catalogItemId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId);
+    return Objects.hash(actualPrice, menuItemOptionSets, dailySpecialHours, publicId, taxRateName, taxRateId, taxValue, excludeFromVoucherDiscounting, metadata, catalogItemId, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId);
   }
 
 
@@ -654,6 +676,7 @@ public class MenuSectionItem {
     sb.append("    taxRateName: ").append(toIndentedString(taxRateName)).append("\n");
     sb.append("    taxRateId: ").append(toIndentedString(taxRateId)).append("\n");
     sb.append("    taxValue: ").append(toIndentedString(taxValue)).append("\n");
+    sb.append("    excludeFromVoucherDiscounting: ").append(toIndentedString(excludeFromVoucherDiscounting)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    catalogItemId: ").append(toIndentedString(catalogItemId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
