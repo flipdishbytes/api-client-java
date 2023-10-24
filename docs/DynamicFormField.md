@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **mapping** | **Map&lt;String, String&gt;** |  |  [optional]
 **modifiers** | **List&lt;String&gt;** |  |  [optional]
 **value** | **Object** |  |  [optional]
+**scopes** | **String** |  |  [optional]
 
 
 

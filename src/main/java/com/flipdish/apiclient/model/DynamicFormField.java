@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * DynamicFormField
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-23T09:26:01.206Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
 public class DynamicFormField {
   @SerializedName("Identifier")
   private String identifier = null;
@@ -54,6 +54,9 @@ public class DynamicFormField {
 
   @SerializedName("Value")
   private Object value = null;
+
+  @SerializedName("Scopes")
+  private String scopes = null;
 
   public DynamicFormField identifier(String identifier) {
     this.identifier = identifier;
@@ -197,6 +200,24 @@ public class DynamicFormField {
     this.value = value;
   }
 
+  public DynamicFormField scopes(String scopes) {
+    this.scopes = scopes;
+    return this;
+  }
+
+   /**
+   * Get scopes
+   * @return scopes
+  **/
+  @ApiModelProperty(value = "")
+  public String getScopes() {
+    return scopes;
+  }
+
+  public void setScopes(String scopes) {
+    this.scopes = scopes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -213,12 +234,13 @@ public class DynamicFormField {
         Objects.equals(this.rules, dynamicFormField.rules) &&
         Objects.equals(this.mapping, dynamicFormField.mapping) &&
         Objects.equals(this.modifiers, dynamicFormField.modifiers) &&
-        Objects.equals(this.value, dynamicFormField.value);
+        Objects.equals(this.value, dynamicFormField.value) &&
+        Objects.equals(this.scopes, dynamicFormField.scopes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifier, label, placeholder, rules, mapping, modifiers, value);
+    return Objects.hash(identifier, label, placeholder, rules, mapping, modifiers, value, scopes);
   }
 
 
@@ -234,6 +256,7 @@ public class DynamicFormField {
     sb.append("    mapping: ").append(toIndentedString(mapping)).append("\n");
     sb.append("    modifiers: ").append(toIndentedString(modifiers)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    scopes: ").append(toIndentedString(scopes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
