@@ -28,13 +28,16 @@ import java.io.IOException;
  * App lookup model
  */
 @ApiModel(description = "App lookup model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
 public class AppLookup {
   @SerializedName("AppId")
   private String appId = null;
 
   @SerializedName("OpportunityId")
   private String opportunityId = null;
+
+  @SerializedName("AccountId")
+  private String accountId = null;
 
   public AppLookup appId(String appId) {
     this.appId = appId;
@@ -60,16 +63,34 @@ public class AppLookup {
   }
 
    /**
-   * Sales force opportunity id
+   * Salesforce opportunity id
    * @return opportunityId
   **/
-  @ApiModelProperty(value = "Sales force opportunity id")
+  @ApiModelProperty(value = "Salesforce opportunity id")
   public String getOpportunityId() {
     return opportunityId;
   }
 
   public void setOpportunityId(String opportunityId) {
     this.opportunityId = opportunityId;
+  }
+
+  public AppLookup accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Salesforce account id
+   * @return accountId
+  **/
+  @ApiModelProperty(value = "Salesforce account id")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
   }
 
 
@@ -83,12 +104,13 @@ public class AppLookup {
     }
     AppLookup appLookup = (AppLookup) o;
     return Objects.equals(this.appId, appLookup.appId) &&
-        Objects.equals(this.opportunityId, appLookup.opportunityId);
+        Objects.equals(this.opportunityId, appLookup.opportunityId) &&
+        Objects.equals(this.accountId, appLookup.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, opportunityId);
+    return Objects.hash(appId, opportunityId, accountId);
   }
 
 
@@ -99,6 +121,7 @@ public class AppLookup {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

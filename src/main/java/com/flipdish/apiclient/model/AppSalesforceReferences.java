@@ -28,10 +28,13 @@ import java.io.IOException;
  * Whitelabel salesforce references
  */
 @ApiModel(description = "Whitelabel salesforce references")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
 public class AppSalesforceReferences {
   @SerializedName("OpportunityId")
   private String opportunityId = null;
+
+  @SerializedName("AccountId")
+  private String accountId = null;
 
   public AppSalesforceReferences opportunityId(String opportunityId) {
     this.opportunityId = opportunityId;
@@ -51,6 +54,24 @@ public class AppSalesforceReferences {
     this.opportunityId = opportunityId;
   }
 
+  public AppSalesforceReferences accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Salesforce account id
+   * @return accountId
+  **/
+  @ApiModelProperty(value = "Salesforce account id")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +82,13 @@ public class AppSalesforceReferences {
       return false;
     }
     AppSalesforceReferences appSalesforceReferences = (AppSalesforceReferences) o;
-    return Objects.equals(this.opportunityId, appSalesforceReferences.opportunityId);
+    return Objects.equals(this.opportunityId, appSalesforceReferences.opportunityId) &&
+        Objects.equals(this.accountId, appSalesforceReferences.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(opportunityId);
+    return Objects.hash(opportunityId, accountId);
   }
 
 
@@ -76,6 +98,7 @@ public class AppSalesforceReferences {
     sb.append("class AppSalesforceReferences {\n");
     
     sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

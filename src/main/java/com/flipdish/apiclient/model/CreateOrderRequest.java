@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * CreateOrderRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
 public class CreateOrderRequest {
   @SerializedName("LegacyOrderDm")
   private OrderDm legacyOrderDm = null;

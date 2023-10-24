@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Application created event
  */
 @ApiModel(description = "Application created event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
 public class AppCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -48,8 +48,8 @@ public class AppCreatedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
 
-  @SerializedName("OpportunityId")
-  private String opportunityId = null;
+  @SerializedName("AccountId")
+  private String accountId = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -156,22 +156,22 @@ public class AppCreatedEvent {
     this.user = user;
   }
 
-  public AppCreatedEvent opportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
+  public AppCreatedEvent accountId(String accountId) {
+    this.accountId = accountId;
     return this;
   }
 
    /**
-   * SalesForce Opportunity Id
-   * @return opportunityId
+   * Salesforce Account Id
+   * @return accountId
   **/
-  @ApiModelProperty(value = "SalesForce Opportunity Id")
-  public String getOpportunityId() {
-    return opportunityId;
+  @ApiModelProperty(value = "Salesforce Account Id")
+  public String getAccountId() {
+    return accountId;
   }
 
-  public void setOpportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
   }
 
   public AppCreatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -279,7 +279,7 @@ public class AppCreatedEvent {
         Objects.equals(this.appName, appCreatedEvent.appName) &&
         Objects.equals(this.countryId, appCreatedEvent.countryId) &&
         Objects.equals(this.user, appCreatedEvent.user) &&
-        Objects.equals(this.opportunityId, appCreatedEvent.opportunityId) &&
+        Objects.equals(this.accountId, appCreatedEvent.accountId) &&
         Objects.equals(this.flipdishEventId, appCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appCreatedEvent.createTime) &&
         Objects.equals(this.position, appCreatedEvent.position) &&
@@ -289,7 +289,7 @@ public class AppCreatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, appName, countryId, user, opportunityId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, appName, countryId, user, accountId, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -303,7 +303,7 @@ public class AppCreatedEvent {
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

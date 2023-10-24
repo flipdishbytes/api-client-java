@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **appName** | **String** | App Name |  [optional]
 **countryId** | **String** | Country Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User information |  [optional]
-**opportunityId** | **String** | SalesForce Opportunity Id |  [optional]
+**accountId** | **String** | Salesforce Account Id |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
 **position** | **Integer** | Position |  [optional]

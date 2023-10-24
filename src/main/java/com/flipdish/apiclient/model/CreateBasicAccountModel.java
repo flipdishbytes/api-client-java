@@ -28,7 +28,7 @@ import java.io.IOException;
  * Basic attributes for creating an account
  */
 @ApiModel(description = "Basic attributes for creating an account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T11:23:04.718Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
 public class CreateBasicAccountModel {
   @SerializedName("StoreName")
   private String storeName = null;
@@ -38,6 +38,9 @@ public class CreateBasicAccountModel {
 
   @SerializedName("OpportunityId")
   private String opportunityId = null;
+
+  @SerializedName("AccountId")
+  private String accountId = null;
 
   public CreateBasicAccountModel storeName(String storeName) {
     this.storeName = storeName;
@@ -93,6 +96,24 @@ public class CreateBasicAccountModel {
     this.opportunityId = opportunityId;
   }
 
+  public CreateBasicAccountModel accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Salesforce Account Id
+   * @return accountId
+  **/
+  @ApiModelProperty(value = "Salesforce Account Id")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +126,13 @@ public class CreateBasicAccountModel {
     CreateBasicAccountModel createBasicAccountModel = (CreateBasicAccountModel) o;
     return Objects.equals(this.storeName, createBasicAccountModel.storeName) &&
         Objects.equals(this.languageId, createBasicAccountModel.languageId) &&
-        Objects.equals(this.opportunityId, createBasicAccountModel.opportunityId);
+        Objects.equals(this.opportunityId, createBasicAccountModel.opportunityId) &&
+        Objects.equals(this.accountId, createBasicAccountModel.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeName, languageId, opportunityId);
+    return Objects.hash(storeName, languageId, opportunityId, accountId);
   }
 
 
@@ -122,6 +144,7 @@ public class CreateBasicAccountModel {
     sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
     sb.append("    languageId: ").append(toIndentedString(languageId)).append("\n");
     sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
