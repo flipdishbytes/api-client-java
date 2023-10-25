@@ -27,13 +27,37 @@ import java.io.IOException;
 /**
  * Allergen
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-24T12:01:02.196Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-25T15:27:13.897Z")
 public class Allergen {
+  @SerializedName("AllergenId")
+  private String allergenId = null;
+
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("LocalizedName")
+  private String localizedName = null;
+
   @SerializedName("IconUrl")
   private String iconUrl = null;
+
+  public Allergen allergenId(String allergenId) {
+    this.allergenId = allergenId;
+    return this;
+  }
+
+   /**
+   * A unique identifier for the allergen
+   * @return allergenId
+  **/
+  @ApiModelProperty(value = "A unique identifier for the allergen")
+  public String getAllergenId() {
+    return allergenId;
+  }
+
+  public void setAllergenId(String allergenId) {
+    this.allergenId = allergenId;
+  }
 
   public Allergen name(String name) {
     this.name = name;
@@ -41,16 +65,34 @@ public class Allergen {
   }
 
    /**
-   * Name of the allergen
+   * English Name of the allergen
    * @return name
   **/
-  @ApiModelProperty(value = "Name of the allergen")
+  @ApiModelProperty(value = "English Name of the allergen")
   public String getName() {
     return name;
   }
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Allergen localizedName(String localizedName) {
+    this.localizedName = localizedName;
+    return this;
+  }
+
+   /**
+   * Localized name of the allergen
+   * @return localizedName
+  **/
+  @ApiModelProperty(value = "Localized name of the allergen")
+  public String getLocalizedName() {
+    return localizedName;
+  }
+
+  public void setLocalizedName(String localizedName) {
+    this.localizedName = localizedName;
   }
 
   public Allergen iconUrl(String iconUrl) {
@@ -81,13 +123,15 @@ public class Allergen {
       return false;
     }
     Allergen allergen = (Allergen) o;
-    return Objects.equals(this.name, allergen.name) &&
+    return Objects.equals(this.allergenId, allergen.allergenId) &&
+        Objects.equals(this.name, allergen.name) &&
+        Objects.equals(this.localizedName, allergen.localizedName) &&
         Objects.equals(this.iconUrl, allergen.iconUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, iconUrl);
+    return Objects.hash(allergenId, name, localizedName, iconUrl);
   }
 
 
@@ -96,7 +140,9 @@ public class Allergen {
     StringBuilder sb = new StringBuilder();
     sb.append("class Allergen {\n");
     
+    sb.append("    allergenId: ").append(toIndentedString(allergenId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    localizedName: ").append(toIndentedString(localizedName)).append("\n");
     sb.append("    iconUrl: ").append(toIndentedString(iconUrl)).append("\n");
     sb.append("}");
     return sb.toString();

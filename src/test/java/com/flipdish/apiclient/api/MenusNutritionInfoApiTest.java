@@ -118,7 +118,8 @@ public class MenusNutritionInfoApiTest {
     @Test
     public void getAllergensTest() throws ApiException {
         String appId = null;
-        RestApiArrayResultAllergen response = api.getAllergens(appId);
+        String languageId = null;
+        RestApiArrayResultAllergen response = api.getAllergens(appId, languageId);
 
         // TODO: test validations
     }

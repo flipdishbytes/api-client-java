@@ -594,12 +594,13 @@ public class MenusNutritionInfoApi {
     /**
      * Build call for getAllergens
      * @param appId  (required)
+     * @param languageId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getAllergensCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getAllergensCall(String appId, String languageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -608,6 +609,8 @@ public class MenusNutritionInfoApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (languageId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("languageId", languageId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -642,15 +645,20 @@ public class MenusNutritionInfoApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getAllergensValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getAllergensValidateBeforeCall(String appId, String languageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
             throw new ApiException("Missing the required parameter 'appId' when calling getAllergens(Async)");
         }
         
+        // verify the required parameter 'languageId' is set
+        if (languageId == null) {
+            throw new ApiException("Missing the required parameter 'languageId' when calling getAllergens(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = getAllergensCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAllergensCall(appId, languageId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -659,11 +667,12 @@ public class MenusNutritionInfoApi {
      * Get allergens
      * 
      * @param appId  (required)
+     * @param languageId  (required)
      * @return RestApiArrayResultAllergen
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultAllergen getAllergens(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultAllergen> resp = getAllergensWithHttpInfo(appId);
+    public RestApiArrayResultAllergen getAllergens(String appId, String languageId) throws ApiException {
+        ApiResponse<RestApiArrayResultAllergen> resp = getAllergensWithHttpInfo(appId, languageId);
         return resp.getData();
     }
 
@@ -671,11 +680,12 @@ public class MenusNutritionInfoApi {
      * Get allergens
      * 
      * @param appId  (required)
+     * @param languageId  (required)
      * @return ApiResponse&lt;RestApiArrayResultAllergen&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultAllergen> getAllergensWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getAllergensValidateBeforeCall(appId, null, null);
+    public ApiResponse<RestApiArrayResultAllergen> getAllergensWithHttpInfo(String appId, String languageId) throws ApiException {
+        com.squareup.okhttp.Call call = getAllergensValidateBeforeCall(appId, languageId, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultAllergen>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -684,11 +694,12 @@ public class MenusNutritionInfoApi {
      * Get allergens (asynchronously)
      * 
      * @param appId  (required)
+     * @param languageId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAllergensAsync(String appId, final ApiCallback<RestApiArrayResultAllergen> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAllergensAsync(String appId, String languageId, final ApiCallback<RestApiArrayResultAllergen> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -709,7 +720,7 @@ public class MenusNutritionInfoApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getAllergensValidateBeforeCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAllergensValidateBeforeCall(appId, languageId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultAllergen>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="getAllergens"></a>
 # **getAllergens**
-> RestApiArrayResultAllergen getAllergens(appId)
+> RestApiArrayResultAllergen getAllergens(appId, languageId)
 
 Get allergens
 
@@ -247,8 +247,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusNutritionInfoApi apiInstance = new MenusNutritionInfoApi();
 String appId = "appId_example"; // String | 
+String languageId = "languageId_example"; // String | 
 try {
-    RestApiArrayResultAllergen result = apiInstance.getAllergens(appId);
+    RestApiArrayResultAllergen result = apiInstance.getAllergens(appId, languageId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenusNutritionInfoApi#getAllergens");
@@ -261,6 +262,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
+ **languageId** | **String**|  |
 
 ### Return type
 
