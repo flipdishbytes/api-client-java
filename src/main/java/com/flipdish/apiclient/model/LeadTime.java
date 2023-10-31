@@ -28,7 +28,7 @@ import java.io.IOException;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-25T15:27:13.897Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-31T15:42:54.077Z")
 public class LeadTime {
   @SerializedName("DispatchType")
   private String dispatchType = null;
@@ -42,10 +42,10 @@ public class LeadTime {
   }
 
    /**
-   * 
+   * There are two valid values for this field - &#x60;collection&#x60; and &#x60;delivery&#x60;.
    * @return dispatchType
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "There are two valid values for this field - `collection` and `delivery`.")
   public String getDispatchType() {
     return dispatchType;
   }
@@ -60,10 +60,10 @@ public class LeadTime {
   }
 
    /**
-   * 
+   * This must be a positive integer.
    * @return leadTimeMinutes
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "This must be a positive integer.")
   public Integer getLeadTimeMinutes() {
     return leadTimeMinutes;
   }

@@ -19,7 +19,6 @@ import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import com.flipdish.apiclient.model.Coordinates;
 import com.flipdish.apiclient.model.LeadTime;
 import org.threeten.bp.OffsetDateTime;
-import com.flipdish.apiclient.model.OrderLeadTimes;
 import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
@@ -37,6 +36,7 @@ import com.flipdish.apiclient.model.RestApiResultAssignedBankAccount;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
+import com.flipdish.apiclient.model.RestApiResultOrderLeadTimes;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultServiceCharge;
@@ -413,7 +413,7 @@ public class StoresApiTest {
     @Test
     public void getStoreLeadTimesTest() throws ApiException {
         Integer storeId = null;
-        OrderLeadTimes response = api.getStoreLeadTimes(storeId);
+        RestApiResultOrderLeadTimes response = api.getStoreLeadTimes(storeId);
 
         // TODO: test validations
     }
@@ -589,7 +589,7 @@ public class StoresApiTest {
     public void setStoreLeadTimesTest() throws ApiException {
         Integer storeId = null;
         LeadTime leadTime = null;
-        OrderLeadTimes response = api.setStoreLeadTimes(storeId, leadTime);
+        RestApiResultOrderLeadTimes response = api.setStoreLeadTimes(storeId, leadTime);
 
         // TODO: test validations
     }

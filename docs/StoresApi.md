@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoreLeadTimes"></a>
 # **getStoreLeadTimes**
-> OrderLeadTimes getStoreLeadTimes(storeId)
+> RestApiResultOrderLeadTimes getStoreLeadTimes(storeId)
 
 
 
@@ -1092,7 +1092,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | 
 try {
-    OrderLeadTimes result = apiInstance.getStoreLeadTimes(storeId);
+    RestApiResultOrderLeadTimes result = apiInstance.getStoreLeadTimes(storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#getStoreLeadTimes");
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderLeadTimes**](OrderLeadTimes.md)
+[**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 
@@ -1608,7 +1608,7 @@ Name | Type | Description  | Notes
 
 <a name="setStoreLeadTimes"></a>
 # **setStoreLeadTimes**
-> OrderLeadTimes setStoreLeadTimes(storeId, leadTime)
+> RestApiResultOrderLeadTimes setStoreLeadTimes(storeId, leadTime)
 
 
 
@@ -1631,7 +1631,7 @@ StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | 
 LeadTime leadTime = new LeadTime(); // LeadTime | 
 try {
-    OrderLeadTimes result = apiInstance.setStoreLeadTimes(storeId, leadTime);
+    RestApiResultOrderLeadTimes result = apiInstance.setStoreLeadTimes(storeId, leadTime);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#setStoreLeadTimes");
@@ -1648,7 +1648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderLeadTimes**](OrderLeadTimes.md)
+[**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 

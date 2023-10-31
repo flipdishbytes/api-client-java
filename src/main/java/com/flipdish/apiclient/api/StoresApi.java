@@ -32,7 +32,6 @@ import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import com.flipdish.apiclient.model.Coordinates;
 import com.flipdish.apiclient.model.LeadTime;
 import org.threeten.bp.OffsetDateTime;
-import com.flipdish.apiclient.model.OrderLeadTimes;
 import com.flipdish.apiclient.model.PreOrderConfig;
 import com.flipdish.apiclient.model.RestApiArrayResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiArrayResultPreOrderTime;
@@ -50,6 +49,7 @@ import com.flipdish.apiclient.model.RestApiResultAssignedBankAccount;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursOverride;
 import com.flipdish.apiclient.model.RestApiResultBusinessHoursPeriod;
 import com.flipdish.apiclient.model.RestApiResultCoordinates;
+import com.flipdish.apiclient.model.RestApiResultOrderLeadTimes;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultServiceCharge;
@@ -2703,11 +2703,11 @@ public class StoresApi {
      * 
      * 
      * @param storeId  (required)
-     * @return OrderLeadTimes
+     * @return RestApiResultOrderLeadTimes
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public OrderLeadTimes getStoreLeadTimes(Integer storeId) throws ApiException {
-        ApiResponse<OrderLeadTimes> resp = getStoreLeadTimesWithHttpInfo(storeId);
+    public RestApiResultOrderLeadTimes getStoreLeadTimes(Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultOrderLeadTimes> resp = getStoreLeadTimesWithHttpInfo(storeId);
         return resp.getData();
     }
 
@@ -2715,12 +2715,12 @@ public class StoresApi {
      * 
      * 
      * @param storeId  (required)
-     * @return ApiResponse&lt;OrderLeadTimes&gt;
+     * @return ApiResponse&lt;RestApiResultOrderLeadTimes&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<OrderLeadTimes> getStoreLeadTimesWithHttpInfo(Integer storeId) throws ApiException {
+    public ApiResponse<RestApiResultOrderLeadTimes> getStoreLeadTimesWithHttpInfo(Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = getStoreLeadTimesValidateBeforeCall(storeId, null, null);
-        Type localVarReturnType = new TypeToken<OrderLeadTimes>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultOrderLeadTimes>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2732,7 +2732,7 @@ public class StoresApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreLeadTimesAsync(Integer storeId, final ApiCallback<OrderLeadTimes> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoreLeadTimesAsync(Integer storeId, final ApiCallback<RestApiResultOrderLeadTimes> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2754,7 +2754,7 @@ public class StoresApi {
         }
 
         com.squareup.okhttp.Call call = getStoreLeadTimesValidateBeforeCall(storeId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<OrderLeadTimes>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultOrderLeadTimes>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -4047,11 +4047,11 @@ public class StoresApi {
      * 
      * @param storeId  (required)
      * @param leadTime  (required)
-     * @return OrderLeadTimes
+     * @return RestApiResultOrderLeadTimes
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public OrderLeadTimes setStoreLeadTimes(Integer storeId, LeadTime leadTime) throws ApiException {
-        ApiResponse<OrderLeadTimes> resp = setStoreLeadTimesWithHttpInfo(storeId, leadTime);
+    public RestApiResultOrderLeadTimes setStoreLeadTimes(Integer storeId, LeadTime leadTime) throws ApiException {
+        ApiResponse<RestApiResultOrderLeadTimes> resp = setStoreLeadTimesWithHttpInfo(storeId, leadTime);
         return resp.getData();
     }
 
@@ -4060,12 +4060,12 @@ public class StoresApi {
      * 
      * @param storeId  (required)
      * @param leadTime  (required)
-     * @return ApiResponse&lt;OrderLeadTimes&gt;
+     * @return ApiResponse&lt;RestApiResultOrderLeadTimes&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<OrderLeadTimes> setStoreLeadTimesWithHttpInfo(Integer storeId, LeadTime leadTime) throws ApiException {
+    public ApiResponse<RestApiResultOrderLeadTimes> setStoreLeadTimesWithHttpInfo(Integer storeId, LeadTime leadTime) throws ApiException {
         com.squareup.okhttp.Call call = setStoreLeadTimesValidateBeforeCall(storeId, leadTime, null, null);
-        Type localVarReturnType = new TypeToken<OrderLeadTimes>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultOrderLeadTimes>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -4078,7 +4078,7 @@ public class StoresApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setStoreLeadTimesAsync(Integer storeId, LeadTime leadTime, final ApiCallback<OrderLeadTimes> callback) throws ApiException {
+    public com.squareup.okhttp.Call setStoreLeadTimesAsync(Integer storeId, LeadTime leadTime, final ApiCallback<RestApiResultOrderLeadTimes> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4100,7 +4100,7 @@ public class StoresApi {
         }
 
         com.squareup.okhttp.Call call = setStoreLeadTimesValidateBeforeCall(storeId, leadTime, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<OrderLeadTimes>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultOrderLeadTimes>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
