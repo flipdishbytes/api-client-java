@@ -32,7 +32,7 @@ import java.util.List;
  * Create menu section item
  */
 @ApiModel(description = "Create menu section item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-10-31T15:42:54.077Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-02T09:20:29.766Z")
 public class CreateFullMenuSectionItem {
   @SerializedName("MenuItemOptionSets")
   private List<CreateFullMenuItemOptionSet> menuItemOptionSets = null;
@@ -180,6 +180,9 @@ public class CreateFullMenuSectionItem {
 
   @SerializedName("MenuItemId")
   private Integer menuItemId = null;
+
+  @SerializedName("ExcludeFromVoucherDiscounting")
+  private Boolean excludeFromVoucherDiscounting = null;
 
   public CreateFullMenuSectionItem menuItemOptionSets(List<CreateFullMenuItemOptionSet> menuItemOptionSets) {
     this.menuItemOptionSets = menuItemOptionSets;
@@ -467,6 +470,24 @@ public class CreateFullMenuSectionItem {
     this.menuItemId = menuItemId;
   }
 
+  public CreateFullMenuSectionItem excludeFromVoucherDiscounting(Boolean excludeFromVoucherDiscounting) {
+    this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
+    return this;
+  }
+
+   /**
+   * If true, the item is excluded from voucher discount calculations
+   * @return excludeFromVoucherDiscounting
+  **/
+  @ApiModelProperty(value = "If true, the item is excluded from voucher discount calculations")
+  public Boolean isExcludeFromVoucherDiscounting() {
+    return excludeFromVoucherDiscounting;
+  }
+
+  public void setExcludeFromVoucherDiscounting(Boolean excludeFromVoucherDiscounting) {
+    this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -491,12 +512,13 @@ public class CreateFullMenuSectionItem {
         Objects.equals(this.disableVouchers, createFullMenuSectionItem.disableVouchers) &&
         Objects.equals(this.imageName, createFullMenuSectionItem.imageName) &&
         Objects.equals(this.imageUrl, createFullMenuSectionItem.imageUrl) &&
-        Objects.equals(this.menuItemId, createFullMenuSectionItem.menuItemId);
+        Objects.equals(this.menuItemId, createFullMenuSectionItem.menuItemId) &&
+        Objects.equals(this.excludeFromVoucherDiscounting, createFullMenuSectionItem.excludeFromVoucherDiscounting);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId);
+    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
   }
 
 
@@ -520,6 +542,7 @@ public class CreateFullMenuSectionItem {
     sb.append("    imageName: ").append(toIndentedString(imageName)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
+    sb.append("    excludeFromVoucherDiscounting: ").append(toIndentedString(excludeFromVoucherDiscounting)).append("\n");
     sb.append("}");
     return sb.toString();
   }
