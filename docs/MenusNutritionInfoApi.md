@@ -262,7 +262,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
- **languageId** | **String**|  |
+ **languageId** | **String**|  | [optional]
 
 ### Return type
 

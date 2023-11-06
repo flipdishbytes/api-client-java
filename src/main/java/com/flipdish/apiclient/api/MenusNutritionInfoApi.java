@@ -594,7 +594,7 @@ public class MenusNutritionInfoApi {
     /**
      * Build call for getAllergens
      * @param appId  (required)
-     * @param languageId  (required)
+     * @param languageId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -652,11 +652,6 @@ public class MenusNutritionInfoApi {
             throw new ApiException("Missing the required parameter 'appId' when calling getAllergens(Async)");
         }
         
-        // verify the required parameter 'languageId' is set
-        if (languageId == null) {
-            throw new ApiException("Missing the required parameter 'languageId' when calling getAllergens(Async)");
-        }
-        
 
         com.squareup.okhttp.Call call = getAllergensCall(appId, languageId, progressListener, progressRequestListener);
         return call;
@@ -667,7 +662,7 @@ public class MenusNutritionInfoApi {
      * Get allergens
      * 
      * @param appId  (required)
-     * @param languageId  (required)
+     * @param languageId  (optional)
      * @return RestApiArrayResultAllergen
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -680,7 +675,7 @@ public class MenusNutritionInfoApi {
      * Get allergens
      * 
      * @param appId  (required)
-     * @param languageId  (required)
+     * @param languageId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultAllergen&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -694,7 +689,7 @@ public class MenusNutritionInfoApi {
      * Get allergens (asynchronously)
      * 
      * @param appId  (required)
-     * @param languageId  (required)
+     * @param languageId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
