@@ -43,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-06T11:09:40.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T11:20:59.210Z")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -720,6 +720,9 @@ public class Order {
 
   @SerializedName("OrderTrackingCode")
   private String orderTrackingCode = null;
+
+  @SerializedName("DeliveryFeeAreaId")
+  private Integer deliveryFeeAreaId = null;
 
   public Order store(StoreSummary store) {
     this.store = store;
@@ -1611,6 +1614,24 @@ public class Order {
     this.orderTrackingCode = orderTrackingCode;
   }
 
+  public Order deliveryFeeAreaId(Integer deliveryFeeAreaId) {
+    this.deliveryFeeAreaId = deliveryFeeAreaId;
+    return this;
+  }
+
+   /**
+   * Delivery area identifier
+   * @return deliveryFeeAreaId
+  **/
+  @ApiModelProperty(value = "Delivery area identifier")
+  public Integer getDeliveryFeeAreaId() {
+    return deliveryFeeAreaId;
+  }
+
+  public void setDeliveryFeeAreaId(Integer deliveryFeeAreaId) {
+    this.deliveryFeeAreaId = deliveryFeeAreaId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1669,12 +1690,13 @@ public class Order {
         Objects.equals(this.deliveryTrackingStatus, order.deliveryTrackingStatus) &&
         Objects.equals(this.driverId, order.driverId) &&
         Objects.equals(this.totalTax, order.totalTax) &&
-        Objects.equals(this.orderTrackingCode, order.orderTrackingCode);
+        Objects.equals(this.orderTrackingCode, order.orderTrackingCode) &&
+        Objects.equals(this.deliveryFeeAreaId, order.deliveryFeeAreaId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId);
   }
 
 
@@ -1732,6 +1754,7 @@ public class Order {
     sb.append("    driverId: ").append(toIndentedString(driverId)).append("\n");
     sb.append("    totalTax: ").append(toIndentedString(totalTax)).append("\n");
     sb.append("    orderTrackingCode: ").append(toIndentedString(orderTrackingCode)).append("\n");
+    sb.append("    deliveryFeeAreaId: ").append(toIndentedString(deliveryFeeAreaId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

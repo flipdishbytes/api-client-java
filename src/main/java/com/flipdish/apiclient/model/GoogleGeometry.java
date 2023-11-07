@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * GoogleGeometry
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-06T11:09:40.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T11:20:59.210Z")
 public class GoogleGeometry {
   @SerializedName("Location")
   private GoogleLocation location = null;

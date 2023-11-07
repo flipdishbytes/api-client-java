@@ -53,6 +53,7 @@ Name | Type | Description | Notes
 **driverId** | **Integer** | Assigned driver identifier |  [optional]
 **totalTax** | **Double** | Total tax applied to order |  [optional]
 **orderTrackingCode** | **String** | Unique, 6 character long alpha numeric code for tracking. |  [optional]
+**deliveryFeeAreaId** | **Integer** | Delivery area identifier |  [optional]
 
 
 <a name="DeliveryTypeEnum"></a>
