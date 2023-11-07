@@ -25,14 +25,24 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Voucher Base
+ * Update Voucher
  */
-@ApiModel(description = "Voucher Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T11:20:59.210Z")
-public class VoucherBase {
+@ApiModel(description = "Update Voucher")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T13:15:00.892Z")
+public class UpdateVoucher {
+  @SerializedName("PromotionId")
+  private Integer promotionId = null;
+
+  @SerializedName("PromotionName")
+  private String promotionName = null;
+
+  @SerializedName("PromotionAwardMenuItemPublicIds")
+  private List<UUID> promotionAwardMenuItemPublicIds = null;
+
   @SerializedName("Code")
   private String code = null;
 
@@ -84,7 +94,69 @@ public class VoucherBase {
   @SerializedName("ExpiryDate")
   private OffsetDateTime expiryDate = null;
 
-  public VoucherBase code(String code) {
+  public UpdateVoucher promotionId(Integer promotionId) {
+    this.promotionId = promotionId;
+    return this;
+  }
+
+   /**
+   * Promotion ID to update
+   * @return promotionId
+  **/
+  @ApiModelProperty(value = "Promotion ID to update")
+  public Integer getPromotionId() {
+    return promotionId;
+  }
+
+  public void setPromotionId(Integer promotionId) {
+    this.promotionId = promotionId;
+  }
+
+  public UpdateVoucher promotionName(String promotionName) {
+    this.promotionName = promotionName;
+    return this;
+  }
+
+   /**
+   * The updated name of the promotion
+   * @return promotionName
+  **/
+  @ApiModelProperty(value = "The updated name of the promotion")
+  public String getPromotionName() {
+    return promotionName;
+  }
+
+  public void setPromotionName(String promotionName) {
+    this.promotionName = promotionName;
+  }
+
+  public UpdateVoucher promotionAwardMenuItemPublicIds(List<UUID> promotionAwardMenuItemPublicIds) {
+    this.promotionAwardMenuItemPublicIds = promotionAwardMenuItemPublicIds;
+    return this;
+  }
+
+  public UpdateVoucher addPromotionAwardMenuItemPublicIdsItem(UUID promotionAwardMenuItemPublicIdsItem) {
+    if (this.promotionAwardMenuItemPublicIds == null) {
+      this.promotionAwardMenuItemPublicIds = new ArrayList<UUID>();
+    }
+    this.promotionAwardMenuItemPublicIds.add(promotionAwardMenuItemPublicIdsItem);
+    return this;
+  }
+
+   /**
+   * The updated menu items that the promotion awards
+   * @return promotionAwardMenuItemPublicIds
+  **/
+  @ApiModelProperty(value = "The updated menu items that the promotion awards")
+  public List<UUID> getPromotionAwardMenuItemPublicIds() {
+    return promotionAwardMenuItemPublicIds;
+  }
+
+  public void setPromotionAwardMenuItemPublicIds(List<UUID> promotionAwardMenuItemPublicIds) {
+    this.promotionAwardMenuItemPublicIds = promotionAwardMenuItemPublicIds;
+  }
+
+  public UpdateVoucher code(String code) {
     this.code = code;
     return this;
   }
@@ -102,7 +174,7 @@ public class VoucherBase {
     this.code = code;
   }
 
-  public VoucherBase description(String description) {
+  public UpdateVoucher description(String description) {
     this.description = description;
     return this;
   }
@@ -120,12 +192,12 @@ public class VoucherBase {
     this.description = description;
   }
 
-  public VoucherBase stores(List<Integer> stores) {
+  public UpdateVoucher stores(List<Integer> stores) {
     this.stores = stores;
     return this;
   }
 
-  public VoucherBase addStoresItem(Integer storesItem) {
+  public UpdateVoucher addStoresItem(Integer storesItem) {
     if (this.stores == null) {
       this.stores = new ArrayList<Integer>();
     }
@@ -146,7 +218,7 @@ public class VoucherBase {
     this.stores = stores;
   }
 
-  public VoucherBase validOnOrdersOver(Double validOnOrdersOver) {
+  public UpdateVoucher validOnOrdersOver(Double validOnOrdersOver) {
     this.validOnOrdersOver = validOnOrdersOver;
     return this;
   }
@@ -164,7 +236,7 @@ public class VoucherBase {
     this.validOnOrdersOver = validOnOrdersOver;
   }
 
-  public VoucherBase takesPriority(Boolean takesPriority) {
+  public UpdateVoucher takesPriority(Boolean takesPriority) {
     this.takesPriority = takesPriority;
     return this;
   }
@@ -182,7 +254,7 @@ public class VoucherBase {
     this.takesPriority = takesPriority;
   }
 
-  public VoucherBase isEnabled(Boolean isEnabled) {
+  public UpdateVoucher isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
@@ -200,7 +272,7 @@ public class VoucherBase {
     this.isEnabled = isEnabled;
   }
 
-  public VoucherBase isAutomaticallyApplied(Boolean isAutomaticallyApplied) {
+  public UpdateVoucher isAutomaticallyApplied(Boolean isAutomaticallyApplied) {
     this.isAutomaticallyApplied = isAutomaticallyApplied;
     return this;
   }
@@ -218,7 +290,7 @@ public class VoucherBase {
     this.isAutomaticallyApplied = isAutomaticallyApplied;
   }
 
-  public VoucherBase includeDeliveryFee(Boolean includeDeliveryFee) {
+  public UpdateVoucher includeDeliveryFee(Boolean includeDeliveryFee) {
     this.includeDeliveryFee = includeDeliveryFee;
     return this;
   }
@@ -236,7 +308,7 @@ public class VoucherBase {
     this.includeDeliveryFee = includeDeliveryFee;
   }
 
-  public VoucherBase isValidForDeliveryOrders(Boolean isValidForDeliveryOrders) {
+  public UpdateVoucher isValidForDeliveryOrders(Boolean isValidForDeliveryOrders) {
     this.isValidForDeliveryOrders = isValidForDeliveryOrders;
     return this;
   }
@@ -254,7 +326,7 @@ public class VoucherBase {
     this.isValidForDeliveryOrders = isValidForDeliveryOrders;
   }
 
-  public VoucherBase isValidForPickupOrders(Boolean isValidForPickupOrders) {
+  public UpdateVoucher isValidForPickupOrders(Boolean isValidForPickupOrders) {
     this.isValidForPickupOrders = isValidForPickupOrders;
     return this;
   }
@@ -272,7 +344,7 @@ public class VoucherBase {
     this.isValidForPickupOrders = isValidForPickupOrders;
   }
 
-  public VoucherBase isValidForOrdersPayedOnline(Boolean isValidForOrdersPayedOnline) {
+  public UpdateVoucher isValidForOrdersPayedOnline(Boolean isValidForOrdersPayedOnline) {
     this.isValidForOrdersPayedOnline = isValidForOrdersPayedOnline;
     return this;
   }
@@ -290,7 +362,7 @@ public class VoucherBase {
     this.isValidForOrdersPayedOnline = isValidForOrdersPayedOnline;
   }
 
-  public VoucherBase isValidForOrdersPayedByCash(Boolean isValidForOrdersPayedByCash) {
+  public UpdateVoucher isValidForOrdersPayedByCash(Boolean isValidForOrdersPayedByCash) {
     this.isValidForOrdersPayedByCash = isValidForOrdersPayedByCash;
     return this;
   }
@@ -308,7 +380,7 @@ public class VoucherBase {
     this.isValidForOrdersPayedByCash = isValidForOrdersPayedByCash;
   }
 
-  public VoucherBase isValidForFirstOrderOnly(Boolean isValidForFirstOrderOnly) {
+  public UpdateVoucher isValidForFirstOrderOnly(Boolean isValidForFirstOrderOnly) {
     this.isValidForFirstOrderOnly = isValidForFirstOrderOnly;
     return this;
   }
@@ -326,7 +398,7 @@ public class VoucherBase {
     this.isValidForFirstOrderOnly = isValidForFirstOrderOnly;
   }
 
-  public VoucherBase isValidOncePerCustomer(Boolean isValidOncePerCustomer) {
+  public UpdateVoucher isValidOncePerCustomer(Boolean isValidOncePerCustomer) {
     this.isValidOncePerCustomer = isValidOncePerCustomer;
     return this;
   }
@@ -344,7 +416,7 @@ public class VoucherBase {
     this.isValidOncePerCustomer = isValidOncePerCustomer;
   }
 
-  public VoucherBase isValidOnlyOnce(Boolean isValidOnlyOnce) {
+  public UpdateVoucher isValidOnlyOnce(Boolean isValidOnlyOnce) {
     this.isValidOnlyOnce = isValidOnlyOnce;
     return this;
   }
@@ -362,7 +434,7 @@ public class VoucherBase {
     this.isValidOnlyOnce = isValidOnlyOnce;
   }
 
-  public VoucherBase startDate(OffsetDateTime startDate) {
+  public UpdateVoucher startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
   }
@@ -380,7 +452,7 @@ public class VoucherBase {
     this.startDate = startDate;
   }
 
-  public VoucherBase expiryDate(OffsetDateTime expiryDate) {
+  public UpdateVoucher expiryDate(OffsetDateTime expiryDate) {
     this.expiryDate = expiryDate;
     return this;
   }
@@ -407,37 +479,43 @@ public class VoucherBase {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VoucherBase voucherBase = (VoucherBase) o;
-    return Objects.equals(this.code, voucherBase.code) &&
-        Objects.equals(this.description, voucherBase.description) &&
-        Objects.equals(this.stores, voucherBase.stores) &&
-        Objects.equals(this.validOnOrdersOver, voucherBase.validOnOrdersOver) &&
-        Objects.equals(this.takesPriority, voucherBase.takesPriority) &&
-        Objects.equals(this.isEnabled, voucherBase.isEnabled) &&
-        Objects.equals(this.isAutomaticallyApplied, voucherBase.isAutomaticallyApplied) &&
-        Objects.equals(this.includeDeliveryFee, voucherBase.includeDeliveryFee) &&
-        Objects.equals(this.isValidForDeliveryOrders, voucherBase.isValidForDeliveryOrders) &&
-        Objects.equals(this.isValidForPickupOrders, voucherBase.isValidForPickupOrders) &&
-        Objects.equals(this.isValidForOrdersPayedOnline, voucherBase.isValidForOrdersPayedOnline) &&
-        Objects.equals(this.isValidForOrdersPayedByCash, voucherBase.isValidForOrdersPayedByCash) &&
-        Objects.equals(this.isValidForFirstOrderOnly, voucherBase.isValidForFirstOrderOnly) &&
-        Objects.equals(this.isValidOncePerCustomer, voucherBase.isValidOncePerCustomer) &&
-        Objects.equals(this.isValidOnlyOnce, voucherBase.isValidOnlyOnce) &&
-        Objects.equals(this.startDate, voucherBase.startDate) &&
-        Objects.equals(this.expiryDate, voucherBase.expiryDate);
+    UpdateVoucher updateVoucher = (UpdateVoucher) o;
+    return Objects.equals(this.promotionId, updateVoucher.promotionId) &&
+        Objects.equals(this.promotionName, updateVoucher.promotionName) &&
+        Objects.equals(this.promotionAwardMenuItemPublicIds, updateVoucher.promotionAwardMenuItemPublicIds) &&
+        Objects.equals(this.code, updateVoucher.code) &&
+        Objects.equals(this.description, updateVoucher.description) &&
+        Objects.equals(this.stores, updateVoucher.stores) &&
+        Objects.equals(this.validOnOrdersOver, updateVoucher.validOnOrdersOver) &&
+        Objects.equals(this.takesPriority, updateVoucher.takesPriority) &&
+        Objects.equals(this.isEnabled, updateVoucher.isEnabled) &&
+        Objects.equals(this.isAutomaticallyApplied, updateVoucher.isAutomaticallyApplied) &&
+        Objects.equals(this.includeDeliveryFee, updateVoucher.includeDeliveryFee) &&
+        Objects.equals(this.isValidForDeliveryOrders, updateVoucher.isValidForDeliveryOrders) &&
+        Objects.equals(this.isValidForPickupOrders, updateVoucher.isValidForPickupOrders) &&
+        Objects.equals(this.isValidForOrdersPayedOnline, updateVoucher.isValidForOrdersPayedOnline) &&
+        Objects.equals(this.isValidForOrdersPayedByCash, updateVoucher.isValidForOrdersPayedByCash) &&
+        Objects.equals(this.isValidForFirstOrderOnly, updateVoucher.isValidForFirstOrderOnly) &&
+        Objects.equals(this.isValidOncePerCustomer, updateVoucher.isValidOncePerCustomer) &&
+        Objects.equals(this.isValidOnlyOnce, updateVoucher.isValidOnlyOnce) &&
+        Objects.equals(this.startDate, updateVoucher.startDate) &&
+        Objects.equals(this.expiryDate, updateVoucher.expiryDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VoucherBase {\n");
+    sb.append("class UpdateVoucher {\n");
     
+    sb.append("    promotionId: ").append(toIndentedString(promotionId)).append("\n");
+    sb.append("    promotionName: ").append(toIndentedString(promotionName)).append("\n");
+    sb.append("    promotionAwardMenuItemPublicIds: ").append(toIndentedString(promotionAwardMenuItemPublicIds)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    stores: ").append(toIndentedString(stores)).append("\n");

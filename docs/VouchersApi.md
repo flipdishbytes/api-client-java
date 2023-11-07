@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="updateVoucher"></a>
 # **updateVoucher**
-> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount)
+> RestApiResultVoucherWithStats updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount)
 
 
 
@@ -258,14 +258,13 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 VouchersApi apiInstance = new VouchersApi();
 Integer voucherId = 56; // Integer | 
-VoucherBase voucher = new VoucherBase(); // VoucherBase | 
+UpdateVoucher voucher = new UpdateVoucher(); // UpdateVoucher | 
 List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 Integer percentValue = 56; // Integer | 
 Double lumpValue = 3.4D; // Double | 
-Integer freeItemId = 56; // Integer | 
 Double maxDiscountAmount = 3.4D; // Double | 
 try {
-    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
+    RestApiResultVoucherWithStats result = apiInstance.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VouchersApi#updateVoucher");
@@ -278,11 +277,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucherId** | **Integer**|  |
- **voucher** | [**VoucherBase**](VoucherBase.md)|  |
+ **voucher** | [**UpdateVoucher**](UpdateVoucher.md)|  |
  **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
  **percentValue** | **Integer**|  | [optional]
  **lumpValue** | **Double**|  | [optional]
- **freeItemId** | **Integer**|  | [optional]
  **maxDiscountAmount** | **Double**|  | [optional]
 
 ### Return type

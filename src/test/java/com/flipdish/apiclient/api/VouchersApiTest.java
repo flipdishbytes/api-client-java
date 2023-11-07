@@ -21,7 +21,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultVoucherSummary;
 import com.flipdish.apiclient.model.RestApiResultVoucherWithStats;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.VoucherBase;
+import com.flipdish.apiclient.model.UpdateVoucher;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -124,13 +124,12 @@ public class VouchersApiTest {
     @Test
     public void updateVoucherTest() throws ApiException {
         Integer voucherId = null;
-        VoucherBase voucher = null;
+        UpdateVoucher voucher = null;
         List<Integer> storeId = null;
         Integer percentValue = null;
         Double lumpValue = null;
-        Integer freeItemId = null;
         Double maxDiscountAmount = null;
-        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, freeItemId, maxDiscountAmount);
+        RestApiResultVoucherWithStats response = api.updateVoucher(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount);
 
         // TODO: test validations
     }

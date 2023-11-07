@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AddItemDetails;
+import com.flipdish.apiclient.model.CreatePromotion;
 import com.flipdish.apiclient.model.CreditNoteDetails;
 import com.flipdish.apiclient.model.LumpDiscountDetails;
 import com.flipdish.apiclient.model.PercentDiscountDetails;
@@ -32,10 +32,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Voucher
+ * Create Voucher
  */
-@ApiModel(description = "Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T11:20:59.210Z")
+@ApiModel(description = "Create Voucher")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T13:15:00.892Z")
 public class CreateVoucher {
   /**
    * Voucher Type
@@ -91,8 +91,8 @@ public class CreateVoucher {
   @SerializedName("VoucherType")
   private VoucherTypeEnum voucherType = null;
 
-  @SerializedName("AddItemDetails")
-  private AddItemDetails addItemDetails = null;
+  @SerializedName("Promotion")
+  private CreatePromotion promotion = null;
 
   @SerializedName("CreditNoteDetails")
   private CreditNoteDetails creditNoteDetails = null;
@@ -172,22 +172,22 @@ public class CreateVoucher {
     this.voucherType = voucherType;
   }
 
-  public CreateVoucher addItemDetails(AddItemDetails addItemDetails) {
-    this.addItemDetails = addItemDetails;
+  public CreateVoucher promotion(CreatePromotion promotion) {
+    this.promotion = promotion;
     return this;
   }
 
    /**
-   * Add item details
-   * @return addItemDetails
+   * Create Promotion details
+   * @return promotion
   **/
-  @ApiModelProperty(value = "Add item details")
-  public AddItemDetails getAddItemDetails() {
-    return addItemDetails;
+  @ApiModelProperty(value = "Create Promotion details")
+  public CreatePromotion getPromotion() {
+    return promotion;
   }
 
-  public void setAddItemDetails(AddItemDetails addItemDetails) {
-    this.addItemDetails = addItemDetails;
+  public void setPromotion(CreatePromotion promotion) {
+    this.promotion = promotion;
   }
 
   public CreateVoucher creditNoteDetails(CreditNoteDetails creditNoteDetails) {
@@ -569,7 +569,7 @@ public class CreateVoucher {
     }
     CreateVoucher createVoucher = (CreateVoucher) o;
     return Objects.equals(this.voucherType, createVoucher.voucherType) &&
-        Objects.equals(this.addItemDetails, createVoucher.addItemDetails) &&
+        Objects.equals(this.promotion, createVoucher.promotion) &&
         Objects.equals(this.creditNoteDetails, createVoucher.creditNoteDetails) &&
         Objects.equals(this.lumpDiscountDetails, createVoucher.lumpDiscountDetails) &&
         Objects.equals(this.percentDiscountDetails, createVoucher.percentDiscountDetails) &&
@@ -594,7 +594,7 @@ public class CreateVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherType, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(voucherType, promotion, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -604,7 +604,7 @@ public class CreateVoucher {
     sb.append("class CreateVoucher {\n");
     
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
-    sb.append("    addItemDetails: ").append(toIndentedString(addItemDetails)).append("\n");
+    sb.append("    promotion: ").append(toIndentedString(promotion)).append("\n");
     sb.append("    creditNoteDetails: ").append(toIndentedString(creditNoteDetails)).append("\n");
     sb.append("    lumpDiscountDetails: ").append(toIndentedString(lumpDiscountDetails)).append("\n");
     sb.append("    percentDiscountDetails: ").append(toIndentedString(percentDiscountDetails)).append("\n");

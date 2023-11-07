@@ -1,9 +1,12 @@
 
-# VoucherBase
+# UpdateVoucher
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**promotionId** | **Integer** | Promotion ID to update |  [optional]
+**promotionName** | **String** | The updated name of the promotion |  [optional]
+**promotionAwardMenuItemPublicIds** | [**List&lt;UUID&gt;**](UUID.md) | The updated menu items that the promotion awards |  [optional]
 **code** | **String** | Voucher Code |  [optional]
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
 **stores** | **List&lt;Integer&gt;** | Stores that this voucher applies to |  [optional]

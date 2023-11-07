@@ -15,10 +15,10 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.AddItemDetails;
 import com.flipdish.apiclient.model.CreditNoteDetails;
 import com.flipdish.apiclient.model.LumpDiscountDetails;
 import com.flipdish.apiclient.model.PercentDiscountDetails;
+import com.flipdish.apiclient.model.PromotionDetails;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher With Statistics
  */
 @ApiModel(description = "Voucher With Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T11:20:59.210Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T13:15:00.892Z")
 public class VoucherWithStats {
   @SerializedName("TotalUsed")
   private Integer totalUsed = null;
@@ -500,8 +500,8 @@ public class VoucherWithStats {
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
 
-  @SerializedName("AddItemDetails")
-  private AddItemDetails addItemDetails = null;
+  @SerializedName("PromotionDetails")
+  private PromotionDetails promotionDetails = null;
 
   @SerializedName("CreditNoteDetails")
   private CreditNoteDetails creditNoteDetails = null;
@@ -769,22 +769,22 @@ public class VoucherWithStats {
     this.storeNames = storeNames;
   }
 
-  public VoucherWithStats addItemDetails(AddItemDetails addItemDetails) {
-    this.addItemDetails = addItemDetails;
+  public VoucherWithStats promotionDetails(PromotionDetails promotionDetails) {
+    this.promotionDetails = promotionDetails;
     return this;
   }
 
    /**
-   * Add item details
-   * @return addItemDetails
+   * Promotion details
+   * @return promotionDetails
   **/
-  @ApiModelProperty(value = "Add item details")
-  public AddItemDetails getAddItemDetails() {
-    return addItemDetails;
+  @ApiModelProperty(value = "Promotion details")
+  public PromotionDetails getPromotionDetails() {
+    return promotionDetails;
   }
 
-  public void setAddItemDetails(AddItemDetails addItemDetails) {
-    this.addItemDetails = addItemDetails;
+  public void setPromotionDetails(PromotionDetails promotionDetails) {
+    this.promotionDetails = promotionDetails;
   }
 
   public VoucherWithStats creditNoteDetails(CreditNoteDetails creditNoteDetails) {
@@ -1176,7 +1176,7 @@ public class VoucherWithStats {
         Objects.equals(this.voucherSubType, voucherWithStats.voucherSubType) &&
         Objects.equals(this.currency, voucherWithStats.currency) &&
         Objects.equals(this.storeNames, voucherWithStats.storeNames) &&
-        Objects.equals(this.addItemDetails, voucherWithStats.addItemDetails) &&
+        Objects.equals(this.promotionDetails, voucherWithStats.promotionDetails) &&
         Objects.equals(this.creditNoteDetails, voucherWithStats.creditNoteDetails) &&
         Objects.equals(this.lumpDiscountDetails, voucherWithStats.lumpDiscountDetails) &&
         Objects.equals(this.percentDiscountDetails, voucherWithStats.percentDiscountDetails) &&
@@ -1201,7 +1201,7 @@ public class VoucherWithStats {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, storeNames, addItemDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
   }
 
 
@@ -1221,7 +1221,7 @@ public class VoucherWithStats {
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
-    sb.append("    addItemDetails: ").append(toIndentedString(addItemDetails)).append("\n");
+    sb.append("    promotionDetails: ").append(toIndentedString(promotionDetails)).append("\n");
     sb.append("    creditNoteDetails: ").append(toIndentedString(creditNoteDetails)).append("\n");
     sb.append("    lumpDiscountDetails: ").append(toIndentedString(lumpDiscountDetails)).append("\n");
     sb.append("    percentDiscountDetails: ").append(toIndentedString(percentDiscountDetails)).append("\n");
