@@ -64,7 +64,8 @@ public class OnboardingApiTest {
     public void onboardingGetOnboardingItemsTest() throws ApiException {
         String appId = null;
         Integer storeId = null;
-        Object response = api.onboardingGetOnboardingItems(appId, storeId);
+        Integer milestoneId = null;
+        Object response = api.onboardingGetOnboardingItems(appId, storeId, milestoneId);
 
         // TODO: test validations
     }

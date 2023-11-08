@@ -28,7 +28,7 @@ import java.io.IOException;
  * Whitelabel salesforce references
  */
 @ApiModel(description = "Whitelabel salesforce references")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T13:15:00.892Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-08T08:47:17.832Z")
 public class AppSalesforceReferences {
   @SerializedName("OpportunityId")
   private String opportunityId = null;

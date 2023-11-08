@@ -30,10 +30,13 @@ import java.util.List;
  * App store app summary information
  */
 @ApiModel(description = "App store app summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-07T13:15:00.892Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-08T08:47:17.832Z")
 public class AppStoreAppSummary {
   @SerializedName("Id")
   private String id = null;
+
+  @SerializedName("AppStoreAppId")
+  private String appStoreAppId = null;
 
   /**
    * Application verification status
@@ -263,6 +266,15 @@ public class AppStoreAppSummary {
     this.id = id;
   }
 
+   /**
+   * Same as Id for compatibility on portal.  Will be removed once portal is updated to read the Id field
+   * @return appStoreAppId
+  **/
+  @ApiModelProperty(value = "Same as Id for compatibility on portal.  Will be removed once portal is updated to read the Id field")
+  public String getAppStoreAppId() {
+    return appStoreAppId;
+  }
+
   public AppStoreAppSummary verificationStatus(VerificationStatusEnum verificationStatus) {
     this.verificationStatus = verificationStatus;
     return this;
@@ -446,6 +458,7 @@ public class AppStoreAppSummary {
     }
     AppStoreAppSummary appStoreAppSummary = (AppStoreAppSummary) o;
     return Objects.equals(this.id, appStoreAppSummary.id) &&
+        Objects.equals(this.appStoreAppId, appStoreAppSummary.appStoreAppId) &&
         Objects.equals(this.verificationStatus, appStoreAppSummary.verificationStatus) &&
         Objects.equals(this.logo, appStoreAppSummary.logo) &&
         Objects.equals(this.internal, appStoreAppSummary.internal) &&
@@ -459,7 +472,7 @@ public class AppStoreAppSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, verificationStatus, logo, internal, name, description, isEnabled, categories, countries, developerName);
+    return Objects.hash(id, appStoreAppId, verificationStatus, logo, internal, name, description, isEnabled, categories, countries, developerName);
   }
 
 
@@ -469,6 +482,7 @@ public class AppStoreAppSummary {
     sb.append("class AppStoreAppSummary {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
     sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
     sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("    internal: ").append(toIndentedString(internal)).append("\n");

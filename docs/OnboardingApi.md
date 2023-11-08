@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="onboardingGetOnboardingItems"></a>
 # **onboardingGetOnboardingItems**
-> Object onboardingGetOnboardingItems(appId, storeId)
+> Object onboardingGetOnboardingItems(appId, storeId, milestoneId)
 
 
 
@@ -85,8 +85,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 OnboardingApi apiInstance = new OnboardingApi();
 String appId = "appId_example"; // String | 
 Integer storeId = 56; // Integer | 
+Integer milestoneId = 56; // Integer | 
 try {
-    Object result = apiInstance.onboardingGetOnboardingItems(appId, storeId);
+    Object result = apiInstance.onboardingGetOnboardingItems(appId, storeId, milestoneId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OnboardingApi#onboardingGetOnboardingItems");
@@ -100,6 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **storeId** | **Integer**|  |
+ **milestoneId** | **Integer**|  | [optional]
 
 ### Return type
 
