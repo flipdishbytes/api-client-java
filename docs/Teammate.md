@@ -37,6 +37,7 @@ STOREMANAGER | &quot;StoreManager&quot;
 STORESTAFF | &quot;StoreStaff&quot;
 STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
 FINANCEMANGER | &quot;FinanceManger&quot;
+ONBOARDING | &quot;Onboarding&quot;
 SUPPORT | &quot;Support&quot;
 
 

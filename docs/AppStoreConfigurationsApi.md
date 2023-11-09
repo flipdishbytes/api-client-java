@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 
 <a name="getConfiguredApps"></a>
 # **getConfiguredApps**
-> RestApiArrayResultAppStoreAppConfigurationHeader getConfiguredApps(appId)
+> RestApiArrayResultAppStoreAppSummary getConfiguredApps(appId)
 
 
 
@@ -417,7 +417,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
 String appId = "appId_example"; // String | 
 try {
-    RestApiArrayResultAppStoreAppConfigurationHeader result = apiInstance.getConfiguredApps(appId);
+    RestApiArrayResultAppStoreAppSummary result = apiInstance.getConfiguredApps(appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#getConfiguredApps");
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultAppStoreAppConfigurationHeader**](RestApiArrayResultAppStoreAppConfigurationHeader.md)
+[**RestApiArrayResultAppStoreAppSummary**](RestApiArrayResultAppStoreAppSummary.md)
 
 ### Authorization
 

@@ -41,6 +41,7 @@ STOREMANAGER | &quot;StoreManager&quot;
 STORESTAFF | &quot;StoreStaff&quot;
 STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
 FINANCEMANGER | &quot;FinanceManger&quot;
+ONBOARDING | &quot;Onboarding&quot;
 SUPPORT | &quot;Support&quot;
 
 
@@ -63,6 +64,7 @@ CREATETEAMMATESTORESTAFF | &quot;CreateTeammateStoreStaff&quot;
 CREATETEAMMATESTOREREADACCESS | &quot;CreateTeammateStoreReadAccess&quot;
 CREATETEAMMATEFINANCEMANAGER | &quot;CreateTeammateFinanceManager&quot;
 CREATETEAMMATEINTEGRATOR | &quot;CreateTeammateIntegrator&quot;
+CREATETEAMMATEONBOARDING | &quot;CreateTeammateOnboarding&quot;
 VIEWAPMCONFIGURATIONS | &quot;ViewApmConfigurations&quot;
 EDITAPMCONFIGURATIONS | &quot;EditApmConfigurations&quot;
 VIEWCAMPAIGNSCONFIGURATIONS | &quot;ViewCampaignsConfigurations&quot;

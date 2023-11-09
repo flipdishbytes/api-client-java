@@ -30,7 +30,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-08T08:47:17.832Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
 public class CreateTeammate {
   @SerializedName("Email")
   private String email = null;
@@ -57,6 +57,8 @@ public class CreateTeammate {
     STOREREADONLYACCESS("StoreReadOnlyAccess"),
     
     FINANCEMANGER("FinanceManger"),
+    
+    ONBOARDING("Onboarding"),
     
     SUPPORT("Support");
 

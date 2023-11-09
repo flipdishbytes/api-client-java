@@ -17,8 +17,8 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppStoreAppConfiguration;
 import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
 import com.flipdish.apiclient.model.ExecuteConfigurationActionResult;
-import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationHeader;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
@@ -177,7 +177,7 @@ public class AppStoreConfigurationsApiTest {
     @Test
     public void getConfiguredAppsTest() throws ApiException {
         String appId = null;
-        RestApiArrayResultAppStoreAppConfigurationHeader response = api.getConfiguredApps(appId);
+        RestApiArrayResultAppStoreAppSummary response = api.getConfiguredApps(appId);
 
         // TODO: test validations
     }
