@@ -32,7 +32,7 @@ import java.util.List;
  * CatalogGroup
  */
 @ApiModel(description = "CatalogGroup")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class Group {
   @SerializedName("CatalogGroupId")
   private String catalogGroupId = null;

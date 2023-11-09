@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrderDm
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class OrderDm {
   @SerializedName("UserLocation")
   private CoordinatesDm userLocation = null;

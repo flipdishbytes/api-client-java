@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class MenuSectionItemBase {
   @SerializedName("Name")
   private String name = null;

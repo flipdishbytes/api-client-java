@@ -28,7 +28,7 @@ import java.io.IOException;
  * Account Details Base
  */
 @ApiModel(description = "Account Details Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class AccountDetailBase {
   @SerializedName("Name")
   private String name = null;

@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class RestApiArrayResultStripeCustomConnectedAccount {
   @SerializedName("Data")
   private List<StripeCustomConnectedAccount> data = new ArrayList<StripeCustomConnectedAccount>();

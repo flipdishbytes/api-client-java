@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra Connection Status Changed Event
  */
 @ApiModel(description = "Hydra Connection Status Changed Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T09:12:39.143Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
 public class HydraConnectionStatusChangedEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
