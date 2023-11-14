@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for an order related to a payout
  */
 @ApiModel(description = "Holds the information for an order related to a payout")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-09T12:53:20.043Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-14T10:44:03.779Z")
 public class PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -383,6 +383,9 @@ public class PayoutOrder {
   @SerializedName("FlatFeeExcludingVAT")
   private Double flatFeeExcludingVAT = null;
 
+  @SerializedName("FlatFeeIncludingVat")
+  private Double flatFeeIncludingVat = null;
+
   @SerializedName("PercentageFeeExcludingVat")
   private Double percentageFeeExcludingVat = null;
 
@@ -614,16 +617,34 @@ public class PayoutOrder {
   }
 
    /**
-   * Get flatFeeExcludingVAT
+   * Order flat fee amount excluding VAT
    * @return flatFeeExcludingVAT
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Order flat fee amount excluding VAT")
   public Double getFlatFeeExcludingVAT() {
     return flatFeeExcludingVAT;
   }
 
   public void setFlatFeeExcludingVAT(Double flatFeeExcludingVAT) {
     this.flatFeeExcludingVAT = flatFeeExcludingVAT;
+  }
+
+  public PayoutOrder flatFeeIncludingVat(Double flatFeeIncludingVat) {
+    this.flatFeeIncludingVat = flatFeeIncludingVat;
+    return this;
+  }
+
+   /**
+   * Order flat fee amount including VAT
+   * @return flatFeeIncludingVat
+  **/
+  @ApiModelProperty(value = "Order flat fee amount including VAT")
+  public Double getFlatFeeIncludingVat() {
+    return flatFeeIncludingVat;
+  }
+
+  public void setFlatFeeIncludingVat(Double flatFeeIncludingVat) {
+    this.flatFeeIncludingVat = flatFeeIncludingVat;
   }
 
   public PayoutOrder percentageFeeExcludingVat(Double percentageFeeExcludingVat) {
@@ -650,10 +671,10 @@ public class PayoutOrder {
   }
 
    /**
-   * Get percentageFeeExcludingVAT
+   * Order percentage fee excluding VAT
    * @return percentageFeeExcludingVAT
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Order percentage fee excluding VAT")
   public Double getPercentageFeeExcludingVAT() {
     return percentageFeeExcludingVAT;
   }
@@ -810,6 +831,7 @@ public class PayoutOrder {
         Objects.equals(this.voucher, payoutOrder.voucher) &&
         Objects.equals(this.flatFeeExcludingVat, payoutOrder.flatFeeExcludingVat) &&
         Objects.equals(this.flatFeeExcludingVAT, payoutOrder.flatFeeExcludingVAT) &&
+        Objects.equals(this.flatFeeIncludingVat, payoutOrder.flatFeeIncludingVat) &&
         Objects.equals(this.percentageFeeExcludingVat, payoutOrder.percentageFeeExcludingVat) &&
         Objects.equals(this.percentageFeeExcludingVAT, payoutOrder.percentageFeeExcludingVAT) &&
         Objects.equals(this.vat, payoutOrder.vat) &&
@@ -823,7 +845,7 @@ public class PayoutOrder {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, serviceChargeAmount, serviceChargePercentage);
+    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, flatFeeIncludingVat, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, serviceChargeAmount, serviceChargePercentage);
   }
 
 
@@ -844,6 +866,7 @@ public class PayoutOrder {
     sb.append("    voucher: ").append(toIndentedString(voucher)).append("\n");
     sb.append("    flatFeeExcludingVat: ").append(toIndentedString(flatFeeExcludingVat)).append("\n");
     sb.append("    flatFeeExcludingVAT: ").append(toIndentedString(flatFeeExcludingVAT)).append("\n");
+    sb.append("    flatFeeIncludingVat: ").append(toIndentedString(flatFeeIncludingVat)).append("\n");
     sb.append("    percentageFeeExcludingVat: ").append(toIndentedString(percentageFeeExcludingVat)).append("\n");
     sb.append("    percentageFeeExcludingVAT: ").append(toIndentedString(percentageFeeExcludingVAT)).append("\n");
     sb.append("    vat: ").append(toIndentedString(vat)).append("\n");
