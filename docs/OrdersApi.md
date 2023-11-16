@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
  **orderByRequestedForTime** | **Boolean**|  | [optional]
- **channels** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Unknown, Ios, Android, Web, Kiosk, Pos, TelephoneCall, Sms, PwaAndroid, PwaIos, Google]
+ **channels** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Unknown, Ios, Android, Web, Kiosk, Pos, TelephoneCall, Sms, PwaAndroid, PwaIos, Google, Photon]
  **orderIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
  **from** | **OffsetDateTime**|  | [optional]
  **to** | **OffsetDateTime**|  | [optional]
