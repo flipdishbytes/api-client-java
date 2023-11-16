@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **isValidOnlyOnce** | **Boolean** | Valid only once, by any customer (once used cannot be used again by any other customer) |  [optional]
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Starts On (Time in UTC) |  [optional]
 **expiryDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Expires On (Time in UTC) |  [optional]
+**channelRestrictions** | [**List&lt;ChannelRestrictionsEnum&gt;**](#List&lt;ChannelRestrictionsEnum&gt;) | Limit the channels this voucher can be used on |  [optional]
 
 
 <a name="VoucherTypeEnum"></a>
@@ -36,6 +37,18 @@ PERCENTAGEDISCOUNT | &quot;PercentageDiscount&quot;
 LUMPDISCOUNT | &quot;LumpDiscount&quot;
 ADDITEM | &quot;AddItem&quot;
 CREDITNOTE | &quot;CreditNote&quot;
+
+
+<a name="List<ChannelRestrictionsEnum>"></a>
+## Enum: List&lt;ChannelRestrictionsEnum&gt;
+Name | Value
+---- | -----
+IOS | &quot;Ios&quot;
+ANDROID | &quot;Android&quot;
+WEB | &quot;Web&quot;
+KIOSK | &quot;Kiosk&quot;
+POS | &quot;Pos&quot;
+GOOGLE | &quot;Google&quot;
 
 
 

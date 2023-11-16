@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher With Statistics
  */
 @ApiModel(description = "Voucher With Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-16T11:11:31.213Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-16T12:54:25.279Z")
 public class VoucherWithStats {
   @SerializedName("TotalUsed")
   private Integer totalUsed = null;
@@ -562,6 +562,64 @@ public class VoucherWithStats {
 
   @SerializedName("ExpiryDate")
   private OffsetDateTime expiryDate = null;
+
+  /**
+   * Gets or Sets channelRestrictions
+   */
+  @JsonAdapter(ChannelRestrictionsEnum.Adapter.class)
+  public enum ChannelRestrictionsEnum {
+    IOS("Ios"),
+    
+    ANDROID("Android"),
+    
+    WEB("Web"),
+    
+    KIOSK("Kiosk"),
+    
+    POS("Pos"),
+    
+    GOOGLE("Google");
+
+    private String value;
+
+    ChannelRestrictionsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ChannelRestrictionsEnum fromValue(String text) {
+      for (ChannelRestrictionsEnum b : ChannelRestrictionsEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ChannelRestrictionsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ChannelRestrictionsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ChannelRestrictionsEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return ChannelRestrictionsEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("ChannelRestrictions")
+  private List<ChannelRestrictionsEnum> channelRestrictions = null;
 
   public VoucherWithStats totalUsed(Integer totalUsed) {
     this.totalUsed = totalUsed;
@@ -1155,6 +1213,32 @@ public class VoucherWithStats {
     this.expiryDate = expiryDate;
   }
 
+  public VoucherWithStats channelRestrictions(List<ChannelRestrictionsEnum> channelRestrictions) {
+    this.channelRestrictions = channelRestrictions;
+    return this;
+  }
+
+  public VoucherWithStats addChannelRestrictionsItem(ChannelRestrictionsEnum channelRestrictionsItem) {
+    if (this.channelRestrictions == null) {
+      this.channelRestrictions = new ArrayList<ChannelRestrictionsEnum>();
+    }
+    this.channelRestrictions.add(channelRestrictionsItem);
+    return this;
+  }
+
+   /**
+   * Limit the channels this voucher can be used on
+   * @return channelRestrictions
+  **/
+  @ApiModelProperty(value = "Limit the channels this voucher can be used on")
+  public List<ChannelRestrictionsEnum> getChannelRestrictions() {
+    return channelRestrictions;
+  }
+
+  public void setChannelRestrictions(List<ChannelRestrictionsEnum> channelRestrictions) {
+    this.channelRestrictions = channelRestrictions;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1196,12 +1280,13 @@ public class VoucherWithStats {
         Objects.equals(this.isValidOncePerCustomer, voucherWithStats.isValidOncePerCustomer) &&
         Objects.equals(this.isValidOnlyOnce, voucherWithStats.isValidOnlyOnce) &&
         Objects.equals(this.startDate, voucherWithStats.startDate) &&
-        Objects.equals(this.expiryDate, voucherWithStats.expiryDate);
+        Objects.equals(this.expiryDate, voucherWithStats.expiryDate) &&
+        Objects.equals(this.channelRestrictions, voucherWithStats.channelRestrictions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate);
+    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, voucherSubType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions);
   }
 
 
@@ -1242,6 +1327,7 @@ public class VoucherWithStats {
     sb.append("    isValidOnlyOnce: ").append(toIndentedString(isValidOnlyOnce)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
+    sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
