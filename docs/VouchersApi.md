@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 <a name="getVouchers"></a>
 # **getVouchers**
-> RestApiPaginationResultVoucherSummary getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds)
+> RestApiPaginationResultVoucherSummary getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions)
 
 
 
@@ -200,8 +200,9 @@ List<String> statusSearch = Arrays.asList("statusSearch_example"); // List<Strin
 List<String> typeSearch = Arrays.asList("typeSearch_example"); // List<String> | 
 List<String> subTypeSearch = Arrays.asList("subTypeSearch_example"); // List<String> | 
 List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
+List<String> channelRestrictions = Arrays.asList("channelRestrictions_example"); // List<String> | 
 try {
-    RestApiPaginationResultVoucherSummary result = apiInstance.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+    RestApiPaginationResultVoucherSummary result = apiInstance.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VouchersApi#getVouchers");
@@ -221,6 +222,7 @@ Name | Type | Description  | Notes
  **typeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: PercentageDiscount, LumpDiscount, AddItem, CreditNote]
  **subTypeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: None, SignUp, Loyalty, Loyalty25, Retention, SecondaryRetention, Custom]
  **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **channelRestrictions** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Ios, Android, Web, Kiosk, Pos, Google]
 
 ### Return type
 

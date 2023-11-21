@@ -108,7 +108,8 @@ public class VouchersApiTest {
         List<String> typeSearch = null;
         List<String> subTypeSearch = null;
         List<Integer> storeIds = null;
-        RestApiPaginationResultVoucherSummary response = api.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+        List<String> channelRestrictions = null;
+        RestApiPaginationResultVoucherSummary response = api.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
 
         // TODO: test validations
     }

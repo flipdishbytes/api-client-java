@@ -466,12 +466,13 @@ public class VouchersApi {
      * @param typeSearch  (optional)
      * @param subTypeSearch  (optional)
      * @param storeIds  (optional)
+     * @param channelRestrictions  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getVouchersCall(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getVouchersCall(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, List<String> channelRestrictions, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -494,6 +495,8 @@ public class VouchersApi {
         localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "subTypeSearch", subTypeSearch));
         if (storeIds != null)
         localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "storeIds", storeIds));
+        if (channelRestrictions != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "channelRestrictions", channelRestrictions));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -528,7 +531,7 @@ public class VouchersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getVouchersValidateBeforeCall(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getVouchersValidateBeforeCall(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, List<String> channelRestrictions, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -536,7 +539,7 @@ public class VouchersApi {
         }
         
 
-        com.squareup.okhttp.Call call = getVouchersCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getVouchersCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions, progressListener, progressRequestListener);
         return call;
 
     }
@@ -552,11 +555,12 @@ public class VouchersApi {
      * @param typeSearch  (optional)
      * @param subTypeSearch  (optional)
      * @param storeIds  (optional)
+     * @param channelRestrictions  (optional)
      * @return RestApiPaginationResultVoucherSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultVoucherSummary getVouchers(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds) throws ApiException {
-        ApiResponse<RestApiPaginationResultVoucherSummary> resp = getVouchersWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds);
+    public RestApiPaginationResultVoucherSummary getVouchers(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, List<String> channelRestrictions) throws ApiException {
+        ApiResponse<RestApiPaginationResultVoucherSummary> resp = getVouchersWithHttpInfo(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
         return resp.getData();
     }
 
@@ -571,11 +575,12 @@ public class VouchersApi {
      * @param typeSearch  (optional)
      * @param subTypeSearch  (optional)
      * @param storeIds  (optional)
+     * @param channelRestrictions  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultVoucherSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultVoucherSummary> getVouchersWithHttpInfo(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds) throws ApiException {
-        com.squareup.okhttp.Call call = getVouchersValidateBeforeCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, null, null);
+    public ApiResponse<RestApiPaginationResultVoucherSummary> getVouchersWithHttpInfo(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, List<String> channelRestrictions) throws ApiException {
+        com.squareup.okhttp.Call call = getVouchersValidateBeforeCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions, null, null);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultVoucherSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -591,11 +596,12 @@ public class VouchersApi {
      * @param typeSearch  (optional)
      * @param subTypeSearch  (optional)
      * @param storeIds  (optional)
+     * @param channelRestrictions  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getVouchersAsync(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, final ApiCallback<RestApiPaginationResultVoucherSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getVouchersAsync(String appId, Integer pageIndex, Integer pageSize, List<String> searchCodes, List<String> statusSearch, List<String> typeSearch, List<String> subTypeSearch, List<Integer> storeIds, List<String> channelRestrictions, final ApiCallback<RestApiPaginationResultVoucherSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -616,7 +622,7 @@ public class VouchersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getVouchersValidateBeforeCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getVouchersValidateBeforeCall(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultVoucherSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
