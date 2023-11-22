@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **campaignId** | **Integer** | Id of campaign |  [optional]
 **statistics** | [**CampaignStatistics**](CampaignStatistics.md) | Statistics of campaign |  [optional]
 **stores** | [**List&lt;StoreCampaignStartTime&gt;**](StoreCampaignStartTime.md) | Stores this campaign applies to with campaign start time in Utc |  [optional]
+**publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
 **ordersBeforeReceivingVoucher** | **Integer** | Number of orders customer needs to make, before receiving voucher |  [optional]
 **percentDiscountAmount** | **Integer** | Discount amount in percents |  [optional]
 **roundingStrategy** | **Integer** | Controls how the loyalty voucher&#39;s amount is rounded |  [optional]

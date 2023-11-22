@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **campaignId** | **Integer** | Id of campaign |  [optional]
 **statistics** | [**CampaignStatistics**](CampaignStatistics.md) | Statistics of campaign |  [optional]
 **stores** | [**List&lt;StoreCampaignStartTime&gt;**](StoreCampaignStartTime.md) | Stores this campaign applies to with campaign start time in Utc |  [optional]
+**publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
 **notifyCustomerAfterMinutes** | **Integer** | Time in minutes, after which customer will receive retention voucher if he/she does not order |  [optional]
 **percentDiscountAmount** | **Integer** | Discount amount in percents |  [optional]
 **lumpDiscountAmount** | **Double** | Discount amount in sum of money |  [optional]

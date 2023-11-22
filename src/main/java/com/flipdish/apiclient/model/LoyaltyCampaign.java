@@ -27,12 +27,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Loyalty campaign
  */
 @ApiModel(description = "Loyalty campaign")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-21T09:52:46.010Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-22T11:49:09.632Z")
 public class LoyaltyCampaign {
   @SerializedName("CampaignId")
   private Integer campaignId = null;
@@ -42,6 +43,9 @@ public class LoyaltyCampaign {
 
   @SerializedName("Stores")
   private List<StoreCampaignStartTime> stores = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   @SerializedName("OrdersBeforeReceivingVoucher")
   private Integer ordersBeforeReceivingVoucher = null;
@@ -133,6 +137,24 @@ public class LoyaltyCampaign {
 
   public void setStores(List<StoreCampaignStartTime> stores) {
     this.stores = stores;
+  }
+
+  public LoyaltyCampaign publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
   }
 
   public LoyaltyCampaign ordersBeforeReceivingVoucher(Integer ordersBeforeReceivingVoucher) {
@@ -342,6 +364,7 @@ public class LoyaltyCampaign {
     return Objects.equals(this.campaignId, loyaltyCampaign.campaignId) &&
         Objects.equals(this.statistics, loyaltyCampaign.statistics) &&
         Objects.equals(this.stores, loyaltyCampaign.stores) &&
+        Objects.equals(this.publicId, loyaltyCampaign.publicId) &&
         Objects.equals(this.ordersBeforeReceivingVoucher, loyaltyCampaign.ordersBeforeReceivingVoucher) &&
         Objects.equals(this.percentDiscountAmount, loyaltyCampaign.percentDiscountAmount) &&
         Objects.equals(this.roundingStrategy, loyaltyCampaign.roundingStrategy) &&
@@ -356,7 +379,7 @@ public class LoyaltyCampaign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, statistics, stores, ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds);
+    return Objects.hash(campaignId, statistics, stores, publicId, ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds);
   }
 
 
@@ -368,6 +391,7 @@ public class LoyaltyCampaign {
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    statistics: ").append(toIndentedString(statistics)).append("\n");
     sb.append("    stores: ").append(toIndentedString(stores)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("    ordersBeforeReceivingVoucher: ").append(toIndentedString(ordersBeforeReceivingVoucher)).append("\n");
     sb.append("    percentDiscountAmount: ").append(toIndentedString(percentDiscountAmount)).append("\n");
     sb.append("    roundingStrategy: ").append(toIndentedString(roundingStrategy)).append("\n");
