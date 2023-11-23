@@ -28,7 +28,7 @@ import java.io.IOException;
  * Job Cancellation
  */
 @ApiModel(description = "Job Cancellation")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-22T13:09:00.059Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:07:29.589Z")
 public class JobCancellation {
   @SerializedName("CanceledBy")
   private String canceledBy = null;

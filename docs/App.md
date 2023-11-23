@@ -71,6 +71,7 @@ VIEWCAMPAIGNSCONFIGURATIONS | &quot;ViewCampaignsConfigurations&quot;
 CREATECAMPAIGNSCONFIGURATIONS | &quot;CreateCampaignsConfigurations&quot;
 UPDATECAMPAIGNSCONFIGURATIONS | &quot;UpdateCampaignsConfigurations&quot;
 DELETECAMPAIGNSCONFIGURATIONS | &quot;DeleteCampaignsConfigurations&quot;
+STAMPLOYALTYCARDAGAINSTCAMPAIGNSCONFIGURATIONS | &quot;StampLoyaltyCardAgainstCampaignsConfigurations&quot;
 VIEWDEVELOPERSSETTINGS | &quot;ViewDevelopersSettings&quot;
 EDITDEVELOPERSSETTINGS | &quot;EditDevelopersSettings&quot;
 VIEWORDERS | &quot;ViewOrders&quot;
