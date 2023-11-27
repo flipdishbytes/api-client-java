@@ -28,7 +28,7 @@ import java.io.IOException;
  * Order Delivery Status Information
  */
 @ApiModel(description = "Order Delivery Status Information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T14:48:47.855Z")
 public class OrderDeliveryInformationBase {
   @SerializedName("ExternalReferenceId")
   private String externalReferenceId = null;

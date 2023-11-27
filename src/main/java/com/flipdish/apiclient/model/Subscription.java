@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription
  */
 @ApiModel(description = "Subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T14:48:47.855Z")
 public class Subscription {
   @SerializedName("Products")
   private List<SubscriptionProduct> products = new ArrayList<SubscriptionProduct>();

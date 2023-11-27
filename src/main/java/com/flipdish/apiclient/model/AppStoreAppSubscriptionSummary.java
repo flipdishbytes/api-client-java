@@ -28,7 +28,7 @@ import java.io.IOException;
  * App store subscription information
  */
 @ApiModel(description = "App store subscription information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T14:48:47.855Z")
 public class AppStoreAppSubscriptionSummary {
   @SerializedName("TotalSubscriptions")
   private Integer totalSubscriptions = null;

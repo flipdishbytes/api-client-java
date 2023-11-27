@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base of Index Page
  */
 @ApiModel(description = "Base of Index Page")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T14:48:47.855Z")
 public class IndexPageBase {
   @SerializedName("AboutSectionEnabled")
   private Boolean aboutSectionEnabled = null;

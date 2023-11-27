@@ -28,7 +28,7 @@ import java.io.IOException;
  * Mobile Apps Image
  */
 @ApiModel(description = "Mobile Apps Image")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T14:48:47.855Z")
 public class MobileAppsImage {
   @SerializedName("ImageUri")
   private String imageUri = null;
