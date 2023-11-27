@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-23T14:47:38.708Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -460,6 +460,12 @@ public class Payout {
   @SerializedName("PosSalesFees")
   private Double posSalesFees = null;
 
+  @SerializedName("DeliveryFees")
+  private Double deliveryFees = null;
+
+  @SerializedName("TipFees")
+  private Double tipFees = null;
+
   @SerializedName("OnlineSalesRefundedAmount")
   private Double onlineSalesRefundedAmount = null;
 
@@ -874,6 +880,42 @@ public class Payout {
     this.posSalesFees = posSalesFees;
   }
 
+  public Payout deliveryFees(Double deliveryFees) {
+    this.deliveryFees = deliveryFees;
+    return this;
+  }
+
+   /**
+   * Delivery fees
+   * @return deliveryFees
+  **/
+  @ApiModelProperty(value = "Delivery fees")
+  public Double getDeliveryFees() {
+    return deliveryFees;
+  }
+
+  public void setDeliveryFees(Double deliveryFees) {
+    this.deliveryFees = deliveryFees;
+  }
+
+  public Payout tipFees(Double tipFees) {
+    this.tipFees = tipFees;
+    return this;
+  }
+
+   /**
+   * Tip fees
+   * @return tipFees
+  **/
+  @ApiModelProperty(value = "Tip fees")
+  public Double getTipFees() {
+    return tipFees;
+  }
+
+  public void setTipFees(Double tipFees) {
+    this.tipFees = tipFees;
+  }
+
   public Payout onlineSalesRefundedAmount(Double onlineSalesRefundedAmount) {
     this.onlineSalesRefundedAmount = onlineSalesRefundedAmount;
     return this;
@@ -1228,6 +1270,8 @@ public class Payout {
         Objects.equals(this.onlineSalesRefundedFees, payout.onlineSalesRefundedFees) &&
         Objects.equals(this.onlineSalesFees, payout.onlineSalesFees) &&
         Objects.equals(this.posSalesFees, payout.posSalesFees) &&
+        Objects.equals(this.deliveryFees, payout.deliveryFees) &&
+        Objects.equals(this.tipFees, payout.tipFees) &&
         Objects.equals(this.onlineSalesRefundedAmount, payout.onlineSalesRefundedAmount) &&
         Objects.equals(this.posSalesRefundedAmount, payout.posSalesRefundedAmount) &&
         Objects.equals(this.onlineSalesTax, payout.onlineSalesTax) &&
@@ -1250,7 +1294,7 @@ public class Payout {
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, deliveryFees, tipFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
   }
 
 
@@ -1279,6 +1323,8 @@ public class Payout {
     sb.append("    onlineSalesRefundedFees: ").append(toIndentedString(onlineSalesRefundedFees)).append("\n");
     sb.append("    onlineSalesFees: ").append(toIndentedString(onlineSalesFees)).append("\n");
     sb.append("    posSalesFees: ").append(toIndentedString(posSalesFees)).append("\n");
+    sb.append("    deliveryFees: ").append(toIndentedString(deliveryFees)).append("\n");
+    sb.append("    tipFees: ").append(toIndentedString(tipFees)).append("\n");
     sb.append("    onlineSalesRefundedAmount: ").append(toIndentedString(onlineSalesRefundedAmount)).append("\n");
     sb.append("    posSalesRefundedAmount: ").append(toIndentedString(posSalesRefundedAmount)).append("\n");
     sb.append("    onlineSalesTax: ").append(toIndentedString(onlineSalesTax)).append("\n");

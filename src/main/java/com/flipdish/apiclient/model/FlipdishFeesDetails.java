@@ -28,7 +28,7 @@ import java.io.IOException;
  * Fees breakdown
  */
 @ApiModel(description = "Fees breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-23T14:47:38.708Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T13:32:20.129Z")
 public class FlipdishFeesDetails {
   @SerializedName("OnlineSalesFees")
   private Double onlineSalesFees = null;
@@ -56,6 +56,12 @@ public class FlipdishFeesDetails {
 
   @SerializedName("TotalFees")
   private Double totalFees = null;
+
+  @SerializedName("DeliveryFees")
+  private Double deliveryFees = null;
+
+  @SerializedName("TipFees")
+  private Double tipFees = null;
 
   public FlipdishFeesDetails onlineSalesFees(Double onlineSalesFees) {
     this.onlineSalesFees = onlineSalesFees;
@@ -219,6 +225,42 @@ public class FlipdishFeesDetails {
     this.totalFees = totalFees;
   }
 
+  public FlipdishFeesDetails deliveryFees(Double deliveryFees) {
+    this.deliveryFees = deliveryFees;
+    return this;
+  }
+
+   /**
+   * Delivery fees
+   * @return deliveryFees
+  **/
+  @ApiModelProperty(value = "Delivery fees")
+  public Double getDeliveryFees() {
+    return deliveryFees;
+  }
+
+  public void setDeliveryFees(Double deliveryFees) {
+    this.deliveryFees = deliveryFees;
+  }
+
+  public FlipdishFeesDetails tipFees(Double tipFees) {
+    this.tipFees = tipFees;
+    return this;
+  }
+
+   /**
+   * Tip fees
+   * @return tipFees
+  **/
+  @ApiModelProperty(value = "Tip fees")
+  public Double getTipFees() {
+    return tipFees;
+  }
+
+  public void setTipFees(Double tipFees) {
+    this.tipFees = tipFees;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,12 +279,14 @@ public class FlipdishFeesDetails {
         Objects.equals(this.cashSalesRefundedFees, flipdishFeesDetails.cashSalesRefundedFees) &&
         Objects.equals(this.posSalesRefundedFees, flipdishFeesDetails.posSalesRefundedFees) &&
         Objects.equals(this.salesFeesVat, flipdishFeesDetails.salesFeesVat) &&
-        Objects.equals(this.totalFees, flipdishFeesDetails.totalFees);
+        Objects.equals(this.totalFees, flipdishFeesDetails.totalFees) &&
+        Objects.equals(this.deliveryFees, flipdishFeesDetails.deliveryFees) &&
+        Objects.equals(this.tipFees, flipdishFeesDetails.tipFees);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(onlineSalesFees, cashSalesFees, posSalesFees, totalSalesFees, onlineSalesRefundedFees, cashSalesRefundedFees, posSalesRefundedFees, salesFeesVat, totalFees);
+    return Objects.hash(onlineSalesFees, cashSalesFees, posSalesFees, totalSalesFees, onlineSalesRefundedFees, cashSalesRefundedFees, posSalesRefundedFees, salesFeesVat, totalFees, deliveryFees, tipFees);
   }
 
 
@@ -260,6 +304,8 @@ public class FlipdishFeesDetails {
     sb.append("    posSalesRefundedFees: ").append(toIndentedString(posSalesRefundedFees)).append("\n");
     sb.append("    salesFeesVat: ").append(toIndentedString(salesFeesVat)).append("\n");
     sb.append("    totalFees: ").append(toIndentedString(totalFees)).append("\n");
+    sb.append("    deliveryFees: ").append(toIndentedString(deliveryFees)).append("\n");
+    sb.append("    tipFees: ").append(toIndentedString(tipFees)).append("\n");
     sb.append("}");
     return sb.toString();
   }
