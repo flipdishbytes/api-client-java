@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AddAppStoreSubscriptionRequest;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreSubscriptionItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionJobResponse;
@@ -50,8 +51,25 @@ public class AppStoreSubscriptionsApiTest {
     public void createAppStoreSubscriptionTest() throws ApiException {
         String appId = null;
         String appStoreAppId = null;
+        RestApiArrayResultAppStoreSubscriptionItem response = api.createAppStoreSubscription(appId, appStoreAppId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createAppStoreSubscription_0Test() throws ApiException {
+        String appId = null;
+        String appStoreAppId = null;
         AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest = null;
-        RestApiResultAppStoreSubscriptionJobResponse response = api.createAppStoreSubscription(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+        RestApiResultAppStoreSubscriptionJobResponse response = api.createAppStoreSubscription_0(appId, appStoreAppId, addAppStoreSubscriptionRequest);
 
         // TODO: test validations
     }

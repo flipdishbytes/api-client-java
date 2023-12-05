@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Search Criteria for Audit Logs
  */
 @ApiModel(description = "Search Criteria for Audit Logs")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-01T12:34:33.674Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-05T15:17:26.169Z")
 public class SearchCriteria {
   @SerializedName("Limit")
   private Integer limit = null;

@@ -31,7 +31,7 @@ import java.util.List;
  * App store app configuration webhook event
  */
 @ApiModel(description = "App store app configuration webhook event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-01T12:34:33.674Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-05T15:17:26.169Z")
 public class UpdateAppStoreAppConfigurationWebhookDTO {
   @SerializedName("Id")
   private String id = null;

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PreviousOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-01T12:34:33.674Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-05T15:17:26.169Z")
 public class PreviousOrder {
   @SerializedName("DeliveryType")
   private String deliveryType = null;

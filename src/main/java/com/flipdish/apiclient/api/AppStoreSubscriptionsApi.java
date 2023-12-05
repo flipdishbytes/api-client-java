@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.AddAppStoreSubscriptionRequest;
+import com.flipdish.apiclient.model.RestApiArrayResultAppStoreSubscriptionItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionJobResponse;
@@ -64,13 +65,146 @@ public class AppStoreSubscriptionsApi {
      * Build call for createAppStoreSubscription
      * @param appId  (required)
      * @param appStoreAppId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call createAppStoreSubscriptionCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "appStoreAppId" + "\\}", apiClient.escapeString(appStoreAppId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call createAppStoreSubscriptionValidateBeforeCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling createAppStoreSubscription(Async)");
+        }
+        
+        // verify the required parameter 'appStoreAppId' is set
+        if (appStoreAppId == null) {
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling createAppStoreSubscription(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = createAppStoreSubscriptionCall(appId, appStoreAppId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @return RestApiArrayResultAppStoreSubscriptionItem
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultAppStoreSubscriptionItem createAppStoreSubscription(String appId, String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> resp = createAppStoreSubscriptionWithHttpInfo(appId, appStoreAppId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultAppStoreSubscriptionItem&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultAppStoreSubscriptionItem> createAppStoreSubscriptionWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
+        com.squareup.okhttp.Call call = createAppStoreSubscriptionValidateBeforeCall(appId, appStoreAppId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreSubscriptionItem>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call createAppStoreSubscriptionAsync(String appId, String appStoreAppId, final ApiCallback<RestApiArrayResultAppStoreSubscriptionItem> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = createAppStoreSubscriptionValidateBeforeCall(appId, appStoreAppId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultAppStoreSubscriptionItem>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for createAppStoreSubscription_0
+     * @param appId  (required)
+     * @param appStoreAppId  (required)
      * @param addAppStoreSubscriptionRequest  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createAppStoreSubscriptionCall(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call createAppStoreSubscription_0Call(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = addAppStoreSubscriptionRequest;
 
         // create path and map variables
@@ -114,25 +248,25 @@ public class AppStoreSubscriptionsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createAppStoreSubscriptionValidateBeforeCall(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createAppStoreSubscription_0ValidateBeforeCall(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling createAppStoreSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling createAppStoreSubscription_0(Async)");
         }
         
         // verify the required parameter 'appStoreAppId' is set
         if (appStoreAppId == null) {
-            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling createAppStoreSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'appStoreAppId' when calling createAppStoreSubscription_0(Async)");
         }
         
         // verify the required parameter 'addAppStoreSubscriptionRequest' is set
         if (addAppStoreSubscriptionRequest == null) {
-            throw new ApiException("Missing the required parameter 'addAppStoreSubscriptionRequest' when calling createAppStoreSubscription(Async)");
+            throw new ApiException("Missing the required parameter 'addAppStoreSubscriptionRequest' when calling createAppStoreSubscription_0(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = createAppStoreSubscriptionCall(appId, appStoreAppId, addAppStoreSubscriptionRequest, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createAppStoreSubscription_0Call(appId, appStoreAppId, addAppStoreSubscriptionRequest, progressListener, progressRequestListener);
         return call;
 
     }
@@ -146,8 +280,8 @@ public class AppStoreSubscriptionsApi {
      * @return RestApiResultAppStoreSubscriptionJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppStoreSubscriptionJobResponse createAppStoreSubscription(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest) throws ApiException {
-        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> resp = createAppStoreSubscriptionWithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+    public RestApiResultAppStoreSubscriptionJobResponse createAppStoreSubscription_0(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest) throws ApiException {
+        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> resp = createAppStoreSubscription_0WithHttpInfo(appId, appStoreAppId, addAppStoreSubscriptionRequest);
         return resp.getData();
     }
 
@@ -160,8 +294,8 @@ public class AppStoreSubscriptionsApi {
      * @return ApiResponse&lt;RestApiResultAppStoreSubscriptionJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> createAppStoreSubscriptionWithHttpInfo(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest) throws ApiException {
-        com.squareup.okhttp.Call call = createAppStoreSubscriptionValidateBeforeCall(appId, appStoreAppId, addAppStoreSubscriptionRequest, null, null);
+    public ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> createAppStoreSubscription_0WithHttpInfo(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest) throws ApiException {
+        com.squareup.okhttp.Call call = createAppStoreSubscription_0ValidateBeforeCall(appId, appStoreAppId, addAppStoreSubscriptionRequest, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultAppStoreSubscriptionJobResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -176,7 +310,7 @@ public class AppStoreSubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createAppStoreSubscriptionAsync(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ApiCallback<RestApiResultAppStoreSubscriptionJobResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call createAppStoreSubscription_0Async(String appId, String appStoreAppId, AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest, final ApiCallback<RestApiResultAppStoreSubscriptionJobResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -197,7 +331,7 @@ public class AppStoreSubscriptionsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createAppStoreSubscriptionValidateBeforeCall(appId, appStoreAppId, addAppStoreSubscriptionRequest, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createAppStoreSubscription_0ValidateBeforeCall(appId, appStoreAppId, addAppStoreSubscriptionRequest, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultAppStoreSubscriptionJobResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
