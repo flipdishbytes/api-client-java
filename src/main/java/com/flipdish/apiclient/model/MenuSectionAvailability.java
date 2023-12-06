@@ -31,7 +31,7 @@ import java.util.List;
  * Menu section availability
  */
 @ApiModel(description = "Menu section availability")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-06T09:08:38.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-06T15:55:48.779Z")
 public class MenuSectionAvailability {
   @SerializedName("AvailableTimes")
   private List<BusinessHoursPeriod> availableTimes = null;
