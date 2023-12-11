@@ -28,7 +28,7 @@ import java.io.IOException;
  * Terminal location request
  */
 @ApiModel(description = "Terminal location request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-11T11:37:38.216Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-11T15:03:53.356Z")
 public class GeoPointRequest {
   @SerializedName("Latitude")
   private Double latitude = null;
