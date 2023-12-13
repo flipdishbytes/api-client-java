@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import com.flipdish.apiclient.model.CustomerCreateModel;
 import com.flipdish.apiclient.model.CustomerUpdateModel;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -35,6 +36,23 @@ public class CustomersApiTest {
 
     private final CustomersApi api = new CustomersApi();
 
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createCustomerTest() throws ApiException {
+        String appId = null;
+        CustomerCreateModel customerCreateModel = null;
+        RestApiResultCustomer response = api.createCustomer(appId, customerCreateModel);
+
+        // TODO: test validations
+    }
     
     /**
      * 

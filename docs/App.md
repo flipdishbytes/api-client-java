@@ -131,6 +131,7 @@ DELETETERMINAL | &quot;DeleteTerminal&quot;
 VIEWKIOSKTELEMETRY | &quot;ViewKioskTelemetry&quot;
 VIEWCUSTOMERS | &quot;ViewCustomers&quot;
 EDITCUSTOMERS | &quot;EditCustomers&quot;
+CREATECUSTOMERS | &quot;CreateCustomers&quot;
 CREATECATALOGELEMENTS | &quot;CreateCatalogElements&quot;
 UPDATECATALOGELEMENTS | &quot;UpdateCatalogElements&quot;
 VIEWCATALOGELEMENTS | &quot;ViewCatalogElements&quot;

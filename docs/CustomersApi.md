@@ -4,9 +4,63 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createCustomer**](CustomersApi.md#createCustomer) | **POST** /api/v1.0/{appId}/customers | 
 [**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 [**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
+
+<a name="createCustomer"></a>
+# **createCustomer**
+> RestApiResultCustomer createCustomer(appId, customerCreateModel)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CustomersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CustomersApi apiInstance = new CustomersApi();
+String appId = "appId_example"; // String | 
+CustomerCreateModel customerCreateModel = new CustomerCreateModel(); // CustomerCreateModel | 
+try {
+    RestApiResultCustomer result = apiInstance.createCustomer(appId, customerCreateModel);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CustomersApi#createCustomer");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **customerCreateModel** | [**CustomerCreateModel**](CustomerCreateModel.md)|  |
+
+### Return type
+
+[**RestApiResultCustomer**](RestApiResultCustomer.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="getCustomerById"></a>
 # **getCustomerById**
