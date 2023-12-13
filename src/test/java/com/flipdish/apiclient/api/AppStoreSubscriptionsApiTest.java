@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.AddAppStoreSubscriptionRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreSubscriptionItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionChangeJobStatusResponse;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionJobResponse;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -88,6 +89,24 @@ public class AppStoreSubscriptionsApiTest {
         String appStoreAppId = null;
         String subscriptionId = null;
         RestApiStringResult response = api.deleteAppSubscription(appId, appStoreAppId, subscriptionId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppStoreSubscriptionChangeJobStatusTest() throws ApiException {
+        String appId = null;
+        String appStoreAppId = null;
+        String jobId = null;
+        RestApiResultAppStoreSubscriptionChangeJobStatusResponse response = api.getAppStoreSubscriptionChangeJobStatus(appId, appStoreAppId, jobId);
 
         // TODO: test validations
     }
