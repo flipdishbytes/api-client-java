@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-02T10:27:47.674Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-02T12:13:30.221Z")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -513,6 +513,15 @@ public class Payout {
 
   @SerializedName("PayGreenSalesAmount")
   private Double payGreenSalesAmount = null;
+
+  @SerializedName("DeliveryIntegrationFee")
+  private Double deliveryIntegrationFee = null;
+
+  @SerializedName("DeliveryIntegrationTipFee")
+  private Double deliveryIntegrationTipFee = null;
+
+  @SerializedName("TotalThirdPartyFees")
+  private Double totalThirdPartyFees = null;
 
   public Payout payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -1198,6 +1207,60 @@ public class Payout {
     this.payGreenSalesAmount = payGreenSalesAmount;
   }
 
+  public Payout deliveryIntegrationFee(Double deliveryIntegrationFee) {
+    this.deliveryIntegrationFee = deliveryIntegrationFee;
+    return this;
+  }
+
+   /**
+   * Third party integration delivery fee
+   * @return deliveryIntegrationFee
+  **/
+  @ApiModelProperty(value = "Third party integration delivery fee")
+  public Double getDeliveryIntegrationFee() {
+    return deliveryIntegrationFee;
+  }
+
+  public void setDeliveryIntegrationFee(Double deliveryIntegrationFee) {
+    this.deliveryIntegrationFee = deliveryIntegrationFee;
+  }
+
+  public Payout deliveryIntegrationTipFee(Double deliveryIntegrationTipFee) {
+    this.deliveryIntegrationTipFee = deliveryIntegrationTipFee;
+    return this;
+  }
+
+   /**
+   * Third party integration delivery tip fee
+   * @return deliveryIntegrationTipFee
+  **/
+  @ApiModelProperty(value = "Third party integration delivery tip fee")
+  public Double getDeliveryIntegrationTipFee() {
+    return deliveryIntegrationTipFee;
+  }
+
+  public void setDeliveryIntegrationTipFee(Double deliveryIntegrationTipFee) {
+    this.deliveryIntegrationTipFee = deliveryIntegrationTipFee;
+  }
+
+  public Payout totalThirdPartyFees(Double totalThirdPartyFees) {
+    this.totalThirdPartyFees = totalThirdPartyFees;
+    return this;
+  }
+
+   /**
+   * Total third party integration fees
+   * @return totalThirdPartyFees
+  **/
+  @ApiModelProperty(value = "Total third party integration fees")
+  public Double getTotalThirdPartyFees() {
+    return totalThirdPartyFees;
+  }
+
+  public void setTotalThirdPartyFees(Double totalThirdPartyFees) {
+    this.totalThirdPartyFees = totalThirdPartyFees;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1245,12 +1308,15 @@ public class Payout {
         Objects.equals(this.totalOtherCharges, payout.totalOtherCharges) &&
         Objects.equals(this.openingBalance, payout.openingBalance) &&
         Objects.equals(this.closingBalance, payout.closingBalance) &&
-        Objects.equals(this.payGreenSalesAmount, payout.payGreenSalesAmount);
+        Objects.equals(this.payGreenSalesAmount, payout.payGreenSalesAmount) &&
+        Objects.equals(this.deliveryIntegrationFee, payout.deliveryIntegrationFee) &&
+        Objects.equals(this.deliveryIntegrationTipFee, payout.deliveryIntegrationTipFee) &&
+        Objects.equals(this.totalThirdPartyFees, payout.totalThirdPartyFees);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount, deliveryIntegrationFee, deliveryIntegrationTipFee, totalThirdPartyFees);
   }
 
 
@@ -1297,6 +1363,9 @@ public class Payout {
     sb.append("    openingBalance: ").append(toIndentedString(openingBalance)).append("\n");
     sb.append("    closingBalance: ").append(toIndentedString(closingBalance)).append("\n");
     sb.append("    payGreenSalesAmount: ").append(toIndentedString(payGreenSalesAmount)).append("\n");
+    sb.append("    deliveryIntegrationFee: ").append(toIndentedString(deliveryIntegrationFee)).append("\n");
+    sb.append("    deliveryIntegrationTipFee: ").append(toIndentedString(deliveryIntegrationTipFee)).append("\n");
+    sb.append("    totalThirdPartyFees: ").append(toIndentedString(totalThirdPartyFees)).append("\n");
     sb.append("}");
     return sb.toString();
   }

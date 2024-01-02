@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **otherCharges** | [**OtherChargesDetails**](OtherChargesDetails.md) | Breakdown of other charges |  [optional]
 **balance** | [**BalanceDetails**](BalanceDetails.md) | Period opening and closing balance |  [optional]
 **posRevenue** | [**PosRevenueDetails**](PosRevenueDetails.md) | Breakdown of POS charges |  [optional]
+**thirdPartyFees** | [**ThirdPartyFeesDetails**](ThirdPartyFeesDetails.md) | Third party integration fees |  [optional]
 
 
 
