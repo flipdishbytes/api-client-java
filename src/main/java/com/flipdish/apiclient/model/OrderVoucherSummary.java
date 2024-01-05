@@ -28,8 +28,11 @@ import java.io.IOException;
  * Voucher summary
  */
 @ApiModel(description = "Voucher summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-04T12:29:21.571Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-05T09:57:41.133Z")
 public class OrderVoucherSummary {
+  @SerializedName("VoucherId")
+  private Integer voucherId = null;
+
   @SerializedName("Name")
   private String name = null;
 
@@ -156,6 +159,24 @@ public class OrderVoucherSummary {
   @SerializedName("SubType")
   private SubTypeEnum subType = null;
 
+  public OrderVoucherSummary voucherId(Integer voucherId) {
+    this.voucherId = voucherId;
+    return this;
+  }
+
+   /**
+   * Voucher ID
+   * @return voucherId
+  **/
+  @ApiModelProperty(value = "Voucher ID")
+  public Integer getVoucherId() {
+    return voucherId;
+  }
+
+  public void setVoucherId(Integer voucherId) {
+    this.voucherId = voucherId;
+  }
+
   public OrderVoucherSummary name(String name) {
     this.name = name;
     return this;
@@ -274,7 +295,8 @@ public class OrderVoucherSummary {
       return false;
     }
     OrderVoucherSummary orderVoucherSummary = (OrderVoucherSummary) o;
-    return Objects.equals(this.name, orderVoucherSummary.name) &&
+    return Objects.equals(this.voucherId, orderVoucherSummary.voucherId) &&
+        Objects.equals(this.name, orderVoucherSummary.name) &&
         Objects.equals(this.description, orderVoucherSummary.description) &&
         Objects.equals(this.code, orderVoucherSummary.code) &&
         Objects.equals(this.amount, orderVoucherSummary.amount) &&
@@ -284,7 +306,7 @@ public class OrderVoucherSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, code, amount, type, subType);
+    return Objects.hash(voucherId, name, description, code, amount, type, subType);
   }
 
 
@@ -293,6 +315,7 @@ public class OrderVoucherSummary {
     StringBuilder sb = new StringBuilder();
     sb.append("class OrderVoucherSummary {\n");
     
+    sb.append("    voucherId: ").append(toIndentedString(voucherId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");

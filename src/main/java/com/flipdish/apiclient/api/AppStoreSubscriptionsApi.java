@@ -33,7 +33,6 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionChangeJobStatusResponse;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionJobResponse;
-import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreSubscriptionRequest;
 
@@ -421,11 +420,11 @@ public class AppStoreSubscriptionsApi {
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param subscriptionId  (required)
-     * @return RestApiStringResult
+     * @return RestApiResultAppStoreSubscriptionJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiStringResult deleteAppSubscription(String appId, String appStoreAppId, String subscriptionId) throws ApiException {
-        ApiResponse<RestApiStringResult> resp = deleteAppSubscriptionWithHttpInfo(appId, appStoreAppId, subscriptionId);
+    public RestApiResultAppStoreSubscriptionJobResponse deleteAppSubscription(String appId, String appStoreAppId, String subscriptionId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> resp = deleteAppSubscriptionWithHttpInfo(appId, appStoreAppId, subscriptionId);
         return resp.getData();
     }
 
@@ -435,12 +434,12 @@ public class AppStoreSubscriptionsApi {
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param subscriptionId  (required)
-     * @return ApiResponse&lt;RestApiStringResult&gt;
+     * @return ApiResponse&lt;RestApiResultAppStoreSubscriptionJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiStringResult> deleteAppSubscriptionWithHttpInfo(String appId, String appStoreAppId, String subscriptionId) throws ApiException {
+    public ApiResponse<RestApiResultAppStoreSubscriptionJobResponse> deleteAppSubscriptionWithHttpInfo(String appId, String appStoreAppId, String subscriptionId) throws ApiException {
         com.squareup.okhttp.Call call = deleteAppSubscriptionValidateBeforeCall(appId, appStoreAppId, subscriptionId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreSubscriptionJobResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -454,7 +453,7 @@ public class AppStoreSubscriptionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteAppSubscriptionAsync(String appId, String appStoreAppId, String subscriptionId, final ApiCallback<RestApiStringResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteAppSubscriptionAsync(String appId, String appStoreAppId, String subscriptionId, final ApiCallback<RestApiResultAppStoreSubscriptionJobResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -476,7 +475,7 @@ public class AppStoreSubscriptionsApi {
         }
 
         com.squareup.okhttp.Call call = deleteAppSubscriptionValidateBeforeCall(appId, appStoreAppId, subscriptionId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreSubscriptionJobResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

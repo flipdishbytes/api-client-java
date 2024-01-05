@@ -20,7 +20,6 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionChangeJobStatusResponse;
 import com.flipdish.apiclient.model.RestApiResultAppStoreSubscriptionJobResponse;
-import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreSubscriptionRequest;
 import org.junit.Test;
@@ -88,7 +87,7 @@ public class AppStoreSubscriptionsApiTest {
         String appId = null;
         String appStoreAppId = null;
         String subscriptionId = null;
-        RestApiStringResult response = api.deleteAppSubscription(appId, appStoreAppId, subscriptionId);
+        RestApiResultAppStoreSubscriptionJobResponse response = api.deleteAppSubscription(appId, appStoreAppId, subscriptionId);
 
         // TODO: test validations
     }

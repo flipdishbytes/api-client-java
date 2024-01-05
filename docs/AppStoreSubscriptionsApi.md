@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteAppSubscription"></a>
 # **deleteAppSubscription**
-> RestApiStringResult deleteAppSubscription(appId, appStoreAppId, subscriptionId)
+> RestApiResultAppStoreSubscriptionJobResponse deleteAppSubscription(appId, appStoreAppId, subscriptionId)
 
 
 
@@ -145,7 +145,7 @@ String appId = "appId_example"; // String |
 String appStoreAppId = "appStoreAppId_example"; // String | 
 String subscriptionId = "subscriptionId_example"; // String | 
 try {
-    RestApiStringResult result = apiInstance.deleteAppSubscription(appId, appStoreAppId, subscriptionId);
+    RestApiResultAppStoreSubscriptionJobResponse result = apiInstance.deleteAppSubscription(appId, appStoreAppId, subscriptionId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreSubscriptionsApi#deleteAppSubscription");
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiStringResult**](RestApiStringResult.md)
+[**RestApiResultAppStoreSubscriptionJobResponse**](RestApiResultAppStoreSubscriptionJobResponse.md)
 
 ### Authorization
 

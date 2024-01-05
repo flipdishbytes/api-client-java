@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**voucherId** | **Integer** | Voucher ID |  [optional]
 **name** | **String** | Voucher name |  [optional]
 **description** | **String** | Voucher description |  [optional]
 **code** | **String** | Voucher code |  [optional]
