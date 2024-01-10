@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getVoucherStatsById**](VouchersApi.md#getVoucherStatsById) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 [**getVouchers**](VouchersApi.md#getVouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
 [**updateVoucher**](VouchersApi.md#updateVoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
+[**updateVoucherUsage**](VouchersApi.md#updateVoucherUsage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
 
 
 <a name="createVoucher"></a>
@@ -288,6 +289,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultVoucherWithStats**](RestApiResultVoucherWithStats.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="updateVoucherUsage"></a>
+# **updateVoucherUsage**
+> updateVoucherUsage(appId, voucherId, voucherUsage)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.VouchersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+VouchersApi apiInstance = new VouchersApi();
+String appId = "appId_example"; // String | 
+Integer voucherId = 56; // Integer | 
+UpdateVoucherUsage voucherUsage = new UpdateVoucherUsage(); // UpdateVoucherUsage | 
+try {
+    apiInstance.updateVoucherUsage(appId, voucherId, voucherUsage);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VouchersApi#updateVoucherUsage");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **voucherId** | **Integer**|  |
+ **voucherUsage** | [**UpdateVoucherUsage**](UpdateVoucherUsage.md)|  |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

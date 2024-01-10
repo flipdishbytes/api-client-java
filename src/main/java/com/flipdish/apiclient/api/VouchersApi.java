@@ -35,6 +35,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultVoucherSummary;
 import com.flipdish.apiclient.model.RestApiResultVoucherWithStats;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateVoucher;
+import com.flipdish.apiclient.model.UpdateVoucherUsage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -781,6 +782,144 @@ public class VouchersApi {
         com.squareup.okhttp.Call call = updateVoucherValidateBeforeCall(voucherId, voucher, storeId, percentValue, lumpValue, maxDiscountAmount, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultVoucherWithStats>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for updateVoucherUsage
+     * @param appId  (required)
+     * @param voucherId  (required)
+     * @param voucherUsage  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call updateVoucherUsageCall(String appId, Integer voucherId, UpdateVoucherUsage voucherUsage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = voucherUsage;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/vouchers/{voucherId}/usage"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "voucherId" + "\\}", apiClient.escapeString(voucherId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call updateVoucherUsageValidateBeforeCall(String appId, Integer voucherId, UpdateVoucherUsage voucherUsage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling updateVoucherUsage(Async)");
+        }
+        
+        // verify the required parameter 'voucherId' is set
+        if (voucherId == null) {
+            throw new ApiException("Missing the required parameter 'voucherId' when calling updateVoucherUsage(Async)");
+        }
+        
+        // verify the required parameter 'voucherUsage' is set
+        if (voucherUsage == null) {
+            throw new ApiException("Missing the required parameter 'voucherUsage' when calling updateVoucherUsage(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = updateVoucherUsageCall(appId, voucherId, voucherUsage, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param voucherId  (required)
+     * @param voucherUsage  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void updateVoucherUsage(String appId, Integer voucherId, UpdateVoucherUsage voucherUsage) throws ApiException {
+        updateVoucherUsageWithHttpInfo(appId, voucherId, voucherUsage);
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param voucherId  (required)
+     * @param voucherUsage  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> updateVoucherUsageWithHttpInfo(String appId, Integer voucherId, UpdateVoucherUsage voucherUsage) throws ApiException {
+        com.squareup.okhttp.Call call = updateVoucherUsageValidateBeforeCall(appId, voucherId, voucherUsage, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param voucherId  (required)
+     * @param voucherUsage  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call updateVoucherUsageAsync(String appId, Integer voucherId, UpdateVoucherUsage voucherUsage, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = updateVoucherUsageValidateBeforeCall(appId, voucherId, voucherUsage, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
         return call;
     }
 }
