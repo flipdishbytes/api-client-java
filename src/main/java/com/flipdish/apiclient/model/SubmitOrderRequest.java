@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * SubmitOrderRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-09T16:07:26.487Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-10T10:45:10.776Z")
 public class SubmitOrderRequest {
   @SerializedName("PaymentToken")
   private String paymentToken = null;

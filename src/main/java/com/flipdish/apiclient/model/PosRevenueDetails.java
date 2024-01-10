@@ -28,7 +28,7 @@ import java.io.IOException;
  * Breakdown of POS charges
  */
 @ApiModel(description = "Breakdown of POS charges")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-09T16:07:26.487Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-10T10:45:10.776Z")
 public class PosRevenueDetails {
   @SerializedName("PosSalesAmount")
   private Double posSalesAmount = null;
