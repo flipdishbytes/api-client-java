@@ -28,13 +28,16 @@ import java.io.IOException;
  * App store subscription information
  */
 @ApiModel(description = "App store subscription information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-10T14:21:53.091Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-11T11:43:34.227Z")
 public class AppStoreAppSubscriptionSummary {
   @SerializedName("TotalSubscriptions")
   private Integer totalSubscriptions = null;
 
   @SerializedName("UsedSubscriptions")
   private Integer usedSubscriptions = null;
+
+  @SerializedName("SubscriptionAccountIsSetupForClient")
+  private Boolean subscriptionAccountIsSetupForClient = null;
 
   public AppStoreAppSubscriptionSummary totalSubscriptions(Integer totalSubscriptions) {
     this.totalSubscriptions = totalSubscriptions;
@@ -72,6 +75,24 @@ public class AppStoreAppSubscriptionSummary {
     this.usedSubscriptions = usedSubscriptions;
   }
 
+  public AppStoreAppSubscriptionSummary subscriptionAccountIsSetupForClient(Boolean subscriptionAccountIsSetupForClient) {
+    this.subscriptionAccountIsSetupForClient = subscriptionAccountIsSetupForClient;
+    return this;
+  }
+
+   /**
+   * Is client setup for subscriptions
+   * @return subscriptionAccountIsSetupForClient
+  **/
+  @ApiModelProperty(value = "Is client setup for subscriptions")
+  public Boolean isSubscriptionAccountIsSetupForClient() {
+    return subscriptionAccountIsSetupForClient;
+  }
+
+  public void setSubscriptionAccountIsSetupForClient(Boolean subscriptionAccountIsSetupForClient) {
+    this.subscriptionAccountIsSetupForClient = subscriptionAccountIsSetupForClient;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +104,13 @@ public class AppStoreAppSubscriptionSummary {
     }
     AppStoreAppSubscriptionSummary appStoreAppSubscriptionSummary = (AppStoreAppSubscriptionSummary) o;
     return Objects.equals(this.totalSubscriptions, appStoreAppSubscriptionSummary.totalSubscriptions) &&
-        Objects.equals(this.usedSubscriptions, appStoreAppSubscriptionSummary.usedSubscriptions);
+        Objects.equals(this.usedSubscriptions, appStoreAppSubscriptionSummary.usedSubscriptions) &&
+        Objects.equals(this.subscriptionAccountIsSetupForClient, appStoreAppSubscriptionSummary.subscriptionAccountIsSetupForClient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalSubscriptions, usedSubscriptions);
+    return Objects.hash(totalSubscriptions, usedSubscriptions, subscriptionAccountIsSetupForClient);
   }
 
 
@@ -99,6 +121,7 @@ public class AppStoreAppSubscriptionSummary {
     
     sb.append("    totalSubscriptions: ").append(toIndentedString(totalSubscriptions)).append("\n");
     sb.append("    usedSubscriptions: ").append(toIndentedString(usedSubscriptions)).append("\n");
+    sb.append("    subscriptionAccountIsSetupForClient: ").append(toIndentedString(subscriptionAccountIsSetupForClient)).append("\n");
     sb.append("}");
     return sb.toString();
   }

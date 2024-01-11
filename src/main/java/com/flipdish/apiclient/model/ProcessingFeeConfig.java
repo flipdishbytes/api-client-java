@@ -28,7 +28,7 @@ import java.io.IOException;
  * Processing fee config
  */
 @ApiModel(description = "Processing fee config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-10T14:21:53.091Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-11T11:43:34.227Z")
 public class ProcessingFeeConfig {
   @SerializedName("StoreId")
   private Integer storeId = null;

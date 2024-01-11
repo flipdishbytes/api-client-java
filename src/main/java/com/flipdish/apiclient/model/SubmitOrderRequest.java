@@ -27,13 +27,16 @@ import java.io.IOException;
 /**
  * SubmitOrderRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-10T14:21:53.091Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-11T11:43:34.227Z")
 public class SubmitOrderRequest {
   @SerializedName("PaymentToken")
   private String paymentToken = null;
 
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
+
+  @SerializedName("ChefNote")
+  private String chefNote = null;
 
   public SubmitOrderRequest paymentToken(String paymentToken) {
     this.paymentToken = paymentToken;
@@ -71,6 +74,24 @@ public class SubmitOrderRequest {
     this.phoneNumber = phoneNumber;
   }
 
+  public SubmitOrderRequest chefNote(String chefNote) {
+    this.chefNote = chefNote;
+    return this;
+  }
+
+   /**
+   * Get chefNote
+   * @return chefNote
+  **/
+  @ApiModelProperty(value = "")
+  public String getChefNote() {
+    return chefNote;
+  }
+
+  public void setChefNote(String chefNote) {
+    this.chefNote = chefNote;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -82,12 +103,13 @@ public class SubmitOrderRequest {
     }
     SubmitOrderRequest submitOrderRequest = (SubmitOrderRequest) o;
     return Objects.equals(this.paymentToken, submitOrderRequest.paymentToken) &&
-        Objects.equals(this.phoneNumber, submitOrderRequest.phoneNumber);
+        Objects.equals(this.phoneNumber, submitOrderRequest.phoneNumber) &&
+        Objects.equals(this.chefNote, submitOrderRequest.chefNote);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paymentToken, phoneNumber);
+    return Objects.hash(paymentToken, phoneNumber, chefNote);
   }
 
 
@@ -98,6 +120,7 @@ public class SubmitOrderRequest {
     
     sb.append("    paymentToken: ").append(toIndentedString(paymentToken)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    chefNote: ").append(toIndentedString(chefNote)).append("\n");
     sb.append("}");
     return sb.toString();
   }

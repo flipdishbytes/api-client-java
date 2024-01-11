@@ -51,25 +51,8 @@ public class AppStoreSubscriptionsApiTest {
     public void createAppStoreSubscriptionTest() throws ApiException {
         String appId = null;
         String appStoreAppId = null;
-        RestApiArrayResultAppStoreSubscriptionItem response = api.createAppStoreSubscription(appId, appStoreAppId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void createAppStoreSubscription_0Test() throws ApiException {
-        String appId = null;
-        String appStoreAppId = null;
         AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest = null;
-        RestApiResultAppStoreSubscriptionJobResponse response = api.createAppStoreSubscription_0(appId, appStoreAppId, addAppStoreSubscriptionRequest);
+        RestApiResultAppStoreSubscriptionJobResponse response = api.createAppStoreSubscription(appId, appStoreAppId, addAppStoreSubscriptionRequest);
 
         // TODO: test validations
     }
@@ -106,6 +89,23 @@ public class AppStoreSubscriptionsApiTest {
         String appStoreAppId = null;
         String jobId = null;
         RestApiResultAppStoreSubscriptionChangeJobStatusResponse response = api.getAppStoreSubscriptionChangeJobStatus(appId, appStoreAppId, jobId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppStoreSubscriptionsTest() throws ApiException {
+        String appId = null;
+        String appStoreAppId = null;
+        RestApiArrayResultAppStoreSubscriptionItem response = api.getAppStoreSubscriptions(appId, appStoreAppId);
 
         // TODO: test validations
     }
