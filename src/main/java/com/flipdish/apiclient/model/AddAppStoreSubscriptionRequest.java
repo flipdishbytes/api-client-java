@@ -30,10 +30,13 @@ import java.util.List;
  * Add subscription
  */
 @ApiModel(description = "Add subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-11T11:43:34.227Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:58:16.226Z")
 public class AddAppStoreSubscriptionRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
+
+  @SerializedName("SubscriptionAccountEmail")
+  private String subscriptionAccountEmail = null;
 
   public AddAppStoreSubscriptionRequest storeIds(List<Integer> storeIds) {
     this.storeIds = storeIds;
@@ -61,6 +64,24 @@ public class AddAppStoreSubscriptionRequest {
     this.storeIds = storeIds;
   }
 
+  public AddAppStoreSubscriptionRequest subscriptionAccountEmail(String subscriptionAccountEmail) {
+    this.subscriptionAccountEmail = subscriptionAccountEmail;
+    return this;
+  }
+
+   /**
+   * Email (for subscription setup) - optional, only required for admin access
+   * @return subscriptionAccountEmail
+  **/
+  @ApiModelProperty(value = "Email (for subscription setup) - optional, only required for admin access")
+  public String getSubscriptionAccountEmail() {
+    return subscriptionAccountEmail;
+  }
+
+  public void setSubscriptionAccountEmail(String subscriptionAccountEmail) {
+    this.subscriptionAccountEmail = subscriptionAccountEmail;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,12 +92,13 @@ public class AddAppStoreSubscriptionRequest {
       return false;
     }
     AddAppStoreSubscriptionRequest addAppStoreSubscriptionRequest = (AddAppStoreSubscriptionRequest) o;
-    return Objects.equals(this.storeIds, addAppStoreSubscriptionRequest.storeIds);
+    return Objects.equals(this.storeIds, addAppStoreSubscriptionRequest.storeIds) &&
+        Objects.equals(this.subscriptionAccountEmail, addAppStoreSubscriptionRequest.subscriptionAccountEmail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeIds);
+    return Objects.hash(storeIds, subscriptionAccountEmail);
   }
 
 
@@ -86,6 +108,7 @@ public class AddAppStoreSubscriptionRequest {
     sb.append("class AddAppStoreSubscriptionRequest {\n");
     
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
+    sb.append("    subscriptionAccountEmail: ").append(toIndentedString(subscriptionAccountEmail)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.AppStoreAppSubscriptionAccount;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,12 +24,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * App store subscription information
  */
 @ApiModel(description = "App store subscription information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-11T11:43:34.227Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:58:16.226Z")
 public class AppStoreAppSubscriptionSummary {
   @SerializedName("TotalSubscriptions")
   private Integer totalSubscriptions = null;
@@ -38,6 +41,9 @@ public class AppStoreAppSubscriptionSummary {
 
   @SerializedName("SubscriptionAccountIsSetupForClient")
   private Boolean subscriptionAccountIsSetupForClient = null;
+
+  @SerializedName("SubscriptionAccounts")
+  private List<AppStoreAppSubscriptionAccount> subscriptionAccounts = null;
 
   public AppStoreAppSubscriptionSummary totalSubscriptions(Integer totalSubscriptions) {
     this.totalSubscriptions = totalSubscriptions;
@@ -93,6 +99,32 @@ public class AppStoreAppSubscriptionSummary {
     this.subscriptionAccountIsSetupForClient = subscriptionAccountIsSetupForClient;
   }
 
+  public AppStoreAppSubscriptionSummary subscriptionAccounts(List<AppStoreAppSubscriptionAccount> subscriptionAccounts) {
+    this.subscriptionAccounts = subscriptionAccounts;
+    return this;
+  }
+
+  public AppStoreAppSubscriptionSummary addSubscriptionAccountsItem(AppStoreAppSubscriptionAccount subscriptionAccountsItem) {
+    if (this.subscriptionAccounts == null) {
+      this.subscriptionAccounts = new ArrayList<AppStoreAppSubscriptionAccount>();
+    }
+    this.subscriptionAccounts.add(subscriptionAccountsItem);
+    return this;
+  }
+
+   /**
+   * Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+   * @return subscriptionAccounts
+  **/
+  @ApiModelProperty(value = "Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)")
+  public List<AppStoreAppSubscriptionAccount> getSubscriptionAccounts() {
+    return subscriptionAccounts;
+  }
+
+  public void setSubscriptionAccounts(List<AppStoreAppSubscriptionAccount> subscriptionAccounts) {
+    this.subscriptionAccounts = subscriptionAccounts;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +137,13 @@ public class AppStoreAppSubscriptionSummary {
     AppStoreAppSubscriptionSummary appStoreAppSubscriptionSummary = (AppStoreAppSubscriptionSummary) o;
     return Objects.equals(this.totalSubscriptions, appStoreAppSubscriptionSummary.totalSubscriptions) &&
         Objects.equals(this.usedSubscriptions, appStoreAppSubscriptionSummary.usedSubscriptions) &&
-        Objects.equals(this.subscriptionAccountIsSetupForClient, appStoreAppSubscriptionSummary.subscriptionAccountIsSetupForClient);
+        Objects.equals(this.subscriptionAccountIsSetupForClient, appStoreAppSubscriptionSummary.subscriptionAccountIsSetupForClient) &&
+        Objects.equals(this.subscriptionAccounts, appStoreAppSubscriptionSummary.subscriptionAccounts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalSubscriptions, usedSubscriptions, subscriptionAccountIsSetupForClient);
+    return Objects.hash(totalSubscriptions, usedSubscriptions, subscriptionAccountIsSetupForClient, subscriptionAccounts);
   }
 
 
@@ -122,6 +155,7 @@ public class AppStoreAppSubscriptionSummary {
     sb.append("    totalSubscriptions: ").append(toIndentedString(totalSubscriptions)).append("\n");
     sb.append("    usedSubscriptions: ").append(toIndentedString(usedSubscriptions)).append("\n");
     sb.append("    subscriptionAccountIsSetupForClient: ").append(toIndentedString(subscriptionAccountIsSetupForClient)).append("\n");
+    sb.append("    subscriptionAccounts: ").append(toIndentedString(subscriptionAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
   }
