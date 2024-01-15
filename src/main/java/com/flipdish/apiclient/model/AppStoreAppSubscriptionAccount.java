@@ -28,7 +28,7 @@ import java.io.IOException;
  * Subscription account
  */
 @ApiModel(description = "Subscription account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-12T09:58:16.226Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-15T10:51:08.881Z")
 public class AppStoreAppSubscriptionAccount {
   @SerializedName("Email")
   private String email = null;
