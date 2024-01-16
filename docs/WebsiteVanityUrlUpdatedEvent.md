@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**eventName** | **String** | The event name |  [optional]
 **description** | **String** | Description |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User who has updated the url |  [optional]
 **vanityUrl** | **String** | New vanity url |  [optional]
-**eventName** | **String** | The event name |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
 **position** | **Integer** | Position |  [optional]

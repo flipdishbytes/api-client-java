@@ -31,8 +31,11 @@ import org.threeten.bp.OffsetDateTime;
  * Website vanity url
  */
 @ApiModel(description = "Website vanity url")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-15T10:51:08.881Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-16T13:37:43.728Z")
 public class WebsiteVanityUrlUpdatedEvent {
+  @SerializedName("EventName")
+  private String eventName = null;
+
   @SerializedName("Description")
   private String description = null;
 
@@ -41,9 +44,6 @@ public class WebsiteVanityUrlUpdatedEvent {
 
   @SerializedName("VanityUrl")
   private String vanityUrl = null;
-
-  @SerializedName("EventName")
-  private String eventName = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -59,6 +59,24 @@ public class WebsiteVanityUrlUpdatedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  public WebsiteVanityUrlUpdatedEvent eventName(String eventName) {
+    this.eventName = eventName;
+    return this;
+  }
+
+   /**
+   * The event name
+   * @return eventName
+  **/
+  @ApiModelProperty(value = "The event name")
+  public String getEventName() {
+    return eventName;
+  }
+
+  public void setEventName(String eventName) {
+    this.eventName = eventName;
+  }
 
   public WebsiteVanityUrlUpdatedEvent description(String description) {
     this.description = description;
@@ -112,24 +130,6 @@ public class WebsiteVanityUrlUpdatedEvent {
 
   public void setVanityUrl(String vanityUrl) {
     this.vanityUrl = vanityUrl;
-  }
-
-  public WebsiteVanityUrlUpdatedEvent eventName(String eventName) {
-    this.eventName = eventName;
-    return this;
-  }
-
-   /**
-   * The event name
-   * @return eventName
-  **/
-  @ApiModelProperty(value = "The event name")
-  public String getEventName() {
-    return eventName;
-  }
-
-  public void setEventName(String eventName) {
-    this.eventName = eventName;
   }
 
   public WebsiteVanityUrlUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -232,10 +232,10 @@ public class WebsiteVanityUrlUpdatedEvent {
       return false;
     }
     WebsiteVanityUrlUpdatedEvent websiteVanityUrlUpdatedEvent = (WebsiteVanityUrlUpdatedEvent) o;
-    return Objects.equals(this.description, websiteVanityUrlUpdatedEvent.description) &&
+    return Objects.equals(this.eventName, websiteVanityUrlUpdatedEvent.eventName) &&
+        Objects.equals(this.description, websiteVanityUrlUpdatedEvent.description) &&
         Objects.equals(this.user, websiteVanityUrlUpdatedEvent.user) &&
         Objects.equals(this.vanityUrl, websiteVanityUrlUpdatedEvent.vanityUrl) &&
-        Objects.equals(this.eventName, websiteVanityUrlUpdatedEvent.eventName) &&
         Objects.equals(this.flipdishEventId, websiteVanityUrlUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, websiteVanityUrlUpdatedEvent.createTime) &&
         Objects.equals(this.position, websiteVanityUrlUpdatedEvent.position) &&
@@ -245,7 +245,7 @@ public class WebsiteVanityUrlUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, user, vanityUrl, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, user, vanityUrl, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -254,10 +254,10 @@ public class WebsiteVanityUrlUpdatedEvent {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebsiteVanityUrlUpdatedEvent {\n");
     
+    sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    vanityUrl: ").append(toIndentedString(vanityUrl)).append("\n");
-    sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
