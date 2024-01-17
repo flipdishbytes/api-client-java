@@ -27,13 +27,10 @@ import java.io.IOException;
 /**
  * Allergen
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-16T13:37:43.728Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-17T10:52:00.997Z")
 public class Allergen {
   @SerializedName("AllergenId")
   private String allergenId = null;
-
-  @SerializedName("Name")
-  private String name = null;
 
   @SerializedName("LocalizedName")
   private String localizedName = null;
@@ -57,24 +54,6 @@ public class Allergen {
 
   public void setAllergenId(String allergenId) {
     this.allergenId = allergenId;
-  }
-
-  public Allergen name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * English Name of the allergen
-   * @return name
-  **/
-  @ApiModelProperty(value = "English Name of the allergen")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public Allergen localizedName(String localizedName) {
@@ -124,14 +103,13 @@ public class Allergen {
     }
     Allergen allergen = (Allergen) o;
     return Objects.equals(this.allergenId, allergen.allergenId) &&
-        Objects.equals(this.name, allergen.name) &&
         Objects.equals(this.localizedName, allergen.localizedName) &&
         Objects.equals(this.iconUrl, allergen.iconUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allergenId, name, localizedName, iconUrl);
+    return Objects.hash(allergenId, localizedName, iconUrl);
   }
 
 
@@ -141,7 +119,6 @@ public class Allergen {
     sb.append("class Allergen {\n");
     
     sb.append("    allergenId: ").append(toIndentedString(allergenId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    localizedName: ").append(toIndentedString(localizedName)).append("\n");
     sb.append("    iconUrl: ").append(toIndentedString(iconUrl)).append("\n");
     sb.append("}");
