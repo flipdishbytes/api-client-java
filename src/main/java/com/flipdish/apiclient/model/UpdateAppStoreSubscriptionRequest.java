@@ -30,7 +30,7 @@ import java.util.List;
  * Update subscription
  */
 @ApiModel(description = "Update subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-17T10:52:00.997Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-17T12:25:08.917Z")
 public class UpdateAppStoreSubscriptionRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;

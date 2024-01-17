@@ -70,6 +70,23 @@ public class MenusApiTest {
     }
     
     /**
+     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createNewMenuAsyncTest() throws ApiException {
+        String appId = null;
+        CreateFullMenu menu = null;
+        Object response = api.createNewMenuAsync(appId, menu);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Create a new menu. If request body is empty, the system will create a menu with default items.
      *
      * 

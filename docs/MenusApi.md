@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
+[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
 [**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
 [**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 [**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
@@ -87,6 +88,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="createNewMenuAsync"></a>
+# **createNewMenuAsync**
+> Object createNewMenuAsync(appId, menu)
+
+Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+String appId = "appId_example"; // String | App id
+CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu
+try {
+    Object result = apiInstance.createNewMenuAsync(appId, menu);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#createNewMenuAsync");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**| App id |
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="createNewMenuForApp"></a>
