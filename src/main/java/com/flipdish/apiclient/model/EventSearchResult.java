@@ -138,6 +138,7 @@ import com.flipdish.apiclient.model.TeammateDeletedEvent;
 import com.flipdish.apiclient.model.TeammateInviteAcceptedEvent;
 import com.flipdish.apiclient.model.TeammateInviteSentEvent;
 import com.flipdish.apiclient.model.TeammateUpdatedEvent;
+import com.flipdish.apiclient.model.TelephonyConfigUpdatedEvent;
 import com.flipdish.apiclient.model.UserAnsweredSignupQuestionsEvent;
 import com.flipdish.apiclient.model.UserCreatedEvent;
 import com.flipdish.apiclient.model.UserDeletedEvent;
@@ -167,7 +168,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-17T12:25:08.917Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-18T10:53:48.629Z")
 public class EventSearchResult {
   @SerializedName("AppCreatedEvent")
   private List<AppCreatedEvent> appCreatedEvent = null;
@@ -366,6 +367,9 @@ public class EventSearchResult {
 
   @SerializedName("PhoneCallEndedEvent")
   private List<PhoneCallEndedEvent> phoneCallEndedEvent = null;
+
+  @SerializedName("TelephonyConfigUpdatedEvent")
+  private List<TelephonyConfigUpdatedEvent> telephonyConfigUpdatedEvent = null;
 
   @SerializedName("LoyaltyCampaignCreatedEvent")
   private List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent = null;
@@ -2296,6 +2300,32 @@ public class EventSearchResult {
     this.phoneCallEndedEvent = phoneCallEndedEvent;
   }
 
+  public EventSearchResult telephonyConfigUpdatedEvent(List<TelephonyConfigUpdatedEvent> telephonyConfigUpdatedEvent) {
+    this.telephonyConfigUpdatedEvent = telephonyConfigUpdatedEvent;
+    return this;
+  }
+
+  public EventSearchResult addTelephonyConfigUpdatedEventItem(TelephonyConfigUpdatedEvent telephonyConfigUpdatedEventItem) {
+    if (this.telephonyConfigUpdatedEvent == null) {
+      this.telephonyConfigUpdatedEvent = new ArrayList<TelephonyConfigUpdatedEvent>();
+    }
+    this.telephonyConfigUpdatedEvent.add(telephonyConfigUpdatedEventItem);
+    return this;
+  }
+
+   /**
+   * Telephony config updated event
+   * @return telephonyConfigUpdatedEvent
+  **/
+  @ApiModelProperty(value = "Telephony config updated event")
+  public List<TelephonyConfigUpdatedEvent> getTelephonyConfigUpdatedEvent() {
+    return telephonyConfigUpdatedEvent;
+  }
+
+  public void setTelephonyConfigUpdatedEvent(List<TelephonyConfigUpdatedEvent> telephonyConfigUpdatedEvent) {
+    this.telephonyConfigUpdatedEvent = telephonyConfigUpdatedEvent;
+  }
+
   public EventSearchResult loyaltyCampaignCreatedEvent(List<LoyaltyCampaignCreatedEvent> loyaltyCampaignCreatedEvent) {
     this.loyaltyCampaignCreatedEvent = loyaltyCampaignCreatedEvent;
     return this;
@@ -4218,6 +4248,7 @@ public class EventSearchResult {
         Objects.equals(this.printerUnassignedFromStoreEvent, eventSearchResult.printerUnassignedFromStoreEvent) &&
         Objects.equals(this.phoneCallStartedEvent, eventSearchResult.phoneCallStartedEvent) &&
         Objects.equals(this.phoneCallEndedEvent, eventSearchResult.phoneCallEndedEvent) &&
+        Objects.equals(this.telephonyConfigUpdatedEvent, eventSearchResult.telephonyConfigUpdatedEvent) &&
         Objects.equals(this.loyaltyCampaignCreatedEvent, eventSearchResult.loyaltyCampaignCreatedEvent) &&
         Objects.equals(this.loyaltyCampaignDeletedEvent, eventSearchResult.loyaltyCampaignDeletedEvent) &&
         Objects.equals(this.loyaltyCampaignUpdatedEvent, eventSearchResult.loyaltyCampaignUpdatedEvent) &&
@@ -4293,7 +4324,7 @@ public class EventSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderBatchPublishedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, bankAccountAssignedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskTerminalActionStateChangedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, orderFulfillmentStatusUpdatedEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, appStoreSubscriptionChangeJobUpdatedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent, storeTipUpdatedEvent, locationAreaCreatedEvent, locationAreaUpdatedEvent, locationCreatedEvent, locationDeletedEvent, storeServiceChargeUpdatedEvent, mobileAppsSubmissionStatusUpdatedEvent, mobileAppsSubmissionUpdatedEvent, storeFeeConfigUpdatedEvent);
+    return Objects.hash(appCreatedEvent, appUpdatedEvent, analyticsClientEvent, orderAcceptedEvent, orderDispatchedEvent, orderCustomerTrackingCreatedEvent, orderDeliveryTrackingStatusUpdatedEvent, orderBatchPublishedEvent, orderCreatedEvent, orderRatingUpdatedEvent, orderRefundedEvent, orderRejectedEvent, orderTipUpdatedEvent, orderTerminalNotifications, storeCreatedEvent, storeDeletedEvent, storeAddressUpdatedEvent, storeKioskSettingUpdatedEvent, deliveryZoneCreatedEvent, deliveryZoneUpdatedEvent, deliveryZoneDeletedEvent, storeOpeningHoursUpdatedEvent, storeMenuAssignedEvent, storeBusinessHoursOverrideCreatedEvent, storeBusinessHoursOverrideDeletedEvent, storeArchivedEvent, storeUnarchivedEvent, storePublishedEvent, storeUnpublishedEvent, storeUpdatedEvent, storePreOrderConfigUpdatedEvent, storeLogoCreatedEvent, storeLogoUpdatedEvent, storeLogoDeletedEvent, menuCreatedEvent, menuUpdatedEvent, menuUploadedEvent, menuBulkEditEvent, menuSectionCreatedEvent, menuSectionUpdatedEvent, menuSectionDeletedEvent, menuSectionItemCreatedEvent, menuSectionItemUpdatedEvent, menuSectionItemDeletedEvent, menuItemOptionSetCreatedEvent, menuItemOptionSetUpdatedEvent, menuItemOptionSetDeletedEvent, menuItemOptionSetItemCreatedEvent, menuItemOptionSetItemUpdatedEvent, menuItemOptionSetItemDeletedEvent, menuCheckpointCreatedEvent, storeGroupCreatedEvent, storeGroupUpdatedEvent, storeGroupDeletedEvent, customerCreatedEvent, customerUpdatedEvent, customerConsentUpdatedEvent, webhookSubscriptionCreatedEvent, webhookSubscriptionUpdatedEvent, webhookSubscriptionDeletedEvent, printerTurnedOnEvent, printerTurnedOffEvent, printerAssignedToStoreEvent, printerUnassignedFromStoreEvent, phoneCallStartedEvent, phoneCallEndedEvent, telephonyConfigUpdatedEvent, loyaltyCampaignCreatedEvent, loyaltyCampaignDeletedEvent, loyaltyCampaignUpdatedEvent, retentionCampaignCreatedEvent, retentionCampaignDeletedEvent, retentionCampaignUpdatedEvent, smsReceivedEvent, userLoginEvent, userCreatedEvent, userUpdatedEvent, userDeletedEvent, userCreatedPasswordEvent, userAnsweredSignupQuestionsEvent, voucherCreatedEvent, voucherUpdatedEvent, voucherDeletedEvent, teammateInviteSentEvent, teammateInviteAcceptedEvent, teammateUpdatedEvent, teammateDeletedEvent, bankAccountCreatedEvent, bankAccountUpdatedEvent, bankAccountDeletedEvent, bankAccountAssignedEvent, hydraAssignedEvent, hydraRequestResetEvent, hydraStoreAssignedEvent, hydraStoreUnassignedEvent, hydraSettingChangedEvent, hydraUnAssignedEvent, hydraConnectionStatusChangedEvent, kioskBluetoothPairingModeEvent, kioskBluetoothUnpairingModeEvent, kioskBluetoothTerminalUnpairedEvent, kioskTerminalActionStateChangedEvent, kioskBluetoothTerminalUpdatedEvent, kioskBluetoothTerminalInitiateUpdateCheckEvent, kioskBluetoothInstallUpdateInitiateEvent, kioskBluetoothTerminalCancelUpdateEvent, kioskBluetoothTerminalFirmwareVersionStatusEvent, kioskBluetoothTerminalInstallationStatusEvent, pushNotificationScheduledEvent, pushNotificationSentEvent, pushNotificationDeletedEvent, dnsVerifiedEvent, certificateCreatedEvent, certificateRenewedEvent, websiteVanityUrlUpdatedEvent, websiteUpdatedEvent, orderCapacityUpdatedEvent, externalStoreEvent, orderFulfillmentStatusUpdatedEvent, appStoreConfigCreatedEvent, appStoreConfigUpdatedEvent, appStoreConfigDeletedEvent, appStoreSubscriptionChangeJobUpdatedEvent, catalogItemCreatedEvent, catalogItemUpdatedEvent, catalogItemArchivedEvent, catalogGroupCreatedEvent, catalogGroupUpdatedEvent, catalogGroupArchivedEvent, storeTipUpdatedEvent, locationAreaCreatedEvent, locationAreaUpdatedEvent, locationCreatedEvent, locationDeletedEvent, storeServiceChargeUpdatedEvent, mobileAppsSubmissionStatusUpdatedEvent, mobileAppsSubmissionUpdatedEvent, storeFeeConfigUpdatedEvent);
   }
 
 
@@ -4368,6 +4399,7 @@ public class EventSearchResult {
     sb.append("    printerUnassignedFromStoreEvent: ").append(toIndentedString(printerUnassignedFromStoreEvent)).append("\n");
     sb.append("    phoneCallStartedEvent: ").append(toIndentedString(phoneCallStartedEvent)).append("\n");
     sb.append("    phoneCallEndedEvent: ").append(toIndentedString(phoneCallEndedEvent)).append("\n");
+    sb.append("    telephonyConfigUpdatedEvent: ").append(toIndentedString(telephonyConfigUpdatedEvent)).append("\n");
     sb.append("    loyaltyCampaignCreatedEvent: ").append(toIndentedString(loyaltyCampaignCreatedEvent)).append("\n");
     sb.append("    loyaltyCampaignDeletedEvent: ").append(toIndentedString(loyaltyCampaignDeletedEvent)).append("\n");
     sb.append("    loyaltyCampaignUpdatedEvent: ").append(toIndentedString(loyaltyCampaignUpdatedEvent)).append("\n");
