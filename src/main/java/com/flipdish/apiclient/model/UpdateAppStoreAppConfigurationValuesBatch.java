@@ -31,7 +31,7 @@ import java.util.List;
  * Update configuration values for the specified settings only
  */
 @ApiModel(description = "Update configuration values for the specified settings only")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-18T13:19:49.130Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-22T10:32:41.599Z")
 public class UpdateAppStoreAppConfigurationValuesBatch {
   @SerializedName("Settings")
   private List<Setting> settings = null;
