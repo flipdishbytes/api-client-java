@@ -971,12 +971,13 @@ public class OrdersApi {
      * @param orderIds  (optional)
      * @param from  (optional)
      * @param to  (optional)
+     * @param logSql  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOrdersSummaryCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getOrdersSummaryCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1005,6 +1006,8 @@ public class OrdersApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("from", from));
         if (to != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("to", to));
+        if (logSql != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("logSql", logSql));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1039,7 +1042,7 @@ public class OrdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOrdersSummaryValidateBeforeCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getOrdersSummaryValidateBeforeCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -1047,7 +1050,7 @@ public class OrdersApi {
         }
         
 
-        com.squareup.okhttp.Call call = getOrdersSummaryCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrdersSummaryCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1066,11 +1069,12 @@ public class OrdersApi {
      * @param orderIds  (optional)
      * @param from  (optional)
      * @param to  (optional)
+     * @param logSql  (optional)
      * @return RestApiPaginationResultOrderSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultOrderSummary getOrdersSummary(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to) throws ApiException {
-        ApiResponse<RestApiPaginationResultOrderSummary> resp = getOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+    public RestApiPaginationResultOrderSummary getOrdersSummary(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql) throws ApiException {
+        ApiResponse<RestApiPaginationResultOrderSummary> resp = getOrdersSummaryWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
         return resp.getData();
     }
 
@@ -1088,11 +1092,12 @@ public class OrdersApi {
      * @param orderIds  (optional)
      * @param from  (optional)
      * @param to  (optional)
+     * @param logSql  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultOrderSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultOrderSummary> getOrdersSummaryWithHttpInfo(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to) throws ApiException {
-        com.squareup.okhttp.Call call = getOrdersSummaryValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, null, null);
+    public ApiResponse<RestApiPaginationResultOrderSummary> getOrdersSummaryWithHttpInfo(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql) throws ApiException {
+        com.squareup.okhttp.Call call = getOrdersSummaryValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, null, null);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultOrderSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1111,11 +1116,12 @@ public class OrdersApi {
      * @param orderIds  (optional)
      * @param from  (optional)
      * @param to  (optional)
+     * @param logSql  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOrdersSummaryAsync(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, final ApiCallback<RestApiPaginationResultOrderSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getOrdersSummaryAsync(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ApiCallback<RestApiPaginationResultOrderSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1136,7 +1142,196 @@ public class OrdersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOrdersSummaryValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getOrdersSummaryValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultOrderSummary>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getOrdersSummaryNew
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param orderByRequestedForTime  (optional)
+     * @param channels  (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param logSql  (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getOrdersSummaryNewCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/orders/summariesNew"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (searchQuery != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("searchQuery", searchQuery));
+        if (physicalRestaurantId != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "physicalRestaurantId", physicalRestaurantId));
+        if (state != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "state", state));
+        if (page != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (orderByRequestedForTime != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("orderByRequestedForTime", orderByRequestedForTime));
+        if (channels != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "channels", channels));
+        if (orderIds != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "orderIds", orderIds));
+        if (from != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("from", from));
+        if (to != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("to", to));
+        if (logSql != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("logSql", logSql));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getOrdersSummaryNewValidateBeforeCall(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getOrdersSummaryNew(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getOrdersSummaryNewCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param orderByRequestedForTime  (optional)
+     * @param channels  (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param logSql  (optional)
+     * @return RestApiPaginationResultOrderSummary
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiPaginationResultOrderSummary getOrdersSummaryNew(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql) throws ApiException {
+        ApiResponse<RestApiPaginationResultOrderSummary> resp = getOrdersSummaryNewWithHttpInfo(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param orderByRequestedForTime  (optional)
+     * @param channels  (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param logSql  (optional)
+     * @return ApiResponse&lt;RestApiPaginationResultOrderSummary&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiPaginationResultOrderSummary> getOrdersSummaryNewWithHttpInfo(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql) throws ApiException {
+        com.squareup.okhttp.Call call = getOrdersSummaryNewValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultOrderSummary>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param searchQuery  (optional)
+     * @param physicalRestaurantId  (optional)
+     * @param state  (optional)
+     * @param page  (optional)
+     * @param limit  (optional)
+     * @param orderByRequestedForTime  (optional)
+     * @param channels  (optional)
+     * @param orderIds  (optional)
+     * @param from  (optional)
+     * @param to  (optional)
+     * @param logSql  (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getOrdersSummaryNewAsync(String appId, String searchQuery, List<Integer> physicalRestaurantId, List<String> state, Integer page, Integer limit, Boolean orderByRequestedForTime, List<String> channels, List<Integer> orderIds, OffsetDateTime from, OffsetDateTime to, Boolean logSql, final ApiCallback<RestApiPaginationResultOrderSummary> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getOrdersSummaryNewValidateBeforeCall(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultOrderSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

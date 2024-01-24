@@ -187,7 +187,35 @@ public class OrdersApiTest {
         List<Integer> orderIds = null;
         OffsetDateTime from = null;
         OffsetDateTime to = null;
-        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to);
+        Boolean logSql = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummary(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOrdersSummaryNewTest() throws ApiException {
+        String appId = null;
+        String searchQuery = null;
+        List<Integer> physicalRestaurantId = null;
+        List<String> state = null;
+        Integer page = null;
+        Integer limit = null;
+        Boolean orderByRequestedForTime = null;
+        List<String> channels = null;
+        List<Integer> orderIds = null;
+        OffsetDateTime from = null;
+        OffsetDateTime to = null;
+        Boolean logSql = null;
+        RestApiPaginationResultOrderSummary response = api.getOrdersSummaryNew(appId, searchQuery, physicalRestaurantId, state, page, limit, orderByRequestedForTime, channels, orderIds, from, to, logSql);
 
         // TODO: test validations
     }
