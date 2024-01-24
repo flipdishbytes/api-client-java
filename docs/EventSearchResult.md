@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **storeLogoUpdatedEvent** | [**List&lt;StoreLogoUpdatedEvent&gt;**](StoreLogoUpdatedEvent.md) | Store logo updated events |  [optional]
 **storeLogoDeletedEvent** | [**List&lt;StoreLogoDeletedEvent&gt;**](StoreLogoDeletedEvent.md) | Store logo deleted events |  [optional]
 **menuCreatedEvent** | [**List&lt;MenuCreatedEvent&gt;**](MenuCreatedEvent.md) | Menu created events |  [optional]
+**menuAsyncCreationCompletedEvent** | [**List&lt;MenuAsyncCreationCompletedEvent&gt;**](MenuAsyncCreationCompletedEvent.md) | Menu async creation completed events |  [optional]
 **menuUpdatedEvent** | [**List&lt;MenuUpdatedEvent&gt;**](MenuUpdatedEvent.md) | Menu updated events |  [optional]
 **menuUploadedEvent** | [**List&lt;MenuUploadedEvent&gt;**](MenuUploadedEvent.md) | Menu uploaded events |  [optional]
 **menuBulkEditEvent** | [**List&lt;MenuBulkEditEvent&gt;**](MenuBulkEditEvent.md) | Menu bulk events |  [optional]
