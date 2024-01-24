@@ -28,7 +28,7 @@ import java.io.IOException;
  * Subscription change job can be longer running, this contains job information
  */
 @ApiModel(description = "Subscription change job can be longer running, this contains job information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-24T12:49:48.040Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-24T15:22:35.497Z")
 public class AppStoreSubscriptionChangeJobStatusResponse {
   @SerializedName("SubscriptionChangeJobId")
   private String subscriptionChangeJobId = null;
