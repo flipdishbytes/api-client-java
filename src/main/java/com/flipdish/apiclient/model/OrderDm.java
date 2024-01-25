@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrderDm
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-24T15:22:35.497Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-25T14:57:03.503Z")
 public class OrderDm {
   @SerializedName("UserLocation")
   private CoordinatesDm userLocation = null;
@@ -45,6 +45,9 @@ public class OrderDm {
 
   @SerializedName("DeliveryLocationId")
   private Integer deliveryLocationId = null;
+
+  @SerializedName("VoucherCode")
+  private String voucherCode = null;
 
   @SerializedName("OrderItemVms")
   private List<OrderItemDm> orderItemVms = null;
@@ -313,6 +316,24 @@ public class OrderDm {
     this.deliveryLocationId = deliveryLocationId;
   }
 
+  public OrderDm voucherCode(String voucherCode) {
+    this.voucherCode = voucherCode;
+    return this;
+  }
+
+   /**
+   * Get voucherCode
+   * @return voucherCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getVoucherCode() {
+    return voucherCode;
+  }
+
+  public void setVoucherCode(String voucherCode) {
+    this.voucherCode = voucherCode;
+  }
+
   public OrderDm orderItemVms(List<OrderItemDm> orderItemVms) {
     this.orderItemVms = orderItemVms;
     return this;
@@ -542,6 +563,7 @@ public class OrderDm {
         Objects.equals(this.requestedDeliveryOrPickupTimeUtc, orderDm.requestedDeliveryOrPickupTimeUtc) &&
         Objects.equals(this.tipAmount, orderDm.tipAmount) &&
         Objects.equals(this.deliveryLocationId, orderDm.deliveryLocationId) &&
+        Objects.equals(this.voucherCode, orderDm.voucherCode) &&
         Objects.equals(this.orderItemVms, orderDm.orderItemVms) &&
         Objects.equals(this.virtualRestaurantId, orderDm.virtualRestaurantId) &&
         Objects.equals(this.physicalRestaurantId, orderDm.physicalRestaurantId) &&
@@ -558,7 +580,7 @@ public class OrderDm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userLocation, requestedDeliveryOrPickupTimeUtc, tipAmount, deliveryLocationId, orderItemVms, virtualRestaurantId, physicalRestaurantId, deliveryType, pickupLocationType, pickupLocationId, tableServiceCatagory, paymentAccountId, isPreOrder, isAsapOrder, menuId, menuVersion);
+    return Objects.hash(userLocation, requestedDeliveryOrPickupTimeUtc, tipAmount, deliveryLocationId, voucherCode, orderItemVms, virtualRestaurantId, physicalRestaurantId, deliveryType, pickupLocationType, pickupLocationId, tableServiceCatagory, paymentAccountId, isPreOrder, isAsapOrder, menuId, menuVersion);
   }
 
 
@@ -571,6 +593,7 @@ public class OrderDm {
     sb.append("    requestedDeliveryOrPickupTimeUtc: ").append(toIndentedString(requestedDeliveryOrPickupTimeUtc)).append("\n");
     sb.append("    tipAmount: ").append(toIndentedString(tipAmount)).append("\n");
     sb.append("    deliveryLocationId: ").append(toIndentedString(deliveryLocationId)).append("\n");
+    sb.append("    voucherCode: ").append(toIndentedString(voucherCode)).append("\n");
     sb.append("    orderItemVms: ").append(toIndentedString(orderItemVms)).append("\n");
     sb.append("    virtualRestaurantId: ").append(toIndentedString(virtualRestaurantId)).append("\n");
     sb.append("    physicalRestaurantId: ").append(toIndentedString(physicalRestaurantId)).append("\n");
