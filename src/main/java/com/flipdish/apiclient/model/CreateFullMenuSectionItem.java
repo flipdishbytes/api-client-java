@@ -32,7 +32,7 @@ import java.util.List;
  * Create menu section item
  */
 @ApiModel(description = "Create menu section item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-25T14:57:03.503Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T11:24:20.044Z")
 public class CreateFullMenuSectionItem {
   @SerializedName("MenuItemOptionSets")
   private List<CreateFullMenuItemOptionSet> menuItemOptionSets = null;
@@ -105,6 +105,9 @@ public class CreateFullMenuSectionItem {
 
   @SerializedName("Price")
   private Double price = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   @SerializedName("DisplayOrder")
   private Integer displayOrder = null;
@@ -326,6 +329,24 @@ public class CreateFullMenuSectionItem {
     this.price = price;
   }
 
+  public CreateFullMenuSectionItem depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * An optional fee that can be added to the price of the item.
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "An optional fee that can be added to the price of the item.")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
   public CreateFullMenuSectionItem displayOrder(Integer displayOrder) {
     this.displayOrder = displayOrder;
     return this;
@@ -505,6 +526,7 @@ public class CreateFullMenuSectionItem {
         Objects.equals(this.description, createFullMenuSectionItem.description) &&
         Objects.equals(this.spicinessRating, createFullMenuSectionItem.spicinessRating) &&
         Objects.equals(this.price, createFullMenuSectionItem.price) &&
+        Objects.equals(this.depositReturnFee, createFullMenuSectionItem.depositReturnFee) &&
         Objects.equals(this.displayOrder, createFullMenuSectionItem.displayOrder) &&
         Objects.equals(this.alcohol, createFullMenuSectionItem.alcohol) &&
         Objects.equals(this.isAvailable, createFullMenuSectionItem.isAvailable) &&
@@ -518,7 +540,7 @@ public class CreateFullMenuSectionItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
+    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
   }
 
 
@@ -534,6 +556,7 @@ public class CreateFullMenuSectionItem {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    spicinessRating: ").append(toIndentedString(spicinessRating)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    alcohol: ").append(toIndentedString(alcohol)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");

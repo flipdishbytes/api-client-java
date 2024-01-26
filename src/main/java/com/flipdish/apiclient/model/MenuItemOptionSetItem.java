@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-25T14:57:03.503Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T11:24:20.044Z")
 public class MenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
@@ -63,6 +63,9 @@ public class MenuItemOptionSetItem {
 
   @SerializedName("Price")
   private Double price = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   @SerializedName("IsAvailable")
   private Boolean isAvailable = null;
@@ -315,6 +318,24 @@ public class MenuItemOptionSetItem {
     this.price = price;
   }
 
+  public MenuItemOptionSetItem depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * An optional fee that can be added to the price of the item.
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "An optional fee that can be added to the price of the item.")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
   public MenuItemOptionSetItem isAvailable(Boolean isAvailable) {
     this.isAvailable = isAvailable;
     return this;
@@ -407,6 +428,7 @@ public class MenuItemOptionSetItem {
         Objects.equals(this.taxValue, menuItemOptionSetItem.taxValue) &&
         Objects.equals(this.name, menuItemOptionSetItem.name) &&
         Objects.equals(this.price, menuItemOptionSetItem.price) &&
+        Objects.equals(this.depositReturnFee, menuItemOptionSetItem.depositReturnFee) &&
         Objects.equals(this.isAvailable, menuItemOptionSetItem.isAvailable) &&
         Objects.equals(this.displayOrder, menuItemOptionSetItem.displayOrder) &&
         Objects.equals(this.cellLayoutType, menuItemOptionSetItem.cellLayoutType) &&
@@ -415,7 +437,7 @@ public class MenuItemOptionSetItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, catalogItemId, taxRateName, taxRateId, taxValue, name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(menuItemOptionSetItemId, publicId, metadata, nextMenuItemOptionSetId, catalogItemId, taxRateName, taxRateId, taxValue, name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl);
   }
 
 
@@ -434,6 +456,7 @@ public class MenuItemOptionSetItem {
     sb.append("    taxValue: ").append(toIndentedString(taxValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");

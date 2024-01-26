@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-25T14:57:03.503Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T11:24:20.044Z")
 public class MenuSectionItemBase {
   @SerializedName("Name")
   private String name = null;
@@ -92,6 +92,9 @@ public class MenuSectionItemBase {
 
   @SerializedName("Price")
   private Double price = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   @SerializedName("DisplayOrder")
   private Integer displayOrder = null;
@@ -241,6 +244,24 @@ public class MenuSectionItemBase {
 
   public void setPrice(Double price) {
     this.price = price;
+  }
+
+  public MenuSectionItemBase depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * An optional fee that can be added to the price of the item.
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "An optional fee that can be added to the price of the item.")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
   }
 
   public MenuSectionItemBase displayOrder(Integer displayOrder) {
@@ -419,6 +440,7 @@ public class MenuSectionItemBase {
         Objects.equals(this.description, menuSectionItemBase.description) &&
         Objects.equals(this.spicinessRating, menuSectionItemBase.spicinessRating) &&
         Objects.equals(this.price, menuSectionItemBase.price) &&
+        Objects.equals(this.depositReturnFee, menuSectionItemBase.depositReturnFee) &&
         Objects.equals(this.displayOrder, menuSectionItemBase.displayOrder) &&
         Objects.equals(this.alcohol, menuSectionItemBase.alcohol) &&
         Objects.equals(this.isAvailable, menuSectionItemBase.isAvailable) &&
@@ -432,7 +454,7 @@ public class MenuSectionItemBase {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, spicinessRating, price, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
+    return Objects.hash(name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
   }
 
 
@@ -445,6 +467,7 @@ public class MenuSectionItemBase {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    spicinessRating: ").append(toIndentedString(spicinessRating)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    alcohol: ").append(toIndentedString(alcohol)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");

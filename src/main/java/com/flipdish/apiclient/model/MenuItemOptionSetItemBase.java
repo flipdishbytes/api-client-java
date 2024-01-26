@@ -28,13 +28,16 @@ import java.io.IOException;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-25T14:57:03.503Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T11:24:20.044Z")
 public class MenuItemOptionSetItemBase {
   @SerializedName("Name")
   private String name = null;
 
   @SerializedName("Price")
   private Double price = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   @SerializedName("IsAvailable")
   private Boolean isAvailable = null;
@@ -135,6 +138,24 @@ public class MenuItemOptionSetItemBase {
     this.price = price;
   }
 
+  public MenuItemOptionSetItemBase depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * An optional fee that can be added to the price of the item.
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "An optional fee that can be added to the price of the item.")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
   public MenuItemOptionSetItemBase isAvailable(Boolean isAvailable) {
     this.isAvailable = isAvailable;
     return this;
@@ -219,6 +240,7 @@ public class MenuItemOptionSetItemBase {
     MenuItemOptionSetItemBase menuItemOptionSetItemBase = (MenuItemOptionSetItemBase) o;
     return Objects.equals(this.name, menuItemOptionSetItemBase.name) &&
         Objects.equals(this.price, menuItemOptionSetItemBase.price) &&
+        Objects.equals(this.depositReturnFee, menuItemOptionSetItemBase.depositReturnFee) &&
         Objects.equals(this.isAvailable, menuItemOptionSetItemBase.isAvailable) &&
         Objects.equals(this.displayOrder, menuItemOptionSetItemBase.displayOrder) &&
         Objects.equals(this.cellLayoutType, menuItemOptionSetItemBase.cellLayoutType) &&
@@ -227,7 +249,7 @@ public class MenuItemOptionSetItemBase {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, price, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl);
   }
 
 
@@ -238,6 +260,7 @@ public class MenuItemOptionSetItemBase {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");
