@@ -31,7 +31,7 @@ import java.util.UUID;
  * Create Promotion
  */
 @ApiModel(description = "Create Promotion")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T11:24:20.044Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T12:36:12.155Z")
 public class CreatePromotion {
   @SerializedName("Name")
   private String name = null;
