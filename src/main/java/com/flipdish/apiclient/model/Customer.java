@@ -29,13 +29,16 @@ import org.threeten.bp.OffsetDateTime;
  * Defines a customer
  */
 @ApiModel(description = "Defines a customer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T12:36:12.155Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-29T10:39:32.070Z")
 public class Customer {
   @SerializedName("CustomerId")
   private Integer customerId = null;
 
   @SerializedName("RegistrationDate")
   private OffsetDateTime registrationDate = null;
+
+  @SerializedName("PhoneNumber")
+  private String phoneNumber = null;
 
   @SerializedName("CashOrdersEnabled")
   private Boolean cashOrdersEnabled = null;
@@ -80,6 +83,24 @@ public class Customer {
 
   public void setRegistrationDate(OffsetDateTime registrationDate) {
     this.registrationDate = registrationDate;
+  }
+
+  public Customer phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Phone Number in international format
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "Phone Number in international format")
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
   }
 
   public Customer cashOrdersEnabled(Boolean cashOrdersEnabled) {
@@ -148,6 +169,7 @@ public class Customer {
     Customer customer = (Customer) o;
     return Objects.equals(this.customerId, customer.customerId) &&
         Objects.equals(this.registrationDate, customer.registrationDate) &&
+        Objects.equals(this.phoneNumber, customer.phoneNumber) &&
         Objects.equals(this.cashOrdersEnabled, customer.cashOrdersEnabled) &&
         Objects.equals(this.cardOrdersEnabled, customer.cardOrdersEnabled) &&
         Objects.equals(this.marketingEnabled, customer.marketingEnabled);
@@ -155,7 +177,7 @@ public class Customer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerId, registrationDate, cashOrdersEnabled, cardOrdersEnabled, marketingEnabled);
+    return Objects.hash(customerId, registrationDate, phoneNumber, cashOrdersEnabled, cardOrdersEnabled, marketingEnabled);
   }
 
 
@@ -166,6 +188,7 @@ public class Customer {
     
     sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
     sb.append("    registrationDate: ").append(toIndentedString(registrationDate)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    cashOrdersEnabled: ").append(toIndentedString(cashOrdersEnabled)).append("\n");
     sb.append("    cardOrdersEnabled: ").append(toIndentedString(cardOrdersEnabled)).append("\n");
     sb.append("    marketingEnabled: ").append(toIndentedString(marketingEnabled)).append("\n");

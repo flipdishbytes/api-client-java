@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu async creation completed event
  */
 @ApiModel(description = "Menu async creation completed event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-26T12:36:12.155Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-29T10:39:32.070Z")
 public class MenuAsyncCreationCompletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
