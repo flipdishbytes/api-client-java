@@ -34,7 +34,7 @@ import java.util.UUID;
  * Order item
  */
 @ApiModel(description = "Order item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T09:07:07.701Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T17:07:39.179Z")
 public class OrderItem {
   @SerializedName("OrderItemOptions")
   private List<OrderItemOption> orderItemOptions = null;
@@ -71,6 +71,9 @@ public class OrderItem {
 
   @SerializedName("IsAvailable")
   private Boolean isAvailable = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   public OrderItem orderItemOptions(List<OrderItemOption> orderItemOptions) {
     this.orderItemOptions = orderItemOptions;
@@ -304,6 +307,24 @@ public class OrderItem {
     this.isAvailable = isAvailable;
   }
 
+  public OrderItem depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * Deposit return fee
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "Deposit return fee")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -325,12 +346,13 @@ public class OrderItem {
         Objects.equals(this.priceIncludingOptionSetItems, orderItem.priceIncludingOptionSetItems) &&
         Objects.equals(this.menuItemId, orderItem.menuItemId) &&
         Objects.equals(this.menuItemDisplayOrder, orderItem.menuItemDisplayOrder) &&
-        Objects.equals(this.isAvailable, orderItem.isAvailable);
+        Objects.equals(this.isAvailable, orderItem.isAvailable) &&
+        Objects.equals(this.depositReturnFee, orderItem.depositReturnFee);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderItemOptions, metadata, menuItemPublicId, menuSectionName, menuSectionDisplayOrder, name, description, price, priceIncludingOptionSetItems, menuItemId, menuItemDisplayOrder, isAvailable);
+    return Objects.hash(orderItemOptions, metadata, menuItemPublicId, menuSectionName, menuSectionDisplayOrder, name, description, price, priceIncludingOptionSetItems, menuItemId, menuItemDisplayOrder, isAvailable, depositReturnFee);
   }
 
 
@@ -351,6 +373,7 @@ public class OrderItem {
     sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
     sb.append("    menuItemDisplayOrder: ").append(toIndentedString(menuItemDisplayOrder)).append("\n");
     sb.append("    isAvailable: ").append(toIndentedString(isAvailable)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -174,6 +174,7 @@ VIEWEXTERNALAUDITLOGS | &quot;ViewExternalAuditLogs&quot;
 CREATEEXTERNALAUDITLOGEVENTS | &quot;CreateExternalAuditLogEvents&quot;
 VIEWCATALOGAUDITLOGS | &quot;ViewCatalogAuditLogs&quot;
 VIEWORDERFULFILLMENTAUDITLOGS | &quot;ViewOrderFulfillmentAuditLogs&quot;
+VIEWCHANNELAUDITLOGS | &quot;ViewChannelAuditLogs&quot;
 SENDPUSHNOTIFICATIONTOCUSTOMER | &quot;SendPushNotificationToCustomer&quot;
 INVITEDRIVERTOAPP | &quot;InviteDriverToApp&quot;
 GETDRIVERFORAPP | &quot;GetDriverForApp&quot;

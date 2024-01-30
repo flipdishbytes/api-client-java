@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **menuItemId** | **Integer** | Menu item identifier |  [optional]
 **menuItemDisplayOrder** | **Integer** | Menu item display order |  [optional]
 **isAvailable** | **Boolean** | Is available |  [optional]
+**depositReturnFee** | **Double** | Deposit return fee |  [optional]
 
 
 

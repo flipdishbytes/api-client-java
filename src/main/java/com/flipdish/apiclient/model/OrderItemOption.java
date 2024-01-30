@@ -32,7 +32,7 @@ import java.util.UUID;
  * Order item option
  */
 @ApiModel(description = "Order item option")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T09:07:07.701Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T17:07:39.179Z")
 public class OrderItemOption {
   @SerializedName("Metadata")
   private Map<String, String> metadata = null;
@@ -57,6 +57,9 @@ public class OrderItemOption {
 
   @SerializedName("MenuItemOptionSetDisplayOrder")
   private Integer menuItemOptionSetDisplayOrder = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   public OrderItemOption metadata(Map<String, String> metadata) {
     this.metadata = metadata;
@@ -210,6 +213,24 @@ public class OrderItemOption {
     this.menuItemOptionSetDisplayOrder = menuItemOptionSetDisplayOrder;
   }
 
+  public OrderItemOption depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * Deposit return fee
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "Deposit return fee")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -227,12 +248,13 @@ public class OrderItemOption {
         Objects.equals(this.name, orderItemOption.name) &&
         Objects.equals(this.price, orderItemOption.price) &&
         Objects.equals(this.menuItemOptionDisplayOrder, orderItemOption.menuItemOptionDisplayOrder) &&
-        Objects.equals(this.menuItemOptionSetDisplayOrder, orderItemOption.menuItemOptionSetDisplayOrder);
+        Objects.equals(this.menuItemOptionSetDisplayOrder, orderItemOption.menuItemOptionSetDisplayOrder) &&
+        Objects.equals(this.depositReturnFee, orderItemOption.depositReturnFee);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(metadata, menuItemOptionPublicId, menuItemOptionId, isMasterOptionSetItem, name, price, menuItemOptionDisplayOrder, menuItemOptionSetDisplayOrder);
+    return Objects.hash(metadata, menuItemOptionPublicId, menuItemOptionId, isMasterOptionSetItem, name, price, menuItemOptionDisplayOrder, menuItemOptionSetDisplayOrder, depositReturnFee);
   }
 
 
@@ -249,6 +271,7 @@ public class OrderItemOption {
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
     sb.append("    menuItemOptionDisplayOrder: ").append(toIndentedString(menuItemOptionDisplayOrder)).append("\n");
     sb.append("    menuItemOptionSetDisplayOrder: ").append(toIndentedString(menuItemOptionSetDisplayOrder)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("}");
     return sb.toString();
   }
