@@ -34,7 +34,7 @@ import java.util.List;
  * Store
  */
 @ApiModel(description = "Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-29T15:47:24.534Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T09:07:07.701Z")
 public class Store {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -412,6 +412,9 @@ public class Store {
 
   @SerializedName("FraudPreventionStrategy")
   private String fraudPreventionStrategy = null;
+
+  @SerializedName("AppIds")
+  private List<String> appIds = null;
 
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
@@ -872,6 +875,32 @@ public class Store {
 
   public void setFraudPreventionStrategy(String fraudPreventionStrategy) {
     this.fraudPreventionStrategy = fraudPreventionStrategy;
+  }
+
+  public Store appIds(List<String> appIds) {
+    this.appIds = appIds;
+    return this;
+  }
+
+  public Store addAppIdsItem(String appIdsItem) {
+    if (this.appIds == null) {
+      this.appIds = new ArrayList<String>();
+    }
+    this.appIds.add(appIdsItem);
+    return this;
+  }
+
+   /**
+   * Store&#39;s app ids
+   * @return appIds
+  **/
+  @ApiModelProperty(value = "Store's app ids")
+  public List<String> getAppIds() {
+    return appIds;
+  }
+
+  public void setAppIds(List<String> appIds) {
+    this.appIds = appIds;
   }
 
   public Store phoneNumber(String phoneNumber) {
@@ -1425,6 +1454,7 @@ public class Store {
         Objects.equals(this.preOrderPickupEnabled, store.preOrderPickupEnabled) &&
         Objects.equals(this.logoUrl, store.logoUrl) &&
         Objects.equals(this.fraudPreventionStrategy, store.fraudPreventionStrategy) &&
+        Objects.equals(this.appIds, store.appIds) &&
         Objects.equals(this.phoneNumber, store.phoneNumber) &&
         Objects.equals(this.alwaysAppearOpen, store.alwaysAppearOpen) &&
         Objects.equals(this.preOrderEnabled, store.preOrderEnabled) &&
@@ -1458,7 +1488,7 @@ public class Store {
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage);
+    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, appIds, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage);
   }
 
 
@@ -1486,6 +1516,7 @@ public class Store {
     sb.append("    preOrderPickupEnabled: ").append(toIndentedString(preOrderPickupEnabled)).append("\n");
     sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("    fraudPreventionStrategy: ").append(toIndentedString(fraudPreventionStrategy)).append("\n");
+    sb.append("    appIds: ").append(toIndentedString(appIds)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    alwaysAppearOpen: ").append(toIndentedString(alwaysAppearOpen)).append("\n");
     sb.append("    preOrderEnabled: ").append(toIndentedString(preOrderEnabled)).append("\n");

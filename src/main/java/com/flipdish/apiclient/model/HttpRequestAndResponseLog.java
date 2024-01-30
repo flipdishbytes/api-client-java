@@ -32,7 +32,7 @@ import java.util.UUID;
  * Http Request and Response Log
  */
 @ApiModel(description = "Http Request and Response Log")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-29T15:47:24.534Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T09:07:07.701Z")
 public class HttpRequestAndResponseLog {
   @SerializedName("Guid")
   private UUID guid = null;
