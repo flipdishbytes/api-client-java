@@ -31,7 +31,7 @@ import java.util.List;
  * Update App store app configuration
  */
 @ApiModel(description = "Update App store app configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T17:07:39.179Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
 public class UpdateAppStoreAppConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;

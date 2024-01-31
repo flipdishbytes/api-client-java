@@ -70,9 +70,9 @@ public class MenusApiTest {
     }
     
     /**
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     * Create a new menu asynchronously
      *
-     * 
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,9 +87,9 @@ public class MenusApiTest {
     }
     
     /**
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
+     * Create a new menu
      *
-     * 
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
      *
      * @throws ApiException
      *          if the Api call fails

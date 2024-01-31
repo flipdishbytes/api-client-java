@@ -5,8 +5,8 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
-[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
+[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
 [**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 [**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
@@ -94,7 +94,9 @@ Name | Type | Description  | Notes
 # **createNewMenuAsync**
 > Object createNewMenuAsync(appId, menu)
 
-Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+Create a new menu asynchronously
+
+You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```java
@@ -147,7 +149,9 @@ Name | Type | Description  | Notes
 # **createNewMenuForApp**
 > Integer createNewMenuForApp(appId, menu)
 
-Create a new menu. If request body is empty, the system will create a menu with default items.
+Create a new menu
+
+[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```java
@@ -166,7 +170,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
 String appId = "appId_example"; // String | App identifier
-CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu
+CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu. If empty the system will create a menu with default items
 try {
     Integer result = apiInstance.createNewMenuForApp(appId, menu);
     System.out.println(result);
@@ -181,7 +185,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App identifier |
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu |
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu. If empty the system will create a menu with default items |
 
 ### Return type
 

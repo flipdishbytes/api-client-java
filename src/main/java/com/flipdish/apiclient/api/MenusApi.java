@@ -278,8 +278,8 @@ public class MenusApi {
     }
 
     /**
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-     * 
+     * Create a new menu asynchronously
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
      * @return Object
@@ -291,8 +291,8 @@ public class MenusApi {
     }
 
     /**
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-     * 
+     * Create a new menu asynchronously
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
      * @return ApiResponse&lt;Object&gt;
@@ -305,8 +305,8 @@ public class MenusApi {
     }
 
     /**
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready. (asynchronously)
-     * 
+     * Create a new menu asynchronously (asynchronously)
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
      * @param callback The callback to be executed when the API call finishes
@@ -342,12 +342,14 @@ public class MenusApi {
     /**
      * Build call for createNewMenuForApp
      * @param appId App identifier (required)
-     * @param menu Menu (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
+     * @deprecated
      */
+    @Deprecated
     public com.squareup.okhttp.Call createNewMenuForAppCall(String appId, CreateFullMenu menu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = menu;
 
@@ -390,6 +392,7 @@ public class MenusApi {
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call createNewMenuForAppValidateBeforeCall(String appId, CreateFullMenu menu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -410,26 +413,30 @@ public class MenusApi {
     }
 
     /**
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
-     * 
+     * Create a new menu
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
      * @param appId App identifier (required)
-     * @param menu Menu (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @return Integer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @deprecated
      */
+    @Deprecated
     public Integer createNewMenuForApp(String appId, CreateFullMenu menu) throws ApiException {
         ApiResponse<Integer> resp = createNewMenuForAppWithHttpInfo(appId, menu);
         return resp.getData();
     }
 
     /**
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
-     * 
+     * Create a new menu
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
      * @param appId App identifier (required)
-     * @param menu Menu (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @return ApiResponse&lt;Integer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<Integer> createNewMenuForAppWithHttpInfo(String appId, CreateFullMenu menu) throws ApiException {
         com.squareup.okhttp.Call call = createNewMenuForAppValidateBeforeCall(appId, menu, null, null);
         Type localVarReturnType = new TypeToken<Integer>(){}.getType();
@@ -437,14 +444,16 @@ public class MenusApi {
     }
 
     /**
-     * Create a new menu. If request body is empty, the system will create a menu with default items. (asynchronously)
-     * 
+     * Create a new menu (asynchronously)
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
      * @param appId App identifier (required)
-     * @param menu Menu (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @deprecated
      */
+    @Deprecated
     public com.squareup.okhttp.Call createNewMenuForAppAsync(String appId, CreateFullMenu menu, final ApiCallback<Integer> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;

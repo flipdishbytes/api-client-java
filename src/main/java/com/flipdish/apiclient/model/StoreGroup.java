@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Group
  */
 @ApiModel(description = "Store Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T17:07:39.179Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
 public class StoreGroup {
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;

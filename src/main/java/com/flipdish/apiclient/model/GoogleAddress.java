@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * GoogleAddress
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-30T17:07:39.179Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
 public class GoogleAddress {
   @SerializedName("Results")
   private List<GoogleAddressResult> results = null;
