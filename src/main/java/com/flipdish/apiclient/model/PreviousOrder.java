@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PreviousOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class PreviousOrder {
   @SerializedName("DeliveryType")
   private String deliveryType = null;
@@ -352,6 +352,9 @@ public class PreviousOrder {
 
   @SerializedName("DeliveryAmount")
   private Double deliveryAmount = null;
+
+  @SerializedName("DepositReturnFeeAmount")
+  private Double depositReturnFeeAmount = null;
 
   @SerializedName("TotalTax")
   private Double totalTax = null;
@@ -674,6 +677,24 @@ public class PreviousOrder {
     this.deliveryAmount = deliveryAmount;
   }
 
+  public PreviousOrder depositReturnFeeAmount(Double depositReturnFeeAmount) {
+    this.depositReturnFeeAmount = depositReturnFeeAmount;
+    return this;
+  }
+
+   /**
+   * Get depositReturnFeeAmount
+   * @return depositReturnFeeAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getDepositReturnFeeAmount() {
+    return depositReturnFeeAmount;
+  }
+
+  public void setDepositReturnFeeAmount(Double depositReturnFeeAmount) {
+    this.depositReturnFeeAmount = depositReturnFeeAmount;
+  }
+
   public PreviousOrder totalTax(Double totalTax) {
     this.totalTax = totalTax;
     return this;
@@ -807,6 +828,7 @@ public class PreviousOrder {
         Objects.equals(this.serviceChargeAmount, previousOrder.serviceChargeAmount) &&
         Objects.equals(this.tipAmount, previousOrder.tipAmount) &&
         Objects.equals(this.deliveryAmount, previousOrder.deliveryAmount) &&
+        Objects.equals(this.depositReturnFeeAmount, previousOrder.depositReturnFeeAmount) &&
         Objects.equals(this.totalTax, previousOrder.totalTax) &&
         Objects.equals(this.totalAmount, previousOrder.totalAmount) &&
         Objects.equals(this.items, previousOrder.items) &&
@@ -816,7 +838,7 @@ public class PreviousOrder {
 
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, totalTax, totalAmount, items, taxRates, whiteLabelId);
+    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, depositReturnFeeAmount, totalTax, totalAmount, items, taxRates, whiteLabelId);
   }
 
 
@@ -842,6 +864,7 @@ public class PreviousOrder {
     sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
     sb.append("    tipAmount: ").append(toIndentedString(tipAmount)).append("\n");
     sb.append("    deliveryAmount: ").append(toIndentedString(deliveryAmount)).append("\n");
+    sb.append("    depositReturnFeeAmount: ").append(toIndentedString(depositReturnFeeAmount)).append("\n");
     sb.append("    totalTax: ").append(toIndentedString(totalTax)).append("\n");
     sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");

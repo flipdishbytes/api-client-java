@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * PreviousOrderItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class PreviousOrderItem {
   @SerializedName("MenuSectionDisplayOrder")
   private Integer menuSectionDisplayOrder = null;
@@ -43,6 +43,9 @@ public class PreviousOrderItem {
 
   @SerializedName("PriceIncludingOptionSetItems")
   private Double priceIncludingOptionSetItems = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   @SerializedName("TaxAmount")
   private Double taxAmount = null;
@@ -122,6 +125,24 @@ public class PreviousOrderItem {
     this.priceIncludingOptionSetItems = priceIncludingOptionSetItems;
   }
 
+  public PreviousOrderItem depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * Get depositReturnFee
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
   public PreviousOrderItem taxAmount(Double taxAmount) {
     this.taxAmount = taxAmount;
     return this;
@@ -180,13 +201,14 @@ public class PreviousOrderItem {
         Objects.equals(this.menuSectionName, previousOrderItem.menuSectionName) &&
         Objects.equals(this.name, previousOrderItem.name) &&
         Objects.equals(this.priceIncludingOptionSetItems, previousOrderItem.priceIncludingOptionSetItems) &&
+        Objects.equals(this.depositReturnFee, previousOrderItem.depositReturnFee) &&
         Objects.equals(this.taxAmount, previousOrderItem.taxAmount) &&
         Objects.equals(this.previousOrderItemOptions, previousOrderItem.previousOrderItemOptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuSectionDisplayOrder, menuSectionName, name, priceIncludingOptionSetItems, taxAmount, previousOrderItemOptions);
+    return Objects.hash(menuSectionDisplayOrder, menuSectionName, name, priceIncludingOptionSetItems, depositReturnFee, taxAmount, previousOrderItemOptions);
   }
 
 
@@ -199,6 +221,7 @@ public class PreviousOrderItem {
     sb.append("    menuSectionName: ").append(toIndentedString(menuSectionName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    priceIncludingOptionSetItems: ").append(toIndentedString(priceIncludingOptionSetItems)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
     sb.append("    previousOrderItemOptions: ").append(toIndentedString(previousOrderItemOptions)).append("\n");
     sb.append("}");

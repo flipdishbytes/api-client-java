@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Event for logging creating of LocationAreas
  */
 @ApiModel(description = "Event for logging creating of LocationAreas")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class LocationAreaCreatedEvent {
   @SerializedName("LocationAreaId")
   private String locationAreaId = null;

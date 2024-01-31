@@ -28,7 +28,7 @@ import java.io.IOException;
  * Phone call
  */
 @ApiModel(description = "Phone call")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class TelephonyConfig {
   @SerializedName("TelephonyConfigId")
   private Integer telephonyConfigId = null;

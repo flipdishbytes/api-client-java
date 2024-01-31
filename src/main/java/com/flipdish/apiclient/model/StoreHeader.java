@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents the most basic store information, used mostly for searches
  */
 @ApiModel(description = "Represents the most basic store information, used mostly for searches")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class StoreHeader {
   @SerializedName("StoreId")
   private Integer storeId = null;

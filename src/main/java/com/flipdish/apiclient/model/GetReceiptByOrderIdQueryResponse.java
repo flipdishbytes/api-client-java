@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.DepositReturnFeesSummary;
 import com.flipdish.apiclient.model.PreviousOrder;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -24,15 +25,20 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
  * GetReceiptByOrderIdQueryResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class GetReceiptByOrderIdQueryResponse {
   @SerializedName("PreviousOrder")
   private PreviousOrder previousOrder = null;
+
+  @SerializedName("DepositReturnFeesSummary")
+  private List<DepositReturnFeesSummary> depositReturnFeesSummary = null;
 
   @SerializedName("TsRequestedForLocal")
   private OffsetDateTime tsRequestedForLocal = null;
@@ -68,6 +74,32 @@ public class GetReceiptByOrderIdQueryResponse {
 
   public void setPreviousOrder(PreviousOrder previousOrder) {
     this.previousOrder = previousOrder;
+  }
+
+  public GetReceiptByOrderIdQueryResponse depositReturnFeesSummary(List<DepositReturnFeesSummary> depositReturnFeesSummary) {
+    this.depositReturnFeesSummary = depositReturnFeesSummary;
+    return this;
+  }
+
+  public GetReceiptByOrderIdQueryResponse addDepositReturnFeesSummaryItem(DepositReturnFeesSummary depositReturnFeesSummaryItem) {
+    if (this.depositReturnFeesSummary == null) {
+      this.depositReturnFeesSummary = new ArrayList<DepositReturnFeesSummary>();
+    }
+    this.depositReturnFeesSummary.add(depositReturnFeesSummaryItem);
+    return this;
+  }
+
+   /**
+   * Get depositReturnFeesSummary
+   * @return depositReturnFeesSummary
+  **/
+  @ApiModelProperty(value = "")
+  public List<DepositReturnFeesSummary> getDepositReturnFeesSummary() {
+    return depositReturnFeesSummary;
+  }
+
+  public void setDepositReturnFeesSummary(List<DepositReturnFeesSummary> depositReturnFeesSummary) {
+    this.depositReturnFeesSummary = depositReturnFeesSummary;
   }
 
   public GetReceiptByOrderIdQueryResponse tsRequestedForLocal(OffsetDateTime tsRequestedForLocal) {
@@ -189,6 +221,7 @@ public class GetReceiptByOrderIdQueryResponse {
     }
     GetReceiptByOrderIdQueryResponse getReceiptByOrderIdQueryResponse = (GetReceiptByOrderIdQueryResponse) o;
     return Objects.equals(this.previousOrder, getReceiptByOrderIdQueryResponse.previousOrder) &&
+        Objects.equals(this.depositReturnFeesSummary, getReceiptByOrderIdQueryResponse.depositReturnFeesSummary) &&
         Objects.equals(this.tsRequestedForLocal, getReceiptByOrderIdQueryResponse.tsRequestedForLocal) &&
         Objects.equals(this.tsOrderPlacedLocal, getReceiptByOrderIdQueryResponse.tsOrderPlacedLocal) &&
         Objects.equals(this.logoUrl, getReceiptByOrderIdQueryResponse.logoUrl) &&
@@ -199,7 +232,7 @@ public class GetReceiptByOrderIdQueryResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(previousOrder, tsRequestedForLocal, tsOrderPlacedLocal, logoUrl, address, vatNumber, paymentMethodDescription);
+    return Objects.hash(previousOrder, depositReturnFeesSummary, tsRequestedForLocal, tsOrderPlacedLocal, logoUrl, address, vatNumber, paymentMethodDescription);
   }
 
 
@@ -209,6 +242,7 @@ public class GetReceiptByOrderIdQueryResponse {
     sb.append("class GetReceiptByOrderIdQueryResponse {\n");
     
     sb.append("    previousOrder: ").append(toIndentedString(previousOrder)).append("\n");
+    sb.append("    depositReturnFeesSummary: ").append(toIndentedString(depositReturnFeesSummary)).append("\n");
     sb.append("    tsRequestedForLocal: ").append(toIndentedString(tsRequestedForLocal)).append("\n");
     sb.append("    tsOrderPlacedLocal: ").append(toIndentedString(tsOrderPlacedLocal)).append("\n");
     sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");

@@ -28,7 +28,7 @@ import java.io.IOException;
  * A reference to an order.
  */
 @ApiModel(description = "A reference to an order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class OrderReference {
   @SerializedName("OrderId")
   private Integer orderId = null;

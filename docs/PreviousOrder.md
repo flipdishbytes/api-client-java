@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **serviceChargeAmount** | **Double** |  |  [optional]
 **tipAmount** | **Double** |  |  [optional]
 **deliveryAmount** | **Double** |  |  [optional]
+**depositReturnFeeAmount** | **Double** |  |  [optional]
 **totalTax** | **Double** |  |  [optional]
 **totalAmount** | **Double** |  |  [optional]
 **items** | [**List&lt;PreviousOrderItem&gt;**](PreviousOrderItem.md) |  |  [optional]

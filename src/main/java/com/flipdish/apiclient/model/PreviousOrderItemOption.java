@@ -27,10 +27,13 @@ import java.io.IOException;
 /**
  * PreviousOrderItemOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class PreviousOrderItemOption {
   @SerializedName("Name")
   private String name = null;
+
+  @SerializedName("DepositReturnFee")
+  private Double depositReturnFee = null;
 
   public PreviousOrderItemOption name(String name) {
     this.name = name;
@@ -50,6 +53,24 @@ public class PreviousOrderItemOption {
     this.name = name;
   }
 
+  public PreviousOrderItemOption depositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+    return this;
+  }
+
+   /**
+   * Get depositReturnFee
+   * @return depositReturnFee
+  **/
+  @ApiModelProperty(value = "")
+  public Double getDepositReturnFee() {
+    return depositReturnFee;
+  }
+
+  public void setDepositReturnFee(Double depositReturnFee) {
+    this.depositReturnFee = depositReturnFee;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -60,12 +81,13 @@ public class PreviousOrderItemOption {
       return false;
     }
     PreviousOrderItemOption previousOrderItemOption = (PreviousOrderItemOption) o;
-    return Objects.equals(this.name, previousOrderItemOption.name);
+    return Objects.equals(this.name, previousOrderItemOption.name) &&
+        Objects.equals(this.depositReturnFee, previousOrderItemOption.depositReturnFee);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name);
+    return Objects.hash(name, depositReturnFee);
   }
 
 
@@ -75,6 +97,7 @@ public class PreviousOrderItemOption {
     sb.append("class PreviousOrderItemOption {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");
     sb.append("}");
     return sb.toString();
   }

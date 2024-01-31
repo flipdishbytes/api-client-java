@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Sample payload of a webhook event
  */
 @ApiModel(description = "Sample payload of a webhook event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T11:29:52.176Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
 public class WebhookEventSample {
   @SerializedName("Type")
   private String type = null;
