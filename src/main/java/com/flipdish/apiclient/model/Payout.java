@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-01-31T16:34:53.581Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-01T12:59:38.274Z")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -522,6 +522,15 @@ public class Payout {
 
   @SerializedName("TotalThirdPartyFees")
   private Double totalThirdPartyFees = null;
+
+  @SerializedName("PosSalesAmount")
+  private Double posSalesAmount = null;
+
+  @SerializedName("PosSalesTax")
+  private Double posSalesTax = null;
+
+  @SerializedName("TipsOnPosSales")
+  private Double tipsOnPosSales = null;
 
   public Payout payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -1261,6 +1270,60 @@ public class Payout {
     this.totalThirdPartyFees = totalThirdPartyFees;
   }
 
+  public Payout posSalesAmount(Double posSalesAmount) {
+    this.posSalesAmount = posSalesAmount;
+    return this;
+  }
+
+   /**
+   * POS sales amount
+   * @return posSalesAmount
+  **/
+  @ApiModelProperty(value = "POS sales amount")
+  public Double getPosSalesAmount() {
+    return posSalesAmount;
+  }
+
+  public void setPosSalesAmount(Double posSalesAmount) {
+    this.posSalesAmount = posSalesAmount;
+  }
+
+  public Payout posSalesTax(Double posSalesTax) {
+    this.posSalesTax = posSalesTax;
+    return this;
+  }
+
+   /**
+   * POS sales tax
+   * @return posSalesTax
+  **/
+  @ApiModelProperty(value = "POS sales tax")
+  public Double getPosSalesTax() {
+    return posSalesTax;
+  }
+
+  public void setPosSalesTax(Double posSalesTax) {
+    this.posSalesTax = posSalesTax;
+  }
+
+  public Payout tipsOnPosSales(Double tipsOnPosSales) {
+    this.tipsOnPosSales = tipsOnPosSales;
+    return this;
+  }
+
+   /**
+   * Tips on POS sales
+   * @return tipsOnPosSales
+  **/
+  @ApiModelProperty(value = "Tips on POS sales")
+  public Double getTipsOnPosSales() {
+    return tipsOnPosSales;
+  }
+
+  public void setTipsOnPosSales(Double tipsOnPosSales) {
+    this.tipsOnPosSales = tipsOnPosSales;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1311,12 +1374,15 @@ public class Payout {
         Objects.equals(this.payGreenSalesAmount, payout.payGreenSalesAmount) &&
         Objects.equals(this.deliveryIntegrationFee, payout.deliveryIntegrationFee) &&
         Objects.equals(this.deliveryIntegrationTipFee, payout.deliveryIntegrationTipFee) &&
-        Objects.equals(this.totalThirdPartyFees, payout.totalThirdPartyFees);
+        Objects.equals(this.totalThirdPartyFees, payout.totalThirdPartyFees) &&
+        Objects.equals(this.posSalesAmount, payout.posSalesAmount) &&
+        Objects.equals(this.posSalesTax, payout.posSalesTax) &&
+        Objects.equals(this.tipsOnPosSales, payout.tipsOnPosSales);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount, deliveryIntegrationFee, deliveryIntegrationTipFee, totalThirdPartyFees);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount, deliveryIntegrationFee, deliveryIntegrationTipFee, totalThirdPartyFees, posSalesAmount, posSalesTax, tipsOnPosSales);
   }
 
 
@@ -1366,6 +1432,9 @@ public class Payout {
     sb.append("    deliveryIntegrationFee: ").append(toIndentedString(deliveryIntegrationFee)).append("\n");
     sb.append("    deliveryIntegrationTipFee: ").append(toIndentedString(deliveryIntegrationTipFee)).append("\n");
     sb.append("    totalThirdPartyFees: ").append(toIndentedString(totalThirdPartyFees)).append("\n");
+    sb.append("    posSalesAmount: ").append(toIndentedString(posSalesAmount)).append("\n");
+    sb.append("    posSalesTax: ").append(toIndentedString(posSalesTax)).append("\n");
+    sb.append("    tipsOnPosSales: ").append(toIndentedString(tipsOnPosSales)).append("\n");
     sb.append("}");
     return sb.toString();
   }
