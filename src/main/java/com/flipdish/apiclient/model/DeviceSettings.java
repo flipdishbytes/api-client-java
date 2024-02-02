@@ -28,7 +28,7 @@ import java.io.IOException;
  * Device settings for Hydra
  */
 @ApiModel(description = "Device settings for Hydra")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-01T12:59:38.274Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-02T09:41:57.654Z")
 public class DeviceSettings {
   @SerializedName("Volume")
   private Integer volume = null;
