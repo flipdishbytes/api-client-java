@@ -24,7 +24,6 @@ import com.flipdish.apiclient.model.RestApiResultLoyaltyCampaign;
 import com.flipdish.apiclient.model.RestApiResultRetentionCampaign;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.RetentionCampaignBase;
-import java.util.UUID;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -72,23 +71,6 @@ public class CampaignsApiTest {
         String appId = null;
         RetentionCampaignBase campaign = null;
         RestApiResultRetentionCampaign response = api.createRetentionCampaign(appId, campaign);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void fetchLoyaltyCampaignByPublicIdTest() throws ApiException {
-        String appId = null;
-        UUID campaignPublicId = null;
-        RestApiArrayResultLoyaltyCampaign response = api.fetchLoyaltyCampaignByPublicId(appId, campaignPublicId);
 
         // TODO: test validations
     }
