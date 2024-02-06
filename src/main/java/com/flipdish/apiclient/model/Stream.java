@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Stream
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-06T12:18:31.729Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-06T14:11:18.102Z")
 public class Stream {
   @SerializedName("CanRead")
   private Boolean canRead = null;
