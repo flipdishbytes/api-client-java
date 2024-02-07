@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra device details
  */
 @ApiModel(description = "Hydra device details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-06T14:11:18.102Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
 public class HydraDeviceDetails {
   @SerializedName("HydraConfigId")
   private Integer hydraConfigId = null;

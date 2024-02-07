@@ -30,7 +30,7 @@ import java.util.List;
  * Loyalty campaign base
  */
 @ApiModel(description = "Loyalty campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-06T14:11:18.102Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
 public class LoyaltyCampaignBase {
   @SerializedName("OrdersBeforeReceivingVoucher")
   private Integer ordersBeforeReceivingVoucher = null;
@@ -61,6 +61,9 @@ public class LoyaltyCampaignBase {
 
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
+
+  @SerializedName("AppId")
+  private String appId = null;
 
   public LoyaltyCampaignBase ordersBeforeReceivingVoucher(Integer ordersBeforeReceivingVoucher) {
     this.ordersBeforeReceivingVoucher = ordersBeforeReceivingVoucher;
@@ -256,6 +259,24 @@ public class LoyaltyCampaignBase {
     this.storeIds = storeIds;
   }
 
+  public LoyaltyCampaignBase appId(String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * The app that this campaign belongs to.
+   * @return appId
+  **/
+  @ApiModelProperty(value = "The app that this campaign belongs to.")
+  public String getAppId() {
+    return appId;
+  }
+
+  public void setAppId(String appId) {
+    this.appId = appId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -275,12 +296,13 @@ public class LoyaltyCampaignBase {
         Objects.equals(this.autoApplyResultingVouchers, loyaltyCampaignBase.autoApplyResultingVouchers) &&
         Objects.equals(this.includeExistingOrders, loyaltyCampaignBase.includeExistingOrders) &&
         Objects.equals(this.isEnabled, loyaltyCampaignBase.isEnabled) &&
-        Objects.equals(this.storeIds, loyaltyCampaignBase.storeIds);
+        Objects.equals(this.storeIds, loyaltyCampaignBase.storeIds) &&
+        Objects.equals(this.appId, loyaltyCampaignBase.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds);
+    return Objects.hash(ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId);
   }
 
 
@@ -299,6 +321,7 @@ public class LoyaltyCampaignBase {
     sb.append("    includeExistingOrders: ").append(toIndentedString(includeExistingOrders)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

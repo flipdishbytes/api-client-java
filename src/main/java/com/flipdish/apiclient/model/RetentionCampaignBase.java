@@ -30,7 +30,7 @@ import java.util.List;
  * Retention campaign base
  */
 @ApiModel(description = "Retention campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-06T14:11:18.102Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
 public class RetentionCampaignBase {
   @SerializedName("NotifyCustomerAfterMinutes")
   private Integer notifyCustomerAfterMinutes = null;
@@ -58,6 +58,9 @@ public class RetentionCampaignBase {
 
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
+
+  @SerializedName("AppId")
+  private String appId = null;
 
   public RetentionCampaignBase notifyCustomerAfterMinutes(Integer notifyCustomerAfterMinutes) {
     this.notifyCustomerAfterMinutes = notifyCustomerAfterMinutes;
@@ -237,6 +240,24 @@ public class RetentionCampaignBase {
     this.storeIds = storeIds;
   }
 
+  public RetentionCampaignBase appId(String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * The app that this campaign belongs to.
+   * @return appId
+  **/
+  @ApiModelProperty(value = "The app that this campaign belongs to.")
+  public String getAppId() {
+    return appId;
+  }
+
+  public void setAppId(String appId) {
+    this.appId = appId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -255,12 +276,13 @@ public class RetentionCampaignBase {
         Objects.equals(this.autoApplyResultingVouchers, retentionCampaignBase.autoApplyResultingVouchers) &&
         Objects.equals(this.includeExistingOrders, retentionCampaignBase.includeExistingOrders) &&
         Objects.equals(this.isEnabled, retentionCampaignBase.isEnabled) &&
-        Objects.equals(this.storeIds, retentionCampaignBase.storeIds);
+        Objects.equals(this.storeIds, retentionCampaignBase.storeIds) &&
+        Objects.equals(this.appId, retentionCampaignBase.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifyCustomerAfterMinutes, percentDiscountAmount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds);
+    return Objects.hash(notifyCustomerAfterMinutes, percentDiscountAmount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId);
   }
 
 
@@ -278,6 +300,7 @@ public class RetentionCampaignBase {
     sb.append("    includeExistingOrders: ").append(toIndentedString(includeExistingOrders)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

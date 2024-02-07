@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **includeExistingOrders** | **Boolean** | Campaign will apply to existing orders |  [optional]
 **isEnabled** | **Boolean** | Is campaign enabled |  [optional]
 **storeIds** | **List&lt;Integer&gt;** | Ids of stores this campaign applies to |  [optional]
+**appId** | **String** | The app that this campaign belongs to. |  [optional]
 
 
 
