@@ -30,7 +30,7 @@ import java.util.List;
  * Subscription list item
  */
 @ApiModel(description = "Subscription list item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
 public class AppStoreSubscriptionItem {
   @SerializedName("ExternalSubscriptionId")
   private String externalSubscriptionId = null;

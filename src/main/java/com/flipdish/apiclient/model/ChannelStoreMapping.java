@@ -28,7 +28,7 @@ import java.io.IOException;
  * Describes a channel store mapping
  */
 @ApiModel(description = "Describes a channel store mapping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
 public class ChannelStoreMapping {
   @SerializedName("StoreId")
   private Integer storeId = null;

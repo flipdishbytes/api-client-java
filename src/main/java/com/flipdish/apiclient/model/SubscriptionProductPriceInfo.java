@@ -28,7 +28,7 @@ import java.io.IOException;
  * Price info
  */
 @ApiModel(description = "Price info")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
 public class SubscriptionProductPriceInfo {
   @SerializedName("Amount")
   private Double amount = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * A single currency data point, with no date
  */
 @ApiModel(description = "A single currency data point, with no date")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
 public class StatisticsCurrencyDataPoint {
   /**
    * Currency

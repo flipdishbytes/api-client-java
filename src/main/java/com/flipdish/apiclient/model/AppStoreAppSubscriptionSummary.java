@@ -31,7 +31,7 @@ import java.util.List;
  * App store subscription information
  */
 @ApiModel(description = "App store subscription information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T09:45:23.637Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
 public class AppStoreAppSubscriptionSummary {
   @SerializedName("TotalSubscriptions")
   private Integer totalSubscriptions = null;
