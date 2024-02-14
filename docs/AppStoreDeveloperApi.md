@@ -228,7 +228,7 @@ null (empty response body)
 
 <a name="getExternalFunctionSigningKey"></a>
 # **getExternalFunctionSigningKey**
-> RestApiErrorResult getExternalFunctionSigningKey(oauthAppId, appStoreAppId)
+> RestApiStringResult getExternalFunctionSigningKey(oauthAppId, appStoreAppId)
 
 
 
@@ -251,7 +251,7 @@ AppStoreDeveloperApi apiInstance = new AppStoreDeveloperApi();
 String oauthAppId = "oauthAppId_example"; // String | 
 String appStoreAppId = "appStoreAppId_example"; // String | 
 try {
-    RestApiErrorResult result = apiInstance.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+    RestApiStringResult result = apiInstance.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreDeveloperApi#getExternalFunctionSigningKey");
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiErrorResult**](RestApiErrorResult.md)
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 

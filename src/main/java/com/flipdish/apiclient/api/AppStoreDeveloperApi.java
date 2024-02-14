@@ -672,11 +672,11 @@ public class AppStoreDeveloperApi {
      * 
      * @param oauthAppId  (required)
      * @param appStoreAppId  (required)
-     * @return RestApiErrorResult
+     * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiErrorResult getExternalFunctionSigningKey(String oauthAppId, String appStoreAppId) throws ApiException {
-        ApiResponse<RestApiErrorResult> resp = getExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
+    public RestApiStringResult getExternalFunctionSigningKey(String oauthAppId, String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiStringResult> resp = getExternalFunctionSigningKeyWithHttpInfo(oauthAppId, appStoreAppId);
         return resp.getData();
     }
 
@@ -685,12 +685,12 @@ public class AppStoreDeveloperApi {
      * 
      * @param oauthAppId  (required)
      * @param appStoreAppId  (required)
-     * @return ApiResponse&lt;RestApiErrorResult&gt;
+     * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiErrorResult> getExternalFunctionSigningKeyWithHttpInfo(String oauthAppId, String appStoreAppId) throws ApiException {
+    public ApiResponse<RestApiStringResult> getExternalFunctionSigningKeyWithHttpInfo(String oauthAppId, String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = getExternalFunctionSigningKeyValidateBeforeCall(oauthAppId, appStoreAppId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiErrorResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -703,7 +703,7 @@ public class AppStoreDeveloperApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getExternalFunctionSigningKeyAsync(String oauthAppId, String appStoreAppId, final ApiCallback<RestApiErrorResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getExternalFunctionSigningKeyAsync(String oauthAppId, String appStoreAppId, final ApiCallback<RestApiStringResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -725,7 +725,7 @@ public class AppStoreDeveloperApi {
         }
 
         com.squareup.okhttp.Call call = getExternalFunctionSigningKeyValidateBeforeCall(oauthAppId, appStoreAppId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiErrorResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

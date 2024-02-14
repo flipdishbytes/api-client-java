@@ -33,7 +33,7 @@ import java.util.List;
  * App store configurations for a given AppId
  */
 @ApiModel(description = "App store configurations for a given AppId")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-14T11:06:08.488Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-14T14:13:14.879Z")
 public class AppStoreAppConfigurationsWithSubscriptions {
   @SerializedName("Subscription")
   private AppStoreAppSubscriptionSummary subscription = null;
