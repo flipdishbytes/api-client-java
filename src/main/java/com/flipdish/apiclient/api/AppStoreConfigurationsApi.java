@@ -27,15 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.AppStoreAppConfiguration;
 import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
-import com.flipdish.apiclient.model.ExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfigurationsWithSubscriptions;
+import com.flipdish.apiclient.model.RestApiResultExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
@@ -556,11 +555,11 @@ public class AppStoreConfigurationsApi {
      * @param appStoreAppId  (required)
      * @param configId  (required)
      * @param executeConfigurationActionRequest  (required)
-     * @return ExecuteConfigurationActionResult
+     * @return RestApiResultExecuteConfigurationActionResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ExecuteConfigurationActionResult executeConfigurationAction(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
-        ApiResponse<ExecuteConfigurationActionResult> resp = executeConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+    public RestApiResultExecuteConfigurationActionResult executeConfigurationAction(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
+        ApiResponse<RestApiResultExecuteConfigurationActionResult> resp = executeConfigurationActionWithHttpInfo(appId, appStoreAppId, configId, executeConfigurationActionRequest);
         return resp.getData();
     }
 
@@ -571,12 +570,12 @@ public class AppStoreConfigurationsApi {
      * @param appStoreAppId  (required)
      * @param configId  (required)
      * @param executeConfigurationActionRequest  (required)
-     * @return ApiResponse&lt;ExecuteConfigurationActionResult&gt;
+     * @return ApiResponse&lt;RestApiResultExecuteConfigurationActionResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ExecuteConfigurationActionResult> executeConfigurationActionWithHttpInfo(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
+    public ApiResponse<RestApiResultExecuteConfigurationActionResult> executeConfigurationActionWithHttpInfo(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest) throws ApiException {
         com.squareup.okhttp.Call call = executeConfigurationActionValidateBeforeCall(appId, appStoreAppId, configId, executeConfigurationActionRequest, null, null);
-        Type localVarReturnType = new TypeToken<ExecuteConfigurationActionResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultExecuteConfigurationActionResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -591,7 +590,7 @@ public class AppStoreConfigurationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call executeConfigurationActionAsync(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest, final ApiCallback<ExecuteConfigurationActionResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call executeConfigurationActionAsync(String appId, String appStoreAppId, String configId, ExecuteConfigurationActionRequest executeConfigurationActionRequest, final ApiCallback<RestApiResultExecuteConfigurationActionResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -613,7 +612,7 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = executeConfigurationActionValidateBeforeCall(appId, appStoreAppId, configId, executeConfigurationActionRequest, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ExecuteConfigurationActionResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultExecuteConfigurationActionResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -701,11 +700,11 @@ public class AppStoreConfigurationsApi {
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param configId  (required)
-     * @return AppStoreAppConfiguration
+     * @return RestApiResultAppStoreAppConfiguration
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AppStoreAppConfiguration getAppStoreConfig(String appId, String appStoreAppId, String configId) throws ApiException {
-        ApiResponse<AppStoreAppConfiguration> resp = getAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
+    public RestApiResultAppStoreAppConfiguration getAppStoreConfig(String appId, String appStoreAppId, String configId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreAppConfiguration> resp = getAppStoreConfigWithHttpInfo(appId, appStoreAppId, configId);
         return resp.getData();
     }
 
@@ -715,12 +714,12 @@ public class AppStoreConfigurationsApi {
      * @param appId  (required)
      * @param appStoreAppId  (required)
      * @param configId  (required)
-     * @return ApiResponse&lt;AppStoreAppConfiguration&gt;
+     * @return ApiResponse&lt;RestApiResultAppStoreAppConfiguration&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AppStoreAppConfiguration> getAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId) throws ApiException {
+    public ApiResponse<RestApiResultAppStoreAppConfiguration> getAppStoreConfigWithHttpInfo(String appId, String appStoreAppId, String configId) throws ApiException {
         com.squareup.okhttp.Call call = getAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, null, null);
-        Type localVarReturnType = new TypeToken<AppStoreAppConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfiguration>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -734,7 +733,7 @@ public class AppStoreConfigurationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreConfigAsync(String appId, String appStoreAppId, String configId, final ApiCallback<AppStoreAppConfiguration> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreConfigAsync(String appId, String appStoreAppId, String configId, final ApiCallback<RestApiResultAppStoreAppConfiguration> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -756,7 +755,7 @@ public class AppStoreConfigurationsApi {
         }
 
         com.squareup.okhttp.Call call = getAppStoreConfigValidateBeforeCall(appId, appStoreAppId, configId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AppStoreAppConfiguration>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfiguration>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

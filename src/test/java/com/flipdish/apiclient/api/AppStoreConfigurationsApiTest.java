@@ -14,15 +14,14 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppStoreAppConfiguration;
 import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
-import com.flipdish.apiclient.model.ExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfigurationsWithSubscriptions;
+import com.flipdish.apiclient.model.RestApiResultExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
@@ -109,7 +108,7 @@ public class AppStoreConfigurationsApiTest {
         String appStoreAppId = null;
         String configId = null;
         ExecuteConfigurationActionRequest executeConfigurationActionRequest = null;
-        ExecuteConfigurationActionResult response = api.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+        RestApiResultExecuteConfigurationActionResult response = api.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
 
         // TODO: test validations
     }
@@ -127,7 +126,7 @@ public class AppStoreConfigurationsApiTest {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
-        AppStoreAppConfiguration response = api.getAppStoreConfig(appId, appStoreAppId, configId);
+        RestApiResultAppStoreAppConfiguration response = api.getAppStoreConfig(appId, appStoreAppId, configId);
 
         // TODO: test validations
     }

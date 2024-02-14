@@ -14,10 +14,10 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
-import com.flipdish.apiclient.model.AppStoreApp;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -47,7 +47,7 @@ public class AppStoreApiTest {
     @Test
     public void getAppStoreAppTest() throws ApiException {
         String appStoreAppId = null;
-        AppStoreApp response = api.getAppStoreApp(appStoreAppId);
+        RestApiResultAppStoreApp response = api.getAppStoreApp(appStoreAppId);
 
         // TODO: test validations
     }

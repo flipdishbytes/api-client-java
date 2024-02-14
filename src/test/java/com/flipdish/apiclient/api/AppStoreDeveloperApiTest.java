@@ -121,7 +121,7 @@ public class AppStoreDeveloperApiTest {
     public void getExternalFunctionSigningKeyTest() throws ApiException {
         String oauthAppId = null;
         String appStoreAppId = null;
-        api.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
+        RestApiErrorResult response = api.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
 
         // TODO: test validations
     }

@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Mobile Apps event
  */
 @ApiModel(description = "Mobile Apps event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-07T17:04:17.401Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-14T11:06:08.488Z")
 public class MobileAppsSubmissionStatusUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

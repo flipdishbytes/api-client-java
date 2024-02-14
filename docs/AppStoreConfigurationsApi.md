@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 <a name="executeConfigurationAction"></a>
 # **executeConfigurationAction**
-> ExecuteConfigurationActionResult executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest)
+> RestApiResultExecuteConfigurationActionResult executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest)
 
 
 
@@ -202,7 +202,7 @@ String appStoreAppId = "appStoreAppId_example"; // String |
 String configId = "configId_example"; // String | 
 ExecuteConfigurationActionRequest executeConfigurationActionRequest = new ExecuteConfigurationActionRequest(); // ExecuteConfigurationActionRequest | 
 try {
-    ExecuteConfigurationActionResult result = apiInstance.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
+    RestApiResultExecuteConfigurationActionResult result = apiInstance.executeConfigurationAction(appId, appStoreAppId, configId, executeConfigurationActionRequest);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#executeConfigurationAction");
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ExecuteConfigurationActionResult**](ExecuteConfigurationActionResult.md)
+[**RestApiResultExecuteConfigurationActionResult**](RestApiResultExecuteConfigurationActionResult.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 <a name="getAppStoreConfig"></a>
 # **getAppStoreConfig**
-> AppStoreAppConfiguration getAppStoreConfig(appId, appStoreAppId, configId)
+> RestApiResultAppStoreAppConfiguration getAppStoreConfig(appId, appStoreAppId, configId)
 
 
 
@@ -258,7 +258,7 @@ String appId = "appId_example"; // String |
 String appStoreAppId = "appStoreAppId_example"; // String | 
 String configId = "configId_example"; // String | 
 try {
-    AppStoreAppConfiguration result = apiInstance.getAppStoreConfig(appId, appStoreAppId, configId);
+    RestApiResultAppStoreAppConfiguration result = apiInstance.getAppStoreConfig(appId, appStoreAppId, configId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreConfigurationsApi#getAppStoreConfig");
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AppStoreAppConfiguration**](AppStoreAppConfiguration.md)
+[**RestApiResultAppStoreAppConfiguration**](RestApiResultAppStoreAppConfiguration.md)
 
 ### Authorization
 

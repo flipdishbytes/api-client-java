@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.flipdish.apiclient.model.AppStoreApp;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
+import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -126,11 +126,11 @@ public class AppStoreApi {
      * 
      * 
      * @param appStoreAppId  (required)
-     * @return AppStoreApp
+     * @return RestApiResultAppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AppStoreApp getAppStoreApp(String appStoreAppId) throws ApiException {
-        ApiResponse<AppStoreApp> resp = getAppStoreAppWithHttpInfo(appStoreAppId);
+    public RestApiResultAppStoreApp getAppStoreApp(String appStoreAppId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreApp> resp = getAppStoreAppWithHttpInfo(appStoreAppId);
         return resp.getData();
     }
 
@@ -138,12 +138,12 @@ public class AppStoreApi {
      * 
      * 
      * @param appStoreAppId  (required)
-     * @return ApiResponse&lt;AppStoreApp&gt;
+     * @return ApiResponse&lt;RestApiResultAppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AppStoreApp> getAppStoreAppWithHttpInfo(String appStoreAppId) throws ApiException {
+    public ApiResponse<RestApiResultAppStoreApp> getAppStoreAppWithHttpInfo(String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, null, null);
-        Type localVarReturnType = new TypeToken<AppStoreApp>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -155,7 +155,7 @@ public class AppStoreApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, final ApiCallback<AppStoreApp> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, final ApiCallback<RestApiResultAppStoreApp> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -177,7 +177,7 @@ public class AppStoreApi {
         }
 
         com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AppStoreApp>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
