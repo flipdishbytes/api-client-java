@@ -124,6 +124,7 @@ VIEWASSIGNEDBANKACCOUNT | &quot;ViewAssignedBankAccount&quot;
 VERIFYBANKACCOUNTS | &quot;VerifyBankAccounts&quot;
 VIEWSERVICECHARGECONFIGURATIONS | &quot;ViewServiceChargeConfigurations&quot;
 EDITSERVICECHARGECONFIGURATIONS | &quot;EditServiceChargeConfigurations&quot;
+EDITSTOREDELIVERYZONEFEES | &quot;EditStoreDeliveryZoneFees&quot;
 VIEWHYDRACONFIG | &quot;ViewHydraConfig&quot;
 UPDATEHYDRACONFIGMANAGE | &quot;UpdateHydraConfigManage&quot;
 INITIATEBLUETOOTHPAIRINGMODE | &quot;InitiateBluetoothPairingMode&quot;

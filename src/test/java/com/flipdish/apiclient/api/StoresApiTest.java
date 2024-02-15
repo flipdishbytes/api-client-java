@@ -50,7 +50,7 @@ import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
-import com.flipdish.apiclient.model.StoreDeliveryZoneFeeConfig;
+import com.flipdish.apiclient.model.StoreDeliveryZoneFeeConfigUpdateRequest;
 import com.flipdish.apiclient.model.StoreFeeConfig;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -535,8 +535,8 @@ public class StoresApiTest {
     @Test
     public void putStoreDeliveryFeeConfigTest() throws ApiException {
         Integer storeId = null;
-        List<StoreDeliveryZoneFeeConfig> configs = null;
-        api.putStoreDeliveryFeeConfig(storeId, configs);
+        StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest = null;
+        api.putStoreDeliveryFeeConfig(storeId, feeConfigUpdateRequest);
 
         // TODO: test validations
     }

@@ -1446,7 +1446,7 @@ null (empty response body)
 
 <a name="putStoreDeliveryFeeConfig"></a>
 # **putStoreDeliveryFeeConfig**
-> putStoreDeliveryFeeConfig(storeId, configs)
+> putStoreDeliveryFeeConfig(storeId, feeConfigUpdateRequest)
 
 
 
@@ -1467,9 +1467,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | 
-List<StoreDeliveryZoneFeeConfig> configs = Arrays.asList(new StoreDeliveryZoneFeeConfig()); // List<StoreDeliveryZoneFeeConfig> | 
+StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest = new StoreDeliveryZoneFeeConfigUpdateRequest(); // StoreDeliveryZoneFeeConfigUpdateRequest | 
 try {
-    apiInstance.putStoreDeliveryFeeConfig(storeId, configs);
+    apiInstance.putStoreDeliveryFeeConfig(storeId, feeConfigUpdateRequest);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#putStoreDeliveryFeeConfig");
     e.printStackTrace();
@@ -1481,7 +1481,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **Integer**|  |
- **configs** | [**List&lt;StoreDeliveryZoneFeeConfig&gt;**](StoreDeliveryZoneFeeConfig.md)|  |
+ **feeConfigUpdateRequest** | [**StoreDeliveryZoneFeeConfigUpdateRequest**](StoreDeliveryZoneFeeConfigUpdateRequest.md)|  |
 
 ### Return type
 
