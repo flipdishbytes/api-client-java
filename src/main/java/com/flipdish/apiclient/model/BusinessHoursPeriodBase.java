@@ -28,7 +28,7 @@ import java.io.IOException;
  * Business hours period
  */
 @ApiModel(description = "Business hours period")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-20T14:28:17.044Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-21T13:31:03.338Z")
 public class BusinessHoursPeriodBase {
   /**
    * Day of week
