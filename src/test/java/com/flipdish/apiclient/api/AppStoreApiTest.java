@@ -47,7 +47,8 @@ public class AppStoreApiTest {
     @Test
     public void getAppStoreAppTest() throws ApiException {
         String appStoreAppId = null;
-        RestApiResultAppStoreApp response = api.getAppStoreApp(appStoreAppId);
+        String appId = null;
+        RestApiResultAppStoreApp response = api.getAppStoreApp(appStoreAppId, appId);
 
         // TODO: test validations
     }

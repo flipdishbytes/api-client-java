@@ -61,12 +61,13 @@ public class AppStoreApi {
     /**
      * Build call for getAppStoreApp
      * @param appStoreAppId  (required)
+     * @param appId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppCall(String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppCall(String appStoreAppId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -75,6 +76,8 @@ public class AppStoreApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("appId", appId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -109,7 +112,7 @@ public class AppStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getAppStoreAppValidateBeforeCall(String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getAppStoreAppValidateBeforeCall(String appStoreAppId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appStoreAppId' is set
         if (appStoreAppId == null) {
@@ -117,7 +120,7 @@ public class AppStoreApi {
         }
         
 
-        com.squareup.okhttp.Call call = getAppStoreAppCall(appStoreAppId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAppStoreAppCall(appStoreAppId, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -126,11 +129,12 @@ public class AppStoreApi {
      * 
      * 
      * @param appStoreAppId  (required)
+     * @param appId  (optional)
      * @return RestApiResultAppStoreApp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultAppStoreApp getAppStoreApp(String appStoreAppId) throws ApiException {
-        ApiResponse<RestApiResultAppStoreApp> resp = getAppStoreAppWithHttpInfo(appStoreAppId);
+    public RestApiResultAppStoreApp getAppStoreApp(String appStoreAppId, String appId) throws ApiException {
+        ApiResponse<RestApiResultAppStoreApp> resp = getAppStoreAppWithHttpInfo(appStoreAppId, appId);
         return resp.getData();
     }
 
@@ -138,11 +142,12 @@ public class AppStoreApi {
      * 
      * 
      * @param appStoreAppId  (required)
+     * @param appId  (optional)
      * @return ApiResponse&lt;RestApiResultAppStoreApp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultAppStoreApp> getAppStoreAppWithHttpInfo(String appStoreAppId) throws ApiException {
-        com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, null, null);
+    public ApiResponse<RestApiResultAppStoreApp> getAppStoreAppWithHttpInfo(String appStoreAppId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, appId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -151,11 +156,12 @@ public class AppStoreApi {
      *  (asynchronously)
      * 
      * @param appStoreAppId  (required)
+     * @param appId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, final ApiCallback<RestApiResultAppStoreApp> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppAsync(String appStoreAppId, String appId, final ApiCallback<RestApiResultAppStoreApp> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -176,7 +182,7 @@ public class AppStoreApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAppStoreAppValidateBeforeCall(appStoreAppId, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultAppStoreApp>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

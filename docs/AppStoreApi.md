@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getAppStoreApp"></a>
 # **getAppStoreApp**
-> RestApiResultAppStoreApp getAppStoreApp(appStoreAppId)
+> RestApiResultAppStoreApp getAppStoreApp(appStoreAppId, appId)
 
 
 
@@ -31,8 +31,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AppStoreApi apiInstance = new AppStoreApi();
 String appStoreAppId = "appStoreAppId_example"; // String | 
+String appId = "appId_example"; // String | 
 try {
-    RestApiResultAppStoreApp result = apiInstance.getAppStoreApp(appStoreAppId);
+    RestApiResultAppStoreApp result = apiInstance.getAppStoreApp(appStoreAppId, appId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#getAppStoreApp");
@@ -45,6 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appStoreAppId** | **String**|  |
+ **appId** | **String**|  | [optional]
 
 ### Return type
 
