@@ -27,16 +27,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store app summary information
+ * AppStoreAppSummary
  */
-@ApiModel(description = "App store app summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppSummary {
   @SerializedName("Id")
   private String id = null;
 
   /**
-   * Application verification status
+   * Gets or Sets verificationStatus
    */
   @JsonAdapter(VerificationStatusEnum.Adapter.class)
   public enum VerificationStatusEnum {
@@ -251,10 +250,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Unique App store app id
+   * Get id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Unique App store app id")
+  @ApiModelProperty(required = true, value = "")
   public String getId() {
     return id;
   }
@@ -269,10 +268,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Application verification status
+   * Get verificationStatus
    * @return verificationStatus
   **/
-  @ApiModelProperty(required = true, value = "Application verification status")
+  @ApiModelProperty(required = true, value = "")
   public VerificationStatusEnum getVerificationStatus() {
     return verificationStatus;
   }
@@ -287,10 +286,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Logo
+   * Get logo
    * @return logo
   **/
-  @ApiModelProperty(value = "Logo")
+  @ApiModelProperty(value = "")
   public String getLogo() {
     return logo;
   }
@@ -305,10 +304,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Internal
+   * Get internal
    * @return internal
   **/
-  @ApiModelProperty(required = true, value = "Internal")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isInternal() {
     return internal;
   }
@@ -323,10 +322,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Name
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
@@ -341,10 +340,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Description
+   * Get description
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "Description")
+  @ApiModelProperty(required = true, value = "")
   public String getDescription() {
     return description;
   }
@@ -359,10 +358,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Is application enabled
+   * Get isEnabled
    * @return isEnabled
   **/
-  @ApiModelProperty(value = "Is application enabled")
+  @ApiModelProperty(value = "")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -382,10 +381,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Categories
+   * Get categories
    * @return categories
   **/
-  @ApiModelProperty(required = true, value = "Categories")
+  @ApiModelProperty(required = true, value = "")
   public List<CategoriesEnum> getCategories() {
     return categories;
   }
@@ -405,10 +404,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Countries
+   * Get countries
    * @return countries
   **/
-  @ApiModelProperty(required = true, value = "Countries")
+  @ApiModelProperty(required = true, value = "")
   public List<CountriesEnum> getCountries() {
     return countries;
   }
@@ -423,10 +422,10 @@ public class AppStoreAppSummary {
   }
 
    /**
-   * Developer Name
+   * Get developerName
    * @return developerName
   **/
-  @ApiModelProperty(value = "Developer Name")
+  @ApiModelProperty(value = "")
   public String getDeveloperName() {
     return developerName;
   }

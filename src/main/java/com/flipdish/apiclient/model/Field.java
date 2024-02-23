@@ -30,8 +30,7 @@ import java.util.List;
 /**
  * Field
  */
-@ApiModel(description = "Field")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class Field {
   @SerializedName("Name")
   private String name = null;
@@ -58,7 +57,7 @@ public class Field {
   private String validationRegex = null;
 
   /**
-   * Field Type
+   * Gets or Sets fieldType
    */
   @JsonAdapter(FieldTypeEnum.Adapter.class)
   public enum FieldTypeEnum {
@@ -132,10 +131,10 @@ public class Field {
   }
 
    /**
-   * Name
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
@@ -150,10 +149,10 @@ public class Field {
   }
 
    /**
-   * Description
+   * Get description
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "Description")
+  @ApiModelProperty(required = true, value = "")
   public String getDescription() {
     return description;
   }
@@ -168,10 +167,10 @@ public class Field {
   }
 
    /**
-   * Key
+   * Get key
    * @return key
   **/
-  @ApiModelProperty(required = true, value = "Key")
+  @ApiModelProperty(required = true, value = "")
   public String getKey() {
     return key;
   }
@@ -186,10 +185,10 @@ public class Field {
   }
 
    /**
-   * Tooltip
+   * Get tooltip
    * @return tooltip
   **/
-  @ApiModelProperty(value = "Tooltip")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -204,12 +203,12 @@ public class Field {
   }
 
    /**
-   * Position
+   * Get position
    * minimum: 1
    * maximum: 1000
    * @return position
   **/
-  @ApiModelProperty(required = true, value = "Position")
+  @ApiModelProperty(required = true, value = "")
   public Integer getPosition() {
     return position;
   }
@@ -224,10 +223,10 @@ public class Field {
   }
 
    /**
-   * Default Value
+   * Get defaultValue
    * @return defaultValue
   **/
-  @ApiModelProperty(value = "Default Value")
+  @ApiModelProperty(value = "")
   public String getDefaultValue() {
     return defaultValue;
   }
@@ -250,10 +249,10 @@ public class Field {
   }
 
    /**
-   * Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt;
+   * Get validValues
    * @return validValues
   **/
-  @ApiModelProperty(value = "Valid Values  <remarks>Used typically for dropdown/select</remarks>")
+  @ApiModelProperty(value = "")
   public List<ValidValue> getValidValues() {
     return validValues;
   }
@@ -268,10 +267,10 @@ public class Field {
   }
 
    /**
-   * Validation Regex
+   * Get validationRegex
    * @return validationRegex
   **/
-  @ApiModelProperty(value = "Validation Regex")
+  @ApiModelProperty(value = "")
   public String getValidationRegex() {
     return validationRegex;
   }
@@ -286,10 +285,10 @@ public class Field {
   }
 
    /**
-   * Field Type
+   * Get fieldType
    * @return fieldType
   **/
-  @ApiModelProperty(required = true, value = "Field Type")
+  @ApiModelProperty(required = true, value = "")
   public FieldTypeEnum getFieldType() {
     return fieldType;
   }
@@ -304,10 +303,10 @@ public class Field {
   }
 
    /**
-   * Is this field only editable by Flipdish?
+   * Get isFlipdishRestricted
    * @return isFlipdishRestricted
   **/
-  @ApiModelProperty(value = "Is this field only editable by Flipdish?")
+  @ApiModelProperty(value = "")
   public Boolean isIsFlipdishRestricted() {
     return isFlipdishRestricted;
   }

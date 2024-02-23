@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Result of configuration action execution
+ * ExecuteConfigurationActionResult
  */
-@ApiModel(description = "Result of configuration action execution")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class ExecuteConfigurationActionResult {
   @SerializedName("ErrorMessage")
   private String errorMessage = null;
@@ -40,7 +39,7 @@ public class ExecuteConfigurationActionResult {
   private String redirectUrl = null;
 
   /**
-   * Redirect target
+   * Gets or Sets redirectTarget
    */
   @JsonAdapter(RedirectTargetEnum.Adapter.class)
   public enum RedirectTargetEnum {
@@ -97,10 +96,10 @@ public class ExecuteConfigurationActionResult {
   }
 
    /**
-   * Error message to display to the user (if not empty)
+   * Get errorMessage
    * @return errorMessage
   **/
-  @ApiModelProperty(value = "Error message to display to the user (if not empty)")
+  @ApiModelProperty(value = "")
   public String getErrorMessage() {
     return errorMessage;
   }
@@ -115,10 +114,10 @@ public class ExecuteConfigurationActionResult {
   }
 
    /**
-   * Information message to display to the user (if not empty)
+   * Get infoMessage
    * @return infoMessage
   **/
-  @ApiModelProperty(value = "Information message to display to the user (if not empty)")
+  @ApiModelProperty(value = "")
   public String getInfoMessage() {
     return infoMessage;
   }
@@ -133,10 +132,10 @@ public class ExecuteConfigurationActionResult {
   }
 
    /**
-   * Redirect user to URL (if not empty)
+   * Get redirectUrl
    * @return redirectUrl
   **/
-  @ApiModelProperty(value = "Redirect user to URL (if not empty)")
+  @ApiModelProperty(value = "")
   public String getRedirectUrl() {
     return redirectUrl;
   }
@@ -151,10 +150,10 @@ public class ExecuteConfigurationActionResult {
   }
 
    /**
-   * Redirect target
+   * Get redirectTarget
    * @return redirectTarget
   **/
-  @ApiModelProperty(value = "Redirect target")
+  @ApiModelProperty(value = "")
   public RedirectTargetEnum getRedirectTarget() {
     return redirectTarget;
   }

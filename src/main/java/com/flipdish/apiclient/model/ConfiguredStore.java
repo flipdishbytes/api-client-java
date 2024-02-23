@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Configured stores
+ * ConfiguredStore
  */
-@ApiModel(description = "Configured stores")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class ConfiguredStore {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -42,10 +41,10 @@ public class ConfiguredStore {
   }
 
    /**
-   * Store id
+   * Get storeId
    * @return storeId
   **/
-  @ApiModelProperty(value = "Store id")
+  @ApiModelProperty(value = "")
   public Integer getStoreId() {
     return storeId;
   }
@@ -60,10 +59,10 @@ public class ConfiguredStore {
   }
 
    /**
-   * Name of store
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(value = "Name of store")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }

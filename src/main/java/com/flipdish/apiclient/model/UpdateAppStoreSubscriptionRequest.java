@@ -27,10 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Update subscription
+ * UpdateAppStoreSubscriptionRequest
  */
-@ApiModel(description = "Update subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class UpdateAppStoreSubscriptionRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
@@ -49,10 +48,10 @@ public class UpdateAppStoreSubscriptionRequest {
   }
 
    /**
-   * Store ids to update
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "Store ids to update")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }

@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Update App store app configuration
+ * UpdateAppStoreAppConfiguration
  */
-@ApiModel(description = "Update App store app configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class UpdateAppStoreAppConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
@@ -48,10 +47,10 @@ public class UpdateAppStoreAppConfiguration {
   }
 
    /**
-   * Is enabled
+   * Get isEnabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is enabled")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -74,10 +73,10 @@ public class UpdateAppStoreAppConfiguration {
   }
 
    /**
-   * Stores id&#39;s
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "Stores id's")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }
@@ -100,10 +99,10 @@ public class UpdateAppStoreAppConfiguration {
   }
 
    /**
-   * Settings
+   * Get settings
    * @return settings
   **/
-  @ApiModelProperty(value = "Settings")
+  @ApiModelProperty(value = "")
   public List<Setting> getSettings() {
     return settings;
   }

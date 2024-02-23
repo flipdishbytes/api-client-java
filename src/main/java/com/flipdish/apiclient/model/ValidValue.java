@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Valid Value
+ * ValidValue
  */
-@ApiModel(description = "Valid Value")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class ValidValue {
   @SerializedName("Code")
   private String code = null;
@@ -42,10 +41,10 @@ public class ValidValue {
   }
 
    /**
-   * Code
+   * Get code
    * @return code
   **/
-  @ApiModelProperty(required = true, value = "Code")
+  @ApiModelProperty(required = true, value = "")
   public String getCode() {
     return code;
   }
@@ -60,10 +59,10 @@ public class ValidValue {
   }
 
    /**
-   * Name
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }

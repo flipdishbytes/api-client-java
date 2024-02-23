@@ -4,16 +4,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Unique App store app id | 
-**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
-**logo** | **String** | Logo |  [optional]
-**internal** | **Boolean** | Internal | 
-**name** | **String** | Name | 
-**description** | **String** | Description | 
-**isEnabled** | **Boolean** | Is application enabled |  [optional]
-**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
-**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) | Countries | 
-**developerName** | **String** | Developer Name |  [optional]
+**id** | **String** |  | 
+**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) |  | 
+**logo** | **String** |  |  [optional]
+**internal** | **Boolean** |  | 
+**name** | **String** |  | 
+**description** | **String** |  | 
+**isEnabled** | **Boolean** |  |  [optional]
+**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) |  | 
+**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) |  | 
+**developerName** | **String** |  |  [optional]
 
 
 <a name="VerificationStatusEnum"></a>

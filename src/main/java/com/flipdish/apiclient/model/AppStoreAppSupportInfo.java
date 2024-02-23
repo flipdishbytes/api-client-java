@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * App store app support information
+ * AppStoreAppSupportInfo
  */
-@ApiModel(description = "App store app support information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppSupportInfo {
   @SerializedName("PrivacyPolicy")
   private String privacyPolicy = null;
@@ -54,10 +53,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Privacy policy url
+   * Get privacyPolicy
    * @return privacyPolicy
   **/
-  @ApiModelProperty(value = "Privacy policy url")
+  @ApiModelProperty(value = "")
   public String getPrivacyPolicy() {
     return privacyPolicy;
   }
@@ -72,10 +71,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Terms of use url
+   * Get termsOfUse
    * @return termsOfUse
   **/
-  @ApiModelProperty(value = "Terms of use url")
+  @ApiModelProperty(value = "")
   public String getTermsOfUse() {
     return termsOfUse;
   }
@@ -90,10 +89,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Company website url
+   * Get companyWebsite
    * @return companyWebsite
   **/
-  @ApiModelProperty(value = "Company website url")
+  @ApiModelProperty(value = "")
   public String getCompanyWebsite() {
     return companyWebsite;
   }
@@ -108,10 +107,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Learn more url
+   * Get learnMore
    * @return learnMore
   **/
-  @ApiModelProperty(value = "Learn more url")
+  @ApiModelProperty(value = "")
   public String getLearnMore() {
     return learnMore;
   }
@@ -126,10 +125,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Installation message
+   * Get installationMessage
    * @return installationMessage
   **/
-  @ApiModelProperty(value = "Installation message")
+  @ApiModelProperty(value = "")
   public String getInstallationMessage() {
     return installationMessage;
   }
@@ -144,10 +143,10 @@ public class AppStoreAppSupportInfo {
   }
 
    /**
-   * Support email
+   * Get supportEmail
    * @return supportEmail
   **/
-  @ApiModelProperty(value = "Support email")
+  @ApiModelProperty(value = "")
   public String getSupportEmail() {
     return supportEmail;
   }

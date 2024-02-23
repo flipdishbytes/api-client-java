@@ -4,33 +4,33 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Unique App store app configuration id | 
-**appId** | **String** | App id | 
-**appStoreAppId** | **String** | App store app id | 
-**isEnabled** | **Boolean** | Is enabled | 
-**storeIds** | **List&lt;Integer&gt;** | Stores id&#39;s |  [optional]
-**settings** | [**List&lt;Setting&gt;**](Setting.md) | Settings |  [optional]
-**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) | Application verification status | 
-**logo** | **String** | Logo |  [optional]
-**oauthAppId** | **String** | OAuth App identifier | 
-**internal** | **Boolean** | Internal | 
-**details** | **String** | Details | 
-**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
-**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
-**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups |  [optional]
-**setupInstructions** | **String** | Setup instructions |  [optional]
-**externalSetupLink** | **String** | External setup link |  [optional]
-**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
-**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
-**support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information |  [optional]
-**externalFunctionActionUrl** | **String** | Action URL for external functions, used for handling Portal configuration action buttons |  [optional]
-**externalFunctionSignatureKey** | **String** | Signing key for external function action calls |  [optional]
-**isPaid** | **Boolean** | Is Paid |  [optional]
-**name** | **String** | Name | 
-**description** | **String** | Description | 
-**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
-**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) | Countries | 
-**developerName** | **String** | Developer Name |  [optional]
+**id** | **String** |  | 
+**appId** | **String** |  | 
+**appStoreAppId** | **String** |  | 
+**isEnabled** | **Boolean** |  | 
+**storeIds** | **List&lt;Integer&gt;** |  |  [optional]
+**settings** | [**List&lt;Setting&gt;**](Setting.md) |  |  [optional]
+**verificationStatus** | [**VerificationStatusEnum**](#VerificationStatusEnum) |  | 
+**logo** | **String** |  |  [optional]
+**oauthAppId** | **String** |  | 
+**internal** | **Boolean** |  | 
+**details** | **String** |  | 
+**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) |  | 
+**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) |  | 
+**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) |  |  [optional]
+**setupInstructions** | **String** |  |  [optional]
+**externalSetupLink** | **String** |  |  [optional]
+**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) |  |  [optional]
+**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) |  | 
+**support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) |  |  [optional]
+**externalFunctionActionUrl** | **String** |  |  [optional]
+**externalFunctionSignatureKey** | **String** |  |  [optional]
+**isPaid** | **Boolean** |  |  [optional]
+**name** | **String** |  | 
+**description** | **String** |  | 
+**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) |  | 
+**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) |  | 
+**developerName** | **String** |  |  [optional]
 
 
 <a name="VerificationStatusEnum"></a>

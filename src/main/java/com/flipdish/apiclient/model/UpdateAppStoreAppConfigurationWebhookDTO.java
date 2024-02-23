@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store app configuration webhook event
+ * UpdateAppStoreAppConfigurationWebhookDTO
  */
-@ApiModel(description = "App store app configuration webhook event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class UpdateAppStoreAppConfigurationWebhookDTO {
   @SerializedName("Id")
   private String id = null;
@@ -51,10 +50,10 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
   }
 
    /**
-   * Unique App store app configuration id
+   * Get id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Unique App store app configuration id")
+  @ApiModelProperty(required = true, value = "")
   public String getId() {
     return id;
   }
@@ -69,10 +68,10 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
   }
 
    /**
-   * Is enabled
+   * Get isEnabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is enabled")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -95,10 +94,10 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
   }
 
    /**
-   * Store id&#39;s
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "Store id's")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }
@@ -121,10 +120,10 @@ public class UpdateAppStoreAppConfigurationWebhookDTO {
   }
 
    /**
-   * Settings
+   * Get settings
    * @return settings
   **/
-  @ApiModelProperty(value = "Settings")
+  @ApiModelProperty(value = "")
   public List<Setting> getSettings() {
     return settings;
   }

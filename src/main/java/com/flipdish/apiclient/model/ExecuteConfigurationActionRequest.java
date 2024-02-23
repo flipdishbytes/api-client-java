@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Execute Configuration
+ * ExecuteConfigurationActionRequest
  */
-@ApiModel(description = "Execute Configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class ExecuteConfigurationActionRequest {
   @SerializedName("Key")
   private String key = null;
@@ -42,10 +41,10 @@ public class ExecuteConfigurationActionRequest {
   }
 
    /**
-   * Key - of field triggering the action
+   * Get key
    * @return key
   **/
-  @ApiModelProperty(value = "Key - of field triggering the action")
+  @ApiModelProperty(value = "")
   public String getKey() {
     return key;
   }
@@ -60,10 +59,10 @@ public class ExecuteConfigurationActionRequest {
   }
 
    /**
-   * Action for element
+   * Get action
    * @return action
   **/
-  @ApiModelProperty(value = "Action for element")
+  @ApiModelProperty(value = "")
   public String getAction() {
     return action;
   }

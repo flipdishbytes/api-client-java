@@ -27,10 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Subscription list item
+ * AppStoreSubscriptionItem
  */
-@ApiModel(description = "Subscription list item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreSubscriptionItem {
   @SerializedName("ExternalSubscriptionId")
   private String externalSubscriptionId = null;
@@ -56,10 +55,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * ExternalSubscriptionId
+   * Get externalSubscriptionId
    * @return externalSubscriptionId
   **/
-  @ApiModelProperty(value = "ExternalSubscriptionId")
+  @ApiModelProperty(value = "")
   public String getExternalSubscriptionId() {
     return externalSubscriptionId;
   }
@@ -82,10 +81,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * StoreIds
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "StoreIds")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }
@@ -100,10 +99,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * UserId
+   * Get userId
    * @return userId
   **/
-  @ApiModelProperty(value = "UserId")
+  @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
@@ -118,10 +117,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * UserEmail
+   * Get userEmail
    * @return userEmail
   **/
-  @ApiModelProperty(value = "UserEmail")
+  @ApiModelProperty(value = "")
   public String getUserEmail() {
     return userEmail;
   }
@@ -136,10 +135,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * Status
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(value = "Status")
+  @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
@@ -154,10 +153,10 @@ public class AppStoreSubscriptionItem {
   }
 
    /**
-   * SubscriptionChangeJobId
+   * Get subscriptionChangeJobId
    * @return subscriptionChangeJobId
   **/
-  @ApiModelProperty(value = "SubscriptionChangeJobId")
+  @ApiModelProperty(value = "")
   public String getSubscriptionChangeJobId() {
     return subscriptionChangeJobId;
   }

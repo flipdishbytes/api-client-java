@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Field group
+ * FieldGroup
  */
-@ApiModel(description = "Field group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class FieldGroup {
   @SerializedName("Name")
   private String name = null;
@@ -54,10 +53,10 @@ public class FieldGroup {
   }
 
    /**
-   * Name
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
@@ -72,10 +71,10 @@ public class FieldGroup {
   }
 
    /**
-   * Description
+   * Get description
    * @return description
   **/
-  @ApiModelProperty(value = "Description")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -90,10 +89,10 @@ public class FieldGroup {
   }
 
    /**
-   * Tooltip  &lt;remarks&gt;Displays on text hover&lt;/remarks&gt;
+   * Get tooltip
    * @return tooltip
   **/
-  @ApiModelProperty(value = "Tooltip  <remarks>Displays on text hover</remarks>")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -108,12 +107,12 @@ public class FieldGroup {
   }
 
    /**
-   * Position  &lt;remarks&gt;Position order in the field groups to display&lt;/remarks&gt;
+   * Get position
    * minimum: 1
    * maximum: 1000
    * @return position
   **/
-  @ApiModelProperty(required = true, value = "Position  <remarks>Position order in the field groups to display</remarks>")
+  @ApiModelProperty(required = true, value = "")
   public Integer getPosition() {
     return position;
   }
@@ -136,10 +135,10 @@ public class FieldGroup {
   }
 
    /**
-   * Fields
+   * Get fields
    * @return fields
   **/
-  @ApiModelProperty(value = "Fields")
+  @ApiModelProperty(value = "")
   public List<Field> getFields() {
     return fields;
   }

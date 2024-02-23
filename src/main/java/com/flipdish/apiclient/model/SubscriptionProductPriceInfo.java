@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Price info
+ * SubscriptionProductPriceInfo
  */
-@ApiModel(description = "Price info")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class SubscriptionProductPriceInfo {
   @SerializedName("Amount")
   private Double amount = null;
@@ -37,7 +36,7 @@ public class SubscriptionProductPriceInfo {
   private String currency = null;
 
   /**
-   * Scope (eg. per store or per whitelabel)
+   * Gets or Sets scope
    */
   @JsonAdapter(ScopeEnum.Adapter.class)
   public enum ScopeEnum {
@@ -92,10 +91,10 @@ public class SubscriptionProductPriceInfo {
   }
 
    /**
-   * Price amount
+   * Get amount
    * @return amount
   **/
-  @ApiModelProperty(value = "Price amount")
+  @ApiModelProperty(value = "")
   public Double getAmount() {
     return amount;
   }
@@ -110,10 +109,10 @@ public class SubscriptionProductPriceInfo {
   }
 
    /**
-   * Currency code
+   * Get currency
    * @return currency
   **/
-  @ApiModelProperty(value = "Currency code")
+  @ApiModelProperty(value = "")
   public String getCurrency() {
     return currency;
   }
@@ -128,10 +127,10 @@ public class SubscriptionProductPriceInfo {
   }
 
    /**
-   * Scope (eg. per store or per whitelabel)
+   * Get scope
    * @return scope
   **/
-  @ApiModelProperty(value = "Scope (eg. per store or per whitelabel)")
+  @ApiModelProperty(value = "")
   public ScopeEnum getScope() {
     return scope;
   }

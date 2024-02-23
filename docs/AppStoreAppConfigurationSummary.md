@@ -4,18 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Unique App store app configuration id | 
-**appId** | **String** | App Id | 
-**isEnabled** | **Boolean** | Is enabled | 
-**stores** | [**List&lt;ConfiguredStore&gt;**](ConfiguredStore.md) | List of stores | 
-**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type | 
-**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
-**internal** | **Boolean** | Internal | 
-**appStoreAppId** | **String** | Unique App store app id | 
-**name** | **String** | Name of Appstore app | 
-**description** | **String** | Description | 
-**logo** | **String** | Logo |  [optional]
-**developerName** | **String** | Developer name |  [optional]
+**id** | **String** |  | 
+**appId** | **String** |  | 
+**isEnabled** | **Boolean** |  | 
+**stores** | [**List&lt;ConfiguredStore&gt;**](ConfiguredStore.md) |  | 
+**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) |  | 
+**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) |  | 
+**internal** | **Boolean** |  | 
+**appStoreAppId** | **String** |  | 
+**name** | **String** |  | 
+**description** | **String** |  | 
+**logo** | **String** |  |  [optional]
+**developerName** | **String** |  |  [optional]
 
 
 <a name="ConfigurationTypeEnum"></a>

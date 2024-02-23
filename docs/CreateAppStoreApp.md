@@ -4,24 +4,24 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | **String** | Details | 
-**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
-**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) | Store selector type | 
-**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) | Field groups |  [optional]
-**setupInstructions** | **String** | Setup instructions |  [optional]
-**externalSetupLink** | **String** | External setup link |  [optional]
-**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) | Teammate app access level |  [optional]
-**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) | Permissions type | 
-**support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information |  [optional]
-**externalFunctionActionUrl** | **String** | Action URL for external functions, used for handling Portal configuration action buttons |  [optional]
-**externalFunctionSignatureKey** | **String** | Signing key for external function action calls |  [optional]
-**isPaid** | **Boolean** | Is Paid |  [optional]
-**name** | **String** | Name | 
-**description** | **String** | Description | 
-**isEnabled** | **Boolean** | Is application enabled |  [optional]
-**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) | Categories | 
-**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) | Countries | 
-**developerName** | **String** | Developer Name |  [optional]
+**details** | **String** |  | 
+**configurationType** | [**ConfigurationTypeEnum**](#ConfigurationTypeEnum) |  | 
+**storeSelectorType** | [**StoreSelectorTypeEnum**](#StoreSelectorTypeEnum) |  | 
+**fieldGroups** | [**List&lt;FieldGroup&gt;**](FieldGroup.md) |  |  [optional]
+**setupInstructions** | **String** |  |  [optional]
+**externalSetupLink** | **String** |  |  [optional]
+**teammateAppAccessLevel** | [**TeammateAppAccessLevelEnum**](#TeammateAppAccessLevelEnum) |  |  [optional]
+**permissionsType** | [**PermissionsTypeEnum**](#PermissionsTypeEnum) |  | 
+**support** | [**AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) |  |  [optional]
+**externalFunctionActionUrl** | **String** |  |  [optional]
+**externalFunctionSignatureKey** | **String** |  |  [optional]
+**isPaid** | **Boolean** |  |  [optional]
+**name** | **String** |  | 
+**description** | **String** |  | 
+**isEnabled** | **Boolean** |  |  [optional]
+**categories** | [**List&lt;CategoriesEnum&gt;**](#List&lt;CategoriesEnum&gt;) |  | 
+**countries** | [**List&lt;CountriesEnum&gt;**](#List&lt;CountriesEnum&gt;) |  | 
+**developerName** | **String** |  |  [optional]
 
 
 <a name="ConfigurationTypeEnum"></a>

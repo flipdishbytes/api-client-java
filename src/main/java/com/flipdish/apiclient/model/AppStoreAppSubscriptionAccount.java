@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Subscription account
+ * AppStoreAppSubscriptionAccount
  */
-@ApiModel(description = "Subscription account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppSubscriptionAccount {
   @SerializedName("Email")
   private String email = null;
@@ -39,10 +38,10 @@ public class AppStoreAppSubscriptionAccount {
   }
 
    /**
-   * Email of the account user
+   * Get email
    * @return email
   **/
-  @ApiModelProperty(value = "Email of the account user")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }

@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Update App store app external product id
+ * UpdateAppStoreAppExternalProduct
  */
-@ApiModel(description = "Update App store app external product id")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class UpdateAppStoreAppExternalProduct {
   @SerializedName("ExternalProductId")
   private String externalProductId = null;
@@ -39,10 +38,10 @@ public class UpdateAppStoreAppExternalProduct {
   }
 
    /**
-   * The external product id
+   * Get externalProductId
    * @return externalProductId
   **/
-  @ApiModelProperty(value = "The external product id")
+  @ApiModelProperty(value = "")
   public String getExternalProductId() {
     return externalProductId;
   }

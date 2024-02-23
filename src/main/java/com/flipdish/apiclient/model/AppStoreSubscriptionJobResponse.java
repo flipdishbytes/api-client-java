@@ -25,10 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Subscription change job can be longer running, this contains job information
+ * AppStoreSubscriptionJobResponse
  */
-@ApiModel(description = "Subscription change job can be longer running, this contains job information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreSubscriptionJobResponse {
   @SerializedName("SubscriptionChangeJobId")
   private String subscriptionChangeJobId = null;
@@ -39,10 +38,10 @@ public class AppStoreSubscriptionJobResponse {
   }
 
    /**
-   * Subscription change job id
+   * Get subscriptionChangeJobId
    * @return subscriptionChangeJobId
   **/
-  @ApiModelProperty(value = "Subscription change job id")
+  @ApiModelProperty(value = "")
   public String getSubscriptionChangeJobId() {
     return subscriptionChangeJobId;
   }

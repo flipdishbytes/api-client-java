@@ -25,16 +25,15 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Subscription change job can be longer running, this contains job information
+ * AppStoreSubscriptionChangeJobStatusResponse
  */
-@ApiModel(description = "Subscription change job can be longer running, this contains job information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreSubscriptionChangeJobStatusResponse {
   @SerializedName("SubscriptionChangeJobId")
   private String subscriptionChangeJobId = null;
 
   /**
-   * Job Status
+   * Gets or Sets status
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
@@ -96,10 +95,10 @@ public class AppStoreSubscriptionChangeJobStatusResponse {
   }
 
    /**
-   * Subscription change job id
+   * Get subscriptionChangeJobId
    * @return subscriptionChangeJobId
   **/
-  @ApiModelProperty(value = "Subscription change job id")
+  @ApiModelProperty(value = "")
   public String getSubscriptionChangeJobId() {
     return subscriptionChangeJobId;
   }
@@ -114,10 +113,10 @@ public class AppStoreSubscriptionChangeJobStatusResponse {
   }
 
    /**
-   * Job Status
+   * Get status
    * @return status
   **/
-  @ApiModelProperty(value = "Job Status")
+  @ApiModelProperty(value = "")
   public StatusEnum getStatus() {
     return status;
   }
@@ -132,10 +131,10 @@ public class AppStoreSubscriptionChangeJobStatusResponse {
   }
 
    /**
-   * Error message (if any)
+   * Get errorMessage
    * @return errorMessage
   **/
-  @ApiModelProperty(value = "Error message (if any)")
+  @ApiModelProperty(value = "")
   public String getErrorMessage() {
     return errorMessage;
   }

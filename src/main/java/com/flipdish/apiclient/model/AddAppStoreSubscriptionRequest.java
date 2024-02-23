@@ -27,10 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Add subscription
+ * AddAppStoreSubscriptionRequest
  */
-@ApiModel(description = "Add subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AddAppStoreSubscriptionRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
@@ -52,10 +51,10 @@ public class AddAppStoreSubscriptionRequest {
   }
 
    /**
-   * Store ids to update
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "Store ids to update")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }
@@ -70,10 +69,10 @@ public class AddAppStoreSubscriptionRequest {
   }
 
    /**
-   * Email (for subscription setup) - optional, only required for admin access
+   * Get subscriptionAccountEmail
    * @return subscriptionAccountEmail
   **/
-  @ApiModelProperty(value = "Email (for subscription setup) - optional, only required for admin access")
+  @ApiModelProperty(value = "")
   public String getSubscriptionAccountEmail() {
     return subscriptionAccountEmail;
   }

@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errorMessage** | **String** | Error message to display to the user (if not empty) |  [optional]
-**infoMessage** | **String** | Information message to display to the user (if not empty) |  [optional]
-**redirectUrl** | **String** | Redirect user to URL (if not empty) |  [optional]
-**redirectTarget** | [**RedirectTargetEnum**](#RedirectTargetEnum) | Redirect target |  [optional]
+**errorMessage** | **String** |  |  [optional]
+**infoMessage** | **String** |  |  [optional]
+**redirectUrl** | **String** |  |  [optional]
+**redirectTarget** | [**RedirectTargetEnum**](#RedirectTargetEnum) |  |  [optional]
 
 
 <a name="RedirectTargetEnum"></a>

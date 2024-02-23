@@ -30,10 +30,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store app configurations
+ * AppStoreAppConfiguration
  */
-@ApiModel(description = "App store app configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -54,7 +53,7 @@ public class AppStoreAppConfiguration {
   private List<Setting> settings = null;
 
   /**
-   * Application verification status
+   * Gets or Sets verificationStatus
    */
   @JsonAdapter(VerificationStatusEnum.Adapter.class)
   public enum VerificationStatusEnum {
@@ -118,7 +117,7 @@ public class AppStoreAppConfiguration {
   private String details = null;
 
   /**
-   * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
+   * Gets or Sets configurationType
    */
   @JsonAdapter(ConfigurationTypeEnum.Adapter.class)
   public enum ConfigurationTypeEnum {
@@ -168,7 +167,7 @@ public class AppStoreAppConfiguration {
   private ConfigurationTypeEnum configurationType = null;
 
   /**
-   * Store selector type
+   * Gets or Sets storeSelectorType
    */
   @JsonAdapter(StoreSelectorTypeEnum.Adapter.class)
   public enum StoreSelectorTypeEnum {
@@ -229,7 +228,7 @@ public class AppStoreAppConfiguration {
   private String externalSetupLink = null;
 
   /**
-   * Teammate app access level
+   * Gets or Sets teammateAppAccessLevel
    */
   @JsonAdapter(TeammateAppAccessLevelEnum.Adapter.class)
   public enum TeammateAppAccessLevelEnum {
@@ -291,7 +290,7 @@ public class AppStoreAppConfiguration {
   private TeammateAppAccessLevelEnum teammateAppAccessLevel = null;
 
   /**
-   * Permissions type
+   * Gets or Sets permissionsType
    */
   @JsonAdapter(PermissionsTypeEnum.Adapter.class)
   public enum PermissionsTypeEnum {
@@ -505,10 +504,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Unique App store app configuration id
+   * Get id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Unique App store app configuration id")
+  @ApiModelProperty(required = true, value = "")
   public String getId() {
     return id;
   }
@@ -523,10 +522,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * App id
+   * Get appId
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "App id")
+  @ApiModelProperty(required = true, value = "")
   public String getAppId() {
     return appId;
   }
@@ -541,10 +540,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * App store app id
+   * Get appStoreAppId
    * @return appStoreAppId
   **/
-  @ApiModelProperty(required = true, value = "App store app id")
+  @ApiModelProperty(required = true, value = "")
   public String getAppStoreAppId() {
     return appStoreAppId;
   }
@@ -559,10 +558,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Is enabled
+   * Get isEnabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is enabled")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -585,10 +584,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Stores id&#39;s
+   * Get storeIds
    * @return storeIds
   **/
-  @ApiModelProperty(value = "Stores id's")
+  @ApiModelProperty(value = "")
   public List<Integer> getStoreIds() {
     return storeIds;
   }
@@ -611,10 +610,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Settings
+   * Get settings
    * @return settings
   **/
-  @ApiModelProperty(value = "Settings")
+  @ApiModelProperty(value = "")
   public List<Setting> getSettings() {
     return settings;
   }
@@ -629,10 +628,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Application verification status
+   * Get verificationStatus
    * @return verificationStatus
   **/
-  @ApiModelProperty(required = true, value = "Application verification status")
+  @ApiModelProperty(required = true, value = "")
   public VerificationStatusEnum getVerificationStatus() {
     return verificationStatus;
   }
@@ -647,10 +646,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Logo
+   * Get logo
    * @return logo
   **/
-  @ApiModelProperty(value = "Logo")
+  @ApiModelProperty(value = "")
   public String getLogo() {
     return logo;
   }
@@ -665,10 +664,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * OAuth App identifier
+   * Get oauthAppId
    * @return oauthAppId
   **/
-  @ApiModelProperty(required = true, value = "OAuth App identifier")
+  @ApiModelProperty(required = true, value = "")
   public String getOauthAppId() {
     return oauthAppId;
   }
@@ -683,10 +682,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Internal
+   * Get internal
    * @return internal
   **/
-  @ApiModelProperty(required = true, value = "Internal")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isInternal() {
     return internal;
   }
@@ -701,10 +700,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Details
+   * Get details
    * @return details
   **/
-  @ApiModelProperty(required = true, value = "Details")
+  @ApiModelProperty(required = true, value = "")
   public String getDetails() {
     return details;
   }
@@ -719,10 +718,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt;
+   * Get configurationType
    * @return configurationType
   **/
-  @ApiModelProperty(required = true, value = "Configuration type  <example>External link</example><example>Flipdish hosted</example>")
+  @ApiModelProperty(required = true, value = "")
   public ConfigurationTypeEnum getConfigurationType() {
     return configurationType;
   }
@@ -737,10 +736,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Store selector type
+   * Get storeSelectorType
    * @return storeSelectorType
   **/
-  @ApiModelProperty(required = true, value = "Store selector type")
+  @ApiModelProperty(required = true, value = "")
   public StoreSelectorTypeEnum getStoreSelectorType() {
     return storeSelectorType;
   }
@@ -763,10 +762,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Field groups
+   * Get fieldGroups
    * @return fieldGroups
   **/
-  @ApiModelProperty(value = "Field groups")
+  @ApiModelProperty(value = "")
   public List<FieldGroup> getFieldGroups() {
     return fieldGroups;
   }
@@ -781,10 +780,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Setup instructions
+   * Get setupInstructions
    * @return setupInstructions
   **/
-  @ApiModelProperty(value = "Setup instructions")
+  @ApiModelProperty(value = "")
   public String getSetupInstructions() {
     return setupInstructions;
   }
@@ -799,10 +798,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * External setup link
+   * Get externalSetupLink
    * @return externalSetupLink
   **/
-  @ApiModelProperty(value = "External setup link")
+  @ApiModelProperty(value = "")
   public String getExternalSetupLink() {
     return externalSetupLink;
   }
@@ -817,10 +816,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Teammate app access level
+   * Get teammateAppAccessLevel
    * @return teammateAppAccessLevel
   **/
-  @ApiModelProperty(value = "Teammate app access level")
+  @ApiModelProperty(value = "")
   public TeammateAppAccessLevelEnum getTeammateAppAccessLevel() {
     return teammateAppAccessLevel;
   }
@@ -835,10 +834,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Permissions type
+   * Get permissionsType
    * @return permissionsType
   **/
-  @ApiModelProperty(required = true, value = "Permissions type")
+  @ApiModelProperty(required = true, value = "")
   public PermissionsTypeEnum getPermissionsType() {
     return permissionsType;
   }
@@ -853,10 +852,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Support information
+   * Get support
    * @return support
   **/
-  @ApiModelProperty(value = "Support information")
+  @ApiModelProperty(value = "")
   public AppStoreAppSupportInfo getSupport() {
     return support;
   }
@@ -871,10 +870,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Action URL for external functions, used for handling Portal configuration action buttons
+   * Get externalFunctionActionUrl
    * @return externalFunctionActionUrl
   **/
-  @ApiModelProperty(value = "Action URL for external functions, used for handling Portal configuration action buttons")
+  @ApiModelProperty(value = "")
   public String getExternalFunctionActionUrl() {
     return externalFunctionActionUrl;
   }
@@ -889,10 +888,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Signing key for external function action calls
+   * Get externalFunctionSignatureKey
    * @return externalFunctionSignatureKey
   **/
-  @ApiModelProperty(value = "Signing key for external function action calls")
+  @ApiModelProperty(value = "")
   public String getExternalFunctionSignatureKey() {
     return externalFunctionSignatureKey;
   }
@@ -907,10 +906,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Is Paid
+   * Get isPaid
    * @return isPaid
   **/
-  @ApiModelProperty(value = "Is Paid")
+  @ApiModelProperty(value = "")
   public Boolean isIsPaid() {
     return isPaid;
   }
@@ -925,10 +924,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Name
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
@@ -943,10 +942,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Description
+   * Get description
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "Description")
+  @ApiModelProperty(required = true, value = "")
   public String getDescription() {
     return description;
   }
@@ -966,10 +965,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Categories
+   * Get categories
    * @return categories
   **/
-  @ApiModelProperty(required = true, value = "Categories")
+  @ApiModelProperty(required = true, value = "")
   public List<CategoriesEnum> getCategories() {
     return categories;
   }
@@ -989,10 +988,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Countries
+   * Get countries
    * @return countries
   **/
-  @ApiModelProperty(required = true, value = "Countries")
+  @ApiModelProperty(required = true, value = "")
   public List<CountriesEnum> getCountries() {
     return countries;
   }
@@ -1007,10 +1006,10 @@ public class AppStoreAppConfiguration {
   }
 
    /**
-   * Developer Name
+   * Get developerName
    * @return developerName
   **/
-  @ApiModelProperty(value = "Developer Name")
+  @ApiModelProperty(value = "")
   public String getDeveloperName() {
     return developerName;
   }

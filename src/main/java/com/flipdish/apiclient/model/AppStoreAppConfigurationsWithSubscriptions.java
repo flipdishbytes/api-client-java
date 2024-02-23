@@ -30,10 +30,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store configurations for a given AppId
+ * AppStoreAppConfigurationsWithSubscriptions
  */
-@ApiModel(description = "App store configurations for a given AppId")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppConfigurationsWithSubscriptions {
   @SerializedName("Subscription")
   private AppStoreAppSubscriptionSummary subscription = null;
@@ -50,10 +49,10 @@ public class AppStoreAppConfigurationsWithSubscriptions {
   }
 
    /**
-   * Subscription information for the AppId for the AppStoreApp
+   * Get subscription
    * @return subscription
   **/
-  @ApiModelProperty(value = "Subscription information for the AppId for the AppStoreApp")
+  @ApiModelProperty(value = "")
   public AppStoreAppSubscriptionSummary getSubscription() {
     return subscription;
   }
@@ -76,10 +75,10 @@ public class AppStoreAppConfigurationsWithSubscriptions {
   }
 
    /**
-   * Configurations for the AppId for the AppStoreApp
+   * Get configurations
    * @return configurations
   **/
-  @ApiModelProperty(value = "Configurations for the AppId for the AppStoreApp")
+  @ApiModelProperty(value = "")
   public List<AppStoreAppConfigurationSummary> getConfigurations() {
     return configurations;
   }
@@ -102,10 +101,10 @@ public class AppStoreAppConfigurationsWithSubscriptions {
   }
 
    /**
-   * Prices
+   * Get prices
    * @return prices
   **/
-  @ApiModelProperty(value = "Prices")
+  @ApiModelProperty(value = "")
   public List<SubscriptionProductPriceInfo> getPrices() {
     return prices;
   }

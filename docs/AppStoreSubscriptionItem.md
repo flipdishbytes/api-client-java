@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**externalSubscriptionId** | **String** | ExternalSubscriptionId |  [optional]
-**storeIds** | **List&lt;Integer&gt;** | StoreIds |  [optional]
-**userId** | **Integer** | UserId |  [optional]
-**userEmail** | **String** | UserEmail |  [optional]
-**status** | **String** | Status |  [optional]
-**subscriptionChangeJobId** | **String** | SubscriptionChangeJobId |  [optional]
+**externalSubscriptionId** | **String** |  |  [optional]
+**storeIds** | **List&lt;Integer&gt;** |  |  [optional]
+**userId** | **Integer** |  |  [optional]
+**userEmail** | **String** |  |  [optional]
+**status** | **String** |  |  [optional]
+**subscriptionChangeJobId** | **String** |  |  [optional]
 
 
 

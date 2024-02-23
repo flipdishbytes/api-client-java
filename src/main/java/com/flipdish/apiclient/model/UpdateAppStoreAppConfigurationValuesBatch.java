@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Update configuration values for the specified settings only
+ * UpdateAppStoreAppConfigurationValuesBatch
  */
-@ApiModel(description = "Update configuration values for the specified settings only")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class UpdateAppStoreAppConfigurationValuesBatch {
   @SerializedName("Settings")
   private List<Setting> settings = null;
@@ -50,10 +49,10 @@ public class UpdateAppStoreAppConfigurationValuesBatch {
   }
 
    /**
-   * Settings to update
+   * Get settings
    * @return settings
   **/
-  @ApiModelProperty(value = "Settings to update")
+  @ApiModelProperty(value = "")
   public List<Setting> getSettings() {
     return settings;
   }

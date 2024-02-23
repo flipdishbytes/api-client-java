@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **Double** | Price amount |  [optional]
-**currency** | **String** | Currency code |  [optional]
-**scope** | [**ScopeEnum**](#ScopeEnum) | Scope (eg. per store or per whitelabel) |  [optional]
+**amount** | **Double** |  |  [optional]
+**currency** | **String** |  |  [optional]
+**scope** | [**ScopeEnum**](#ScopeEnum) |  |  [optional]
 
 
 <a name="ScopeEnum"></a>

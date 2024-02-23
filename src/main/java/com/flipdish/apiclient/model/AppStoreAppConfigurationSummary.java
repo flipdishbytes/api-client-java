@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store app configuration summary information
+ * AppStoreAppConfigurationSummary
  */
-@ApiModel(description = "App store app configuration summary information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppConfigurationSummary {
   @SerializedName("Id")
   private String id = null;
@@ -46,7 +45,7 @@ public class AppStoreAppConfigurationSummary {
   private List<ConfiguredStore> stores = new ArrayList<ConfiguredStore>();
 
   /**
-   * Configuration type
+   * Gets or Sets configurationType
    */
   @JsonAdapter(ConfigurationTypeEnum.Adapter.class)
   public enum ConfigurationTypeEnum {
@@ -96,7 +95,7 @@ public class AppStoreAppConfigurationSummary {
   private ConfigurationTypeEnum configurationType = null;
 
   /**
-   * Store selector type
+   * Gets or Sets storeSelectorType
    */
   @JsonAdapter(StoreSelectorTypeEnum.Adapter.class)
   public enum StoreSelectorTypeEnum {
@@ -171,10 +170,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Unique App store app configuration id
+   * Get id
    * @return id
   **/
-  @ApiModelProperty(required = true, value = "Unique App store app configuration id")
+  @ApiModelProperty(required = true, value = "")
   public String getId() {
     return id;
   }
@@ -189,10 +188,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * App Id
+   * Get appId
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "App Id")
+  @ApiModelProperty(required = true, value = "")
   public String getAppId() {
     return appId;
   }
@@ -207,10 +206,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Is enabled
+   * Get isEnabled
    * @return isEnabled
   **/
-  @ApiModelProperty(required = true, value = "Is enabled")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -230,10 +229,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * List of stores
+   * Get stores
    * @return stores
   **/
-  @ApiModelProperty(required = true, value = "List of stores")
+  @ApiModelProperty(required = true, value = "")
   public List<ConfiguredStore> getStores() {
     return stores;
   }
@@ -248,10 +247,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Configuration type
+   * Get configurationType
    * @return configurationType
   **/
-  @ApiModelProperty(required = true, value = "Configuration type")
+  @ApiModelProperty(required = true, value = "")
   public ConfigurationTypeEnum getConfigurationType() {
     return configurationType;
   }
@@ -266,10 +265,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Store selector type
+   * Get storeSelectorType
    * @return storeSelectorType
   **/
-  @ApiModelProperty(required = true, value = "Store selector type")
+  @ApiModelProperty(required = true, value = "")
   public StoreSelectorTypeEnum getStoreSelectorType() {
     return storeSelectorType;
   }
@@ -284,10 +283,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Internal
+   * Get internal
    * @return internal
   **/
-  @ApiModelProperty(required = true, value = "Internal")
+  @ApiModelProperty(required = true, value = "")
   public Boolean isInternal() {
     return internal;
   }
@@ -302,10 +301,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Unique App store app id
+   * Get appStoreAppId
    * @return appStoreAppId
   **/
-  @ApiModelProperty(required = true, value = "Unique App store app id")
+  @ApiModelProperty(required = true, value = "")
   public String getAppStoreAppId() {
     return appStoreAppId;
   }
@@ -320,10 +319,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Name of Appstore app
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name of Appstore app")
+  @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
@@ -338,10 +337,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Description
+   * Get description
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "Description")
+  @ApiModelProperty(required = true, value = "")
   public String getDescription() {
     return description;
   }
@@ -356,10 +355,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Logo
+   * Get logo
    * @return logo
   **/
-  @ApiModelProperty(value = "Logo")
+  @ApiModelProperty(value = "")
   public String getLogo() {
     return logo;
   }
@@ -374,10 +373,10 @@ public class AppStoreAppConfigurationSummary {
   }
 
    /**
-   * Developer name
+   * Get developerName
    * @return developerName
   **/
-  @ApiModelProperty(value = "Developer name")
+  @ApiModelProperty(value = "")
   public String getDeveloperName() {
     return developerName;
   }

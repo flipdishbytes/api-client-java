@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * App store subscription information
+ * AppStoreAppSubscriptionSummary
  */
-@ApiModel(description = "App store subscription information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class AppStoreAppSubscriptionSummary {
   @SerializedName("TotalSubscriptions")
   private Integer totalSubscriptions = null;
@@ -51,10 +50,10 @@ public class AppStoreAppSubscriptionSummary {
   }
 
    /**
-   * Total subscriptions (per the AppId subscription setup)
+   * Get totalSubscriptions
    * @return totalSubscriptions
   **/
-  @ApiModelProperty(value = "Total subscriptions (per the AppId subscription setup)")
+  @ApiModelProperty(value = "")
   public Integer getTotalSubscriptions() {
     return totalSubscriptions;
   }
@@ -69,10 +68,10 @@ public class AppStoreAppSubscriptionSummary {
   }
 
    /**
-   * Number of subscriptions configured and enabled
+   * Get usedSubscriptions
    * @return usedSubscriptions
   **/
-  @ApiModelProperty(value = "Number of subscriptions configured and enabled")
+  @ApiModelProperty(value = "")
   public Integer getUsedSubscriptions() {
     return usedSubscriptions;
   }
@@ -87,10 +86,10 @@ public class AppStoreAppSubscriptionSummary {
   }
 
    /**
-   * Is client setup for subscriptions
+   * Get subscriptionAccountIsSetupForClient
    * @return subscriptionAccountIsSetupForClient
   **/
-  @ApiModelProperty(value = "Is client setup for subscriptions")
+  @ApiModelProperty(value = "")
   public Boolean isSubscriptionAccountIsSetupForClient() {
     return subscriptionAccountIsSetupForClient;
   }
@@ -113,10 +112,10 @@ public class AppStoreAppSubscriptionSummary {
   }
 
    /**
-   * Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+   * Get subscriptionAccounts
    * @return subscriptionAccounts
   **/
-  @ApiModelProperty(value = "Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)")
+  @ApiModelProperty(value = "")
   public List<AppStoreAppSubscriptionAccount> getSubscriptionAccounts() {
     return subscriptionAccounts;
   }

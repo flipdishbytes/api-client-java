@@ -27,8 +27,7 @@ import java.io.IOException;
 /**
  * Setting
  */
-@ApiModel(description = "Setting")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-22T11:26:12.968Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-23T10:25:37.443Z")
 public class Setting {
   @SerializedName("Key")
   private String key = null;
@@ -42,10 +41,10 @@ public class Setting {
   }
 
    /**
-   * Key
+   * Get key
    * @return key
   **/
-  @ApiModelProperty(value = "Key")
+  @ApiModelProperty(value = "")
   public String getKey() {
     return key;
   }
@@ -60,10 +59,10 @@ public class Setting {
   }
 
    /**
-   * Value
+   * Get value
    * @return value
   **/
-  @ApiModelProperty(value = "Value")
+  @ApiModelProperty(value = "")
   public String getValue() {
     return value;
   }

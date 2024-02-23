@@ -4,16 +4,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | Name | 
-**description** | **String** | Description | 
-**key** | **String** | Key | 
-**tooltip** | **String** | Tooltip |  [optional]
-**position** | **Integer** | Position | 
-**defaultValue** | **String** | Default Value |  [optional]
-**validValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; |  [optional]
-**validationRegex** | **String** | Validation Regex |  [optional]
-**fieldType** | [**FieldTypeEnum**](#FieldTypeEnum) | Field Type | 
-**isFlipdishRestricted** | **Boolean** | Is this field only editable by Flipdish? |  [optional]
+**name** | **String** |  | 
+**description** | **String** |  | 
+**key** | **String** |  | 
+**tooltip** | **String** |  |  [optional]
+**position** | **Integer** |  | 
+**defaultValue** | **String** |  |  [optional]
+**validValues** | [**List&lt;ValidValue&gt;**](ValidValue.md) |  |  [optional]
+**validationRegex** | **String** |  |  [optional]
+**fieldType** | [**FieldTypeEnum**](#FieldTypeEnum) |  | 
+**isFlipdishRestricted** | **Boolean** |  |  [optional]
 
 
 <a name="FieldTypeEnum"></a>
