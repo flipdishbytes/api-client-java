@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher
  */
 @ApiModel(description = "Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-27T09:42:08.317Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-29T13:20:17.597Z")
 public class Voucher {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -149,66 +149,6 @@ public class Voucher {
 
   @SerializedName("VoucherType")
   private VoucherTypeEnum voucherType = null;
-
-  /**
-   * Voucher Sub Type
-   */
-  @JsonAdapter(VoucherSubTypeEnum.Adapter.class)
-  public enum VoucherSubTypeEnum {
-    NONE("None"),
-    
-    SIGNUP("SignUp"),
-    
-    LOYALTY("Loyalty"),
-    
-    LOYALTY25("Loyalty25"),
-    
-    RETENTION("Retention"),
-    
-    SECONDARYRETENTION("SecondaryRetention"),
-    
-    CUSTOM("Custom");
-
-    private String value;
-
-    VoucherSubTypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static VoucherSubTypeEnum fromValue(String text) {
-      for (VoucherSubTypeEnum b : VoucherSubTypeEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<VoucherSubTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final VoucherSubTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public VoucherSubTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return VoucherSubTypeEnum.fromValue(String.valueOf(value));
-      }
-    }
-  }
-
-  @SerializedName("VoucherSubType")
-  private VoucherSubTypeEnum voucherSubType = null;
 
   /**
    * Currency of the voucher
@@ -606,6 +546,69 @@ public class Voucher {
   @SerializedName("ChannelRestrictions")
   private List<ChannelRestrictionsEnum> channelRestrictions = null;
 
+  /**
+   * Voucher Subtype
+   */
+  @JsonAdapter(VoucherSubTypeEnum.Adapter.class)
+  public enum VoucherSubTypeEnum {
+    NONE("None"),
+    
+    SIGNUP("SignUp"),
+    
+    LOYALTY("Loyalty"),
+    
+    LOYALTY25("Loyalty25"),
+    
+    RETENTION("Retention"),
+    
+    SECONDARYRETENTION("SecondaryRetention"),
+    
+    CUSTOM("Custom");
+
+    private String value;
+
+    VoucherSubTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static VoucherSubTypeEnum fromValue(String text) {
+      for (VoucherSubTypeEnum b : VoucherSubTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<VoucherSubTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final VoucherSubTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public VoucherSubTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return VoucherSubTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("VoucherSubType")
+  private VoucherSubTypeEnum voucherSubType = null;
+
+  @SerializedName("CustomerId")
+  private Integer customerId = null;
+
   public Voucher voucherId(Integer voucherId) {
     this.voucherId = voucherId;
     return this;
@@ -658,24 +661,6 @@ public class Voucher {
 
   public void setVoucherType(VoucherTypeEnum voucherType) {
     this.voucherType = voucherType;
-  }
-
-  public Voucher voucherSubType(VoucherSubTypeEnum voucherSubType) {
-    this.voucherSubType = voucherSubType;
-    return this;
-  }
-
-   /**
-   * Voucher Sub Type
-   * @return voucherSubType
-  **/
-  @ApiModelProperty(value = "Voucher Sub Type")
-  public VoucherSubTypeEnum getVoucherSubType() {
-    return voucherSubType;
-  }
-
-  public void setVoucherSubType(VoucherSubTypeEnum voucherSubType) {
-    this.voucherSubType = voucherSubType;
   }
 
   public Voucher currency(CurrencyEnum currency) {
@@ -1134,6 +1119,42 @@ public class Voucher {
     this.channelRestrictions = channelRestrictions;
   }
 
+  public Voucher voucherSubType(VoucherSubTypeEnum voucherSubType) {
+    this.voucherSubType = voucherSubType;
+    return this;
+  }
+
+   /**
+   * Voucher Subtype
+   * @return voucherSubType
+  **/
+  @ApiModelProperty(value = "Voucher Subtype")
+  public VoucherSubTypeEnum getVoucherSubType() {
+    return voucherSubType;
+  }
+
+  public void setVoucherSubType(VoucherSubTypeEnum voucherSubType) {
+    this.voucherSubType = voucherSubType;
+  }
+
+  public Voucher customerId(Integer customerId) {
+    this.customerId = customerId;
+    return this;
+  }
+
+   /**
+   * Customer UserID
+   * @return customerId
+  **/
+  @ApiModelProperty(value = "Customer UserID")
+  public Integer getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(Integer customerId) {
+    this.customerId = customerId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1147,7 +1168,6 @@ public class Voucher {
     return Objects.equals(this.voucherId, voucher.voucherId) &&
         Objects.equals(this.status, voucher.status) &&
         Objects.equals(this.voucherType, voucher.voucherType) &&
-        Objects.equals(this.voucherSubType, voucher.voucherSubType) &&
         Objects.equals(this.currency, voucher.currency) &&
         Objects.equals(this.storeNames, voucher.storeNames) &&
         Objects.equals(this.promotionDetails, voucher.promotionDetails) &&
@@ -1171,12 +1191,14 @@ public class Voucher {
         Objects.equals(this.isValidOnlyOnce, voucher.isValidOnlyOnce) &&
         Objects.equals(this.startDate, voucher.startDate) &&
         Objects.equals(this.expiryDate, voucher.expiryDate) &&
-        Objects.equals(this.channelRestrictions, voucher.channelRestrictions);
+        Objects.equals(this.channelRestrictions, voucher.channelRestrictions) &&
+        Objects.equals(this.voucherSubType, voucher.voucherSubType) &&
+        Objects.equals(this.customerId, voucher.customerId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, status, voucherType, voucherSubType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions);
+    return Objects.hash(voucherId, status, voucherType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, voucherSubType, customerId);
   }
 
 
@@ -1188,7 +1210,6 @@ public class Voucher {
     sb.append("    voucherId: ").append(toIndentedString(voucherId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    voucherType: ").append(toIndentedString(voucherType)).append("\n");
-    sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
     sb.append("    promotionDetails: ").append(toIndentedString(promotionDetails)).append("\n");
@@ -1213,6 +1234,8 @@ public class Voucher {
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
     sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
+    sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
+    sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

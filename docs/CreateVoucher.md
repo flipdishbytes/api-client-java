@@ -27,6 +27,8 @@ Name | Type | Description | Notes
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Starts On (Time in UTC) |  [optional]
 **expiryDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Expires On (Time in UTC) |  [optional]
 **channelRestrictions** | [**List&lt;ChannelRestrictionsEnum&gt;**](#List&lt;ChannelRestrictionsEnum&gt;) | Limit the channels this voucher can be used on |  [optional]
+**voucherSubType** | [**VoucherSubTypeEnum**](#VoucherSubTypeEnum) | Voucher Subtype |  [optional]
+**customerId** | **Integer** | Customer UserID |  [optional]
 
 
 <a name="VoucherTypeEnum"></a>
@@ -49,6 +51,19 @@ WEB | &quot;Web&quot;
 KIOSK | &quot;Kiosk&quot;
 POS | &quot;Pos&quot;
 GOOGLE | &quot;Google&quot;
+
+
+<a name="VoucherSubTypeEnum"></a>
+## Enum: VoucherSubTypeEnum
+Name | Value
+---- | -----
+NONE | &quot;None&quot;
+SIGNUP | &quot;SignUp&quot;
+LOYALTY | &quot;Loyalty&quot;
+LOYALTY25 | &quot;Loyalty25&quot;
+RETENTION | &quot;Retention&quot;
+SECONDARYRETENTION | &quot;SecondaryRetention&quot;
+CUSTOM | &quot;Custom&quot;
 
 
 

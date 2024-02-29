@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Update Voucher
  */
 @ApiModel(description = "Update Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-27T09:42:08.317Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-29T13:20:17.597Z")
 public class UpdateVoucher {
   @SerializedName("PromotionId")
   private Integer promotionId = null;
@@ -151,6 +151,69 @@ public class UpdateVoucher {
 
   @SerializedName("ChannelRestrictions")
   private List<ChannelRestrictionsEnum> channelRestrictions = null;
+
+  /**
+   * Voucher Subtype
+   */
+  @JsonAdapter(VoucherSubTypeEnum.Adapter.class)
+  public enum VoucherSubTypeEnum {
+    NONE("None"),
+    
+    SIGNUP("SignUp"),
+    
+    LOYALTY("Loyalty"),
+    
+    LOYALTY25("Loyalty25"),
+    
+    RETENTION("Retention"),
+    
+    SECONDARYRETENTION("SecondaryRetention"),
+    
+    CUSTOM("Custom");
+
+    private String value;
+
+    VoucherSubTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static VoucherSubTypeEnum fromValue(String text) {
+      for (VoucherSubTypeEnum b : VoucherSubTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<VoucherSubTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final VoucherSubTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public VoucherSubTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return VoucherSubTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("VoucherSubType")
+  private VoucherSubTypeEnum voucherSubType = null;
+
+  @SerializedName("CustomerId")
+  private Integer customerId = null;
 
   public UpdateVoucher promotionId(Integer promotionId) {
     this.promotionId = promotionId;
@@ -554,6 +617,42 @@ public class UpdateVoucher {
     this.channelRestrictions = channelRestrictions;
   }
 
+  public UpdateVoucher voucherSubType(VoucherSubTypeEnum voucherSubType) {
+    this.voucherSubType = voucherSubType;
+    return this;
+  }
+
+   /**
+   * Voucher Subtype
+   * @return voucherSubType
+  **/
+  @ApiModelProperty(value = "Voucher Subtype")
+  public VoucherSubTypeEnum getVoucherSubType() {
+    return voucherSubType;
+  }
+
+  public void setVoucherSubType(VoucherSubTypeEnum voucherSubType) {
+    this.voucherSubType = voucherSubType;
+  }
+
+  public UpdateVoucher customerId(Integer customerId) {
+    this.customerId = customerId;
+    return this;
+  }
+
+   /**
+   * Customer UserID
+   * @return customerId
+  **/
+  @ApiModelProperty(value = "Customer UserID")
+  public Integer getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(Integer customerId) {
+    this.customerId = customerId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -584,12 +683,14 @@ public class UpdateVoucher {
         Objects.equals(this.isValidOnlyOnce, updateVoucher.isValidOnlyOnce) &&
         Objects.equals(this.startDate, updateVoucher.startDate) &&
         Objects.equals(this.expiryDate, updateVoucher.expiryDate) &&
-        Objects.equals(this.channelRestrictions, updateVoucher.channelRestrictions);
+        Objects.equals(this.channelRestrictions, updateVoucher.channelRestrictions) &&
+        Objects.equals(this.voucherSubType, updateVoucher.voucherSubType) &&
+        Objects.equals(this.customerId, updateVoucher.customerId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions);
+    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, voucherSubType, customerId);
   }
 
 
@@ -619,6 +720,8 @@ public class UpdateVoucher {
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
     sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
+    sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
+    sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

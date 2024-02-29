@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **voucherId** | **Integer** | Voucher Id |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) | Voucher Status |  [optional]
 **voucherType** | [**VoucherTypeEnum**](#VoucherTypeEnum) | Voucher Type |  [optional]
-**voucherSubType** | [**VoucherSubTypeEnum**](#VoucherSubTypeEnum) | Voucher Sub Type |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency of the voucher |  [optional]
 **storeNames** | **List&lt;String&gt;** | Stores that this voucher applies to |  [optional]
 **promotionDetails** | [**PromotionDetails**](PromotionDetails.md) | Promotion details |  [optional]
@@ -37,6 +36,8 @@ Name | Type | Description | Notes
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Starts On (Time in UTC) |  [optional]
 **expiryDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Expires On (Time in UTC) |  [optional]
 **channelRestrictions** | [**List&lt;ChannelRestrictionsEnum&gt;**](#List&lt;ChannelRestrictionsEnum&gt;) | Limit the channels this voucher can be used on |  [optional]
+**voucherSubType** | [**VoucherSubTypeEnum**](#VoucherSubTypeEnum) | Voucher Subtype |  [optional]
+**customerId** | **Integer** | Customer UserID |  [optional]
 
 
 <a name="StatusEnum"></a>
@@ -58,19 +59,6 @@ PERCENTAGEDISCOUNT | &quot;PercentageDiscount&quot;
 LUMPDISCOUNT | &quot;LumpDiscount&quot;
 ADDITEM | &quot;AddItem&quot;
 CREDITNOTE | &quot;CreditNote&quot;
-
-
-<a name="VoucherSubTypeEnum"></a>
-## Enum: VoucherSubTypeEnum
-Name | Value
----- | -----
-NONE | &quot;None&quot;
-SIGNUP | &quot;SignUp&quot;
-LOYALTY | &quot;Loyalty&quot;
-LOYALTY25 | &quot;Loyalty25&quot;
-RETENTION | &quot;Retention&quot;
-SECONDARYRETENTION | &quot;SecondaryRetention&quot;
-CUSTOM | &quot;Custom&quot;
 
 
 <a name="CurrencyEnum"></a>
@@ -202,6 +190,19 @@ WEB | &quot;Web&quot;
 KIOSK | &quot;Kiosk&quot;
 POS | &quot;Pos&quot;
 GOOGLE | &quot;Google&quot;
+
+
+<a name="VoucherSubTypeEnum"></a>
+## Enum: VoucherSubTypeEnum
+Name | Value
+---- | -----
+NONE | &quot;None&quot;
+SIGNUP | &quot;SignUp&quot;
+LOYALTY | &quot;Loyalty&quot;
+LOYALTY25 | &quot;Loyalty25&quot;
+RETENTION | &quot;Retention&quot;
+SECONDARYRETENTION | &quot;SecondaryRetention&quot;
+CUSTOM | &quot;Custom&quot;
 
 
 
