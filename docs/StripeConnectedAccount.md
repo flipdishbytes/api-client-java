@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **cardPaymentsStatus** | [**CardPaymentsStatusEnum**](#CardPaymentsStatusEnum) | Card payments capability status (Inactive, Pending, Active, Unrequested) |  [optional]
 **transfersStatus** | [**TransfersStatusEnum**](#TransfersStatusEnum) | Transfers capability status (Inactive, Pending, Active, Unrequested) |  [optional]
 **accountStatus** | [**AccountStatusEnum**](#AccountStatusEnum) | Current status of the account |  [optional]
+**payoutsEnabled** | **Boolean** | Payouts Enabled status |  [optional]
 
 
 <a name="CardPaymentsStatusEnum"></a>

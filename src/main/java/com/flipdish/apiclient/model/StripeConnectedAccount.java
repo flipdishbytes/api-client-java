@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a Stripe custom connected account
  */
 @ApiModel(description = "Represents a Stripe custom connected account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-02-29T13:20:17.597Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-01T10:38:16.859Z")
 public class StripeConnectedAccount {
   @SerializedName("FlipdishConnectedAccountId")
   private Integer flipdishConnectedAccountId = null;
@@ -207,6 +207,9 @@ public class StripeConnectedAccount {
   @SerializedName("AccountStatus")
   private AccountStatusEnum accountStatus = null;
 
+  @SerializedName("PayoutsEnabled")
+  private Boolean payoutsEnabled = null;
+
   public StripeConnectedAccount flipdishConnectedAccountId(Integer flipdishConnectedAccountId) {
     this.flipdishConnectedAccountId = flipdishConnectedAccountId;
     return this;
@@ -315,6 +318,24 @@ public class StripeConnectedAccount {
     this.accountStatus = accountStatus;
   }
 
+  public StripeConnectedAccount payoutsEnabled(Boolean payoutsEnabled) {
+    this.payoutsEnabled = payoutsEnabled;
+    return this;
+  }
+
+   /**
+   * Payouts Enabled status
+   * @return payoutsEnabled
+  **/
+  @ApiModelProperty(value = "Payouts Enabled status")
+  public Boolean isPayoutsEnabled() {
+    return payoutsEnabled;
+  }
+
+  public void setPayoutsEnabled(Boolean payoutsEnabled) {
+    this.payoutsEnabled = payoutsEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -330,12 +351,13 @@ public class StripeConnectedAccount {
         Objects.equals(this.whitelabelConfigId, stripeConnectedAccount.whitelabelConfigId) &&
         Objects.equals(this.cardPaymentsStatus, stripeConnectedAccount.cardPaymentsStatus) &&
         Objects.equals(this.transfersStatus, stripeConnectedAccount.transfersStatus) &&
-        Objects.equals(this.accountStatus, stripeConnectedAccount.accountStatus);
+        Objects.equals(this.accountStatus, stripeConnectedAccount.accountStatus) &&
+        Objects.equals(this.payoutsEnabled, stripeConnectedAccount.payoutsEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flipdishConnectedAccountId, stripeId, whitelabelConfigId, cardPaymentsStatus, transfersStatus, accountStatus);
+    return Objects.hash(flipdishConnectedAccountId, stripeId, whitelabelConfigId, cardPaymentsStatus, transfersStatus, accountStatus, payoutsEnabled);
   }
 
 
@@ -350,6 +372,7 @@ public class StripeConnectedAccount {
     sb.append("    cardPaymentsStatus: ").append(toIndentedString(cardPaymentsStatus)).append("\n");
     sb.append("    transfersStatus: ").append(toIndentedString(transfersStatus)).append("\n");
     sb.append("    accountStatus: ").append(toIndentedString(accountStatus)).append("\n");
+    sb.append("    payoutsEnabled: ").append(toIndentedString(payoutsEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }
