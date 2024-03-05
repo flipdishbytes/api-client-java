@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultHasPaymentMethodResponse;
 import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -67,6 +68,23 @@ public class SubscriptionsApiTest {
         Boolean excludeNotOwnedSubscriptions = null;
         List<Integer> storeId = null;
         RestApiArrayResultSubscriptionSummary response = api.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void hasCustomerGotPaymentMethodOnFileTest() throws ApiException {
+        String appId = null;
+        String email = null;
+        RestApiResultHasPaymentMethodResponse response = api.hasCustomerGotPaymentMethodOnFile(appId, email);
 
         // TODO: test validations
     }

@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * UpdatePayGreenConfigurationRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-04T11:42:19.146Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-05T14:52:22.020Z")
 public class UpdatePayGreenConfigurationRequest {
   @SerializedName("Name")
   private String name = null;
