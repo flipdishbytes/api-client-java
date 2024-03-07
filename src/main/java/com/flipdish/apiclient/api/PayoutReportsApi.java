@@ -29,6 +29,9 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -57,7 +60,305 @@ public class PayoutReportsApi {
     }
 
     /**
-     * Build call for getPayoutReport3
+     * Build call for getPayoutReport3Details
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPayoutReport3DetailsCall(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()))
+            .replaceAll("\\{" + "payoutId" + "\\}", apiClient.escapeString(payoutId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (storeIds != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "storeIds", storeIds));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getPayoutReport3DetailsValidateBeforeCall(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getPayoutReport3Details(Async)");
+        }
+        
+        // verify the required parameter 'bankAccountId' is set
+        if (bankAccountId == null) {
+            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getPayoutReport3Details(Async)");
+        }
+        
+        // verify the required parameter 'payoutId' is set
+        if (payoutId == null) {
+            throw new ApiException("Missing the required parameter 'payoutId' when calling getPayoutReport3Details(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getPayoutReport3DetailsCall(appId, bankAccountId, payoutId, storeIds, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @return RestApiResultPayoutReport3Details
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultPayoutReport3Details getPayoutReport3Details(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds) throws ApiException {
+        ApiResponse<RestApiResultPayoutReport3Details> resp = getPayoutReport3DetailsWithHttpInfo(appId, bankAccountId, payoutId, storeIds);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @return ApiResponse&lt;RestApiResultPayoutReport3Details&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultPayoutReport3Details> getPayoutReport3DetailsWithHttpInfo(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds) throws ApiException {
+        com.squareup.okhttp.Call call = getPayoutReport3DetailsValidateBeforeCall(appId, bankAccountId, payoutId, storeIds, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultPayoutReport3Details>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getPayoutReport3DetailsAsync(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ApiCallback<RestApiResultPayoutReport3Details> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getPayoutReport3DetailsValidateBeforeCall(appId, bankAccountId, payoutId, storeIds, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultPayoutReport3Details>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getPayoutReport3Orders
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getPayoutReport3OrdersCall(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()))
+            .replaceAll("\\{" + "payoutId" + "\\}", apiClient.escapeString(payoutId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (storeIds != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "storeIds", storeIds));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getPayoutReport3OrdersValidateBeforeCall(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling getPayoutReport3Orders(Async)");
+        }
+        
+        // verify the required parameter 'bankAccountId' is set
+        if (bankAccountId == null) {
+            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getPayoutReport3Orders(Async)");
+        }
+        
+        // verify the required parameter 'payoutId' is set
+        if (payoutId == null) {
+            throw new ApiException("Missing the required parameter 'payoutId' when calling getPayoutReport3Orders(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getPayoutReport3OrdersCall(appId, bankAccountId, payoutId, storeIds, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @return RestApiPaginationResultPayoutReport3PayoutOrder
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiPaginationResultPayoutReport3PayoutOrder getPayoutReport3Orders(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds) throws ApiException {
+        ApiResponse<RestApiPaginationResultPayoutReport3PayoutOrder> resp = getPayoutReport3OrdersWithHttpInfo(appId, bankAccountId, payoutId, storeIds);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @return ApiResponse&lt;RestApiPaginationResultPayoutReport3PayoutOrder&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiPaginationResultPayoutReport3PayoutOrder> getPayoutReport3OrdersWithHttpInfo(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds) throws ApiException {
+        com.squareup.okhttp.Call call = getPayoutReport3OrdersValidateBeforeCall(appId, bankAccountId, payoutId, storeIds, null, null);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultPayoutReport3PayoutOrder>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param storeIds  (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getPayoutReport3OrdersAsync(String appId, Integer bankAccountId, Integer payoutId, List<Integer> storeIds, final ApiCallback<RestApiPaginationResultPayoutReport3PayoutOrder> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getPayoutReport3OrdersValidateBeforeCall(appId, bankAccountId, payoutId, storeIds, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiPaginationResultPayoutReport3PayoutOrder>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getPayoutReport3Overview
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param payoutId  (required)
@@ -66,11 +367,11 @@ public class PayoutReportsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPayoutReport3Call(String appId, Integer bankAccountId, Integer payoutId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPayoutReport3OverviewCall(String appId, Integer bankAccountId, Integer payoutId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}"
+        String localVarPath = "/api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview"
             .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
             .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()))
             .replaceAll("\\{" + "payoutId" + "\\}", apiClient.escapeString(payoutId.toString()));
@@ -111,25 +412,25 @@ public class PayoutReportsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPayoutReport3ValidateBeforeCall(String appId, Integer bankAccountId, Integer payoutId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPayoutReport3OverviewValidateBeforeCall(String appId, Integer bankAccountId, Integer payoutId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getPayoutReport3(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling getPayoutReport3Overview(Async)");
         }
         
         // verify the required parameter 'bankAccountId' is set
         if (bankAccountId == null) {
-            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getPayoutReport3(Async)");
+            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getPayoutReport3Overview(Async)");
         }
         
         // verify the required parameter 'payoutId' is set
         if (payoutId == null) {
-            throw new ApiException("Missing the required parameter 'payoutId' when calling getPayoutReport3(Async)");
+            throw new ApiException("Missing the required parameter 'payoutId' when calling getPayoutReport3Overview(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getPayoutReport3Call(appId, bankAccountId, payoutId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPayoutReport3OverviewCall(appId, bankAccountId, payoutId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -140,11 +441,11 @@ public class PayoutReportsApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param payoutId  (required)
-     * @return Object
+     * @return RestApiResultPayoutReport3Overview
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object getPayoutReport3(String appId, Integer bankAccountId, Integer payoutId) throws ApiException {
-        ApiResponse<Object> resp = getPayoutReport3WithHttpInfo(appId, bankAccountId, payoutId);
+    public RestApiResultPayoutReport3Overview getPayoutReport3Overview(String appId, Integer bankAccountId, Integer payoutId) throws ApiException {
+        ApiResponse<RestApiResultPayoutReport3Overview> resp = getPayoutReport3OverviewWithHttpInfo(appId, bankAccountId, payoutId);
         return resp.getData();
     }
 
@@ -154,12 +455,12 @@ public class PayoutReportsApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param payoutId  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiResultPayoutReport3Overview&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> getPayoutReport3WithHttpInfo(String appId, Integer bankAccountId, Integer payoutId) throws ApiException {
-        com.squareup.okhttp.Call call = getPayoutReport3ValidateBeforeCall(appId, bankAccountId, payoutId, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+    public ApiResponse<RestApiResultPayoutReport3Overview> getPayoutReport3OverviewWithHttpInfo(String appId, Integer bankAccountId, Integer payoutId) throws ApiException {
+        com.squareup.okhttp.Call call = getPayoutReport3OverviewValidateBeforeCall(appId, bankAccountId, payoutId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultPayoutReport3Overview>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -173,7 +474,7 @@ public class PayoutReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPayoutReport3Async(String appId, Integer bankAccountId, Integer payoutId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPayoutReport3OverviewAsync(String appId, Integer bankAccountId, Integer payoutId, final ApiCallback<RestApiResultPayoutReport3Overview> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -194,8 +495,8 @@ public class PayoutReportsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPayoutReport3ValidateBeforeCall(appId, bankAccountId, payoutId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        com.squareup.okhttp.Call call = getPayoutReport3OverviewValidateBeforeCall(appId, bankAccountId, payoutId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultPayoutReport3Overview>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

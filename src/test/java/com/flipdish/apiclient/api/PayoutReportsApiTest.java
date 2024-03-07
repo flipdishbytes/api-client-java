@@ -16,6 +16,9 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -43,11 +46,49 @@ public class PayoutReportsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getPayoutReport3Test() throws ApiException {
+    public void getPayoutReport3DetailsTest() throws ApiException {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
-        Object response = api.getPayoutReport3(appId, bankAccountId, payoutId);
+        List<Integer> storeIds = null;
+        RestApiResultPayoutReport3Details response = api.getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPayoutReport3OrdersTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> storeIds = null;
+        RestApiPaginationResultPayoutReport3PayoutOrder response = api.getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getPayoutReport3OverviewTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        RestApiResultPayoutReport3Overview response = api.getPayoutReport3Overview(appId, bankAccountId, payoutId);
 
         // TODO: test validations
     }
