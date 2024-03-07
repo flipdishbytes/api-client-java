@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu async creation completed event
  */
 @ApiModel(description = "Menu async creation completed event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-07T09:36:17.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-07T13:55:53.484Z")
 public class MenuAsyncCreationCompletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -45,6 +45,9 @@ public class MenuAsyncCreationCompletedEvent {
 
   @SerializedName("Menu")
   private Menu menu = null;
+
+  @SerializedName("Success")
+  private Boolean success = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -131,6 +134,24 @@ public class MenuAsyncCreationCompletedEvent {
 
   public void setMenu(Menu menu) {
     this.menu = menu;
+  }
+
+  public MenuAsyncCreationCompletedEvent success(Boolean success) {
+    this.success = success;
+    return this;
+  }
+
+   /**
+   * Flag indicating if the menu creation was successful
+   * @return success
+  **/
+  @ApiModelProperty(value = "Flag indicating if the menu creation was successful")
+  public Boolean isSuccess() {
+    return success;
+  }
+
+  public void setSuccess(Boolean success) {
+    this.success = success;
   }
 
   public MenuAsyncCreationCompletedEvent flipdishEventId(UUID flipdishEventId) {
@@ -237,6 +258,7 @@ public class MenuAsyncCreationCompletedEvent {
         Objects.equals(this.description, menuAsyncCreationCompletedEvent.description) &&
         Objects.equals(this.user, menuAsyncCreationCompletedEvent.user) &&
         Objects.equals(this.menu, menuAsyncCreationCompletedEvent.menu) &&
+        Objects.equals(this.success, menuAsyncCreationCompletedEvent.success) &&
         Objects.equals(this.flipdishEventId, menuAsyncCreationCompletedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, menuAsyncCreationCompletedEvent.createTime) &&
         Objects.equals(this.position, menuAsyncCreationCompletedEvent.position) &&
@@ -246,7 +268,7 @@ public class MenuAsyncCreationCompletedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, menu, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, user, menu, success, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -259,6 +281,7 @@ public class MenuAsyncCreationCompletedEvent {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    menu: ").append(toIndentedString(menu)).append("\n");
+    sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
