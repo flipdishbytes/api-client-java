@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-07T13:55:53.484Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
