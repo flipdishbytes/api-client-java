@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents information about a Stripe connected account associated with a bank account
  */
 @ApiModel(description = "Represents information about a Stripe connected account associated with a bank account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class StripeConnectedAccountInfo {
   /**
    * Stripe connected account status
@@ -207,6 +207,9 @@ public class StripeConnectedAccountInfo {
   @SerializedName("PayoutsPaused")
   private Boolean payoutsPaused = null;
 
+  @SerializedName("PaymentsEnabled")
+  private Boolean paymentsEnabled = null;
+
   public StripeConnectedAccountInfo accountStatus(AccountStatusEnum accountStatus) {
     this.accountStatus = accountStatus;
     return this;
@@ -315,6 +318,24 @@ public class StripeConnectedAccountInfo {
     this.payoutsPaused = payoutsPaused;
   }
 
+  public StripeConnectedAccountInfo paymentsEnabled(Boolean paymentsEnabled) {
+    this.paymentsEnabled = paymentsEnabled;
+    return this;
+  }
+
+   /**
+   * Flag indicating if payments are enabled
+   * @return paymentsEnabled
+  **/
+  @ApiModelProperty(value = "Flag indicating if payments are enabled")
+  public Boolean isPaymentsEnabled() {
+    return paymentsEnabled;
+  }
+
+  public void setPaymentsEnabled(Boolean paymentsEnabled) {
+    this.paymentsEnabled = paymentsEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -330,12 +351,13 @@ public class StripeConnectedAccountInfo {
         Objects.equals(this.cardPaymentStatus, stripeConnectedAccountInfo.cardPaymentStatus) &&
         Objects.equals(this.payoutScheduleInterval, stripeConnectedAccountInfo.payoutScheduleInterval) &&
         Objects.equals(this.payoutsEnabled, stripeConnectedAccountInfo.payoutsEnabled) &&
-        Objects.equals(this.payoutsPaused, stripeConnectedAccountInfo.payoutsPaused);
+        Objects.equals(this.payoutsPaused, stripeConnectedAccountInfo.payoutsPaused) &&
+        Objects.equals(this.paymentsEnabled, stripeConnectedAccountInfo.paymentsEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountStatus, stripeId, cardPaymentStatus, payoutScheduleInterval, payoutsEnabled, payoutsPaused);
+    return Objects.hash(accountStatus, stripeId, cardPaymentStatus, payoutScheduleInterval, payoutsEnabled, payoutsPaused, paymentsEnabled);
   }
 
 
@@ -350,6 +372,7 @@ public class StripeConnectedAccountInfo {
     sb.append("    payoutScheduleInterval: ").append(toIndentedString(payoutScheduleInterval)).append("\n");
     sb.append("    payoutsEnabled: ").append(toIndentedString(payoutsEnabled)).append("\n");
     sb.append("    payoutsPaused: ").append(toIndentedString(payoutsPaused)).append("\n");
+    sb.append("    paymentsEnabled: ").append(toIndentedString(paymentsEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -31,7 +31,7 @@ import java.util.List;
  * Response with any menu elements that had issues being hidden/shown
  */
 @ApiModel(description = "Response with any menu elements that had issues being hidden/shown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class MenuElementListResponse {
   @SerializedName("MenuName")
   private String menuName = null;

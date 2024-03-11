@@ -30,7 +30,7 @@ import java.util.List;
  * OwnerEntity Metafield Definition Recommendation
  */
 @ApiModel(description = "OwnerEntity Metafield Definition Recommendation")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class MetafieldDefinitionRecommendation {
   /**
    * The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Holds the information for the A and CNAME Records of a domain.
  */
 @ApiModel(description = "Holds the information for the A and CNAME Records of a domain.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class DnsRecordInformation {
   @SerializedName("IsCNameReady")
   private Boolean isCNameReady = null;

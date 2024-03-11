@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **payoutScheduleInterval** | [**PayoutScheduleIntervalEnum**](#PayoutScheduleIntervalEnum) | Payouts Schedule Interval |  [optional]
 **payoutsEnabled** | **Boolean** | Payouts Enabled status |  [optional]
 **payoutsPaused** | **Boolean** | Flag indicating if payouts are paused |  [optional]
+**paymentsEnabled** | **Boolean** | Flag indicating if payments are enabled |  [optional]
 
 
 <a name="AccountStatusEnum"></a>

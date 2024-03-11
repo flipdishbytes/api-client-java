@@ -28,7 +28,7 @@ import java.io.IOException;
  * Percent discount details
  */
 @ApiModel(description = "Percent discount details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class PercentDiscountDetails {
   @SerializedName("PercentageDiscount")
   private Integer percentageDiscount = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Flipdish Stripe Custom Connected Account associated to the Store
  */
 @ApiModel(description = "Flipdish Stripe Custom Connected Account associated to the Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-08T10:30:15.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T10:36:30.489Z")
 public class StripeCustomConnectedAccount {
   @SerializedName("StoreId")
   private Integer storeId = null;
