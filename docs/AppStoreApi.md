@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="getAppStoreApps"></a>
 # **getAppStoreApps**
-> RestApiPaginationResultAppStoreAppSummary getAppStoreApps(search, page, limit, excludeNotOwned)
+> RestApiPaginationResultAppStoreAppSummary getAppStoreApps(search, page, limit, excludeNotOwned, showOnlyVerified)
 
 
 
@@ -87,8 +87,9 @@ String search = "search_example"; // String |
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 Boolean excludeNotOwned = true; // Boolean | 
+Boolean showOnlyVerified = true; // Boolean | 
 try {
-    RestApiPaginationResultAppStoreAppSummary result = apiInstance.getAppStoreApps(search, page, limit, excludeNotOwned);
+    RestApiPaginationResultAppStoreAppSummary result = apiInstance.getAppStoreApps(search, page, limit, excludeNotOwned, showOnlyVerified);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppStoreApi#getAppStoreApps");
@@ -104,6 +105,7 @@ Name | Type | Description  | Notes
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
  **excludeNotOwned** | **Boolean**|  | [optional]
+ **showOnlyVerified** | **Boolean**|  | [optional]
 
 ### Return type
 

@@ -193,12 +193,13 @@ public class AppStoreApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param excludeNotOwned  (optional)
+     * @param showOnlyVerified  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppsCall(String search, Integer page, Integer limit, Boolean excludeNotOwned, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppsCall(String search, Integer page, Integer limit, Boolean excludeNotOwned, Boolean showOnlyVerified, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -214,6 +215,8 @@ public class AppStoreApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
         if (excludeNotOwned != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("excludeNotOwned", excludeNotOwned));
+        if (showOnlyVerified != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("showOnlyVerified", showOnlyVerified));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -248,7 +251,7 @@ public class AppStoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getAppStoreAppsValidateBeforeCall(String search, Integer page, Integer limit, Boolean excludeNotOwned, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getAppStoreAppsValidateBeforeCall(String search, Integer page, Integer limit, Boolean excludeNotOwned, Boolean showOnlyVerified, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'search' is set
         if (search == null) {
@@ -256,7 +259,7 @@ public class AppStoreApi {
         }
         
 
-        com.squareup.okhttp.Call call = getAppStoreAppsCall(search, page, limit, excludeNotOwned, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAppStoreAppsCall(search, page, limit, excludeNotOwned, showOnlyVerified, progressListener, progressRequestListener);
         return call;
 
     }
@@ -268,11 +271,12 @@ public class AppStoreApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param excludeNotOwned  (optional)
+     * @param showOnlyVerified  (optional)
      * @return RestApiPaginationResultAppStoreAppSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultAppStoreAppSummary getAppStoreApps(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
-        ApiResponse<RestApiPaginationResultAppStoreAppSummary> resp = getAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned);
+    public RestApiPaginationResultAppStoreAppSummary getAppStoreApps(String search, Integer page, Integer limit, Boolean excludeNotOwned, Boolean showOnlyVerified) throws ApiException {
+        ApiResponse<RestApiPaginationResultAppStoreAppSummary> resp = getAppStoreAppsWithHttpInfo(search, page, limit, excludeNotOwned, showOnlyVerified);
         return resp.getData();
     }
 
@@ -283,11 +287,12 @@ public class AppStoreApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param excludeNotOwned  (optional)
+     * @param showOnlyVerified  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultAppStoreAppSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultAppStoreAppSummary> getAppStoreAppsWithHttpInfo(String search, Integer page, Integer limit, Boolean excludeNotOwned) throws ApiException {
-        com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, null, null);
+    public ApiResponse<RestApiPaginationResultAppStoreAppSummary> getAppStoreAppsWithHttpInfo(String search, Integer page, Integer limit, Boolean excludeNotOwned, Boolean showOnlyVerified) throws ApiException {
+        com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, showOnlyVerified, null, null);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultAppStoreAppSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -299,11 +304,12 @@ public class AppStoreApi {
      * @param page  (optional)
      * @param limit  (optional)
      * @param excludeNotOwned  (optional)
+     * @param showOnlyVerified  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getAppStoreAppsAsync(String search, Integer page, Integer limit, Boolean excludeNotOwned, final ApiCallback<RestApiPaginationResultAppStoreAppSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getAppStoreAppsAsync(String search, Integer page, Integer limit, Boolean excludeNotOwned, Boolean showOnlyVerified, final ApiCallback<RestApiPaginationResultAppStoreAppSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -324,7 +330,7 @@ public class AppStoreApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getAppStoreAppsValidateBeforeCall(search, page, limit, excludeNotOwned, showOnlyVerified, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultAppStoreAppSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

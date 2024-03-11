@@ -67,7 +67,8 @@ public class AppStoreApiTest {
         Integer page = null;
         Integer limit = null;
         Boolean excludeNotOwned = null;
-        RestApiPaginationResultAppStoreAppSummary response = api.getAppStoreApps(search, page, limit, excludeNotOwned);
+        Boolean showOnlyVerified = null;
+        RestApiPaginationResultAppStoreAppSummary response = api.getAppStoreApps(search, page, limit, excludeNotOwned, showOnlyVerified);
 
         // TODO: test validations
     }
