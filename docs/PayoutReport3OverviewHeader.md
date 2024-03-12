@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **periodEndTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **destinationBank** | **String** |  |  [optional]
 **destinationAccount** | **String** |  |  [optional]
+**amount** | **Double** |  |  [optional]
 
 
 

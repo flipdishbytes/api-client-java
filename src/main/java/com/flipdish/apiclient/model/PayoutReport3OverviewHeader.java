@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3OverviewHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-11T16:21:30.033Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-12T14:20:03.270Z")
 public class PayoutReport3OverviewHeader {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -56,6 +56,9 @@ public class PayoutReport3OverviewHeader {
 
   @SerializedName("DestinationAccount")
   private String destinationAccount = null;
+
+  @SerializedName("Amount")
+  private Double amount = null;
 
   public PayoutReport3OverviewHeader payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -219,6 +222,24 @@ public class PayoutReport3OverviewHeader {
     this.destinationAccount = destinationAccount;
   }
 
+  public PayoutReport3OverviewHeader amount(Double amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
+   * Get amount
+   * @return amount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getAmount() {
+    return amount;
+  }
+
+  public void setAmount(Double amount) {
+    this.amount = amount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,12 +258,13 @@ public class PayoutReport3OverviewHeader {
         Objects.equals(this.periodStartTime, payoutReport3OverviewHeader.periodStartTime) &&
         Objects.equals(this.periodEndTime, payoutReport3OverviewHeader.periodEndTime) &&
         Objects.equals(this.destinationBank, payoutReport3OverviewHeader.destinationBank) &&
-        Objects.equals(this.destinationAccount, payoutReport3OverviewHeader.destinationAccount);
+        Objects.equals(this.destinationAccount, payoutReport3OverviewHeader.destinationAccount) &&
+        Objects.equals(this.amount, payoutReport3OverviewHeader.amount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, bankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount);
+    return Objects.hash(payoutId, bankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount);
   }
 
 
@@ -260,6 +282,7 @@ public class PayoutReport3OverviewHeader {
     sb.append("    periodEndTime: ").append(toIndentedString(periodEndTime)).append("\n");
     sb.append("    destinationBank: ").append(toIndentedString(destinationBank)).append("\n");
     sb.append("    destinationAccount: ").append(toIndentedString(destinationAccount)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
