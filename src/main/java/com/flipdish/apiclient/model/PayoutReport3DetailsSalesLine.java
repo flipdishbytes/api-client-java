@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsSalesLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-12T15:34:07.919Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T09:54:50.939Z")
 public class PayoutReport3DetailsSalesLine {
   @SerializedName("Online")
   private Double online = null;
@@ -95,11 +95,6 @@ public class PayoutReport3DetailsSalesLine {
     this.other = other;
   }
 
-  public PayoutReport3DetailsSalesLine total(Double total) {
-    this.total = total;
-    return this;
-  }
-
    /**
    * Get total
    * @return total
@@ -107,10 +102,6 @@ public class PayoutReport3DetailsSalesLine {
   @ApiModelProperty(value = "")
   public Double getTotal() {
     return total;
-  }
-
-  public void setTotal(Double total) {
-    this.total = total;
   }
 
 
