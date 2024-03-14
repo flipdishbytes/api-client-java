@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * AddAppStoreSubscriptionRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T10:37:35.151Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T12:30:31.790Z")
 public class AddAppStoreSubscriptionRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
