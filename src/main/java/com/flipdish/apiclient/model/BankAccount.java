@@ -31,7 +31,7 @@ import java.util.List;
  * BANK ACCOUNT
  */
 @ApiModel(description = "BANK ACCOUNT")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T09:54:50.939Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T10:37:35.151Z")
 public class BankAccount {
   @SerializedName("Id")
   private Integer id = null;
