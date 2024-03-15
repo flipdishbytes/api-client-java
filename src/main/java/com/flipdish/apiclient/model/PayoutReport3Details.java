@@ -31,10 +31,13 @@ import java.io.IOException;
 /**
  * PayoutReport3Details
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-14T12:30:31.790Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-15T09:17:43.081Z")
 public class PayoutReport3Details {
   @SerializedName("Amount")
   private Double amount = null;
+
+  @SerializedName("Currency")
+  private String currency = null;
 
   @SerializedName("Summary")
   private PayoutReport3DetailsSummary summary = null;
@@ -64,6 +67,24 @@ public class PayoutReport3Details {
 
   public void setAmount(Double amount) {
     this.amount = amount;
+  }
+
+  public PayoutReport3Details currency(String currency) {
+    this.currency = currency;
+    return this;
+  }
+
+   /**
+   * Get currency
+   * @return currency
+  **/
+  @ApiModelProperty(value = "")
+  public String getCurrency() {
+    return currency;
+  }
+
+  public void setCurrency(String currency) {
+    this.currency = currency;
   }
 
   public PayoutReport3Details summary(PayoutReport3DetailsSummary summary) {
@@ -149,6 +170,7 @@ public class PayoutReport3Details {
     }
     PayoutReport3Details payoutReport3Details = (PayoutReport3Details) o;
     return Objects.equals(this.amount, payoutReport3Details.amount) &&
+        Objects.equals(this.currency, payoutReport3Details.currency) &&
         Objects.equals(this.summary, payoutReport3Details.summary) &&
         Objects.equals(this.revenue, payoutReport3Details.revenue) &&
         Objects.equals(this.flipdishFees, payoutReport3Details.flipdishFees) &&
@@ -157,7 +179,7 @@ public class PayoutReport3Details {
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, summary, revenue, flipdishFees, adjustments);
+    return Objects.hash(amount, currency, summary, revenue, flipdishFees, adjustments);
   }
 
 
@@ -167,6 +189,7 @@ public class PayoutReport3Details {
     sb.append("class PayoutReport3Details {\n");
     
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    summary: ").append(toIndentedString(summary)).append("\n");
     sb.append("    revenue: ").append(toIndentedString(revenue)).append("\n");
     sb.append("    flipdishFees: ").append(toIndentedString(flipdishFees)).append("\n");
