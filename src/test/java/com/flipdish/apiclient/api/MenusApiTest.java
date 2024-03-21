@@ -53,9 +53,9 @@ public class MenusApiTest {
 
     
     /**
-     * [PRIVATE API]Clone a menu, (without attaching stores)
+     * [PRIVATE API] Clone a menu, (without attaching stores)
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,9 +104,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Mark a Menu as Deleted
+     * [PRIVATE API] Mark a Menu as Deleted
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -219,7 +219,7 @@ public class MenusApiTest {
         Integer storeId = null;
         Integer menuItemId = null;
         String key = null;
-        api.getMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
+        RestApiResultMetadata response = api.getMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
 
         // TODO: test validations
     }
@@ -243,9 +243,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Get Menus Name
+     * [PRIVATE API] Get Menus Name
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -253,15 +253,15 @@ public class MenusApiTest {
     @Test
     public void getMenuNameTest() throws ApiException {
         Integer menuId = null;
-        api.getMenuName(menuId);
+        String response = api.getMenuName(menuId);
 
         // TODO: test validations
     }
     
     /**
-     * [PRIVATE API]Get menus store names
+     * [PRIVATE API] Get menus store names
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -275,9 +275,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Get menus tax details
+     * [PRIVATE API] Get menus tax details
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -291,9 +291,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Get menus by appId
+     * [PRIVATE API] Get menus by appId
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -309,7 +309,7 @@ public class MenusApiTest {
     /**
      * [PRIVATE API]Get a Menus Checkpoints
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -323,9 +323,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -340,7 +340,7 @@ public class MenusApiTest {
     }
     
     /**
-     * 
+     * Get bulk show/hide menu items and option set items
      *
      * 
      *
@@ -357,9 +357,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Set if tax shows for a Menu
+     * [PRIVATE API] Set if tax shows for a Menu
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -374,9 +374,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Re-arrange Sections within a Menu
+     * [PRIVATE API] Re-arrange Sections within a Menu
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -391,7 +391,7 @@ public class MenusApiTest {
     }
     
     /**
-     * 
+     * Bulk show/hide menu items or option set items
      *
      * 
      *
@@ -409,9 +409,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Set the type of Tax on a Menu
+     * [PRIVATE API] Set the type of Tax on a Menu
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -426,9 +426,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Add/Update a Tax Rate
+     * [PRIVATE API] Add/Update a Tax Rate
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -443,9 +443,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Restore a Menu to a checkpoint
+     * [PRIVATE API] Restore a Menu to a checkpoint
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -498,9 +498,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -515,9 +515,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Set Menus Name
+     * [PRIVATE API] Set Menus Name
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails

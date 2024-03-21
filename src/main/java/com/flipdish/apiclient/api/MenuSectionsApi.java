@@ -1217,8 +1217,8 @@ public class MenuSectionsApi {
     }
 
     /**
-     * Re-arrange Items within a Section
-     * 
+     * [PRIVATE API] Re-arrange Items within a Section
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Menu section identifier (required)
      * @param displayOrders Item Ids and their new display order (required)
@@ -1229,8 +1229,8 @@ public class MenuSectionsApi {
     }
 
     /**
-     * Re-arrange Items within a Section
-     * 
+     * [PRIVATE API] Re-arrange Items within a Section
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Menu section identifier (required)
      * @param displayOrders Item Ids and their new display order (required)
@@ -1243,8 +1243,8 @@ public class MenuSectionsApi {
     }
 
     /**
-     * Re-arrange Items within a Section (asynchronously)
-     * 
+     * [PRIVATE API] Re-arrange Items within a Section (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Menu section identifier (required)
      * @param displayOrders Item Ids and their new display order (required)

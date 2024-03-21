@@ -957,7 +957,7 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId  (required)
@@ -972,7 +972,7 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId  (required)
@@ -989,7 +989,7 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * [Private API] Set Tax Rate on OptionSetItem (asynchronously)
+     * Set Tax Rate on OptionSetItem (asynchronously)
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId  (required)
@@ -1034,7 +1034,7 @@ public class MenuOptionSetItemsApi {
      * @param optionSetId Option set identifier (required)
      * @param menuItemOptionSetItemId Option set item identifier (required)
      * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1136,7 +1136,7 @@ public class MenuOptionSetItemsApi {
      * @param optionSetId Option set identifier (required)
      * @param menuItemOptionSetItemId Option set item identifier (required)
      * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateMenuItemOptionSetItem(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, Integer optionSetId, Integer menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, Double undoAfter) throws ApiException {
@@ -1152,7 +1152,7 @@ public class MenuOptionSetItemsApi {
      * @param optionSetId Option set identifier (required)
      * @param menuItemOptionSetItemId Option set item identifier (required)
      * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1170,7 +1170,7 @@ public class MenuOptionSetItemsApi {
      * @param optionSetId Option set identifier (required)
      * @param menuItemOptionSetItemId Option set item identifier (required)
      * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -4,10 +4,10 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
+[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API] Clone a menu, (without attaching stores)
 [**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
 [**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
+[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API] Mark a Menu as Deleted
 [**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**getAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getAllMenuMetadataByMenuIdAndStoreId) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
@@ -15,23 +15,23 @@ Method | HTTP request | Description
 [**getMenuItemMetadata**](MenusApi.md#getMenuItemMetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**getMenuItemMetadataByKey**](MenusApi.md#getMenuItemMetadataByKey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 [**getMenuItemOptionSetItemMetadata**](MenusApi.md#getMenuItemOptionSetItemMetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
-[**getMenuName**](MenusApi.md#getMenuName) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Get Menus Name
-[**getMenuStoreNames**](MenusApi.md#getMenuStoreNames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API]Get menus store names
-[**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API]Get menus tax details
-[**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
+[**getMenuName**](MenusApi.md#getMenuName) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Get Menus Name
+[**getMenuStoreNames**](MenusApi.md#getMenuStoreNames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API] Get menus store names
+[**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API] Get menus tax details
+[**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API] Get menus by appId
 [**getMenusCheckpoints**](MenusApi.md#getMenusCheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
-[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-[**menusGetMenuBulkShowHide**](MenusApi.md#menusGetMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
-[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API]Set if tax shows for a Menu
-[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API]Re-arrange Sections within a Menu
-[**menusShowHideBulkItems**](MenusApi.md#menusShowHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
-[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API]Set the type of Tax on a Menu
-[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API]Add/Update a Tax Rate
-[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
+[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[**menusGetMenuBulkShowHide**](MenusApi.md#menusGetMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
+[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API] Set if tax shows for a Menu
+[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API] Re-arrange Sections within a Menu
+[**menusShowHideBulkItems**](MenusApi.md#menusShowHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
+[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API] Set the type of Tax on a Menu
+[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API] Add/Update a Tax Rate
+[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API] Restore a Menu to a checkpoint
 [**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 [**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API]Lock/Unlock a Menu for Editing
-[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Set Menus Name
+[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API] Lock/Unlock a Menu for Editing
+[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Set Menus Name
 [**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 [**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 [**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
@@ -41,7 +41,9 @@ Method | HTTP request | Description
 # **createDraftMenuFromExistingMenu**
 > RestApiResultMenu createDraftMenuFromExistingMenu(menuId, newName)
 
-[PRIVATE API]Clone a menu, (without attaching stores)
+[PRIVATE API] Clone a menu, (without attaching stores)
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -204,7 +206,9 @@ Name | Type | Description  | Notes
 # **deleteMenu**
 > deleteMenu(menuId)
 
-[PRIVATE API]Mark a Menu as Deleted
+[PRIVATE API] Mark a Menu as Deleted
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -517,7 +521,7 @@ Name | Type | Description  | Notes
 
 <a name="getMenuItemMetadataByKey"></a>
 # **getMenuItemMetadataByKey**
-> getMenuItemMetadataByKey(menuId, storeId, menuItemId, key)
+> RestApiResultMetadata getMenuItemMetadataByKey(menuId, storeId, menuItemId, key)
 
 Get menu item metadata by key
 
@@ -542,7 +546,8 @@ Integer storeId = 56; // Integer | Store identifier
 Integer menuItemId = 56; // Integer | Menu item identifier
 String key = "key_example"; // String | Metadata key
 try {
-    apiInstance.getMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
+    RestApiResultMetadata result = apiInstance.getMenuItemMetadataByKey(menuId, storeId, menuItemId, key);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenusApi#getMenuItemMetadataByKey");
     e.printStackTrace();
@@ -560,7 +565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**RestApiResultMetadata**](RestApiResultMetadata.md)
 
 ### Authorization
 
@@ -628,9 +633,11 @@ Name | Type | Description  | Notes
 
 <a name="getMenuName"></a>
 # **getMenuName**
-> getMenuName(menuId)
+> String getMenuName(menuId)
 
-[PRIVATE API]Get Menus Name
+[PRIVATE API] Get Menus Name
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -650,7 +657,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MenusApi apiInstance = new MenusApi();
 Integer menuId = 56; // Integer | Menu identifier
 try {
-    apiInstance.getMenuName(menuId);
+    String result = apiInstance.getMenuName(menuId);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenusApi#getMenuName");
     e.printStackTrace();
@@ -665,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**String**
 
 ### Authorization
 
@@ -680,7 +688,9 @@ null (empty response body)
 # **getMenuStoreNames**
 > RestApiArrayResultMenuStoreNames getMenuStoreNames(menuId)
 
-[PRIVATE API]Get menus store names
+[PRIVATE API] Get menus store names
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -731,7 +741,9 @@ Name | Type | Description  | Notes
 # **getMenuTaxDetails**
 > RestApiArrayResultMenuTaxDetails getMenuTaxDetails(menuId)
 
-[PRIVATE API]Get menus tax details
+[PRIVATE API] Get menus tax details
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -782,7 +794,9 @@ Name | Type | Description  | Notes
 # **getMenusByAppId**
 > RestApiArrayResultMenuSummary getMenusByAppId(appId)
 
-[PRIVATE API]Get menus by appId
+[PRIVATE API] Get menus by appId
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -835,6 +849,8 @@ Name | Type | Description  | Notes
 
 [PRIVATE API]Get a Menus Checkpoints
 
+[PRIVATE API]
+
 ### Example
 ```java
 // Import classes:
@@ -884,7 +900,9 @@ Name | Type | Description  | Notes
 # **menusDeleteTaxRate**
 > menusDeleteTaxRate(menuId, taxId)
 
-[PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -936,7 +954,7 @@ null (empty response body)
 # **menusGetMenuBulkShowHide**
 > RestApiArrayResultMenuElementListResponse menusGetMenuBulkShowHide(menuId, isAvailable)
 
-
+Get bulk show/hide menu items and option set items
 
 ### Example
 ```java
@@ -954,8 +972,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | 
-Boolean isAvailable = true; // Boolean | 
+Integer menuId = 56; // Integer | Menu id
+Boolean isAvailable = true; // Boolean | Is available flag
 try {
     RestApiArrayResultMenuElementListResponse result = apiInstance.menusGetMenuBulkShowHide(menuId, isAvailable);
     System.out.println(result);
@@ -969,8 +987,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **isAvailable** | **Boolean**|  |
+ **menuId** | **Integer**| Menu id |
+ **isAvailable** | **Boolean**| Is available flag |
 
 ### Return type
 
@@ -989,7 +1007,9 @@ Name | Type | Description  | Notes
 # **menusSetDisplayOnMenuTax**
 > menusSetDisplayOnMenuTax(menuId, show)
 
-[PRIVATE API]Set if tax shows for a Menu
+[PRIVATE API] Set if tax shows for a Menu
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1041,7 +1061,9 @@ null (empty response body)
 # **menusSetItemDisplayOrders**
 > menusSetItemDisplayOrders(menuId, displayOrders)
 
-[PRIVATE API]Re-arrange Sections within a Menu
+[PRIVATE API] Re-arrange Sections within a Menu
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1093,7 +1115,7 @@ null (empty response body)
 # **menusShowHideBulkItems**
 > RestApiArrayResultMenuElementEditResponse menusShowHideBulkItems(menuId, menuElements, isAvailable)
 
-
+Bulk show/hide menu items or option set items
 
 ### Example
 ```java
@@ -1111,9 +1133,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | 
-List<MenuElementHide> menuElements = Arrays.asList(new MenuElementHide()); // List<MenuElementHide> | 
-Boolean isAvailable = true; // Boolean | 
+Integer menuId = 56; // Integer | Menu id
+List<MenuElementHide> menuElements = Arrays.asList(new MenuElementHide()); // List<MenuElementHide> | Elements to be show/hide
+Boolean isAvailable = true; // Boolean | Is available flag
 try {
     RestApiArrayResultMenuElementEditResponse result = apiInstance.menusShowHideBulkItems(menuId, menuElements, isAvailable);
     System.out.println(result);
@@ -1127,9 +1149,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)|  |
- **isAvailable** | **Boolean**|  |
+ **menuId** | **Integer**| Menu id |
+ **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)| Elements to be show/hide |
+ **isAvailable** | **Boolean**| Is available flag |
 
 ### Return type
 
@@ -1148,7 +1170,9 @@ Name | Type | Description  | Notes
 # **menusUpdateTaxType**
 > menusUpdateTaxType(menuId, type)
 
-[PRIVATE API]Set the type of Tax on a Menu
+[PRIVATE API] Set the type of Tax on a Menu
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1200,7 +1224,9 @@ null (empty response body)
 # **menusUpsertTaxRate**
 > MenuTaxRate menusUpsertTaxRate(menuId, taxRate)
 
-[PRIVATE API]Add/Update a Tax Rate
+[PRIVATE API] Add/Update a Tax Rate
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1219,7 +1245,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
 Integer menuId = 56; // Integer | Menu identifier
-MenuTaxRate taxRate = new MenuTaxRate(); // MenuTaxRate | Tax Rate to Add/Update
+MenuTaxRate taxRate = new MenuTaxRate(); // MenuTaxRate | Tax rate to add/update
 try {
     MenuTaxRate result = apiInstance.menusUpsertTaxRate(menuId, taxRate);
     System.out.println(result);
@@ -1234,7 +1260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **Integer**| Menu identifier |
- **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax Rate to Add/Update |
+ **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax rate to add/update |
 
 ### Return type
 
@@ -1253,7 +1279,9 @@ Name | Type | Description  | Notes
 # **restoreAMenuCheckpoint**
 > restoreAMenuCheckpoint(menuId, checkpointId)
 
-[PRIVATE API]Restore a Menu to a checkpoint
+[PRIVATE API] Restore a Menu to a checkpoint
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1417,7 +1445,9 @@ null (empty response body)
 # **setMenuLock**
 > setMenuLock(menuId, locked)
 
-[PRIVATE API]Lock/Unlock a Menu for Editing
+[PRIVATE API] Lock/Unlock a Menu for Editing
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1469,7 +1499,9 @@ null (empty response body)
 # **setMenuName**
 > setMenuName(menuId, name)
 
-[PRIVATE API]Set Menus Name
+[PRIVATE API] Set Menus Name
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -1540,7 +1572,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
 Integer menuId = 56; // Integer | Menu identifier
-MenuBase menu = new MenuBase(); // MenuBase | Menu (delta)
+MenuBase menu = new MenuBase(); // MenuBase | Full menu data
 try {
     apiInstance.updateMenu(menuId, menu);
 } catch (ApiException e) {
@@ -1554,7 +1586,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menuId** | **Integer**| Menu identifier |
- **menu** | [**MenuBase**](MenuBase.md)| Menu (delta) |
+ **menu** | [**MenuBase**](MenuBase.md)| Full menu data |
 
 ### Return type
 

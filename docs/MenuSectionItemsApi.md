@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**deleteMenuSectionItemImage**](MenuSectionItemsApi.md#deleteMenuSectionItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**getMenuItemById**](MenuSectionItemsApi.md#getMenuItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**getMenuItems**](MenuSectionItemsApi.md#getMenuItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
-[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | [PRIVATE API]Move an Item within a menu
+[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API] Move an Item within a menu
+[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | Set tax rate for menu item
 [**updateMenuSectionItem**](MenuSectionItemsApi.md#updateMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**uploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadMenuSectionItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
@@ -404,7 +404,9 @@ Name | Type | Description  | Notes
 # **moveMenuItem**
 > moveMenuItem(menuId, menuSectionId, menuSectionItemId, destinationDisplayOrder)
 
-[PRIVATE API]Move an Item within a menu
+[PRIVATE API] Move an Item within a menu
+
+[PRIVATE API]
 
 ### Example
 ```java
@@ -460,7 +462,7 @@ null (empty response body)
 # **setSectionItemTax**
 > setSectionItemTax(menuId, menuSectionId, menuSectionItemId, taxRateId)
 
-[PRIVATE API]Move an Item within a menu
+Set tax rate for menu item
 
 ### Example
 ```java
@@ -538,7 +540,7 @@ Integer menuId = 56; // Integer | Menu identifier
 Integer menuSectionId = 56; // Integer | Menu section identifier
 Integer menuSectionItemId = 56; // Integer | Menu section item identifier
 MenuSectionItemBase menuSectionItem = new MenuSectionItemBase(); // MenuSectionItemBase | Menu section item (delta)
-Double undoAfter = 3.4D; // Double | An optional time period, in hours, after which the hide-section operaton will be undone.
+Double undoAfter = 3.4D; // Double | An optional time period, in hours, after which the hide-section operation will be undone
 try {
     apiInstance.updateMenuSectionItem(menuId, menuSectionId, menuSectionItemId, menuSectionItem, undoAfter);
 } catch (ApiException e) {
@@ -555,7 +557,7 @@ Name | Type | Description  | Notes
  **menuSectionId** | **Integer**| Menu section identifier |
  **menuSectionItemId** | **Integer**| Menu section item identifier |
  **menuSectionItem** | [**MenuSectionItemBase**](MenuSectionItemBase.md)| Menu section item (delta) |
- **undoAfter** | **Double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
+ **undoAfter** | **Double**| An optional time period, in hours, after which the hide-section operation will be undone | [optional]
 
 ### Return type
 

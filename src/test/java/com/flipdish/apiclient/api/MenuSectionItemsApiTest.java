@@ -167,9 +167,9 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * [PRIVATE API]Move an Item within a menu
+     * [PRIVATE API] Move an Item within a menu
      *
-     * 
+     * [PRIVATE API]
      *
      * @throws ApiException
      *          if the Api call fails
@@ -186,7 +186,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      *
      * 
      *

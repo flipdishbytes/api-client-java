@@ -139,7 +139,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      *
      * 
      *

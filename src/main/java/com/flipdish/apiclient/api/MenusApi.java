@@ -146,8 +146,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Clone a menu, (without attaching stores)
-     * 
+     * [PRIVATE API] Clone a menu, (without attaching stores)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param newName Name of the new Menu (required)
      * @return RestApiResultMenu
@@ -159,8 +159,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Clone a menu, (without attaching stores)
-     * 
+     * [PRIVATE API] Clone a menu, (without attaching stores)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param newName Name of the new Menu (required)
      * @return ApiResponse&lt;RestApiResultMenu&gt;
@@ -173,8 +173,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Clone a menu, (without attaching stores) (asynchronously)
-     * 
+     * [PRIVATE API] Clone a menu, (without attaching stores) (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param newName Name of the new Menu (required)
      * @param callback The callback to be executed when the API call finishes
@@ -545,8 +545,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Mark a Menu as Deleted
-     * 
+     * [PRIVATE API] Mark a Menu as Deleted
+     * [PRIVATE API]
      * @param menuId Menu Identifier (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -555,8 +555,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Mark a Menu as Deleted
-     * 
+     * [PRIVATE API] Mark a Menu as Deleted
+     * [PRIVATE API]
      * @param menuId Menu Identifier (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -567,8 +567,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Mark a Menu as Deleted (asynchronously)
-     * 
+     * [PRIVATE API] Mark a Menu as Deleted (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu Identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1358,10 +1358,12 @@ public class MenusApi {
      * @param storeId Store identifier (required)
      * @param menuItemId Menu item identifier (required)
      * @param key Metadata key (required)
+     * @return RestApiResultMetadata
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getMenuItemMetadataByKey(Integer menuId, Integer storeId, Integer menuItemId, String key) throws ApiException {
-        getMenuItemMetadataByKeyWithHttpInfo(menuId, storeId, menuItemId, key);
+    public RestApiResultMetadata getMenuItemMetadataByKey(Integer menuId, Integer storeId, Integer menuItemId, String key) throws ApiException {
+        ApiResponse<RestApiResultMetadata> resp = getMenuItemMetadataByKeyWithHttpInfo(menuId, storeId, menuItemId, key);
+        return resp.getData();
     }
 
     /**
@@ -1371,12 +1373,13 @@ public class MenusApi {
      * @param storeId Store identifier (required)
      * @param menuItemId Menu item identifier (required)
      * @param key Metadata key (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;RestApiResultMetadata&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getMenuItemMetadataByKeyWithHttpInfo(Integer menuId, Integer storeId, Integer menuItemId, String key) throws ApiException {
+    public ApiResponse<RestApiResultMetadata> getMenuItemMetadataByKeyWithHttpInfo(Integer menuId, Integer storeId, Integer menuItemId, String key) throws ApiException {
         com.squareup.okhttp.Call call = getMenuItemMetadataByKeyValidateBeforeCall(menuId, storeId, menuItemId, key, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<RestApiResultMetadata>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -1390,7 +1393,7 @@ public class MenusApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMenuItemMetadataByKeyAsync(Integer menuId, Integer storeId, Integer menuItemId, String key, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMenuItemMetadataByKeyAsync(Integer menuId, Integer storeId, Integer menuItemId, String key, final ApiCallback<RestApiResultMetadata> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1412,7 +1415,8 @@ public class MenusApi {
         }
 
         com.squareup.okhttp.Call call = getMenuItemMetadataByKeyValidateBeforeCall(menuId, storeId, menuItemId, key, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<RestApiResultMetadata>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
@@ -1623,36 +1627,39 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get Menus Name
-     * 
+     * [PRIVATE API] Get Menus Name
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getMenuName(Integer menuId) throws ApiException {
-        getMenuNameWithHttpInfo(menuId);
+    public String getMenuName(Integer menuId) throws ApiException {
+        ApiResponse<String> resp = getMenuNameWithHttpInfo(menuId);
+        return resp.getData();
     }
 
     /**
-     * [PRIVATE API]Get Menus Name
-     * 
+     * [PRIVATE API] Get Menus Name
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getMenuNameWithHttpInfo(Integer menuId) throws ApiException {
+    public ApiResponse<String> getMenuNameWithHttpInfo(Integer menuId) throws ApiException {
         com.squareup.okhttp.Call call = getMenuNameValidateBeforeCall(menuId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * [PRIVATE API]Get Menus Name (asynchronously)
-     * 
+     * [PRIVATE API] Get Menus Name (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMenuNameAsync(Integer menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMenuNameAsync(Integer menuId, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1674,7 +1681,8 @@ public class MenusApi {
         }
 
         com.squareup.okhttp.Call call = getMenuNameValidateBeforeCall(menuId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
@@ -1742,8 +1750,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus store names
-     * 
+     * [PRIVATE API] Get menus store names
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return RestApiArrayResultMenuStoreNames
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1754,8 +1762,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus store names
-     * 
+     * [PRIVATE API] Get menus store names
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuStoreNames&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1767,8 +1775,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus store names (asynchronously)
-     * 
+     * [PRIVATE API] Get menus store names (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1865,8 +1873,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus tax details
-     * 
+     * [PRIVATE API] Get menus tax details
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return RestApiArrayResultMenuTaxDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1877,8 +1885,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus tax details
-     * 
+     * [PRIVATE API] Get menus tax details
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuTaxDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1890,8 +1898,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus tax details (asynchronously)
-     * 
+     * [PRIVATE API] Get menus tax details (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1988,8 +1996,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus by appId
-     * 
+     * [PRIVATE API] Get menus by appId
+     * [PRIVATE API]
      * @param appId Get Menus for this appId (required)
      * @return RestApiArrayResultMenuSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2000,8 +2008,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus by appId
-     * 
+     * [PRIVATE API] Get menus by appId
+     * [PRIVATE API]
      * @param appId Get Menus for this appId (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2013,8 +2021,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Get menus by appId (asynchronously)
-     * 
+     * [PRIVATE API] Get menus by appId (asynchronously)
+     * [PRIVATE API]
      * @param appId Get Menus for this appId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2112,7 +2120,7 @@ public class MenusApi {
 
     /**
      * [PRIVATE API]Get a Menus Checkpoints
-     * 
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return RestApiArrayResultMenuCheckpoint
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2124,7 +2132,7 @@ public class MenusApi {
 
     /**
      * [PRIVATE API]Get a Menus Checkpoints
-     * 
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuCheckpoint&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2137,7 +2145,7 @@ public class MenusApi {
 
     /**
      * [PRIVATE API]Get a Menus Checkpoints (asynchronously)
-     * 
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2241,8 +2249,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-     * 
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param taxId Id of Menu Tax to be removed (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2252,8 +2260,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-     * 
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param taxId Id of Menu Tax to be removed (required)
      * @return ApiResponse&lt;Void&gt;
@@ -2265,8 +2273,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached (asynchronously)
-     * 
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param taxId Id of Menu Tax to be removed (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2300,8 +2308,8 @@ public class MenusApi {
     }
     /**
      * Build call for menusGetMenuBulkShowHide
-     * @param menuId  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2371,10 +2379,10 @@ public class MenusApi {
     }
 
     /**
+     * Get bulk show/hide menu items and option set items
      * 
-     * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
      * @return RestApiArrayResultMenuElementListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2384,10 +2392,10 @@ public class MenusApi {
     }
 
     /**
+     * Get bulk show/hide menu items and option set items
      * 
-     * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuElementListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2398,10 +2406,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Get bulk show/hide menu items and option set items (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2504,8 +2512,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set if tax shows for a Menu
-     * 
+     * [PRIVATE API] Set if tax shows for a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2515,8 +2523,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set if tax shows for a Menu
-     * 
+     * [PRIVATE API] Set if tax shows for a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
      * @return ApiResponse&lt;Void&gt;
@@ -2528,8 +2536,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set if tax shows for a Menu (asynchronously)
-     * 
+     * [PRIVATE API] Set if tax shows for a Menu (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2632,8 +2640,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Re-arrange Sections within a Menu
-     * 
+     * [PRIVATE API] Re-arrange Sections within a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param displayOrders Section Ids and their new display order (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2643,8 +2651,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Re-arrange Sections within a Menu
-     * 
+     * [PRIVATE API] Re-arrange Sections within a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param displayOrders Section Ids and their new display order (required)
      * @return ApiResponse&lt;Void&gt;
@@ -2656,8 +2664,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Re-arrange Sections within a Menu (asynchronously)
-     * 
+     * [PRIVATE API] Re-arrange Sections within a Menu (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param displayOrders Section Ids and their new display order (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2691,9 +2699,9 @@ public class MenusApi {
     }
     /**
      * Build call for menusShowHideBulkItems
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2768,11 +2776,11 @@ public class MenusApi {
     }
 
     /**
+     * Bulk show/hide menu items or option set items
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
      * @return RestApiArrayResultMenuElementEditResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2782,11 +2790,11 @@ public class MenusApi {
     }
 
     /**
+     * Bulk show/hide menu items or option set items
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
      * @return ApiResponse&lt;RestApiArrayResultMenuElementEditResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2797,11 +2805,11 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Bulk show/hide menu items or option set items (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2904,8 +2912,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set the type of Tax on a Menu
-     * 
+     * [PRIVATE API] Set the type of Tax on a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param type Type of Tax (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2915,8 +2923,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set the type of Tax on a Menu
-     * 
+     * [PRIVATE API] Set the type of Tax on a Menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param type Type of Tax (required)
      * @return ApiResponse&lt;Void&gt;
@@ -2928,8 +2936,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set the type of Tax on a Menu (asynchronously)
-     * 
+     * [PRIVATE API] Set the type of Tax on a Menu (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param type Type of Tax (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2964,7 +2972,7 @@ public class MenusApi {
     /**
      * Build call for menusUpsertTaxRate
      * @param menuId Menu identifier (required)
-     * @param taxRate Tax Rate to Add/Update (required)
+     * @param taxRate Tax rate to add/update (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3032,10 +3040,10 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Add/Update a Tax Rate
-     * 
+     * [PRIVATE API] Add/Update a Tax Rate
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
-     * @param taxRate Tax Rate to Add/Update (required)
+     * @param taxRate Tax rate to add/update (required)
      * @return MenuTaxRate
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3045,10 +3053,10 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Add/Update a Tax Rate
-     * 
+     * [PRIVATE API] Add/Update a Tax Rate
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
-     * @param taxRate Tax Rate to Add/Update (required)
+     * @param taxRate Tax rate to add/update (required)
      * @return ApiResponse&lt;MenuTaxRate&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3059,10 +3067,10 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Add/Update a Tax Rate (asynchronously)
-     * 
+     * [PRIVATE API] Add/Update a Tax Rate (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
-     * @param taxRate Tax Rate to Add/Update (required)
+     * @param taxRate Tax rate to add/update (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3165,8 +3173,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Restore a Menu to a checkpoint
-     * 
+     * [PRIVATE API] Restore a Menu to a checkpoint
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param checkpointId Checkpoint to restore menu to (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3176,8 +3184,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Restore a Menu to a checkpoint
-     * 
+     * [PRIVATE API] Restore a Menu to a checkpoint
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param checkpointId Checkpoint to restore menu to (required)
      * @return ApiResponse&lt;Void&gt;
@@ -3189,8 +3197,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Restore a Menu to a checkpoint (asynchronously)
-     * 
+     * [PRIVATE API] Restore a Menu to a checkpoint (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param checkpointId Checkpoint to restore menu to (required)
      * @param callback The callback to be executed when the API call finishes
@@ -3589,8 +3597,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
-     * 
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3600,8 +3608,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
-     * 
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @return ApiResponse&lt;Void&gt;
@@ -3613,8 +3621,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Lock/Unlock a Menu for Editing (asynchronously)
-     * 
+     * [PRIVATE API] Lock/Unlock a Menu for Editing (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @param callback The callback to be executed when the API call finishes
@@ -3717,8 +3725,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set Menus Name
-     * 
+     * [PRIVATE API] Set Menus Name
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param name Name to set for this Menu (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3728,8 +3736,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set Menus Name
-     * 
+     * [PRIVATE API] Set Menus Name
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param name Name to set for this Menu (required)
      * @return ApiResponse&lt;Void&gt;
@@ -3741,8 +3749,8 @@ public class MenusApi {
     }
 
     /**
-     * [PRIVATE API]Set Menus Name (asynchronously)
-     * 
+     * [PRIVATE API] Set Menus Name (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param name Name to set for this Menu (required)
      * @param callback The callback to be executed when the API call finishes
@@ -3777,7 +3785,7 @@ public class MenusApi {
     /**
      * Build call for updateMenu
      * @param menuId Menu identifier (required)
-     * @param menu Menu (delta) (required)
+     * @param menu Full menu data (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3848,7 +3856,7 @@ public class MenusApi {
      * Update menu
      * 
      * @param menuId Menu identifier (required)
-     * @param menu Menu (delta) (required)
+     * @param menu Full menu data (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateMenu(Integer menuId, MenuBase menu) throws ApiException {
@@ -3859,7 +3867,7 @@ public class MenusApi {
      * Update menu
      * 
      * @param menuId Menu identifier (required)
-     * @param menu Menu (delta) (required)
+     * @param menu Full menu data (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3872,7 +3880,7 @@ public class MenusApi {
      * Update menu (asynchronously)
      * 
      * @param menuId Menu identifier (required)
-     * @param menu Menu (delta) (required)
+     * @param menu Full menu data (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

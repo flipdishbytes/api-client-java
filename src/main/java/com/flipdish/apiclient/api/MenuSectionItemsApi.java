@@ -1130,8 +1130,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu
-     * 
+     * [PRIVATE API] Move an Item within a menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)
@@ -1143,8 +1143,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu
-     * 
+     * [PRIVATE API] Move an Item within a menu
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)
@@ -1158,8 +1158,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu (asynchronously)
-     * 
+     * [PRIVATE API] Move an Item within a menu (asynchronously)
+     * [PRIVATE API]
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)
@@ -1279,7 +1279,7 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
@@ -1292,7 +1292,7 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
@@ -1307,7 +1307,7 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API]Move an Item within a menu (asynchronously)
+     * Set tax rate for menu item (asynchronously)
      * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
@@ -1348,7 +1348,7 @@ public class MenuSectionItemsApi {
      * @param menuSectionId Menu section identifier (required)
      * @param menuSectionItemId Menu section item identifier (required)
      * @param menuSectionItem Menu section item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1436,7 +1436,7 @@ public class MenuSectionItemsApi {
      * @param menuSectionId Menu section identifier (required)
      * @param menuSectionItemId Menu section item identifier (required)
      * @param menuSectionItem Menu section item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateMenuSectionItem(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, MenuSectionItemBase menuSectionItem, Double undoAfter) throws ApiException {
@@ -1450,7 +1450,7 @@ public class MenuSectionItemsApi {
      * @param menuSectionId Menu section identifier (required)
      * @param menuSectionItemId Menu section item identifier (required)
      * @param menuSectionItem Menu section item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1466,7 +1466,7 @@ public class MenuSectionItemsApi {
      * @param menuSectionId Menu section identifier (required)
      * @param menuSectionItemId Menu section item identifier (required)
      * @param menuSectionItem Menu section item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
