@@ -43,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-21T10:51:17.861Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-21T16:04:24.522Z")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -95,9 +95,6 @@ public class Order {
 
   @SerializedName("Channel")
   private Channel channel = null;
-
-  @SerializedName("ReceiptCode")
-  private String receiptCode = null;
 
   @SerializedName("OrderDropOffLocation")
   private OrderDropOffLocation orderDropOffLocation = null;
@@ -724,6 +721,9 @@ public class Order {
   @SerializedName("DeliveryFeeAreaId")
   private Integer deliveryFeeAreaId = null;
 
+  @SerializedName("ReceiptCode")
+  private String receiptCode = null;
+
   public Order store(StoreSummary store) {
     this.store = store;
     return this;
@@ -1036,24 +1036,6 @@ public class Order {
 
   public void setChannel(Channel channel) {
     this.channel = channel;
-  }
-
-  public Order receiptCode(String receiptCode) {
-    this.receiptCode = receiptCode;
-    return this;
-  }
-
-   /**
-   * Generated receipt code for an order
-   * @return receiptCode
-  **/
-  @ApiModelProperty(value = "Generated receipt code for an order")
-  public String getReceiptCode() {
-    return receiptCode;
-  }
-
-  public void setReceiptCode(String receiptCode) {
-    this.receiptCode = receiptCode;
   }
 
   public Order orderDropOffLocation(OrderDropOffLocation orderDropOffLocation) {
@@ -1632,6 +1614,24 @@ public class Order {
     this.deliveryFeeAreaId = deliveryFeeAreaId;
   }
 
+  public Order receiptCode(String receiptCode) {
+    this.receiptCode = receiptCode;
+    return this;
+  }
+
+   /**
+   * Code used to view the order&#39;s receipt
+   * @return receiptCode
+  **/
+  @ApiModelProperty(value = "Code used to view the order's receipt")
+  public String getReceiptCode() {
+    return receiptCode;
+  }
+
+  public void setReceiptCode(String receiptCode) {
+    this.receiptCode = receiptCode;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1659,7 +1659,6 @@ public class Order {
         Objects.equals(this.channelOrderId, order.channelOrderId) &&
         Objects.equals(this.channelOrderDisplayId, order.channelOrderDisplayId) &&
         Objects.equals(this.channel, order.channel) &&
-        Objects.equals(this.receiptCode, order.receiptCode) &&
         Objects.equals(this.orderDropOffLocation, order.orderDropOffLocation) &&
         Objects.equals(this.fulfillmentStatus, order.fulfillmentStatus) &&
         Objects.equals(this.orderBatchInfo, order.orderBatchInfo) &&
@@ -1691,12 +1690,13 @@ public class Order {
         Objects.equals(this.driverId, order.driverId) &&
         Objects.equals(this.totalTax, order.totalTax) &&
         Objects.equals(this.orderTrackingCode, order.orderTrackingCode) &&
-        Objects.equals(this.deliveryFeeAreaId, order.deliveryFeeAreaId);
+        Objects.equals(this.deliveryFeeAreaId, order.deliveryFeeAreaId) &&
+        Objects.equals(this.receiptCode, order.receiptCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, receiptCode, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId, receiptCode);
   }
 
 
@@ -1722,7 +1722,6 @@ public class Order {
     sb.append("    channelOrderId: ").append(toIndentedString(channelOrderId)).append("\n");
     sb.append("    channelOrderDisplayId: ").append(toIndentedString(channelOrderDisplayId)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
-    sb.append("    receiptCode: ").append(toIndentedString(receiptCode)).append("\n");
     sb.append("    orderDropOffLocation: ").append(toIndentedString(orderDropOffLocation)).append("\n");
     sb.append("    fulfillmentStatus: ").append(toIndentedString(fulfillmentStatus)).append("\n");
     sb.append("    orderBatchInfo: ").append(toIndentedString(orderBatchInfo)).append("\n");
@@ -1755,6 +1754,7 @@ public class Order {
     sb.append("    totalTax: ").append(toIndentedString(totalTax)).append("\n");
     sb.append("    orderTrackingCode: ").append(toIndentedString(orderTrackingCode)).append("\n");
     sb.append("    deliveryFeeAreaId: ").append(toIndentedString(deliveryFeeAreaId)).append("\n");
+    sb.append("    receiptCode: ").append(toIndentedString(receiptCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
