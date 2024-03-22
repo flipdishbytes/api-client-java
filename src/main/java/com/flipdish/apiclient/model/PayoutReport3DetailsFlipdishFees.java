@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-21T16:04:24.522Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-22T12:51:06.401Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
@@ -55,6 +55,9 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @SerializedName("OtherIntegrationFees")
   private Double otherIntegrationFees = null;
+
+  @SerializedName("OtherIntegrationTips")
+  private Double otherIntegrationTips = null;
 
   @SerializedName("Vat")
   private Double vat = null;
@@ -224,6 +227,24 @@ public class PayoutReport3DetailsFlipdishFees {
     this.otherIntegrationFees = otherIntegrationFees;
   }
 
+  public PayoutReport3DetailsFlipdishFees otherIntegrationTips(Double otherIntegrationTips) {
+    this.otherIntegrationTips = otherIntegrationTips;
+    return this;
+  }
+
+   /**
+   * Get otherIntegrationTips
+   * @return otherIntegrationTips
+  **/
+  @ApiModelProperty(value = "")
+  public Double getOtherIntegrationTips() {
+    return otherIntegrationTips;
+  }
+
+  public void setOtherIntegrationTips(Double otherIntegrationTips) {
+    this.otherIntegrationTips = otherIntegrationTips;
+  }
+
   public PayoutReport3DetailsFlipdishFees vat(Double vat) {
     this.vat = vat;
     return this;
@@ -279,13 +300,14 @@ public class PayoutReport3DetailsFlipdishFees {
         Objects.equals(this.posCard, payoutReport3DetailsFlipdishFees.posCard) &&
         Objects.equals(this.posCardOnFlipdishOrders, payoutReport3DetailsFlipdishFees.posCardOnFlipdishOrders) &&
         Objects.equals(this.otherIntegrationFees, payoutReport3DetailsFlipdishFees.otherIntegrationFees) &&
+        Objects.equals(this.otherIntegrationTips, payoutReport3DetailsFlipdishFees.otherIntegrationTips) &&
         Objects.equals(this.vat, payoutReport3DetailsFlipdishFees.vat) &&
         Objects.equals(this.total, payoutReport3DetailsFlipdishFees.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(webAndAppCash, webAndAppCard, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardOnFlipdishOrders, otherIntegrationFees, vat, total);
+    return Objects.hash(webAndAppCash, webAndAppCard, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, vat, total);
   }
 
 
@@ -303,6 +325,7 @@ public class PayoutReport3DetailsFlipdishFees {
     sb.append("    posCard: ").append(toIndentedString(posCard)).append("\n");
     sb.append("    posCardOnFlipdishOrders: ").append(toIndentedString(posCardOnFlipdishOrders)).append("\n");
     sb.append("    otherIntegrationFees: ").append(toIndentedString(otherIntegrationFees)).append("\n");
+    sb.append("    otherIntegrationTips: ").append(toIndentedString(otherIntegrationTips)).append("\n");
     sb.append("    vat: ").append(toIndentedString(vat)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
