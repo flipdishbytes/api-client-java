@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
  **pageSize** | **Integer**|  | [optional]
  **searchCodes** | [**List&lt;String&gt;**](String.md)|  | [optional]
  **statusSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Valid, NotYetValid, Expired, Used, Disabled]
- **typeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: PercentageDiscount, LumpDiscount, AddItem, CreditNote]
+ **typeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: PercentageDiscount, LumpDiscount, AddItem, CreditNote, FreeDelivery]
  **subTypeSearch** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: None, SignUp, Loyalty, Loyalty25, Retention, SecondaryRetention, Custom]
  **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
  **channelRestrictions** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Ios, Android, Web, Kiosk, Pos, Google]

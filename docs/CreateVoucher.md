@@ -39,6 +39,7 @@ PERCENTAGEDISCOUNT | &quot;PercentageDiscount&quot;
 LUMPDISCOUNT | &quot;LumpDiscount&quot;
 ADDITEM | &quot;AddItem&quot;
 CREDITNOTE | &quot;CreditNote&quot;
+FREEDELIVERY | &quot;FreeDelivery&quot;
 
 
 <a name="List<ChannelRestrictionsEnum>"></a>
