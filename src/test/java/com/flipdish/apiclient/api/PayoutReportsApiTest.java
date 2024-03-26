@@ -70,7 +70,9 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> storeIds = null;
-        RestApiPaginationResultPayoutReport3PayoutOrder response = api.getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds);
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultPayoutReport3PayoutOrder response = api.getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds, page, limit);
 
         // TODO: test validations
     }

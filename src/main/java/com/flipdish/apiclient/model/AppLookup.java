@@ -28,7 +28,7 @@ import java.io.IOException;
  * App lookup model
  */
 @ApiModel(description = "App lookup model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-26T10:46:12.007Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-26T14:24:37.974Z")
 public class AppLookup {
   @SerializedName("AppId")
   private String appId = null;

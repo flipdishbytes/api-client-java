@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 <a name="getPayoutReport3Orders"></a>
 # **getPayoutReport3Orders**
-> RestApiPaginationResultPayoutReport3PayoutOrder getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds)
+> RestApiPaginationResultPayoutReport3PayoutOrder getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds, page, limit)
 
 
 
@@ -92,8 +92,10 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
+Integer page = 56; // Integer | 
+Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultPayoutReport3PayoutOrder result = apiInstance.getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds);
+    RestApiPaginationResultPayoutReport3PayoutOrder result = apiInstance.getPayoutReport3Orders(appId, bankAccountId, payoutId, storeIds, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#getPayoutReport3Orders");
@@ -109,6 +111,8 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **limit** | **Integer**|  | [optional]
 
 ### Return type
 

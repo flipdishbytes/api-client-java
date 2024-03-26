@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3PayoutOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-26T10:46:12.007Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-26T14:24:37.974Z")
 public class PayoutReport3PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -406,6 +406,9 @@ public class PayoutReport3PayoutOrder {
   @SerializedName("StoreId")
   private Integer storeId = null;
 
+  @SerializedName("StoreName")
+  private String storeName = null;
+
   @SerializedName("ServiceChargeAmount")
   private Double serviceChargeAmount = null;
 
@@ -772,6 +775,24 @@ public class PayoutReport3PayoutOrder {
     this.storeId = storeId;
   }
 
+  public PayoutReport3PayoutOrder storeName(String storeName) {
+    this.storeName = storeName;
+    return this;
+  }
+
+   /**
+   * Get storeName
+   * @return storeName
+  **/
+  @ApiModelProperty(value = "")
+  public String getStoreName() {
+    return storeName;
+  }
+
+  public void setStoreName(String storeName) {
+    this.storeName = storeName;
+  }
+
   public PayoutReport3PayoutOrder serviceChargeAmount(Double serviceChargeAmount) {
     this.serviceChargeAmount = serviceChargeAmount;
     return this;
@@ -838,13 +859,14 @@ public class PayoutReport3PayoutOrder {
         Objects.equals(this.cashFeeChargedToCustomer, payoutReport3PayoutOrder.cashFeeChargedToCustomer) &&
         Objects.equals(this.netSales, payoutReport3PayoutOrder.netSales) &&
         Objects.equals(this.storeId, payoutReport3PayoutOrder.storeId) &&
+        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName) &&
         Objects.equals(this.serviceChargeAmount, payoutReport3PayoutOrder.serviceChargeAmount) &&
         Objects.equals(this.serviceChargePercentage, payoutReport3PayoutOrder.serviceChargePercentage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, flatFeeIncludingVat, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, serviceChargeAmount, serviceChargePercentage);
+    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, flatFeeIncludingVat, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, storeName, serviceChargeAmount, serviceChargePercentage);
   }
 
 
@@ -873,6 +895,7 @@ public class PayoutReport3PayoutOrder {
     sb.append("    cashFeeChargedToCustomer: ").append(toIndentedString(cashFeeChargedToCustomer)).append("\n");
     sb.append("    netSales: ").append(toIndentedString(netSales)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
     sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
     sb.append("    serviceChargePercentage: ").append(toIndentedString(serviceChargePercentage)).append("\n");
     sb.append("}");

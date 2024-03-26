@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **cashFeeChargedToCustomer** | **Double** |  |  [optional]
 **netSales** | **Double** |  |  [optional]
 **storeId** | **Integer** |  |  [optional]
+**storeName** | **String** |  |  [optional]
 **serviceChargeAmount** | **Double** |  |  [optional]
 **serviceChargePercentage** | **Double** |  |  [optional]
 
