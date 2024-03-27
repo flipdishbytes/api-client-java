@@ -29,7 +29,7 @@ import java.io.IOException;
  * Hey
  */
 @ApiModel(description = "Hey")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-26T14:24:37.974Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T13:36:47.136Z")
 public class StoreValidationConfig {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -70,10 +70,10 @@ public class StoreValidationConfig {
   }
 
    /**
-   * Get name
+   * Name
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name")
   public String getName() {
     return name;
   }
@@ -124,10 +124,10 @@ public class StoreValidationConfig {
   }
 
    /**
-   * Get configValidation
+   * Store list of validations
    * @return configValidation
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Store list of validations")
   public StoreConfig getConfigValidation() {
     return configValidation;
   }
