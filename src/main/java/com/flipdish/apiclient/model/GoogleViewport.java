@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * GoogleViewport
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T14:23:15.635Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T15:46:34.475Z")
 public class GoogleViewport {
   @SerializedName("Northeast")
   private GoogleCoordinates northeast = null;

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsSummary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T14:23:15.635Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T15:46:34.475Z")
 public class PayoutReport3DetailsSummary {
   @SerializedName("Revenue")
   private Double revenue = null;
@@ -40,6 +40,9 @@ public class PayoutReport3DetailsSummary {
 
   @SerializedName("Adjustments")
   private Double adjustments = null;
+
+  @SerializedName("ThirdPartyIntegrationFeesAndTips")
+  private Double thirdPartyIntegrationFeesAndTips = null;
 
   @SerializedName("Total")
   private Double total = null;
@@ -116,6 +119,24 @@ public class PayoutReport3DetailsSummary {
     this.adjustments = adjustments;
   }
 
+  public PayoutReport3DetailsSummary thirdPartyIntegrationFeesAndTips(Double thirdPartyIntegrationFeesAndTips) {
+    this.thirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
+    return this;
+  }
+
+   /**
+   * Get thirdPartyIntegrationFeesAndTips
+   * @return thirdPartyIntegrationFeesAndTips
+  **/
+  @ApiModelProperty(value = "")
+  public Double getThirdPartyIntegrationFeesAndTips() {
+    return thirdPartyIntegrationFeesAndTips;
+  }
+
+  public void setThirdPartyIntegrationFeesAndTips(Double thirdPartyIntegrationFeesAndTips) {
+    this.thirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
+  }
+
   public PayoutReport3DetailsSummary total(Double total) {
     this.total = total;
     return this;
@@ -148,12 +169,13 @@ public class PayoutReport3DetailsSummary {
         Objects.equals(this.revenueForFeeCalculations, payoutReport3DetailsSummary.revenueForFeeCalculations) &&
         Objects.equals(this.flipdishFees, payoutReport3DetailsSummary.flipdishFees) &&
         Objects.equals(this.adjustments, payoutReport3DetailsSummary.adjustments) &&
+        Objects.equals(this.thirdPartyIntegrationFeesAndTips, payoutReport3DetailsSummary.thirdPartyIntegrationFeesAndTips) &&
         Objects.equals(this.total, payoutReport3DetailsSummary.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(revenue, revenueForFeeCalculations, flipdishFees, adjustments, total);
+    return Objects.hash(revenue, revenueForFeeCalculations, flipdishFees, adjustments, thirdPartyIntegrationFeesAndTips, total);
   }
 
 
@@ -166,6 +188,7 @@ public class PayoutReport3DetailsSummary {
     sb.append("    revenueForFeeCalculations: ").append(toIndentedString(revenueForFeeCalculations)).append("\n");
     sb.append("    flipdishFees: ").append(toIndentedString(flipdishFees)).append("\n");
     sb.append("    adjustments: ").append(toIndentedString(adjustments)).append("\n");
+    sb.append("    thirdPartyIntegrationFeesAndTips: ").append(toIndentedString(thirdPartyIntegrationFeesAndTips)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();
