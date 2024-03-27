@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PreviousOrderItemOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T13:36:47.136Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T14:23:15.635Z")
 public class PreviousOrderItemOption {
   @SerializedName("Name")
   private String name = null;
