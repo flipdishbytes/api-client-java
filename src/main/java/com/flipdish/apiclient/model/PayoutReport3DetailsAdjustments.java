@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:12:37.554Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:43:46.490Z")
 public class PayoutReport3DetailsAdjustments {
   @SerializedName("OpeningBalanceDate")
   private OffsetDateTime openingBalanceDate = null;
@@ -56,6 +56,48 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("ClosingBalance")
   private Double closingBalance = null;
+
+  @SerializedName("OpeningBalanceCredit")
+  private Double openingBalanceCredit = null;
+
+  @SerializedName("OpeningBalanceDebit")
+  private Double openingBalanceDebit = null;
+
+  @SerializedName("RefundsOnCardOrdersCredit")
+  private Double refundsOnCardOrdersCredit = null;
+
+  @SerializedName("RefundsOnCardOrdersDebit")
+  private Double refundsOnCardOrdersDebit = null;
+
+  @SerializedName("RefundsOnCashOrdersCredit")
+  private Double refundsOnCashOrdersCredit = null;
+
+  @SerializedName("RefundsOnCashOrdersDebit")
+  private Double refundsOnCashOrdersDebit = null;
+
+  @SerializedName("CashCustomerFeesCredit")
+  private Double cashCustomerFeesCredit = null;
+
+  @SerializedName("CashCustomerFeesDebit")
+  private Double cashCustomerFeesDebit = null;
+
+  @SerializedName("ChargebacksCredit")
+  private Double chargebacksCredit = null;
+
+  @SerializedName("ChargebacksDebit")
+  private Double chargebacksDebit = null;
+
+  @SerializedName("OtherTransactionsCredit")
+  private Double otherTransactionsCredit = null;
+
+  @SerializedName("OtherTransactionsDebit")
+  private Double otherTransactionsDebit = null;
+
+  @SerializedName("ClosingBalanceCredit")
+  private Double closingBalanceCredit = null;
+
+  @SerializedName("ClosingBalanceDebit")
+  private Double closingBalanceDebit = null;
 
   public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
     this.openingBalanceDate = openingBalanceDate;
@@ -219,6 +261,258 @@ public class PayoutReport3DetailsAdjustments {
     this.closingBalance = closingBalance;
   }
 
+  public PayoutReport3DetailsAdjustments openingBalanceCredit(Double openingBalanceCredit) {
+    this.openingBalanceCredit = openingBalanceCredit;
+    return this;
+  }
+
+   /**
+   * Get openingBalanceCredit
+   * @return openingBalanceCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getOpeningBalanceCredit() {
+    return openingBalanceCredit;
+  }
+
+  public void setOpeningBalanceCredit(Double openingBalanceCredit) {
+    this.openingBalanceCredit = openingBalanceCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments openingBalanceDebit(Double openingBalanceDebit) {
+    this.openingBalanceDebit = openingBalanceDebit;
+    return this;
+  }
+
+   /**
+   * Get openingBalanceDebit
+   * @return openingBalanceDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getOpeningBalanceDebit() {
+    return openingBalanceDebit;
+  }
+
+  public void setOpeningBalanceDebit(Double openingBalanceDebit) {
+    this.openingBalanceDebit = openingBalanceDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCardOrdersCredit(Double refundsOnCardOrdersCredit) {
+    this.refundsOnCardOrdersCredit = refundsOnCardOrdersCredit;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCardOrdersCredit
+   * @return refundsOnCardOrdersCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCardOrdersCredit() {
+    return refundsOnCardOrdersCredit;
+  }
+
+  public void setRefundsOnCardOrdersCredit(Double refundsOnCardOrdersCredit) {
+    this.refundsOnCardOrdersCredit = refundsOnCardOrdersCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCardOrdersDebit(Double refundsOnCardOrdersDebit) {
+    this.refundsOnCardOrdersDebit = refundsOnCardOrdersDebit;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCardOrdersDebit
+   * @return refundsOnCardOrdersDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCardOrdersDebit() {
+    return refundsOnCardOrdersDebit;
+  }
+
+  public void setRefundsOnCardOrdersDebit(Double refundsOnCardOrdersDebit) {
+    this.refundsOnCardOrdersDebit = refundsOnCardOrdersDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCashOrdersCredit(Double refundsOnCashOrdersCredit) {
+    this.refundsOnCashOrdersCredit = refundsOnCashOrdersCredit;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCashOrdersCredit
+   * @return refundsOnCashOrdersCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCashOrdersCredit() {
+    return refundsOnCashOrdersCredit;
+  }
+
+  public void setRefundsOnCashOrdersCredit(Double refundsOnCashOrdersCredit) {
+    this.refundsOnCashOrdersCredit = refundsOnCashOrdersCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCashOrdersDebit(Double refundsOnCashOrdersDebit) {
+    this.refundsOnCashOrdersDebit = refundsOnCashOrdersDebit;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCashOrdersDebit
+   * @return refundsOnCashOrdersDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCashOrdersDebit() {
+    return refundsOnCashOrdersDebit;
+  }
+
+  public void setRefundsOnCashOrdersDebit(Double refundsOnCashOrdersDebit) {
+    this.refundsOnCashOrdersDebit = refundsOnCashOrdersDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments cashCustomerFeesCredit(Double cashCustomerFeesCredit) {
+    this.cashCustomerFeesCredit = cashCustomerFeesCredit;
+    return this;
+  }
+
+   /**
+   * Get cashCustomerFeesCredit
+   * @return cashCustomerFeesCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getCashCustomerFeesCredit() {
+    return cashCustomerFeesCredit;
+  }
+
+  public void setCashCustomerFeesCredit(Double cashCustomerFeesCredit) {
+    this.cashCustomerFeesCredit = cashCustomerFeesCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments cashCustomerFeesDebit(Double cashCustomerFeesDebit) {
+    this.cashCustomerFeesDebit = cashCustomerFeesDebit;
+    return this;
+  }
+
+   /**
+   * Get cashCustomerFeesDebit
+   * @return cashCustomerFeesDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getCashCustomerFeesDebit() {
+    return cashCustomerFeesDebit;
+  }
+
+  public void setCashCustomerFeesDebit(Double cashCustomerFeesDebit) {
+    this.cashCustomerFeesDebit = cashCustomerFeesDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments chargebacksCredit(Double chargebacksCredit) {
+    this.chargebacksCredit = chargebacksCredit;
+    return this;
+  }
+
+   /**
+   * Get chargebacksCredit
+   * @return chargebacksCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getChargebacksCredit() {
+    return chargebacksCredit;
+  }
+
+  public void setChargebacksCredit(Double chargebacksCredit) {
+    this.chargebacksCredit = chargebacksCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments chargebacksDebit(Double chargebacksDebit) {
+    this.chargebacksDebit = chargebacksDebit;
+    return this;
+  }
+
+   /**
+   * Get chargebacksDebit
+   * @return chargebacksDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getChargebacksDebit() {
+    return chargebacksDebit;
+  }
+
+  public void setChargebacksDebit(Double chargebacksDebit) {
+    this.chargebacksDebit = chargebacksDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments otherTransactionsCredit(Double otherTransactionsCredit) {
+    this.otherTransactionsCredit = otherTransactionsCredit;
+    return this;
+  }
+
+   /**
+   * Get otherTransactionsCredit
+   * @return otherTransactionsCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getOtherTransactionsCredit() {
+    return otherTransactionsCredit;
+  }
+
+  public void setOtherTransactionsCredit(Double otherTransactionsCredit) {
+    this.otherTransactionsCredit = otherTransactionsCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments otherTransactionsDebit(Double otherTransactionsDebit) {
+    this.otherTransactionsDebit = otherTransactionsDebit;
+    return this;
+  }
+
+   /**
+   * Get otherTransactionsDebit
+   * @return otherTransactionsDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getOtherTransactionsDebit() {
+    return otherTransactionsDebit;
+  }
+
+  public void setOtherTransactionsDebit(Double otherTransactionsDebit) {
+    this.otherTransactionsDebit = otherTransactionsDebit;
+  }
+
+  public PayoutReport3DetailsAdjustments closingBalanceCredit(Double closingBalanceCredit) {
+    this.closingBalanceCredit = closingBalanceCredit;
+    return this;
+  }
+
+   /**
+   * Get closingBalanceCredit
+   * @return closingBalanceCredit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getClosingBalanceCredit() {
+    return closingBalanceCredit;
+  }
+
+  public void setClosingBalanceCredit(Double closingBalanceCredit) {
+    this.closingBalanceCredit = closingBalanceCredit;
+  }
+
+  public PayoutReport3DetailsAdjustments closingBalanceDebit(Double closingBalanceDebit) {
+    this.closingBalanceDebit = closingBalanceDebit;
+    return this;
+  }
+
+   /**
+   * Get closingBalanceDebit
+   * @return closingBalanceDebit
+  **/
+  @ApiModelProperty(value = "")
+  public Double getClosingBalanceDebit() {
+    return closingBalanceDebit;
+  }
+
+  public void setClosingBalanceDebit(Double closingBalanceDebit) {
+    this.closingBalanceDebit = closingBalanceDebit;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,12 +531,26 @@ public class PayoutReport3DetailsAdjustments {
         Objects.equals(this.cashCustomerFees, payoutReport3DetailsAdjustments.cashCustomerFees) &&
         Objects.equals(this.chargebacks, payoutReport3DetailsAdjustments.chargebacks) &&
         Objects.equals(this.otherTransactions, payoutReport3DetailsAdjustments.otherTransactions) &&
-        Objects.equals(this.closingBalance, payoutReport3DetailsAdjustments.closingBalance);
+        Objects.equals(this.closingBalance, payoutReport3DetailsAdjustments.closingBalance) &&
+        Objects.equals(this.openingBalanceCredit, payoutReport3DetailsAdjustments.openingBalanceCredit) &&
+        Objects.equals(this.openingBalanceDebit, payoutReport3DetailsAdjustments.openingBalanceDebit) &&
+        Objects.equals(this.refundsOnCardOrdersCredit, payoutReport3DetailsAdjustments.refundsOnCardOrdersCredit) &&
+        Objects.equals(this.refundsOnCardOrdersDebit, payoutReport3DetailsAdjustments.refundsOnCardOrdersDebit) &&
+        Objects.equals(this.refundsOnCashOrdersCredit, payoutReport3DetailsAdjustments.refundsOnCashOrdersCredit) &&
+        Objects.equals(this.refundsOnCashOrdersDebit, payoutReport3DetailsAdjustments.refundsOnCashOrdersDebit) &&
+        Objects.equals(this.cashCustomerFeesCredit, payoutReport3DetailsAdjustments.cashCustomerFeesCredit) &&
+        Objects.equals(this.cashCustomerFeesDebit, payoutReport3DetailsAdjustments.cashCustomerFeesDebit) &&
+        Objects.equals(this.chargebacksCredit, payoutReport3DetailsAdjustments.chargebacksCredit) &&
+        Objects.equals(this.chargebacksDebit, payoutReport3DetailsAdjustments.chargebacksDebit) &&
+        Objects.equals(this.otherTransactionsCredit, payoutReport3DetailsAdjustments.otherTransactionsCredit) &&
+        Objects.equals(this.otherTransactionsDebit, payoutReport3DetailsAdjustments.otherTransactionsDebit) &&
+        Objects.equals(this.closingBalanceCredit, payoutReport3DetailsAdjustments.closingBalanceCredit) &&
+        Objects.equals(this.closingBalanceDebit, payoutReport3DetailsAdjustments.closingBalanceDebit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, openingBalanceCredit, openingBalanceDebit, refundsOnCardOrdersCredit, refundsOnCardOrdersDebit, refundsOnCashOrdersCredit, refundsOnCashOrdersDebit, cashCustomerFeesCredit, cashCustomerFeesDebit, chargebacksCredit, chargebacksDebit, otherTransactionsCredit, otherTransactionsDebit, closingBalanceCredit, closingBalanceDebit);
   }
 
 
@@ -260,6 +568,20 @@ public class PayoutReport3DetailsAdjustments {
     sb.append("    chargebacks: ").append(toIndentedString(chargebacks)).append("\n");
     sb.append("    otherTransactions: ").append(toIndentedString(otherTransactions)).append("\n");
     sb.append("    closingBalance: ").append(toIndentedString(closingBalance)).append("\n");
+    sb.append("    openingBalanceCredit: ").append(toIndentedString(openingBalanceCredit)).append("\n");
+    sb.append("    openingBalanceDebit: ").append(toIndentedString(openingBalanceDebit)).append("\n");
+    sb.append("    refundsOnCardOrdersCredit: ").append(toIndentedString(refundsOnCardOrdersCredit)).append("\n");
+    sb.append("    refundsOnCardOrdersDebit: ").append(toIndentedString(refundsOnCardOrdersDebit)).append("\n");
+    sb.append("    refundsOnCashOrdersCredit: ").append(toIndentedString(refundsOnCashOrdersCredit)).append("\n");
+    sb.append("    refundsOnCashOrdersDebit: ").append(toIndentedString(refundsOnCashOrdersDebit)).append("\n");
+    sb.append("    cashCustomerFeesCredit: ").append(toIndentedString(cashCustomerFeesCredit)).append("\n");
+    sb.append("    cashCustomerFeesDebit: ").append(toIndentedString(cashCustomerFeesDebit)).append("\n");
+    sb.append("    chargebacksCredit: ").append(toIndentedString(chargebacksCredit)).append("\n");
+    sb.append("    chargebacksDebit: ").append(toIndentedString(chargebacksDebit)).append("\n");
+    sb.append("    otherTransactionsCredit: ").append(toIndentedString(otherTransactionsCredit)).append("\n");
+    sb.append("    otherTransactionsDebit: ").append(toIndentedString(otherTransactionsDebit)).append("\n");
+    sb.append("    closingBalanceCredit: ").append(toIndentedString(closingBalanceCredit)).append("\n");
+    sb.append("    closingBalanceDebit: ").append(toIndentedString(closingBalanceDebit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

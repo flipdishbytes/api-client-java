@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsRevenue
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:12:37.554Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:43:46.490Z")
 public class PayoutReport3DetailsRevenue {
   @SerializedName("GrossSales")
   private PayoutReport3DetailsSalesLine grossSales = null;
@@ -42,14 +42,14 @@ public class PayoutReport3DetailsRevenue {
   @SerializedName("Tips")
   private PayoutReport3DetailsSalesLine tips = null;
 
-  @SerializedName("TotalNetSales")
-  private PayoutReport3DetailsSalesLine totalNetSales = null;
-
   @SerializedName("TotalRevenue")
   private PayoutReport3DetailsSalesLine totalRevenue = null;
 
   @SerializedName("RevenueForFeeCalculations")
   private PayoutReport3DetailsSalesLine revenueForFeeCalculations = null;
+
+  @SerializedName("DrsCharges")
+  private PayoutReport3DetailsSalesLine drsCharges = null;
 
   public PayoutReport3DetailsRevenue grossSales(PayoutReport3DetailsSalesLine grossSales) {
     this.grossSales = grossSales;
@@ -123,24 +123,6 @@ public class PayoutReport3DetailsRevenue {
     this.tips = tips;
   }
 
-  public PayoutReport3DetailsRevenue totalNetSales(PayoutReport3DetailsSalesLine totalNetSales) {
-    this.totalNetSales = totalNetSales;
-    return this;
-  }
-
-   /**
-   * Get totalNetSales
-   * @return totalNetSales
-  **/
-  @ApiModelProperty(value = "")
-  public PayoutReport3DetailsSalesLine getTotalNetSales() {
-    return totalNetSales;
-  }
-
-  public void setTotalNetSales(PayoutReport3DetailsSalesLine totalNetSales) {
-    this.totalNetSales = totalNetSales;
-  }
-
   public PayoutReport3DetailsRevenue totalRevenue(PayoutReport3DetailsSalesLine totalRevenue) {
     this.totalRevenue = totalRevenue;
     return this;
@@ -177,6 +159,24 @@ public class PayoutReport3DetailsRevenue {
     this.revenueForFeeCalculations = revenueForFeeCalculations;
   }
 
+  public PayoutReport3DetailsRevenue drsCharges(PayoutReport3DetailsSalesLine drsCharges) {
+    this.drsCharges = drsCharges;
+    return this;
+  }
+
+   /**
+   * Get drsCharges
+   * @return drsCharges
+  **/
+  @ApiModelProperty(value = "")
+  public PayoutReport3DetailsSalesLine getDrsCharges() {
+    return drsCharges;
+  }
+
+  public void setDrsCharges(PayoutReport3DetailsSalesLine drsCharges) {
+    this.drsCharges = drsCharges;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -191,14 +191,14 @@ public class PayoutReport3DetailsRevenue {
         Objects.equals(this.deliveryCharges, payoutReport3DetailsRevenue.deliveryCharges) &&
         Objects.equals(this.otherCharges, payoutReport3DetailsRevenue.otherCharges) &&
         Objects.equals(this.tips, payoutReport3DetailsRevenue.tips) &&
-        Objects.equals(this.totalNetSales, payoutReport3DetailsRevenue.totalNetSales) &&
         Objects.equals(this.totalRevenue, payoutReport3DetailsRevenue.totalRevenue) &&
-        Objects.equals(this.revenueForFeeCalculations, payoutReport3DetailsRevenue.revenueForFeeCalculations);
+        Objects.equals(this.revenueForFeeCalculations, payoutReport3DetailsRevenue.revenueForFeeCalculations) &&
+        Objects.equals(this.drsCharges, payoutReport3DetailsRevenue.drsCharges);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(grossSales, deliveryCharges, otherCharges, tips, totalNetSales, totalRevenue, revenueForFeeCalculations);
+    return Objects.hash(grossSales, deliveryCharges, otherCharges, tips, totalRevenue, revenueForFeeCalculations, drsCharges);
   }
 
 
@@ -211,9 +211,9 @@ public class PayoutReport3DetailsRevenue {
     sb.append("    deliveryCharges: ").append(toIndentedString(deliveryCharges)).append("\n");
     sb.append("    otherCharges: ").append(toIndentedString(otherCharges)).append("\n");
     sb.append("    tips: ").append(toIndentedString(tips)).append("\n");
-    sb.append("    totalNetSales: ").append(toIndentedString(totalNetSales)).append("\n");
     sb.append("    totalRevenue: ").append(toIndentedString(totalRevenue)).append("\n");
     sb.append("    revenueForFeeCalculations: ").append(toIndentedString(revenueForFeeCalculations)).append("\n");
+    sb.append("    drsCharges: ").append(toIndentedString(drsCharges)).append("\n");
     sb.append("}");
     return sb.toString();
   }
