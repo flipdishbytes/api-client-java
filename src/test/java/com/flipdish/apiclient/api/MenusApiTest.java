@@ -53,9 +53,9 @@ public class MenusApiTest {
 
     
     /**
-     * [PRIVATE API] Clone a menu, (without attaching stores)
+     * Clone a menu, (without attaching stores)
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,9 +104,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Mark a Menu as Deleted
+     * Mark a Menu as Deleted
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -243,9 +243,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Get Menus Name
+     * Get Menus Name
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -259,9 +259,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Get menus store names
+     * Get menus store names
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -275,9 +275,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Get menus tax details
+     * Get menus tax details
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -291,9 +291,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Get menus by appId
+     * Get menus by appId
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -307,9 +307,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API]Get a Menus Checkpoints
+     * Get a Menus Checkpoints
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -323,9 +323,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -357,9 +357,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Set if tax shows for a Menu
+     * Set if tax shows for a Menu
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -374,9 +374,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Re-arrange Sections within a Menu
+     * Re-arrange Sections within a Menu
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -409,9 +409,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Set the type of Tax on a Menu
+     * Set the type of Tax on a Menu
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -426,9 +426,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Add/Update a Tax Rate
+     * Add/Update a Tax Rate
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -443,9 +443,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Restore a Menu to a checkpoint
+     * Restore a Menu to a checkpoint
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -498,9 +498,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Lock/Unlock a Menu for Editing
+     * Lock/Unlock a Menu for Editing
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -515,9 +515,9 @@ public class MenusApiTest {
     }
     
     /**
-     * [PRIVATE API] Set Menus Name
+     * Set Menus Name
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

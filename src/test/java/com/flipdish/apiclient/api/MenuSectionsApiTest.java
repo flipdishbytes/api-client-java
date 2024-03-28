@@ -183,9 +183,9 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * [PRIVATE API] Re-arrange Items within a Section
+     * Re-arrange Items within a Section
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails

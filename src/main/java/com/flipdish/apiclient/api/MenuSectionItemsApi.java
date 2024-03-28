@@ -1130,8 +1130,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API] Move an Item within a menu
-     * [PRIVATE API]
+     * Move an Item within a menu
+     * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)
@@ -1143,8 +1143,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API] Move an Item within a menu
-     * [PRIVATE API]
+     * Move an Item within a menu
+     * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)
@@ -1158,8 +1158,8 @@ public class MenuSectionItemsApi {
     }
 
     /**
-     * [PRIVATE API] Move an Item within a menu (asynchronously)
-     * [PRIVATE API]
+     * Move an Item within a menu (asynchronously)
+     * 
      * @param menuId Menu identifier (required)
      * @param menuSectionId Section to put item in (will usually be original section) (required)
      * @param menuSectionItemId ID of Item to be moved (required)

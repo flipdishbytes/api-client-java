@@ -167,9 +167,9 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * [PRIVATE API] Move an Item within a menu
+     * Move an Item within a menu
      *
-     * [PRIVATE API]
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
