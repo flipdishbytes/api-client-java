@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents one populated account field (its key and value)
  */
 @ApiModel(description = "Represents one populated account field (its key and value)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:43:46.490Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T15:30:09.878Z")
 public class AccountFieldKeyValuePair {
   /**
    * Depending on the Key, the field&#39;s value will be stored in a different field in PayeeBankAccountData

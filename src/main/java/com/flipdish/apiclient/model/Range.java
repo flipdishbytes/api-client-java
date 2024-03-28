@@ -28,7 +28,7 @@ import java.io.IOException;
  * A class that represents a single opening period in a day.  This starts &#39;StartTime&#39; after midnight and runs for a &#39;Period&#39;  after that, on the given DayOfWeek.
  */
 @ApiModel(description = "A class that represents a single opening period in a day.  This starts 'StartTime' after midnight and runs for a 'Period'  after that, on the given DayOfWeek.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T12:43:46.490Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T15:30:09.878Z")
 public class Range {
   @SerializedName("StartTime")
   private String startTime = null;
