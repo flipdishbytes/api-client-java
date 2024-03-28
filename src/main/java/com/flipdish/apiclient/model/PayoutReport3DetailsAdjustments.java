@@ -23,12 +23,19 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-27T15:46:34.475Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T09:45:00.771Z")
 public class PayoutReport3DetailsAdjustments {
+  @SerializedName("OpeningBalanceDate")
+  private OffsetDateTime openingBalanceDate = null;
+
+  @SerializedName("ClosingBalanceDate")
+  private OffsetDateTime closingBalanceDate = null;
+
   @SerializedName("OpeningBalance")
   private Double openingBalance = null;
 
@@ -49,6 +56,42 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("ClosingBalance")
   private Double closingBalance = null;
+
+  public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
+    this.openingBalanceDate = openingBalanceDate;
+    return this;
+  }
+
+   /**
+   * Get openingBalanceDate
+   * @return openingBalanceDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getOpeningBalanceDate() {
+    return openingBalanceDate;
+  }
+
+  public void setOpeningBalanceDate(OffsetDateTime openingBalanceDate) {
+    this.openingBalanceDate = openingBalanceDate;
+  }
+
+  public PayoutReport3DetailsAdjustments closingBalanceDate(OffsetDateTime closingBalanceDate) {
+    this.closingBalanceDate = closingBalanceDate;
+    return this;
+  }
+
+   /**
+   * Get closingBalanceDate
+   * @return closingBalanceDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getClosingBalanceDate() {
+    return closingBalanceDate;
+  }
+
+  public void setClosingBalanceDate(OffsetDateTime closingBalanceDate) {
+    this.closingBalanceDate = closingBalanceDate;
+  }
 
   public PayoutReport3DetailsAdjustments openingBalance(Double openingBalance) {
     this.openingBalance = openingBalance;
@@ -186,7 +229,9 @@ public class PayoutReport3DetailsAdjustments {
       return false;
     }
     PayoutReport3DetailsAdjustments payoutReport3DetailsAdjustments = (PayoutReport3DetailsAdjustments) o;
-    return Objects.equals(this.openingBalance, payoutReport3DetailsAdjustments.openingBalance) &&
+    return Objects.equals(this.openingBalanceDate, payoutReport3DetailsAdjustments.openingBalanceDate) &&
+        Objects.equals(this.closingBalanceDate, payoutReport3DetailsAdjustments.closingBalanceDate) &&
+        Objects.equals(this.openingBalance, payoutReport3DetailsAdjustments.openingBalance) &&
         Objects.equals(this.refundsOnCardOrders, payoutReport3DetailsAdjustments.refundsOnCardOrders) &&
         Objects.equals(this.refundsOnCashOrders, payoutReport3DetailsAdjustments.refundsOnCashOrders) &&
         Objects.equals(this.cashCustomerFees, payoutReport3DetailsAdjustments.cashCustomerFees) &&
@@ -197,7 +242,7 @@ public class PayoutReport3DetailsAdjustments {
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance);
   }
 
 
@@ -206,6 +251,8 @@ public class PayoutReport3DetailsAdjustments {
     StringBuilder sb = new StringBuilder();
     sb.append("class PayoutReport3DetailsAdjustments {\n");
     
+    sb.append("    openingBalanceDate: ").append(toIndentedString(openingBalanceDate)).append("\n");
+    sb.append("    closingBalanceDate: ").append(toIndentedString(closingBalanceDate)).append("\n");
     sb.append("    openingBalance: ").append(toIndentedString(openingBalance)).append("\n");
     sb.append("    refundsOnCardOrders: ").append(toIndentedString(refundsOnCardOrders)).append("\n");
     sb.append("    refundsOnCashOrders: ").append(toIndentedString(refundsOnCashOrders)).append("\n");
