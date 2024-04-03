@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3PayoutOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-28T15:30:09.878Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-03T08:48:03.012Z")
 public class PayoutReport3PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -46,7 +46,7 @@ public class PayoutReport3PayoutOrder {
   public enum OrderTypeEnum {
     CASH("Cash"),
     
-    ONLINE("Online");
+    CARD("Card");
 
     private String value;
 
@@ -376,44 +376,11 @@ public class PayoutReport3PayoutOrder {
   @SerializedName("Voucher")
   private Double voucher = null;
 
-  @SerializedName("FlatFeeExcludingVat")
-  private Double flatFeeExcludingVat = null;
-
-  @SerializedName("FlatFeeExcludingVAT")
-  private Double flatFeeExcludingVAT = null;
-
-  @SerializedName("FlatFeeIncludingVat")
-  private Double flatFeeIncludingVat = null;
-
-  @SerializedName("PercentageFeeExcludingVat")
-  private Double percentageFeeExcludingVat = null;
-
-  @SerializedName("PercentageFeeExcludingVAT")
-  private Double percentageFeeExcludingVAT = null;
-
-  @SerializedName("Vat")
-  private Double vat = null;
-
-  @SerializedName("TotalFees")
-  private Double totalFees = null;
-
-  @SerializedName("CashFeeChargedToCustomer")
-  private Double cashFeeChargedToCustomer = null;
-
-  @SerializedName("NetSales")
-  private Double netSales = null;
-
   @SerializedName("StoreId")
   private Integer storeId = null;
 
   @SerializedName("StoreName")
   private String storeName = null;
-
-  @SerializedName("ServiceChargeAmount")
-  private Double serviceChargeAmount = null;
-
-  @SerializedName("ServiceChargePercentage")
-  private Double serviceChargePercentage = null;
 
   public PayoutReport3PayoutOrder orderId(Integer orderId) {
     this.orderId = orderId;
@@ -595,168 +562,6 @@ public class PayoutReport3PayoutOrder {
     this.voucher = voucher;
   }
 
-  public PayoutReport3PayoutOrder flatFeeExcludingVat(Double flatFeeExcludingVat) {
-    this.flatFeeExcludingVat = flatFeeExcludingVat;
-    return this;
-  }
-
-   /**
-   * Get flatFeeExcludingVat
-   * @return flatFeeExcludingVat
-  **/
-  @ApiModelProperty(value = "")
-  public Double getFlatFeeExcludingVat() {
-    return flatFeeExcludingVat;
-  }
-
-  public void setFlatFeeExcludingVat(Double flatFeeExcludingVat) {
-    this.flatFeeExcludingVat = flatFeeExcludingVat;
-  }
-
-  public PayoutReport3PayoutOrder flatFeeExcludingVAT(Double flatFeeExcludingVAT) {
-    this.flatFeeExcludingVAT = flatFeeExcludingVAT;
-    return this;
-  }
-
-   /**
-   * Get flatFeeExcludingVAT
-   * @return flatFeeExcludingVAT
-  **/
-  @ApiModelProperty(value = "")
-  public Double getFlatFeeExcludingVAT() {
-    return flatFeeExcludingVAT;
-  }
-
-  public void setFlatFeeExcludingVAT(Double flatFeeExcludingVAT) {
-    this.flatFeeExcludingVAT = flatFeeExcludingVAT;
-  }
-
-  public PayoutReport3PayoutOrder flatFeeIncludingVat(Double flatFeeIncludingVat) {
-    this.flatFeeIncludingVat = flatFeeIncludingVat;
-    return this;
-  }
-
-   /**
-   * Get flatFeeIncludingVat
-   * @return flatFeeIncludingVat
-  **/
-  @ApiModelProperty(value = "")
-  public Double getFlatFeeIncludingVat() {
-    return flatFeeIncludingVat;
-  }
-
-  public void setFlatFeeIncludingVat(Double flatFeeIncludingVat) {
-    this.flatFeeIncludingVat = flatFeeIncludingVat;
-  }
-
-  public PayoutReport3PayoutOrder percentageFeeExcludingVat(Double percentageFeeExcludingVat) {
-    this.percentageFeeExcludingVat = percentageFeeExcludingVat;
-    return this;
-  }
-
-   /**
-   * Get percentageFeeExcludingVat
-   * @return percentageFeeExcludingVat
-  **/
-  @ApiModelProperty(value = "")
-  public Double getPercentageFeeExcludingVat() {
-    return percentageFeeExcludingVat;
-  }
-
-  public void setPercentageFeeExcludingVat(Double percentageFeeExcludingVat) {
-    this.percentageFeeExcludingVat = percentageFeeExcludingVat;
-  }
-
-  public PayoutReport3PayoutOrder percentageFeeExcludingVAT(Double percentageFeeExcludingVAT) {
-    this.percentageFeeExcludingVAT = percentageFeeExcludingVAT;
-    return this;
-  }
-
-   /**
-   * Get percentageFeeExcludingVAT
-   * @return percentageFeeExcludingVAT
-  **/
-  @ApiModelProperty(value = "")
-  public Double getPercentageFeeExcludingVAT() {
-    return percentageFeeExcludingVAT;
-  }
-
-  public void setPercentageFeeExcludingVAT(Double percentageFeeExcludingVAT) {
-    this.percentageFeeExcludingVAT = percentageFeeExcludingVAT;
-  }
-
-  public PayoutReport3PayoutOrder vat(Double vat) {
-    this.vat = vat;
-    return this;
-  }
-
-   /**
-   * Get vat
-   * @return vat
-  **/
-  @ApiModelProperty(value = "")
-  public Double getVat() {
-    return vat;
-  }
-
-  public void setVat(Double vat) {
-    this.vat = vat;
-  }
-
-  public PayoutReport3PayoutOrder totalFees(Double totalFees) {
-    this.totalFees = totalFees;
-    return this;
-  }
-
-   /**
-   * Get totalFees
-   * @return totalFees
-  **/
-  @ApiModelProperty(value = "")
-  public Double getTotalFees() {
-    return totalFees;
-  }
-
-  public void setTotalFees(Double totalFees) {
-    this.totalFees = totalFees;
-  }
-
-  public PayoutReport3PayoutOrder cashFeeChargedToCustomer(Double cashFeeChargedToCustomer) {
-    this.cashFeeChargedToCustomer = cashFeeChargedToCustomer;
-    return this;
-  }
-
-   /**
-   * Get cashFeeChargedToCustomer
-   * @return cashFeeChargedToCustomer
-  **/
-  @ApiModelProperty(value = "")
-  public Double getCashFeeChargedToCustomer() {
-    return cashFeeChargedToCustomer;
-  }
-
-  public void setCashFeeChargedToCustomer(Double cashFeeChargedToCustomer) {
-    this.cashFeeChargedToCustomer = cashFeeChargedToCustomer;
-  }
-
-  public PayoutReport3PayoutOrder netSales(Double netSales) {
-    this.netSales = netSales;
-    return this;
-  }
-
-   /**
-   * Get netSales
-   * @return netSales
-  **/
-  @ApiModelProperty(value = "")
-  public Double getNetSales() {
-    return netSales;
-  }
-
-  public void setNetSales(Double netSales) {
-    this.netSales = netSales;
-  }
-
   public PayoutReport3PayoutOrder storeId(Integer storeId) {
     this.storeId = storeId;
     return this;
@@ -793,42 +598,6 @@ public class PayoutReport3PayoutOrder {
     this.storeName = storeName;
   }
 
-  public PayoutReport3PayoutOrder serviceChargeAmount(Double serviceChargeAmount) {
-    this.serviceChargeAmount = serviceChargeAmount;
-    return this;
-  }
-
-   /**
-   * Get serviceChargeAmount
-   * @return serviceChargeAmount
-  **/
-  @ApiModelProperty(value = "")
-  public Double getServiceChargeAmount() {
-    return serviceChargeAmount;
-  }
-
-  public void setServiceChargeAmount(Double serviceChargeAmount) {
-    this.serviceChargeAmount = serviceChargeAmount;
-  }
-
-  public PayoutReport3PayoutOrder serviceChargePercentage(Double serviceChargePercentage) {
-    this.serviceChargePercentage = serviceChargePercentage;
-    return this;
-  }
-
-   /**
-   * Get serviceChargePercentage
-   * @return serviceChargePercentage
-  **/
-  @ApiModelProperty(value = "")
-  public Double getServiceChargePercentage() {
-    return serviceChargePercentage;
-  }
-
-  public void setServiceChargePercentage(Double serviceChargePercentage) {
-    this.serviceChargePercentage = serviceChargePercentage;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -849,24 +618,13 @@ public class PayoutReport3PayoutOrder {
         Objects.equals(this.deliveryCharges, payoutReport3PayoutOrder.deliveryCharges) &&
         Objects.equals(this.tips, payoutReport3PayoutOrder.tips) &&
         Objects.equals(this.voucher, payoutReport3PayoutOrder.voucher) &&
-        Objects.equals(this.flatFeeExcludingVat, payoutReport3PayoutOrder.flatFeeExcludingVat) &&
-        Objects.equals(this.flatFeeExcludingVAT, payoutReport3PayoutOrder.flatFeeExcludingVAT) &&
-        Objects.equals(this.flatFeeIncludingVat, payoutReport3PayoutOrder.flatFeeIncludingVat) &&
-        Objects.equals(this.percentageFeeExcludingVat, payoutReport3PayoutOrder.percentageFeeExcludingVat) &&
-        Objects.equals(this.percentageFeeExcludingVAT, payoutReport3PayoutOrder.percentageFeeExcludingVAT) &&
-        Objects.equals(this.vat, payoutReport3PayoutOrder.vat) &&
-        Objects.equals(this.totalFees, payoutReport3PayoutOrder.totalFees) &&
-        Objects.equals(this.cashFeeChargedToCustomer, payoutReport3PayoutOrder.cashFeeChargedToCustomer) &&
-        Objects.equals(this.netSales, payoutReport3PayoutOrder.netSales) &&
         Objects.equals(this.storeId, payoutReport3PayoutOrder.storeId) &&
-        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName) &&
-        Objects.equals(this.serviceChargeAmount, payoutReport3PayoutOrder.serviceChargeAmount) &&
-        Objects.equals(this.serviceChargePercentage, payoutReport3PayoutOrder.serviceChargePercentage);
+        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, flatFeeExcludingVat, flatFeeExcludingVAT, flatFeeIncludingVat, percentageFeeExcludingVat, percentageFeeExcludingVAT, vat, totalFees, cashFeeChargedToCustomer, netSales, storeId, storeName, serviceChargeAmount, serviceChargePercentage);
+    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, storeId, storeName);
   }
 
 
@@ -885,19 +643,8 @@ public class PayoutReport3PayoutOrder {
     sb.append("    deliveryCharges: ").append(toIndentedString(deliveryCharges)).append("\n");
     sb.append("    tips: ").append(toIndentedString(tips)).append("\n");
     sb.append("    voucher: ").append(toIndentedString(voucher)).append("\n");
-    sb.append("    flatFeeExcludingVat: ").append(toIndentedString(flatFeeExcludingVat)).append("\n");
-    sb.append("    flatFeeExcludingVAT: ").append(toIndentedString(flatFeeExcludingVAT)).append("\n");
-    sb.append("    flatFeeIncludingVat: ").append(toIndentedString(flatFeeIncludingVat)).append("\n");
-    sb.append("    percentageFeeExcludingVat: ").append(toIndentedString(percentageFeeExcludingVat)).append("\n");
-    sb.append("    percentageFeeExcludingVAT: ").append(toIndentedString(percentageFeeExcludingVAT)).append("\n");
-    sb.append("    vat: ").append(toIndentedString(vat)).append("\n");
-    sb.append("    totalFees: ").append(toIndentedString(totalFees)).append("\n");
-    sb.append("    cashFeeChargedToCustomer: ").append(toIndentedString(cashFeeChargedToCustomer)).append("\n");
-    sb.append("    netSales: ").append(toIndentedString(netSales)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
-    sb.append("    serviceChargeAmount: ").append(toIndentedString(serviceChargeAmount)).append("\n");
-    sb.append("    serviceChargePercentage: ").append(toIndentedString(serviceChargePercentage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

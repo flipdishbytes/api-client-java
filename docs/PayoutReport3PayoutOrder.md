@@ -14,19 +14,8 @@ Name | Type | Description | Notes
 **deliveryCharges** | **Double** |  |  [optional]
 **tips** | **Double** |  |  [optional]
 **voucher** | **Double** |  |  [optional]
-**flatFeeExcludingVat** | **Double** |  |  [optional]
-**flatFeeExcludingVAT** | **Double** |  |  [optional]
-**flatFeeIncludingVat** | **Double** |  |  [optional]
-**percentageFeeExcludingVat** | **Double** |  |  [optional]
-**percentageFeeExcludingVAT** | **Double** |  |  [optional]
-**vat** | **Double** |  |  [optional]
-**totalFees** | **Double** |  |  [optional]
-**cashFeeChargedToCustomer** | **Double** |  |  [optional]
-**netSales** | **Double** |  |  [optional]
 **storeId** | **Integer** |  |  [optional]
 **storeName** | **String** |  |  [optional]
-**serviceChargeAmount** | **Double** |  |  [optional]
-**serviceChargePercentage** | **Double** |  |  [optional]
 
 
 <a name="OrderTypeEnum"></a>
@@ -34,7 +23,7 @@ Name | Type | Description | Notes
 Name | Value
 ---- | -----
 CASH | &quot;Cash&quot;
-ONLINE | &quot;Online&quot;
+CARD | &quot;Card&quot;
 
 
 <a name="OrderCurrencyEnum"></a>
