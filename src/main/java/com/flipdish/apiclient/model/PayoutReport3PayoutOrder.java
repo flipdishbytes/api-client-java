@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3PayoutOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-03T08:48:03.012Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-04T13:55:21.220Z")
 public class PayoutReport3PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -382,6 +382,56 @@ public class PayoutReport3PayoutOrder {
   @SerializedName("StoreName")
   private String storeName = null;
 
+  /**
+   * Gets or Sets refundChargebackType
+   */
+  @JsonAdapter(RefundChargebackTypeEnum.Adapter.class)
+  public enum RefundChargebackTypeEnum {
+    REFUND("Refund"),
+    
+    CHARGEBACK("Chargeback");
+
+    private String value;
+
+    RefundChargebackTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static RefundChargebackTypeEnum fromValue(String text) {
+      for (RefundChargebackTypeEnum b : RefundChargebackTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<RefundChargebackTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final RefundChargebackTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public RefundChargebackTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return RefundChargebackTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("RefundChargebackType")
+  private RefundChargebackTypeEnum refundChargebackType = null;
+
   public PayoutReport3PayoutOrder orderId(Integer orderId) {
     this.orderId = orderId;
     return this;
@@ -598,6 +648,24 @@ public class PayoutReport3PayoutOrder {
     this.storeName = storeName;
   }
 
+  public PayoutReport3PayoutOrder refundChargebackType(RefundChargebackTypeEnum refundChargebackType) {
+    this.refundChargebackType = refundChargebackType;
+    return this;
+  }
+
+   /**
+   * Get refundChargebackType
+   * @return refundChargebackType
+  **/
+  @ApiModelProperty(value = "")
+  public RefundChargebackTypeEnum getRefundChargebackType() {
+    return refundChargebackType;
+  }
+
+  public void setRefundChargebackType(RefundChargebackTypeEnum refundChargebackType) {
+    this.refundChargebackType = refundChargebackType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -619,12 +687,13 @@ public class PayoutReport3PayoutOrder {
         Objects.equals(this.tips, payoutReport3PayoutOrder.tips) &&
         Objects.equals(this.voucher, payoutReport3PayoutOrder.voucher) &&
         Objects.equals(this.storeId, payoutReport3PayoutOrder.storeId) &&
-        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName);
+        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName) &&
+        Objects.equals(this.refundChargebackType, payoutReport3PayoutOrder.refundChargebackType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, storeId, storeName);
+    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, storeId, storeName, refundChargebackType);
   }
 
 
@@ -645,6 +714,7 @@ public class PayoutReport3PayoutOrder {
     sb.append("    voucher: ").append(toIndentedString(voucher)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
+    sb.append("    refundChargebackType: ").append(toIndentedString(refundChargebackType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

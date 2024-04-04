@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **voucher** | **Double** |  |  [optional]
 **storeId** | **Integer** |  |  [optional]
 **storeName** | **String** |  |  [optional]
+**refundChargebackType** | [**RefundChargebackTypeEnum**](#RefundChargebackTypeEnum) |  |  [optional]
 
 
 <a name="OrderTypeEnum"></a>
@@ -143,6 +144,14 @@ VND | &quot;VND&quot;
 MOP | &quot;MOP&quot;
 TWD | &quot;TWD&quot;
 BMD | &quot;BMD&quot;
+
+
+<a name="RefundChargebackTypeEnum"></a>
+## Enum: RefundChargebackTypeEnum
+Name | Value
+---- | -----
+REFUND | &quot;Refund&quot;
+CHARGEBACK | &quot;Chargeback&quot;
 
 
 
