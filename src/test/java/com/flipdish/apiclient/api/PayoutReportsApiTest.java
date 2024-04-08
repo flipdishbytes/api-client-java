@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
@@ -91,6 +92,28 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         RestApiResultPayoutReport3Overview response = api.getPayoutReport3Overview(appId, bankAccountId, payoutId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void payoutReport3ExportPayoutOnlineOrdersTest() throws ApiException {
+        String appId = null;
+        String bankAccountId = null;
+        String payoutId = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        List<Integer> payoutRequestIdsBankAccountIds = null;
+        List<String> payoutRequestIdsStates = null;
+        String response = api.payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
 
         // TODO: test validations
     }

@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
@@ -509,6 +510,173 @@ public class PayoutReportsApi {
 
         com.squareup.okhttp.Call call = getPayoutReport3OverviewValidateBeforeCall(appId, bankAccountId, payoutId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultPayoutReport3Overview>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for payoutReport3ExportPayoutOnlineOrders
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
+     * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call payoutReport3ExportPayoutOnlineOrdersCall(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()))
+            .replaceAll("\\{" + "payoutId" + "\\}", apiClient.escapeString(payoutId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (startDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("startDate", startDate));
+        if (endDate != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("endDate", endDate));
+        if (payoutRequestIdsBankAccountIds != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "payoutRequestIds.bankAccountIds", payoutRequestIdsBankAccountIds));
+        if (payoutRequestIdsStates != null)
+        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "payoutRequestIds.states", payoutRequestIdsStates));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call payoutReport3ExportPayoutOnlineOrdersValidateBeforeCall(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling payoutReport3ExportPayoutOnlineOrders(Async)");
+        }
+        
+        // verify the required parameter 'bankAccountId' is set
+        if (bankAccountId == null) {
+            throw new ApiException("Missing the required parameter 'bankAccountId' when calling payoutReport3ExportPayoutOnlineOrders(Async)");
+        }
+        
+        // verify the required parameter 'payoutId' is set
+        if (payoutId == null) {
+            throw new ApiException("Missing the required parameter 'payoutId' when calling payoutReport3ExportPayoutOnlineOrders(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = payoutReport3ExportPayoutOnlineOrdersCall(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
+     * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String payoutReport3ExportPayoutOnlineOrders(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
+        ApiResponse<String> resp = payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
+     * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
+        com.squareup.okhttp.Call call = payoutReport3ExportPayoutOnlineOrdersValidateBeforeCall(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param bankAccountId  (required)
+     * @param payoutId  (required)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
+     * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call payoutReport3ExportPayoutOnlineOrdersAsync(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = payoutReport3ExportPayoutOnlineOrdersValidateBeforeCall(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

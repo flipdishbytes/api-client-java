@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription change job status updated event
  */
 @ApiModel(description = "Subscription change job status updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-04T13:55:21.220Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-08T15:37:41.390Z")
 public class AppStoreSubscriptionChangeJobUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

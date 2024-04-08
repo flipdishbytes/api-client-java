@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher
  */
 @ApiModel(description = "Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-04T13:55:21.220Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-08T15:37:41.390Z")
 public class Voucher {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -611,6 +611,9 @@ public class Voucher {
   @SerializedName("CustomerId")
   private Integer customerId = null;
 
+  @SerializedName("MaxRedemptions")
+  private Integer maxRedemptions = null;
+
   public Voucher voucherId(Integer voucherId) {
     this.voucherId = voucherId;
     return this;
@@ -1157,6 +1160,24 @@ public class Voucher {
     this.customerId = customerId;
   }
 
+  public Voucher maxRedemptions(Integer maxRedemptions) {
+    this.maxRedemptions = maxRedemptions;
+    return this;
+  }
+
+   /**
+   * Maximum number of times the voucher can be redeemed (used)
+   * @return maxRedemptions
+  **/
+  @ApiModelProperty(value = "Maximum number of times the voucher can be redeemed (used)")
+  public Integer getMaxRedemptions() {
+    return maxRedemptions;
+  }
+
+  public void setMaxRedemptions(Integer maxRedemptions) {
+    this.maxRedemptions = maxRedemptions;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1195,12 +1216,13 @@ public class Voucher {
         Objects.equals(this.expiryDate, voucher.expiryDate) &&
         Objects.equals(this.channelRestrictions, voucher.channelRestrictions) &&
         Objects.equals(this.voucherSubType, voucher.voucherSubType) &&
-        Objects.equals(this.customerId, voucher.customerId);
+        Objects.equals(this.customerId, voucher.customerId) &&
+        Objects.equals(this.maxRedemptions, voucher.maxRedemptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, status, voucherType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, voucherSubType, customerId);
+    return Objects.hash(voucherId, status, voucherType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, voucherSubType, customerId, maxRedemptions);
   }
 
 
@@ -1238,6 +1260,7 @@ public class Voucher {
     sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
+    sb.append("    maxRedemptions: ").append(toIndentedString(maxRedemptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
