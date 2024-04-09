@@ -27,13 +27,19 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-09T13:35:58.937Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-09T15:31:13.881Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
 
+  @SerializedName("WebAndAppCashRevenueExcludingTips")
+  private Double webAndAppCashRevenueExcludingTips = null;
+
   @SerializedName("WebAndAppCard")
   private Double webAndAppCard = null;
+
+  @SerializedName("WebAndAppCardRevenueExcludingTips")
+  private Double webAndAppCardRevenueExcludingTips = null;
 
   @SerializedName("KioskCash")
   private Double kioskCash = null;
@@ -49,6 +55,9 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @SerializedName("PosCard")
   private Double posCard = null;
+
+  @SerializedName("PosCardRevenue")
+  private Double posCardRevenue = null;
 
   @SerializedName("PosCardOnFlipdishOrders")
   private Double posCardOnFlipdishOrders = null;
@@ -83,6 +92,24 @@ public class PayoutReport3DetailsFlipdishFees {
     this.webAndAppCash = webAndAppCash;
   }
 
+  public PayoutReport3DetailsFlipdishFees webAndAppCashRevenueExcludingTips(Double webAndAppCashRevenueExcludingTips) {
+    this.webAndAppCashRevenueExcludingTips = webAndAppCashRevenueExcludingTips;
+    return this;
+  }
+
+   /**
+   * Get webAndAppCashRevenueExcludingTips
+   * @return webAndAppCashRevenueExcludingTips
+  **/
+  @ApiModelProperty(value = "")
+  public Double getWebAndAppCashRevenueExcludingTips() {
+    return webAndAppCashRevenueExcludingTips;
+  }
+
+  public void setWebAndAppCashRevenueExcludingTips(Double webAndAppCashRevenueExcludingTips) {
+    this.webAndAppCashRevenueExcludingTips = webAndAppCashRevenueExcludingTips;
+  }
+
   public PayoutReport3DetailsFlipdishFees webAndAppCard(Double webAndAppCard) {
     this.webAndAppCard = webAndAppCard;
     return this;
@@ -99,6 +126,24 @@ public class PayoutReport3DetailsFlipdishFees {
 
   public void setWebAndAppCard(Double webAndAppCard) {
     this.webAndAppCard = webAndAppCard;
+  }
+
+  public PayoutReport3DetailsFlipdishFees webAndAppCardRevenueExcludingTips(Double webAndAppCardRevenueExcludingTips) {
+    this.webAndAppCardRevenueExcludingTips = webAndAppCardRevenueExcludingTips;
+    return this;
+  }
+
+   /**
+   * Get webAndAppCardRevenueExcludingTips
+   * @return webAndAppCardRevenueExcludingTips
+  **/
+  @ApiModelProperty(value = "")
+  public Double getWebAndAppCardRevenueExcludingTips() {
+    return webAndAppCardRevenueExcludingTips;
+  }
+
+  public void setWebAndAppCardRevenueExcludingTips(Double webAndAppCardRevenueExcludingTips) {
+    this.webAndAppCardRevenueExcludingTips = webAndAppCardRevenueExcludingTips;
   }
 
   public PayoutReport3DetailsFlipdishFees kioskCash(Double kioskCash) {
@@ -189,6 +234,24 @@ public class PayoutReport3DetailsFlipdishFees {
 
   public void setPosCard(Double posCard) {
     this.posCard = posCard;
+  }
+
+  public PayoutReport3DetailsFlipdishFees posCardRevenue(Double posCardRevenue) {
+    this.posCardRevenue = posCardRevenue;
+    return this;
+  }
+
+   /**
+   * Get posCardRevenue
+   * @return posCardRevenue
+  **/
+  @ApiModelProperty(value = "")
+  public Double getPosCardRevenue() {
+    return posCardRevenue;
+  }
+
+  public void setPosCardRevenue(Double posCardRevenue) {
+    this.posCardRevenue = posCardRevenue;
   }
 
   public PayoutReport3DetailsFlipdishFees posCardOnFlipdishOrders(Double posCardOnFlipdishOrders) {
@@ -292,12 +355,15 @@ public class PayoutReport3DetailsFlipdishFees {
     }
     PayoutReport3DetailsFlipdishFees payoutReport3DetailsFlipdishFees = (PayoutReport3DetailsFlipdishFees) o;
     return Objects.equals(this.webAndAppCash, payoutReport3DetailsFlipdishFees.webAndAppCash) &&
+        Objects.equals(this.webAndAppCashRevenueExcludingTips, payoutReport3DetailsFlipdishFees.webAndAppCashRevenueExcludingTips) &&
         Objects.equals(this.webAndAppCard, payoutReport3DetailsFlipdishFees.webAndAppCard) &&
+        Objects.equals(this.webAndAppCardRevenueExcludingTips, payoutReport3DetailsFlipdishFees.webAndAppCardRevenueExcludingTips) &&
         Objects.equals(this.kioskCash, payoutReport3DetailsFlipdishFees.kioskCash) &&
         Objects.equals(this.kioskCard, payoutReport3DetailsFlipdishFees.kioskCard) &&
         Objects.equals(this.qropCash, payoutReport3DetailsFlipdishFees.qropCash) &&
         Objects.equals(this.qropCard, payoutReport3DetailsFlipdishFees.qropCard) &&
         Objects.equals(this.posCard, payoutReport3DetailsFlipdishFees.posCard) &&
+        Objects.equals(this.posCardRevenue, payoutReport3DetailsFlipdishFees.posCardRevenue) &&
         Objects.equals(this.posCardOnFlipdishOrders, payoutReport3DetailsFlipdishFees.posCardOnFlipdishOrders) &&
         Objects.equals(this.otherIntegrationFees, payoutReport3DetailsFlipdishFees.otherIntegrationFees) &&
         Objects.equals(this.otherIntegrationTips, payoutReport3DetailsFlipdishFees.otherIntegrationTips) &&
@@ -307,7 +373,7 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @Override
   public int hashCode() {
-    return Objects.hash(webAndAppCash, webAndAppCard, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, vat, total);
+    return Objects.hash(webAndAppCash, webAndAppCashRevenueExcludingTips, webAndAppCard, webAndAppCardRevenueExcludingTips, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, vat, total);
   }
 
 
@@ -317,12 +383,15 @@ public class PayoutReport3DetailsFlipdishFees {
     sb.append("class PayoutReport3DetailsFlipdishFees {\n");
     
     sb.append("    webAndAppCash: ").append(toIndentedString(webAndAppCash)).append("\n");
+    sb.append("    webAndAppCashRevenueExcludingTips: ").append(toIndentedString(webAndAppCashRevenueExcludingTips)).append("\n");
     sb.append("    webAndAppCard: ").append(toIndentedString(webAndAppCard)).append("\n");
+    sb.append("    webAndAppCardRevenueExcludingTips: ").append(toIndentedString(webAndAppCardRevenueExcludingTips)).append("\n");
     sb.append("    kioskCash: ").append(toIndentedString(kioskCash)).append("\n");
     sb.append("    kioskCard: ").append(toIndentedString(kioskCard)).append("\n");
     sb.append("    qropCash: ").append(toIndentedString(qropCash)).append("\n");
     sb.append("    qropCard: ").append(toIndentedString(qropCard)).append("\n");
     sb.append("    posCard: ").append(toIndentedString(posCard)).append("\n");
+    sb.append("    posCardRevenue: ").append(toIndentedString(posCardRevenue)).append("\n");
     sb.append("    posCardOnFlipdishOrders: ").append(toIndentedString(posCardOnFlipdishOrders)).append("\n");
     sb.append("    otherIntegrationFees: ").append(toIndentedString(otherIntegrationFees)).append("\n");
     sb.append("    otherIntegrationTips: ").append(toIndentedString(otherIntegrationTips)).append("\n");
