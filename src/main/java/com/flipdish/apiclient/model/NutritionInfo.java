@@ -32,7 +32,7 @@ import java.util.List;
  * Menu Nutrition Information
  */
 @ApiModel(description = "Menu Nutrition Information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-09T15:31:13.881Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-11T11:41:30.072Z")
 public class NutritionInfo {
   @SerializedName("Version")
   private String version = null;

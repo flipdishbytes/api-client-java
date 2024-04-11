@@ -32,7 +32,7 @@ import java.util.List;
  * Create a Catalog Item
  */
 @ApiModel(description = "Create a Catalog Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-09T15:31:13.881Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-11T11:41:30.072Z")
 public class CreateProduct {
   @SerializedName("Groups")
   private List<CreateGroupReference> groups = null;
