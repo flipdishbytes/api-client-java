@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutOnlineOrders"></a>
 # **payoutReport3ExportPayoutOnlineOrders**
-> String payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates)
 
 
 
@@ -213,7 +213,7 @@ OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime |
 List<Integer> payoutRequestIdsBankAccountIds = Arrays.asList(56); // List<Integer> | List of bank account ids to search for
 List<String> payoutRequestIdsStates = Arrays.asList("payoutRequestIdsStates_example"); // List<String> | List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for
 try {
-    String result = apiInstance.payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutOnlineOrders");
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
 
 ### Authorization
 

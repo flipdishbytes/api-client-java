@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="downloadFile"></a>
 # **downloadFile**
-> String downloadFile(appId, fileId)
+> RestApiResultFileDownloadResult downloadFile(appId, fileId)
 
 
 
@@ -32,7 +32,7 @@ FilesApi apiInstance = new FilesApi();
 String appId = "appId_example"; // String | 
 String fileId = "fileId_example"; // String | 
 try {
-    String result = apiInstance.downloadFile(appId, fileId);
+    RestApiResultFileDownloadResult result = apiInstance.downloadFile(appId, fileId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FilesApi#downloadFile");
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+[**RestApiResultFileDownloadResult**](RestApiResultFileDownloadResult.md)
 
 ### Authorization
 

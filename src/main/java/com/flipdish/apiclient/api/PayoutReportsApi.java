@@ -31,6 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
+import com.flipdish.apiclient.model.RestApiResultFileCreationResult;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -613,11 +614,11 @@ public class PayoutReportsApi {
      * @param endDate  (optional)
      * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
      * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
-     * @return String
+     * @return RestApiResultFileCreationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String payoutReport3ExportPayoutOnlineOrders(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
-        ApiResponse<String> resp = payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+    public RestApiResultFileCreationResult payoutReport3ExportPayoutOnlineOrders(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
+        ApiResponse<RestApiResultFileCreationResult> resp = payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
         return resp.getData();
     }
 
@@ -631,12 +632,12 @@ public class PayoutReportsApi {
      * @param endDate  (optional)
      * @param payoutRequestIdsBankAccountIds List of bank account ids to search for (optional)
      * @param payoutRequestIdsStates List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;RestApiResultFileCreationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
+    public ApiResponse<RestApiResultFileCreationResult> payoutReport3ExportPayoutOnlineOrdersWithHttpInfo(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates) throws ApiException {
         com.squareup.okhttp.Call call = payoutReport3ExportPayoutOnlineOrdersValidateBeforeCall(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFileCreationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -654,7 +655,7 @@ public class PayoutReportsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call payoutReport3ExportPayoutOnlineOrdersAsync(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call payoutReport3ExportPayoutOnlineOrdersAsync(String appId, String bankAccountId, String payoutId, OffsetDateTime startDate, OffsetDateTime endDate, List<Integer> payoutRequestIdsBankAccountIds, List<String> payoutRequestIdsStates, final ApiCallback<RestApiResultFileCreationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -676,7 +677,7 @@ public class PayoutReportsApi {
         }
 
         com.squareup.okhttp.Call call = payoutReport3ExportPayoutOnlineOrdersValidateBeforeCall(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFileCreationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

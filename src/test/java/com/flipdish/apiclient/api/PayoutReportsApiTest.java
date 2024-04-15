@@ -18,6 +18,7 @@ import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
+import com.flipdish.apiclient.model.RestApiResultFileCreationResult;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -113,7 +114,7 @@ public class PayoutReportsApiTest {
         OffsetDateTime endDate = null;
         List<Integer> payoutRequestIdsBankAccountIds = null;
         List<String> payoutRequestIdsStates = null;
-        String response = api.payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutOnlineOrders(appId, bankAccountId, payoutId, startDate, endDate, payoutRequestIdsBankAccountIds, payoutRequestIdsStates);
 
         // TODO: test validations
     }

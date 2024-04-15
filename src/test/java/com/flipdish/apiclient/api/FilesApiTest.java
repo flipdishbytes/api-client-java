@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultFileDownloadResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -45,7 +46,7 @@ public class FilesApiTest {
     public void downloadFileTest() throws ApiException {
         String appId = null;
         String fileId = null;
-        String response = api.downloadFile(appId, fileId);
+        RestApiResultFileDownloadResult response = api.downloadFile(appId, fileId);
 
         // TODO: test validations
     }

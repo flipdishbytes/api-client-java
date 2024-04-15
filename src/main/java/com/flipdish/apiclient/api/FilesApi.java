@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultFileDownloadResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -131,11 +132,11 @@ public class FilesApi {
      * 
      * @param appId  (required)
      * @param fileId  (required)
-     * @return String
+     * @return RestApiResultFileDownloadResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String downloadFile(String appId, String fileId) throws ApiException {
-        ApiResponse<String> resp = downloadFileWithHttpInfo(appId, fileId);
+    public RestApiResultFileDownloadResult downloadFile(String appId, String fileId) throws ApiException {
+        ApiResponse<RestApiResultFileDownloadResult> resp = downloadFileWithHttpInfo(appId, fileId);
         return resp.getData();
     }
 
@@ -144,12 +145,12 @@ public class FilesApi {
      * 
      * @param appId  (required)
      * @param fileId  (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;RestApiResultFileDownloadResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> downloadFileWithHttpInfo(String appId, String fileId) throws ApiException {
+    public ApiResponse<RestApiResultFileDownloadResult> downloadFileWithHttpInfo(String appId, String fileId) throws ApiException {
         com.squareup.okhttp.Call call = downloadFileValidateBeforeCall(appId, fileId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFileDownloadResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -162,7 +163,7 @@ public class FilesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call downloadFileAsync(String appId, String fileId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call downloadFileAsync(String appId, String fileId, final ApiCallback<RestApiResultFileDownloadResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -184,7 +185,7 @@ public class FilesApi {
         }
 
         com.squareup.okhttp.Call call = downloadFileValidateBeforeCall(appId, fileId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiResultFileDownloadResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
