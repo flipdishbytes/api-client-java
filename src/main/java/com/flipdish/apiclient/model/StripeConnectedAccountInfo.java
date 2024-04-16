@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents information about a Stripe connected account associated with a bank account
  */
 @ApiModel(description = "Represents information about a Stripe connected account associated with a bank account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-15T11:20:47.121Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-16T09:15:14.586Z")
 public class StripeConnectedAccountInfo {
   /**
    * Stripe connected account status
@@ -47,7 +47,9 @@ public class StripeConnectedAccountInfo {
     
     REJECTED("Rejected"),
     
-    UPDATEEXTERNALACCOUNT("UpdateExternalAccount");
+    UPDATEEXTERNALACCOUNT("UpdateExternalAccount"),
+    
+    PLATFORMPAUSED("PlatformPaused");
 
     private String value;
 

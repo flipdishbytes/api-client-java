@@ -42,6 +42,7 @@ PENDINGVERIFICATION | &quot;PendingVerification&quot;
 UNVERIFIED | &quot;Unverified&quot;
 REJECTED | &quot;Rejected&quot;
 UPDATEEXTERNALACCOUNT | &quot;UpdateExternalAccount&quot;
+PLATFORMPAUSED | &quot;PlatformPaused&quot;
 
 
 
