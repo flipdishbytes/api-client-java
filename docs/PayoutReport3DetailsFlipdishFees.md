@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **webAndAppCash** | **Double** |  |  [optional]
-**webAndAppCashRevenueExcludingTips** | **Double** |  |  [optional]
+**webAndAppCashRevenueIncludingTips** | **Double** |  |  [optional]
 **webAndAppCard** | **Double** |  |  [optional]
-**webAndAppCardRevenueExcludingTips** | **Double** |  |  [optional]
+**webAndAppCardRevenueIncludingTips** | **Double** |  |  [optional]
 **kioskCash** | **Double** |  |  [optional]
 **kioskCard** | **Double** |  |  [optional]
 **qropCash** | **Double** |  |  [optional]

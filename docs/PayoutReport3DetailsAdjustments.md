@@ -13,20 +13,6 @@ Name | Type | Description | Notes
 **chargebacks** | **Double** |  |  [optional]
 **otherTransactions** | **Double** |  |  [optional]
 **closingBalance** | **Double** |  |  [optional]
-**openingBalanceCredit** | **Double** |  |  [optional]
-**openingBalanceDebit** | **Double** |  |  [optional]
-**refundsOnCardOrdersCredit** | **Double** |  |  [optional]
-**refundsOnCardOrdersDebit** | **Double** |  |  [optional]
-**refundsOnCashOrdersCredit** | **Double** |  |  [optional]
-**refundsOnCashOrdersDebit** | **Double** |  |  [optional]
-**cashCustomerFeesCredit** | **Double** |  |  [optional]
-**cashCustomerFeesDebit** | **Double** |  |  [optional]
-**chargebacksCredit** | **Double** |  |  [optional]
-**chargebacksDebit** | **Double** |  |  [optional]
-**otherTransactionsCredit** | **Double** |  |  [optional]
-**otherTransactionsDebit** | **Double** |  |  [optional]
-**closingBalanceCredit** | **Double** |  |  [optional]
-**closingBalanceDebit** | **Double** |  |  [optional]
 
 
 

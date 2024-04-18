@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * ItemNutritionInfoV2AddUpdateModel
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-16T09:15:14.586Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-18T06:28:53.942Z")
 public class ItemNutritionInfoV2AddUpdateModel {
   @SerializedName("AllergenIds")
   private List<String> allergenIds = null;
