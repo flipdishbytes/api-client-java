@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**getPayoutReport3Orders**](PayoutReportsApi.md#getPayoutReport3Orders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders | 
 [**getPayoutReport3Overview**](PayoutReportsApi.md#getPayoutReport3Overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 [**payoutReport3ExportPayoutOnlineOrders**](PayoutReportsApi.md#payoutReport3ExportPayoutOnlineOrders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders | 
+[**payoutReport3ExportPayoutPosSales**](PayoutReportsApi.md#payoutReport3ExportPayoutPosSales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
 
 
 <a name="getPayoutReport3Details"></a>
@@ -232,6 +233,63 @@ Name | Type | Description  | Notes
  **endDate** | **OffsetDateTime**|  | [optional]
  **payoutRequestIdsBankAccountIds** | [**List&lt;Integer&gt;**](Integer.md)| List of bank account ids to search for | [optional]
  **payoutRequestIdsStates** | [**List&lt;String&gt;**](String.md)| List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for | [optional] [enum: Pending, InTransit, Paid, Failed, Cancelled]
+
+### Return type
+
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="payoutReport3ExportPayoutPosSales"></a>
+# **payoutReport3ExportPayoutPosSales**
+> RestApiResultFileCreationResult payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.PayoutReportsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+PayoutReportsApi apiInstance = new PayoutReportsApi();
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
+Integer payoutId = 56; // Integer | 
+List<Integer> stores = Arrays.asList(56); // List<Integer> | 
+try {
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutPosSales");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
+ **payoutId** | **Integer**|  |
+ **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
 
 ### Return type
 

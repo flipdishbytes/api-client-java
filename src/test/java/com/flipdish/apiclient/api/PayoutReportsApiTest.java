@@ -119,4 +119,23 @@ public class PayoutReportsApiTest {
         // TODO: test validations
     }
     
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void payoutReport3ExportPayoutPosSalesTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> stores = null;
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
+
+        // TODO: test validations
+    }
+    
 }
