@@ -106,6 +106,25 @@ public class PayoutReportsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void payoutReport3ExportPayoutChargebacksTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> stores = null;
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void payoutReport3ExportPayoutOnlineOrdersTest() throws ApiException {
         String appId = null;
         String bankAccountId = null;
