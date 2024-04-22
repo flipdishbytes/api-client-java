@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**payoutReport3ExportPayoutOnlineOrders**](PayoutReportsApi.md#payoutReport3ExportPayoutOnlineOrders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders | 
 [**payoutReport3ExportPayoutOrders**](PayoutReportsApi.md#payoutReport3ExportPayoutOrders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
 [**payoutReport3ExportPayoutPosSales**](PayoutReportsApi.md#payoutReport3ExportPayoutPosSales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
+[**payoutReport3ExportPayoutRefundedRejected**](PayoutReportsApi.md#payoutReport3ExportPayoutRefundedRejected) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedrejected | 
 
 
 <a name="getPayoutReport3Details"></a>
@@ -394,6 +395,63 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutPosSales");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
+ **payoutId** | **Integer**|  |
+ **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+
+### Return type
+
+[**RestApiResultFileCreationResult**](RestApiResultFileCreationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="payoutReport3ExportPayoutRefundedRejected"></a>
+# **payoutReport3ExportPayoutRefundedRejected**
+> RestApiResultFileCreationResult payoutReport3ExportPayoutRefundedRejected(appId, bankAccountId, payoutId, stores)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.PayoutReportsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+PayoutReportsApi apiInstance = new PayoutReportsApi();
+String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
+Integer payoutId = 56; // Integer | 
+List<Integer> stores = Arrays.asList(56); // List<Integer> | 
+try {
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutRefundedRejected(appId, bankAccountId, payoutId, stores);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutRefundedRejected");
     e.printStackTrace();
 }
 ```
