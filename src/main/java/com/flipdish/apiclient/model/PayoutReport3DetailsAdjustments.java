@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-22T13:06:38.270Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-04-23T11:30:23.184Z")
 public class PayoutReport3DetailsAdjustments {
   @SerializedName("OpeningBalanceDate")
   private OffsetDateTime openingBalanceDate = null;
@@ -56,6 +56,27 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("ClosingBalance")
   private Double closingBalance = null;
+
+  @SerializedName("BalanceRepaid")
+  private Double balanceRepaid = null;
+
+  @SerializedName("RefundsOnCardOrdersBracketsAmount")
+  private Double refundsOnCardOrdersBracketsAmount = null;
+
+  @SerializedName("RefundsOnCardOrdersBracketsOutOfAmount")
+  private Double refundsOnCardOrdersBracketsOutOfAmount = null;
+
+  @SerializedName("RefundsOnCashOrdersBracketsAmount")
+  private Double refundsOnCashOrdersBracketsAmount = null;
+
+  @SerializedName("RefundsOnCashOrdersBracketsOutOfAmount")
+  private Double refundsOnCashOrdersBracketsOutOfAmount = null;
+
+  @SerializedName("CashCustomerFeesBracketsAmount")
+  private Double cashCustomerFeesBracketsAmount = null;
+
+  @SerializedName("CashCustomerFeesBracketsOutOfAmount")
+  private Double cashCustomerFeesBracketsOutOfAmount = null;
 
   public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
     this.openingBalanceDate = openingBalanceDate;
@@ -219,6 +240,132 @@ public class PayoutReport3DetailsAdjustments {
     this.closingBalance = closingBalance;
   }
 
+  public PayoutReport3DetailsAdjustments balanceRepaid(Double balanceRepaid) {
+    this.balanceRepaid = balanceRepaid;
+    return this;
+  }
+
+   /**
+   * Get balanceRepaid
+   * @return balanceRepaid
+  **/
+  @ApiModelProperty(value = "")
+  public Double getBalanceRepaid() {
+    return balanceRepaid;
+  }
+
+  public void setBalanceRepaid(Double balanceRepaid) {
+    this.balanceRepaid = balanceRepaid;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCardOrdersBracketsAmount(Double refundsOnCardOrdersBracketsAmount) {
+    this.refundsOnCardOrdersBracketsAmount = refundsOnCardOrdersBracketsAmount;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCardOrdersBracketsAmount
+   * @return refundsOnCardOrdersBracketsAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCardOrdersBracketsAmount() {
+    return refundsOnCardOrdersBracketsAmount;
+  }
+
+  public void setRefundsOnCardOrdersBracketsAmount(Double refundsOnCardOrdersBracketsAmount) {
+    this.refundsOnCardOrdersBracketsAmount = refundsOnCardOrdersBracketsAmount;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCardOrdersBracketsOutOfAmount(Double refundsOnCardOrdersBracketsOutOfAmount) {
+    this.refundsOnCardOrdersBracketsOutOfAmount = refundsOnCardOrdersBracketsOutOfAmount;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCardOrdersBracketsOutOfAmount
+   * @return refundsOnCardOrdersBracketsOutOfAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCardOrdersBracketsOutOfAmount() {
+    return refundsOnCardOrdersBracketsOutOfAmount;
+  }
+
+  public void setRefundsOnCardOrdersBracketsOutOfAmount(Double refundsOnCardOrdersBracketsOutOfAmount) {
+    this.refundsOnCardOrdersBracketsOutOfAmount = refundsOnCardOrdersBracketsOutOfAmount;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCashOrdersBracketsAmount(Double refundsOnCashOrdersBracketsAmount) {
+    this.refundsOnCashOrdersBracketsAmount = refundsOnCashOrdersBracketsAmount;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCashOrdersBracketsAmount
+   * @return refundsOnCashOrdersBracketsAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCashOrdersBracketsAmount() {
+    return refundsOnCashOrdersBracketsAmount;
+  }
+
+  public void setRefundsOnCashOrdersBracketsAmount(Double refundsOnCashOrdersBracketsAmount) {
+    this.refundsOnCashOrdersBracketsAmount = refundsOnCashOrdersBracketsAmount;
+  }
+
+  public PayoutReport3DetailsAdjustments refundsOnCashOrdersBracketsOutOfAmount(Double refundsOnCashOrdersBracketsOutOfAmount) {
+    this.refundsOnCashOrdersBracketsOutOfAmount = refundsOnCashOrdersBracketsOutOfAmount;
+    return this;
+  }
+
+   /**
+   * Get refundsOnCashOrdersBracketsOutOfAmount
+   * @return refundsOnCashOrdersBracketsOutOfAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundsOnCashOrdersBracketsOutOfAmount() {
+    return refundsOnCashOrdersBracketsOutOfAmount;
+  }
+
+  public void setRefundsOnCashOrdersBracketsOutOfAmount(Double refundsOnCashOrdersBracketsOutOfAmount) {
+    this.refundsOnCashOrdersBracketsOutOfAmount = refundsOnCashOrdersBracketsOutOfAmount;
+  }
+
+  public PayoutReport3DetailsAdjustments cashCustomerFeesBracketsAmount(Double cashCustomerFeesBracketsAmount) {
+    this.cashCustomerFeesBracketsAmount = cashCustomerFeesBracketsAmount;
+    return this;
+  }
+
+   /**
+   * Get cashCustomerFeesBracketsAmount
+   * @return cashCustomerFeesBracketsAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getCashCustomerFeesBracketsAmount() {
+    return cashCustomerFeesBracketsAmount;
+  }
+
+  public void setCashCustomerFeesBracketsAmount(Double cashCustomerFeesBracketsAmount) {
+    this.cashCustomerFeesBracketsAmount = cashCustomerFeesBracketsAmount;
+  }
+
+  public PayoutReport3DetailsAdjustments cashCustomerFeesBracketsOutOfAmount(Double cashCustomerFeesBracketsOutOfAmount) {
+    this.cashCustomerFeesBracketsOutOfAmount = cashCustomerFeesBracketsOutOfAmount;
+    return this;
+  }
+
+   /**
+   * Get cashCustomerFeesBracketsOutOfAmount
+   * @return cashCustomerFeesBracketsOutOfAmount
+  **/
+  @ApiModelProperty(value = "")
+  public Double getCashCustomerFeesBracketsOutOfAmount() {
+    return cashCustomerFeesBracketsOutOfAmount;
+  }
+
+  public void setCashCustomerFeesBracketsOutOfAmount(Double cashCustomerFeesBracketsOutOfAmount) {
+    this.cashCustomerFeesBracketsOutOfAmount = cashCustomerFeesBracketsOutOfAmount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,12 +384,19 @@ public class PayoutReport3DetailsAdjustments {
         Objects.equals(this.cashCustomerFees, payoutReport3DetailsAdjustments.cashCustomerFees) &&
         Objects.equals(this.chargebacks, payoutReport3DetailsAdjustments.chargebacks) &&
         Objects.equals(this.otherTransactions, payoutReport3DetailsAdjustments.otherTransactions) &&
-        Objects.equals(this.closingBalance, payoutReport3DetailsAdjustments.closingBalance);
+        Objects.equals(this.closingBalance, payoutReport3DetailsAdjustments.closingBalance) &&
+        Objects.equals(this.balanceRepaid, payoutReport3DetailsAdjustments.balanceRepaid) &&
+        Objects.equals(this.refundsOnCardOrdersBracketsAmount, payoutReport3DetailsAdjustments.refundsOnCardOrdersBracketsAmount) &&
+        Objects.equals(this.refundsOnCardOrdersBracketsOutOfAmount, payoutReport3DetailsAdjustments.refundsOnCardOrdersBracketsOutOfAmount) &&
+        Objects.equals(this.refundsOnCashOrdersBracketsAmount, payoutReport3DetailsAdjustments.refundsOnCashOrdersBracketsAmount) &&
+        Objects.equals(this.refundsOnCashOrdersBracketsOutOfAmount, payoutReport3DetailsAdjustments.refundsOnCashOrdersBracketsOutOfAmount) &&
+        Objects.equals(this.cashCustomerFeesBracketsAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsAmount) &&
+        Objects.equals(this.cashCustomerFeesBracketsOutOfAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsOutOfAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount);
   }
 
 
@@ -260,6 +414,13 @@ public class PayoutReport3DetailsAdjustments {
     sb.append("    chargebacks: ").append(toIndentedString(chargebacks)).append("\n");
     sb.append("    otherTransactions: ").append(toIndentedString(otherTransactions)).append("\n");
     sb.append("    closingBalance: ").append(toIndentedString(closingBalance)).append("\n");
+    sb.append("    balanceRepaid: ").append(toIndentedString(balanceRepaid)).append("\n");
+    sb.append("    refundsOnCardOrdersBracketsAmount: ").append(toIndentedString(refundsOnCardOrdersBracketsAmount)).append("\n");
+    sb.append("    refundsOnCardOrdersBracketsOutOfAmount: ").append(toIndentedString(refundsOnCardOrdersBracketsOutOfAmount)).append("\n");
+    sb.append("    refundsOnCashOrdersBracketsAmount: ").append(toIndentedString(refundsOnCashOrdersBracketsAmount)).append("\n");
+    sb.append("    refundsOnCashOrdersBracketsOutOfAmount: ").append(toIndentedString(refundsOnCashOrdersBracketsOutOfAmount)).append("\n");
+    sb.append("    cashCustomerFeesBracketsAmount: ").append(toIndentedString(cashCustomerFeesBracketsAmount)).append("\n");
+    sb.append("    cashCustomerFeesBracketsOutOfAmount: ").append(toIndentedString(cashCustomerFeesBracketsOutOfAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
