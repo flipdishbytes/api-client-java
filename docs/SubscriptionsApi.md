@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="getSubscriptionsForApp"></a>
 # **getSubscriptionsForApp**
-> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId)
+> RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions)
 
 
 
@@ -87,8 +87,9 @@ SubscriptionsApi apiInstance = new SubscriptionsApi();
 String appId = "appId_example"; // String | 
 Boolean excludeNotOwnedSubscriptions = true; // Boolean | 
 List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
+Boolean excludeCancelledSubscriptions = true; // Boolean | 
 try {
-    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId);
+    RestApiArrayResultSubscriptionSummary result = apiInstance.getSubscriptionsForApp(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SubscriptionsApi#getSubscriptionsForApp");
@@ -103,6 +104,7 @@ Name | Type | Description  | Notes
  **appId** | **String**|  |
  **excludeNotOwnedSubscriptions** | **Boolean**|  | [optional]
  **storeId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
+ **excludeCancelledSubscriptions** | **Boolean**|  | [optional]
 
 ### Return type
 

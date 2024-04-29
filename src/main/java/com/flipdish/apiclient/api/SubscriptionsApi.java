@@ -197,12 +197,13 @@ public class SubscriptionsApi {
      * @param appId  (required)
      * @param excludeNotOwnedSubscriptions  (optional)
      * @param storeId  (optional)
+     * @param excludeCancelledSubscriptions  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getSubscriptionsForAppCall(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getSubscriptionsForAppCall(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, Boolean excludeCancelledSubscriptions, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -215,6 +216,8 @@ public class SubscriptionsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("excludeNotOwnedSubscriptions", excludeNotOwnedSubscriptions));
         if (storeId != null)
         localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "storeId", storeId));
+        if (excludeCancelledSubscriptions != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("excludeCancelledSubscriptions", excludeCancelledSubscriptions));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -249,7 +252,7 @@ public class SubscriptionsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getSubscriptionsForAppValidateBeforeCall(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getSubscriptionsForAppValidateBeforeCall(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, Boolean excludeCancelledSubscriptions, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -257,7 +260,7 @@ public class SubscriptionsApi {
         }
         
 
-        com.squareup.okhttp.Call call = getSubscriptionsForAppCall(appId, excludeNotOwnedSubscriptions, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSubscriptionsForAppCall(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions, progressListener, progressRequestListener);
         return call;
 
     }
@@ -268,11 +271,12 @@ public class SubscriptionsApi {
      * @param appId  (required)
      * @param excludeNotOwnedSubscriptions  (optional)
      * @param storeId  (optional)
+     * @param excludeCancelledSubscriptions  (optional)
      * @return RestApiArrayResultSubscriptionSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId) throws ApiException {
-        ApiResponse<RestApiArrayResultSubscriptionSummary> resp = getSubscriptionsForAppWithHttpInfo(appId, excludeNotOwnedSubscriptions, storeId);
+    public RestApiArrayResultSubscriptionSummary getSubscriptionsForApp(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, Boolean excludeCancelledSubscriptions) throws ApiException {
+        ApiResponse<RestApiArrayResultSubscriptionSummary> resp = getSubscriptionsForAppWithHttpInfo(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions);
         return resp.getData();
     }
 
@@ -282,11 +286,12 @@ public class SubscriptionsApi {
      * @param appId  (required)
      * @param excludeNotOwnedSubscriptions  (optional)
      * @param storeId  (optional)
+     * @param excludeCancelledSubscriptions  (optional)
      * @return ApiResponse&lt;RestApiArrayResultSubscriptionSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultSubscriptionSummary> getSubscriptionsForAppWithHttpInfo(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId) throws ApiException {
-        com.squareup.okhttp.Call call = getSubscriptionsForAppValidateBeforeCall(appId, excludeNotOwnedSubscriptions, storeId, null, null);
+    public ApiResponse<RestApiArrayResultSubscriptionSummary> getSubscriptionsForAppWithHttpInfo(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, Boolean excludeCancelledSubscriptions) throws ApiException {
+        com.squareup.okhttp.Call call = getSubscriptionsForAppValidateBeforeCall(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultSubscriptionSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -297,11 +302,12 @@ public class SubscriptionsApi {
      * @param appId  (required)
      * @param excludeNotOwnedSubscriptions  (optional)
      * @param storeId  (optional)
+     * @param excludeCancelledSubscriptions  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSubscriptionsForAppAsync(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, final ApiCallback<RestApiArrayResultSubscriptionSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSubscriptionsForAppAsync(String appId, Boolean excludeNotOwnedSubscriptions, List<Integer> storeId, Boolean excludeCancelledSubscriptions, final ApiCallback<RestApiArrayResultSubscriptionSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -322,7 +328,7 @@ public class SubscriptionsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getSubscriptionsForAppValidateBeforeCall(appId, excludeNotOwnedSubscriptions, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSubscriptionsForAppValidateBeforeCall(appId, excludeNotOwnedSubscriptions, storeId, excludeCancelledSubscriptions, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultSubscriptionSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
