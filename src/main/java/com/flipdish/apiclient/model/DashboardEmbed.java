@@ -28,7 +28,7 @@ import java.io.IOException;
  * SSO Embed URL Information
  */
 @ApiModel(description = "SSO Embed URL Information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class DashboardEmbed {
   @SerializedName("EmbedUrl")
   private String embedUrl = null;

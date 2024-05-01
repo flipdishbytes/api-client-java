@@ -27,10 +27,13 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsSummary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class PayoutReport3DetailsSummary {
   @SerializedName("Revenue")
   private Double revenue = null;
+
+  @SerializedName("RevenueOfWhichCash")
+  private Double revenueOfWhichCash = null;
 
   @SerializedName("RevenueForFeeCalculations")
   private Double revenueForFeeCalculations = null;
@@ -63,6 +66,24 @@ public class PayoutReport3DetailsSummary {
 
   public void setRevenue(Double revenue) {
     this.revenue = revenue;
+  }
+
+  public PayoutReport3DetailsSummary revenueOfWhichCash(Double revenueOfWhichCash) {
+    this.revenueOfWhichCash = revenueOfWhichCash;
+    return this;
+  }
+
+   /**
+   * Get revenueOfWhichCash
+   * @return revenueOfWhichCash
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRevenueOfWhichCash() {
+    return revenueOfWhichCash;
+  }
+
+  public void setRevenueOfWhichCash(Double revenueOfWhichCash) {
+    this.revenueOfWhichCash = revenueOfWhichCash;
   }
 
   public PayoutReport3DetailsSummary revenueForFeeCalculations(Double revenueForFeeCalculations) {
@@ -166,6 +187,7 @@ public class PayoutReport3DetailsSummary {
     }
     PayoutReport3DetailsSummary payoutReport3DetailsSummary = (PayoutReport3DetailsSummary) o;
     return Objects.equals(this.revenue, payoutReport3DetailsSummary.revenue) &&
+        Objects.equals(this.revenueOfWhichCash, payoutReport3DetailsSummary.revenueOfWhichCash) &&
         Objects.equals(this.revenueForFeeCalculations, payoutReport3DetailsSummary.revenueForFeeCalculations) &&
         Objects.equals(this.flipdishFees, payoutReport3DetailsSummary.flipdishFees) &&
         Objects.equals(this.adjustments, payoutReport3DetailsSummary.adjustments) &&
@@ -175,7 +197,7 @@ public class PayoutReport3DetailsSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(revenue, revenueForFeeCalculations, flipdishFees, adjustments, thirdPartyIntegrationFeesAndTips, total);
+    return Objects.hash(revenue, revenueOfWhichCash, revenueForFeeCalculations, flipdishFees, adjustments, thirdPartyIntegrationFeesAndTips, total);
   }
 
 
@@ -185,6 +207,7 @@ public class PayoutReport3DetailsSummary {
     sb.append("class PayoutReport3DetailsSummary {\n");
     
     sb.append("    revenue: ").append(toIndentedString(revenue)).append("\n");
+    sb.append("    revenueOfWhichCash: ").append(toIndentedString(revenueOfWhichCash)).append("\n");
     sb.append("    revenueForFeeCalculations: ").append(toIndentedString(revenueForFeeCalculations)).append("\n");
     sb.append("    flipdishFees: ").append(toIndentedString(flipdishFees)).append("\n");
     sb.append("    adjustments: ").append(toIndentedString(adjustments)).append("\n");

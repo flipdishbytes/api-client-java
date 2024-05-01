@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User updated event
  */
 @ApiModel(description = "User updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class UserUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

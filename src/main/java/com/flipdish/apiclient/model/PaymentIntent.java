@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Represents stripe PaymentIntent
  */
 @ApiModel(description = "Represents stripe PaymentIntent")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class PaymentIntent {
   @SerializedName("Id")
   private String id = null;

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PayoutReport3Overview
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class PayoutReport3Overview {
   @SerializedName("PayoutReport3OverviewHeader")
   private PayoutReport3OverviewHeader payoutReport3OverviewHeader = null;

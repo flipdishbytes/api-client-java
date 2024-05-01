@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * External event
  */
 @ApiModel(description = "External event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class ExternalStoreAuditLog {
   @SerializedName("ExternalCreateTime")
   private OffsetDateTime externalCreateTime = null;

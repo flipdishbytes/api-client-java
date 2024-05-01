@@ -31,7 +31,7 @@ import java.util.UUID;
 /**
  * NutritionInfoMenuItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class NutritionInfoMenuItem {
   @SerializedName("PublicId")
   private UUID publicId = null;

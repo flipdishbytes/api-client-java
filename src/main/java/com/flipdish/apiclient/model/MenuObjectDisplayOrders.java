@@ -31,7 +31,7 @@ import java.util.List;
  * Collection of Display Orders for a Menu Object (Menu Section / Menu Items / Option Sets etc)
  */
 @ApiModel(description = "Collection of Display Orders for a Menu Object (Menu Section / Menu Items / Option Sets etc)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class MenuObjectDisplayOrders {
   @SerializedName("DisplayOrders")
   private List<ObjectDisplayOrder> displayOrders = null;

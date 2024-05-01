@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3OverviewHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T08:54:31.060Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-01T09:41:20.342Z")
 public class PayoutReport3OverviewHeader {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
