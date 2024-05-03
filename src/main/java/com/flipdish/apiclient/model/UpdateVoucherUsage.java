@@ -28,7 +28,7 @@ import java.io.IOException;
  * Update Voucher Usage
  */
 @ApiModel(description = "Update Voucher Usage")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-02T12:30:06.816Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-03T09:12:37.178Z")
 public class UpdateVoucherUsage {
   @SerializedName("IsUsed")
   private Boolean isUsed = null;

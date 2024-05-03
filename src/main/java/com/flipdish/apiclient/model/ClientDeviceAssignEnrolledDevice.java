@@ -28,7 +28,7 @@ import java.io.IOException;
  * Assign enrolled device to AppId
  */
 @ApiModel(description = "Assign enrolled device to AppId")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-02T12:30:06.816Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-03T09:12:37.178Z")
 public class ClientDeviceAssignEnrolledDevice {
   @SerializedName("DeviceModel")
   private String deviceModel = null;

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-02T12:30:06.816Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-03T09:12:37.178Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
@@ -67,6 +67,9 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @SerializedName("OtherIntegrationTips")
   private Double otherIntegrationTips = null;
+
+  @SerializedName("RefundedFeesOnRefundedSales")
+  private Double refundedFeesOnRefundedSales = null;
 
   @SerializedName("Vat")
   private Double vat = null;
@@ -308,6 +311,24 @@ public class PayoutReport3DetailsFlipdishFees {
     this.otherIntegrationTips = otherIntegrationTips;
   }
 
+  public PayoutReport3DetailsFlipdishFees refundedFeesOnRefundedSales(Double refundedFeesOnRefundedSales) {
+    this.refundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
+    return this;
+  }
+
+   /**
+   * Get refundedFeesOnRefundedSales
+   * @return refundedFeesOnRefundedSales
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundedFeesOnRefundedSales() {
+    return refundedFeesOnRefundedSales;
+  }
+
+  public void setRefundedFeesOnRefundedSales(Double refundedFeesOnRefundedSales) {
+    this.refundedFeesOnRefundedSales = refundedFeesOnRefundedSales;
+  }
+
   public PayoutReport3DetailsFlipdishFees vat(Double vat) {
     this.vat = vat;
     return this;
@@ -367,13 +388,14 @@ public class PayoutReport3DetailsFlipdishFees {
         Objects.equals(this.posCardOnFlipdishOrders, payoutReport3DetailsFlipdishFees.posCardOnFlipdishOrders) &&
         Objects.equals(this.otherIntegrationFees, payoutReport3DetailsFlipdishFees.otherIntegrationFees) &&
         Objects.equals(this.otherIntegrationTips, payoutReport3DetailsFlipdishFees.otherIntegrationTips) &&
+        Objects.equals(this.refundedFeesOnRefundedSales, payoutReport3DetailsFlipdishFees.refundedFeesOnRefundedSales) &&
         Objects.equals(this.vat, payoutReport3DetailsFlipdishFees.vat) &&
         Objects.equals(this.total, payoutReport3DetailsFlipdishFees.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, vat, total);
+    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCard, qropCash, qropCard, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, refundedFeesOnRefundedSales, vat, total);
   }
 
 
@@ -395,6 +417,7 @@ public class PayoutReport3DetailsFlipdishFees {
     sb.append("    posCardOnFlipdishOrders: ").append(toIndentedString(posCardOnFlipdishOrders)).append("\n");
     sb.append("    otherIntegrationFees: ").append(toIndentedString(otherIntegrationFees)).append("\n");
     sb.append("    otherIntegrationTips: ").append(toIndentedString(otherIntegrationTips)).append("\n");
+    sb.append("    refundedFeesOnRefundedSales: ").append(toIndentedString(refundedFeesOnRefundedSales)).append("\n");
     sb.append("    vat: ").append(toIndentedString(vat)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");

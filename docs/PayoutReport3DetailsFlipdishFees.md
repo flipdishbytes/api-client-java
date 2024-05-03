@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **posCardOnFlipdishOrders** | **Double** |  |  [optional]
 **otherIntegrationFees** | **Double** |  |  [optional]
 **otherIntegrationTips** | **Double** |  |  [optional]
+**refundedFeesOnRefundedSales** | **Double** |  |  [optional]
 **vat** | **Double** |  |  [optional]
 **total** | **Double** |  |  [optional]
 

@@ -28,10 +28,13 @@ import java.io.IOException;
  * Kiosk level settings
  */
 @ApiModel(description = "Kiosk level settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-02T12:30:06.816Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-03T09:12:37.178Z")
 public class KioskSettings {
   @SerializedName("HideLogoFromFrontPage")
   private Boolean hideLogoFromFrontPage = null;
+
+  @SerializedName("TwoColumnMenuLayout")
+  private Boolean twoColumnMenuLayout = null;
 
   public KioskSettings hideLogoFromFrontPage(Boolean hideLogoFromFrontPage) {
     this.hideLogoFromFrontPage = hideLogoFromFrontPage;
@@ -51,6 +54,24 @@ public class KioskSettings {
     this.hideLogoFromFrontPage = hideLogoFromFrontPage;
   }
 
+  public KioskSettings twoColumnMenuLayout(Boolean twoColumnMenuLayout) {
+    this.twoColumnMenuLayout = twoColumnMenuLayout;
+    return this;
+  }
+
+   /**
+   * 2 Column Menu Layout
+   * @return twoColumnMenuLayout
+  **/
+  @ApiModelProperty(value = "2 Column Menu Layout")
+  public Boolean isTwoColumnMenuLayout() {
+    return twoColumnMenuLayout;
+  }
+
+  public void setTwoColumnMenuLayout(Boolean twoColumnMenuLayout) {
+    this.twoColumnMenuLayout = twoColumnMenuLayout;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -61,12 +82,13 @@ public class KioskSettings {
       return false;
     }
     KioskSettings kioskSettings = (KioskSettings) o;
-    return Objects.equals(this.hideLogoFromFrontPage, kioskSettings.hideLogoFromFrontPage);
+    return Objects.equals(this.hideLogoFromFrontPage, kioskSettings.hideLogoFromFrontPage) &&
+        Objects.equals(this.twoColumnMenuLayout, kioskSettings.twoColumnMenuLayout);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(hideLogoFromFrontPage);
+    return Objects.hash(hideLogoFromFrontPage, twoColumnMenuLayout);
   }
 
 
@@ -76,6 +98,7 @@ public class KioskSettings {
     sb.append("class KioskSettings {\n");
     
     sb.append("    hideLogoFromFrontPage: ").append(toIndentedString(hideLogoFromFrontPage)).append("\n");
+    sb.append("    twoColumnMenuLayout: ").append(toIndentedString(twoColumnMenuLayout)).append("\n");
     sb.append("}");
     return sb.toString();
   }
