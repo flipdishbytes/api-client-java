@@ -5,17 +5,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **orderId** | **Integer** |  |  [optional]
-**payoutId** | **Integer** |  |  [optional]
 **orderDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**storeId** | **Integer** |  |  [optional]
+**storeName** | **String** |  |  [optional]
 **orderType** | [**OrderTypeEnum**](#OrderTypeEnum) |  |  [optional]
-**orderCurrency** | [**OrderCurrencyEnum**](#OrderCurrencyEnum) |  |  [optional]
 **sales** | **Double** |  |  [optional]
 **salesTax** | **Double** |  |  [optional]
 **deliveryCharges** | **Double** |  |  [optional]
 **tips** | **Double** |  |  [optional]
 **voucher** | **Double** |  |  [optional]
-**storeId** | **Integer** |  |  [optional]
-**storeName** | **String** |  |  [optional]
+**orderCurrency** | [**OrderCurrencyEnum**](#OrderCurrencyEnum) |  |  [optional]
 **refundChargebackType** | [**RefundChargebackTypeEnum**](#RefundChargebackTypeEnum) |  |  [optional]
 
 

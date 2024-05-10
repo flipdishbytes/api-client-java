@@ -28,7 +28,7 @@ import java.io.IOException;
  * Rest api integer result
  */
 @ApiModel(description = "Rest api integer result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-08T07:15:10.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-10T08:41:33.858Z")
 public class RestApiIntegerResult {
   @SerializedName("Data")
   private Integer data = null;

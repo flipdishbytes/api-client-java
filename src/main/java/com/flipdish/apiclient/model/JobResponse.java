@@ -34,7 +34,7 @@ import org.threeten.bp.OffsetDateTime;
  * Job Response
  */
 @ApiModel(description = "Job Response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-08T07:15:10.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-10T08:41:33.858Z")
 public class JobResponse {
   @SerializedName("Id")
   private Integer id = null;

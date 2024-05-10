@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Status of the bluetooth terminal
  */
 @ApiModel(description = "Status of the bluetooth terminal")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-08T07:15:10.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-10T08:41:33.858Z")
 public class BluetoothTerminalStatus {
   @SerializedName("SerialNumber")
   private String serialNumber = null;

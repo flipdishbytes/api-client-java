@@ -28,16 +28,19 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3PayoutOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-08T07:15:10.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-10T08:41:33.858Z")
 public class PayoutReport3PayoutOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;
 
-  @SerializedName("PayoutId")
-  private Integer payoutId = null;
-
   @SerializedName("OrderDate")
   private OffsetDateTime orderDate = null;
+
+  @SerializedName("StoreId")
+  private Integer storeId = null;
+
+  @SerializedName("StoreName")
+  private String storeName = null;
 
   /**
    * Gets or Sets orderType
@@ -88,6 +91,21 @@ public class PayoutReport3PayoutOrder {
 
   @SerializedName("OrderType")
   private OrderTypeEnum orderType = null;
+
+  @SerializedName("Sales")
+  private Double sales = null;
+
+  @SerializedName("SalesTax")
+  private Double salesTax = null;
+
+  @SerializedName("DeliveryCharges")
+  private Double deliveryCharges = null;
+
+  @SerializedName("Tips")
+  private Double tips = null;
+
+  @SerializedName("Voucher")
+  private Double voucher = null;
 
   /**
    * Gets or Sets orderCurrency
@@ -361,27 +379,6 @@ public class PayoutReport3PayoutOrder {
   @SerializedName("OrderCurrency")
   private OrderCurrencyEnum orderCurrency = null;
 
-  @SerializedName("Sales")
-  private Double sales = null;
-
-  @SerializedName("SalesTax")
-  private Double salesTax = null;
-
-  @SerializedName("DeliveryCharges")
-  private Double deliveryCharges = null;
-
-  @SerializedName("Tips")
-  private Double tips = null;
-
-  @SerializedName("Voucher")
-  private Double voucher = null;
-
-  @SerializedName("StoreId")
-  private Integer storeId = null;
-
-  @SerializedName("StoreName")
-  private String storeName = null;
-
   /**
    * Gets or Sets refundChargebackType
    */
@@ -450,24 +447,6 @@ public class PayoutReport3PayoutOrder {
     this.orderId = orderId;
   }
 
-  public PayoutReport3PayoutOrder payoutId(Integer payoutId) {
-    this.payoutId = payoutId;
-    return this;
-  }
-
-   /**
-   * Get payoutId
-   * @return payoutId
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getPayoutId() {
-    return payoutId;
-  }
-
-  public void setPayoutId(Integer payoutId) {
-    this.payoutId = payoutId;
-  }
-
   public PayoutReport3PayoutOrder orderDate(OffsetDateTime orderDate) {
     this.orderDate = orderDate;
     return this;
@@ -486,6 +465,42 @@ public class PayoutReport3PayoutOrder {
     this.orderDate = orderDate;
   }
 
+  public PayoutReport3PayoutOrder storeId(Integer storeId) {
+    this.storeId = storeId;
+    return this;
+  }
+
+   /**
+   * Get storeId
+   * @return storeId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getStoreId() {
+    return storeId;
+  }
+
+  public void setStoreId(Integer storeId) {
+    this.storeId = storeId;
+  }
+
+  public PayoutReport3PayoutOrder storeName(String storeName) {
+    this.storeName = storeName;
+    return this;
+  }
+
+   /**
+   * Get storeName
+   * @return storeName
+  **/
+  @ApiModelProperty(value = "")
+  public String getStoreName() {
+    return storeName;
+  }
+
+  public void setStoreName(String storeName) {
+    this.storeName = storeName;
+  }
+
   public PayoutReport3PayoutOrder orderType(OrderTypeEnum orderType) {
     this.orderType = orderType;
     return this;
@@ -502,24 +517,6 @@ public class PayoutReport3PayoutOrder {
 
   public void setOrderType(OrderTypeEnum orderType) {
     this.orderType = orderType;
-  }
-
-  public PayoutReport3PayoutOrder orderCurrency(OrderCurrencyEnum orderCurrency) {
-    this.orderCurrency = orderCurrency;
-    return this;
-  }
-
-   /**
-   * Get orderCurrency
-   * @return orderCurrency
-  **/
-  @ApiModelProperty(value = "")
-  public OrderCurrencyEnum getOrderCurrency() {
-    return orderCurrency;
-  }
-
-  public void setOrderCurrency(OrderCurrencyEnum orderCurrency) {
-    this.orderCurrency = orderCurrency;
   }
 
   public PayoutReport3PayoutOrder sales(Double sales) {
@@ -612,40 +609,22 @@ public class PayoutReport3PayoutOrder {
     this.voucher = voucher;
   }
 
-  public PayoutReport3PayoutOrder storeId(Integer storeId) {
-    this.storeId = storeId;
+  public PayoutReport3PayoutOrder orderCurrency(OrderCurrencyEnum orderCurrency) {
+    this.orderCurrency = orderCurrency;
     return this;
   }
 
    /**
-   * Get storeId
-   * @return storeId
+   * Get orderCurrency
+   * @return orderCurrency
   **/
   @ApiModelProperty(value = "")
-  public Integer getStoreId() {
-    return storeId;
+  public OrderCurrencyEnum getOrderCurrency() {
+    return orderCurrency;
   }
 
-  public void setStoreId(Integer storeId) {
-    this.storeId = storeId;
-  }
-
-  public PayoutReport3PayoutOrder storeName(String storeName) {
-    this.storeName = storeName;
-    return this;
-  }
-
-   /**
-   * Get storeName
-   * @return storeName
-  **/
-  @ApiModelProperty(value = "")
-  public String getStoreName() {
-    return storeName;
-  }
-
-  public void setStoreName(String storeName) {
-    this.storeName = storeName;
+  public void setOrderCurrency(OrderCurrencyEnum orderCurrency) {
+    this.orderCurrency = orderCurrency;
   }
 
   public PayoutReport3PayoutOrder refundChargebackType(RefundChargebackTypeEnum refundChargebackType) {
@@ -677,23 +656,22 @@ public class PayoutReport3PayoutOrder {
     }
     PayoutReport3PayoutOrder payoutReport3PayoutOrder = (PayoutReport3PayoutOrder) o;
     return Objects.equals(this.orderId, payoutReport3PayoutOrder.orderId) &&
-        Objects.equals(this.payoutId, payoutReport3PayoutOrder.payoutId) &&
         Objects.equals(this.orderDate, payoutReport3PayoutOrder.orderDate) &&
+        Objects.equals(this.storeId, payoutReport3PayoutOrder.storeId) &&
+        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName) &&
         Objects.equals(this.orderType, payoutReport3PayoutOrder.orderType) &&
-        Objects.equals(this.orderCurrency, payoutReport3PayoutOrder.orderCurrency) &&
         Objects.equals(this.sales, payoutReport3PayoutOrder.sales) &&
         Objects.equals(this.salesTax, payoutReport3PayoutOrder.salesTax) &&
         Objects.equals(this.deliveryCharges, payoutReport3PayoutOrder.deliveryCharges) &&
         Objects.equals(this.tips, payoutReport3PayoutOrder.tips) &&
         Objects.equals(this.voucher, payoutReport3PayoutOrder.voucher) &&
-        Objects.equals(this.storeId, payoutReport3PayoutOrder.storeId) &&
-        Objects.equals(this.storeName, payoutReport3PayoutOrder.storeName) &&
+        Objects.equals(this.orderCurrency, payoutReport3PayoutOrder.orderCurrency) &&
         Objects.equals(this.refundChargebackType, payoutReport3PayoutOrder.refundChargebackType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, payoutId, orderDate, orderType, orderCurrency, sales, salesTax, deliveryCharges, tips, voucher, storeId, storeName, refundChargebackType);
+    return Objects.hash(orderId, orderDate, storeId, storeName, orderType, sales, salesTax, deliveryCharges, tips, voucher, orderCurrency, refundChargebackType);
   }
 
 
@@ -703,17 +681,16 @@ public class PayoutReport3PayoutOrder {
     sb.append("class PayoutReport3PayoutOrder {\n");
     
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
-    sb.append("    payoutId: ").append(toIndentedString(payoutId)).append("\n");
     sb.append("    orderDate: ").append(toIndentedString(orderDate)).append("\n");
+    sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
     sb.append("    orderType: ").append(toIndentedString(orderType)).append("\n");
-    sb.append("    orderCurrency: ").append(toIndentedString(orderCurrency)).append("\n");
     sb.append("    sales: ").append(toIndentedString(sales)).append("\n");
     sb.append("    salesTax: ").append(toIndentedString(salesTax)).append("\n");
     sb.append("    deliveryCharges: ").append(toIndentedString(deliveryCharges)).append("\n");
     sb.append("    tips: ").append(toIndentedString(tips)).append("\n");
     sb.append("    voucher: ").append(toIndentedString(voucher)).append("\n");
-    sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
-    sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
+    sb.append("    orderCurrency: ").append(toIndentedString(orderCurrency)).append("\n");
     sb.append("    refundChargebackType: ").append(toIndentedString(refundChargebackType)).append("\n");
     sb.append("}");
     return sb.toString();
