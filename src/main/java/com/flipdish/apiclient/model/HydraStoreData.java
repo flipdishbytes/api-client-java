@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Data
  */
 @ApiModel(description = "Store Data")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-10T13:57:28.794Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-15T14:54:03.991Z")
 public class HydraStoreData {
   @SerializedName("StoreId")
   private Integer storeId = null;
