@@ -60,7 +60,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **String**|  | [enum: Question, StoreLocation, PaymentSubscription]
+ **signupStepAction** | **String**|  | [enum: Question, StoreLocation, PaymentSubscription, StoreName]
  **answerId** | **Integer**|  |
 
 ### Return type
@@ -850,7 +850,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signupStepAction** | **String**|  | [enum: Question, StoreLocation, PaymentSubscription]
+ **signupStepAction** | **String**|  | [enum: Question, StoreLocation, PaymentSubscription, StoreName]
 
 ### Return type
 

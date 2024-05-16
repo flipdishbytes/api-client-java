@@ -16,6 +16,7 @@ Name | Value
 QUESTION | &quot;Question&quot;
 STORELOCATION | &quot;StoreLocation&quot;
 PAYMENTSUBSCRIPTION | &quot;PaymentSubscription&quot;
+STORENAME | &quot;StoreName&quot;
 
 
 
