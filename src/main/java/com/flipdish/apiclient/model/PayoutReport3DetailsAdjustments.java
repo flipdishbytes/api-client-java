@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-16T10:11:06.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-16T14:49:16.325Z")
 public class PayoutReport3DetailsAdjustments {
   @SerializedName("OpeningBalanceDate")
   private OffsetDateTime openingBalanceDate = null;
@@ -77,6 +77,9 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("CashCustomerFeesBracketsOutOfAmount")
   private Double cashCustomerFeesBracketsOutOfAmount = null;
+
+  @SerializedName("BalanceChange")
+  private Double balanceChange = null;
 
   public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
     this.openingBalanceDate = openingBalanceDate;
@@ -366,6 +369,24 @@ public class PayoutReport3DetailsAdjustments {
     this.cashCustomerFeesBracketsOutOfAmount = cashCustomerFeesBracketsOutOfAmount;
   }
 
+  public PayoutReport3DetailsAdjustments balanceChange(Double balanceChange) {
+    this.balanceChange = balanceChange;
+    return this;
+  }
+
+   /**
+   * Get balanceChange
+   * @return balanceChange
+  **/
+  @ApiModelProperty(value = "")
+  public Double getBalanceChange() {
+    return balanceChange;
+  }
+
+  public void setBalanceChange(Double balanceChange) {
+    this.balanceChange = balanceChange;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -391,12 +412,13 @@ public class PayoutReport3DetailsAdjustments {
         Objects.equals(this.refundsOnCashOrdersBracketsAmount, payoutReport3DetailsAdjustments.refundsOnCashOrdersBracketsAmount) &&
         Objects.equals(this.refundsOnCashOrdersBracketsOutOfAmount, payoutReport3DetailsAdjustments.refundsOnCashOrdersBracketsOutOfAmount) &&
         Objects.equals(this.cashCustomerFeesBracketsAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsAmount) &&
-        Objects.equals(this.cashCustomerFeesBracketsOutOfAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsOutOfAmount);
+        Objects.equals(this.cashCustomerFeesBracketsOutOfAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsOutOfAmount) &&
+        Objects.equals(this.balanceChange, payoutReport3DetailsAdjustments.balanceChange);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount, balanceChange);
   }
 
 
@@ -421,6 +443,7 @@ public class PayoutReport3DetailsAdjustments {
     sb.append("    refundsOnCashOrdersBracketsOutOfAmount: ").append(toIndentedString(refundsOnCashOrdersBracketsOutOfAmount)).append("\n");
     sb.append("    cashCustomerFeesBracketsAmount: ").append(toIndentedString(cashCustomerFeesBracketsAmount)).append("\n");
     sb.append("    cashCustomerFeesBracketsOutOfAmount: ").append(toIndentedString(cashCustomerFeesBracketsOutOfAmount)).append("\n");
+    sb.append("    balanceChange: ").append(toIndentedString(balanceChange)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **refundsOnCashOrdersBracketsOutOfAmount** | **Double** |  |  [optional]
 **cashCustomerFeesBracketsAmount** | **Double** |  |  [optional]
 **cashCustomerFeesBracketsOutOfAmount** | **Double** |  |  [optional]
+**balanceChange** | **Double** |  |  [optional]
 
 
 
