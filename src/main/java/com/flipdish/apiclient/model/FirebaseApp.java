@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirebaseApp
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-20T09:58:34.284Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-20T14:33:59.945Z")
 public class FirebaseApp {
   @SerializedName("WhitelabelId")
   private Integer whitelabelId = null;
