@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3Store
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-20T09:43:29.322Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-20T09:58:34.284Z")
 public class PayoutReport3Store {
   @SerializedName("StoreId")
   private Integer storeId = null;
