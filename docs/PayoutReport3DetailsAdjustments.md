@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **cashCustomerFeesBracketsAmount** | **Double** |  |  [optional]
 **cashCustomerFeesBracketsOutOfAmount** | **Double** |  |  [optional]
 **balanceChange** | **Double** |  |  [optional]
+**previousPayoutId** | **Integer** |  |  [optional]
+**nextPayoutId** | **Integer** |  |  [optional]
 
 
 

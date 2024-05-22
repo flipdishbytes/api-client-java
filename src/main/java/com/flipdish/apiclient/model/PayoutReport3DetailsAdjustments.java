@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-20T14:33:59.945Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-22T10:57:56.866Z")
 public class PayoutReport3DetailsAdjustments {
   @SerializedName("OpeningBalanceDate")
   private OffsetDateTime openingBalanceDate = null;
@@ -80,6 +80,12 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("BalanceChange")
   private Double balanceChange = null;
+
+  @SerializedName("PreviousPayoutId")
+  private Integer previousPayoutId = null;
+
+  @SerializedName("NextPayoutId")
+  private Integer nextPayoutId = null;
 
   public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
     this.openingBalanceDate = openingBalanceDate;
@@ -387,6 +393,42 @@ public class PayoutReport3DetailsAdjustments {
     this.balanceChange = balanceChange;
   }
 
+  public PayoutReport3DetailsAdjustments previousPayoutId(Integer previousPayoutId) {
+    this.previousPayoutId = previousPayoutId;
+    return this;
+  }
+
+   /**
+   * Get previousPayoutId
+   * @return previousPayoutId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getPreviousPayoutId() {
+    return previousPayoutId;
+  }
+
+  public void setPreviousPayoutId(Integer previousPayoutId) {
+    this.previousPayoutId = previousPayoutId;
+  }
+
+  public PayoutReport3DetailsAdjustments nextPayoutId(Integer nextPayoutId) {
+    this.nextPayoutId = nextPayoutId;
+    return this;
+  }
+
+   /**
+   * Get nextPayoutId
+   * @return nextPayoutId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getNextPayoutId() {
+    return nextPayoutId;
+  }
+
+  public void setNextPayoutId(Integer nextPayoutId) {
+    this.nextPayoutId = nextPayoutId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -413,12 +455,14 @@ public class PayoutReport3DetailsAdjustments {
         Objects.equals(this.refundsOnCashOrdersBracketsOutOfAmount, payoutReport3DetailsAdjustments.refundsOnCashOrdersBracketsOutOfAmount) &&
         Objects.equals(this.cashCustomerFeesBracketsAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsAmount) &&
         Objects.equals(this.cashCustomerFeesBracketsOutOfAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsOutOfAmount) &&
-        Objects.equals(this.balanceChange, payoutReport3DetailsAdjustments.balanceChange);
+        Objects.equals(this.balanceChange, payoutReport3DetailsAdjustments.balanceChange) &&
+        Objects.equals(this.previousPayoutId, payoutReport3DetailsAdjustments.previousPayoutId) &&
+        Objects.equals(this.nextPayoutId, payoutReport3DetailsAdjustments.nextPayoutId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount, balanceChange);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount, balanceChange, previousPayoutId, nextPayoutId);
   }
 
 
@@ -444,6 +488,8 @@ public class PayoutReport3DetailsAdjustments {
     sb.append("    cashCustomerFeesBracketsAmount: ").append(toIndentedString(cashCustomerFeesBracketsAmount)).append("\n");
     sb.append("    cashCustomerFeesBracketsOutOfAmount: ").append(toIndentedString(cashCustomerFeesBracketsOutOfAmount)).append("\n");
     sb.append("    balanceChange: ").append(toIndentedString(balanceChange)).append("\n");
+    sb.append("    previousPayoutId: ").append(toIndentedString(previousPayoutId)).append("\n");
+    sb.append("    nextPayoutId: ").append(toIndentedString(nextPayoutId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

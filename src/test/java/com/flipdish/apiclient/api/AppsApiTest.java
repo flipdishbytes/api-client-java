@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
 import com.flipdish.apiclient.model.AppLookup;
 import com.flipdish.apiclient.model.AppSalesforceReferences;
+import com.flipdish.apiclient.model.CreateAppParameters;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
 import com.flipdish.apiclient.model.RestApiArrayResultSupportedCountry;
@@ -44,6 +45,22 @@ public class AppsApiTest {
 
     private final AppsApi api = new AppsApi();
 
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createAppTest() throws ApiException {
+        CreateAppParameters parameters = null;
+        RestApiStringResult response = api.createApp(parameters);
+
+        // TODO: test validations
+    }
     
     /**
      * 
