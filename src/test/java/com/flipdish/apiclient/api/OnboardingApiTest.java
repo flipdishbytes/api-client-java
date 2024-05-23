@@ -61,6 +61,22 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
+    public void onboardingGetOnboardingConfigsTest() throws ApiException {
+        String appId = null;
+        Object response = api.onboardingGetOnboardingConfigs(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void onboardingGetOnboardingItemsTest() throws ApiException {
         String appId = null;
         Integer storeId = null;

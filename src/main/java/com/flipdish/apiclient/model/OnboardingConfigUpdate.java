@@ -28,13 +28,63 @@ import java.io.IOException;
  * Model for updating the onboarding config
  */
 @ApiModel(description = "Model for updating the onboarding config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-22T10:57:56.866Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-23T10:04:12.028Z")
 public class OnboardingConfigUpdate {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
   @SerializedName("IsWelcomeScreenEnabled")
   private Boolean isWelcomeScreenEnabled = null;
+
+  /**
+   * Onboarding config type
+   */
+  @JsonAdapter(ConfigTypeEnum.Adapter.class)
+  public enum ConfigTypeEnum {
+    TUTORIAL("Tutorial"),
+    
+    ONBOARDINGWIZARD("OnboardingWizard");
+
+    private String value;
+
+    ConfigTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ConfigTypeEnum fromValue(String text) {
+      for (ConfigTypeEnum b : ConfigTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ConfigTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ConfigTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ConfigTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return ConfigTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("ConfigType")
+  private ConfigTypeEnum configType = null;
 
   public OnboardingConfigUpdate isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
@@ -72,6 +122,24 @@ public class OnboardingConfigUpdate {
     this.isWelcomeScreenEnabled = isWelcomeScreenEnabled;
   }
 
+  public OnboardingConfigUpdate configType(ConfigTypeEnum configType) {
+    this.configType = configType;
+    return this;
+  }
+
+   /**
+   * Onboarding config type
+   * @return configType
+  **/
+  @ApiModelProperty(value = "Onboarding config type")
+  public ConfigTypeEnum getConfigType() {
+    return configType;
+  }
+
+  public void setConfigType(ConfigTypeEnum configType) {
+    this.configType = configType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -83,12 +151,13 @@ public class OnboardingConfigUpdate {
     }
     OnboardingConfigUpdate onboardingConfigUpdate = (OnboardingConfigUpdate) o;
     return Objects.equals(this.isEnabled, onboardingConfigUpdate.isEnabled) &&
-        Objects.equals(this.isWelcomeScreenEnabled, onboardingConfigUpdate.isWelcomeScreenEnabled);
+        Objects.equals(this.isWelcomeScreenEnabled, onboardingConfigUpdate.isWelcomeScreenEnabled) &&
+        Objects.equals(this.configType, onboardingConfigUpdate.configType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isEnabled, isWelcomeScreenEnabled);
+    return Objects.hash(isEnabled, isWelcomeScreenEnabled, configType);
   }
 
 
@@ -99,6 +168,7 @@ public class OnboardingConfigUpdate {
     
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    isWelcomeScreenEnabled: ").append(toIndentedString(isWelcomeScreenEnabled)).append("\n");
+    sb.append("    configType: ").append(toIndentedString(configType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
