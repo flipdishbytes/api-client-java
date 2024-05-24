@@ -21,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultVoucherSummary;
 import com.flipdish.apiclient.model.RestApiResultVoucherWithStats;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.SetVoucherValidityPeriodsSimplifiedRequest;
 import com.flipdish.apiclient.model.UpdateVoucher;
 import com.flipdish.apiclient.model.UpdateVoucherUsage;
 import org.junit.Test;
@@ -100,6 +101,23 @@ public class VouchersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getVoucherValidityPeriodsTest() throws ApiException {
+        String appId = null;
+        Integer voucherId = null;
+        api.getVoucherValidityPeriods(appId, voucherId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getVouchersTest() throws ApiException {
         String appId = null;
         Integer pageIndex = null;
@@ -111,6 +129,24 @@ public class VouchersApiTest {
         List<Integer> storeIds = null;
         List<String> channelRestrictions = null;
         RestApiPaginationResultVoucherSummary response = api.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setVoucherValidityPeriodsSimplifiedTest() throws ApiException {
+        String appId = null;
+        Integer voucherId = null;
+        SetVoucherValidityPeriodsSimplifiedRequest request = null;
+        api.setVoucherValidityPeriodsSimplified(appId, voucherId, request);
 
         // TODO: test validations
     }

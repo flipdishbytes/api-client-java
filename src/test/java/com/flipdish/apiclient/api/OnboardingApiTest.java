@@ -112,6 +112,24 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
+    public void onboardingUpdateOnboardingConfigByIdTest() throws ApiException {
+        String appId = null;
+        Integer configId = null;
+        OnboardingConfigUpdate configUpdate = null;
+        Object response = api.onboardingUpdateOnboardingConfigById(appId, configId, configUpdate);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void onboardingUpdateOnboardingItemTest() throws ApiException {
         String appId = null;
         Integer storeId = null;

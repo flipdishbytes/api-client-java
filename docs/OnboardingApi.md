@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**onboardingGetOnboardingConfigs**](OnboardingApi.md#onboardingGetOnboardingConfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
 [**onboardingGetOnboardingItems**](OnboardingApi.md#onboardingGetOnboardingItems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 [**onboardingUpdateOnboardingConfig**](OnboardingApi.md#onboardingUpdateOnboardingConfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+[**onboardingUpdateOnboardingConfigById**](OnboardingApi.md#onboardingUpdateOnboardingConfigById) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
 [**onboardingUpdateOnboardingItem**](OnboardingApi.md#onboardingUpdateOnboardingItem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
 
 
@@ -206,6 +207,61 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
+ **configUpdate** | [**OnboardingConfigUpdate**](OnboardingConfigUpdate.md)|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="onboardingUpdateOnboardingConfigById"></a>
+# **onboardingUpdateOnboardingConfigById**
+> Object onboardingUpdateOnboardingConfigById(appId, configId, configUpdate)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OnboardingApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OnboardingApi apiInstance = new OnboardingApi();
+String appId = "appId_example"; // String | 
+Integer configId = 56; // Integer | 
+OnboardingConfigUpdate configUpdate = new OnboardingConfigUpdate(); // OnboardingConfigUpdate | 
+try {
+    Object result = apiInstance.onboardingUpdateOnboardingConfigById(appId, configId, configUpdate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OnboardingApi#onboardingUpdateOnboardingConfigById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **configId** | **Integer**|  |
  **configUpdate** | [**OnboardingConfigUpdate**](OnboardingConfigUpdate.md)|  |
 
 ### Return type
