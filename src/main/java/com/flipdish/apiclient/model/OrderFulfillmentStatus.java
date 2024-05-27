@@ -28,7 +28,7 @@ import java.io.IOException;
  * Order Fulfillment Status Information
  */
 @ApiModel(description = "Order Fulfillment Status Information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-24T07:41:25.611Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-27T09:33:37.709Z")
 public class OrderFulfillmentStatus {
   @SerializedName("OrderId")
   private Integer orderId = null;

@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * OAuth token model
  */
 @ApiModel(description = "OAuth token model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-24T07:41:25.611Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-27T09:33:37.709Z")
 public class OAuthTokenModel {
   @SerializedName("Key")
   private String key = null;
