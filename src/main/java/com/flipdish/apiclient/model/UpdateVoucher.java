@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.ValidityPeriod;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -32,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Update Voucher
  */
 @ApiModel(description = "Update Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-28T11:08:11.892Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-29T13:05:07.298Z")
 public class UpdateVoucher {
   @SerializedName("PromotionId")
   private Integer promotionId = null;
@@ -151,6 +152,9 @@ public class UpdateVoucher {
 
   @SerializedName("ChannelRestrictions")
   private List<ChannelRestrictionsEnum> channelRestrictions = null;
+
+  @SerializedName("ValidityPeriods")
+  private List<ValidityPeriod> validityPeriods = null;
 
   /**
    * Voucher Subtype
@@ -620,6 +624,32 @@ public class UpdateVoucher {
     this.channelRestrictions = channelRestrictions;
   }
 
+  public UpdateVoucher validityPeriods(List<ValidityPeriod> validityPeriods) {
+    this.validityPeriods = validityPeriods;
+    return this;
+  }
+
+  public UpdateVoucher addValidityPeriodsItem(ValidityPeriod validityPeriodsItem) {
+    if (this.validityPeriods == null) {
+      this.validityPeriods = new ArrayList<ValidityPeriod>();
+    }
+    this.validityPeriods.add(validityPeriodsItem);
+    return this;
+  }
+
+   /**
+   * Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won&#39;t be updated.
+   * @return validityPeriods
+  **/
+  @ApiModelProperty(value = "Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won't be updated.")
+  public List<ValidityPeriod> getValidityPeriods() {
+    return validityPeriods;
+  }
+
+  public void setValidityPeriods(List<ValidityPeriod> validityPeriods) {
+    this.validityPeriods = validityPeriods;
+  }
+
   public UpdateVoucher voucherSubType(VoucherSubTypeEnum voucherSubType) {
     this.voucherSubType = voucherSubType;
     return this;
@@ -705,6 +735,7 @@ public class UpdateVoucher {
         Objects.equals(this.startDate, updateVoucher.startDate) &&
         Objects.equals(this.expiryDate, updateVoucher.expiryDate) &&
         Objects.equals(this.channelRestrictions, updateVoucher.channelRestrictions) &&
+        Objects.equals(this.validityPeriods, updateVoucher.validityPeriods) &&
         Objects.equals(this.voucherSubType, updateVoucher.voucherSubType) &&
         Objects.equals(this.customerId, updateVoucher.customerId) &&
         Objects.equals(this.maxRedemptions, updateVoucher.maxRedemptions);
@@ -712,7 +743,7 @@ public class UpdateVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, voucherSubType, customerId, maxRedemptions);
+    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
   }
 
 
@@ -742,6 +773,7 @@ public class UpdateVoucher {
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
     sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
+    sb.append("    validityPeriods: ").append(toIndentedString(validityPeriods)).append("\n");
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
     sb.append("    maxRedemptions: ").append(toIndentedString(maxRedemptions)).append("\n");
