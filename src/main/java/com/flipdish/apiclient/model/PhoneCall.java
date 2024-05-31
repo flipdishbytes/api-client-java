@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Phone call
  */
 @ApiModel(description = "Phone call")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class PhoneCall {
   @SerializedName("PhoneCallId")
   private Integer phoneCallId = null;

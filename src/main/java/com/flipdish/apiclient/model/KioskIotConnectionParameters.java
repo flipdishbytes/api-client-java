@@ -28,7 +28,7 @@ import java.io.IOException;
  * Connection parameters to IoT
  */
 @ApiModel(description = "Connection parameters to IoT")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class KioskIotConnectionParameters {
   @SerializedName("ConnectionString")
   private String connectionString = null;

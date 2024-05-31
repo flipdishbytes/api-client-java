@@ -28,7 +28,7 @@ import java.io.IOException;
  * Device enrollment result
  */
 @ApiModel(description = "Device enrollment result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class ClientDeviceEnrollmentResult {
   @SerializedName("PinCode")
   private String pinCode = null;

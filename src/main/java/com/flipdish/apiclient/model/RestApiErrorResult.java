@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api error result
  */
 @ApiModel(description = "Rest api error result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class RestApiErrorResult {
   @SerializedName("Message")
   private String message = null;

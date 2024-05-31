@@ -28,7 +28,7 @@ import java.io.IOException;
  * Describes a ChannelAssignment which is   when a AppId is assigned to a Sales Channel
  */
 @ApiModel(description = "Describes a ChannelAssignment which is   when a AppId is assigned to a Sales Channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class AppChannelAssignment {
   @SerializedName("ChannelId")
   private Integer channelId = null;

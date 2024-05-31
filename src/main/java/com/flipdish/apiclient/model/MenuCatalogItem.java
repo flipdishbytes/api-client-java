@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information to add a CatalogItem to a Menu
  */
 @ApiModel(description = "Information to add a CatalogItem to a Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class MenuCatalogItem {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;

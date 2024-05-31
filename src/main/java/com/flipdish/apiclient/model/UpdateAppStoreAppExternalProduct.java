@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UpdateAppStoreAppExternalProduct
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-30T13:18:42.222Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
 public class UpdateAppStoreAppExternalProduct {
   @SerializedName("ExternalProductId")
   private String externalProductId = null;
