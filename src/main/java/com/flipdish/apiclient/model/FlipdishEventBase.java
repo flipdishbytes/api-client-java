@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Base Event
  */
 @ApiModel(description = "Base Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-05-31T12:34:31.769Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-04T09:04:01.976Z")
 public class FlipdishEventBase {
   @SerializedName("EventName")
   private String eventName = null;
