@@ -31,7 +31,7 @@ import java.util.List;
  * Account details
  */
 @ApiModel(description = "Account details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-07T08:18:55.550Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-07T11:03:38.308Z")
 public class AccountDetail {
   @SerializedName("Email")
   private String email = null;
