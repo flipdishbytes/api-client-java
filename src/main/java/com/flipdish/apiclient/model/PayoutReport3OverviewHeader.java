@@ -28,13 +28,16 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3OverviewHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-07T11:03:38.308Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-11T10:04:11.849Z")
 public class PayoutReport3OverviewHeader {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
 
   @SerializedName("BankAccountId")
   private Integer bankAccountId = null;
+
+  @SerializedName("IsManualPayout")
+  private Boolean isManualPayout = null;
 
   @SerializedName("AccountName")
   private String accountName = null;
@@ -97,6 +100,24 @@ public class PayoutReport3OverviewHeader {
 
   public void setBankAccountId(Integer bankAccountId) {
     this.bankAccountId = bankAccountId;
+  }
+
+  public PayoutReport3OverviewHeader isManualPayout(Boolean isManualPayout) {
+    this.isManualPayout = isManualPayout;
+    return this;
+  }
+
+   /**
+   * Get isManualPayout
+   * @return isManualPayout
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsManualPayout() {
+    return isManualPayout;
+  }
+
+  public void setIsManualPayout(Boolean isManualPayout) {
+    this.isManualPayout = isManualPayout;
   }
 
   public PayoutReport3OverviewHeader accountName(String accountName) {
@@ -273,6 +294,7 @@ public class PayoutReport3OverviewHeader {
     PayoutReport3OverviewHeader payoutReport3OverviewHeader = (PayoutReport3OverviewHeader) o;
     return Objects.equals(this.payoutId, payoutReport3OverviewHeader.payoutId) &&
         Objects.equals(this.bankAccountId, payoutReport3OverviewHeader.bankAccountId) &&
+        Objects.equals(this.isManualPayout, payoutReport3OverviewHeader.isManualPayout) &&
         Objects.equals(this.accountName, payoutReport3OverviewHeader.accountName) &&
         Objects.equals(this.payoutStatus, payoutReport3OverviewHeader.payoutStatus) &&
         Objects.equals(this.createdDate, payoutReport3OverviewHeader.createdDate) &&
@@ -286,7 +308,7 @@ public class PayoutReport3OverviewHeader {
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, bankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, currency);
+    return Objects.hash(payoutId, bankAccountId, isManualPayout, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, currency);
   }
 
 
@@ -297,6 +319,7 @@ public class PayoutReport3OverviewHeader {
     
     sb.append("    payoutId: ").append(toIndentedString(payoutId)).append("\n");
     sb.append("    bankAccountId: ").append(toIndentedString(bankAccountId)).append("\n");
+    sb.append("    isManualPayout: ").append(toIndentedString(isManualPayout)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    payoutStatus: ").append(toIndentedString(payoutStatus)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");

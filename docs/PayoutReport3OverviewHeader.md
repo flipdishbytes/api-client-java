@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payoutId** | **Integer** |  |  [optional]
 **bankAccountId** | **Integer** |  |  [optional]
+**isManualPayout** | **Boolean** |  |  [optional]
 **accountName** | **String** |  |  [optional]
 **payoutStatus** | **String** |  |  [optional]
 **createdDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
