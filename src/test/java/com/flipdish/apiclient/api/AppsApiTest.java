@@ -16,7 +16,6 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
 import com.flipdish.apiclient.model.AppLookup;
-import com.flipdish.apiclient.model.AppSalesforceReferences;
 import com.flipdish.apiclient.model.CreateAppParameters;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
@@ -140,22 +139,6 @@ public class AppsApiTest {
     public void getPanaceaVanityUrlTest() throws ApiException {
         String appId = null;
         RestApiStringResult response = api.getPanaceaVanityUrl(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getSalesforceReferencesTest() throws ApiException {
-        String appId = null;
-        AppSalesforceReferences response = api.getSalesforceReferences(appId);
 
         // TODO: test validations
     }
@@ -307,23 +290,6 @@ public class AppsApiTest {
         String appId = null;
         String vanityUrl = null;
         RestApiStringResult response = api.setPanaceaVanityUrl(appId, vanityUrl);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void setSalesforceReferencesTest() throws ApiException {
-        String appId = null;
-        AppSalesforceReferences salesforceReferences = null;
-        RestApiStringResult response = api.setSalesforceReferences(appId, salesforceReferences);
 
         // TODO: test validations
     }

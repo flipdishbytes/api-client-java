@@ -28,16 +28,10 @@ import java.io.IOException;
  * App lookup model
  */
 @ApiModel(description = "App lookup model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-11T10:04:11.849Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-24T10:16:25.462Z")
 public class AppLookup {
   @SerializedName("AppId")
   private String appId = null;
-
-  @SerializedName("OpportunityId")
-  private String opportunityId = null;
-
-  @SerializedName("AccountId")
-  private String accountId = null;
 
   public AppLookup appId(String appId) {
     this.appId = appId;
@@ -57,42 +51,6 @@ public class AppLookup {
     this.appId = appId;
   }
 
-  public AppLookup opportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
-    return this;
-  }
-
-   /**
-   * Salesforce opportunity id
-   * @return opportunityId
-  **/
-  @ApiModelProperty(value = "Salesforce opportunity id")
-  public String getOpportunityId() {
-    return opportunityId;
-  }
-
-  public void setOpportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
-  }
-
-  public AppLookup accountId(String accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * Salesforce account id
-   * @return accountId
-  **/
-  @ApiModelProperty(value = "Salesforce account id")
-  public String getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -103,14 +61,12 @@ public class AppLookup {
       return false;
     }
     AppLookup appLookup = (AppLookup) o;
-    return Objects.equals(this.appId, appLookup.appId) &&
-        Objects.equals(this.opportunityId, appLookup.opportunityId) &&
-        Objects.equals(this.accountId, appLookup.accountId);
+    return Objects.equals(this.appId, appLookup.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, opportunityId, accountId);
+    return Objects.hash(appId);
   }
 
 
@@ -120,8 +76,6 @@ public class AppLookup {
     sb.append("class AppLookup {\n");
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
-    sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

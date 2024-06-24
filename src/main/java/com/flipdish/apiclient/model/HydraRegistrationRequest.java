@@ -30,7 +30,7 @@ import java.util.List;
  * Hydra registration result
  */
 @ApiModel(description = "Hydra registration result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-11T10:04:11.849Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-24T10:16:25.462Z")
 public class HydraRegistrationRequest {
   @SerializedName("StoreIds")
   private List<Integer> storeIds = new ArrayList<Integer>();

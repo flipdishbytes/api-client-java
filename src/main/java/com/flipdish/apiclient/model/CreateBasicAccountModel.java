@@ -28,19 +28,13 @@ import java.io.IOException;
  * Basic attributes for creating an account
  */
 @ApiModel(description = "Basic attributes for creating an account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-11T10:04:11.849Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-06-24T10:16:25.462Z")
 public class CreateBasicAccountModel {
   @SerializedName("StoreName")
   private String storeName = null;
 
   @SerializedName("LanguageId")
   private String languageId = null;
-
-  @SerializedName("OpportunityId")
-  private String opportunityId = null;
-
-  @SerializedName("AccountId")
-  private String accountId = null;
 
   public CreateBasicAccountModel storeName(String storeName) {
     this.storeName = storeName;
@@ -78,42 +72,6 @@ public class CreateBasicAccountModel {
     this.languageId = languageId;
   }
 
-  public CreateBasicAccountModel opportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
-    return this;
-  }
-
-   /**
-   * Salesforce Opportunity ID
-   * @return opportunityId
-  **/
-  @ApiModelProperty(value = "Salesforce Opportunity ID")
-  public String getOpportunityId() {
-    return opportunityId;
-  }
-
-  public void setOpportunityId(String opportunityId) {
-    this.opportunityId = opportunityId;
-  }
-
-  public CreateBasicAccountModel accountId(String accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-   /**
-   * Salesforce Account Id
-   * @return accountId
-  **/
-  @ApiModelProperty(value = "Salesforce Account Id")
-  public String getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,14 +83,12 @@ public class CreateBasicAccountModel {
     }
     CreateBasicAccountModel createBasicAccountModel = (CreateBasicAccountModel) o;
     return Objects.equals(this.storeName, createBasicAccountModel.storeName) &&
-        Objects.equals(this.languageId, createBasicAccountModel.languageId) &&
-        Objects.equals(this.opportunityId, createBasicAccountModel.opportunityId) &&
-        Objects.equals(this.accountId, createBasicAccountModel.accountId);
+        Objects.equals(this.languageId, createBasicAccountModel.languageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeName, languageId, opportunityId, accountId);
+    return Objects.hash(storeName, languageId);
   }
 
 
@@ -143,8 +99,6 @@ public class CreateBasicAccountModel {
     
     sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
     sb.append("    languageId: ").append(toIndentedString(languageId)).append("\n");
-    sb.append("    opportunityId: ").append(toIndentedString(opportunityId)).append("\n");
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
