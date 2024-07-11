@@ -28,10 +28,13 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsRevenue
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-11T08:29:17.212Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-11T15:23:50.002Z")
 public class PayoutReport3DetailsRevenue {
   @SerializedName("GrossSales")
   private PayoutReport3DetailsSalesLine grossSales = null;
+
+  @SerializedName("SalesTax")
+  private PayoutReport3DetailsSalesLine salesTax = null;
 
   @SerializedName("DeliveryCharges")
   private PayoutReport3DetailsSalesLine deliveryCharges = null;
@@ -67,6 +70,24 @@ public class PayoutReport3DetailsRevenue {
 
   public void setGrossSales(PayoutReport3DetailsSalesLine grossSales) {
     this.grossSales = grossSales;
+  }
+
+  public PayoutReport3DetailsRevenue salesTax(PayoutReport3DetailsSalesLine salesTax) {
+    this.salesTax = salesTax;
+    return this;
+  }
+
+   /**
+   * Get salesTax
+   * @return salesTax
+  **/
+  @ApiModelProperty(value = "")
+  public PayoutReport3DetailsSalesLine getSalesTax() {
+    return salesTax;
+  }
+
+  public void setSalesTax(PayoutReport3DetailsSalesLine salesTax) {
+    this.salesTax = salesTax;
   }
 
   public PayoutReport3DetailsRevenue deliveryCharges(PayoutReport3DetailsSalesLine deliveryCharges) {
@@ -188,6 +209,7 @@ public class PayoutReport3DetailsRevenue {
     }
     PayoutReport3DetailsRevenue payoutReport3DetailsRevenue = (PayoutReport3DetailsRevenue) o;
     return Objects.equals(this.grossSales, payoutReport3DetailsRevenue.grossSales) &&
+        Objects.equals(this.salesTax, payoutReport3DetailsRevenue.salesTax) &&
         Objects.equals(this.deliveryCharges, payoutReport3DetailsRevenue.deliveryCharges) &&
         Objects.equals(this.otherCharges, payoutReport3DetailsRevenue.otherCharges) &&
         Objects.equals(this.tips, payoutReport3DetailsRevenue.tips) &&
@@ -198,7 +220,7 @@ public class PayoutReport3DetailsRevenue {
 
   @Override
   public int hashCode() {
-    return Objects.hash(grossSales, deliveryCharges, otherCharges, tips, totalRevenue, revenueForFeeCalculations, drsCharges);
+    return Objects.hash(grossSales, salesTax, deliveryCharges, otherCharges, tips, totalRevenue, revenueForFeeCalculations, drsCharges);
   }
 
 
@@ -208,6 +230,7 @@ public class PayoutReport3DetailsRevenue {
     sb.append("class PayoutReport3DetailsRevenue {\n");
     
     sb.append("    grossSales: ").append(toIndentedString(grossSales)).append("\n");
+    sb.append("    salesTax: ").append(toIndentedString(salesTax)).append("\n");
     sb.append("    deliveryCharges: ").append(toIndentedString(deliveryCharges)).append("\n");
     sb.append("    otherCharges: ").append(toIndentedString(otherCharges)).append("\n");
     sb.append("    tips: ").append(toIndentedString(tips)).append("\n");
