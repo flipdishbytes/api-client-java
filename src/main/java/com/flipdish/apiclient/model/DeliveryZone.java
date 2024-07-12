@@ -28,10 +28,13 @@ import java.io.IOException;
  * Delivery Zone
  */
 @ApiModel(description = "Delivery Zone")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-11T15:23:50.002Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-12T12:32:29.357Z")
 public class DeliveryZone {
   @SerializedName("Id")
   private Integer id = null;
+
+  @SerializedName("FeeChargedToStore")
+  private Double feeChargedToStore = null;
 
   @SerializedName("DeliveryFee")
   private Double deliveryFee = null;
@@ -61,6 +64,24 @@ public class DeliveryZone {
 
   public void setId(Integer id) {
     this.id = id;
+  }
+
+  public DeliveryZone feeChargedToStore(Double feeChargedToStore) {
+    this.feeChargedToStore = feeChargedToStore;
+    return this;
+  }
+
+   /**
+   * Delivery Fee charged to store
+   * @return feeChargedToStore
+  **/
+  @ApiModelProperty(value = "Delivery Fee charged to store")
+  public Double getFeeChargedToStore() {
+    return feeChargedToStore;
+  }
+
+  public void setFeeChargedToStore(Double feeChargedToStore) {
+    this.feeChargedToStore = feeChargedToStore;
   }
 
   public DeliveryZone deliveryFee(Double deliveryFee) {
@@ -146,6 +167,7 @@ public class DeliveryZone {
     }
     DeliveryZone deliveryZone = (DeliveryZone) o;
     return Objects.equals(this.id, deliveryZone.id) &&
+        Objects.equals(this.feeChargedToStore, deliveryZone.feeChargedToStore) &&
         Objects.equals(this.deliveryFee, deliveryZone.deliveryFee) &&
         Objects.equals(this.minimumDeliveryOrderAmount, deliveryZone.minimumDeliveryOrderAmount) &&
         Objects.equals(this.wellKnownText, deliveryZone.wellKnownText) &&
@@ -154,7 +176,7 @@ public class DeliveryZone {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, deliveryFee, minimumDeliveryOrderAmount, wellKnownText, isEnabled);
+    return Objects.hash(id, feeChargedToStore, deliveryFee, minimumDeliveryOrderAmount, wellKnownText, isEnabled);
   }
 
 
@@ -164,6 +186,7 @@ public class DeliveryZone {
     sb.append("class DeliveryZone {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    feeChargedToStore: ").append(toIndentedString(feeChargedToStore)).append("\n");
     sb.append("    deliveryFee: ").append(toIndentedString(deliveryFee)).append("\n");
     sb.append("    minimumDeliveryOrderAmount: ").append(toIndentedString(minimumDeliveryOrderAmount)).append("\n");
     sb.append("    wellKnownText: ").append(toIndentedString(wellKnownText)).append("\n");
