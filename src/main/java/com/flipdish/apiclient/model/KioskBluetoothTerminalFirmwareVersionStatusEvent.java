@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Stripe Terminal Update info received event
  */
 @ApiModel(description = "Kiosk Stripe Terminal Update info received event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-15T09:30:34.070Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-15T09:57:37.986Z")
 public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;

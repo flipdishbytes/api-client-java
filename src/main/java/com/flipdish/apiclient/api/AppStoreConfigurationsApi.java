@@ -900,7 +900,9 @@ public class AppStoreConfigurationsApi {
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
+     * @deprecated
      */
+    @Deprecated
     public com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
@@ -944,6 +946,7 @@ public class AppStoreConfigurationsApi {
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppValidateBeforeCall(String appId, String appStoreAppId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
@@ -970,7 +973,9 @@ public class AppStoreConfigurationsApi {
      * @param appStoreAppId  (required)
      * @return RestApiResultAppStoreAppConfigurationsWithSubscriptions
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @deprecated
      */
+    @Deprecated
     public RestApiResultAppStoreAppConfigurationsWithSubscriptions getConfiguredAppWithSubscriptionsSingleApp(String appId, String appStoreAppId) throws ApiException {
         ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> resp = getConfiguredAppWithSubscriptionsSingleAppWithHttpInfo(appId, appStoreAppId);
         return resp.getData();
@@ -983,7 +988,9 @@ public class AppStoreConfigurationsApi {
      * @param appStoreAppId  (required)
      * @return ApiResponse&lt;RestApiResultAppStoreAppConfigurationsWithSubscriptions&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<RestApiResultAppStoreAppConfigurationsWithSubscriptions> getConfiguredAppWithSubscriptionsSingleAppWithHttpInfo(String appId, String appStoreAppId) throws ApiException {
         com.squareup.okhttp.Call call = getConfiguredAppWithSubscriptionsSingleAppValidateBeforeCall(appId, appStoreAppId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultAppStoreAppConfigurationsWithSubscriptions>(){}.getType();
@@ -998,7 +1005,9 @@ public class AppStoreConfigurationsApi {
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @deprecated
      */
+    @Deprecated
     public com.squareup.okhttp.Call getConfiguredAppWithSubscriptionsSingleAppAsync(String appId, String appStoreAppId, final ApiCallback<RestApiResultAppStoreAppConfigurationsWithSubscriptions> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
