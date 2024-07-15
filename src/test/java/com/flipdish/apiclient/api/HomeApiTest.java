@@ -64,21 +64,6 @@ public class HomeApiTest {
      *          if the Api call fails
      */
     @Test
-    public void dismissOldPortalActionTest() throws ApiException {
-        Object response = api.dismissOldPortalAction();
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
     public void getHomeActionsTest() throws ApiException {
         String appId = null;
         RestApiArrayResultHomeAction response = api.getHomeActions(appId);
