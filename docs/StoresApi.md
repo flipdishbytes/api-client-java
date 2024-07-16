@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**configureStoreServiceCharge**](StoresApi.md#configureStoreServiceCharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
 [**createBusinessHoursOverrideByStoreId**](StoresApi.md#createBusinessHoursOverrideByStoreId) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
 [**createStore**](StoresApi.md#createStore) | **POST** /api/v1.0/stores | 
+[**createStoreInProperty**](StoresApi.md#createStoreInProperty) | **POST** /api/v1.0/properties/{propertyId}/stores | 
 [**deleteBusinessHoursOverride**](StoresApi.md#deleteBusinessHoursOverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
 [**getBankAccountForStore**](StoresApi.md#getBankAccountForStore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
 [**getBusinessHours**](StoresApi.md#getBusinessHours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
@@ -342,6 +343,61 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeGroupId** | **Integer**|  |
+ **store** | [**StoreCreateBase**](StoreCreateBase.md)|  |
+
+### Return type
+
+[**RestApiResultStore**](RestApiResultStore.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="createStoreInProperty"></a>
+# **createStoreInProperty**
+> RestApiResultStore createStoreInProperty(storeGroupId, propertyId, store)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeGroupId = 56; // Integer | 
+String propertyId = "propertyId_example"; // String | 
+StoreCreateBase store = new StoreCreateBase(); // StoreCreateBase | 
+try {
+    RestApiResultStore result = apiInstance.createStoreInProperty(storeGroupId, propertyId, store);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#createStoreInProperty");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeGroupId** | **Integer**|  |
+ **propertyId** | **String**|  |
  **store** | [**StoreCreateBase**](StoreCreateBase.md)|  |
 
 ### Return type

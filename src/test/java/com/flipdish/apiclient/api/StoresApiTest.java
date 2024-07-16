@@ -179,6 +179,24 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void createStoreInPropertyTest() throws ApiException {
+        Integer storeGroupId = null;
+        String propertyId = null;
+        StoreCreateBase store = null;
+        RestApiResultStore response = api.createStoreInProperty(storeGroupId, propertyId, store);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void deleteBusinessHoursOverrideTest() throws ApiException {
         Integer storeId = null;
         Integer businessHoursOverrideId = null;

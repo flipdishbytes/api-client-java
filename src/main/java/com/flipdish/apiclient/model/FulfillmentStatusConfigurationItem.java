@@ -31,7 +31,7 @@ import java.util.List;
  * Fulfillment Status Item
  */
 @ApiModel(description = "Fulfillment Status Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-15T09:57:37.986Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-16T09:36:40.145Z")
 public class FulfillmentStatusConfigurationItem {
   @SerializedName("StatusId")
   private String statusId = null;
