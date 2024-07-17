@@ -28,7 +28,7 @@ import java.io.IOException;
  * Model for updating the onboarding config
  */
 @ApiModel(description = "Model for updating the onboarding config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:21:58.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-17T12:37:29.379Z")
 public class OnboardingConfigUpdate {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;

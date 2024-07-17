@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **refundedFeesOnRefundedSales** | **Double** |  |  [optional]
 **vat** | **Double** |  |  [optional]
 **total** | **Double** |  |  [optional]
+**thirdPartyIntegrationFeesAndTips** | **Double** |  |  [optional]
 
 
 

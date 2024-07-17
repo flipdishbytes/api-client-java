@@ -28,7 +28,7 @@ import java.io.IOException;
  * Representation of a Location and its External Mapping
  */
 @ApiModel(description = "Representation of a Location and its External Mapping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-17T08:21:58.129Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-17T12:37:29.379Z")
 public class MappedLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
