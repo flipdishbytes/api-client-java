@@ -31,7 +31,7 @@ import java.util.List;
  * Update fulfillment states configuration
  */
 @ApiModel(description = "Update fulfillment states configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-17T15:53:22.758Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-18T10:31:14.629Z")
 public class UpdateFulfillmentStatesConfiguration {
   @SerializedName("OverwriteSystemTemplate")
   private Boolean overwriteSystemTemplate = null;
