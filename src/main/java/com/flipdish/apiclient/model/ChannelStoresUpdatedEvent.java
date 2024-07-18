@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Channel Stores Updated Event
  */
 @ApiModel(description = "Channel Stores Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-18T10:31:14.629Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-18T14:16:34.882Z")
 public class ChannelStoresUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

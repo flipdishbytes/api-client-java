@@ -20,7 +20,6 @@ import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfiguration;
-import com.flipdish.apiclient.model.RestApiResultAppStoreAppConfigurationsWithSubscriptions;
 import com.flipdish.apiclient.model.RestApiResultExecuteConfigurationActionResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -144,23 +143,6 @@ public class AppStoreConfigurationsApiTest {
         String appId = null;
         String appStoreAppId = null;
         RestApiArrayResultAppStoreAppConfigurationSummary response = api.getConfiguredAppSingleApp(appId, appStoreAppId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getConfiguredAppWithSubscriptionsSingleAppTest() throws ApiException {
-        String appId = null;
-        String appStoreAppId = null;
-        RestApiResultAppStoreAppConfigurationsWithSubscriptions response = api.getConfiguredAppWithSubscriptionsSingleApp(appId, appStoreAppId);
 
         // TODO: test validations
     }

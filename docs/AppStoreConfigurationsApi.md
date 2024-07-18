@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**executeConfigurationAction**](AppStoreConfigurationsApi.md#executeConfigurationAction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | 
 [**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
 [**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | 
-[**getConfiguredAppWithSubscriptionsSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppWithSubscriptionsSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps_subscriptions/{appStoreAppId} | 
 [**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | 
 [**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
 [**updateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateAppStoreConfigSettingValues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | 
@@ -330,59 +329,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultAppStoreAppConfigurationSummary**](RestApiArrayResultAppStoreAppConfigurationSummary.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getConfiguredAppWithSubscriptionsSingleApp"></a>
-# **getConfiguredAppWithSubscriptionsSingleApp**
-> RestApiResultAppStoreAppConfigurationsWithSubscriptions getConfiguredAppWithSubscriptionsSingleApp(appId, appStoreAppId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AppStoreConfigurationsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AppStoreConfigurationsApi apiInstance = new AppStoreConfigurationsApi();
-String appId = "appId_example"; // String | 
-String appStoreAppId = "appStoreAppId_example"; // String | 
-try {
-    RestApiResultAppStoreAppConfigurationsWithSubscriptions result = apiInstance.getConfiguredAppWithSubscriptionsSingleApp(appId, appStoreAppId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AppStoreConfigurationsApi#getConfiguredAppWithSubscriptionsSingleApp");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **appStoreAppId** | **String**|  |
-
-### Return type
-
-[**RestApiResultAppStoreAppConfigurationsWithSubscriptions**](RestApiResultAppStoreAppConfigurationsWithSubscriptions.md)
 
 ### Authorization
 
