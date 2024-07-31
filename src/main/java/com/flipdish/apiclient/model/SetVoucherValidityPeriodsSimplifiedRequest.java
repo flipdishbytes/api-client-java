@@ -30,7 +30,7 @@ import java.util.List;
  * Set the validity periods of a voucher.
  */
 @ApiModel(description = "Set the validity periods of a voucher.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-25T13:28:58.456Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-31T08:46:08.846Z")
 public class SetVoucherValidityPeriodsSimplifiedRequest {
   /**
    * Gets or Sets daysOfWeek
