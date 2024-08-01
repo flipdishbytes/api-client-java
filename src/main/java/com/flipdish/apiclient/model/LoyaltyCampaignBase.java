@@ -30,7 +30,7 @@ import java.util.List;
  * Loyalty campaign base
  */
 @ApiModel(description = "Loyalty campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-31T11:48:07.475Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-01T10:53:01.400Z")
 public class LoyaltyCampaignBase {
   @SerializedName("OrdersBeforeReceivingVoucher")
   private Integer ordersBeforeReceivingVoucher = null;

@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Mobile Apps Statistics
  */
 @ApiModel(description = "Mobile Apps Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-31T11:48:07.475Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-01T10:53:01.400Z")
 public class MobileAppsStatistics {
   @SerializedName("NumberDownload")
   private Integer numberDownload = null;

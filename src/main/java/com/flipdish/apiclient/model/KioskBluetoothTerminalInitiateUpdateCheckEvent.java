@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk bluetooth trigger update check event
  */
 @ApiModel(description = "Kiosk bluetooth trigger update check event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-07-31T11:48:07.475Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-01T10:53:01.400Z")
 public class KioskBluetoothTerminalInitiateUpdateCheckEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
