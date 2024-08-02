@@ -28,7 +28,7 @@ import java.io.IOException;
  * Next status by order type
  */
 @ApiModel(description = "Next status by order type")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-01T10:53:01.400Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-02T07:13:41.116Z")
 public class NextStatusWithOrderType {
   /**
    * Order type
