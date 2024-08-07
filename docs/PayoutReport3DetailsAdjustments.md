@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **balanceChange** | **Double** |  |  [optional]
 **previousPayoutId** | **Integer** |  |  [optional]
 **nextPayoutId** | **Integer** |  |  [optional]
+**refundedFeesOnChargebacks** | **Double** |  |  [optional]
+**totalChargebackCost** | **Double** |  |  [optional]
 
 
 

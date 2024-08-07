@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3DetailsAdjustments
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-02T14:19:53.938Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T12:11:04.770Z")
 public class PayoutReport3DetailsAdjustments {
   @SerializedName("OpeningBalanceDate")
   private OffsetDateTime openingBalanceDate = null;
@@ -86,6 +86,12 @@ public class PayoutReport3DetailsAdjustments {
 
   @SerializedName("NextPayoutId")
   private Integer nextPayoutId = null;
+
+  @SerializedName("RefundedFeesOnChargebacks")
+  private Double refundedFeesOnChargebacks = null;
+
+  @SerializedName("TotalChargebackCost")
+  private Double totalChargebackCost = null;
 
   public PayoutReport3DetailsAdjustments openingBalanceDate(OffsetDateTime openingBalanceDate) {
     this.openingBalanceDate = openingBalanceDate;
@@ -429,6 +435,42 @@ public class PayoutReport3DetailsAdjustments {
     this.nextPayoutId = nextPayoutId;
   }
 
+  public PayoutReport3DetailsAdjustments refundedFeesOnChargebacks(Double refundedFeesOnChargebacks) {
+    this.refundedFeesOnChargebacks = refundedFeesOnChargebacks;
+    return this;
+  }
+
+   /**
+   * Get refundedFeesOnChargebacks
+   * @return refundedFeesOnChargebacks
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundedFeesOnChargebacks() {
+    return refundedFeesOnChargebacks;
+  }
+
+  public void setRefundedFeesOnChargebacks(Double refundedFeesOnChargebacks) {
+    this.refundedFeesOnChargebacks = refundedFeesOnChargebacks;
+  }
+
+  public PayoutReport3DetailsAdjustments totalChargebackCost(Double totalChargebackCost) {
+    this.totalChargebackCost = totalChargebackCost;
+    return this;
+  }
+
+   /**
+   * Get totalChargebackCost
+   * @return totalChargebackCost
+  **/
+  @ApiModelProperty(value = "")
+  public Double getTotalChargebackCost() {
+    return totalChargebackCost;
+  }
+
+  public void setTotalChargebackCost(Double totalChargebackCost) {
+    this.totalChargebackCost = totalChargebackCost;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -457,12 +499,14 @@ public class PayoutReport3DetailsAdjustments {
         Objects.equals(this.cashCustomerFeesBracketsOutOfAmount, payoutReport3DetailsAdjustments.cashCustomerFeesBracketsOutOfAmount) &&
         Objects.equals(this.balanceChange, payoutReport3DetailsAdjustments.balanceChange) &&
         Objects.equals(this.previousPayoutId, payoutReport3DetailsAdjustments.previousPayoutId) &&
-        Objects.equals(this.nextPayoutId, payoutReport3DetailsAdjustments.nextPayoutId);
+        Objects.equals(this.nextPayoutId, payoutReport3DetailsAdjustments.nextPayoutId) &&
+        Objects.equals(this.refundedFeesOnChargebacks, payoutReport3DetailsAdjustments.refundedFeesOnChargebacks) &&
+        Objects.equals(this.totalChargebackCost, payoutReport3DetailsAdjustments.totalChargebackCost);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount, balanceChange, previousPayoutId, nextPayoutId);
+    return Objects.hash(openingBalanceDate, closingBalanceDate, openingBalance, refundsOnCardOrders, refundsOnCashOrders, cashCustomerFees, chargebacks, otherTransactions, closingBalance, balanceRepaid, refundsOnCardOrdersBracketsAmount, refundsOnCardOrdersBracketsOutOfAmount, refundsOnCashOrdersBracketsAmount, refundsOnCashOrdersBracketsOutOfAmount, cashCustomerFeesBracketsAmount, cashCustomerFeesBracketsOutOfAmount, balanceChange, previousPayoutId, nextPayoutId, refundedFeesOnChargebacks, totalChargebackCost);
   }
 
 
@@ -490,6 +534,8 @@ public class PayoutReport3DetailsAdjustments {
     sb.append("    balanceChange: ").append(toIndentedString(balanceChange)).append("\n");
     sb.append("    previousPayoutId: ").append(toIndentedString(previousPayoutId)).append("\n");
     sb.append("    nextPayoutId: ").append(toIndentedString(nextPayoutId)).append("\n");
+    sb.append("    refundedFeesOnChargebacks: ").append(toIndentedString(refundedFeesOnChargebacks)).append("\n");
+    sb.append("    totalChargebackCost: ").append(toIndentedString(totalChargebackCost)).append("\n");
     sb.append("}");
     return sb.toString();
   }
