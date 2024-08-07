@@ -30,7 +30,7 @@ import java.util.List;
  * Loyalty campaign base
  */
 @ApiModel(description = "Loyalty campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T12:11:04.770Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
 public class LoyaltyCampaignBase {
   @SerializedName("OrdersBeforeReceivingVoucher")
   private Integer ordersBeforeReceivingVoucher = null;
@@ -64,6 +64,9 @@ public class LoyaltyCampaignBase {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("ForceDiscount")
+  private Boolean forceDiscount = null;
 
   public LoyaltyCampaignBase ordersBeforeReceivingVoucher(Integer ordersBeforeReceivingVoucher) {
     this.ordersBeforeReceivingVoucher = ordersBeforeReceivingVoucher;
@@ -277,6 +280,24 @@ public class LoyaltyCampaignBase {
     this.appId = appId;
   }
 
+  public LoyaltyCampaignBase forceDiscount(Boolean forceDiscount) {
+    this.forceDiscount = forceDiscount;
+    return this;
+  }
+
+   /**
+   * Controls whether the voucher generated from this campaign will override discount exclusions
+   * @return forceDiscount
+  **/
+  @ApiModelProperty(value = "Controls whether the voucher generated from this campaign will override discount exclusions")
+  public Boolean isForceDiscount() {
+    return forceDiscount;
+  }
+
+  public void setForceDiscount(Boolean forceDiscount) {
+    this.forceDiscount = forceDiscount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -297,12 +318,13 @@ public class LoyaltyCampaignBase {
         Objects.equals(this.includeExistingOrders, loyaltyCampaignBase.includeExistingOrders) &&
         Objects.equals(this.isEnabled, loyaltyCampaignBase.isEnabled) &&
         Objects.equals(this.storeIds, loyaltyCampaignBase.storeIds) &&
-        Objects.equals(this.appId, loyaltyCampaignBase.appId);
+        Objects.equals(this.appId, loyaltyCampaignBase.appId) &&
+        Objects.equals(this.forceDiscount, loyaltyCampaignBase.forceDiscount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId);
+    return Objects.hash(ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
   }
 
 
@@ -322,6 +344,7 @@ public class LoyaltyCampaignBase {
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    forceDiscount: ").append(toIndentedString(forceDiscount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

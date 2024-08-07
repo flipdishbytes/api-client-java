@@ -33,7 +33,7 @@ import java.util.UUID;
  * Retention campaign
  */
 @ApiModel(description = "Retention campaign")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T12:11:04.770Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
 public class RetentionCampaign {
   @SerializedName("CampaignId")
   private Integer campaignId = null;
@@ -76,6 +76,9 @@ public class RetentionCampaign {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("ForceDiscount")
+  private Boolean forceDiscount = null;
 
   public RetentionCampaign campaignId(Integer campaignId) {
     this.campaignId = campaignId;
@@ -353,6 +356,24 @@ public class RetentionCampaign {
     this.appId = appId;
   }
 
+  public RetentionCampaign forceDiscount(Boolean forceDiscount) {
+    this.forceDiscount = forceDiscount;
+    return this;
+  }
+
+   /**
+   * Controls whether the voucher generated from this campaign will override discount exclusions
+   * @return forceDiscount
+  **/
+  @ApiModelProperty(value = "Controls whether the voucher generated from this campaign will override discount exclusions")
+  public Boolean isForceDiscount() {
+    return forceDiscount;
+  }
+
+  public void setForceDiscount(Boolean forceDiscount) {
+    this.forceDiscount = forceDiscount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -376,12 +397,13 @@ public class RetentionCampaign {
         Objects.equals(this.includeExistingOrders, retentionCampaign.includeExistingOrders) &&
         Objects.equals(this.isEnabled, retentionCampaign.isEnabled) &&
         Objects.equals(this.storeIds, retentionCampaign.storeIds) &&
-        Objects.equals(this.appId, retentionCampaign.appId);
+        Objects.equals(this.appId, retentionCampaign.appId) &&
+        Objects.equals(this.forceDiscount, retentionCampaign.forceDiscount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, statistics, stores, publicId, notifyCustomerAfterMinutes, percentDiscountAmount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId);
+    return Objects.hash(campaignId, statistics, stores, publicId, notifyCustomerAfterMinutes, percentDiscountAmount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
   }
 
 
@@ -404,6 +426,7 @@ public class RetentionCampaign {
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    forceDiscount: ").append(toIndentedString(forceDiscount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

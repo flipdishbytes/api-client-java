@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **isEnabled** | **Boolean** | Is campaign enabled |  [optional]
 **storeIds** | **List&lt;Integer&gt;** | Ids of stores this campaign applies to |  [optional]
 **appId** | **String** | The app that this campaign belongs to. |  [optional]
+**forceDiscount** | **Boolean** | Controls whether the voucher generated from this campaign will override discount exclusions |  [optional]
 
 
 
