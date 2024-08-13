@@ -28,7 +28,7 @@ import java.io.IOException;
  * Set password with PIN model
  */
 @ApiModel(description = "Set password with PIN model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
 public class SetPasswordWithPinModel {
   @SerializedName("Pin")
   private Integer pin = null;

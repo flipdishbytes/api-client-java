@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrderIngestSubmitOrderResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
 public class OrderIngestSubmitOrderResponse {
   @SerializedName("OrderId")
   private Integer orderId = null;

@@ -17,6 +17,7 @@ import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3PayoutOrder;
+import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3RefundedOrder;
 import com.flipdish.apiclient.model.RestApiResultFileCreationResult;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
@@ -104,6 +105,27 @@ public class PayoutReportsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getPayoutReport3RefundedOrdersTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> storeIds = null;
+        Integer page = null;
+        Integer limit = null;
+        RestApiPaginationResultPayoutReport3RefundedOrder response = api.getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void payoutReport3ExportPayoutChargebacksTest() throws ApiException {
         String appId = null;
         Integer bankAccountId = null;
@@ -167,6 +189,25 @@ public class PayoutReportsApiTest {
         Integer payoutId = null;
         List<Integer> stores = null;
         RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void payoutReport3ExportPayoutRefundedOrdersTest() throws ApiException {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> stores = null;
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }

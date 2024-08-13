@@ -28,7 +28,7 @@ import java.io.IOException;
  * Fees breakdown
  */
 @ApiModel(description = "Fees breakdown")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
 public class FlipdishFeesDetails {
   @SerializedName("OnlineSalesFees")
   private Double onlineSalesFees = null;

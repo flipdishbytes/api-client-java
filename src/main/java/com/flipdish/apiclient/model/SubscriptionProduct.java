@@ -31,7 +31,7 @@ import java.util.List;
  * Product
  */
 @ApiModel(description = "Product")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-07T14:20:31.616Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
 public class SubscriptionProduct {
   @SerializedName("ProductId")
   private String productId = null;
