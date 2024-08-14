@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra request reset event
  */
 @ApiModel(description = "Hydra request reset event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T09:46:33.394Z")
 public class HydraRequestResetEvent {
   @SerializedName("User")
   private UserEventInfo user = null;

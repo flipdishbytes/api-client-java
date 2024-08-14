@@ -28,7 +28,7 @@ import java.io.IOException;
  * Create an App in an Organisation Request
  */
 @ApiModel(description = "Create an App in an Organisation Request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T09:46:33.394Z")
 public class CreateAppInOrg {
   @SerializedName("Name")
   private String name = null;

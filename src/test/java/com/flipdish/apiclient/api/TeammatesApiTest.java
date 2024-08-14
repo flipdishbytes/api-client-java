@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.CreateTeammate;
 import com.flipdish.apiclient.model.RestApiArrayResultTeammate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiResultAcceptInvitationResult;
 import com.flipdish.apiclient.model.RestApiResultRedeemInvitationResult;
 import com.flipdish.apiclient.model.RestApiResultTeammate;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -119,6 +120,23 @@ public class TeammatesApiTest {
         String otc = null;
         String appId = null;
         RestApiResultRedeemInvitationResult response = api.redeemInvitation(otc, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void teammatesAcceptInvitationTest() throws ApiException {
+        String otc = null;
+        String appId = null;
+        RestApiResultAcceptInvitationResult response = api.teammatesAcceptInvitation(otc, appId);
 
         // TODO: test validations
     }

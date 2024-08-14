@@ -28,7 +28,7 @@ import java.io.IOException;
  * Kiosk entitlements and usage
  */
 @ApiModel(description = "Kiosk entitlements and usage")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T09:46:33.394Z")
 public class KioskEntitlementsResult {
   @SerializedName("EntitledQuantity")
   private Integer entitledQuantity = null;

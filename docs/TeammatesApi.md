@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
 
@@ -264,6 +265,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="teammatesAcceptInvitation"></a>
+# **teammatesAcceptInvitation**
+> RestApiResultAcceptInvitationResult teammatesAcceptInvitation(otc, appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.TeammatesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+TeammatesApi apiInstance = new TeammatesApi();
+String otc = "otc_example"; // String | 
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultAcceptInvitationResult result = apiInstance.teammatesAcceptInvitation(otc, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TeammatesApi#teammatesAcceptInvitation");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **String**|  |
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
 
 ### Authorization
 

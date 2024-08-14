@@ -28,7 +28,7 @@ import java.io.IOException;
  * Action item for next fulfillment status selector
  */
 @ApiModel(description = "Action item for next fulfillment status selector")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T09:46:33.394Z")
 public class FulfillentStatusActionItem {
   @SerializedName("Id")
   private String id = null;

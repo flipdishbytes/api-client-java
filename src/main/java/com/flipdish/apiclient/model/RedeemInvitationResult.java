@@ -28,7 +28,7 @@ import java.io.IOException;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-13T12:06:34.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T09:46:33.394Z")
 public class RedeemInvitationResult {
   @SerializedName("AppId")
   private String appId = null;
@@ -85,9 +85,6 @@ public class RedeemInvitationResult {
   @SerializedName("InvitationStatus")
   private InvitationStatusEnum invitationStatus = null;
 
-  @SerializedName("IsNewUser")
-  private Boolean isNewUser = null;
-
   public RedeemInvitationResult appId(String appId) {
     this.appId = appId;
     return this;
@@ -124,24 +121,6 @@ public class RedeemInvitationResult {
     this.invitationStatus = invitationStatus;
   }
 
-  public RedeemInvitationResult isNewUser(Boolean isNewUser) {
-    this.isNewUser = isNewUser;
-    return this;
-  }
-
-   /**
-   * Bool indicating if the user that redeemed the invitation is a new user
-   * @return isNewUser
-  **/
-  @ApiModelProperty(value = "Bool indicating if the user that redeemed the invitation is a new user")
-  public Boolean isIsNewUser() {
-    return isNewUser;
-  }
-
-  public void setIsNewUser(Boolean isNewUser) {
-    this.isNewUser = isNewUser;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -153,13 +132,12 @@ public class RedeemInvitationResult {
     }
     RedeemInvitationResult redeemInvitationResult = (RedeemInvitationResult) o;
     return Objects.equals(this.appId, redeemInvitationResult.appId) &&
-        Objects.equals(this.invitationStatus, redeemInvitationResult.invitationStatus) &&
-        Objects.equals(this.isNewUser, redeemInvitationResult.isNewUser);
+        Objects.equals(this.invitationStatus, redeemInvitationResult.invitationStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, invitationStatus, isNewUser);
+    return Objects.hash(appId, invitationStatus);
   }
 
 
@@ -170,7 +148,6 @@ public class RedeemInvitationResult {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    invitationStatus: ").append(toIndentedString(invitationStatus)).append("\n");
-    sb.append("    isNewUser: ").append(toIndentedString(isNewUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }
