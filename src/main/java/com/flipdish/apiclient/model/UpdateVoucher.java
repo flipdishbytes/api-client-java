@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Update Voucher
  */
 @ApiModel(description = "Update Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-14T11:38:28.696Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-20T12:44:44.824Z")
 public class UpdateVoucher {
   @SerializedName("PromotionId")
   private Integer promotionId = null;
@@ -88,6 +88,9 @@ public class UpdateVoucher {
 
   @SerializedName("IsValidOnlyOnce")
   private Boolean isValidOnlyOnce = null;
+
+  @SerializedName("IsDiscoverable")
+  private Boolean isDiscoverable = null;
 
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
@@ -562,6 +565,24 @@ public class UpdateVoucher {
     this.isValidOnlyOnce = isValidOnlyOnce;
   }
 
+  public UpdateVoucher isDiscoverable(Boolean isDiscoverable) {
+    this.isDiscoverable = isDiscoverable;
+    return this;
+  }
+
+   /**
+   * Enables the voucher to be offered in the Voucher Discoverability feature
+   * @return isDiscoverable
+  **/
+  @ApiModelProperty(value = "Enables the voucher to be offered in the Voucher Discoverability feature")
+  public Boolean isIsDiscoverable() {
+    return isDiscoverable;
+  }
+
+  public void setIsDiscoverable(Boolean isDiscoverable) {
+    this.isDiscoverable = isDiscoverable;
+  }
+
   public UpdateVoucher startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
@@ -732,6 +753,7 @@ public class UpdateVoucher {
         Objects.equals(this.isValidForFirstOrderOnly, updateVoucher.isValidForFirstOrderOnly) &&
         Objects.equals(this.isValidOncePerCustomer, updateVoucher.isValidOncePerCustomer) &&
         Objects.equals(this.isValidOnlyOnce, updateVoucher.isValidOnlyOnce) &&
+        Objects.equals(this.isDiscoverable, updateVoucher.isDiscoverable) &&
         Objects.equals(this.startDate, updateVoucher.startDate) &&
         Objects.equals(this.expiryDate, updateVoucher.expiryDate) &&
         Objects.equals(this.channelRestrictions, updateVoucher.channelRestrictions) &&
@@ -743,7 +765,7 @@ public class UpdateVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
+    return Objects.hash(promotionId, promotionName, promotionAwardMenuItemPublicIds, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, isDiscoverable, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
   }
 
 
@@ -770,6 +792,7 @@ public class UpdateVoucher {
     sb.append("    isValidForFirstOrderOnly: ").append(toIndentedString(isValidForFirstOrderOnly)).append("\n");
     sb.append("    isValidOncePerCustomer: ").append(toIndentedString(isValidOncePerCustomer)).append("\n");
     sb.append("    isValidOnlyOnce: ").append(toIndentedString(isValidOnlyOnce)).append("\n");
+    sb.append("    isDiscoverable: ").append(toIndentedString(isDiscoverable)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
     sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
