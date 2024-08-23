@@ -28,7 +28,7 @@ import java.io.IOException;
  * Voucher Summary
  */
 @ApiModel(description = "Voucher Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-23T08:30:13.564Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-23T10:58:00.815Z")
 public class VoucherSummary {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
