@@ -28,7 +28,7 @@ import java.io.IOException;
  * Create an App in an Organisation Request
  */
 @ApiModel(description = "Create an App in an Organisation Request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-21T13:31:07.355Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-23T08:30:13.564Z")
 public class CreateAppInOrg {
   @SerializedName("Name")
   private String name = null;
@@ -38,6 +38,9 @@ public class CreateAppInOrg {
 
   @SerializedName("MainColor")
   private String mainColor = null;
+
+  @SerializedName("AppId")
+  private String appId = null;
 
   public CreateAppInOrg name(String name) {
     this.name = name;
@@ -93,6 +96,24 @@ public class CreateAppInOrg {
     this.mainColor = mainColor;
   }
 
+  public CreateAppInOrg appId(String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * A predefined AppId
+   * @return appId
+  **/
+  @ApiModelProperty(value = "A predefined AppId")
+  public String getAppId() {
+    return appId;
+  }
+
+  public void setAppId(String appId) {
+    this.appId = appId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +126,13 @@ public class CreateAppInOrg {
     CreateAppInOrg createAppInOrg = (CreateAppInOrg) o;
     return Objects.equals(this.name, createAppInOrg.name) &&
         Objects.equals(this.countryId, createAppInOrg.countryId) &&
-        Objects.equals(this.mainColor, createAppInOrg.mainColor);
+        Objects.equals(this.mainColor, createAppInOrg.mainColor) &&
+        Objects.equals(this.appId, createAppInOrg.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, countryId, mainColor);
+    return Objects.hash(name, countryId, mainColor, appId);
   }
 
 
@@ -122,6 +144,7 @@ public class CreateAppInOrg {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
