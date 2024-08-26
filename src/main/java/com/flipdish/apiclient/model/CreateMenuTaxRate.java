@@ -28,7 +28,7 @@ import java.io.IOException;
  * Tax Rates Associated with a Menu
  */
 @ApiModel(description = "Tax Rates Associated with a Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-26T14:28:41.057Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-08-26T15:11:19.800Z")
 public class CreateMenuTaxRate {
   @SerializedName("Name")
   private String name = null;
