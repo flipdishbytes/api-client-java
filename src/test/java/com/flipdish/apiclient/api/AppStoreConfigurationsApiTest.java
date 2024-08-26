@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ExecuteConfigurationActionRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppConfigurationSummary;
 import com.flipdish.apiclient.model.RestApiArrayResultAppStoreAppSummary;
@@ -27,6 +26,7 @@ import com.flipdish.apiclient.model.UpdateAppStoreAppConfiguration;
 import com.flipdish.apiclient.model.UpdateAppStoreAppConfigurationValuesBatch;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,11 +47,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void appStoreConfigurationsAppStoreHandleOauthResponseCodeTest() throws ApiException {
+    public void appStoreConfigurationsAppStoreHandleOauthResponseCodeTest() throws Exception {
         String appStoreAppId = null;
         Object response = api.appStoreConfigurationsAppStoreHandleOauthResponseCode(appStoreAppId);
 
@@ -63,11 +63,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createAppStoreConfigTest() throws ApiException {
+    public void createAppStoreConfigTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         RestApiResultAppStoreAppConfiguration response = api.createAppStoreConfig(appId, appStoreAppId);
@@ -80,11 +80,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteAppStoreConfigTest() throws ApiException {
+    public void deleteAppStoreConfigTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
@@ -98,11 +98,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void executeConfigurationActionTest() throws ApiException {
+    public void executeConfigurationActionTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
@@ -117,11 +117,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppStoreConfigTest() throws ApiException {
+    public void getAppStoreConfigTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
@@ -135,11 +135,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getConfiguredAppSingleAppTest() throws ApiException {
+    public void getConfiguredAppSingleAppTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         RestApiArrayResultAppStoreAppConfigurationSummary response = api.getConfiguredAppSingleApp(appId, appStoreAppId);
@@ -152,11 +152,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getConfiguredAppsTest() throws ApiException {
+    public void getConfiguredAppsTest() throws Exception {
         String appId = null;
         RestApiArrayResultAppStoreAppSummary response = api.getConfiguredApps(appId);
 
@@ -168,11 +168,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateAppStoreConfigTest() throws ApiException {
+    public void updateAppStoreConfigTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;
@@ -187,11 +187,11 @@ public class AppStoreConfigurationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateAppStoreConfigSettingValuesTest() throws ApiException {
+    public void updateAppStoreConfigSettingValuesTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         String configId = null;

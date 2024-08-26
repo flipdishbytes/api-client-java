@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.GoogleAddress;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultCountryFormResponse;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class AddressApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void formByAppTest() throws ApiException {
+    public void formByAppTest() throws Exception {
         String appId = null;
         String language = null;
         RestApiResultAddressFormResponse response = api.formByApp(appId, language);
@@ -59,11 +59,11 @@ public class AddressApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void formByCountryTest() throws ApiException {
+    public void formByCountryTest() throws Exception {
         String countryCode = null;
         String language = null;
         RestApiResultAddressFormResponse response = api.formByCountry(countryCode, language);
@@ -76,11 +76,11 @@ public class AddressApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void formatGoogleAddressTest() throws ApiException {
+    public void formatGoogleAddressTest() throws Exception {
         GoogleAddress googleAddress = null;
         String language = null;
         RestApiResultAddressFormResponse response = api.formatGoogleAddress(googleAddress, language);
@@ -93,11 +93,11 @@ public class AddressApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCountriesTest() throws ApiException {
+    public void getCountriesTest() throws Exception {
         String language = null;
         RestApiResultCountryFormResponse response = api.getCountries(language);
 

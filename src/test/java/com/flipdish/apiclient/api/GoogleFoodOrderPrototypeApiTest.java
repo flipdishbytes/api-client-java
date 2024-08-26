@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateOrderRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.SubmitOrderRequest;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class GoogleFoodOrderPrototypeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createOrderTest() throws ApiException {
+    public void createOrderTest() throws Exception {
         String appId = null;
         CreateOrderRequest orderRequest = null;
         RestApiResultSubmitOrderResponseDm response = api.createOrder(appId, orderRequest);
@@ -59,11 +59,11 @@ public class GoogleFoodOrderPrototypeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void submitOrderTest() throws ApiException {
+    public void submitOrderTest() throws Exception {
         String appId = null;
         Integer orderId = null;
         SubmitOrderRequest request = null;

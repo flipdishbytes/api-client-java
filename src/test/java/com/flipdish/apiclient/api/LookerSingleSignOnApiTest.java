@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.DashboardEmbed;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class LookerSingleSignOnApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSSOEndpointTest() throws ApiException {
+    public void getSSOEndpointTest() throws Exception {
         String appId = null;
         String embedPath = null;
         String filters = null;

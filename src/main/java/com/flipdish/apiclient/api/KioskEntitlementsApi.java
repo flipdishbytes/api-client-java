@@ -40,6 +40,7 @@ import java.util.Map;
 
 public class KioskEntitlementsApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public KioskEntitlementsApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,6 +56,10 @@ public class KioskEntitlementsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -104,6 +109,9 @@ public class KioskEntitlementsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

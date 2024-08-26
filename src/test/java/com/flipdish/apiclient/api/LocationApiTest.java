@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateLocation;
 import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaLocation;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -23,6 +22,7 @@ import com.flipdish.apiclient.model.RestApiResultMappedLocation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,11 +43,11 @@ public class LocationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createLocationTest() throws ApiException {
+    public void createLocationTest() throws Exception {
         List<CreateLocation> createLocationInput = null;
         Integer locationAreaId = null;
         String appId = null;
@@ -62,11 +62,11 @@ public class LocationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteLocationTest() throws ApiException {
+    public void deleteLocationTest() throws Exception {
         Integer locationId = null;
         Integer locationAreaId = null;
         String appId = null;
@@ -81,11 +81,11 @@ public class LocationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mapLocationToExternalIdTest() throws ApiException {
+    public void mapLocationToExternalIdTest() throws Exception {
         Integer locationId = null;
         Integer locationAreaId = null;
         String appId = null;
@@ -101,11 +101,11 @@ public class LocationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void moveLocationTest() throws ApiException {
+    public void moveLocationTest() throws Exception {
         Integer locationId = null;
         Integer locationAreaId = null;
         Integer newLocationAreaId = null;
@@ -121,11 +121,11 @@ public class LocationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateLocationTest() throws ApiException {
+    public void updateLocationTest() throws Exception {
         CreateLocation updateLocationInput = null;
         Integer locationAreaId = null;
         Integer locationId = null;

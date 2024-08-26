@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateMenuSectionItemFromCatalogItems;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuSectionItemBase;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cloneMenuSectionItemTest() throws ApiException {
+    public void cloneMenuSectionItemTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -64,11 +64,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuSectionItemTest() throws ApiException {
+    public void createMenuSectionItemTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         MenuSectionItemBase menuSectionItem = null;
@@ -82,11 +82,11 @@ public class MenuSectionItemsApiTest {
      *
      * BETA - this endpoint is under development, do not use it in your production system
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuSectionItemFromCatalogItemsTest() throws ApiException {
+    public void createMenuSectionItemFromCatalogItemsTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         CreateMenuSectionItemFromCatalogItems createFromCatalogItems = null;
@@ -100,11 +100,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuSectionItemTest() throws ApiException {
+    public void deleteMenuSectionItemTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -118,11 +118,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuSectionItemImageTest() throws ApiException {
+    public void deleteMenuSectionItemImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -136,11 +136,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemByIdTest() throws ApiException {
+    public void getMenuItemByIdTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -154,11 +154,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemsTest() throws ApiException {
+    public void getMenuItemsTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         RestApiArrayResultMenuSectionItem response = api.getMenuItems(menuId, menuSectionId);
@@ -171,11 +171,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void moveMenuItemTest() throws ApiException {
+    public void moveMenuItemTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -190,11 +190,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setSectionItemTaxTest() throws ApiException {
+    public void setSectionItemTaxTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -209,11 +209,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMenuSectionItemTest() throws ApiException {
+    public void updateMenuSectionItemTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -229,11 +229,11 @@ public class MenuSectionItemsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadMenuSectionItemImageTest() throws ApiException {
+    public void uploadMenuSectionItemImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;

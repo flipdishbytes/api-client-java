@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateProduct;
 import com.flipdish.apiclient.model.Product;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateProduct;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void archiveProductTest() throws ApiException {
+    public void archiveProductTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.archiveProduct(appId, catalogItemId);
@@ -61,11 +61,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createProductTest() throws ApiException {
+    public void createProductTest() throws Exception {
         String appId = null;
         CreateProduct createProduct = null;
         RestApiResultProduct response = api.createProduct(appId, createProduct);
@@ -78,11 +78,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void duplicateProductTest() throws ApiException {
+    public void duplicateProductTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.duplicateProduct(appId, catalogItemId);
@@ -95,11 +95,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getProductByIdTest() throws ApiException {
+    public void getProductByIdTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         Product response = api.getProductById(appId, catalogItemId);
@@ -112,11 +112,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getProductsTest() throws ApiException {
+    public void getProductsTest() throws Exception {
         String appId = null;
         List<String> productTypes = null;
         String searchTerm = null;
@@ -132,11 +132,11 @@ public class CatalogProductsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateProductTest() throws ApiException {
+    public void updateProductTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         UpdateProduct updateProduct = null;

@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CatalogImage;
 import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class CatalogImagesApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadCatalogImageTest() throws ApiException {
+    public void uploadCatalogImageTest() throws Exception {
         String appId = null;
         File image = null;
         CatalogImage response = api.uploadCatalogImage(appId, image);

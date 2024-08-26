@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiArrayResultApmCurrencyDataPoint;
 import com.flipdish.apiclient.model.RestApiArrayResultApmDataPoint;
 import com.flipdish.apiclient.model.RestApiArrayResultApmHourlyDataPoint;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiResultApmStatus;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getApmStatusTest() throws ApiException {
+    public void getApmStatusTest() throws Exception {
         String appId = null;
         RestApiResultApmStatus response = api.getApmStatus(appId);
 
@@ -61,11 +61,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBasicStatisticsTest() throws ApiException {
+    public void getBasicStatisticsTest() throws Exception {
         String appId = null;
         List<Integer> storeId = null;
         RestApiResultApmStatistics response = api.getBasicStatistics(appId, storeId);
@@ -78,11 +78,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCalendarWeekStatisticsTest() throws ApiException {
+    public void getCalendarWeekStatisticsTest() throws Exception {
         String appId = null;
         List<Integer> storeId = null;
         RestApiArrayResultApmHourlyDataPoint response = api.getCalendarWeekStatistics(appId, storeId);
@@ -95,11 +95,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCallsStatisticsTest() throws ApiException {
+    public void getCallsStatisticsTest() throws Exception {
         String appId = null;
         String aggregateDataBy = null;
         Integer dataPointLimit = null;
@@ -114,11 +114,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrderStatisticsTest() throws ApiException {
+    public void getOrderStatisticsTest() throws Exception {
         String appId = null;
         String aggregateDataBy = null;
         Integer dataPointLimit = null;
@@ -133,11 +133,11 @@ public class ApmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPaginatedCallListTest() throws ApiException {
+    public void getPaginatedCallListTest() throws Exception {
         String appId = null;
         Integer page = null;
         Integer limit = null;

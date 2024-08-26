@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ItemNutritionInfoV2AddUpdateModel;
 import com.flipdish.apiclient.model.RestApiArrayResultAllergen;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultNutritionInfoV2;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class MenusNutritionInfoV2ApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrUpdateMenuItemNutritionInfoV2Test() throws ApiException {
+    public void addOrUpdateMenuItemNutritionInfoV2Test() throws Exception {
         Integer menuId = null;
         String publicId = null;
         ItemNutritionInfoV2AddUpdateModel addOrUpdateModel = null;
@@ -61,11 +61,11 @@ public class MenusNutritionInfoV2ApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrUpdateMenuItemOptionSetItemNutritionInfoV2Test() throws ApiException {
+    public void addOrUpdateMenuItemOptionSetItemNutritionInfoV2Test() throws Exception {
         Integer menuId = null;
         String publicId = null;
         ItemNutritionInfoV2AddUpdateModel addOrUpdateModel = null;
@@ -80,11 +80,11 @@ public class MenusNutritionInfoV2ApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAllergensV2Test() throws ApiException {
+    public void getAllergensV2Test() throws Exception {
         String appId = null;
         String languageId = null;
         RestApiArrayResultAllergen response = api.getAllergensV2(appId, languageId);
@@ -97,11 +97,11 @@ public class MenusNutritionInfoV2ApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuNutritionInfoV2ByMenuIdTest() throws ApiException {
+    public void getMenuNutritionInfoV2ByMenuIdTest() throws Exception {
         String appId = null;
         Integer menuId = null;
         String languageId = null;

@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateTeammate;
 import com.flipdish.apiclient.model.RestApiArrayResultTeammate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.TeammateBase;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createTeammateTest() throws ApiException {
+    public void createTeammateTest() throws Exception {
         String appId = null;
         CreateTeammate teammate = null;
         RestApiResultTeammate response = api.createTeammate(appId, teammate);
@@ -62,11 +62,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteTeammateTest() throws ApiException {
+    public void deleteTeammateTest() throws Exception {
         String appId = null;
         String id = null;
         api.deleteTeammate(appId, id);
@@ -79,11 +79,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeammateByAppIdAndTeammateIdTest() throws ApiException {
+    public void getTeammateByAppIdAndTeammateIdTest() throws Exception {
         String appId = null;
         String id = null;
         RestApiResultTeammate response = api.getTeammateByAppIdAndTeammateId(appId, id);
@@ -96,11 +96,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeammatesByAppIdTest() throws ApiException {
+    public void getTeammatesByAppIdTest() throws Exception {
         String appId = null;
         RestApiArrayResultTeammate response = api.getTeammatesByAppId(appId);
 
@@ -112,11 +112,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void redeemInvitationTest() throws ApiException {
+    public void redeemInvitationTest() throws Exception {
         String otc = null;
         String appId = null;
         RestApiResultRedeemInvitationResult response = api.redeemInvitation(otc, appId);
@@ -129,11 +129,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void teammatesAcceptInvitationTest() throws ApiException {
+    public void teammatesAcceptInvitationTest() throws Exception {
         String otc = null;
         String appId = null;
         RestApiResultAcceptInvitationResult response = api.teammatesAcceptInvitation(otc, appId);
@@ -146,11 +146,11 @@ public class TeammatesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateTeammateTest() throws ApiException {
+    public void updateTeammateTest() throws Exception {
         String appId = null;
         String id = null;
         TeammateBase teammate = null;

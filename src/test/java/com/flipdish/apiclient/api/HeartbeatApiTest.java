@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class HeartbeatApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void headHostnameTest() throws ApiException {
+    public void headHostnameTest() throws Exception {
         Object response = api.headHostname();
 
         // TODO: test validations
@@ -55,11 +55,11 @@ public class HeartbeatApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void headPingTest() throws ApiException {
+    public void headPingTest() throws Exception {
         RestApiStringResult response = api.headPing();
 
         // TODO: test validations
@@ -70,11 +70,11 @@ public class HeartbeatApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hostnameTest() throws ApiException {
+    public void hostnameTest() throws Exception {
         Object response = api.hostname();
 
         // TODO: test validations
@@ -85,11 +85,11 @@ public class HeartbeatApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void pingTest() throws ApiException {
+    public void pingTest() throws Exception {
         RestApiStringResult response = api.ping();
 
         // TODO: test validations

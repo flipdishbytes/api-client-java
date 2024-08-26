@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultOAuthTokenModel;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class AuthorizationTokensApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAuthorizationTokensTest() throws ApiException {
+    public void getAuthorizationTokensTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         Integer page = null;
@@ -59,11 +59,11 @@ public class AuthorizationTokensApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void revokeTokenTest() throws ApiException {
+    public void revokeTokenTest() throws Exception {
         String key = null;
         String appId = null;
         api.revokeToken(key, appId);

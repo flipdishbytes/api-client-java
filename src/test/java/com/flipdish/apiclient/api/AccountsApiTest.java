@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AccountDetailBase;
 import com.flipdish.apiclient.model.ChangePasswordModel;
 import com.flipdish.apiclient.model.CreateAccountModel;
@@ -34,6 +33,7 @@ import com.flipdish.apiclient.model.SetPasswordWithPinModel;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,11 +53,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void answerSignUpQuestionTest() throws ApiException {
+    public void answerSignUpQuestionTest() throws Exception {
         String signupStepAction = null;
         Integer answerId = null;
         api.answerSignUpQuestion(signupStepAction, answerId);
@@ -70,11 +70,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void changePasswordTest() throws ApiException {
+    public void changePasswordTest() throws Exception {
         ChangePasswordModel changePasswordModel = null;
         api.changePassword(changePasswordModel);
 
@@ -86,11 +86,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void changePasswordWithPinTest() throws ApiException {
+    public void changePasswordWithPinTest() throws Exception {
         SetPasswordWithPinModel changePasswordModel = null;
         api.changePasswordWithPin(changePasswordModel);
 
@@ -102,11 +102,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createAccountTest() throws ApiException {
+    public void createAccountTest() throws Exception {
         CreateAccountModel createAccountModel = null;
         api.createAccount(createAccountModel);
 
@@ -118,11 +118,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createBasicAccountTest() throws ApiException {
+    public void createBasicAccountTest() throws Exception {
         CreateBasicAccountModel basicAccountModel = null;
         String response = api.createBasicAccount(basicAccountModel);
 
@@ -134,11 +134,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAccountDetailsTest() throws ApiException {
+    public void getAccountDetailsTest() throws Exception {
         RestApiResultAccountDetail response = api.getAccountDetails();
 
         // TODO: test validations
@@ -149,11 +149,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getLocalisedTimeZonesTest() throws ApiException {
+    public void getLocalisedTimeZonesTest() throws Exception {
         RestApiArrayResultLocalisedTimeZone response = api.getLocalisedTimeZones();
 
         // TODO: test validations
@@ -164,11 +164,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void loginTest() throws ApiException {
+    public void loginTest() throws Exception {
         LoginModel loginModel = null;
         api.login(loginModel);
 
@@ -180,11 +180,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void loginSsoTest() throws ApiException {
+    public void loginSsoTest() throws Exception {
         api.loginSso();
 
         // TODO: test validations
@@ -195,11 +195,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void loginWithPinTest() throws ApiException {
+    public void loginWithPinTest() throws Exception {
         LoginWithPinModel loginModel = null;
         api.loginWithPin(loginModel);
 
@@ -211,11 +211,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void logoutTest() throws ApiException {
+    public void logoutTest() throws Exception {
         api.logout();
 
         // TODO: test validations
@@ -226,11 +226,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void passwordResetWithTokenTest() throws ApiException {
+    public void passwordResetWithTokenTest() throws Exception {
         PasswordResetModel passwordResetModel = null;
         api.passwordResetWithToken(passwordResetModel);
 
@@ -242,11 +242,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void recaptchaValidateTest() throws ApiException {
+    public void recaptchaValidateTest() throws Exception {
         String token = null;
         api.recaptchaValidate(token);
 
@@ -258,11 +258,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void requestLoginPinTest() throws ApiException {
+    public void requestLoginPinTest() throws Exception {
         RequestLoginPinModel requestLoginPinRequest = null;
         RequestLoginPinResponse response = api.requestLoginPin(requestLoginPinRequest);
 
@@ -274,11 +274,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void requestPasswordResetTest() throws ApiException {
+    public void requestPasswordResetTest() throws Exception {
         RequestPasswordResetModel requestPasswordResetModel = null;
         api.requestPasswordReset(requestPasswordResetModel);
 
@@ -290,11 +290,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void sendPinForPasswordResetTest() throws ApiException {
+    public void sendPinForPasswordResetTest() throws Exception {
         RequestPasswordResetModel requestPasswordResetRequest = null;
         RequestPasswordResetPinResponse response = api.sendPinForPasswordReset(requestPasswordResetRequest);
 
@@ -306,11 +306,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void skipSignupStepTest() throws ApiException {
+    public void skipSignupStepTest() throws Exception {
         String signupStepAction = null;
         api.skipSignupStep(signupStepAction);
 
@@ -322,11 +322,11 @@ public class AccountsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateAccountTest() throws ApiException {
+    public void updateAccountTest() throws Exception {
         AccountDetailBase updateAccountModel = null;
         api.updateAccount(updateAccountModel);
 

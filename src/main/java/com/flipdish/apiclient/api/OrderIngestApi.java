@@ -41,6 +41,7 @@ import java.util.Map;
 
 public class OrderIngestApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public OrderIngestApi() {
         this(Configuration.getDefaultApiClient());
@@ -56,6 +57,10 @@ public class OrderIngestApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -106,6 +111,9 @@ public class OrderIngestApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

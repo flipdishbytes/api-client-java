@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.WebhookEventSample;
 import com.flipdish.apiclient.model.WebhookSubscription;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createWebhookSubscriptionTest() throws ApiException {
+    public void createWebhookSubscriptionTest() throws Exception {
         String oauthAppId = null;
         WebhookSubscription webhookSubscription = null;
         String appId = null;
@@ -64,11 +64,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createWebhookSubscriptionEventNamesTest() throws ApiException {
+    public void createWebhookSubscriptionEventNamesTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String eventName = null;
@@ -83,11 +83,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteWebhookSubscriptionTest() throws ApiException {
+    public void deleteWebhookSubscriptionTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String appId = null;
@@ -101,11 +101,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteWebhookSubscriptionEventNameTest() throws ApiException {
+    public void deleteWebhookSubscriptionEventNameTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String eventName = null;
@@ -120,11 +120,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getWebhookEventNamesTest() throws ApiException {
+    public void getWebhookEventNamesTest() throws Exception {
         String appId = null;
         RestApiStringArrayResult response = api.getWebhookEventNames(appId);
 
@@ -136,11 +136,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getWebhookEventNamesBySubscriptionIdTest() throws ApiException {
+    public void getWebhookEventNamesBySubscriptionIdTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         String appId = null;
@@ -154,11 +154,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getWebhookEventSampleTest() throws ApiException {
+    public void getWebhookEventSampleTest() throws Exception {
         String eventName = null;
         String appId = null;
         String oauthAppId = null;
@@ -174,11 +174,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getWebhookLogsTest() throws ApiException {
+    public void getWebhookLogsTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         OffsetDateTime start = null;
@@ -196,11 +196,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getWebhookSubscriptionsTest() throws ApiException {
+    public void getWebhookSubscriptionsTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         Integer page = null;
@@ -215,11 +215,11 @@ public class WebhooksApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateWebhookSubscriptionTest() throws ApiException {
+    public void updateWebhookSubscriptionTest() throws Exception {
         String oauthAppId = null;
         Integer webhookSubscriptionId = null;
         WebhookSubscription webhookSubscription = null;

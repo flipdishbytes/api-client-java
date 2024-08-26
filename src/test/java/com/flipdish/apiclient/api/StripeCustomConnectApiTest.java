@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BankAccountCreate;
 import com.flipdish.apiclient.model.BankAccountDetailsUpdateRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultStripeCustomConnectedAccount;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StripeAccountLinkRequest;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createBankAccountAndConnectedAccountTest() throws ApiException {
+    public void createBankAccountAndConnectedAccountTest() throws Exception {
         String appId = null;
         BankAccountCreate account = null;
         RestApiResultBankAccountDetail response = api.createBankAccountAndConnectedAccount(appId, account);
@@ -63,11 +63,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createStripeConnectedAccountTest() throws ApiException {
+    public void createStripeConnectedAccountTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         RestApiResultStripeConnectedAccount response = api.createStripeConnectedAccount(appId, bankAccountId);
@@ -80,11 +80,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createStripeConnectedAccountLinkTest() throws ApiException {
+    public void createStripeConnectedAccountLinkTest() throws Exception {
         String appId = null;
         String stripeConnectedAccountId = null;
         StripeAccountLinkRequest stripeAccountLinkRequest = null;
@@ -98,11 +98,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCustomConnectTest() throws ApiException {
+    public void getCustomConnectTest() throws Exception {
         Integer storeId = null;
         String appId = null;
         RestApiArrayResultStripeCustomConnectedAccount response = api.getCustomConnect(storeId, appId);
@@ -115,11 +115,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getVerificationStatusTest() throws ApiException {
+    public void getVerificationStatusTest() throws Exception {
         String appId = null;
         String stripeConnectedAccountId = null;
         RestApiResultStripeConnectedAccount response = api.getVerificationStatus(appId, stripeConnectedAccountId);
@@ -132,11 +132,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setBankAccountBusinessTypeTest() throws ApiException {
+    public void setBankAccountBusinessTypeTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         String businessType = null;
@@ -150,11 +150,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void stripeCustomConnectRefreshTest() throws ApiException {
+    public void stripeCustomConnectRefreshTest() throws Exception {
         Integer linkRequestId = null;
         String appId = null;
         Object response = api.stripeCustomConnectRefresh(linkRequestId, appId);
@@ -167,11 +167,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateBankAccountDetailsTest() throws ApiException {
+    public void updateBankAccountDetailsTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         BankAccountDetailsUpdateRequest updateRequest = null;
@@ -185,11 +185,11 @@ public class StripeCustomConnectApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updatePayoutScheduleTest() throws ApiException {
+    public void updatePayoutScheduleTest() throws Exception {
         String appId = null;
         String stripeConnectedAccountId = null;
         String interval = null;

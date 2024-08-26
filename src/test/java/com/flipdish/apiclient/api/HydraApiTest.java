@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.EmvTerminal;
 import com.flipdish.apiclient.model.HydraRegistrationRequest;
 import com.flipdish.apiclient.model.KioskSettings;
@@ -31,6 +30,7 @@ import com.flipdish.apiclient.model.RestApiResultPaymentTerminalTransactionDetai
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,11 +51,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void assignEmvTest() throws ApiException {
+    public void assignEmvTest() throws Exception {
         String appId = null;
         Integer hydraConfigId = null;
         Integer emvTerminalId = null;
@@ -69,11 +69,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void attachStoreToKioskTest() throws ApiException {
+    public void attachStoreToKioskTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         String deviceId = null;
@@ -87,11 +87,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void attachStoreToTerminalTest() throws ApiException {
+    public void attachStoreToTerminalTest() throws Exception {
         String appId = null;
         String deviceId = null;
         Integer storeId = null;
@@ -105,11 +105,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cancelEmvPaymentTest() throws ApiException {
+    public void cancelEmvPaymentTest() throws Exception {
         Integer orderId = null;
         String appId = null;
         api.cancelEmvPayment(orderId, appId);
@@ -122,11 +122,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void detachStoreFromTerminalTest() throws ApiException {
+    public void detachStoreFromTerminalTest() throws Exception {
         String appId = null;
         String deviceId = null;
         Integer storeId = null;
@@ -140,11 +140,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAblyTokenTest() throws ApiException {
+    public void getAblyTokenTest() throws Exception {
         api.getAblyToken();
 
         // TODO: test validations
@@ -155,11 +155,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAttachedDeviceTest() throws ApiException {
+    public void getAttachedDeviceTest() throws Exception {
         String appId = null;
         String deviceType = null;
         String deviceId = null;
@@ -173,11 +173,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAttachedDevicesTest() throws ApiException {
+    public void getAttachedDevicesTest() throws Exception {
         String appId = null;
         String deviceType = null;
         Integer pageIndex = null;
@@ -195,11 +195,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEMVTerminalDetailsTest() throws ApiException {
+    public void getEMVTerminalDetailsTest() throws Exception {
         String appId = null;
         RestApiResultPaymentTerminalDetails response = api.getEMVTerminalDetails(appId);
 
@@ -211,11 +211,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEmvOrderStateTest() throws ApiException {
+    public void getEmvOrderStateTest() throws Exception {
         Integer orderId = null;
         String appId = null;
         RestApiResultPaymentTerminalTransactionDetails response = api.getEmvOrderState(orderId, appId);
@@ -228,11 +228,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getKioskCashPaymentSettingsTest() throws ApiException {
+    public void getKioskCashPaymentSettingsTest() throws Exception {
         String appId = null;
         String deviceId = null;
         RestApiArrayResultKioskCashPaymentSettings response = api.getKioskCashPaymentSettings(appId, deviceId);
@@ -245,11 +245,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getKioskSettingsTest() throws ApiException {
+    public void getKioskSettingsTest() throws Exception {
         String appId = null;
         String deviceId = null;
         RestApiResultKioskSettings response = api.getKioskSettings(appId, deviceId);
@@ -262,11 +262,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getRegistrationTest() throws ApiException {
+    public void getRegistrationTest() throws Exception {
         RestApiResultHydraStatus response = api.getRegistration();
 
         // TODO: test validations
@@ -277,11 +277,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSettingsTest() throws ApiException {
+    public void getSettingsTest() throws Exception {
         RestApiResultHydraConfig response = api.getSettings();
 
         // TODO: test validations
@@ -292,11 +292,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hydraCreateEmvTest() throws ApiException {
+    public void hydraCreateEmvTest() throws Exception {
         String appId = null;
         EmvTerminal emv = null;
         Object response = api.hydraCreateEmv(appId, emv);
@@ -309,11 +309,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hydraDeleteEmvTest() throws ApiException {
+    public void hydraDeleteEmvTest() throws Exception {
         String appId = null;
         Integer id = null;
         Object response = api.hydraDeleteEmv(appId, id);
@@ -326,11 +326,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hydraDetachStoreFromKioskTest() throws ApiException {
+    public void hydraDetachStoreFromKioskTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         String deviceId = null;
@@ -344,11 +344,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hydraGetEmvsForAppIdTest() throws ApiException {
+    public void hydraGetEmvsForAppIdTest() throws Exception {
         String appId = null;
         RestApiArrayResultEmvTerminalWithAssignments response = api.hydraGetEmvsForAppId(appId);
 
@@ -360,11 +360,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void loginWithDeviceIdTest() throws ApiException {
+    public void loginWithDeviceIdTest() throws Exception {
         String deviceId = null;
         String hydraUserType = null;
         String serialNumber = null;
@@ -378,11 +378,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void registerTest() throws ApiException {
+    public void registerTest() throws Exception {
         String appId = null;
         HydraRegistrationRequest hydraRegistration = null;
         RestApiResultHydraStatus response = api.register(appId, hydraRegistration);
@@ -395,11 +395,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unAssignTest() throws ApiException {
+    public void unAssignTest() throws Exception {
         String appId = null;
         String deviceId = null;
         api.unAssign(appId, deviceId);
@@ -412,11 +412,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unassignEmvTest() throws ApiException {
+    public void unassignEmvTest() throws Exception {
         String appId = null;
         Integer hydraConfigId = null;
         api.unassignEmv(appId, hydraConfigId);
@@ -429,11 +429,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateKioskCashVisibilitySettingsTest() throws ApiException {
+    public void updateKioskCashVisibilitySettingsTest() throws Exception {
         String appId = null;
         String deviceId = null;
         Boolean isCashEnabled = null;
@@ -447,11 +447,11 @@ public class HydraApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateKioskSettingsTest() throws ApiException {
+    public void updateKioskSettingsTest() throws Exception {
         String appId = null;
         String deviceId = null;
         KioskSettings settings = null;

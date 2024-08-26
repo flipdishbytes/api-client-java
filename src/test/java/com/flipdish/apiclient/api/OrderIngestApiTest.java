@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.OrderIngestSubmitOrderRequest;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiResultOrderIngestSubmitOrderResponse;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class OrderIngestApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void orderIngestSubmitNewOrderTest() throws ApiException {
+    public void orderIngestSubmitNewOrderTest() throws Exception {
         OrderIngestSubmitOrderRequest order = null;
         String appNameId = null;
         RestApiResultOrderIngestSubmitOrderResponse response = api.orderIngestSubmitNewOrder(order, appNameId);

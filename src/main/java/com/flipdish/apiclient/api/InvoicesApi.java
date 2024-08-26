@@ -41,6 +41,7 @@ import java.util.Map;
 
 public class InvoicesApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public InvoicesApi() {
         this(Configuration.getDefaultApiClient());
@@ -56,6 +57,10 @@ public class InvoicesApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -129,6 +134,9 @@ public class InvoicesApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

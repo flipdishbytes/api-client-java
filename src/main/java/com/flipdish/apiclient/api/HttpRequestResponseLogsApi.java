@@ -41,6 +41,7 @@ import java.util.Map;
 
 public class HttpRequestResponseLogsApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public HttpRequestResponseLogsApi() {
         this(Configuration.getDefaultApiClient());
@@ -56,6 +57,10 @@ public class HttpRequestResponseLogsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -123,6 +128,9 @@ public class HttpRequestResponseLogsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

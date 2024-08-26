@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.PushNotificationRequest;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPushNotificationResponse;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiResultPushNotificationResponse;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class PushNotificationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deletePushNotificationTest() throws ApiException {
+    public void deletePushNotificationTest() throws Exception {
         String appId = null;
         Integer scheduledPushNotificationId = null;
         api.deletePushNotification(appId, scheduledPushNotificationId);
@@ -58,11 +58,11 @@ public class PushNotificationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPushNotificationsTest() throws ApiException {
+    public void getPushNotificationsTest() throws Exception {
         String appId = null;
         Integer page = null;
         Integer limit = null;
@@ -76,11 +76,11 @@ public class PushNotificationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void schedulePushNotificationTest() throws ApiException {
+    public void schedulePushNotificationTest() throws Exception {
         String appId = null;
         PushNotificationRequest notification = null;
         RestApiResultPushNotificationResponse response = api.schedulePushNotification(appId, notification);
@@ -93,11 +93,11 @@ public class PushNotificationsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updatePushNotificationTest() throws ApiException {
+    public void updatePushNotificationTest() throws Exception {
         String appId = null;
         Integer scheduledPushNotificationId = null;
         PushNotificationRequest notification = null;

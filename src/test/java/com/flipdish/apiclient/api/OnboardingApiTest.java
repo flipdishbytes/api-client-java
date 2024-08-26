@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.OnboardingConfigUpdate;
 import com.flipdish.apiclient.model.OnboardingItemUpdate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingGetOnboardingConfigTest() throws ApiException {
+    public void onboardingGetOnboardingConfigTest() throws Exception {
         String appId = null;
         Object response = api.onboardingGetOnboardingConfig(appId);
 
@@ -57,11 +57,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingGetOnboardingConfigsTest() throws ApiException {
+    public void onboardingGetOnboardingConfigsTest() throws Exception {
         String appId = null;
         Object response = api.onboardingGetOnboardingConfigs(appId);
 
@@ -73,11 +73,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingGetOnboardingItemsTest() throws ApiException {
+    public void onboardingGetOnboardingItemsTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         Integer milestoneId = null;
@@ -91,11 +91,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingGetOnboardingItemsV2Test() throws ApiException {
+    public void onboardingGetOnboardingItemsV2Test() throws Exception {
         String appId = null;
         Integer storeId = null;
         Integer milestoneId = null;
@@ -109,11 +109,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingUpdateOnboardingConfigTest() throws ApiException {
+    public void onboardingUpdateOnboardingConfigTest() throws Exception {
         String appId = null;
         OnboardingConfigUpdate configUpdate = null;
         Object response = api.onboardingUpdateOnboardingConfig(appId, configUpdate);
@@ -126,11 +126,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingUpdateOnboardingConfigByIdTest() throws ApiException {
+    public void onboardingUpdateOnboardingConfigByIdTest() throws Exception {
         String appId = null;
         Integer configId = null;
         OnboardingConfigUpdate configUpdate = null;
@@ -144,11 +144,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingUpdateOnboardingItemTest() throws ApiException {
+    public void onboardingUpdateOnboardingItemTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         Integer onboardingItemId = null;
@@ -163,11 +163,11 @@ public class OnboardingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void onboardingUpdateOnboardingItemV2Test() throws ApiException {
+    public void onboardingUpdateOnboardingItemV2Test() throws Exception {
         String appId = null;
         Integer onboardingItemId = null;
         OnboardingItemUpdate itemUpdate = null;

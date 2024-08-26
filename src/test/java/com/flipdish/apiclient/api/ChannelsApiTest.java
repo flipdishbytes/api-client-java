@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Response;
 import com.flipdish.apiclient.model.RestApiArrayResultChannel;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelAssignment;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiResultStoreChannelAssignment;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void assignAppIdToSalesChannelTest() throws ApiException {
+    public void assignAppIdToSalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         Object response = api.assignAppIdToSalesChannel(appId, channelId);
@@ -62,11 +62,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void assignStoreToChannelTest() throws ApiException {
+    public void assignStoreToChannelTest() throws Exception {
         Integer storeId = null;
         String appId = null;
         Integer channelId = null;
@@ -80,11 +80,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void attachStoreToSalesChannelTest() throws ApiException {
+    public void attachStoreToSalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         Integer storeId = null;
@@ -98,11 +98,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void detachAllStoresFromSalesChannelTest() throws ApiException {
+    public void detachAllStoresFromSalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         Object response = api.detachAllStoresFromSalesChannel(appId, channelId);
@@ -115,11 +115,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void detachStoreFromSalesChannelTest() throws ApiException {
+    public void detachStoreFromSalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         Integer storeId = null;
@@ -133,11 +133,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAssignedChannelsTest() throws ApiException {
+    public void getAssignedChannelsTest() throws Exception {
         String appId = null;
         RestApiArrayResultChannel response = api.getAssignedChannels(appId);
 
@@ -149,11 +149,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAvailableChannelsTest() throws ApiException {
+    public void getAvailableChannelsTest() throws Exception {
         String appId = null;
         RestApiArrayResultChannel response = api.getAvailableChannels(appId);
 
@@ -165,11 +165,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getChannelTest() throws ApiException {
+    public void getChannelTest() throws Exception {
         Integer id = null;
         String appId = null;
         RestApiResultChannel response = api.getChannel(id, appId);
@@ -182,11 +182,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getChannelsTest() throws ApiException {
+    public void getChannelsTest() throws Exception {
         String appId = null;
         RestApiArrayResultChannel response = api.getChannels(appId);
 
@@ -198,11 +198,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoresAssignedToChannelTest() throws ApiException {
+    public void getStoresAssignedToChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         RestApiArrayResultStoreChannelAssignment response = api.getStoresAssignedToChannel(appId, channelId);
@@ -215,11 +215,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoresBySalesChannelTest() throws ApiException {
+    public void getStoresBySalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         Response response = api.getStoresBySalesChannel(appId, channelId);
@@ -232,11 +232,11 @@ public class ChannelsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unassignStoreFromChannelTest() throws ApiException {
+    public void unassignStoreFromChannelTest() throws Exception {
         Integer storeId = null;
         String appId = null;
         Integer channelId = null;

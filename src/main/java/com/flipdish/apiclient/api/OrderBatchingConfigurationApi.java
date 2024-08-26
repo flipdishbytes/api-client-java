@@ -41,6 +41,7 @@ import java.util.Map;
 
 public class OrderBatchingConfigurationApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public OrderBatchingConfigurationApi() {
         this(Configuration.getDefaultApiClient());
@@ -56,6 +57,10 @@ public class OrderBatchingConfigurationApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -105,6 +110,9 @@ public class OrderBatchingConfigurationApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -229,6 +237,9 @@ public class OrderBatchingConfigurationApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

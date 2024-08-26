@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ExternalStoreAuditLog;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class AuditLogsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrderAuditLogTest() throws ApiException {
+    public void addOrderAuditLogTest() throws Exception {
         Integer orderId = null;
         List<ExternalStoreAuditLog> externalEventCreate = null;
         api.addOrderAuditLog(orderId, externalEventCreate);
@@ -57,11 +57,11 @@ public class AuditLogsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addStoreAuditLogEventTest() throws ApiException {
+    public void addStoreAuditLogEventTest() throws Exception {
         Integer storeId = null;
         List<ExternalStoreAuditLog> externalEventCreate = null;
         api.addStoreAuditLogEvent(storeId, externalEventCreate);

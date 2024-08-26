@@ -40,6 +40,7 @@ import java.util.Map;
 
 public class PaymentIntentsApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public PaymentIntentsApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,6 +56,10 @@ public class PaymentIntentsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -104,6 +109,9 @@ public class PaymentIntentsApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

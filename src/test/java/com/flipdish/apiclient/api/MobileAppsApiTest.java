@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigSalesChannel;
 import java.io.File;
 import com.flipdish.apiclient.model.MobileAppsSubmission;
@@ -32,6 +31,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMobileAppsSubmissionStatus;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,11 +52,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppConfigSalesChannelTest() throws ApiException {
+    public void getAppConfigSalesChannelTest() throws Exception {
         String appId = null;
         RestApiResultAppConfigSalesChannel response = api.getAppConfigSalesChannel(appId);
 
@@ -68,11 +68,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStatisticsTest() throws ApiException {
+    public void getStatisticsTest() throws Exception {
         String appId = null;
         List<String> platformTypes = null;
         RestApiArrayResultMobileAppsStatistics response = api.getStatistics(appId, platformTypes);
@@ -85,11 +85,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSubmissionDetailsTest() throws ApiException {
+    public void getSubmissionDetailsTest() throws Exception {
         String appId = null;
         RestApiResultMobileAppsSubmissionDetails response = api.getSubmissionDetails(appId);
 
@@ -101,11 +101,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSubmissionStatusTest() throws ApiException {
+    public void getSubmissionStatusTest() throws Exception {
         String appId = null;
         Integer submissionId = null;
         RestApiResultMobileAppsSubmissionStatus response = api.getSubmissionStatus(appId, submissionId);
@@ -118,11 +118,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void publishTest() throws ApiException {
+    public void publishTest() throws Exception {
         String appId = null;
         Integer submissionId = null;
         String platformType = null;
@@ -136,11 +136,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resubmissionTest() throws ApiException {
+    public void resubmissionTest() throws Exception {
         String appId = null;
         MobileAppsSubmission mobileAppsSubmission = null;
         RestApiResultMobileAppsSubmission response = api.resubmission(appId, mobileAppsSubmission);
@@ -153,11 +153,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void submissionTest() throws ApiException {
+    public void submissionTest() throws Exception {
         String appId = null;
         MobileAppsSubmission mobileAppsSubmission = null;
         RestApiResultMobileAppsSubmission response = api.submission(appId, mobileAppsSubmission);
@@ -170,11 +170,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unpublishTest() throws ApiException {
+    public void unpublishTest() throws Exception {
         String appId = null;
         Integer submissionId = null;
         String platformType = null;
@@ -188,11 +188,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateAppConfigSalesChannelTest() throws ApiException {
+    public void updateAppConfigSalesChannelTest() throws Exception {
         String appId = null;
         AppConfigSalesChannel appConfigSalesChannel = null;
         RestApiResultAppConfigSalesChannel response = api.updateAppConfigSalesChannel(appId, appConfigSalesChannel);
@@ -205,11 +205,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateSubmissionStatusTest() throws ApiException {
+    public void updateSubmissionStatusTest() throws Exception {
         String appId = null;
         Integer submissionId = null;
         UpdateMobileAppsSubmissionStatus updateSubmissionStatus = null;
@@ -223,11 +223,11 @@ public class MobileAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadImageTest() throws ApiException {
+    public void uploadImageTest() throws Exception {
         String appId = null;
         File image = null;
         RestApiResultMobileAppsImage response = api.uploadImage(appId, image);

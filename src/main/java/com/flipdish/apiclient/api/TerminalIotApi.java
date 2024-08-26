@@ -40,6 +40,7 @@ import java.util.Map;
 
 public class TerminalIotApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public TerminalIotApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,6 +56,10 @@ public class TerminalIotApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -102,6 +107,9 @@ public class TerminalIotApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

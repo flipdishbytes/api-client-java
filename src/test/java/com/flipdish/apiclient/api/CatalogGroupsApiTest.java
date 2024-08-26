@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateGroup;
 import com.flipdish.apiclient.model.Group;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateGroup;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void archiveGroupTest() throws ApiException {
+    public void archiveGroupTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.archiveGroup(appId, catalogItemId);
@@ -61,11 +61,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createGroupTest() throws ApiException {
+    public void createGroupTest() throws Exception {
         String appId = null;
         CreateGroup createGroup = null;
         RestApiResultGroup response = api.createGroup(appId, createGroup);
@@ -78,11 +78,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void duplicateGroupTest() throws ApiException {
+    public void duplicateGroupTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.duplicateGroup(appId, catalogItemId);
@@ -95,11 +95,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getGroupByIdTest() throws ApiException {
+    public void getGroupByIdTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         Group response = api.getGroupById(appId, catalogItemId);
@@ -112,11 +112,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getGroupsTest() throws ApiException {
+    public void getGroupsTest() throws Exception {
         String appId = null;
         List<String> groupTypes = null;
         String searchTerm = null;
@@ -132,11 +132,11 @@ public class CatalogGroupsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateGroupTest() throws ApiException {
+    public void updateGroupTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         UpdateGroup updateGroup = null;

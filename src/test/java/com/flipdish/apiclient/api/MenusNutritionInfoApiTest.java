@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ItemNutritionInfoAddUpdateModel;
 import com.flipdish.apiclient.model.RestApiArrayResultAllergen;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import java.util.UUID;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrUpdateMenuItemNutritionInfoTest() throws ApiException {
+    public void addOrUpdateMenuItemNutritionInfoTest() throws Exception {
         Integer menuId = null;
         String publicId = null;
         ItemNutritionInfoAddUpdateModel addOrUpdateModel = null;
@@ -62,11 +62,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrUpdateMenuItemOptionSetItemNutritionInfoTest() throws ApiException {
+    public void addOrUpdateMenuItemOptionSetItemNutritionInfoTest() throws Exception {
         Integer menuId = null;
         UUID publicId = null;
         ItemNutritionInfoAddUpdateModel addOrUpdateModel = null;
@@ -80,11 +80,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addOrUpdateMenuNutritionInfoByMenuIdTest() throws ApiException {
+    public void addOrUpdateMenuNutritionInfoByMenuIdTest() throws Exception {
         Integer menuId = null;
         RestApiResultMenuNutritionInfoHeader response = api.addOrUpdateMenuNutritionInfoByMenuId(menuId);
 
@@ -96,11 +96,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuNutritionInfoByMenuIdTest() throws ApiException {
+    public void deleteMenuNutritionInfoByMenuIdTest() throws Exception {
         Integer menuId = null;
         Object response = api.deleteMenuNutritionInfoByMenuId(menuId);
 
@@ -112,11 +112,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAllergensTest() throws ApiException {
+    public void getAllergensTest() throws Exception {
         String appId = null;
         String languageId = null;
         RestApiArrayResultAllergen response = api.getAllergens(appId, languageId);
@@ -129,11 +129,11 @@ public class MenusNutritionInfoApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuNutritionInfoByMenuIdTest() throws ApiException {
+    public void getMenuNutritionInfoByMenuIdTest() throws Exception {
         Integer menuId = null;
         RestApiResultNutritionInfo response = api.getMenuNutritionInfoByMenuId(menuId);
 

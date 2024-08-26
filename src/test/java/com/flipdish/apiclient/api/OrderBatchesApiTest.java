@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiArrayResultOrderBatch;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultOrderBatch;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class OrderBatchesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAllOrderBatchesTest() throws ApiException {
+    public void getAllOrderBatchesTest() throws Exception {
         String appId = null;
         List<Integer> storeIds = null;
         OffsetDateTime createdFrom = null;
@@ -61,11 +61,11 @@ public class OrderBatchesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrderBatchTest() throws ApiException {
+    public void getOrderBatchTest() throws Exception {
         String appId = null;
         Integer orderBatchId = null;
         RestApiResultOrderBatch response = api.getOrderBatch(appId, orderBatchId);

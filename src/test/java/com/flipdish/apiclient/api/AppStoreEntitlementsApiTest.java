@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAppStoreAppEntitlements;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class AppStoreEntitlementsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppStoreAppEntitlementsTest() throws ApiException {
+    public void getAppStoreAppEntitlementsTest() throws Exception {
         String appId = null;
         String appStoreAppId = null;
         RestApiResultAppStoreAppEntitlements response = api.getAppStoreAppEntitlements(appId, appStoreAppId);

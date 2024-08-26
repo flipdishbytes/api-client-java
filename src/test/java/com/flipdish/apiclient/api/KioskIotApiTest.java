@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultKioskIotConnectionParameters;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.TelemetrySeriesQueryParameters;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class KioskIotApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getKioskIotConnectionTest() throws ApiException {
+    public void getKioskIotConnectionTest() throws Exception {
         RestApiResultKioskIotConnectionParameters response = api.getKioskIotConnection();
 
         // TODO: test validations
@@ -57,11 +57,11 @@ public class KioskIotApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void queryTelemetrySeriesTest() throws ApiException {
+    public void queryTelemetrySeriesTest() throws Exception {
         String appId = null;
         TelemetrySeriesQueryParameters queryParams = null;
         RestApiResultTelemetrySeriesResult response = api.queryTelemetrySeries(appId, queryParams);

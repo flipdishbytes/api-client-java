@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ClientDeviceAssignEnrolledDevice;
 import com.flipdish.apiclient.model.ClientDeviceEnroll;
 import com.flipdish.apiclient.model.RestApiArrayResultClientDeviceSummary;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiResultClientDeviceEnrollmentResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class DeviceApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void assignDeviceTest() throws ApiException {
+    public void assignDeviceTest() throws Exception {
         String appId = null;
         ClientDeviceAssignEnrolledDevice assignDeviceRequest = null;
         RestApiResultClientDeviceEnrollmentResult response = api.assignDevice(appId, assignDeviceRequest);
@@ -61,11 +61,11 @@ public class DeviceApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void enrollDeviceTest() throws ApiException {
+    public void enrollDeviceTest() throws Exception {
         String appId = null;
         ClientDeviceEnroll deviceEnrollmentRequest = null;
         RestApiResultClientDeviceEnrollmentResult response = api.enrollDevice(appId, deviceEnrollmentRequest);
@@ -78,11 +78,11 @@ public class DeviceApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDeviceDetailsTest() throws ApiException {
+    public void getDeviceDetailsTest() throws Exception {
         String appId = null;
         String deviceModel = null;
         String deviceId = null;
@@ -96,11 +96,11 @@ public class DeviceApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void searchDevicesTest() throws ApiException {
+    public void searchDevicesTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         String deviceModel = null;

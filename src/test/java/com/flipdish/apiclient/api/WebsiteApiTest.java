@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import java.io.File;
 import com.flipdish.apiclient.model.IndexPageBase;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.WebsiteTestimonialBase;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addTestimonialTest() throws ApiException {
+    public void addTestimonialTest() throws Exception {
         String appId = null;
         WebsiteTestimonialBase testimonial = null;
         RestApiResultWebsiteTestimonial response = api.addTestimonial(appId, testimonial);
@@ -63,11 +63,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteTestimonialTest() throws ApiException {
+    public void deleteTestimonialTest() throws Exception {
         String appId = null;
         Integer testimonialId = null;
         api.deleteTestimonial(appId, testimonialId);
@@ -80,11 +80,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteWebsiteImageTest() throws ApiException {
+    public void deleteWebsiteImageTest() throws Exception {
         String appId = null;
         Integer imageId = null;
         api.deleteWebsiteImage(appId, imageId);
@@ -97,11 +97,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void editTestimonialTest() throws ApiException {
+    public void editTestimonialTest() throws Exception {
         String appId = null;
         Integer testimonialId = null;
         WebsiteTestimonialBase testimonial = null;
@@ -115,11 +115,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getIndexConfigurationTest() throws ApiException {
+    public void getIndexConfigurationTest() throws Exception {
         String appId = null;
         RestApiResultIndexPage response = api.getIndexConfiguration(appId);
 
@@ -131,11 +131,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setIndexConfigurationTest() throws ApiException {
+    public void setIndexConfigurationTest() throws Exception {
         String appId = null;
         IndexPageBase indexPage = null;
         RestApiResultIndexPageBase response = api.setIndexConfiguration(appId, indexPage);
@@ -148,11 +148,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadWebsiteImageTest() throws ApiException {
+    public void uploadWebsiteImageTest() throws Exception {
         String appId = null;
         String imageLocation = null;
         File image = null;
@@ -166,11 +166,11 @@ public class WebsiteApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void websiteCheckNowTest() throws ApiException {
+    public void websiteCheckNowTest() throws Exception {
         String appId = null;
         api.websiteCheckNow(appId);
 

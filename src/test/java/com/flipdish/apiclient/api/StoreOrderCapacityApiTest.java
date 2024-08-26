@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultStoreOrderCapacityConfig;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StoreOrderCapacityConfigEditModel;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class StoreOrderCapacityApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreOrderCapacityTest() throws ApiException {
+    public void getStoreOrderCapacityTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         String deliveryType = null;
@@ -59,11 +59,11 @@ public class StoreOrderCapacityApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreOrderCapacityConfigTest() throws ApiException {
+    public void updateStoreOrderCapacityConfigTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         StoreOrderCapacityConfigEditModel newOrderCapacityConfig = null;

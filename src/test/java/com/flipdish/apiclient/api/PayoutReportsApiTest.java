@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3RefundedOrder;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutReport3DetailsTest() throws ApiException {
+    public void getPayoutReport3DetailsTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -61,11 +61,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutReport3OverviewTest() throws ApiException {
+    public void getPayoutReport3OverviewTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -79,11 +79,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutReport3RefundedOrdersTest() throws ApiException {
+    public void getPayoutReport3RefundedOrdersTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -100,11 +100,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutChargebacksTest() throws ApiException {
+    public void payoutReport3ExportPayoutChargebacksTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -119,11 +119,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutLedgerEntriesTest() throws ApiException {
+    public void payoutReport3ExportPayoutLedgerEntriesTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -138,11 +138,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutOrdersTest() throws ApiException {
+    public void payoutReport3ExportPayoutOrdersTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -157,11 +157,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutPosSalesTest() throws ApiException {
+    public void payoutReport3ExportPayoutPosSalesTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -176,11 +176,11 @@ public class PayoutReportsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutRefundedOrdersTest() throws ApiException {
+    public void payoutReport3ExportPayoutRefundedOrdersTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;

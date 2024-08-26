@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultOrderBatchingConfiguration;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.SetOrderBatchingConfiguration;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class OrderBatchingConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTest() throws ApiException {
+    public void getTest() throws Exception {
         Integer storeId = null;
         RestApiResultOrderBatchingConfiguration response = api.get(storeId);
 
@@ -57,11 +57,11 @@ public class OrderBatchingConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postTest() throws ApiException {
+    public void postTest() throws Exception {
         Integer storeId = null;
         SetOrderBatchingConfiguration setOrderBatchingConfiguration = null;
         api.post(storeId, setOrderBatchingConfiguration);

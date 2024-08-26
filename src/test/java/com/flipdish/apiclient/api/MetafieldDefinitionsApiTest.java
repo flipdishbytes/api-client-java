@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateMetafieldDefinition;
 import com.flipdish.apiclient.model.OwnerEntityConfigurations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateMetafieldDefinition;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMetafieldDefinitionTest() throws ApiException {
+    public void createMetafieldDefinitionTest() throws Exception {
         String appId = null;
         String ownerEntity = null;
         CreateMetafieldDefinition createMetafieldDefinition = null;
@@ -63,11 +63,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMetafieldDefinitionByKeyTest() throws ApiException {
+    public void getMetafieldDefinitionByKeyTest() throws Exception {
         String appId = null;
         String ownerEntity = null;
         String key = null;
@@ -81,11 +81,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMetafieldDefinitionsTest() throws ApiException {
+    public void getMetafieldDefinitionsTest() throws Exception {
         String appId = null;
         String ownerEntity = null;
         String searchTerm = null;
@@ -101,11 +101,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOwnerEntityConfigurationsTest() throws ApiException {
+    public void getOwnerEntityConfigurationsTest() throws Exception {
         String appId = null;
         OwnerEntityConfigurations response = api.getOwnerEntityConfigurations(appId);
 
@@ -117,11 +117,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOwnerEntityRecommendationsTest() throws ApiException {
+    public void getOwnerEntityRecommendationsTest() throws Exception {
         String appId = null;
         String ownerEntity = null;
         String searchTerm = null;
@@ -137,11 +137,11 @@ public class MetafieldDefinitionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMetafieldDefinitionTest() throws ApiException {
+    public void updateMetafieldDefinitionTest() throws Exception {
         String appId = null;
         String ownerEntity = null;
         String key = null;

@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.FirebaseApp;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class FirebaseAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void firebaseAppsAddFirebaseAppTest() throws ApiException {
+    public void firebaseAppsAddFirebaseAppTest() throws Exception {
         FirebaseApp firebaseApp = null;
         Object response = api.firebaseAppsAddFirebaseApp(firebaseApp);
 
@@ -56,11 +56,11 @@ public class FirebaseAppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void firebaseAppsGetFirebaseAppTest() throws ApiException {
+    public void firebaseAppsGetFirebaseAppTest() throws Exception {
         Integer whitelabelId = null;
         Object response = api.firebaseAppsGetFirebaseApp(whitelabelId);
 

@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
 import com.flipdish.apiclient.model.AppLookup;
 import com.flipdish.apiclient.model.CreateAppInOrg;
@@ -31,6 +30,7 @@ import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,11 +51,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createAppTest() throws ApiException {
+    public void createAppTest() throws Exception {
         CreateAppParameters parameters = null;
         RestApiStringResult response = api.createApp(parameters);
 
@@ -67,11 +67,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createAppInOrgTest() throws ApiException {
+    public void createAppInOrgTest() throws Exception {
         String orgId = null;
         CreateAppInOrg createAppInOrgRequest = null;
         RestApiResultApp response = api.createAppInOrg(orgId, createAppInOrgRequest);
@@ -84,11 +84,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppTest() throws ApiException {
+    public void getAppTest() throws Exception {
         String appId = null;
         RestApiResultApp response = api.getApp(appId);
 
@@ -100,11 +100,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppHostnameStatusTest() throws ApiException {
+    public void getAppHostnameStatusTest() throws Exception {
         String appId = null;
         RestApiResultDnsRecordInformation response = api.getAppHostnameStatus(appId);
 
@@ -116,11 +116,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppsTest() throws ApiException {
+    public void getAppsTest() throws Exception {
         String nameFilter = null;
         Integer page = null;
         Integer limit = null;
@@ -134,11 +134,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getComplianceTest() throws ApiException {
+    public void getComplianceTest() throws Exception {
         String appId = null;
         RestApiResultAppCompliance response = api.getCompliance(appId);
 
@@ -150,11 +150,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPanaceaVanityUrlTest() throws ApiException {
+    public void getPanaceaVanityUrlTest() throws Exception {
         String appId = null;
         RestApiStringResult response = api.getPanaceaVanityUrl(appId);
 
@@ -166,11 +166,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSupportedCountriesTest() throws ApiException {
+    public void getSupportedCountriesTest() throws Exception {
         RestApiArrayResultSupportedCountry response = api.getSupportedCountries();
 
         // TODO: test validations
@@ -181,11 +181,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void isPanaceaVanityUrlAvailableTest() throws ApiException {
+    public void isPanaceaVanityUrlAvailableTest() throws Exception {
         String vanityUrl = null;
         String appId = null;
         RestApiStringResult response = api.isPanaceaVanityUrlAvailable(vanityUrl, appId);
@@ -198,11 +198,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void lookupByWhitelabelIdTest() throws ApiException {
+    public void lookupByWhitelabelIdTest() throws Exception {
         Integer whitelabelId = null;
         AppLookup response = api.lookupByWhitelabelId(whitelabelId);
 
@@ -214,11 +214,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setAppConfigTest() throws ApiException {
+    public void setAppConfigTest() throws Exception {
         String appId = null;
         AppConfigUpdateModel appConfigUpdate = null;
         RestApiResultApp response = api.setAppConfig(appId, appConfigUpdate);
@@ -231,11 +231,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setAppHostnameTest() throws ApiException {
+    public void setAppHostnameTest() throws Exception {
         String appId = null;
         String hostname = null;
         Boolean isEmbed = null;
@@ -249,11 +249,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setAppLanguagesTest() throws ApiException {
+    public void setAppLanguagesTest() throws Exception {
         String appId = null;
         List<Language> languages = null;
         RestApiResultApp response = api.setAppLanguages(appId, languages);
@@ -266,11 +266,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setAppStoreNameTest() throws ApiException {
+    public void setAppStoreNameTest() throws Exception {
         String appId = null;
         String appStoreName = null;
         api.setAppStoreName(appId, appStoreName);
@@ -283,11 +283,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setComplianceTest() throws ApiException {
+    public void setComplianceTest() throws Exception {
         String appId = null;
         String complianceType = null;
         RestApiResultAppCompliance response = api.setCompliance(appId, complianceType);
@@ -300,11 +300,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setPanaceaVanityUrlTest() throws ApiException {
+    public void setPanaceaVanityUrlTest() throws Exception {
         String appId = null;
         String vanityUrl = null;
         RestApiStringResult response = api.setPanaceaVanityUrl(appId, vanityUrl);
@@ -317,11 +317,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void toggleNextGenWebTest() throws ApiException {
+    public void toggleNextGenWebTest() throws Exception {
         String appId = null;
         String hostname = null;
         String vanityUrl = null;
@@ -336,11 +336,11 @@ public class AppsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadAppLogoTest() throws ApiException {
+    public void uploadAppLogoTest() throws Exception {
         String appId = null;
         File image = null;
         api.uploadAppLogo(appId, image);

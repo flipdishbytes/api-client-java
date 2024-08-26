@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateFullMenu;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuBase;
@@ -38,6 +37,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,11 +57,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createDraftMenuFromExistingMenuTest() throws ApiException {
+    public void createDraftMenuFromExistingMenuTest() throws Exception {
         Integer menuId = null;
         String newName = null;
         RestApiResultMenu response = api.createDraftMenuFromExistingMenu(menuId, newName);
@@ -74,11 +74,11 @@ public class MenusApiTest {
      *
      * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createNewMenuAsyncTest() throws ApiException {
+    public void createNewMenuAsyncTest() throws Exception {
         String appId = null;
         CreateFullMenu menu = null;
         Object response = api.createNewMenuAsync(appId, menu);
@@ -91,11 +91,11 @@ public class MenusApiTest {
      *
      * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createNewMenuForAppTest() throws ApiException {
+    public void createNewMenuForAppTest() throws Exception {
         String appId = null;
         CreateFullMenu menu = null;
         Integer response = api.createNewMenuForApp(appId, menu);
@@ -108,11 +108,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuTest() throws ApiException {
+    public void deleteMenuTest() throws Exception {
         Integer menuId = null;
         api.deleteMenu(menuId);
 
@@ -124,11 +124,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuImageTest() throws ApiException {
+    public void deleteMenuImageTest() throws Exception {
         Integer menuId = null;
         api.deleteMenuImage(menuId);
 
@@ -140,11 +140,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuItemMetadataTest() throws ApiException {
+    public void deleteMenuItemMetadataTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer menuItemId = null;
@@ -159,11 +159,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAllMenuMetadataByMenuIdAndStoreIdTest() throws ApiException {
+    public void getAllMenuMetadataByMenuIdAndStoreIdTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         RestApiArrayResultAllMetadataResult response = api.getAllMenuMetadataByMenuIdAndStoreId(menuId, storeId);
@@ -176,11 +176,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuByIdTest() throws ApiException {
+    public void getMenuByIdTest() throws Exception {
         Integer menuId = null;
         RestApiResultMenu response = api.getMenuById(menuId);
 
@@ -192,11 +192,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemMetadataTest() throws ApiException {
+    public void getMenuItemMetadataTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer menuItemId = null;
@@ -210,11 +210,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemMetadataByKeyTest() throws ApiException {
+    public void getMenuItemMetadataByKeyTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer menuItemId = null;
@@ -229,11 +229,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemOptionSetItemMetadataTest() throws ApiException {
+    public void getMenuItemOptionSetItemMetadataTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer optionSetItemId = null;
@@ -247,11 +247,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuNameTest() throws ApiException {
+    public void getMenuNameTest() throws Exception {
         Integer menuId = null;
         String response = api.getMenuName(menuId);
 
@@ -263,11 +263,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuStoreNamesTest() throws ApiException {
+    public void getMenuStoreNamesTest() throws Exception {
         Integer menuId = null;
         RestApiArrayResultMenuStoreNames response = api.getMenuStoreNames(menuId);
 
@@ -279,11 +279,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuTaxDetailsTest() throws ApiException {
+    public void getMenuTaxDetailsTest() throws Exception {
         Integer menuId = null;
         RestApiArrayResultMenuTaxDetails response = api.getMenuTaxDetails(menuId);
 
@@ -295,11 +295,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenusByAppIdTest() throws ApiException {
+    public void getMenusByAppIdTest() throws Exception {
         String appId = null;
         RestApiArrayResultMenuSummary response = api.getMenusByAppId(appId);
 
@@ -311,11 +311,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenusCheckpointsTest() throws ApiException {
+    public void getMenusCheckpointsTest() throws Exception {
         Integer menuId = null;
         RestApiArrayResultMenuCheckpoint response = api.getMenusCheckpoints(menuId);
 
@@ -327,11 +327,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusDeleteTaxRateTest() throws ApiException {
+    public void menusDeleteTaxRateTest() throws Exception {
         Integer menuId = null;
         Integer taxId = null;
         api.menusDeleteTaxRate(menuId, taxId);
@@ -344,11 +344,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusGetMenuBulkShowHideTest() throws ApiException {
+    public void menusGetMenuBulkShowHideTest() throws Exception {
         Integer menuId = null;
         Boolean isAvailable = null;
         RestApiArrayResultMenuElementListResponse response = api.menusGetMenuBulkShowHide(menuId, isAvailable);
@@ -361,11 +361,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusSetDisplayOnMenuTaxTest() throws ApiException {
+    public void menusSetDisplayOnMenuTaxTest() throws Exception {
         Integer menuId = null;
         Boolean show = null;
         api.menusSetDisplayOnMenuTax(menuId, show);
@@ -378,11 +378,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusSetItemDisplayOrdersTest() throws ApiException {
+    public void menusSetItemDisplayOrdersTest() throws Exception {
         Integer menuId = null;
         MenuObjectDisplayOrders displayOrders = null;
         api.menusSetItemDisplayOrders(menuId, displayOrders);
@@ -395,11 +395,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusShowHideBulkItemsTest() throws ApiException {
+    public void menusShowHideBulkItemsTest() throws Exception {
         Integer menuId = null;
         List<MenuElementHide> menuElements = null;
         Boolean isAvailable = null;
@@ -413,11 +413,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusUpdateTaxTypeTest() throws ApiException {
+    public void menusUpdateTaxTypeTest() throws Exception {
         Integer menuId = null;
         String type = null;
         api.menusUpdateTaxType(menuId, type);
@@ -430,11 +430,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menusUpsertTaxRateTest() throws ApiException {
+    public void menusUpsertTaxRateTest() throws Exception {
         Integer menuId = null;
         MenuTaxRate taxRate = null;
         MenuTaxRate response = api.menusUpsertTaxRate(menuId, taxRate);
@@ -447,11 +447,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void restoreAMenuCheckpointTest() throws ApiException {
+    public void restoreAMenuCheckpointTest() throws Exception {
         Integer menuId = null;
         Integer checkpointId = null;
         api.restoreAMenuCheckpoint(menuId, checkpointId);
@@ -464,11 +464,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuItemMetadataTest() throws ApiException {
+    public void setMenuItemMetadataTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer menuItemId = null;
@@ -483,11 +483,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuItemOptionSetItemMetadataTest() throws ApiException {
+    public void setMenuItemOptionSetItemMetadataTest() throws Exception {
         Integer menuId = null;
         Integer storeId = null;
         Integer optionSetItemId = null;
@@ -502,11 +502,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuLockTest() throws ApiException {
+    public void setMenuLockTest() throws Exception {
         Integer menuId = null;
         Boolean locked = null;
         api.setMenuLock(menuId, locked);
@@ -519,11 +519,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuNameTest() throws ApiException {
+    public void setMenuNameTest() throws Exception {
         Integer menuId = null;
         String name = null;
         api.setMenuName(menuId, name);
@@ -536,11 +536,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMenuTest() throws ApiException {
+    public void updateMenuTest() throws Exception {
         Integer menuId = null;
         MenuBase menu = null;
         api.updateMenu(menuId, menu);
@@ -553,11 +553,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadMenuImageTest() throws ApiException {
+    public void uploadMenuImageTest() throws Exception {
         Integer menuId = null;
         File image = null;
         RestApiStringResult response = api.uploadMenuImage(menuId, image);
@@ -570,11 +570,11 @@ public class MenusApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadNewMenuForAppTest() throws ApiException {
+    public void uploadNewMenuForAppTest() throws Exception {
         String appId = null;
         File menu = null;
         Integer response = api.uploadNewMenuForApp(appId, menu);

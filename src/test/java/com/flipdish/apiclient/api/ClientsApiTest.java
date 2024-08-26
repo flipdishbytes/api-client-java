@@ -13,11 +13,11 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,11 +38,11 @@ public class ClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getClientTest() throws ApiException {
+    public void getClientTest() throws Exception {
         Integer clientId = null;
         api.getClient(clientId);
 
@@ -54,11 +54,11 @@ public class ClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setSalesForceContactIdTest() throws ApiException {
+    public void setSalesForceContactIdTest() throws Exception {
         Integer clientId = null;
         String salesForceContactId = null;
         api.setSalesForceContactId(clientId, salesForceContactId);
@@ -71,11 +71,11 @@ public class ClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setStripeCustomerIdTest() throws ApiException {
+    public void setStripeCustomerIdTest() throws Exception {
         Integer clientId = null;
         String stripeCustomerId = null;
         api.setStripeCustomerId(clientId, stripeCustomerId);

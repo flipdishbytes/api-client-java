@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultAppStoreAppSummary;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiResultAppStoreApp;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class AppStoreApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppStoreAppTest() throws ApiException {
+    public void getAppStoreAppTest() throws Exception {
         String appStoreAppId = null;
         String appId = null;
         RestApiResultAppStoreApp response = api.getAppStoreApp(appStoreAppId, appId);
@@ -58,11 +58,11 @@ public class AppStoreApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppStoreAppsTest() throws ApiException {
+    public void getAppStoreAppsTest() throws Exception {
         String search = null;
         Integer page = null;
         Integer limit = null;

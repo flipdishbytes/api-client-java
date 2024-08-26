@@ -13,13 +13,13 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class FeaturesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void disableFeaturesTest() throws ApiException {
+    public void disableFeaturesTest() throws Exception {
         String appId = null;
         List<String> features = null;
         RestApiStringArrayResult response = api.disableFeatures(appId, features);
@@ -57,11 +57,11 @@ public class FeaturesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void enableFeaturesTest() throws ApiException {
+    public void enableFeaturesTest() throws Exception {
         String appId = null;
         List<String> features = null;
         RestApiStringArrayResult response = api.enableFeatures(appId, features);

@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.OAuthApp;
 import com.flipdish.apiclient.model.RestApiArrayResultOAuthApp;
 import com.flipdish.apiclient.model.RestApiArrayResultOauthClientRedirectUri;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addRedirectUriTest() throws ApiException {
+    public void addRedirectUriTest() throws Exception {
         String oauthAppId = null;
         String uri = null;
         String appId = null;
@@ -63,11 +63,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createOAuthAppTest() throws ApiException {
+    public void createOAuthAppTest() throws Exception {
         OAuthApp oAuthApp = null;
         String appId = null;
         api.createOAuthApp(oAuthApp, appId);
@@ -80,11 +80,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteOAuthAppTest() throws ApiException {
+    public void deleteOAuthAppTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         api.deleteOAuthApp(oauthAppId, appId);
@@ -97,11 +97,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOAuthAppsTest() throws ApiException {
+    public void getOAuthAppsTest() throws Exception {
         String appId = null;
         String oauthAppName = null;
         RestApiArrayResultOAuthApp response = api.getOAuthApps(appId, oauthAppName);
@@ -114,11 +114,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOAuthClientByClientIdTest() throws ApiException {
+    public void getOAuthClientByClientIdTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         RestApiResultOAuthApp response = api.getOAuthClientByClientId(oauthAppId, appId);
@@ -131,11 +131,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOAuthClientSecretTest() throws ApiException {
+    public void getOAuthClientSecretTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         RestApiStringResult response = api.getOAuthClientSecret(oauthAppId, appId);
@@ -148,11 +148,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOauthAccessTokenTest() throws ApiException {
+    public void getOauthAccessTokenTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         RestApiStringResult response = api.getOauthAccessToken(oauthAppId, appId);
@@ -165,11 +165,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getRedirectUrisTest() throws ApiException {
+    public void getRedirectUrisTest() throws Exception {
         String oauthAppId = null;
         String appId = null;
         RestApiArrayResultOauthClientRedirectUri response = api.getRedirectUris(oauthAppId, appId);
@@ -182,11 +182,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void oAuthClientsGetApplicationsTest() throws ApiException {
+    public void oAuthClientsGetApplicationsTest() throws Exception {
         String appId = null;
         Object response = api.oAuthClientsGetApplications(appId);
 
@@ -198,11 +198,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void removeRedirectUriTest() throws ApiException {
+    public void removeRedirectUriTest() throws Exception {
         String oauthAppId = null;
         Integer uriId = null;
         String appId = null;
@@ -216,11 +216,11 @@ public class OAuthClientsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateOAuthAppTest() throws ApiException {
+    public void updateOAuthAppTest() throws Exception {
         String oauthAppId = null;
         OAuthApp oAuthApp = null;
         String appId = null;

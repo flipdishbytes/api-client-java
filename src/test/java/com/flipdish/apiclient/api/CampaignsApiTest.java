@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.LoyaltyCampaignBase;
 import com.flipdish.apiclient.model.RestApiArrayResultLoyaltyCampaign;
 import com.flipdish.apiclient.model.RestApiArrayResultRetentionCampaign;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.RetentionCampaignBase;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createLoyaltyCampaignTest() throws ApiException {
+    public void createLoyaltyCampaignTest() throws Exception {
         String appId = null;
         LoyaltyCampaignBase campaign = null;
         RestApiResultLoyaltyCampaign response = api.createLoyaltyCampaign(appId, campaign);
@@ -63,11 +63,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createRetentionCampaignTest() throws ApiException {
+    public void createRetentionCampaignTest() throws Exception {
         String appId = null;
         RetentionCampaignBase campaign = null;
         RestApiResultRetentionCampaign response = api.createRetentionCampaign(appId, campaign);
@@ -80,11 +80,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getLoyaltyCampaignsForAppTest() throws ApiException {
+    public void getLoyaltyCampaignsForAppTest() throws Exception {
         String appId = null;
         RestApiArrayResultLoyaltyCampaign response = api.getLoyaltyCampaignsForApp(appId);
 
@@ -96,11 +96,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getLoyaltyCampaignsForStoreTest() throws ApiException {
+    public void getLoyaltyCampaignsForStoreTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         RestApiArrayResultLoyaltyCampaign response = api.getLoyaltyCampaignsForStore(appId, storeId);
@@ -113,11 +113,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getRetentionCampaignsForAppTest() throws ApiException {
+    public void getRetentionCampaignsForAppTest() throws Exception {
         String appId = null;
         RestApiArrayResultRetentionCampaign response = api.getRetentionCampaignsForApp(appId);
 
@@ -129,11 +129,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getRetentionCampaignsForStoreTest() throws ApiException {
+    public void getRetentionCampaignsForStoreTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         RestApiArrayResultRetentionCampaign response = api.getRetentionCampaignsForStore(appId, storeId);
@@ -146,11 +146,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreListTest() throws ApiException {
+    public void getStoreListTest() throws Exception {
         String appId = null;
         Boolean onlyPublished = null;
         RestApiArrayResultStoreListItem response = api.getStoreList(appId, onlyPublished);
@@ -163,11 +163,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void removeCampaignTest() throws ApiException {
+    public void removeCampaignTest() throws Exception {
         String appId = null;
         Integer campaignId = null;
         api.removeCampaign(appId, campaignId);
@@ -180,11 +180,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateLoyaltyCampaignTest() throws ApiException {
+    public void updateLoyaltyCampaignTest() throws Exception {
         String appId = null;
         Integer campaignId = null;
         LoyaltyCampaignBase campaign = null;
@@ -198,11 +198,11 @@ public class CampaignsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateRetentionCampaignTest() throws ApiException {
+    public void updateRetentionCampaignTest() throws Exception {
         String appId = null;
         Integer campaignId = null;
         RetentionCampaignBase campaign = null;

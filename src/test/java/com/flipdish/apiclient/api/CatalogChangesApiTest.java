@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.PublishMenuChanges;
 import com.flipdish.apiclient.model.RestApiArrayResultPendingMenuChangesSummaries;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultPendingMenuChanges;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class CatalogChangesApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPendingMenuChangesTest() throws ApiException {
+    public void getPendingMenuChangesTest() throws Exception {
         String appId = null;
         Integer menuId = null;
         String catalogItemId = null;
@@ -62,11 +62,11 @@ public class CatalogChangesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPendingMenuChangesSummariesTest() throws ApiException {
+    public void getPendingMenuChangesSummariesTest() throws Exception {
         String appId = null;
         RestApiArrayResultPendingMenuChangesSummaries response = api.getPendingMenuChangesSummaries(appId);
 
@@ -78,11 +78,11 @@ public class CatalogChangesApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void publishPendingMenuChangesTest() throws ApiException {
+    public void publishPendingMenuChangesTest() throws Exception {
         String appId = null;
         PublishMenuChanges publishMenuChanges = null;
         api.publishPendingMenuChanges(appId, publishMenuChanges);

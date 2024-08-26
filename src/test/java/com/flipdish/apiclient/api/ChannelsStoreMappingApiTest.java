@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.ChannelStoreMapping;
 import com.flipdish.apiclient.model.RestApiArrayResultStoreChannelStoreMapping;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class ChannelsStoreMappingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void channelsGetStoreChannelStoreMappingTest() throws ApiException {
+    public void channelsGetStoreChannelStoreMappingTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         RestApiArrayResultStoreChannelStoreMapping response = api.channelsGetStoreChannelStoreMapping(appId, channelId);
@@ -58,11 +58,11 @@ public class ChannelsStoreMappingApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void channelsSetStoreChannelStoreMappingTest() throws ApiException {
+    public void channelsSetStoreChannelStoreMappingTest() throws Exception {
         String appId = null;
         Integer channelId = null;
         List<ChannelStoreMapping> stores = null;

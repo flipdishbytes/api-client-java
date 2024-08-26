@@ -13,12 +13,12 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.TelephonyConfig;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,11 @@ public class FpmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createFpmForStoreTest() throws ApiException {
+    public void createFpmForStoreTest() throws Exception {
         Integer storeId = null;
         String phoneNumber = null;
         Object response = api.createFpmForStore(storeId, phoneNumber);
@@ -56,11 +56,11 @@ public class FpmApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void editFpmForStoreTest() throws ApiException {
+    public void editFpmForStoreTest() throws Exception {
         Integer storeId = null;
         TelephonyConfig telephonyConfig = null;
         api.editFpmForStore(storeId, telephonyConfig);

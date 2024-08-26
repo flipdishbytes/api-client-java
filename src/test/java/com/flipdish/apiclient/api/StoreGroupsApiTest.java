@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreGroup;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StoreGroupBase;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createStoreGroupTest() throws ApiException {
+    public void createStoreGroupTest() throws Exception {
         String appNameId = null;
         StoreGroupBase storeGroup = null;
         RestApiResultStoreGroup response = api.createStoreGroup(appNameId, storeGroup);
@@ -61,11 +61,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreGroupTest() throws ApiException {
+    public void getStoreGroupTest() throws Exception {
         Integer storeGroupId = null;
         RestApiResultStoreGroup response = api.getStoreGroup(storeGroupId);
 
@@ -77,11 +77,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreGroupsTest() throws ApiException {
+    public void getStoreGroupsTest() throws Exception {
         String appNameId = null;
         String searchQuery = null;
         Integer page = null;
@@ -96,11 +96,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreGroupsExtendedTest() throws ApiException {
+    public void getStoreGroupsExtendedTest() throws Exception {
         String appNameId = null;
         String searchQuery = null;
         Integer page = null;
@@ -116,11 +116,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void removeStoreGroupTest() throws ApiException {
+    public void removeStoreGroupTest() throws Exception {
         Integer storeGroupId = null;
         api.removeStoreGroup(storeGroupId);
 
@@ -132,11 +132,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuMessagePerDeliveryTypeTest() throws ApiException {
+    public void setMenuMessagePerDeliveryTypeTest() throws Exception {
         Integer storeGroupId = null;
         String deliveryType = null;
         String menuMessage = null;
@@ -150,11 +150,11 @@ public class StoreGroupsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreGroupTest() throws ApiException {
+    public void updateStoreGroupTest() throws Exception {
         Integer storeGroupId = null;
         StoreGroupBase storeGroup = null;
         RestApiResultStoreGroupBase response = api.updateStoreGroup(storeGroupId, storeGroup);

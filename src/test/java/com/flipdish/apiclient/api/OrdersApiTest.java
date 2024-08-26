@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.Accept;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.OrderDeliveryInformationBase;
@@ -34,6 +33,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,11 +53,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void acceptOrderTest() throws ApiException {
+    public void acceptOrderTest() throws Exception {
         Integer id = null;
         Accept acceptObject = null;
         api.acceptOrder(id, acceptObject);
@@ -70,11 +70,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void dispatchOrderTest() throws ApiException {
+    public void dispatchOrderTest() throws Exception {
         Integer id = null;
         api.dispatchOrder(id);
 
@@ -86,11 +86,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDeliveryInformationTest() throws ApiException {
+    public void getDeliveryInformationTest() throws Exception {
         Integer orderId = null;
         RestApiResultOrderDeliveryInformation response = api.getDeliveryInformation(orderId);
 
@@ -102,11 +102,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStateTest() throws ApiException {
+    public void getFulfillmentStateTest() throws Exception {
         Integer orderId = null;
         RestApiResultOrderFulfillmentStatus response = api.getFulfillmentState(orderId);
 
@@ -118,11 +118,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStatusWithDetailsAndActionsTest() throws ApiException {
+    public void getFulfillmentStatusWithDetailsAndActionsTest() throws Exception {
         Integer orderId = null;
         RestApiResultOrderFulfillmentStatusWithConfigurationActions response = api.getFulfillmentStatusWithDetailsAndActions(orderId);
 
@@ -134,11 +134,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrderByIdTest() throws ApiException {
+    public void getOrderByIdTest() throws Exception {
         Integer id = null;
         RestApiResultOrder response = api.getOrderById(id);
 
@@ -150,11 +150,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrdersTest() throws ApiException {
+    public void getOrdersTest() throws Exception {
         List<Integer> physicalRestaurantId = null;
         List<String> state = null;
         OffsetDateTime from = null;
@@ -171,11 +171,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrdersSummaryTest() throws ApiException {
+    public void getOrdersSummaryTest() throws Exception {
         String appId = null;
         String searchQuery = null;
         List<Integer> physicalRestaurantId = null;
@@ -198,11 +198,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOrdersSummaryNewTest() throws ApiException {
+    public void getOrdersSummaryNewTest() throws Exception {
         String appId = null;
         String searchQuery = null;
         List<Integer> physicalRestaurantId = null;
@@ -225,11 +225,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getReadyToProcessTest() throws ApiException {
+    public void getReadyToProcessTest() throws Exception {
         String appId = null;
         List<Integer> storeId = null;
         OrderList response = api.getReadyToProcess(appId, storeId);
@@ -242,11 +242,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void refundOrderTest() throws ApiException {
+    public void refundOrderTest() throws Exception {
         Integer id = null;
         Refund refundObject = null;
         api.refundOrder(id, refundObject);
@@ -259,11 +259,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rejectOrderTest() throws ApiException {
+    public void rejectOrderTest() throws Exception {
         Integer id = null;
         Reject rejectObject = null;
         api.rejectOrder(id, rejectObject);
@@ -276,11 +276,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void searchFulfillmentStatusesTest() throws ApiException {
+    public void searchFulfillmentStatusesTest() throws Exception {
         String appId = null;
         String orderIds = null;
         RestApiArrayResultOrderFulfillmentStatus response = api.searchFulfillmentStatuses(appId, orderIds);
@@ -293,11 +293,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateDeliveryInformationTest() throws ApiException {
+    public void updateDeliveryInformationTest() throws Exception {
         Integer orderId = null;
         OrderDeliveryInformationBase deliveryInformation = null;
         api.updateDeliveryInformation(orderId, deliveryInformation);
@@ -310,11 +310,11 @@ public class OrdersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateFulfillmentStateTest() throws ApiException {
+    public void updateFulfillmentStateTest() throws Exception {
         Integer orderId = null;
         OrderFulfillmentStatusUpdate fulfillmentStatusRequest = null;
         api.updateFulfillmentState(orderId, fulfillmentStatusRequest);

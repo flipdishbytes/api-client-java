@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateVoucher;
 import com.flipdish.apiclient.model.RestApiArrayResultVoucherDataPoint;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -26,6 +25,7 @@ import com.flipdish.apiclient.model.UpdateVoucher;
 import com.flipdish.apiclient.model.UpdateVoucherUsage;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,11 +46,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createVoucherTest() throws ApiException {
+    public void createVoucherTest() throws Exception {
         String appId = null;
         CreateVoucher voucher = null;
         RestApiResultVoucherWithStats response = api.createVoucher(appId, voucher);
@@ -63,11 +63,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getVoucherByIdTest() throws ApiException {
+    public void getVoucherByIdTest() throws Exception {
         Integer voucherId = null;
         RestApiResultVoucherWithStats response = api.getVoucherById(voucherId);
 
@@ -79,11 +79,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getVoucherStatsByIdTest() throws ApiException {
+    public void getVoucherStatsByIdTest() throws Exception {
         Integer voucherId = null;
         String aggregateDataBy = null;
         Integer dataPointLimit = null;
@@ -97,11 +97,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getVoucherValidityPeriodsTest() throws ApiException {
+    public void getVoucherValidityPeriodsTest() throws Exception {
         String appId = null;
         Integer voucherId = null;
         api.getVoucherValidityPeriods(appId, voucherId);
@@ -114,11 +114,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getVouchersTest() throws ApiException {
+    public void getVouchersTest() throws Exception {
         String appId = null;
         Integer pageIndex = null;
         Integer pageSize = null;
@@ -138,11 +138,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setVoucherValidityPeriodsSimplifiedTest() throws ApiException {
+    public void setVoucherValidityPeriodsSimplifiedTest() throws Exception {
         String appId = null;
         Integer voucherId = null;
         SetVoucherValidityPeriodsSimplifiedRequest request = null;
@@ -156,11 +156,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateVoucherTest() throws ApiException {
+    public void updateVoucherTest() throws Exception {
         Integer voucherId = null;
         UpdateVoucher voucher = null;
         List<Integer> storeId = null;
@@ -177,11 +177,11 @@ public class VouchersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateVoucherUsageTest() throws ApiException {
+    public void updateVoucherUsageTest() throws Exception {
         String appId = null;
         Integer voucherId = null;
         UpdateVoucherUsage voucherUsage = null;

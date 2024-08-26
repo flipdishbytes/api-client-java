@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BusinessHoursOverrideBase;
 import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import com.flipdish.apiclient.model.Coordinates;
@@ -55,6 +54,7 @@ import com.flipdish.apiclient.model.StoreFeeConfig;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -74,11 +74,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void archiveStoreTest() throws ApiException {
+    public void archiveStoreTest() throws Exception {
         Integer storeId = null;
         api.archiveStore(storeId);
 
@@ -90,11 +90,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void assignMenuTest() throws ApiException {
+    public void assignMenuTest() throws Exception {
         Integer storeId = null;
         Integer menuId = null;
         RestApiArrayResultRestApiDefaultResponse response = api.assignMenu(storeId, menuId);
@@ -107,11 +107,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cloneStoreTest() throws ApiException {
+    public void cloneStoreTest() throws Exception {
         Integer storeId = null;
         StoreCloneSettings settings = null;
         RestApiResultStore response = api.cloneStore(storeId, settings);
@@ -124,11 +124,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void configureStoreServiceChargeTest() throws ApiException {
+    public void configureStoreServiceChargeTest() throws Exception {
         Integer storeId = null;
         ServiceCharge serviceCharge = null;
         RestApiResultServiceCharge response = api.configureStoreServiceCharge(storeId, serviceCharge);
@@ -141,11 +141,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createBusinessHoursOverrideByStoreIdTest() throws ApiException {
+    public void createBusinessHoursOverrideByStoreIdTest() throws Exception {
         Integer storeId = null;
         BusinessHoursOverrideBase businessHoursOverride = null;
         RestApiResultBusinessHoursOverride response = api.createBusinessHoursOverrideByStoreId(storeId, businessHoursOverride);
@@ -158,11 +158,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createStoreTest() throws ApiException {
+    public void createStoreTest() throws Exception {
         Integer storeGroupId = null;
         StoreCreateBase store = null;
         RestApiResultStore response = api.createStore(storeGroupId, store);
@@ -175,11 +175,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createStoreInPropertyTest() throws ApiException {
+    public void createStoreInPropertyTest() throws Exception {
         Integer storeGroupId = null;
         String propertyId = null;
         StoreCreateBase store = null;
@@ -193,11 +193,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteBusinessHoursOverrideTest() throws ApiException {
+    public void deleteBusinessHoursOverrideTest() throws Exception {
         Integer storeId = null;
         Integer businessHoursOverrideId = null;
         RestApiArrayResultRestApiDefaultResponse response = api.deleteBusinessHoursOverride(storeId, businessHoursOverrideId);
@@ -210,11 +210,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBankAccountForStoreTest() throws ApiException {
+    public void getBankAccountForStoreTest() throws Exception {
         Integer storeId = null;
         RestApiResultAssignedBankAccount response = api.getBankAccountForStore(storeId);
 
@@ -226,11 +226,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBusinessHoursTest() throws ApiException {
+    public void getBusinessHoursTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         RestApiArrayResultBusinessHoursPeriod response = api.getBusinessHours(storeId, deliveryType);
@@ -243,11 +243,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBusinessHoursOverrideByStoreIdTest() throws ApiException {
+    public void getBusinessHoursOverrideByStoreIdTest() throws Exception {
         Integer storeId = null;
         OffsetDateTime after = null;
         Integer page = null;
@@ -262,11 +262,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEndOfDayReportTest() throws ApiException {
+    public void getEndOfDayReportTest() throws Exception {
         Integer storeId = null;
         OffsetDateTime date = null;
         RestApiResultStoreEndOfDayReport response = api.getEndOfDayReport(storeId, date);
@@ -279,11 +279,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPreOrderConfigTest() throws ApiException {
+    public void getPreOrderConfigTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         RestApiResultPreOrderConfig response = api.getPreOrderConfig(storeId, deliveryType);
@@ -296,11 +296,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPreOrderPreviewTest() throws ApiException {
+    public void getPreOrderPreviewTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         Integer preOrderConfigLeadTimeMinutes = null;
@@ -323,11 +323,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getProcessingFeeConfigsByStoreIdTest() throws ApiException {
+    public void getProcessingFeeConfigsByStoreIdTest() throws Exception {
         Integer storeId = null;
         String appNameId = null;
         RestApiArrayResultProcessingFeeConfig response = api.getProcessingFeeConfigsByStoreId(storeId, appNameId);
@@ -340,11 +340,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeTest() throws ApiException {
+    public void getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeTest() throws Exception {
         Integer storeId = null;
         String paymentAccountType = null;
         String appNameId = null;
@@ -358,11 +358,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreByIdTest() throws ApiException {
+    public void getStoreByIdTest() throws Exception {
         Integer storeId = null;
         RestApiResultStore response = api.getStoreById(storeId);
 
@@ -374,11 +374,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreDeliveryFeeConfigTest() throws ApiException {
+    public void getStoreDeliveryFeeConfigTest() throws Exception {
         Integer storeId = null;
         RestApiArrayResultStoreDeliveryZoneFeeConfig response = api.getStoreDeliveryFeeConfig(storeId);
 
@@ -390,11 +390,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreFeeConfigTest() throws ApiException {
+    public void getStoreFeeConfigTest() throws Exception {
         Integer storeId = null;
         StoreFeeConfig response = api.getStoreFeeConfig(storeId);
 
@@ -406,11 +406,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreHeadersByAppIdTest() throws ApiException {
+    public void getStoreHeadersByAppIdTest() throws Exception {
         String appId = null;
         String storeNameQuery = null;
         Integer page = null;
@@ -425,11 +425,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreLeadTimesTest() throws ApiException {
+    public void getStoreLeadTimesTest() throws Exception {
         Integer storeId = null;
         RestApiResultOrderLeadTimes response = api.getStoreLeadTimes(storeId);
 
@@ -441,11 +441,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreNetSalesTest() throws ApiException {
+    public void getStoreNetSalesTest() throws Exception {
         String appId = null;
         List<Integer> storeId = null;
         RestApiArrayResultStoreStatistics response = api.getStoreNetSales(appId, storeId);
@@ -458,11 +458,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoreServiceChargeTest() throws ApiException {
+    public void getStoreServiceChargeTest() throws Exception {
         Integer storeId = null;
         ServiceCharge response = api.getStoreServiceCharge(storeId);
 
@@ -474,11 +474,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoresTest() throws ApiException {
+    public void getStoresTest() throws Exception {
         String searchQuery = null;
         Integer page = null;
         Integer limit = null;
@@ -493,11 +493,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoresByAppIdTest() throws ApiException {
+    public void getStoresByAppIdTest() throws Exception {
         String appId = null;
         String searchQuery = null;
         Integer page = null;
@@ -512,11 +512,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStoresByStoreIdWithValidationsTest() throws ApiException {
+    public void getStoresByStoreIdWithValidationsTest() throws Exception {
         List<Integer> storeId = null;
         String appId = null;
         Integer page = null;
@@ -531,11 +531,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void publishStoreTest() throws ApiException {
+    public void publishStoreTest() throws Exception {
         Integer storeId = null;
         api.publishStore(storeId);
 
@@ -547,11 +547,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void putStoreDeliveryFeeConfigTest() throws ApiException {
+    public void putStoreDeliveryFeeConfigTest() throws Exception {
         Integer storeId = null;
         StoreDeliveryZoneFeeConfigUpdateRequest feeConfigUpdateRequest = null;
         api.putStoreDeliveryFeeConfig(storeId, feeConfigUpdateRequest);
@@ -564,11 +564,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setBusinessHoursTest() throws ApiException {
+    public void setBusinessHoursTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         BusinessHoursPeriodBase businessHoursPeriod = null;
@@ -582,11 +582,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setPreOrdeEnabledTest() throws ApiException {
+    public void setPreOrdeEnabledTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         Boolean enabled = null;
@@ -600,11 +600,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setStoreLeadTimesTest() throws ApiException {
+    public void setStoreLeadTimesTest() throws Exception {
         Integer storeId = null;
         LeadTime leadTime = null;
         RestApiResultOrderLeadTimes response = api.setStoreLeadTimes(storeId, leadTime);
@@ -617,11 +617,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unpublishStoreTest() throws ApiException {
+    public void unpublishStoreTest() throws Exception {
         Integer storeId = null;
         api.unpublishStore(storeId);
 
@@ -633,11 +633,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updatePreOrderConfigTest() throws ApiException {
+    public void updatePreOrderConfigTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         PreOrderConfig preOrderConfig = null;
@@ -651,11 +651,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreTest() throws ApiException {
+    public void updateStoreTest() throws Exception {
         Integer storeId = null;
         StoreBase store = null;
         RestApiResultStore response = api.updateStore(storeId, store);
@@ -668,11 +668,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreAddressTest() throws ApiException {
+    public void updateStoreAddressTest() throws Exception {
         Integer storeId = null;
         StoreAddressBase storeAddress = null;
         RestApiResultStoreAddress response = api.updateStoreAddress(storeId, storeAddress);
@@ -685,11 +685,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreAddressCoordinatesTest() throws ApiException {
+    public void updateStoreAddressCoordinatesTest() throws Exception {
         Integer storeId = null;
         Coordinates coordinates = null;
         String appNameId = null;
@@ -703,11 +703,11 @@ public class StoresApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateStoreAddressFormTest() throws ApiException {
+    public void updateStoreAddressFormTest() throws Exception {
         Integer storeId = null;
         StoreAddressForm address = null;
         Object response = api.updateStoreAddressForm(storeId, address);

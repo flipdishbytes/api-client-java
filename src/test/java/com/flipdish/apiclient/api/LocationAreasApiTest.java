@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateLocationArea;
 import com.flipdish.apiclient.model.RestApiArrayResultLocationAreaWithLocations;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateLocationArea;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class LocationAreasApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createLocationAreaTest() throws ApiException {
+    public void createLocationAreaTest() throws Exception {
         CreateLocationArea locationAreaInput = null;
         String appId = null;
         Integer storeId = null;
@@ -62,11 +62,11 @@ public class LocationAreasApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getLocationAreaTest() throws ApiException {
+    public void getLocationAreaTest() throws Exception {
         Integer locationAreaId = null;
         String appId = null;
         Integer storeId = null;
@@ -80,11 +80,11 @@ public class LocationAreasApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getLocationAreasForStoreTest() throws ApiException {
+    public void getLocationAreasForStoreTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         RestApiArrayResultLocationAreaWithLocations response = api.getLocationAreasForStore(appId, storeId);
@@ -97,11 +97,11 @@ public class LocationAreasApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateLocationAreaTest() throws ApiException {
+    public void updateLocationAreaTest() throws Exception {
         UpdateLocationArea locationAreaInput = null;
         String appId = null;
         Integer storeId = null;

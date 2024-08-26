@@ -13,12 +13,12 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.GetReceiptByOrderIdQueryResponse;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,11 @@ public class ReceiptsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getReceiptTest() throws ApiException {
+    public void getReceiptTest() throws Exception {
         Integer orderId = null;
         GetReceiptByOrderIdQueryResponse response = api.getReceipt(orderId);
 

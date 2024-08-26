@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BusinessHoursPeriodBase;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuObjectDisplayOrders;
@@ -29,6 +28,7 @@ import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,11 +49,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cloneMenuSectionTest() throws ApiException {
+    public void cloneMenuSectionTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         RestApiResultMenuSection response = api.cloneMenuSection(menuId, menuSectionId);
@@ -66,11 +66,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuAvailabilityForDayTest() throws ApiException {
+    public void createMenuAvailabilityForDayTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         String dayOfWeek = null;
@@ -85,11 +85,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuSectionTest() throws ApiException {
+    public void createMenuSectionTest() throws Exception {
         Integer menuId = null;
         MenuSectionBase menuSection = null;
         Object response = api.createMenuSection(menuId, menuSection);
@@ -102,11 +102,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuSectionAvailabilityTest() throws ApiException {
+    public void createMenuSectionAvailabilityTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         MenuSectionAvailabilityBase menuSectionAvailability = null;
@@ -120,11 +120,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuSectionTest() throws ApiException {
+    public void deleteMenuSectionTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         api.deleteMenuSection(menuId, menuSectionId);
@@ -137,11 +137,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuSectionImageTest() throws ApiException {
+    public void deleteMenuSectionImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         api.deleteMenuSectionImage(menuId, menuSectionId);
@@ -154,11 +154,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuSectionByIdTest() throws ApiException {
+    public void getMenuSectionByIdTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         RestApiResultMenuSection response = api.getMenuSectionById(menuId, menuSectionId);
@@ -171,11 +171,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuSectionsTest() throws ApiException {
+    public void getMenuSectionsTest() throws Exception {
         Integer menuId = null;
         RestApiArrayResultMenuSection response = api.getMenuSections(menuId);
 
@@ -187,11 +187,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void menuSectionsSetItemDisplayOrdersTest() throws ApiException {
+    public void menuSectionsSetItemDisplayOrdersTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         MenuObjectDisplayOrders displayOrders = null;
@@ -205,11 +205,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMenuSectionTest() throws ApiException {
+    public void updateMenuSectionTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         MenuSectionBase menuSection = null;
@@ -224,11 +224,11 @@ public class MenuSectionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadMenuSectionImageTest() throws ApiException {
+    public void uploadMenuSectionImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         File image = null;

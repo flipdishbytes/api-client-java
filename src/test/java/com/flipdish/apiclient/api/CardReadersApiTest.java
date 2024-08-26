@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CardReaderRegistrationRequest;
 import com.flipdish.apiclient.model.GeoPointRequest;
 import com.flipdish.apiclient.model.ProcessPaymentIntentRequest;
@@ -27,6 +26,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UnRegisterCardReaderRequest;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,11 +47,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cancelCurrentlyInitiatedBluetoothDeviceUpdateTest() throws ApiException {
+    public void cancelCurrentlyInitiatedBluetoothDeviceUpdateTest() throws Exception {
         String appId = null;
         String deviceId = null;
         String terminalType = null;
@@ -65,11 +65,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cancelReaderActionTest() throws ApiException {
+    public void cancelReaderActionTest() throws Exception {
         String readerId = null;
         String appId = null;
         RestApiResultCardReader response = api.cancelReaderAction(readerId, appId);
@@ -82,11 +82,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cardReadersGetReaderTest() throws ApiException {
+    public void cardReadersGetReaderTest() throws Exception {
         String readerId = null;
         String appId = null;
         RestApiResultCardReader response = api.cardReadersGetReader(readerId, appId);
@@ -99,11 +99,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void generateStripeTerminalLocationTest() throws ApiException {
+    public void generateStripeTerminalLocationTest() throws Exception {
         GeoPointRequest geoPointRequest = null;
         String appId = null;
         RestApiResultStripeTerminalLocation response = api.generateStripeTerminalLocation(geoPointRequest, appId);
@@ -116,11 +116,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBluetoothTerminalStatusTest() throws ApiException {
+    public void getBluetoothTerminalStatusTest() throws Exception {
         String appId = null;
         String deviceId = null;
         RestApiResultBluetoothTerminalStatus response = api.getBluetoothTerminalStatus(appId, deviceId);
@@ -133,11 +133,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStripeConnectionTokenTest() throws ApiException {
+    public void getStripeConnectionTokenTest() throws Exception {
         String appId = null;
         RestApiResultStripeTerminalConnectionToken response = api.getStripeConnectionToken(appId);
 
@@ -149,11 +149,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void initiateBluetoothTerminalDeviceUpdateCheckTest() throws ApiException {
+    public void initiateBluetoothTerminalDeviceUpdateCheckTest() throws Exception {
         String appId = null;
         String deviceId = null;
         String terminalType = null;
@@ -167,11 +167,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void initiateKioskBluetoothPairingModeTest() throws ApiException {
+    public void initiateKioskBluetoothPairingModeTest() throws Exception {
         String appId = null;
         String deviceId = null;
         String terminalType = null;
@@ -185,11 +185,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void initiateKioskBluetoothUpdateInstallTest() throws ApiException {
+    public void initiateKioskBluetoothUpdateInstallTest() throws Exception {
         String appId = null;
         String deviceId = null;
         String terminalType = null;
@@ -203,11 +203,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void initiateReaderProcessPaymentIntentTest() throws ApiException {
+    public void initiateReaderProcessPaymentIntentTest() throws Exception {
         ProcessPaymentIntentRequest request = null;
         String readerId = null;
         String appId = null;
@@ -221,11 +221,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void registerStripeTerminalTest() throws ApiException {
+    public void registerStripeTerminalTest() throws Exception {
         CardReaderRegistrationRequest request = null;
         String appId = null;
         RestApiResultCardReader response = api.registerStripeTerminal(request, appId);
@@ -238,11 +238,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unRegisterTerminalTest() throws ApiException {
+    public void unRegisterTerminalTest() throws Exception {
         UnRegisterCardReaderRequest request = null;
         String appId = null;
         RestApiResultCardReader response = api.unRegisterTerminal(request, appId);
@@ -255,11 +255,11 @@ public class CardReadersApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void unpairCurrentlyPairedBluetoothDeviceTest() throws ApiException {
+    public void unpairCurrentlyPairedBluetoothDeviceTest() throws Exception {
         String appId = null;
         String deviceId = null;
         api.unpairCurrentlyPairedBluetoothDevice(appId, deviceId);

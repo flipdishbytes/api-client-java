@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CatalogItem;
 import com.flipdish.apiclient.model.CreateCatalogItem;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateCatalogItem;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void archiveCatalogItemTest() throws ApiException {
+    public void archiveCatalogItemTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.archiveCatalogItem(appId, catalogItemId);
@@ -61,11 +61,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createCatalogItemTest() throws ApiException {
+    public void createCatalogItemTest() throws Exception {
         String appId = null;
         CreateCatalogItem createCatalogItem = null;
         RestApiResultCatalogItem response = api.createCatalogItem(appId, createCatalogItem);
@@ -78,11 +78,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void duplicateCatalogItemTest() throws ApiException {
+    public void duplicateCatalogItemTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         api.duplicateCatalogItem(appId, catalogItemId);
@@ -95,11 +95,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCatalogItemByIdTest() throws ApiException {
+    public void getCatalogItemByIdTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         CatalogItem response = api.getCatalogItemById(appId, catalogItemId);
@@ -112,11 +112,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getItemsTest() throws ApiException {
+    public void getItemsTest() throws Exception {
         String appId = null;
         List<String> itemTypes = null;
         String searchTerm = null;
@@ -132,11 +132,11 @@ public class CatalogItemsApiTest {
      *
      * [BETA - this endpoint is under development, do not use it in your production system]
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateCatalogItemTest() throws ApiException {
+    public void updateCatalogItemTest() throws Exception {
         String appId = null;
         String catalogItemId = null;
         UpdateCatalogItem updateCatalogItem = null;

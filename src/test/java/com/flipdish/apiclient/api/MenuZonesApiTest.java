@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.HttpPostedFileBase;
 import com.flipdish.apiclient.model.MenuZone;
 import com.flipdish.apiclient.model.RestApiArrayResultMenuZone;
@@ -23,6 +22,7 @@ import com.flipdish.apiclient.model.RestApiResultMenuZone;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,11 +43,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addMenuZoneTest() throws ApiException {
+    public void addMenuZoneTest() throws Exception {
         Integer menuId = null;
         MenuZone menuZone = null;
         RestApiResultMenuZone response = api.addMenuZone(menuId, menuZone);
@@ -60,11 +60,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuZoneTest() throws ApiException {
+    public void deleteMenuZoneTest() throws Exception {
         Integer menuZoneId = null;
         String menuId = null;
         api.deleteMenuZone(menuZoneId, menuId);
@@ -77,11 +77,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuZoneImageTest() throws ApiException {
+    public void deleteMenuZoneImageTest() throws Exception {
         Integer menuZoneId = null;
         String menuId = null;
         api.deleteMenuZoneImage(menuZoneId, menuId);
@@ -94,11 +94,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void flipMenuZonesTest() throws ApiException {
+    public void flipMenuZonesTest() throws Exception {
         Integer menuZoneId = null;
         Integer menuZoneI2 = null;
         String menuId = null;
@@ -112,11 +112,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuZoneTest() throws ApiException {
+    public void getMenuZoneTest() throws Exception {
         Integer menuId = null;
         Integer menuZoneId = null;
         RestApiResultMenuZone response = api.getMenuZone(menuId, menuZoneId);
@@ -129,11 +129,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuZonesForMenuIdTest() throws ApiException {
+    public void getMenuZonesForMenuIdTest() throws Exception {
         Integer menuId = null;
         RestApiArrayResultMenuZone response = api.getMenuZonesForMenuId(menuId);
 
@@ -145,11 +145,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuSectionMenuZoneTest() throws ApiException {
+    public void setMenuSectionMenuZoneTest() throws Exception {
         Integer menuZoneId = null;
         Integer menuSectionId = null;
         String menuId = null;
@@ -163,11 +163,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuZoneDescriptionTest() throws ApiException {
+    public void setMenuZoneDescriptionTest() throws Exception {
         Integer menuZoneId = null;
         String description = null;
         String menuId = null;
@@ -181,11 +181,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void setMenuZoneNameTest() throws ApiException {
+    public void setMenuZoneNameTest() throws Exception {
         Integer menuZoneId = null;
         String menuZoneName = null;
         String menuId = null;
@@ -199,11 +199,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMenuZoneTest() throws ApiException {
+    public void updateMenuZoneTest() throws Exception {
         Integer menuId = null;
         Integer menuZoneId = null;
         MenuZone menuZone = null;
@@ -217,11 +217,11 @@ public class MenuZonesApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadMenuZoneImageTest() throws ApiException {
+    public void uploadMenuZoneImageTest() throws Exception {
         Integer menuZoneId = null;
         List<HttpPostedFileBase> file = null;
         String menuId = null;

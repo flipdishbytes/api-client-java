@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.PayoutDetail;
 import com.flipdish.apiclient.model.RestApiArrayResultPayoutSummary;
@@ -27,6 +26,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultPayoutRefund;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,11 +47,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutTest() throws ApiException {
+    public void getPayoutTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -65,11 +65,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutChargebacksTest() throws ApiException {
+    public void getPayoutChargebacksTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -86,11 +86,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutOrdersTest() throws ApiException {
+    public void getPayoutOrdersTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -107,11 +107,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutOtherChargesTest() throws ApiException {
+    public void getPayoutOtherChargesTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -128,11 +128,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutRefundsTest() throws ApiException {
+    public void getPayoutRefundsTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer payoutId = null;
@@ -149,11 +149,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutSummariesTest() throws ApiException {
+    public void getPayoutSummariesTest() throws Exception {
         String appId = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
@@ -169,11 +169,11 @@ public class PayoutsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getPayoutsTest() throws ApiException {
+    public void getPayoutsTest() throws Exception {
         String appId = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;

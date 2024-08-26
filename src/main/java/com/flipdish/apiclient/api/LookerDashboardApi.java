@@ -39,6 +39,7 @@ import java.util.Map;
 
 public class LookerDashboardApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public LookerDashboardApi() {
         this(Configuration.getDefaultApiClient());
@@ -54,6 +55,10 @@ public class LookerDashboardApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -103,6 +108,9 @@ public class LookerDashboardApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

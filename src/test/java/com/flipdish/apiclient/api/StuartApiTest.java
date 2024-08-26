@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultJobResponse;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.StuartSettings;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class StuartApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void stuartCancelJobTest() throws ApiException {
+    public void stuartCancelJobTest() throws Exception {
         Integer jobId = null;
         Integer storeId = null;
         Object response = api.stuartCancelJob(jobId, storeId);
@@ -59,11 +59,11 @@ public class StuartApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void stuartGetJobTest() throws ApiException {
+    public void stuartGetJobTest() throws Exception {
         Integer jobId = null;
         Integer storeId = null;
         RestApiResultJobResponse response = api.stuartGetJob(jobId, storeId);
@@ -76,11 +76,11 @@ public class StuartApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void stuartGetStuartSettingsTest() throws ApiException {
+    public void stuartGetStuartSettingsTest() throws Exception {
         Integer storeId = null;
         RestApiResultStuartSettings response = api.stuartGetStuartSettings(storeId);
 
@@ -92,11 +92,11 @@ public class StuartApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void stuartPostStuartSettingsTest() throws ApiException {
+    public void stuartPostStuartSettingsTest() throws Exception {
         Integer storeId = null;
         StuartSettings stuartSettings = null;
         Object response = api.stuartPostStuartSettings(storeId, stuartSettings);

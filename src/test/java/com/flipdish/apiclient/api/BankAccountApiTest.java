@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.BankAccountCreate;
 import com.flipdish.apiclient.model.RestApiArrayResultBankAccountSummary;
 import com.flipdish.apiclient.model.RestApiArrayResultCountryWithAccountFieldsDefinitions;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiResultBankAccountDetail;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void attachBankAccountToStoreTest() throws ApiException {
+    public void attachBankAccountToStoreTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         Integer storeId = null;
@@ -62,11 +62,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createBankAccountTest() throws ApiException {
+    public void createBankAccountTest() throws Exception {
         String appId = null;
         BankAccountCreate account = null;
         RestApiResultBankAccountDetail response = api.createBankAccount(appId, account);
@@ -79,11 +79,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteBankAccountTest() throws ApiException {
+    public void deleteBankAccountTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         api.deleteBankAccount(appId, bankAccountId);
@@ -96,11 +96,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBankAccountByIdTest() throws ApiException {
+    public void getBankAccountByIdTest() throws Exception {
         Integer bankAccountId = null;
         String appId = null;
         RestApiResultBankAccountDetail response = api.getBankAccountById(bankAccountId, appId);
@@ -113,11 +113,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getBankAccountsTest() throws ApiException {
+    public void getBankAccountsTest() throws Exception {
         String appId = null;
         RestApiArrayResultBankAccountSummary response = api.getBankAccounts(appId);
 
@@ -129,11 +129,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getCountriesWithFieldDefinitionsTest() throws ApiException {
+    public void getCountriesWithFieldDefinitionsTest() throws Exception {
         String appId = null;
         RestApiArrayResultCountryWithAccountFieldsDefinitions response = api.getCountriesWithFieldDefinitions(appId);
 
@@ -145,11 +145,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getFieldDefinitionsTest() throws ApiException {
+    public void getFieldDefinitionsTest() throws Exception {
         String appId = null;
         RestApiResultAccountFieldsDefinitions response = api.getFieldDefinitions(appId);
 
@@ -161,11 +161,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateBankAccountTest() throws ApiException {
+    public void updateBankAccountTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         BankAccountCreate account = null;
@@ -179,11 +179,11 @@ public class BankAccountApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateBankAccountStateTest() throws ApiException {
+    public void updateBankAccountStateTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
         String state = null;

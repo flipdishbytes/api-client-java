@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateAppStoreApp;
 import java.io.File;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.UpdateAppStoreApp;
 import com.flipdish.apiclient.model.UpdateAppStoreAppExternalProduct;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void appVerificationUpdateTest() throws ApiException {
+    public void appVerificationUpdateTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         String verificationStatus = null;
@@ -63,11 +63,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createAppStoreAppTest() throws ApiException {
+    public void createAppStoreAppTest() throws Exception {
         String oauthAppId = null;
         CreateAppStoreApp createAppStoreApp = null;
         RestApiResultAppStoreApp response = api.createAppStoreApp(oauthAppId, createAppStoreApp);
@@ -80,11 +80,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteAppStoreAppTest() throws ApiException {
+    public void deleteAppStoreAppTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         RestApiStringResult response = api.deleteAppStoreApp(oauthAppId, appStoreAppId);
@@ -97,11 +97,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getAppExternalProductTest() throws ApiException {
+    public void getAppExternalProductTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         api.getAppExternalProduct(oauthAppId, appStoreAppId);
@@ -114,11 +114,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getExternalFunctionSigningKeyTest() throws ApiException {
+    public void getExternalFunctionSigningKeyTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         RestApiStringResult response = api.getExternalFunctionSigningKey(oauthAppId, appStoreAppId);
@@ -131,11 +131,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateAppStoreAppTest() throws ApiException {
+    public void updateAppStoreAppTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         UpdateAppStoreApp appStoreApp = null;
@@ -149,11 +149,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateExternalProductTest() throws ApiException {
+    public void updateExternalProductTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         UpdateAppStoreAppExternalProduct appStoreAppExternalProduct = null;
@@ -167,11 +167,11 @@ public class AppStoreDeveloperApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadAppStoreAppLogoTest() throws ApiException {
+    public void uploadAppStoreAppLogoTest() throws Exception {
         String oauthAppId = null;
         String appStoreAppId = null;
         File image = null;

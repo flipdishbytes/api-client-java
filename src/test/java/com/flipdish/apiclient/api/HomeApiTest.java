@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiArrayResultHomeAction;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultOktaPortalFeatureFlag;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class HomeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void completeHomeActionTest() throws ApiException {
+    public void completeHomeActionTest() throws Exception {
         String appId = null;
         Integer homeActionId = null;
         Boolean isDismissed = null;
@@ -60,11 +60,11 @@ public class HomeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getHomeActionsTest() throws ApiException {
+    public void getHomeActionsTest() throws Exception {
         String appId = null;
         RestApiArrayResultHomeAction response = api.getHomeActions(appId);
 
@@ -76,11 +76,11 @@ public class HomeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getHomeStatisticsTest() throws ApiException {
+    public void getHomeStatisticsTest() throws Exception {
         String appId = null;
         RestApiResultHomeStatistics response = api.getHomeStatistics(appId);
 
@@ -92,11 +92,11 @@ public class HomeApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getOktaPortalFeatureFlagTest() throws ApiException {
+    public void getOktaPortalFeatureFlagTest() throws Exception {
         RestApiResultOktaPortalFeatureFlag response = api.getOktaPortalFeatureFlag();
 
         // TODO: test validations

@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.DeliveryZoneBase;
 import com.flipdish.apiclient.model.RestApiArrayResultDeliveryZone;
 import com.flipdish.apiclient.model.RestApiErrorResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultDeliveryZone;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class DeliveryZoneApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void addDeliveryZoneTest() throws ApiException {
+    public void addDeliveryZoneTest() throws Exception {
         Integer storeId = null;
         DeliveryZoneBase deliveryZoneBase = null;
         RestApiResultDeliveryZone response = api.addDeliveryZone(storeId, deliveryZoneBase);
@@ -59,11 +59,11 @@ public class DeliveryZoneApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDeliveryZonesTest() throws ApiException {
+    public void getDeliveryZonesTest() throws Exception {
         Integer storeId = null;
         RestApiArrayResultDeliveryZone response = api.getDeliveryZones(storeId);
 
@@ -75,11 +75,11 @@ public class DeliveryZoneApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void removeDeliveryZoneTest() throws ApiException {
+    public void removeDeliveryZoneTest() throws Exception {
         Integer storeId = null;
         Integer deliveryZoneId = null;
         api.removeDeliveryZone(storeId, deliveryZoneId);
@@ -92,11 +92,11 @@ public class DeliveryZoneApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateDeliveryZoneTest() throws ApiException {
+    public void updateDeliveryZoneTest() throws Exception {
         Integer storeId = null;
         Integer deliveryZoneId = null;
         DeliveryZoneBase deliveryZone = null;

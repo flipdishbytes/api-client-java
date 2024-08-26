@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.CreateFulfillmentStatesConfiguration;
 import com.flipdish.apiclient.model.FulfillmentStatesConfiguration;
 import com.flipdish.apiclient.model.RestApiArrayResultFulfillmentStatesConfigurationSummary;
@@ -25,6 +24,7 @@ import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.UpdateFulfillmentStatesConfiguration;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,11 +45,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createFulfillmentStatesConfigTest() throws ApiException {
+    public void createFulfillmentStatesConfigTest() throws Exception {
         String appId = null;
         CreateFulfillmentStatesConfiguration fulfillmentStateConfiguration = null;
         RestApiResultFulfillmentStatesConfiguration response = api.createFulfillmentStatesConfig(appId, fulfillmentStateConfiguration);
@@ -62,11 +62,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteFulfillmentStatesConfigTest() throws ApiException {
+    public void deleteFulfillmentStatesConfigTest() throws Exception {
         String appId = null;
         String configId = null;
         RestApiStringResult response = api.deleteFulfillmentStatesConfig(appId, configId);
@@ -79,11 +79,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStatesConfigurationTest() throws ApiException {
+    public void getFulfillmentStatesConfigurationTest() throws Exception {
         String appId = null;
         String configId = null;
         FulfillmentStatesConfiguration response = api.getFulfillmentStatesConfiguration(appId, configId);
@@ -96,11 +96,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getFulfillmentStatesConfigurationTemplateTest() throws ApiException {
+    public void getFulfillmentStatesConfigurationTemplateTest() throws Exception {
         String appId = null;
         FulfillmentStatesConfiguration response = api.getFulfillmentStatesConfigurationTemplate(appId);
 
@@ -112,11 +112,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void searchFulfillmentStatesConfigurationsTest() throws ApiException {
+    public void searchFulfillmentStatesConfigurationsTest() throws Exception {
         String appId = null;
         RestApiArrayResultFulfillmentStatesConfigurationSummary response = api.searchFulfillmentStatesConfigurations(appId);
 
@@ -128,11 +128,11 @@ public class FulfillmentStateConfigurationApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateFulfillmentStatesConfigTest() throws ApiException {
+    public void updateFulfillmentStatesConfigTest() throws Exception {
         String appId = null;
         String configId = null;
         UpdateFulfillmentStatesConfiguration updateFulfillmentStatesConfiguration = null;

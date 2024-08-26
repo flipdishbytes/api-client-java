@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.LightspeedSettings;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -21,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiResultLightspeedSettings;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class LightspeedApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void lightspeedGenerateMenuTest() throws ApiException {
+    public void lightspeedGenerateMenuTest() throws Exception {
         Integer storeId = null;
         Object response = api.lightspeedGenerateMenu(storeId);
 
@@ -57,11 +57,11 @@ public class LightspeedApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void lightspeedGetStoreSettingsTest() throws ApiException {
+    public void lightspeedGetStoreSettingsTest() throws Exception {
         Integer storeId = null;
         RestApiResultLightspeedSettings response = api.lightspeedGetStoreSettings(storeId);
 
@@ -73,11 +73,11 @@ public class LightspeedApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void lightspeedSaveStoreSettingsTest() throws ApiException {
+    public void lightspeedSaveStoreSettingsTest() throws Exception {
         Integer storeId = null;
         LightspeedSettings lightspeedSettings = null;
         RestApiResultLightspeedSettings response = api.lightspeedSaveStoreSettings(storeId, lightspeedSettings);

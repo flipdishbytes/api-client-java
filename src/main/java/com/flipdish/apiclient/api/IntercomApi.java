@@ -40,6 +40,7 @@ import java.util.Map;
 
 public class IntercomApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public IntercomApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,6 +56,10 @@ public class IntercomApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -102,6 +107,9 @@ public class IntercomApi {
         }
 
         String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

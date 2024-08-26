@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import com.flipdish.apiclient.model.RestApiArrayResultSubscriptionSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -22,6 +21,7 @@ import com.flipdish.apiclient.model.RestApiResultSubscription;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,11 +42,11 @@ public class SubscriptionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSubscriptionByIdTest() throws ApiException {
+    public void getSubscriptionByIdTest() throws Exception {
         String appId = null;
         String subscriptionId = null;
         RestApiResultSubscription response = api.getSubscriptionById(appId, subscriptionId);
@@ -59,11 +59,11 @@ public class SubscriptionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getSubscriptionsForAppTest() throws ApiException {
+    public void getSubscriptionsForAppTest() throws Exception {
         String appId = null;
         Boolean excludeNotOwnedSubscriptions = null;
         List<Integer> storeId = null;
@@ -78,11 +78,11 @@ public class SubscriptionsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void hasCustomerGotPaymentMethodOnFileTest() throws ApiException {
+    public void hasCustomerGotPaymentMethodOnFileTest() throws Exception {
         String appId = null;
         String email = null;
         RestApiResultHasPaymentMethodResponse response = api.hasCustomerGotPaymentMethodOnFile(appId, email);

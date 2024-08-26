@@ -13,7 +13,6 @@
 
 package com.flipdish.apiclient.api;
 
-import com.flipdish.apiclient.ApiException;
 import java.io.File;
 import com.flipdish.apiclient.model.MenuItemOptionSetBase;
 import com.flipdish.apiclient.model.RestApiArrayResultMenuItemOptionSet;
@@ -24,6 +23,7 @@ import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,11 +44,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void createMenuItemOptionSetTest() throws ApiException {
+    public void createMenuItemOptionSetTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -63,11 +63,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteMenuItemOptionSetTest() throws ApiException {
+    public void deleteMenuItemOptionSetTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionItemId = null;
         Integer menuSectionId = null;
@@ -82,11 +82,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deleteOptionSetImageTest() throws ApiException {
+    public void deleteOptionSetImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -101,11 +101,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemOptionSetByIdTest() throws ApiException {
+    public void getMenuItemOptionSetByIdTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -120,11 +120,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMenuItemOptionSetsTest() throws ApiException {
+    public void getMenuItemOptionSetsTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -138,11 +138,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void updateMenuItemOptionSetTest() throws ApiException {
+    public void updateMenuItemOptionSetTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
@@ -158,11 +158,11 @@ public class MenuOptionSetsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadOptionSetImageTest() throws ApiException {
+    public void uploadOptionSetImageTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         Integer menuSectionItemId = null;
