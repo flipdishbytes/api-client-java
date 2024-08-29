@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **isValidOncePerCustomer** | **Boolean** | Valid once per customer |  [optional]
 **isValidOnlyOnce** | **Boolean** | Valid only once, by any customer (once used cannot be used again by any other customer) |  [optional]
 **isDiscoverable** | **Boolean** | Enables the voucher to be offered in the Voucher Discoverability feature |  [optional]
+**forceDiscount** | **Boolean** | Force the discount to be applied which bypasses some menu restrictions |  [optional]
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Starts On (Time in UTC) |  [optional]
 **expiryDate** | [**OffsetDateTime**](OffsetDateTime.md) | Voucher Expires On (Time in UTC) |  [optional]
 **channelRestrictions** | [**List&lt;ChannelRestrictionsEnum&gt;**](#List&lt;ChannelRestrictionsEnum&gt;) | Limit the channels this voucher can be used on |  [optional]
