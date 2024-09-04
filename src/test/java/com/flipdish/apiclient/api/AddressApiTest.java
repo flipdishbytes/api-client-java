@@ -18,7 +18,9 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAddressFormResponse;
 import com.flipdish.apiclient.model.RestApiResultCountryFormResponse;
+import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.StoreAddressForm;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -100,6 +102,22 @@ public class AddressApiTest {
     public void getCountriesTest() throws Exception {
         String language = null;
         RestApiResultCountryFormResponse response = api.getCountries(language);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void validateAddressFormTest() throws Exception {
+        StoreAddressForm address = null;
+        RestApiStringResult response = api.validateAddressForm(address);
 
         // TODO: test validations
     }
