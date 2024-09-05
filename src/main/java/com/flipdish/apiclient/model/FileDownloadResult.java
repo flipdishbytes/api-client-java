@@ -28,7 +28,7 @@ import java.io.IOException;
  * File Download Result
  */
 @ApiModel(description = "File Download Result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-05T10:20:05.197Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-05T11:44:40.625Z")
 public class FileDownloadResult {
   @SerializedName("FileUrl")
   private String fileUrl = null;
