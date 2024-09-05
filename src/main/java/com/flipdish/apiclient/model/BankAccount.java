@@ -31,7 +31,7 @@ import java.util.List;
  * BANK ACCOUNT
  */
 @ApiModel(description = "BANK ACCOUNT")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T12:14:10.819Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-05T10:20:05.197Z")
 public class BankAccount {
   @SerializedName("Id")
   private Integer id = null;
@@ -119,6 +119,9 @@ public class BankAccount {
 
   @SerializedName("VatNumber")
   private String vatNumber = null;
+
+  @SerializedName("StripeAccountId")
+  private String stripeAccountId = null;
 
   public BankAccount id(Integer id) {
     this.id = id;
@@ -352,6 +355,24 @@ public class BankAccount {
     this.vatNumber = vatNumber;
   }
 
+  public BankAccount stripeAccountId(String stripeAccountId) {
+    this.stripeAccountId = stripeAccountId;
+    return this;
+  }
+
+   /**
+   * Stripe Id of the connected account
+   * @return stripeAccountId
+  **/
+  @ApiModelProperty(value = "Stripe Id of the connected account")
+  public String getStripeAccountId() {
+    return stripeAccountId;
+  }
+
+  public void setStripeAccountId(String stripeAccountId) {
+    this.stripeAccountId = stripeAccountId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -373,12 +394,13 @@ public class BankAccount {
         Objects.equals(this.bankCountryCode, bankAccount.bankCountryCode) &&
         Objects.equals(this.accountHolderAddress, bankAccount.accountHolderAddress) &&
         Objects.equals(this.accountHolderCountryCode, bankAccount.accountHolderCountryCode) &&
-        Objects.equals(this.vatNumber, bankAccount.vatNumber);
+        Objects.equals(this.vatNumber, bankAccount.vatNumber) &&
+        Objects.equals(this.stripeAccountId, bankAccount.stripeAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, iban, swift, populatedAccountFields, accountState, storeNames, bankAddress, bankCountryCode, accountHolderAddress, accountHolderCountryCode, vatNumber);
+    return Objects.hash(id, accountName, iban, swift, populatedAccountFields, accountState, storeNames, bankAddress, bankCountryCode, accountHolderAddress, accountHolderCountryCode, vatNumber, stripeAccountId);
   }
 
 
@@ -399,6 +421,7 @@ public class BankAccount {
     sb.append("    accountHolderAddress: ").append(toIndentedString(accountHolderAddress)).append("\n");
     sb.append("    accountHolderCountryCode: ").append(toIndentedString(accountHolderCountryCode)).append("\n");
     sb.append("    vatNumber: ").append(toIndentedString(vatNumber)).append("\n");
+    sb.append("    stripeAccountId: ").append(toIndentedString(stripeAccountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

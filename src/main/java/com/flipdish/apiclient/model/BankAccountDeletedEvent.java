@@ -32,8 +32,11 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T12:14:10.819Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-05T10:20:05.197Z")
 public class BankAccountDeletedEvent {
+  @SerializedName("OrgId")
+  private String orgId = null;
+
   @SerializedName("BankAccount")
   private BankAccount bankAccount = null;
 
@@ -57,6 +60,24 @@ public class BankAccountDeletedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  public BankAccountDeletedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
 
   public BankAccountDeletedEvent bankAccount(BankAccount bankAccount) {
     this.bankAccount = bankAccount;
@@ -212,7 +233,8 @@ public class BankAccountDeletedEvent {
       return false;
     }
     BankAccountDeletedEvent bankAccountDeletedEvent = (BankAccountDeletedEvent) o;
-    return Objects.equals(this.bankAccount, bankAccountDeletedEvent.bankAccount) &&
+    return Objects.equals(this.orgId, bankAccountDeletedEvent.orgId) &&
+        Objects.equals(this.bankAccount, bankAccountDeletedEvent.bankAccount) &&
         Objects.equals(this.user, bankAccountDeletedEvent.user) &&
         Objects.equals(this.eventName, bankAccountDeletedEvent.eventName) &&
         Objects.equals(this.flipdishEventId, bankAccountDeletedEvent.flipdishEventId) &&
@@ -224,7 +246,7 @@ public class BankAccountDeletedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bankAccount, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(orgId, bankAccount, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -233,6 +255,7 @@ public class BankAccountDeletedEvent {
     StringBuilder sb = new StringBuilder();
     sb.append("class BankAccountDeletedEvent {\n");
     
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    bankAccount: ").append(toIndentedString(bankAccount)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");

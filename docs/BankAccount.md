@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **accountHolderAddress** | **String** | Account Holders Address |  [optional]
 **accountHolderCountryCode** | **String** | Account Holders Country Code |  [optional]
 **vatNumber** | **String** | Account Holders Vat Number |  [optional]
+**stripeAccountId** | **String** | Stripe Id of the connected account |  [optional]
 
 
 <a name="AccountStateEnum"></a>

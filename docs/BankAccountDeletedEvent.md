@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**orgId** | **String** | Organisation Id |  [optional]
 **bankAccount** | [**BankAccount**](BankAccount.md) | The create bank account |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | Updated by user |  [optional]
 **eventName** | **String** | The event name |  [optional]

@@ -32,8 +32,11 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T12:14:10.819Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-05T10:20:05.197Z")
 public class BankAccountAssignedEvent {
+  @SerializedName("OrgId")
+  private String orgId = null;
+
   @SerializedName("BankAccount")
   private BankAccount bankAccount = null;
 
@@ -60,6 +63,24 @@ public class BankAccountAssignedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  public BankAccountAssignedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
 
   public BankAccountAssignedEvent bankAccount(BankAccount bankAccount) {
     this.bankAccount = bankAccount;
@@ -233,7 +254,8 @@ public class BankAccountAssignedEvent {
       return false;
     }
     BankAccountAssignedEvent bankAccountAssignedEvent = (BankAccountAssignedEvent) o;
-    return Objects.equals(this.bankAccount, bankAccountAssignedEvent.bankAccount) &&
+    return Objects.equals(this.orgId, bankAccountAssignedEvent.orgId) &&
+        Objects.equals(this.bankAccount, bankAccountAssignedEvent.bankAccount) &&
         Objects.equals(this.description, bankAccountAssignedEvent.description) &&
         Objects.equals(this.user, bankAccountAssignedEvent.user) &&
         Objects.equals(this.eventName, bankAccountAssignedEvent.eventName) &&
@@ -246,7 +268,7 @@ public class BankAccountAssignedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bankAccount, description, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(orgId, bankAccount, description, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -255,6 +277,7 @@ public class BankAccountAssignedEvent {
     StringBuilder sb = new StringBuilder();
     sb.append("class BankAccountAssignedEvent {\n");
     
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    bankAccount: ").append(toIndentedString(bankAccount)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
