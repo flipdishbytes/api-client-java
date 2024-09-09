@@ -116,6 +116,23 @@ public class TeammatesApiTest {
      *          if the Api call fails
      */
     @Test
+    public void grantAccessTest() throws Exception {
+        String appId = null;
+        CreateTeammate teammate = null;
+        Object response = api.grantAccess(appId, teammate);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void redeemInvitationTest() throws Exception {
         String otc = null;
         String appId = null;
