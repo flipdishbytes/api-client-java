@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
-[**grantAccess**](TeammatesApi.md#grantAccess) | **POST** /api/v1.0/{appId}/teammates/GrantAccess | 
+[**grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 [**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
@@ -223,9 +223,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="grantAccess"></a>
-# **grantAccess**
-> Object grantAccess(appId, teammate)
+<a name="grantaccess"></a>
+# **grantaccess**
+> Object grantaccess(appId, teammate)
 
 
 
@@ -248,10 +248,10 @@ TeammatesApi apiInstance = new TeammatesApi();
 String appId = "appId_example"; // String | 
 CreateTeammate teammate = new CreateTeammate(); // CreateTeammate | 
 try {
-    Object result = apiInstance.grantAccess(appId, teammate);
+    Object result = apiInstance.grantaccess(appId, teammate);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling TeammatesApi#grantAccess");
+    System.err.println("Exception when calling TeammatesApi#grantaccess");
     e.printStackTrace();
 }
 ```

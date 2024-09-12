@@ -597,7 +597,7 @@ public class TeammatesApi {
         return call;
     }
     /**
-     * Build call for grantAccess
+     * Build call for grantaccess
      * @param appId  (required)
      * @param teammate  (required)
      * @param progressListener Progress listener
@@ -605,11 +605,11 @@ public class TeammatesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call grantAccessCall(String appId, CreateTeammate teammate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call grantaccessCall(String appId, CreateTeammate teammate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = teammate;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/teammates/GrantAccess"
+        String localVarPath = "/api/v1.0/{appId}/teammates/grantaccess"
             .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -651,20 +651,20 @@ public class TeammatesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call grantAccessValidateBeforeCall(String appId, CreateTeammate teammate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call grantaccessValidateBeforeCall(String appId, CreateTeammate teammate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling grantAccess(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling grantaccess(Async)");
         }
         
         // verify the required parameter 'teammate' is set
         if (teammate == null) {
-            throw new ApiException("Missing the required parameter 'teammate' when calling grantAccess(Async)");
+            throw new ApiException("Missing the required parameter 'teammate' when calling grantaccess(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = grantAccessCall(appId, teammate, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = grantaccessCall(appId, teammate, progressListener, progressRequestListener);
         return call;
 
     }
@@ -677,8 +677,8 @@ public class TeammatesApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object grantAccess(String appId, CreateTeammate teammate) throws ApiException {
-        ApiResponse<Object> resp = grantAccessWithHttpInfo(appId, teammate);
+    public Object grantaccess(String appId, CreateTeammate teammate) throws ApiException {
+        ApiResponse<Object> resp = grantaccessWithHttpInfo(appId, teammate);
         return resp.getData();
     }
 
@@ -690,8 +690,8 @@ public class TeammatesApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> grantAccessWithHttpInfo(String appId, CreateTeammate teammate) throws ApiException {
-        com.squareup.okhttp.Call call = grantAccessValidateBeforeCall(appId, teammate, null, null);
+    public ApiResponse<Object> grantaccessWithHttpInfo(String appId, CreateTeammate teammate) throws ApiException {
+        com.squareup.okhttp.Call call = grantaccessValidateBeforeCall(appId, teammate, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -705,7 +705,7 @@ public class TeammatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call grantAccessAsync(String appId, CreateTeammate teammate, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call grantaccessAsync(String appId, CreateTeammate teammate, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -726,7 +726,7 @@ public class TeammatesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = grantAccessValidateBeforeCall(appId, teammate, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = grantaccessValidateBeforeCall(appId, teammate, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
