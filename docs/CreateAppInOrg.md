@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **countryId** | **String** | Country in ISO 3166-1 alpha-2 standard |  [optional]
 **mainColor** | **String** | Main color for the different sales channels |  [optional]
 **appId** | **String** | A predefined AppId |  [optional]
+**logoImageUrl** | **String** | Logo image URL |  [optional]
 
 
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Application configuration
  */
 @ApiModel(description = "Application configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-16T14:31:56.180Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-18T07:51:02.676Z")
 public class AppConfigUpdateModel {
   @SerializedName("Name")
   private String name = null;
@@ -102,6 +102,9 @@ public class AppConfigUpdateModel {
 
   @SerializedName("CookieConsentPromptEnabled")
   private Boolean cookieConsentPromptEnabled = null;
+
+  @SerializedName("LogoImageUrl")
+  private String logoImageUrl = null;
 
   public AppConfigUpdateModel name(String name) {
     this.name = name;
@@ -247,6 +250,24 @@ public class AppConfigUpdateModel {
     this.cookieConsentPromptEnabled = cookieConsentPromptEnabled;
   }
 
+  public AppConfigUpdateModel logoImageUrl(String logoImageUrl) {
+    this.logoImageUrl = logoImageUrl;
+    return this;
+  }
+
+   /**
+   * Logo image URL
+   * @return logoImageUrl
+  **/
+  @ApiModelProperty(value = "Logo image URL")
+  public String getLogoImageUrl() {
+    return logoImageUrl;
+  }
+
+  public void setLogoImageUrl(String logoImageUrl) {
+    this.logoImageUrl = logoImageUrl;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -264,12 +285,13 @@ public class AppConfigUpdateModel {
         Objects.equals(this.applicationCategory, appConfigUpdateModel.applicationCategory) &&
         Objects.equals(this.isPanaceaEnabled, appConfigUpdateModel.isPanaceaEnabled) &&
         Objects.equals(this.panaceaVanityUrl, appConfigUpdateModel.panaceaVanityUrl) &&
-        Objects.equals(this.cookieConsentPromptEnabled, appConfigUpdateModel.cookieConsentPromptEnabled);
+        Objects.equals(this.cookieConsentPromptEnabled, appConfigUpdateModel.cookieConsentPromptEnabled) &&
+        Objects.equals(this.logoImageUrl, appConfigUpdateModel.logoImageUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled);
+    return Objects.hash(name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, logoImageUrl);
   }
 
 
@@ -286,6 +308,7 @@ public class AppConfigUpdateModel {
     sb.append("    isPanaceaEnabled: ").append(toIndentedString(isPanaceaEnabled)).append("\n");
     sb.append("    panaceaVanityUrl: ").append(toIndentedString(panaceaVanityUrl)).append("\n");
     sb.append("    cookieConsentPromptEnabled: ").append(toIndentedString(cookieConsentPromptEnabled)).append("\n");
+    sb.append("    logoImageUrl: ").append(toIndentedString(logoImageUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

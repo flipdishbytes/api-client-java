@@ -28,7 +28,7 @@ import java.io.IOException;
  * Create an App in an Organisation Request
  */
 @ApiModel(description = "Create an App in an Organisation Request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-16T14:31:56.180Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-18T07:51:02.676Z")
 public class CreateAppInOrg {
   @SerializedName("Name")
   private String name = null;
@@ -41,6 +41,9 @@ public class CreateAppInOrg {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("LogoImageUrl")
+  private String logoImageUrl = null;
 
   public CreateAppInOrg name(String name) {
     this.name = name;
@@ -114,6 +117,24 @@ public class CreateAppInOrg {
     this.appId = appId;
   }
 
+  public CreateAppInOrg logoImageUrl(String logoImageUrl) {
+    this.logoImageUrl = logoImageUrl;
+    return this;
+  }
+
+   /**
+   * Logo image URL
+   * @return logoImageUrl
+  **/
+  @ApiModelProperty(value = "Logo image URL")
+  public String getLogoImageUrl() {
+    return logoImageUrl;
+  }
+
+  public void setLogoImageUrl(String logoImageUrl) {
+    this.logoImageUrl = logoImageUrl;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -127,12 +148,13 @@ public class CreateAppInOrg {
     return Objects.equals(this.name, createAppInOrg.name) &&
         Objects.equals(this.countryId, createAppInOrg.countryId) &&
         Objects.equals(this.mainColor, createAppInOrg.mainColor) &&
-        Objects.equals(this.appId, createAppInOrg.appId);
+        Objects.equals(this.appId, createAppInOrg.appId) &&
+        Objects.equals(this.logoImageUrl, createAppInOrg.logoImageUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, countryId, mainColor, appId);
+    return Objects.hash(name, countryId, mainColor, appId, logoImageUrl);
   }
 
 
@@ -145,6 +167,7 @@ public class CreateAppInOrg {
     sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    logoImageUrl: ").append(toIndentedString(logoImageUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
