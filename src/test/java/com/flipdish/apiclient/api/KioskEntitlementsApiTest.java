@@ -51,4 +51,20 @@ public class KioskEntitlementsApiTest {
         // TODO: test validations
     }
     
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void queryKioskEntitlementsByOrgIdTest() throws Exception {
+        String orgId = null;
+        RestApiResultKioskEntitlementsResult response = api.queryKioskEntitlementsByOrgId(orgId);
+
+        // TODO: test validations
+    }
+    
 }
