@@ -26,12 +26,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * Account details
  */
 @ApiModel(description = "Account details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-19T09:39:05.515Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-20T12:08:12.343Z")
 public class AccountDetail {
   @SerializedName("Email")
   private String email = null;
@@ -62,6 +63,9 @@ public class AccountDetail {
 
   @SerializedName("ShowHiddenFeatures")
   private Boolean showHiddenFeatures = null;
+
+  @SerializedName("CreatedAt")
+  private OffsetDateTime createdAt = null;
 
   public AccountDetail email(String email) {
     this.email = email;
@@ -251,6 +255,24 @@ public class AccountDetail {
     this.showHiddenFeatures = showHiddenFeatures;
   }
 
+  public AccountDetail createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * User created at
+   * @return createdAt
+  **/
+  @ApiModelProperty(value = "User created at")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -270,12 +292,13 @@ public class AccountDetail {
         Objects.equals(this.language, accountDetail.language) &&
         Objects.equals(this.timeZoneInfoId, accountDetail.timeZoneInfoId) &&
         Objects.equals(this.displayTimesInUserLocalTimeZone, accountDetail.displayTimesInUserLocalTimeZone) &&
-        Objects.equals(this.showHiddenFeatures, accountDetail.showHiddenFeatures);
+        Objects.equals(this.showHiddenFeatures, accountDetail.showHiddenFeatures) &&
+        Objects.equals(this.createdAt, accountDetail.createdAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, signupSteps, isVerified, isSelfServeUser, accountId, name, language, timeZoneInfoId, displayTimesInUserLocalTimeZone, showHiddenFeatures);
+    return Objects.hash(email, signupSteps, isVerified, isSelfServeUser, accountId, name, language, timeZoneInfoId, displayTimesInUserLocalTimeZone, showHiddenFeatures, createdAt);
   }
 
 
@@ -294,6 +317,7 @@ public class AccountDetail {
     sb.append("    timeZoneInfoId: ").append(toIndentedString(timeZoneInfoId)).append("\n");
     sb.append("    displayTimesInUserLocalTimeZone: ").append(toIndentedString(displayTimesInUserLocalTimeZone)).append("\n");
     sb.append("    showHiddenFeatures: ").append(toIndentedString(showHiddenFeatures)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

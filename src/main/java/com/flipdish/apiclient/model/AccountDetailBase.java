@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * Account Details Base
  */
 @ApiModel(description = "Account Details Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-19T09:39:05.515Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-20T12:08:12.343Z")
 public class AccountDetailBase {
   @SerializedName("Name")
   private String name = null;
@@ -44,6 +45,9 @@ public class AccountDetailBase {
 
   @SerializedName("ShowHiddenFeatures")
   private Boolean showHiddenFeatures = null;
+
+  @SerializedName("CreatedAt")
+  private OffsetDateTime createdAt = null;
 
   public AccountDetailBase name(String name) {
     this.name = name;
@@ -135,6 +139,24 @@ public class AccountDetailBase {
     this.showHiddenFeatures = showHiddenFeatures;
   }
 
+  public AccountDetailBase createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * User created at
+   * @return createdAt
+  **/
+  @ApiModelProperty(value = "User created at")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -149,12 +171,13 @@ public class AccountDetailBase {
         Objects.equals(this.language, accountDetailBase.language) &&
         Objects.equals(this.timeZoneInfoId, accountDetailBase.timeZoneInfoId) &&
         Objects.equals(this.displayTimesInUserLocalTimeZone, accountDetailBase.displayTimesInUserLocalTimeZone) &&
-        Objects.equals(this.showHiddenFeatures, accountDetailBase.showHiddenFeatures);
+        Objects.equals(this.showHiddenFeatures, accountDetailBase.showHiddenFeatures) &&
+        Objects.equals(this.createdAt, accountDetailBase.createdAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, language, timeZoneInfoId, displayTimesInUserLocalTimeZone, showHiddenFeatures);
+    return Objects.hash(name, language, timeZoneInfoId, displayTimesInUserLocalTimeZone, showHiddenFeatures, createdAt);
   }
 
 
@@ -168,6 +191,7 @@ public class AccountDetailBase {
     sb.append("    timeZoneInfoId: ").append(toIndentedString(timeZoneInfoId)).append("\n");
     sb.append("    displayTimesInUserLocalTimeZone: ").append(toIndentedString(displayTimesInUserLocalTimeZone)).append("\n");
     sb.append("    showHiddenFeatures: ").append(toIndentedString(showHiddenFeatures)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

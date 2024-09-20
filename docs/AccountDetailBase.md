@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **timeZoneInfoId** | **String** | Time Zone Info Id |  [optional]
 **displayTimesInUserLocalTimeZone** | **Boolean** | Display the time in time zone local to the user |  [optional]
 **showHiddenFeatures** | **Boolean** | Show hidden features |  [optional]
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | User created at |  [optional]
 
 
 
