@@ -15,7 +15,6 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.AppConfigUpdateModel;
 import com.flipdish.apiclient.model.AppLookup;
-import com.flipdish.apiclient.model.CreateAppInOrg;
 import com.flipdish.apiclient.model.CreateAppParameters;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
@@ -58,23 +57,6 @@ public class AppsApiTest {
     public void createAppTest() throws Exception {
         CreateAppParameters parameters = null;
         RestApiStringResult response = api.createApp(parameters);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void createAppInOrgTest() throws Exception {
-        String orgId = null;
-        CreateAppInOrg createAppInOrgRequest = null;
-        RestApiResultApp response = api.createAppInOrg(orgId, createAppInOrgRequest);
 
         // TODO: test validations
     }

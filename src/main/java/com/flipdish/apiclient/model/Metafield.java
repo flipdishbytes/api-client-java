@@ -28,7 +28,7 @@ import java.io.IOException;
  * Metafield
  */
 @ApiModel(description = "Metafield")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T10:24:11.631Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
 public class Metafield {
   @SerializedName("Key")
   private String key = null;

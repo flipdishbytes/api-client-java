@@ -29,7 +29,7 @@ import java.util.UUID;
  * Webhook log
  */
 @ApiModel(description = "Webhook log")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T10:24:11.631Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
 public class WebhookLog {
   @SerializedName("WebhookSubscriptionOwnerUserId")
   private Integer webhookSubscriptionOwnerUserId = null;

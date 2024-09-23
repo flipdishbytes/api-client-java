@@ -5,7 +5,6 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createApp**](AppsApi.md#createApp) | **POST** /api/v1.0/apps | 
-[**createAppInOrg**](AppsApi.md#createAppInOrg) | **POST** /api/v1.0/orgs/{orgId}/apps | 
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 [**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
@@ -65,59 +64,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="createAppInOrg"></a>
-# **createAppInOrg**
-> RestApiResultApp createAppInOrg(orgId, createAppInOrgRequest)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AppsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AppsApi apiInstance = new AppsApi();
-String orgId = "orgId_example"; // String | 
-CreateAppInOrg createAppInOrgRequest = new CreateAppInOrg(); // CreateAppInOrg | 
-try {
-    RestApiResultApp result = apiInstance.createAppInOrg(orgId, createAppInOrgRequest);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AppsApi#createAppInOrg");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **String**|  |
- **createAppInOrgRequest** | [**CreateAppInOrg**](CreateAppInOrg.md)|  |
-
-### Return type
-
-[**RestApiResultApp**](RestApiResultApp.md)
 
 ### Authorization
 
