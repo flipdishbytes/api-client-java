@@ -28,7 +28,7 @@ import java.io.IOException;
  * Pre Order Config
  */
 @ApiModel(description = "Pre Order Config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-25T06:39:56.442Z")
 public class PreOrderConfig {
   @SerializedName("LeadTimeMinutes")
   private Integer leadTimeMinutes = null;

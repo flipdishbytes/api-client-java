@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Terminal action state changed
  */
 @ApiModel(description = "Kiosk Terminal action state changed")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-25T06:39:56.442Z")
 public class KioskTerminalActionStateChangedEvent {
   @SerializedName("ReaderId")
   private String readerId = null;

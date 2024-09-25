@@ -28,7 +28,7 @@ import java.io.IOException;
  * Details of Payment Terminal Transaction
  */
 @ApiModel(description = "Details of Payment Terminal Transaction")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-25T06:39:56.442Z")
 public class PaymentTerminalTransactionDetails {
   @SerializedName("CardSchemeName")
   private String cardSchemeName = null;

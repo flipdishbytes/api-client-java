@@ -28,7 +28,7 @@ import java.io.IOException;
  * Assigned to Store Bank Account
  */
 @ApiModel(description = "Assigned to Store Bank Account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-23T11:19:55.803Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-25T06:39:56.442Z")
 public class AssignedBankAccount {
   @SerializedName("Id")
   private Integer id = null;

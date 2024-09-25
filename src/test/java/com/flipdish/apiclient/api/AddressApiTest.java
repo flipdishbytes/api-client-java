@@ -48,6 +48,22 @@ public class AddressApiTest {
      *          if the Api call fails
      */
     @Test
+    public void addressTemplatesTest() throws Exception {
+        StoreAddressForm address = null;
+        RestApiStringResult response = api.addressTemplates(address);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void formByAppTest() throws Exception {
         String appId = null;
         String language = null;
