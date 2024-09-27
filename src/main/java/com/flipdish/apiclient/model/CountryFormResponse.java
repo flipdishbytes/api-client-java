@@ -28,7 +28,7 @@ import java.io.IOException;
  * Country
  */
 @ApiModel(description = "Country")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-25T06:39:56.442Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-27T10:30:27.366Z")
 public class CountryFormResponse {
   @SerializedName("Value")
   private String value = null;
