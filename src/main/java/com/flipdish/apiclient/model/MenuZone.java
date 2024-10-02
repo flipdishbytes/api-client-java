@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * MenuZone
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-02T10:57:16.294Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-02T11:51:37.215Z")
 public class MenuZone {
   @SerializedName("MenuZoneId")
   private Integer menuZoneId = null;
