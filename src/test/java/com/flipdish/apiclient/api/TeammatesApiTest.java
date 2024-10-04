@@ -14,6 +14,7 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.CreateTeammate;
+import com.flipdish.apiclient.model.RestApiArrayResultPendingInvitation;
 import com.flipdish.apiclient.model.RestApiArrayResultTeammate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -154,6 +155,21 @@ public class TeammatesApiTest {
         String otc = null;
         String appId = null;
         RestApiResultAcceptInvitationResult response = api.teammatesAcceptInvitation(otc, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void teammatesPendingInvitationsTest() throws Exception {
+        RestApiArrayResultPendingInvitation response = api.teammatesPendingInvitations();
 
         // TODO: test validations
     }
