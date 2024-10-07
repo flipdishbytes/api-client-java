@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu base
  */
 @ApiModel(description = "Menu base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-04T11:36:58.526Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-07T09:28:18.421Z")
 public class MenuBase {
   @SerializedName("DisplaySectionLinks")
   private Boolean displaySectionLinks = null;
