@@ -67,6 +67,147 @@ public class StoreGroupsApi {
     }
 
     /**
+     * Build call for assignStoresToStoreGroup
+     * @param appId  (required)
+     * @param storeGroupId  (required)
+     * @param storeIds  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call assignStoresToStoreGroupCall(String appId, Integer storeGroupId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = storeIds;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores"
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "storeGroupId" + "\\}", apiClient.escapeString(storeGroupId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call assignStoresToStoreGroupValidateBeforeCall(String appId, Integer storeGroupId, List<Integer> storeIds, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling assignStoresToStoreGroup(Async)");
+        }
+        
+        // verify the required parameter 'storeGroupId' is set
+        if (storeGroupId == null) {
+            throw new ApiException("Missing the required parameter 'storeGroupId' when calling assignStoresToStoreGroup(Async)");
+        }
+        
+        // verify the required parameter 'storeIds' is set
+        if (storeIds == null) {
+            throw new ApiException("Missing the required parameter 'storeIds' when calling assignStoresToStoreGroup(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = assignStoresToStoreGroupCall(appId, storeGroupId, storeIds, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeGroupId  (required)
+     * @param storeIds  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void assignStoresToStoreGroup(String appId, Integer storeGroupId, List<Integer> storeIds) throws ApiException {
+        assignStoresToStoreGroupWithHttpInfo(appId, storeGroupId, storeIds);
+    }
+
+    /**
+     * 
+     * 
+     * @param appId  (required)
+     * @param storeGroupId  (required)
+     * @param storeIds  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> assignStoresToStoreGroupWithHttpInfo(String appId, Integer storeGroupId, List<Integer> storeIds) throws ApiException {
+        com.squareup.okhttp.Call call = assignStoresToStoreGroupValidateBeforeCall(appId, storeGroupId, storeIds, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param appId  (required)
+     * @param storeGroupId  (required)
+     * @param storeIds  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call assignStoresToStoreGroupAsync(String appId, Integer storeGroupId, List<Integer> storeIds, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = assignStoresToStoreGroupValidateBeforeCall(appId, storeGroupId, storeIds, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for createStoreGroup
      * @param appNameId  (required)
      * @param storeGroup  (required)

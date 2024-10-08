@@ -48,6 +48,24 @@ public class StoreGroupsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void assignStoresToStoreGroupTest() throws Exception {
+        String appId = null;
+        Integer storeGroupId = null;
+        List<Integer> storeIds = null;
+        api.assignStoresToStoreGroup(appId, storeGroupId, storeIds);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void createStoreGroupTest() throws Exception {
         String appNameId = null;
         StoreGroupBase storeGroup = null;
