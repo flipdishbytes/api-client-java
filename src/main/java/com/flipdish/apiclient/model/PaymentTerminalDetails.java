@@ -28,7 +28,7 @@ import java.io.IOException;
  * Details of Payment Terminal
  */
 @ApiModel(description = "Details of Payment Terminal")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-07T14:14:33.625Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-08T08:28:43.832Z")
 public class PaymentTerminalDetails {
   @SerializedName("TerminalId")
   private String terminalId = null;
