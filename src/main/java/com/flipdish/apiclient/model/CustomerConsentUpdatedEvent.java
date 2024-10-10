@@ -31,10 +31,13 @@ import org.threeten.bp.OffsetDateTime;
  * Customer consent updated
  */
 @ApiModel(description = "Customer consent updated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-08T13:04:36.739Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-10T12:59:46.455Z")
 public class CustomerConsentUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("Enabled")
   private Boolean enabled = null;
@@ -76,6 +79,24 @@ public class CustomerConsentUpdatedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public CustomerConsentUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public CustomerConsentUpdatedEvent enabled(Boolean enabled) {
@@ -233,6 +254,7 @@ public class CustomerConsentUpdatedEvent {
     }
     CustomerConsentUpdatedEvent customerConsentUpdatedEvent = (CustomerConsentUpdatedEvent) o;
     return Objects.equals(this.eventName, customerConsentUpdatedEvent.eventName) &&
+        Objects.equals(this.orgId, customerConsentUpdatedEvent.orgId) &&
         Objects.equals(this.enabled, customerConsentUpdatedEvent.enabled) &&
         Objects.equals(this.description, customerConsentUpdatedEvent.description) &&
         Objects.equals(this.user, customerConsentUpdatedEvent.user) &&
@@ -245,7 +267,7 @@ public class CustomerConsentUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, enabled, description, user, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, enabled, description, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -255,6 +277,7 @@ public class CustomerConsentUpdatedEvent {
     sb.append("class CustomerConsentUpdatedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
