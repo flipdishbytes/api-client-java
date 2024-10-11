@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
+**orgId** | **String** | Organisation Id |  [optional]
 **description** | **String** | Description |  [optional]
 **orderAcceptedTime** | [**OffsetDateTime**](OffsetDateTime.md) | Order Accepted Time |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User who has accepted the order |  [optional]

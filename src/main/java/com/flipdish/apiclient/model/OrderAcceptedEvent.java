@@ -32,10 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * Order Accepted Event
  */
 @ApiModel(description = "Order Accepted Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-10T12:59:46.455Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-11T08:53:35.265Z")
 public class OrderAcceptedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("Description")
   private String description = null;
@@ -80,6 +83,24 @@ public class OrderAcceptedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public OrderAcceptedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public OrderAcceptedEvent description(String description) {
@@ -255,6 +276,7 @@ public class OrderAcceptedEvent {
     }
     OrderAcceptedEvent orderAcceptedEvent = (OrderAcceptedEvent) o;
     return Objects.equals(this.eventName, orderAcceptedEvent.eventName) &&
+        Objects.equals(this.orgId, orderAcceptedEvent.orgId) &&
         Objects.equals(this.description, orderAcceptedEvent.description) &&
         Objects.equals(this.orderAcceptedTime, orderAcceptedEvent.orderAcceptedTime) &&
         Objects.equals(this.user, orderAcceptedEvent.user) &&
@@ -268,7 +290,7 @@ public class OrderAcceptedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, orderAcceptedTime, user, order, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, description, orderAcceptedTime, user, order, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -278,6 +300,7 @@ public class OrderAcceptedEvent {
     sb.append("class OrderAcceptedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    orderAcceptedTime: ").append(toIndentedString(orderAcceptedTime)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
