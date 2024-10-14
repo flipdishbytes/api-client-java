@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-11T08:53:35.265Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-14T09:27:31.777Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -42,9 +42,6 @@ public class App {
 
   @SerializedName("HasAndroidApp")
   private Boolean hasAndroidApp = null;
-
-  @SerializedName("CountryId")
-  private String countryId = null;
 
   @SerializedName("LogoImageUrl")
   private String logoImageUrl = null;
@@ -587,6 +584,9 @@ public class App {
   @SerializedName("CookieConsentPromptEnabled")
   private Boolean cookieConsentPromptEnabled = null;
 
+  @SerializedName("CountryId")
+  private String countryId = null;
+
   public App appId(String appId) {
     this.appId = appId;
     return this;
@@ -639,24 +639,6 @@ public class App {
 
   public void setHasAndroidApp(Boolean hasAndroidApp) {
     this.hasAndroidApp = hasAndroidApp;
-  }
-
-  public App countryId(String countryId) {
-    this.countryId = countryId;
-    return this;
-  }
-
-   /**
-   * Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
-   * @return countryId
-  **/
-  @ApiModelProperty(value = "Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks")
-  public String getCountryId() {
-    return countryId;
-  }
-
-  public void setCountryId(String countryId) {
-    this.countryId = countryId;
   }
 
   public App logoImageUrl(String logoImageUrl) {
@@ -967,10 +949,10 @@ public class App {
   }
 
    /**
-   * Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+   * Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
    * @return isPanaceaEnabled
   **/
-  @ApiModelProperty(value = "Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.")
+  @ApiModelProperty(value = "Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.")
   public Boolean isIsPanaceaEnabled() {
     return isPanaceaEnabled;
   }
@@ -1015,6 +997,24 @@ public class App {
     this.cookieConsentPromptEnabled = cookieConsentPromptEnabled;
   }
 
+  public App countryId(String countryId) {
+    this.countryId = countryId;
+    return this;
+  }
+
+   /**
+   * Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
+   * @return countryId
+  **/
+  @ApiModelProperty(value = "Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks")
+  public String getCountryId() {
+    return countryId;
+  }
+
+  public void setCountryId(String countryId) {
+    this.countryId = countryId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1028,7 +1028,6 @@ public class App {
     return Objects.equals(this.appId, app.appId) &&
         Objects.equals(this.hasIosApp, app.hasIosApp) &&
         Objects.equals(this.hasAndroidApp, app.hasAndroidApp) &&
-        Objects.equals(this.countryId, app.countryId) &&
         Objects.equals(this.logoImageUrl, app.logoImageUrl) &&
         Objects.equals(this.languages, app.languages) &&
         Objects.equals(this.availableAppLanguages, app.availableAppLanguages) &&
@@ -1046,12 +1045,13 @@ public class App {
         Objects.equals(this.applicationCategory, app.applicationCategory) &&
         Objects.equals(this.isPanaceaEnabled, app.isPanaceaEnabled) &&
         Objects.equals(this.panaceaVanityUrl, app.panaceaVanityUrl) &&
-        Objects.equals(this.cookieConsentPromptEnabled, app.cookieConsentPromptEnabled);
+        Objects.equals(this.cookieConsentPromptEnabled, app.cookieConsentPromptEnabled) &&
+        Objects.equals(this.countryId, app.countryId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, countryId, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1063,7 +1063,6 @@ public class App {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    hasIosApp: ").append(toIndentedString(hasIosApp)).append("\n");
     sb.append("    hasAndroidApp: ").append(toIndentedString(hasAndroidApp)).append("\n");
-    sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    logoImageUrl: ").append(toIndentedString(logoImageUrl)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    availableAppLanguages: ").append(toIndentedString(availableAppLanguages)).append("\n");
@@ -1082,6 +1081,7 @@ public class App {
     sb.append("    isPanaceaEnabled: ").append(toIndentedString(isPanaceaEnabled)).append("\n");
     sb.append("    panaceaVanityUrl: ").append(toIndentedString(panaceaVanityUrl)).append("\n");
     sb.append("    cookieConsentPromptEnabled: ").append(toIndentedString(cookieConsentPromptEnabled)).append("\n");
+    sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

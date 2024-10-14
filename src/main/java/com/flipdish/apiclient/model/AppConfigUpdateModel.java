@@ -28,7 +28,7 @@ import java.io.IOException;
  * Application configuration
  */
 @ApiModel(description = "Application configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-11T08:53:35.265Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-14T09:27:31.777Z")
 public class AppConfigUpdateModel {
   @SerializedName("Name")
   private String name = null;
@@ -205,10 +205,10 @@ public class AppConfigUpdateModel {
   }
 
    /**
-   * Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+   * Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
    * @return isPanaceaEnabled
   **/
-  @ApiModelProperty(value = "Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.")
+  @ApiModelProperty(value = "Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.")
   public Boolean isIsPanaceaEnabled() {
     return isPanaceaEnabled;
   }
@@ -277,10 +277,10 @@ public class AppConfigUpdateModel {
   }
 
    /**
-   * Country identifier in ISO 3166-1 alpha-2 format.
+   * Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
    * @return countryId
   **/
-  @ApiModelProperty(value = "Country identifier in ISO 3166-1 alpha-2 format.")
+  @ApiModelProperty(value = "Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks")
   public String getCountryId() {
     return countryId;
   }

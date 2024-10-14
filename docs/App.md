@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **appId** | **String** | App Identifier |  [optional]
 **hasIosApp** | **Boolean** | Has iOS app in Apple App Store. This is readonly. |  [optional]
 **hasAndroidApp** | **Boolean** | Has Android app in Google Play Store. This is readonly. |  [optional]
-**countryId** | **String** | Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks |  [optional]
 **logoImageUrl** | **String** | Application Logo. |  [optional]
 **languages** | [**List&lt;Language&gt;**](Language.md) | Languages that have been selected to be available to customers. |  [optional]
 **availableAppLanguages** | [**List&lt;Language&gt;**](Language.md) | Lists all languages that are supported by Flipdish. |  [optional]
@@ -23,9 +22,10 @@ Name | Type | Description | Notes
 **mainColor** | **String** | Main color of the web / Android / iOS applications |  [optional]
 **kioskPrimaryColour** | **String** | Primary colour used on the Kiosk |  [optional]
 **applicationCategory** | [**ApplicationCategoryEnum**](#ApplicationCategoryEnum) | Application Category |  [optional]
-**isPanaceaEnabled** | **Boolean** | Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain. |  [optional]
+**isPanaceaEnabled** | **Boolean** | Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain. |  [optional]
 **panaceaVanityUrl** | **String** | In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl} |  [optional]
 **cookieConsentPromptEnabled** | **Boolean** | Cookie Consent Prompt Enabled |  [optional]
+**countryId** | **String** | Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks |  [optional]
 
 
 <a name="AppAccessLevelEnum"></a>
