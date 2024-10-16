@@ -31,10 +31,13 @@ import org.threeten.bp.OffsetDateTime;
  * Customer created event
  */
 @ApiModel(description = "Customer created event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-14T09:27:31.777Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-16T12:06:58.711Z")
 public class CustomerCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -73,6 +76,24 @@ public class CustomerCreatedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public CustomerCreatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public CustomerCreatedEvent user(UserEventInfo user) {
@@ -212,6 +233,7 @@ public class CustomerCreatedEvent {
     }
     CustomerCreatedEvent customerCreatedEvent = (CustomerCreatedEvent) o;
     return Objects.equals(this.eventName, customerCreatedEvent.eventName) &&
+        Objects.equals(this.orgId, customerCreatedEvent.orgId) &&
         Objects.equals(this.user, customerCreatedEvent.user) &&
         Objects.equals(this.description, customerCreatedEvent.description) &&
         Objects.equals(this.flipdishEventId, customerCreatedEvent.flipdishEventId) &&
@@ -223,7 +245,7 @@ public class CustomerCreatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, user, description, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, user, description, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -233,6 +255,7 @@ public class CustomerCreatedEvent {
     sb.append("class CustomerCreatedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
