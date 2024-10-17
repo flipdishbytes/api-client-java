@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.flipdish.apiclient.model.CustomerMessages;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreGroup;
@@ -885,22 +886,20 @@ public class StoreGroupsApi {
         return call;
     }
     /**
-     * Build call for setMenuMessagePerDeliveryType
+     * Build call for setCustomerMessages
      * @param storeGroupId  (required)
-     * @param deliveryType  (required)
-     * @param menuMessage  (required)
+     * @param customerMessages  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeCall(Integer storeGroupId, String deliveryType, String menuMessage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = menuMessage;
+    public com.squareup.okhttp.Call setCustomerMessagesCall(Integer storeGroupId, CustomerMessages customerMessages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = customerMessages;
 
         // create path and map variables
-        String localVarPath = "/api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType"
-            .replaceAll("\\{" + "storeGroupId" + "\\}", apiClient.escapeString(storeGroupId.toString()))
-            .replaceAll("\\{" + "deliveryType" + "\\}", apiClient.escapeString(deliveryType.toString()));
+        String localVarPath = "/api/v1.0/storegroups/{storeGroupId}/CustomerMessages"
+            .replaceAll("\\{" + "storeGroupId" + "\\}", apiClient.escapeString(storeGroupId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -941,25 +940,20 @@ public class StoreGroupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeValidateBeforeCall(Integer storeGroupId, String deliveryType, String menuMessage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setCustomerMessagesValidateBeforeCall(Integer storeGroupId, CustomerMessages customerMessages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeGroupId' is set
         if (storeGroupId == null) {
-            throw new ApiException("Missing the required parameter 'storeGroupId' when calling setMenuMessagePerDeliveryType(Async)");
+            throw new ApiException("Missing the required parameter 'storeGroupId' when calling setCustomerMessages(Async)");
         }
         
-        // verify the required parameter 'deliveryType' is set
-        if (deliveryType == null) {
-            throw new ApiException("Missing the required parameter 'deliveryType' when calling setMenuMessagePerDeliveryType(Async)");
-        }
-        
-        // verify the required parameter 'menuMessage' is set
-        if (menuMessage == null) {
-            throw new ApiException("Missing the required parameter 'menuMessage' when calling setMenuMessagePerDeliveryType(Async)");
+        // verify the required parameter 'customerMessages' is set
+        if (customerMessages == null) {
+            throw new ApiException("Missing the required parameter 'customerMessages' when calling setCustomerMessages(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeCall(storeGroupId, deliveryType, menuMessage, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setCustomerMessagesCall(storeGroupId, customerMessages, progressListener, progressRequestListener);
         return call;
 
     }
@@ -968,25 +962,23 @@ public class StoreGroupsApi {
      * 
      * 
      * @param storeGroupId  (required)
-     * @param deliveryType  (required)
-     * @param menuMessage  (required)
+     * @param customerMessages  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void setMenuMessagePerDeliveryType(Integer storeGroupId, String deliveryType, String menuMessage) throws ApiException {
-        setMenuMessagePerDeliveryTypeWithHttpInfo(storeGroupId, deliveryType, menuMessage);
+    public void setCustomerMessages(Integer storeGroupId, CustomerMessages customerMessages) throws ApiException {
+        setCustomerMessagesWithHttpInfo(storeGroupId, customerMessages);
     }
 
     /**
      * 
      * 
      * @param storeGroupId  (required)
-     * @param deliveryType  (required)
-     * @param menuMessage  (required)
+     * @param customerMessages  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> setMenuMessagePerDeliveryTypeWithHttpInfo(Integer storeGroupId, String deliveryType, String menuMessage) throws ApiException {
-        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeValidateBeforeCall(storeGroupId, deliveryType, menuMessage, null, null);
+    public ApiResponse<Void> setCustomerMessagesWithHttpInfo(Integer storeGroupId, CustomerMessages customerMessages) throws ApiException {
+        com.squareup.okhttp.Call call = setCustomerMessagesValidateBeforeCall(storeGroupId, customerMessages, null, null);
         return apiClient.execute(call);
     }
 
@@ -994,13 +986,12 @@ public class StoreGroupsApi {
      *  (asynchronously)
      * 
      * @param storeGroupId  (required)
-     * @param deliveryType  (required)
-     * @param menuMessage  (required)
+     * @param customerMessages  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setMenuMessagePerDeliveryTypeAsync(Integer storeGroupId, String deliveryType, String menuMessage, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call setCustomerMessagesAsync(Integer storeGroupId, CustomerMessages customerMessages, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1021,7 +1012,7 @@ public class StoreGroupsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setMenuMessagePerDeliveryTypeValidateBeforeCall(storeGroupId, deliveryType, menuMessage, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setCustomerMessagesValidateBeforeCall(storeGroupId, customerMessages, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

@@ -32,14 +32,8 @@ import java.util.List;
  * Store Group Extended
  */
 @ApiModel(description = "Store Group Extended")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class StoreGroupExtended {
-  @SerializedName("DeliveryMenuMessage")
-  private String deliveryMenuMessage = null;
-
-  @SerializedName("PickupMenuMessage")
-  private String pickupMenuMessage = null;
-
   @SerializedName("TotalStores")
   private Integer totalStores = null;
 
@@ -57,6 +51,12 @@ public class StoreGroupExtended {
 
   @SerializedName("GeneralRatingCount")
   private Integer generalRatingCount = null;
+
+  @SerializedName("DeliveryMenuMessage")
+  private String deliveryMenuMessage = null;
+
+  @SerializedName("PickupMenuMessage")
+  private String pickupMenuMessage = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -333,42 +333,6 @@ public class StoreGroupExtended {
   @SerializedName("Currency")
   private CurrencyEnum currency = null;
 
-  public StoreGroupExtended deliveryMenuMessage(String deliveryMenuMessage) {
-    this.deliveryMenuMessage = deliveryMenuMessage;
-    return this;
-  }
-
-   /**
-   * Delivery Menu Message
-   * @return deliveryMenuMessage
-  **/
-  @ApiModelProperty(value = "Delivery Menu Message")
-  public String getDeliveryMenuMessage() {
-    return deliveryMenuMessage;
-  }
-
-  public void setDeliveryMenuMessage(String deliveryMenuMessage) {
-    this.deliveryMenuMessage = deliveryMenuMessage;
-  }
-
-  public StoreGroupExtended pickupMenuMessage(String pickupMenuMessage) {
-    this.pickupMenuMessage = pickupMenuMessage;
-    return this;
-  }
-
-   /**
-   * Pickup Menu Message
-   * @return pickupMenuMessage
-  **/
-  @ApiModelProperty(value = "Pickup Menu Message")
-  public String getPickupMenuMessage() {
-    return pickupMenuMessage;
-  }
-
-  public void setPickupMenuMessage(String pickupMenuMessage) {
-    this.pickupMenuMessage = pickupMenuMessage;
-  }
-
   public StoreGroupExtended totalStores(Integer totalStores) {
     this.totalStores = totalStores;
     return this;
@@ -493,6 +457,42 @@ public class StoreGroupExtended {
     this.generalRatingCount = generalRatingCount;
   }
 
+  public StoreGroupExtended deliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+    return this;
+  }
+
+   /**
+   * Delivery menu message
+   * @return deliveryMenuMessage
+  **/
+  @ApiModelProperty(value = "Delivery menu message")
+  public String getDeliveryMenuMessage() {
+    return deliveryMenuMessage;
+  }
+
+  public void setDeliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+  }
+
+  public StoreGroupExtended pickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+    return this;
+  }
+
+   /**
+   * Pickup menu message
+   * @return pickupMenuMessage
+  **/
+  @ApiModelProperty(value = "Pickup menu message")
+  public String getPickupMenuMessage() {
+    return pickupMenuMessage;
+  }
+
+  public void setPickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+  }
+
   public StoreGroupExtended name(String name) {
     this.name = name;
     return this;
@@ -539,21 +539,21 @@ public class StoreGroupExtended {
       return false;
     }
     StoreGroupExtended storeGroupExtended = (StoreGroupExtended) o;
-    return Objects.equals(this.deliveryMenuMessage, storeGroupExtended.deliveryMenuMessage) &&
-        Objects.equals(this.pickupMenuMessage, storeGroupExtended.pickupMenuMessage) &&
-        Objects.equals(this.totalStores, storeGroupExtended.totalStores) &&
+    return Objects.equals(this.totalStores, storeGroupExtended.totalStores) &&
         Objects.equals(this.groupedCoordinates, storeGroupExtended.groupedCoordinates) &&
         Objects.equals(this.storeHeaders, storeGroupExtended.storeHeaders) &&
         Objects.equals(this.storeGroupId, storeGroupExtended.storeGroupId) &&
         Objects.equals(this.generalRating, storeGroupExtended.generalRating) &&
         Objects.equals(this.generalRatingCount, storeGroupExtended.generalRatingCount) &&
+        Objects.equals(this.deliveryMenuMessage, storeGroupExtended.deliveryMenuMessage) &&
+        Objects.equals(this.pickupMenuMessage, storeGroupExtended.pickupMenuMessage) &&
         Objects.equals(this.name, storeGroupExtended.name) &&
         Objects.equals(this.currency, storeGroupExtended.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryMenuMessage, pickupMenuMessage, totalStores, groupedCoordinates, storeHeaders, storeGroupId, generalRating, generalRatingCount, name, currency);
+    return Objects.hash(totalStores, groupedCoordinates, storeHeaders, storeGroupId, generalRating, generalRatingCount, deliveryMenuMessage, pickupMenuMessage, name, currency);
   }
 
 
@@ -562,14 +562,14 @@ public class StoreGroupExtended {
     StringBuilder sb = new StringBuilder();
     sb.append("class StoreGroupExtended {\n");
     
-    sb.append("    deliveryMenuMessage: ").append(toIndentedString(deliveryMenuMessage)).append("\n");
-    sb.append("    pickupMenuMessage: ").append(toIndentedString(pickupMenuMessage)).append("\n");
     sb.append("    totalStores: ").append(toIndentedString(totalStores)).append("\n");
     sb.append("    groupedCoordinates: ").append(toIndentedString(groupedCoordinates)).append("\n");
     sb.append("    storeHeaders: ").append(toIndentedString(storeHeaders)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    generalRating: ").append(toIndentedString(generalRating)).append("\n");
     sb.append("    generalRatingCount: ").append(toIndentedString(generalRatingCount)).append("\n");
+    sb.append("    deliveryMenuMessage: ").append(toIndentedString(deliveryMenuMessage)).append("\n");
+    sb.append("    pickupMenuMessage: ").append(toIndentedString(pickupMenuMessage)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
 [**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
 [**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
-[**setMenuMessagePerDeliveryType**](StoreGroupsApi.md#setMenuMessagePerDeliveryType) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
+[**setCustomerMessages**](StoreGroupsApi.md#setCustomerMessages) | **POST** /api/v1.0/storegroups/{storeGroupId}/CustomerMessages | 
 [**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
 
@@ -338,9 +338,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setMenuMessagePerDeliveryType"></a>
-# **setMenuMessagePerDeliveryType**
-> setMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage)
+<a name="setCustomerMessages"></a>
+# **setCustomerMessages**
+> setCustomerMessages(storeGroupId, customerMessages)
 
 
 
@@ -361,12 +361,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreGroupsApi apiInstance = new StoreGroupsApi();
 Integer storeGroupId = 56; // Integer | 
-String deliveryType = "deliveryType_example"; // String | 
-String menuMessage = "menuMessage_example"; // String | 
+CustomerMessages customerMessages = new CustomerMessages(); // CustomerMessages | 
 try {
-    apiInstance.setMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage);
+    apiInstance.setCustomerMessages(storeGroupId, customerMessages);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StoreGroupsApi#setMenuMessagePerDeliveryType");
+    System.err.println("Exception when calling StoreGroupsApi#setCustomerMessages");
     e.printStackTrace();
 }
 ```
@@ -376,8 +375,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeGroupId** | **Integer**|  |
- **deliveryType** | **String**|  | [enum: Delivery, Pickup]
- **menuMessage** | **String**|  |
+ **customerMessages** | [**CustomerMessages**](CustomerMessages.md)|  |
 
 ### Return type
 

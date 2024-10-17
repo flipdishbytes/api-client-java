@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fee Config Updated Event
  */
 @ApiModel(description = "Fee Config Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class StoreFeeConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

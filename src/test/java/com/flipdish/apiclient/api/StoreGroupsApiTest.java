@@ -13,6 +13,7 @@
 
 package com.flipdish.apiclient.api;
 
+import com.flipdish.apiclient.model.CustomerMessages;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultStoreGroup;
@@ -154,11 +155,10 @@ public class StoreGroupsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void setMenuMessagePerDeliveryTypeTest() throws Exception {
+    public void setCustomerMessagesTest() throws Exception {
         Integer storeGroupId = null;
-        String deliveryType = null;
-        String menuMessage = null;
-        api.setMenuMessagePerDeliveryType(storeGroupId, deliveryType, menuMessage);
+        CustomerMessages customerMessages = null;
+        api.setCustomerMessages(storeGroupId, customerMessages);
 
         // TODO: test validations
     }

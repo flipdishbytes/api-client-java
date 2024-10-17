@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Group
  */
 @ApiModel(description = "Store Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class StoreGroup {
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;
@@ -38,6 +38,12 @@ public class StoreGroup {
 
   @SerializedName("GeneralRatingCount")
   private Integer generalRatingCount = null;
+
+  @SerializedName("DeliveryMenuMessage")
+  private String deliveryMenuMessage = null;
+
+  @SerializedName("PickupMenuMessage")
+  private String pickupMenuMessage = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -368,6 +374,42 @@ public class StoreGroup {
     this.generalRatingCount = generalRatingCount;
   }
 
+  public StoreGroup deliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+    return this;
+  }
+
+   /**
+   * Delivery menu message
+   * @return deliveryMenuMessage
+  **/
+  @ApiModelProperty(value = "Delivery menu message")
+  public String getDeliveryMenuMessage() {
+    return deliveryMenuMessage;
+  }
+
+  public void setDeliveryMenuMessage(String deliveryMenuMessage) {
+    this.deliveryMenuMessage = deliveryMenuMessage;
+  }
+
+  public StoreGroup pickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+    return this;
+  }
+
+   /**
+   * Pickup menu message
+   * @return pickupMenuMessage
+  **/
+  @ApiModelProperty(value = "Pickup menu message")
+  public String getPickupMenuMessage() {
+    return pickupMenuMessage;
+  }
+
+  public void setPickupMenuMessage(String pickupMenuMessage) {
+    this.pickupMenuMessage = pickupMenuMessage;
+  }
+
   public StoreGroup name(String name) {
     this.name = name;
     return this;
@@ -417,13 +459,15 @@ public class StoreGroup {
     return Objects.equals(this.storeGroupId, storeGroup.storeGroupId) &&
         Objects.equals(this.generalRating, storeGroup.generalRating) &&
         Objects.equals(this.generalRatingCount, storeGroup.generalRatingCount) &&
+        Objects.equals(this.deliveryMenuMessage, storeGroup.deliveryMenuMessage) &&
+        Objects.equals(this.pickupMenuMessage, storeGroup.pickupMenuMessage) &&
         Objects.equals(this.name, storeGroup.name) &&
         Objects.equals(this.currency, storeGroup.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeGroupId, generalRating, generalRatingCount, name, currency);
+    return Objects.hash(storeGroupId, generalRating, generalRatingCount, deliveryMenuMessage, pickupMenuMessage, name, currency);
   }
 
 
@@ -435,6 +479,8 @@ public class StoreGroup {
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    generalRating: ").append(toIndentedString(generalRating)).append("\n");
     sb.append("    generalRatingCount: ").append(toIndentedString(generalRatingCount)).append("\n");
+    sb.append("    deliveryMenuMessage: ").append(toIndentedString(deliveryMenuMessage)).append("\n");
+    sb.append("    pickupMenuMessage: ").append(toIndentedString(pickupMenuMessage)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");

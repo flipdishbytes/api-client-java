@@ -28,7 +28,7 @@ import java.io.IOException;
  * Get Cash Payment Settings for a UserId
  */
 @ApiModel(description = "Get Cash Payment Settings for a UserId")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class KioskCashPaymentSettings {
   @SerializedName("IsCashVisibleToCustomer")
   private Boolean isCashVisibleToCustomer = null;

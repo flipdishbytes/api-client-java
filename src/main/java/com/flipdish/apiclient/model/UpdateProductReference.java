@@ -28,7 +28,7 @@ import java.io.IOException;
  * Data to update a {Flipdish.Menus.PublicModels.V1.Catalog.Groups.UpdateProductReference}
  */
 @ApiModel(description = "Data to update a {Flipdish.Menus.PublicModels.V1.Catalog.Groups.UpdateProductReference}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class UpdateProductReference {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;

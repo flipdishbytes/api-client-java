@@ -28,7 +28,7 @@ import java.io.IOException;
  * Un-Register card reader request
  */
 @ApiModel(description = "Un-Register card reader request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T14:21:24.882Z")
 public class UnRegisterCardReaderRequest {
   @SerializedName("ReaderId")
   private String readerId = null;

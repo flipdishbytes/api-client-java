@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **storeGroupId** | **Integer** | Unique Store Group Identifier |  [optional]
 **generalRating** | **Double** | Store Group rating |  [optional]
 **generalRatingCount** | **Integer** | Store Group rating count |  [optional]
+**deliveryMenuMessage** | **String** | Delivery menu message |  [optional]
+**pickupMenuMessage** | **String** | Pickup menu message |  [optional]
 **name** | **String** | Store Group Name |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency used by the stores in this group |  [optional]
 
