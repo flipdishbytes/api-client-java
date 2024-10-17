@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * AppStore Config Deleted event
  */
 @ApiModel(description = "AppStore Config Deleted event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-16T12:06:58.711Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
 public class AppStoreConfigDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -40,6 +41,9 @@ public class AppStoreConfigDeletedEvent {
 
   @SerializedName("AppStoreAppConfigurationId")
   private String appStoreAppConfigurationId = null;
+
+  @SerializedName("User")
+  private UserEventInfo user = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -108,6 +112,24 @@ public class AppStoreConfigDeletedEvent {
 
   public void setAppStoreAppConfigurationId(String appStoreAppConfigurationId) {
     this.appStoreAppConfigurationId = appStoreAppConfigurationId;
+  }
+
+  public AppStoreConfigDeletedEvent user(UserEventInfo user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * User who has deleted the configuration
+   * @return user
+  **/
+  @ApiModelProperty(value = "User who has deleted the configuration")
+  public UserEventInfo getUser() {
+    return user;
+  }
+
+  public void setUser(UserEventInfo user) {
+    this.user = user;
   }
 
   public AppStoreConfigDeletedEvent flipdishEventId(UUID flipdishEventId) {
@@ -213,6 +235,7 @@ public class AppStoreConfigDeletedEvent {
     return Objects.equals(this.eventName, appStoreConfigDeletedEvent.eventName) &&
         Objects.equals(this.appStoreAppId, appStoreConfigDeletedEvent.appStoreAppId) &&
         Objects.equals(this.appStoreAppConfigurationId, appStoreConfigDeletedEvent.appStoreAppConfigurationId) &&
+        Objects.equals(this.user, appStoreConfigDeletedEvent.user) &&
         Objects.equals(this.flipdishEventId, appStoreConfigDeletedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appStoreConfigDeletedEvent.createTime) &&
         Objects.equals(this.position, appStoreConfigDeletedEvent.position) &&
@@ -222,7 +245,7 @@ public class AppStoreConfigDeletedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, appStoreAppId, appStoreAppConfigurationId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, appStoreAppId, appStoreAppConfigurationId, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -234,6 +257,7 @@ public class AppStoreConfigDeletedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
     sb.append("    appStoreAppConfigurationId: ").append(toIndentedString(appStoreAppConfigurationId)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

@@ -15,6 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.UserEventInfo;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * AppStore Config Created event
  */
 @ApiModel(description = "AppStore Config Created event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-16T12:06:58.711Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-17T12:34:24.321Z")
 public class AppStoreConfigCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -40,6 +41,9 @@ public class AppStoreConfigCreatedEvent {
 
   @SerializedName("AppStoreAppConfigurationId")
   private String appStoreAppConfigurationId = null;
+
+  @SerializedName("User")
+  private UserEventInfo user = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -108,6 +112,24 @@ public class AppStoreConfigCreatedEvent {
 
   public void setAppStoreAppConfigurationId(String appStoreAppConfigurationId) {
     this.appStoreAppConfigurationId = appStoreAppConfigurationId;
+  }
+
+  public AppStoreConfigCreatedEvent user(UserEventInfo user) {
+    this.user = user;
+    return this;
+  }
+
+   /**
+   * User who has created the configuration
+   * @return user
+  **/
+  @ApiModelProperty(value = "User who has created the configuration")
+  public UserEventInfo getUser() {
+    return user;
+  }
+
+  public void setUser(UserEventInfo user) {
+    this.user = user;
   }
 
   public AppStoreConfigCreatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -213,6 +235,7 @@ public class AppStoreConfigCreatedEvent {
     return Objects.equals(this.eventName, appStoreConfigCreatedEvent.eventName) &&
         Objects.equals(this.appStoreAppId, appStoreConfigCreatedEvent.appStoreAppId) &&
         Objects.equals(this.appStoreAppConfigurationId, appStoreConfigCreatedEvent.appStoreAppConfigurationId) &&
+        Objects.equals(this.user, appStoreConfigCreatedEvent.user) &&
         Objects.equals(this.flipdishEventId, appStoreConfigCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appStoreConfigCreatedEvent.createTime) &&
         Objects.equals(this.position, appStoreConfigCreatedEvent.position) &&
@@ -222,7 +245,7 @@ public class AppStoreConfigCreatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, appStoreAppId, appStoreAppConfigurationId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, appStoreAppId, appStoreAppConfigurationId, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -234,6 +257,7 @@ public class AppStoreConfigCreatedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    appStoreAppId: ").append(toIndentedString(appStoreAppId)).append("\n");
     sb.append("    appStoreAppConfigurationId: ").append(toIndentedString(appStoreAppConfigurationId)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
