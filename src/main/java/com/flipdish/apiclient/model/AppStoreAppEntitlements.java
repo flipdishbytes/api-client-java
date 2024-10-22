@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * AppStoreAppEntitlements
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-22T08:24:49.146Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-22T14:01:52.558Z")
 public class AppStoreAppEntitlements {
   @SerializedName("EntitlementQuantity")
   private Integer entitlementQuantity = null;
