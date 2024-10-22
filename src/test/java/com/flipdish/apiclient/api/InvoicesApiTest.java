@@ -60,4 +60,62 @@ public class InvoicesApiTest {
         // TODO: test validations
     }
     
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void invoicePdfTest() throws Exception {
+        String invoiceNumber = null;
+        String appId = null;
+        api.invoicePdf(invoiceNumber, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void listInvoicesTest() throws Exception {
+        String appId = null;
+        Integer storeId = null;
+        Object response = api.listInvoices(appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void listSubscriptionInvoicesTest() throws Exception {
+        String appId = null;
+        String subscriptionId = null;
+        Integer limit = null;
+        String pageId = null;
+        Boolean excludeNotOwnedInvoices = null;
+        OffsetDateTime dateFrom = null;
+        OffsetDateTime dateTo = null;
+        String invoiceNumber = null;
+        List<Integer> storeId = null;
+        RestApiFinanceSearchPaginationResultInvoice response = api.listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+
+        // TODO: test validations
+    }
+    
 }

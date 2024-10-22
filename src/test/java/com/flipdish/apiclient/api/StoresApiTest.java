@@ -183,7 +183,8 @@ public class StoresApiTest {
         Integer storeGroupId = null;
         String propertyId = null;
         StoreCreateBase store = null;
-        RestApiResultStore response = api.createStoreInProperty(storeGroupId, propertyId, store);
+        Boolean autoAssignMenu = null;
+        RestApiResultStore response = api.createStoreInProperty(storeGroupId, propertyId, store, autoAssignMenu);
 
         // TODO: test validations
     }

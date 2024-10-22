@@ -900,12 +900,13 @@ public class StoresApi {
      * @param storeGroupId  (required)
      * @param propertyId  (required)
      * @param store  (required)
+     * @param autoAssignMenu  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createStoreInPropertyCall(Integer storeGroupId, String propertyId, StoreCreateBase store, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call createStoreInPropertyCall(Integer storeGroupId, String propertyId, StoreCreateBase store, Boolean autoAssignMenu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = store;
 
         // create path and map variables
@@ -916,6 +917,8 @@ public class StoresApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (storeGroupId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("storeGroupId", storeGroupId));
+        if (autoAssignMenu != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("autoAssignMenu", autoAssignMenu));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -953,7 +956,7 @@ public class StoresApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createStoreInPropertyValidateBeforeCall(Integer storeGroupId, String propertyId, StoreCreateBase store, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createStoreInPropertyValidateBeforeCall(Integer storeGroupId, String propertyId, StoreCreateBase store, Boolean autoAssignMenu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeGroupId' is set
         if (storeGroupId == null) {
@@ -971,7 +974,7 @@ public class StoresApi {
         }
         
 
-        com.squareup.okhttp.Call call = createStoreInPropertyCall(storeGroupId, propertyId, store, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createStoreInPropertyCall(storeGroupId, propertyId, store, autoAssignMenu, progressListener, progressRequestListener);
         return call;
 
     }
@@ -982,11 +985,12 @@ public class StoresApi {
      * @param storeGroupId  (required)
      * @param propertyId  (required)
      * @param store  (required)
+     * @param autoAssignMenu  (optional)
      * @return RestApiResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultStore createStoreInProperty(Integer storeGroupId, String propertyId, StoreCreateBase store) throws ApiException {
-        ApiResponse<RestApiResultStore> resp = createStoreInPropertyWithHttpInfo(storeGroupId, propertyId, store);
+    public RestApiResultStore createStoreInProperty(Integer storeGroupId, String propertyId, StoreCreateBase store, Boolean autoAssignMenu) throws ApiException {
+        ApiResponse<RestApiResultStore> resp = createStoreInPropertyWithHttpInfo(storeGroupId, propertyId, store, autoAssignMenu);
         return resp.getData();
     }
 
@@ -996,11 +1000,12 @@ public class StoresApi {
      * @param storeGroupId  (required)
      * @param propertyId  (required)
      * @param store  (required)
+     * @param autoAssignMenu  (optional)
      * @return ApiResponse&lt;RestApiResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultStore> createStoreInPropertyWithHttpInfo(Integer storeGroupId, String propertyId, StoreCreateBase store) throws ApiException {
-        com.squareup.okhttp.Call call = createStoreInPropertyValidateBeforeCall(storeGroupId, propertyId, store, null, null);
+    public ApiResponse<RestApiResultStore> createStoreInPropertyWithHttpInfo(Integer storeGroupId, String propertyId, StoreCreateBase store, Boolean autoAssignMenu) throws ApiException {
+        com.squareup.okhttp.Call call = createStoreInPropertyValidateBeforeCall(storeGroupId, propertyId, store, autoAssignMenu, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultStore>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1011,11 +1016,12 @@ public class StoresApi {
      * @param storeGroupId  (required)
      * @param propertyId  (required)
      * @param store  (required)
+     * @param autoAssignMenu  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createStoreInPropertyAsync(Integer storeGroupId, String propertyId, StoreCreateBase store, final ApiCallback<RestApiResultStore> callback) throws ApiException {
+    public com.squareup.okhttp.Call createStoreInPropertyAsync(Integer storeGroupId, String propertyId, StoreCreateBase store, Boolean autoAssignMenu, final ApiCallback<RestApiResultStore> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1036,7 +1042,7 @@ public class StoresApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createStoreInPropertyValidateBeforeCall(storeGroupId, propertyId, store, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createStoreInPropertyValidateBeforeCall(storeGroupId, propertyId, store, autoAssignMenu, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultStore>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

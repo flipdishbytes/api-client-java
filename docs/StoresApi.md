@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 <a name="createStoreInProperty"></a>
 # **createStoreInProperty**
-> RestApiResultStore createStoreInProperty(storeGroupId, propertyId, store)
+> RestApiResultStore createStoreInProperty(storeGroupId, propertyId, store, autoAssignMenu)
 
 
 
@@ -383,8 +383,9 @@ StoresApi apiInstance = new StoresApi();
 Integer storeGroupId = 56; // Integer | 
 String propertyId = "propertyId_example"; // String | 
 StoreCreateBase store = new StoreCreateBase(); // StoreCreateBase | 
+Boolean autoAssignMenu = true; // Boolean | 
 try {
-    RestApiResultStore result = apiInstance.createStoreInProperty(storeGroupId, propertyId, store);
+    RestApiResultStore result = apiInstance.createStoreInProperty(storeGroupId, propertyId, store, autoAssignMenu);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#createStoreInProperty");
@@ -399,6 +400,7 @@ Name | Type | Description  | Notes
  **storeGroupId** | **Integer**|  |
  **propertyId** | **String**|  |
  **store** | [**StoreCreateBase**](StoreCreateBase.md)|  |
+ **autoAssignMenu** | **Boolean**|  | [optional]
 
 ### Return type
 
