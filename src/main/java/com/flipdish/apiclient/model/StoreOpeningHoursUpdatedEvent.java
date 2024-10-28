@@ -32,10 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * Store Opening Hours Updated Event
  */
 @ApiModel(description = "Store Opening Hours Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T11:52:01.100Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T14:52:41.050Z")
 public class StoreOpeningHoursUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -136,6 +139,24 @@ public class StoreOpeningHoursUpdatedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public StoreOpeningHoursUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public StoreOpeningHoursUpdatedEvent storeId(Integer storeId) {
@@ -365,6 +386,7 @@ public class StoreOpeningHoursUpdatedEvent {
     }
     StoreOpeningHoursUpdatedEvent storeOpeningHoursUpdatedEvent = (StoreOpeningHoursUpdatedEvent) o;
     return Objects.equals(this.eventName, storeOpeningHoursUpdatedEvent.eventName) &&
+        Objects.equals(this.orgId, storeOpeningHoursUpdatedEvent.orgId) &&
         Objects.equals(this.storeId, storeOpeningHoursUpdatedEvent.storeId) &&
         Objects.equals(this.storeGroupId, storeOpeningHoursUpdatedEvent.storeGroupId) &&
         Objects.equals(this.user, storeOpeningHoursUpdatedEvent.user) &&
@@ -381,7 +403,7 @@ public class StoreOpeningHoursUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, deliveryType, businessHoursPeriodOld, businessHoursPeriod, description, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, storeGroupId, user, deliveryType, businessHoursPeriodOld, businessHoursPeriod, description, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -391,6 +413,7 @@ public class StoreOpeningHoursUpdatedEvent {
     sb.append("class StoreOpeningHoursUpdatedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");

@@ -31,7 +31,7 @@ import java.util.List;
  * Store statistics
  */
 @ApiModel(description = "Store statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T11:52:01.100Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T14:52:41.050Z")
 public class StoreStatistics {
   @SerializedName("StoreId")
   private Integer storeId = null;
