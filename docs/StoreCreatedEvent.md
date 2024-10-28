@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
+**orgId** | **String** | Organisation Id |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which created this store |  [optional]
 **description** | **String** | Description |  [optional]

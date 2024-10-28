@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Terminal Notification
  */
 @ApiModel(description = "Order Terminal Notification")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-23T06:45:37.270Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T11:52:01.100Z")
 public class EmvNotificationEvent {
   @SerializedName("EventName")
   private String eventName = null;

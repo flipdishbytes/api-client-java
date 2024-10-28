@@ -32,10 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * Store Updated Event
  */
 @ApiModel(description = "Store Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-23T06:45:37.270Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T11:52:01.100Z")
 public class StoreUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -83,6 +86,24 @@ public class StoreUpdatedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public StoreUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public StoreUpdatedEvent storeId(Integer storeId) {
@@ -267,6 +288,7 @@ public class StoreUpdatedEvent {
     }
     StoreUpdatedEvent storeUpdatedEvent = (StoreUpdatedEvent) o;
     return Objects.equals(this.eventName, storeUpdatedEvent.eventName) &&
+        Objects.equals(this.orgId, storeUpdatedEvent.orgId) &&
         Objects.equals(this.storeId, storeUpdatedEvent.storeId) &&
         Objects.equals(this.storeGroupId, storeUpdatedEvent.storeGroupId) &&
         Objects.equals(this.user, storeUpdatedEvent.user) &&
@@ -281,7 +303,7 @@ public class StoreUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, storeGroupId, user, description, store, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -291,6 +313,7 @@ public class StoreUpdatedEvent {
     sb.append("class StoreUpdatedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");

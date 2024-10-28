@@ -89,6 +89,7 @@ Name | Type | Description | Notes
 **voucherCreatedEvent** | [**List&lt;VoucherCreatedEvent&gt;**](VoucherCreatedEvent.md) | Voucher created event |  [optional]
 **voucherUpdatedEvent** | [**List&lt;VoucherUpdatedEvent&gt;**](VoucherUpdatedEvent.md) | Voucher updated event |  [optional]
 **voucherDeletedEvent** | [**List&lt;VoucherDeletedEvent&gt;**](VoucherDeletedEvent.md) | Voucher deleted event |  [optional]
+**voucherAppliedEvent** | [**List&lt;VoucherAppliedEvent&gt;**](VoucherAppliedEvent.md) | Voucher applied event |  [optional]
 **teammateInviteSentEvent** | [**List&lt;TeammateInviteSentEvent&gt;**](TeammateInviteSentEvent.md) | Teammate invite sent event |  [optional]
 **teammateInviteAcceptedEvent** | [**List&lt;TeammateInviteAcceptedEvent&gt;**](TeammateInviteAcceptedEvent.md) | Teammate invite accepted event |  [optional]
 **teammateUpdatedEvent** | [**List&lt;TeammateUpdatedEvent&gt;**](TeammateUpdatedEvent.md) | Teammate updated event |  [optional]

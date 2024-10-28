@@ -28,7 +28,7 @@ import java.io.IOException;
  * Basic attributes for creating an account
  */
 @ApiModel(description = "Basic attributes for creating an account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-23T06:45:37.270Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T11:52:01.100Z")
 public class CreateBasicAccountModel {
   @SerializedName("StoreName")
   private String storeName = null;

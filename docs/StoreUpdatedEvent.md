@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
+**orgId** | **String** | Organisation Id |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
 **storeGroupId** | **Integer** | Store group Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which updated this store |  [optional]
