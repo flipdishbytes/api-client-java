@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import org.threeten.bp.OffsetDateTime;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiFinanceSearchPaginationResultInvoice;
+import com.flipdish.apiclient.model.RestApiFinanceSearchPaginationResultSubscriptionInvoice;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -55,7 +56,7 @@ public class InvoicesApiTest {
         OffsetDateTime dateTo = null;
         String invoiceNumber = null;
         List<Integer> storeId = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+        RestApiFinanceSearchPaginationResultSubscriptionInvoice response = api.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
 
         // TODO: test validations
     }
@@ -87,9 +88,11 @@ public class InvoicesApiTest {
      */
     @Test
     public void listInvoicesTest() throws Exception {
-        String appId = null;
         Integer storeId = null;
-        Object response = api.listInvoices(appId, storeId);
+        String appId = null;
+        Integer limit = null;
+        Integer page = null;
+        Object response = api.listInvoices(storeId, appId, limit, page);
 
         // TODO: test validations
     }
@@ -113,7 +116,7 @@ public class InvoicesApiTest {
         OffsetDateTime dateTo = null;
         String invoiceNumber = null;
         List<Integer> storeId = null;
-        RestApiFinanceSearchPaginationResultInvoice response = api.listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+        RestApiFinanceSearchPaginationResultSubscriptionInvoice response = api.listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
 
         // TODO: test validations
     }

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getInvoices"></a>
 # **getInvoices**
-> RestApiFinanceSearchPaginationResultInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId)
+> RestApiFinanceSearchPaginationResultSubscriptionInvoice getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId)
 
 
 
@@ -42,7 +42,7 @@ OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime |
 String invoiceNumber = "invoiceNumber_example"; // String | 
 List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
-    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+    RestApiFinanceSearchPaginationResultSubscriptionInvoice result = apiInstance.getInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#getInvoices");
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
+[**RestApiFinanceSearchPaginationResultSubscriptionInvoice**](RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ null (empty response body)
 
 <a name="listInvoices"></a>
 # **listInvoices**
-> Object listInvoices(appId, storeId)
+> Object listInvoices(storeId, appId, limit, page)
 
 
 
@@ -151,10 +151,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 InvoicesApi apiInstance = new InvoicesApi();
-String appId = "appId_example"; // String | 
 Integer storeId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+Integer limit = 56; // Integer | 
+Integer page = 56; // Integer | 
 try {
-    Object result = apiInstance.listInvoices(appId, storeId);
+    Object result = apiInstance.listInvoices(storeId, appId, limit, page);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#listInvoices");
@@ -166,8 +168,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
  **storeId** | **Integer**|  |
+ **appId** | **String**|  |
+ **limit** | **Integer**|  | [optional]
+ **page** | **Integer**|  | [optional]
 
 ### Return type
 
@@ -184,7 +188,7 @@ Name | Type | Description  | Notes
 
 <a name="listSubscriptionInvoices"></a>
 # **listSubscriptionInvoices**
-> RestApiFinanceSearchPaginationResultInvoice listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId)
+> RestApiFinanceSearchPaginationResultSubscriptionInvoice listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId)
 
 
 
@@ -214,7 +218,7 @@ OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime |
 String invoiceNumber = "invoiceNumber_example"; // String | 
 List<Integer> storeId = Arrays.asList(56); // List<Integer> | 
 try {
-    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
+    RestApiFinanceSearchPaginationResultSubscriptionInvoice result = apiInstance.listSubscriptionInvoices(appId, subscriptionId, limit, pageId, excludeNotOwnedInvoices, dateFrom, dateTo, invoiceNumber, storeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#listSubscriptionInvoices");
@@ -238,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
+[**RestApiFinanceSearchPaginationResultSubscriptionInvoice**](RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 

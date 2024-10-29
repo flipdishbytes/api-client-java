@@ -26,562 +26,72 @@ import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Invoice
+ * Represents an ordering invoice for a period of time.
  */
-@ApiModel(description = "Invoice")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-28T14:52:41.050Z")
+@ApiModel(description = "Represents an ordering invoice for a period of time.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:25:04.879Z")
 public class Invoice {
-  @SerializedName("InvoiceId")
-  private String invoiceId = null;
+  @SerializedName("InvoiceNumber")
+  private String invoiceNumber = null;
 
-  @SerializedName("Number")
-  private String number = null;
+  @SerializedName("StartDay")
+  private OffsetDateTime startDay = null;
 
-  @SerializedName("Total")
-  private Double total = null;
+  @SerializedName("EndDay")
+  private OffsetDateTime endDay = null;
 
-  /**
-   * Currency
-   */
-  @JsonAdapter(CurrencyEnum.Adapter.class)
-  public enum CurrencyEnum {
-    EUR("EUR"),
-    
-    USD("USD"),
-    
-    GBP("GBP"),
-    
-    CAD("CAD"),
-    
-    AUD("AUD"),
-    
-    DJF("DJF"),
-    
-    ZAR("ZAR"),
-    
-    ETB("ETB"),
-    
-    AED("AED"),
-    
-    BHD("BHD"),
-    
-    DZD("DZD"),
-    
-    EGP("EGP"),
-    
-    IQD("IQD"),
-    
-    JOD("JOD"),
-    
-    KWD("KWD"),
-    
-    LBP("LBP"),
-    
-    LYD("LYD"),
-    
-    MAD("MAD"),
-    
-    OMR("OMR"),
-    
-    QAR("QAR"),
-    
-    SAR("SAR"),
-    
-    SYP("SYP"),
-    
-    TND("TND"),
-    
-    YER("YER"),
-    
-    CLP("CLP"),
-    
-    INR("INR"),
-    
-    AZN("AZN"),
-    
-    RUB("RUB"),
-    
-    BYN("BYN"),
-    
-    BGN("BGN"),
-    
-    NGN("NGN"),
-    
-    BDT("BDT"),
-    
-    CNY("CNY"),
-    
-    BAM("BAM"),
-    
-    CZK("CZK"),
-    
-    DKK("DKK"),
-    
-    CHF("CHF"),
-    
-    MVR("MVR"),
-    
-    BTN("BTN"),
-    
-    XCD("XCD"),
-    
-    BZD("BZD"),
-    
-    HKD("HKD"),
-    
-    IDR("IDR"),
-    
-    JMD("JMD"),
-    
-    MYR("MYR"),
-    
-    NZD("NZD"),
-    
-    PHP("PHP"),
-    
-    SGD("SGD"),
-    
-    TTD("TTD"),
-    
-    XDR("XDR"),
-    
-    ARS("ARS"),
-    
-    BOB("BOB"),
-    
-    COP("COP"),
-    
-    CRC("CRC"),
-    
-    CUP("CUP"),
-    
-    DOP("DOP"),
-    
-    GTQ("GTQ"),
-    
-    HNL("HNL"),
-    
-    MXN("MXN"),
-    
-    NIO("NIO"),
-    
-    PAB("PAB"),
-    
-    PEN("PEN"),
-    
-    PYG("PYG"),
-    
-    UYU("UYU"),
-    
-    VEF("VEF"),
-    
-    IRR("IRR"),
-    
-    XOF("XOF"),
-    
-    CDF("CDF"),
-    
-    XAF("XAF"),
-    
-    HTG("HTG"),
-    
-    ILS("ILS"),
-    
-    HRK("HRK"),
-    
-    HUF("HUF"),
-    
-    AMD("AMD"),
-    
-    ISK("ISK"),
-    
-    JPY("JPY"),
-    
-    GEL("GEL"),
-    
-    KZT("KZT"),
-    
-    KHR("KHR"),
-    
-    KRW("KRW"),
-    
-    KGS("KGS"),
-    
-    LAK("LAK"),
-    
-    MKD("MKD"),
-    
-    MNT("MNT"),
-    
-    BND("BND"),
-    
-    MMK("MMK"),
-    
-    NOK("NOK"),
-    
-    NPR("NPR"),
-    
-    PKR("PKR"),
-    
-    PLN("PLN"),
-    
-    AFN("AFN"),
-    
-    BRL("BRL"),
-    
-    MDL("MDL"),
-    
-    RON("RON"),
-    
-    RWF("RWF"),
-    
-    SEK("SEK"),
-    
-    LKR("LKR"),
-    
-    SOS("SOS"),
-    
-    ALL("ALL"),
-    
-    RSD("RSD"),
-    
-    KES("KES"),
-    
-    TJS("TJS"),
-    
-    THB("THB"),
-    
-    ERN("ERN"),
-    
-    TMT("TMT"),
-    
-    BWP("BWP"),
-    
-    TRY("TRY"),
-    
-    UAH("UAH"),
-    
-    UZS("UZS"),
-    
-    VND("VND"),
-    
-    MOP("MOP"),
-    
-    TWD("TWD"),
-    
-    BMD("BMD");
-
-    private String value;
-
-    CurrencyEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static CurrencyEnum fromValue(String text) {
-      for (CurrencyEnum b : CurrencyEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<CurrencyEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final CurrencyEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public CurrencyEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return CurrencyEnum.fromValue(String.valueOf(value));
-      }
-    }
-  }
-
-  @SerializedName("Currency")
-  private CurrencyEnum currency = null;
-
-  /**
-   * Status
-   */
-  @JsonAdapter(StatusEnum.Adapter.class)
-  public enum StatusEnum {
-    DRAFT("Draft"),
-    
-    OPEN("Open"),
-    
-    PAID("Paid"),
-    
-    UNCOLLECTIBLE("UnCollectible"),
-    
-    VOID("Void");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static StatusEnum fromValue(String text) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return StatusEnum.fromValue(String.valueOf(value));
-      }
-    }
-  }
-
-  @SerializedName("Status")
-  private StatusEnum status = null;
-
-  @SerializedName("SubscriptionId")
-  private String subscriptionId = null;
-
-  @SerializedName("PaidAt")
-  private OffsetDateTime paidAt = null;
-
-  @SerializedName("FinalisedAt")
-  private OffsetDateTime finalisedAt = null;
-
-  @SerializedName("PdfLink")
-  private String pdfLink = null;
-
-  @SerializedName("HostedUrl")
-  private String hostedUrl = null;
-
-  @SerializedName("Overdue")
-  private Boolean overdue = null;
-
-  public Invoice invoiceId(String invoiceId) {
-    this.invoiceId = invoiceId;
+  public Invoice invoiceNumber(String invoiceNumber) {
+    this.invoiceNumber = invoiceNumber;
     return this;
   }
 
    /**
-   * The invoice identifier
-   * @return invoiceId
+   * Invoice Number
+   * @return invoiceNumber
   **/
-  @ApiModelProperty(required = true, value = "The invoice identifier")
-  public String getInvoiceId() {
-    return invoiceId;
+  @ApiModelProperty(value = "Invoice Number")
+  public String getInvoiceNumber() {
+    return invoiceNumber;
   }
 
-  public void setInvoiceId(String invoiceId) {
-    this.invoiceId = invoiceId;
+  public void setInvoiceNumber(String invoiceNumber) {
+    this.invoiceNumber = invoiceNumber;
   }
 
-  public Invoice number(String number) {
-    this.number = number;
+  public Invoice startDay(OffsetDateTime startDay) {
+    this.startDay = startDay;
     return this;
   }
 
    /**
-   * Invoice number
-   * @return number
+   * The start day of the invoice period.
+   * @return startDay
   **/
-  @ApiModelProperty(required = true, value = "Invoice number")
-  public String getNumber() {
-    return number;
+  @ApiModelProperty(value = "The start day of the invoice period.")
+  public OffsetDateTime getStartDay() {
+    return startDay;
   }
 
-  public void setNumber(String number) {
-    this.number = number;
+  public void setStartDay(OffsetDateTime startDay) {
+    this.startDay = startDay;
   }
 
-  public Invoice total(Double total) {
-    this.total = total;
+  public Invoice endDay(OffsetDateTime endDay) {
+    this.endDay = endDay;
     return this;
   }
 
    /**
-   * Total
-   * @return total
+   * The end day of the invoice period.
+   * @return endDay
   **/
-  @ApiModelProperty(value = "Total")
-  public Double getTotal() {
-    return total;
+  @ApiModelProperty(value = "The end day of the invoice period.")
+  public OffsetDateTime getEndDay() {
+    return endDay;
   }
 
-  public void setTotal(Double total) {
-    this.total = total;
-  }
-
-  public Invoice currency(CurrencyEnum currency) {
-    this.currency = currency;
-    return this;
-  }
-
-   /**
-   * Currency
-   * @return currency
-  **/
-  @ApiModelProperty(required = true, value = "Currency")
-  public CurrencyEnum getCurrency() {
-    return currency;
-  }
-
-  public void setCurrency(CurrencyEnum currency) {
-    this.currency = currency;
-  }
-
-  public Invoice status(StatusEnum status) {
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Status
-   * @return status
-  **/
-  @ApiModelProperty(required = true, value = "Status")
-  public StatusEnum getStatus() {
-    return status;
-  }
-
-  public void setStatus(StatusEnum status) {
-    this.status = status;
-  }
-
-  public Invoice subscriptionId(String subscriptionId) {
-    this.subscriptionId = subscriptionId;
-    return this;
-  }
-
-   /**
-   * The subscription identifier
-   * @return subscriptionId
-  **/
-  @ApiModelProperty(value = "The subscription identifier")
-  public String getSubscriptionId() {
-    return subscriptionId;
-  }
-
-  public void setSubscriptionId(String subscriptionId) {
-    this.subscriptionId = subscriptionId;
-  }
-
-  public Invoice paidAt(OffsetDateTime paidAt) {
-    this.paidAt = paidAt;
-    return this;
-  }
-
-   /**
-   * Paid At
-   * @return paidAt
-  **/
-  @ApiModelProperty(value = "Paid At")
-  public OffsetDateTime getPaidAt() {
-    return paidAt;
-  }
-
-  public void setPaidAt(OffsetDateTime paidAt) {
-    this.paidAt = paidAt;
-  }
-
-  public Invoice finalisedAt(OffsetDateTime finalisedAt) {
-    this.finalisedAt = finalisedAt;
-    return this;
-  }
-
-   /**
-   * Finalised At
-   * @return finalisedAt
-  **/
-  @ApiModelProperty(value = "Finalised At")
-  public OffsetDateTime getFinalisedAt() {
-    return finalisedAt;
-  }
-
-  public void setFinalisedAt(OffsetDateTime finalisedAt) {
-    this.finalisedAt = finalisedAt;
-  }
-
-  public Invoice pdfLink(String pdfLink) {
-    this.pdfLink = pdfLink;
-    return this;
-  }
-
-   /**
-   * Pdf Link
-   * @return pdfLink
-  **/
-  @ApiModelProperty(required = true, value = "Pdf Link")
-  public String getPdfLink() {
-    return pdfLink;
-  }
-
-  public void setPdfLink(String pdfLink) {
-    this.pdfLink = pdfLink;
-  }
-
-  public Invoice hostedUrl(String hostedUrl) {
-    this.hostedUrl = hostedUrl;
-    return this;
-  }
-
-   /**
-   * Hosted Url
-   * @return hostedUrl
-  **/
-  @ApiModelProperty(required = true, value = "Hosted Url")
-  public String getHostedUrl() {
-    return hostedUrl;
-  }
-
-  public void setHostedUrl(String hostedUrl) {
-    this.hostedUrl = hostedUrl;
-  }
-
-  public Invoice overdue(Boolean overdue) {
-    this.overdue = overdue;
-    return this;
-  }
-
-   /**
-   * Overdue
-   * @return overdue
-  **/
-  @ApiModelProperty(required = true, value = "Overdue")
-  public Boolean isOverdue() {
-    return overdue;
-  }
-
-  public void setOverdue(Boolean overdue) {
-    this.overdue = overdue;
+  public void setEndDay(OffsetDateTime endDay) {
+    this.endDay = endDay;
   }
 
 
@@ -594,22 +104,14 @@ public class Invoice {
       return false;
     }
     Invoice invoice = (Invoice) o;
-    return Objects.equals(this.invoiceId, invoice.invoiceId) &&
-        Objects.equals(this.number, invoice.number) &&
-        Objects.equals(this.total, invoice.total) &&
-        Objects.equals(this.currency, invoice.currency) &&
-        Objects.equals(this.status, invoice.status) &&
-        Objects.equals(this.subscriptionId, invoice.subscriptionId) &&
-        Objects.equals(this.paidAt, invoice.paidAt) &&
-        Objects.equals(this.finalisedAt, invoice.finalisedAt) &&
-        Objects.equals(this.pdfLink, invoice.pdfLink) &&
-        Objects.equals(this.hostedUrl, invoice.hostedUrl) &&
-        Objects.equals(this.overdue, invoice.overdue);
+    return Objects.equals(this.invoiceNumber, invoice.invoiceNumber) &&
+        Objects.equals(this.startDay, invoice.startDay) &&
+        Objects.equals(this.endDay, invoice.endDay);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(invoiceId, number, total, currency, status, subscriptionId, paidAt, finalisedAt, pdfLink, hostedUrl, overdue);
+    return Objects.hash(invoiceNumber, startDay, endDay);
   }
 
 
@@ -618,17 +120,9 @@ public class Invoice {
     StringBuilder sb = new StringBuilder();
     sb.append("class Invoice {\n");
     
-    sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
-    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
-    sb.append("    paidAt: ").append(toIndentedString(paidAt)).append("\n");
-    sb.append("    finalisedAt: ").append(toIndentedString(finalisedAt)).append("\n");
-    sb.append("    pdfLink: ").append(toIndentedString(pdfLink)).append("\n");
-    sb.append("    hostedUrl: ").append(toIndentedString(hostedUrl)).append("\n");
-    sb.append("    overdue: ").append(toIndentedString(overdue)).append("\n");
+    sb.append("    invoiceNumber: ").append(toIndentedString(invoiceNumber)).append("\n");
+    sb.append("    startDay: ").append(toIndentedString(startDay)).append("\n");
+    sb.append("    endDay: ").append(toIndentedString(endDay)).append("\n");
     sb.append("}");
     return sb.toString();
   }
