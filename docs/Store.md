@@ -53,6 +53,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name |  [optional]
 **emailAddress** | **String** | Email address (visible to customers) |  [optional]
 **staffLanguage** | **String** | Staff Language (used for communication with the staff)  Emails, Printouts etc |  [optional]
+**salesChannelTypes** | [**List&lt;SalesChannelTypesEnum&gt;**](#List&lt;SalesChannelTypesEnum&gt;) | Sales Channel Types |  [optional]
 
 
 <a name="PrintoutLayoutTypeEnum"></a>
@@ -182,6 +183,16 @@ VND | &quot;VND&quot;
 MOP | &quot;MOP&quot;
 TWD | &quot;TWD&quot;
 BMD | &quot;BMD&quot;
+
+
+<a name="List<SalesChannelTypesEnum>"></a>
+## Enum: List&lt;SalesChannelTypesEnum&gt;
+Name | Value
+---- | -----
+WEB | &quot;Web&quot;
+APP | &quot;App&quot;
+KIOSK | &quot;Kiosk&quot;
+POS | &quot;Pos&quot;
 
 
 

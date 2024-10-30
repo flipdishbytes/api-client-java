@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Create Base
  */
 @ApiModel(description = "Store Create Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:25:04.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-30T09:32:52.002Z")
 public class StoreCreateBase {
   @SerializedName("Name")
   private String name = null;
@@ -38,6 +38,60 @@ public class StoreCreateBase {
 
   @SerializedName("StaffLanguage")
   private String staffLanguage = null;
+
+  /**
+   * Sales Channel Type
+   */
+  @JsonAdapter(SalesChannelTypeEnum.Adapter.class)
+  public enum SalesChannelTypeEnum {
+    WEB("Web"),
+    
+    APP("App"),
+    
+    KIOSK("Kiosk"),
+    
+    POS("Pos");
+
+    private String value;
+
+    SalesChannelTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SalesChannelTypeEnum fromValue(String text) {
+      for (SalesChannelTypeEnum b : SalesChannelTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SalesChannelTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SalesChannelTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SalesChannelTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SalesChannelTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("SalesChannelType")
+  private SalesChannelTypeEnum salesChannelType = null;
 
   public StoreCreateBase name(String name) {
     this.name = name;
@@ -93,6 +147,24 @@ public class StoreCreateBase {
     this.staffLanguage = staffLanguage;
   }
 
+  public StoreCreateBase salesChannelType(SalesChannelTypeEnum salesChannelType) {
+    this.salesChannelType = salesChannelType;
+    return this;
+  }
+
+   /**
+   * Sales Channel Type
+   * @return salesChannelType
+  **/
+  @ApiModelProperty(value = "Sales Channel Type")
+  public SalesChannelTypeEnum getSalesChannelType() {
+    return salesChannelType;
+  }
+
+  public void setSalesChannelType(SalesChannelTypeEnum salesChannelType) {
+    this.salesChannelType = salesChannelType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +177,13 @@ public class StoreCreateBase {
     StoreCreateBase storeCreateBase = (StoreCreateBase) o;
     return Objects.equals(this.name, storeCreateBase.name) &&
         Objects.equals(this.emailAddress, storeCreateBase.emailAddress) &&
-        Objects.equals(this.staffLanguage, storeCreateBase.staffLanguage);
+        Objects.equals(this.staffLanguage, storeCreateBase.staffLanguage) &&
+        Objects.equals(this.salesChannelType, storeCreateBase.salesChannelType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, emailAddress, staffLanguage);
+    return Objects.hash(name, emailAddress, staffLanguage, salesChannelType);
   }
 
 
@@ -122,6 +195,7 @@ public class StoreCreateBase {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    staffLanguage: ").append(toIndentedString(staffLanguage)).append("\n");
+    sb.append("    salesChannelType: ").append(toIndentedString(salesChannelType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

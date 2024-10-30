@@ -34,7 +34,7 @@ import java.util.List;
  * Store
  */
 @ApiModel(description = "Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:25:04.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-30T09:32:52.002Z")
 public class Store {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -502,6 +502,60 @@ public class Store {
 
   @SerializedName("StaffLanguage")
   private String staffLanguage = null;
+
+  /**
+   * Gets or Sets salesChannelTypes
+   */
+  @JsonAdapter(SalesChannelTypesEnum.Adapter.class)
+  public enum SalesChannelTypesEnum {
+    WEB("Web"),
+    
+    APP("App"),
+    
+    KIOSK("Kiosk"),
+    
+    POS("Pos");
+
+    private String value;
+
+    SalesChannelTypesEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SalesChannelTypesEnum fromValue(String text) {
+      for (SalesChannelTypesEnum b : SalesChannelTypesEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SalesChannelTypesEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SalesChannelTypesEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SalesChannelTypesEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SalesChannelTypesEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("SalesChannelTypes")
+  private List<SalesChannelTypesEnum> salesChannelTypes = null;
 
   public Store storeId(Integer storeId) {
     this.storeId = storeId;
@@ -1425,6 +1479,32 @@ public class Store {
     this.staffLanguage = staffLanguage;
   }
 
+  public Store salesChannelTypes(List<SalesChannelTypesEnum> salesChannelTypes) {
+    this.salesChannelTypes = salesChannelTypes;
+    return this;
+  }
+
+  public Store addSalesChannelTypesItem(SalesChannelTypesEnum salesChannelTypesItem) {
+    if (this.salesChannelTypes == null) {
+      this.salesChannelTypes = new ArrayList<SalesChannelTypesEnum>();
+    }
+    this.salesChannelTypes.add(salesChannelTypesItem);
+    return this;
+  }
+
+   /**
+   * Sales Channel Types
+   * @return salesChannelTypes
+  **/
+  @ApiModelProperty(value = "Sales Channel Types")
+  public List<SalesChannelTypesEnum> getSalesChannelTypes() {
+    return salesChannelTypes;
+  }
+
+  public void setSalesChannelTypes(List<SalesChannelTypesEnum> salesChannelTypes) {
+    this.salesChannelTypes = salesChannelTypes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1483,12 +1563,13 @@ public class Store {
         Objects.equals(this.isPublished, store.isPublished) &&
         Objects.equals(this.name, store.name) &&
         Objects.equals(this.emailAddress, store.emailAddress) &&
-        Objects.equals(this.staffLanguage, store.staffLanguage);
+        Objects.equals(this.staffLanguage, store.staffLanguage) &&
+        Objects.equals(this.salesChannelTypes, store.salesChannelTypes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, appIds, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage);
+    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, appIds, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes);
   }
 
 
@@ -1546,6 +1627,7 @@ public class Store {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    staffLanguage: ").append(toIndentedString(staffLanguage)).append("\n");
+    sb.append("    salesChannelTypes: ").append(toIndentedString(salesChannelTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

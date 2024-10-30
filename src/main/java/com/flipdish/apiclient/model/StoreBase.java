@@ -23,12 +23,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Store Base
  */
 @ApiModel(description = "Store Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-29T12:25:04.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-30T09:32:52.002Z")
 public class StoreBase {
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
@@ -116,6 +118,60 @@ public class StoreBase {
 
   @SerializedName("StaffLanguage")
   private String staffLanguage = null;
+
+  /**
+   * Gets or Sets salesChannelTypes
+   */
+  @JsonAdapter(SalesChannelTypesEnum.Adapter.class)
+  public enum SalesChannelTypesEnum {
+    WEB("Web"),
+    
+    APP("App"),
+    
+    KIOSK("Kiosk"),
+    
+    POS("Pos");
+
+    private String value;
+
+    SalesChannelTypesEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static SalesChannelTypesEnum fromValue(String text) {
+      for (SalesChannelTypesEnum b : SalesChannelTypesEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<SalesChannelTypesEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SalesChannelTypesEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public SalesChannelTypesEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return SalesChannelTypesEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("SalesChannelTypes")
+  private List<SalesChannelTypesEnum> salesChannelTypes = null;
 
   public StoreBase phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
@@ -639,6 +695,32 @@ public class StoreBase {
     this.staffLanguage = staffLanguage;
   }
 
+  public StoreBase salesChannelTypes(List<SalesChannelTypesEnum> salesChannelTypes) {
+    this.salesChannelTypes = salesChannelTypes;
+    return this;
+  }
+
+  public StoreBase addSalesChannelTypesItem(SalesChannelTypesEnum salesChannelTypesItem) {
+    if (this.salesChannelTypes == null) {
+      this.salesChannelTypes = new ArrayList<SalesChannelTypesEnum>();
+    }
+    this.salesChannelTypes.add(salesChannelTypesItem);
+    return this;
+  }
+
+   /**
+   * Sales Channel Types
+   * @return salesChannelTypes
+  **/
+  @ApiModelProperty(value = "Sales Channel Types")
+  public List<SalesChannelTypesEnum> getSalesChannelTypes() {
+    return salesChannelTypes;
+  }
+
+  public void setSalesChannelTypes(List<SalesChannelTypesEnum> salesChannelTypes) {
+    this.salesChannelTypes = salesChannelTypes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -677,12 +759,13 @@ public class StoreBase {
         Objects.equals(this.isPublished, storeBase.isPublished) &&
         Objects.equals(this.name, storeBase.name) &&
         Objects.equals(this.emailAddress, storeBase.emailAddress) &&
-        Objects.equals(this.staffLanguage, storeBase.staffLanguage);
+        Objects.equals(this.staffLanguage, storeBase.staffLanguage) &&
+        Objects.equals(this.salesChannelTypes, storeBase.salesChannelTypes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage);
+    return Objects.hash(phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes);
   }
 
 
@@ -720,6 +803,7 @@ public class StoreBase {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    staffLanguage: ").append(toIndentedString(staffLanguage)).append("\n");
+    sb.append("    salesChannelTypes: ").append(toIndentedString(salesChannelTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
