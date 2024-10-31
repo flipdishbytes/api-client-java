@@ -1071,7 +1071,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoreHeadersByAppId"></a>
 # **getStoreHeadersByAppId**
-> RestApiPaginationResultStoreHeader getStoreHeadersByAppId(appId, storeNameQuery, page, limit)
+> RestApiPaginationResultStoreHeader getStoreHeadersByAppId(appId, storeNameQuery, salesChannelType, page, limit)
 
 
 
@@ -1093,10 +1093,11 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 StoresApi apiInstance = new StoresApi();
 String appId = "appId_example"; // String | 
 String storeNameQuery = "storeNameQuery_example"; // String | 
+String salesChannelType = "salesChannelType_example"; // String | 
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultStoreHeader result = apiInstance.getStoreHeadersByAppId(appId, storeNameQuery, page, limit);
+    RestApiPaginationResultStoreHeader result = apiInstance.getStoreHeadersByAppId(appId, storeNameQuery, salesChannelType, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#getStoreHeadersByAppId");
@@ -1110,6 +1111,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **storeNameQuery** | **String**|  | [optional]
+ **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 

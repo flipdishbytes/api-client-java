@@ -414,9 +414,10 @@ public class StoresApiTest {
     public void getStoreHeadersByAppIdTest() throws Exception {
         String appId = null;
         String storeNameQuery = null;
+        String salesChannelType = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultStoreHeader response = api.getStoreHeadersByAppId(appId, storeNameQuery, page, limit);
+        RestApiPaginationResultStoreHeader response = api.getStoreHeadersByAppId(appId, storeNameQuery, salesChannelType, page, limit);
 
         // TODO: test validations
     }
