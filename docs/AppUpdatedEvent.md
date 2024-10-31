@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **countryId** | **String** | Country Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User information |  [optional]
 **app** | [**App**](App.md) | App - Whitelabel config |  [optional]
+**orgId** | **String** | Organisation Id |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
 **position** | **Integer** | Position |  [optional]

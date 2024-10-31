@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Application updated event
  */
 @ApiModel(description = "Application updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-31T09:14:26.887Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-31T13:17:21.741Z")
 public class AppUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -54,6 +54,9 @@ public class AppUpdatedEvent {
 
   @SerializedName("App")
   private App app = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -196,6 +199,24 @@ public class AppUpdatedEvent {
     this.app = app;
   }
 
+  public AppUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public AppUpdatedEvent flipdishEventId(UUID flipdishEventId) {
     this.flipdishEventId = flipdishEventId;
     return this;
@@ -303,6 +324,7 @@ public class AppUpdatedEvent {
         Objects.equals(this.countryId, appUpdatedEvent.countryId) &&
         Objects.equals(this.user, appUpdatedEvent.user) &&
         Objects.equals(this.app, appUpdatedEvent.app) &&
+        Objects.equals(this.orgId, appUpdatedEvent.orgId) &&
         Objects.equals(this.flipdishEventId, appUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, appUpdatedEvent.createTime) &&
         Objects.equals(this.position, appUpdatedEvent.position) &&
@@ -312,7 +334,7 @@ public class AppUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, changes, appName, countryId, user, app, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, changes, appName, countryId, user, app, orgId, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -328,6 +350,7 @@ public class AppUpdatedEvent {
     sb.append("    countryId: ").append(toIndentedString(countryId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    app: ").append(toIndentedString(app)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
