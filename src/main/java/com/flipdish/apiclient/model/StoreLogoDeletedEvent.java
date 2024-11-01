@@ -31,10 +31,13 @@ import org.threeten.bp.OffsetDateTime;
  * Store logo deleted
  */
 @ApiModel(description = "Store logo deleted")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-10-31T13:17:21.741Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-01T10:53:42.690Z")
 public class StoreLogoDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -76,6 +79,24 @@ public class StoreLogoDeletedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public StoreLogoDeletedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public StoreLogoDeletedEvent storeId(Integer storeId) {
@@ -233,6 +254,7 @@ public class StoreLogoDeletedEvent {
     }
     StoreLogoDeletedEvent storeLogoDeletedEvent = (StoreLogoDeletedEvent) o;
     return Objects.equals(this.eventName, storeLogoDeletedEvent.eventName) &&
+        Objects.equals(this.orgId, storeLogoDeletedEvent.orgId) &&
         Objects.equals(this.storeId, storeLogoDeletedEvent.storeId) &&
         Objects.equals(this.description, storeLogoDeletedEvent.description) &&
         Objects.equals(this.user, storeLogoDeletedEvent.user) &&
@@ -245,7 +267,7 @@ public class StoreLogoDeletedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, description, user, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, description, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -255,6 +277,7 @@ public class StoreLogoDeletedEvent {
     sb.append("class StoreLogoDeletedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");

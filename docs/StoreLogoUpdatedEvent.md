@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **eventName** | **String** | The event name |  [optional]
+**orgId** | **String** | Organisation Id |  [optional]
 **storeId** | **Integer** | ID of store that the logo has been added to |  [optional]
 **description** | **String** | Description |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User who updated the logo |  [optional]
