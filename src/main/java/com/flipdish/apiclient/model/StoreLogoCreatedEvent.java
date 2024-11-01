@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store logo created
  */
 @ApiModel(description = "Store logo created")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-01T10:53:42.690Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-01T12:39:10.709Z")
 public class StoreLogoCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -41,6 +41,9 @@ public class StoreLogoCreatedEvent {
 
   @SerializedName("StoreId")
   private Integer storeId = null;
+
+  @SerializedName("LogoUrl")
+  private String logoUrl = null;
 
   @SerializedName("Description")
   private String description = null;
@@ -115,6 +118,24 @@ public class StoreLogoCreatedEvent {
 
   public void setStoreId(Integer storeId) {
     this.storeId = storeId;
+  }
+
+  public StoreLogoCreatedEvent logoUrl(String logoUrl) {
+    this.logoUrl = logoUrl;
+    return this;
+  }
+
+   /**
+   * Url of logo
+   * @return logoUrl
+  **/
+  @ApiModelProperty(value = "Url of logo")
+  public String getLogoUrl() {
+    return logoUrl;
+  }
+
+  public void setLogoUrl(String logoUrl) {
+    this.logoUrl = logoUrl;
   }
 
   public StoreLogoCreatedEvent description(String description) {
@@ -256,6 +277,7 @@ public class StoreLogoCreatedEvent {
     return Objects.equals(this.eventName, storeLogoCreatedEvent.eventName) &&
         Objects.equals(this.orgId, storeLogoCreatedEvent.orgId) &&
         Objects.equals(this.storeId, storeLogoCreatedEvent.storeId) &&
+        Objects.equals(this.logoUrl, storeLogoCreatedEvent.logoUrl) &&
         Objects.equals(this.description, storeLogoCreatedEvent.description) &&
         Objects.equals(this.user, storeLogoCreatedEvent.user) &&
         Objects.equals(this.flipdishEventId, storeLogoCreatedEvent.flipdishEventId) &&
@@ -267,7 +289,7 @@ public class StoreLogoCreatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, orgId, storeId, description, user, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, logoUrl, description, user, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -279,6 +301,7 @@ public class StoreLogoCreatedEvent {
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
+    sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");

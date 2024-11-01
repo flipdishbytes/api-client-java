@@ -28,7 +28,7 @@ import java.io.IOException;
  * Sorted Language
  */
 @ApiModel(description = "Sorted Language")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-01T10:53:42.690Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-01T12:39:10.709Z")
 public class Language {
   @SerializedName("LanguageId")
   private String languageId = null;
