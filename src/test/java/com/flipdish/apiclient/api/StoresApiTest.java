@@ -623,6 +623,24 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void supportedSalesChannelsTypesTest() throws Exception {
+        String propertyId = null;
+        Integer storeId = null;
+        List<String> salesChannelTypes = null;
+        api.supportedSalesChannelsTypes(propertyId, storeId, salesChannelTypes);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void unpublishStoreTest() throws Exception {
         Integer storeId = null;
         api.unpublishStore(storeId);

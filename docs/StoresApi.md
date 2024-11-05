@@ -35,6 +35,7 @@ Method | HTTP request | Description
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+[**supportedSalesChannelsTypes**](StoresApi.md#supportedSalesChannelsTypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 [**unpublishStore**](StoresApi.md#unpublishStore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 [**updatePreOrderConfig**](StoresApi.md#updatePreOrderConfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
 [**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | 
@@ -1709,6 +1710,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultOrderLeadTimes**](RestApiResultOrderLeadTimes.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="supportedSalesChannelsTypes"></a>
+# **supportedSalesChannelsTypes**
+> supportedSalesChannelsTypes(propertyId, storeId, salesChannelTypes)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+String propertyId = "propertyId_example"; // String | 
+Integer storeId = 56; // Integer | 
+List<String> salesChannelTypes = Arrays.asList(new List<String>()); // List<String> | 
+try {
+    apiInstance.supportedSalesChannelsTypes(propertyId, storeId, salesChannelTypes);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#supportedSalesChannelsTypes");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **propertyId** | **String**|  |
+ **storeId** | **Integer**|  |
+ **salesChannelTypes** | **List&lt;String&gt;**|  |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
