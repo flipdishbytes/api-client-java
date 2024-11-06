@@ -92,7 +92,7 @@ public class InvoicesApiTest {
         String appId = null;
         Integer limit = null;
         Integer page = null;
-        Object response = api.listInvoices(storeId, appId, limit, page);
+        RestApiFinanceSearchPaginationResultInvoice response = api.listInvoices(storeId, appId, limit, page);
 
         // TODO: test validations
     }

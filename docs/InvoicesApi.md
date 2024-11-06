@@ -131,7 +131,7 @@ null (empty response body)
 
 <a name="listInvoices"></a>
 # **listInvoices**
-> Object listInvoices(storeId, appId, limit, page)
+> RestApiFinanceSearchPaginationResultInvoice listInvoices(storeId, appId, limit, page)
 
 
 
@@ -156,7 +156,7 @@ String appId = "appId_example"; // String |
 Integer limit = 56; // Integer | 
 Integer page = 56; // Integer | 
 try {
-    Object result = apiInstance.listInvoices(storeId, appId, limit, page);
+    RestApiFinanceSearchPaginationResultInvoice result = apiInstance.listInvoices(storeId, appId, limit, page);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InvoicesApi#listInvoices");
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**RestApiFinanceSearchPaginationResultInvoice**](RestApiFinanceSearchPaginationResultInvoice.md)
 
 ### Authorization
 

@@ -459,11 +459,11 @@ public class InvoicesApi {
      * @param appId  (required)
      * @param limit  (optional)
      * @param page  (optional)
-     * @return Object
+     * @return RestApiFinanceSearchPaginationResultInvoice
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object listInvoices(Integer storeId, String appId, Integer limit, Integer page) throws ApiException {
-        ApiResponse<Object> resp = listInvoicesWithHttpInfo(storeId, appId, limit, page);
+    public RestApiFinanceSearchPaginationResultInvoice listInvoices(Integer storeId, String appId, Integer limit, Integer page) throws ApiException {
+        ApiResponse<RestApiFinanceSearchPaginationResultInvoice> resp = listInvoicesWithHttpInfo(storeId, appId, limit, page);
         return resp.getData();
     }
 
@@ -474,12 +474,12 @@ public class InvoicesApi {
      * @param appId  (required)
      * @param limit  (optional)
      * @param page  (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;RestApiFinanceSearchPaginationResultInvoice&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> listInvoicesWithHttpInfo(Integer storeId, String appId, Integer limit, Integer page) throws ApiException {
+    public ApiResponse<RestApiFinanceSearchPaginationResultInvoice> listInvoicesWithHttpInfo(Integer storeId, String appId, Integer limit, Integer page) throws ApiException {
         com.squareup.okhttp.Call call = listInvoicesValidateBeforeCall(storeId, appId, limit, page, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiFinanceSearchPaginationResultInvoice>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -494,7 +494,7 @@ public class InvoicesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listInvoicesAsync(Integer storeId, String appId, Integer limit, Integer page, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call listInvoicesAsync(Integer storeId, String appId, Integer limit, Integer page, final ApiCallback<RestApiFinanceSearchPaginationResultInvoice> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -516,7 +516,7 @@ public class InvoicesApi {
         }
 
         com.squareup.okhttp.Call call = listInvoicesValidateBeforeCall(storeId, appId, limit, page, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<RestApiFinanceSearchPaginationResultInvoice>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
