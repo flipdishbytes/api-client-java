@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu item option set
  */
 @ApiModel(description = "Menu item option set")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-06T10:04:36.900Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-08T08:35:00.964Z")
 public class MenuItemOptionSetBase {
   @SerializedName("Name")
   private String name = null;

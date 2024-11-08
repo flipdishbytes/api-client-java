@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3RefundedOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-06T10:04:36.900Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-08T08:35:00.964Z")
 public class PayoutReport3RefundedOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Breakdown of third party integration fees
  */
 @ApiModel(description = "Breakdown of third party integration fees")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-06T10:04:36.900Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-08T08:35:00.964Z")
 public class ThirdPartyFeesDetails {
   @SerializedName("DeliveryIntegrationFee")
   private Double deliveryIntegrationFee = null;

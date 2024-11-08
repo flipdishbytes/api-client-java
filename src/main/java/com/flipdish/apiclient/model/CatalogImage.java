@@ -28,7 +28,7 @@ import java.io.IOException;
  * Catalog Image
  */
 @ApiModel(description = "Catalog Image")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-06T10:04:36.900Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-08T08:35:00.964Z")
 public class CatalogImage {
   @SerializedName("ImageUri")
   private String imageUri = null;

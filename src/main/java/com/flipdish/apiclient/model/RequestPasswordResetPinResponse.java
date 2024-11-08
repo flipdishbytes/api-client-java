@@ -28,7 +28,7 @@ import java.io.IOException;
  * Request Password Reset PIN response
  */
 @ApiModel(description = "Request Password Reset PIN response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-06T10:04:36.900Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-08T08:35:00.964Z")
 public class RequestPasswordResetPinResponse {
   @SerializedName("PasswordResetPinSentViaEmail")
   private Boolean passwordResetPinSentViaEmail = null;

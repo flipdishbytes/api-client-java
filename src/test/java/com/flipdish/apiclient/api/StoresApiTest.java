@@ -502,9 +502,10 @@ public class StoresApiTest {
     public void getStoresByAppIdTest() throws Exception {
         String appId = null;
         String searchQuery = null;
+        String salesChannelType = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultStore response = api.getStoresByAppId(appId, searchQuery, page, limit);
+        RestApiPaginationResultStore response = api.getStoresByAppId(appId, searchQuery, salesChannelType, page, limit);
 
         // TODO: test validations
     }
