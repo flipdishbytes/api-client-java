@@ -122,20 +122,4 @@ public class AddressApiTest {
         // TODO: test validations
     }
     
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void validateAddressFormTest() throws Exception {
-        StoreAddressForm address = null;
-        RestApiStringResult response = api.validateAddressForm(address);
-
-        // TODO: test validations
-    }
-    
 }

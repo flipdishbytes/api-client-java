@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**formByCountry**](AddressApi.md#formByCountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 [**formatGoogleAddress**](AddressApi.md#formatGoogleAddress) | **POST** /api/v1.0/address/google | 
 [**getCountries**](AddressApi.md#getCountries) | **GET** /api/v1.0/address/countries | 
-[**validateAddressForm**](AddressApi.md#validateAddressForm) | **POST** /api/v1.0/address/validate | 
 
 
 <a name="addressTemplates"></a>
@@ -271,56 +270,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="validateAddressForm"></a>
-# **validateAddressForm**
-> RestApiStringResult validateAddressForm(address)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AddressApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AddressApi apiInstance = new AddressApi();
-StoreAddressForm address = new StoreAddressForm(); // StoreAddressForm | 
-try {
-    RestApiStringResult result = apiInstance.validateAddressForm(address);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AddressApi#validateAddressForm");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address** | [**StoreAddressForm**](StoreAddressForm.md)|  |
-
-### Return type
-
-[**RestApiStringResult**](RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
