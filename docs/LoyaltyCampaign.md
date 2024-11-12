@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
 **ordersBeforeReceivingVoucher** | **Integer** | Number of orders customer needs to make, before receiving voucher |  [optional]
 **percentDiscountAmount** | **Integer** | Discount amount in percents |  [optional]
+**maxDiscount** | **Double** | Maximum discount for percentage discounts |  [optional]
 **roundingStrategy** | **Integer** | Controls how the loyalty voucher&#39;s amount is rounded |  [optional]
 **shouldIncludeOrdersWithLoyaltyVoucher** | **Boolean** | Controls whether we should include orders with loyalty vouchers in the campaign calculation |  [optional]
 **voucherValidPeriodDays** | **Integer** | Number of days for which the voucher will be valid. |  [optional]

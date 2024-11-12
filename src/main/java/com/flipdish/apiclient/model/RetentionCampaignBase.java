@@ -30,13 +30,16 @@ import java.util.List;
  * Retention campaign base
  */
 @ApiModel(description = "Retention campaign base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-12T09:40:13.697Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-12T13:26:01.113Z")
 public class RetentionCampaignBase {
   @SerializedName("NotifyCustomerAfterMinutes")
   private Integer notifyCustomerAfterMinutes = null;
 
   @SerializedName("PercentDiscountAmount")
   private Integer percentDiscountAmount = null;
+
+  @SerializedName("MaxDiscount")
+  private Double maxDiscount = null;
 
   @SerializedName("LumpDiscountAmount")
   private Double lumpDiscountAmount = null;
@@ -103,6 +106,25 @@ public class RetentionCampaignBase {
 
   public void setPercentDiscountAmount(Integer percentDiscountAmount) {
     this.percentDiscountAmount = percentDiscountAmount;
+  }
+
+  public RetentionCampaignBase maxDiscount(Double maxDiscount) {
+    this.maxDiscount = maxDiscount;
+    return this;
+  }
+
+   /**
+   * Maximum discount for percentage discounts
+   * minimum: 0
+   * @return maxDiscount
+  **/
+  @ApiModelProperty(value = "Maximum discount for percentage discounts")
+  public Double getMaxDiscount() {
+    return maxDiscount;
+  }
+
+  public void setMaxDiscount(Double maxDiscount) {
+    this.maxDiscount = maxDiscount;
   }
 
   public RetentionCampaignBase lumpDiscountAmount(Double lumpDiscountAmount) {
@@ -291,6 +313,7 @@ public class RetentionCampaignBase {
     RetentionCampaignBase retentionCampaignBase = (RetentionCampaignBase) o;
     return Objects.equals(this.notifyCustomerAfterMinutes, retentionCampaignBase.notifyCustomerAfterMinutes) &&
         Objects.equals(this.percentDiscountAmount, retentionCampaignBase.percentDiscountAmount) &&
+        Objects.equals(this.maxDiscount, retentionCampaignBase.maxDiscount) &&
         Objects.equals(this.lumpDiscountAmount, retentionCampaignBase.lumpDiscountAmount) &&
         Objects.equals(this.voucherValidPeriodDays, retentionCampaignBase.voucherValidPeriodDays) &&
         Objects.equals(this.includeDeliveryFee, retentionCampaignBase.includeDeliveryFee) &&
@@ -304,7 +327,7 @@ public class RetentionCampaignBase {
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifyCustomerAfterMinutes, percentDiscountAmount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
+    return Objects.hash(notifyCustomerAfterMinutes, percentDiscountAmount, maxDiscount, lumpDiscountAmount, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
   }
 
 
@@ -315,6 +338,7 @@ public class RetentionCampaignBase {
     
     sb.append("    notifyCustomerAfterMinutes: ").append(toIndentedString(notifyCustomerAfterMinutes)).append("\n");
     sb.append("    percentDiscountAmount: ").append(toIndentedString(percentDiscountAmount)).append("\n");
+    sb.append("    maxDiscount: ").append(toIndentedString(maxDiscount)).append("\n");
     sb.append("    lumpDiscountAmount: ").append(toIndentedString(lumpDiscountAmount)).append("\n");
     sb.append("    voucherValidPeriodDays: ").append(toIndentedString(voucherValidPeriodDays)).append("\n");
     sb.append("    includeDeliveryFee: ").append(toIndentedString(includeDeliveryFee)).append("\n");

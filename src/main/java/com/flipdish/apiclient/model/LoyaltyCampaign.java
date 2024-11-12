@@ -33,7 +33,7 @@ import java.util.UUID;
  * Loyalty campaign
  */
 @ApiModel(description = "Loyalty campaign")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-12T09:40:13.697Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-12T13:26:01.113Z")
 public class LoyaltyCampaign {
   @SerializedName("CampaignId")
   private Integer campaignId = null;
@@ -52,6 +52,9 @@ public class LoyaltyCampaign {
 
   @SerializedName("PercentDiscountAmount")
   private Integer percentDiscountAmount = null;
+
+  @SerializedName("MaxDiscount")
+  private Double maxDiscount = null;
 
   @SerializedName("RoundingStrategy")
   private Integer roundingStrategy = null;
@@ -199,6 +202,25 @@ public class LoyaltyCampaign {
 
   public void setPercentDiscountAmount(Integer percentDiscountAmount) {
     this.percentDiscountAmount = percentDiscountAmount;
+  }
+
+  public LoyaltyCampaign maxDiscount(Double maxDiscount) {
+    this.maxDiscount = maxDiscount;
+    return this;
+  }
+
+   /**
+   * Maximum discount for percentage discounts
+   * minimum: 0
+   * @return maxDiscount
+  **/
+  @ApiModelProperty(value = "Maximum discount for percentage discounts")
+  public Double getMaxDiscount() {
+    return maxDiscount;
+  }
+
+  public void setMaxDiscount(Double maxDiscount) {
+    this.maxDiscount = maxDiscount;
   }
 
   public LoyaltyCampaign roundingStrategy(Integer roundingStrategy) {
@@ -409,6 +431,7 @@ public class LoyaltyCampaign {
         Objects.equals(this.publicId, loyaltyCampaign.publicId) &&
         Objects.equals(this.ordersBeforeReceivingVoucher, loyaltyCampaign.ordersBeforeReceivingVoucher) &&
         Objects.equals(this.percentDiscountAmount, loyaltyCampaign.percentDiscountAmount) &&
+        Objects.equals(this.maxDiscount, loyaltyCampaign.maxDiscount) &&
         Objects.equals(this.roundingStrategy, loyaltyCampaign.roundingStrategy) &&
         Objects.equals(this.shouldIncludeOrdersWithLoyaltyVoucher, loyaltyCampaign.shouldIncludeOrdersWithLoyaltyVoucher) &&
         Objects.equals(this.voucherValidPeriodDays, loyaltyCampaign.voucherValidPeriodDays) &&
@@ -423,7 +446,7 @@ public class LoyaltyCampaign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, statistics, stores, publicId, ordersBeforeReceivingVoucher, percentDiscountAmount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
+    return Objects.hash(campaignId, statistics, stores, publicId, ordersBeforeReceivingVoucher, percentDiscountAmount, maxDiscount, roundingStrategy, shouldIncludeOrdersWithLoyaltyVoucher, voucherValidPeriodDays, includeDeliveryFee, autoApplyResultingVouchers, includeExistingOrders, isEnabled, storeIds, appId, forceDiscount);
   }
 
 
@@ -438,6 +461,7 @@ public class LoyaltyCampaign {
     sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("    ordersBeforeReceivingVoucher: ").append(toIndentedString(ordersBeforeReceivingVoucher)).append("\n");
     sb.append("    percentDiscountAmount: ").append(toIndentedString(percentDiscountAmount)).append("\n");
+    sb.append("    maxDiscount: ").append(toIndentedString(maxDiscount)).append("\n");
     sb.append("    roundingStrategy: ").append(toIndentedString(roundingStrategy)).append("\n");
     sb.append("    shouldIncludeOrdersWithLoyaltyVoucher: ").append(toIndentedString(shouldIncludeOrdersWithLoyaltyVoucher)).append("\n");
     sb.append("    voucherValidPeriodDays: ").append(toIndentedString(voucherValidPeriodDays)).append("\n");
