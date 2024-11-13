@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
  * Create Voucher
  */
 @ApiModel(description = "Create Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-12T13:26:01.113Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-13T12:22:11.768Z")
 public class CreateVoucher {
   /**
    * Voucher Type
