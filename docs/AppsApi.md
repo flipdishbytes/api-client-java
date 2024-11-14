@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**appsSetPropertyId**](AppsApi.md#appsSetPropertyId) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**createApp**](AppsApi.md#createApp) | **POST** /api/v1.0/apps | 
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -22,6 +23,59 @@ Method | HTTP request | Description
 [**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
+
+<a name="appsSetPropertyId"></a>
+# **appsSetPropertyId**
+> Object appsSetPropertyId(appId, orgId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+String orgId = "orgId_example"; // String | 
+try {
+    Object result = apiInstance.appsSetPropertyId(appId, orgId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#appsSetPropertyId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **orgId** | **String**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="createApp"></a>
 # **createApp**

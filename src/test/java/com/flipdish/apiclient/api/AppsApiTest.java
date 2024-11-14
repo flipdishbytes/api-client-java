@@ -54,6 +54,23 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void appsSetPropertyIdTest() throws Exception {
+        String appId = null;
+        String orgId = null;
+        Object response = api.appsSetPropertyId(appId, orgId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void createAppTest() throws Exception {
         CreateAppParameters parameters = null;
         RestApiStringResult response = api.createApp(parameters);

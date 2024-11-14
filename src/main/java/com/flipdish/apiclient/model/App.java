@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-13T16:56:42.691Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-14T12:50:29.432Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -513,6 +513,9 @@ public class App {
   @SerializedName("GoogleMapsApiKeyWeb")
   private String googleMapsApiKeyWeb = null;
 
+  @SerializedName("OrgId")
+  private String orgId = null;
+
   @SerializedName("Name")
   private String name = null;
 
@@ -855,6 +858,24 @@ public class App {
     this.googleMapsApiKeyWeb = googleMapsApiKeyWeb;
   }
 
+  public App orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public App name(String name) {
     this.name = name;
     return this;
@@ -1040,6 +1061,7 @@ public class App {
         Objects.equals(this.mapNorthEast, app.mapNorthEast) &&
         Objects.equals(this.mapSouthWest, app.mapSouthWest) &&
         Objects.equals(this.googleMapsApiKeyWeb, app.googleMapsApiKeyWeb) &&
+        Objects.equals(this.orgId, app.orgId) &&
         Objects.equals(this.name, app.name) &&
         Objects.equals(this.hostName, app.hostName) &&
         Objects.equals(this.mainColor, app.mainColor) &&
@@ -1053,7 +1075,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1075,6 +1097,7 @@ public class App {
     sb.append("    mapNorthEast: ").append(toIndentedString(mapNorthEast)).append("\n");
     sb.append("    mapSouthWest: ").append(toIndentedString(mapSouthWest)).append("\n");
     sb.append("    googleMapsApiKeyWeb: ").append(toIndentedString(googleMapsApiKeyWeb)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");

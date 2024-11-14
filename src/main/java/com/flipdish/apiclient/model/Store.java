@@ -34,7 +34,7 @@ import java.util.List;
  * Store
  */
 @ApiModel(description = "Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-13T16:56:42.691Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-14T12:50:29.432Z")
 public class Store {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -415,6 +415,9 @@ public class Store {
 
   @SerializedName("AppIds")
   private List<String> appIds = null;
+
+  @SerializedName("PropertyId")
+  private String propertyId = null;
 
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
@@ -955,6 +958,24 @@ public class Store {
 
   public void setAppIds(List<String> appIds) {
     this.appIds = appIds;
+  }
+
+  public Store propertyId(String propertyId) {
+    this.propertyId = propertyId;
+    return this;
+  }
+
+   /**
+   * Property Id
+   * @return propertyId
+  **/
+  @ApiModelProperty(value = "Property Id")
+  public String getPropertyId() {
+    return propertyId;
+  }
+
+  public void setPropertyId(String propertyId) {
+    this.propertyId = propertyId;
   }
 
   public Store phoneNumber(String phoneNumber) {
@@ -1535,6 +1556,7 @@ public class Store {
         Objects.equals(this.logoUrl, store.logoUrl) &&
         Objects.equals(this.fraudPreventionStrategy, store.fraudPreventionStrategy) &&
         Objects.equals(this.appIds, store.appIds) &&
+        Objects.equals(this.propertyId, store.propertyId) &&
         Objects.equals(this.phoneNumber, store.phoneNumber) &&
         Objects.equals(this.alwaysAppearOpen, store.alwaysAppearOpen) &&
         Objects.equals(this.preOrderEnabled, store.preOrderEnabled) &&
@@ -1569,7 +1591,7 @@ public class Store {
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, appIds, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes);
+    return Objects.hash(storeId, storeGroupId, address, deliveryZones, apmPhoneNumber, pickupHours, deliveryHours, menuId, orderConfirmationMessageOverrideDelivery, orderConfirmationMessageOverridePickup, printoutLayoutType, storeNotes, microsoftTimeZone, ianaTimeZone, currency, preOrderDeliveryEnabled, preOrderPickupEnabled, logoUrl, fraudPreventionStrategy, appIds, propertyId, phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes);
   }
 
 
@@ -1598,6 +1620,7 @@ public class Store {
     sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("    fraudPreventionStrategy: ").append(toIndentedString(fraudPreventionStrategy)).append("\n");
     sb.append("    appIds: ").append(toIndentedString(appIds)).append("\n");
+    sb.append("    propertyId: ").append(toIndentedString(propertyId)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    alwaysAppearOpen: ").append(toIndentedString(alwaysAppearOpen)).append("\n");
     sb.append("    preOrderEnabled: ").append(toIndentedString(preOrderEnabled)).append("\n");

@@ -624,6 +624,23 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void storesSetPropertyIdTest() throws Exception {
+        Integer storeId = null;
+        String propertyId = null;
+        Object response = api.storesSetPropertyId(storeId, propertyId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void supportedSalesChannelsTypesTest() throws Exception {
         String propertyId = null;
         Integer storeId = null;
