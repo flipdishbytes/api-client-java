@@ -60,6 +60,22 @@ public class FirebaseAppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void firebaseAppsDeleteFirebaseAppTest() throws Exception {
+        Integer whiteLabelId = null;
+        Object response = api.firebaseAppsDeleteFirebaseApp(whiteLabelId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void firebaseAppsGetFirebaseAppTest() throws Exception {
         Integer whitelabelId = null;
         Object response = api.firebaseAppsGetFirebaseApp(whitelabelId);
