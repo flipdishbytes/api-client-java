@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fulfillment information (required for all orders)
  */
 @ApiModel(description = "Fulfillment information (required for all orders)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-29T10:05:33.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-02T13:14:27.078Z")
 public class FulfillmentInfo {
   /**
    * [Required] Dispatch Type (i.e Pickup / Delivery)

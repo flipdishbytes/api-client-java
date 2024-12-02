@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * AppStore Config Deleted event
  */
 @ApiModel(description = "AppStore Config Deleted event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-11-29T10:05:33.331Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-02T13:14:27.078Z")
 public class AppStoreConfigDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
