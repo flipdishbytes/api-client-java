@@ -28,7 +28,7 @@ import java.io.IOException;
  * Configured stores
  */
 @ApiModel(description = "Configured stores")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-02T13:14:27.078Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T10:31:49.133Z")
 public class FulfillmentStatesConfiguredStore {
   @SerializedName("StoreId")
   private Integer storeId = null;

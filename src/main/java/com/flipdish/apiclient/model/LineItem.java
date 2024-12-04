@@ -34,7 +34,7 @@ import java.util.Map;
  * Defines a single line item
  */
 @ApiModel(description = "Defines a single line item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-02T13:14:27.078Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T10:31:49.133Z")
 public class LineItem {
   @SerializedName("Id")
   private Integer id = null;

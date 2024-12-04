@@ -28,7 +28,7 @@ import java.io.IOException;
  * Campaign statistics
  */
 @ApiModel(description = "Campaign statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-02T13:14:27.078Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T10:31:49.133Z")
 public class CampaignStatistics {
   @SerializedName("VouchersIssued")
   private Integer vouchersIssued = null;
