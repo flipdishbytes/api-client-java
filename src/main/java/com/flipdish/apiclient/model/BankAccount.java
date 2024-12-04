@@ -31,7 +31,7 @@ import java.util.List;
  * BANK ACCOUNT
  */
 @ApiModel(description = "BANK ACCOUNT")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T11:33:23.216Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T15:27:49.472Z")
 public class BankAccount {
   @SerializedName("Id")
   private Integer id = null;
@@ -104,6 +104,9 @@ public class BankAccount {
 
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
+
+  @SerializedName("StoreIds")
+  private List<Integer> storeIds = null;
 
   @SerializedName("BankAddress")
   private String bankAddress = null;
@@ -265,6 +268,32 @@ public class BankAccount {
     this.storeNames = storeNames;
   }
 
+  public BankAccount storeIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
+    return this;
+  }
+
+  public BankAccount addStoreIdsItem(Integer storeIdsItem) {
+    if (this.storeIds == null) {
+      this.storeIds = new ArrayList<Integer>();
+    }
+    this.storeIds.add(storeIdsItem);
+    return this;
+  }
+
+   /**
+   * Store Ids that are attached to this account
+   * @return storeIds
+  **/
+  @ApiModelProperty(value = "Store Ids that are attached to this account")
+  public List<Integer> getStoreIds() {
+    return storeIds;
+  }
+
+  public void setStoreIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
+  }
+
   public BankAccount bankAddress(String bankAddress) {
     this.bankAddress = bankAddress;
     return this;
@@ -390,6 +419,7 @@ public class BankAccount {
         Objects.equals(this.populatedAccountFields, bankAccount.populatedAccountFields) &&
         Objects.equals(this.accountState, bankAccount.accountState) &&
         Objects.equals(this.storeNames, bankAccount.storeNames) &&
+        Objects.equals(this.storeIds, bankAccount.storeIds) &&
         Objects.equals(this.bankAddress, bankAccount.bankAddress) &&
         Objects.equals(this.bankCountryCode, bankAccount.bankCountryCode) &&
         Objects.equals(this.accountHolderAddress, bankAccount.accountHolderAddress) &&
@@ -400,7 +430,7 @@ public class BankAccount {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, iban, swift, populatedAccountFields, accountState, storeNames, bankAddress, bankCountryCode, accountHolderAddress, accountHolderCountryCode, vatNumber, stripeAccountId);
+    return Objects.hash(id, accountName, iban, swift, populatedAccountFields, accountState, storeNames, storeIds, bankAddress, bankCountryCode, accountHolderAddress, accountHolderCountryCode, vatNumber, stripeAccountId);
   }
 
 
@@ -416,6 +446,7 @@ public class BankAccount {
     sb.append("    populatedAccountFields: ").append(toIndentedString(populatedAccountFields)).append("\n");
     sb.append("    accountState: ").append(toIndentedString(accountState)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
+    sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    bankAddress: ").append(toIndentedString(bankAddress)).append("\n");
     sb.append("    bankCountryCode: ").append(toIndentedString(bankCountryCode)).append("\n");
     sb.append("    accountHolderAddress: ").append(toIndentedString(accountHolderAddress)).append("\n");

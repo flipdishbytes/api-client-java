@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **populatedAccountFields** | [**List&lt;AccountFieldKeyValuePair&gt;**](AccountFieldKeyValuePair.md) | A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored. |  [optional]
 **accountState** | [**AccountStateEnum**](#AccountStateEnum) | Status of Account |  [optional]
 **storeNames** | **List&lt;String&gt;** | Store Names that are attached to this account |  [optional]
+**storeIds** | **List&lt;Integer&gt;** | Store Ids that are attached to this account |  [optional]
 **bankAddress** | **String** | Address lf the bank |  [optional]
 **bankCountryCode** | **String** | CountryCode of the Bank Account |  [optional]
 **accountHolderAddress** | **String** | Account Holders Address |  [optional]
