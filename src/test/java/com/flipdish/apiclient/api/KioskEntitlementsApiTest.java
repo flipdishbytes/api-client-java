@@ -44,22 +44,6 @@ public class KioskEntitlementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void queryKioskEntitlementsTest() throws Exception {
-        String appId = null;
-        RestApiResultKioskEntitlementsResult response = api.queryKioskEntitlements(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void queryKioskEntitlementsByOrgIdTest() throws Exception {
         String orgId = null;
         RestApiResultKioskEntitlementsResult response = api.queryKioskEntitlementsByOrgId(orgId);

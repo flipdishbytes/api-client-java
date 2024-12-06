@@ -43,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-04T15:27:49.472Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -104,6 +104,9 @@ public class Order {
 
   @SerializedName("OrderBatchInfo")
   private OrderBatchSummary orderBatchInfo = null;
+
+  @SerializedName("CreatedCampaignVoucherId")
+  private Integer createdCampaignVoucherId = null;
 
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -1092,6 +1095,24 @@ public class Order {
     this.orderBatchInfo = orderBatchInfo;
   }
 
+  public Order createdCampaignVoucherId(Integer createdCampaignVoucherId) {
+    this.createdCampaignVoucherId = createdCampaignVoucherId;
+    return this;
+  }
+
+   /**
+   * The id of the campaign voucher that was created from this order
+   * @return createdCampaignVoucherId
+  **/
+  @ApiModelProperty(value = "The id of the campaign voucher that was created from this order")
+  public Integer getCreatedCampaignVoucherId() {
+    return createdCampaignVoucherId;
+  }
+
+  public void setCreatedCampaignVoucherId(Integer createdCampaignVoucherId) {
+    this.createdCampaignVoucherId = createdCampaignVoucherId;
+  }
+
   public Order orderId(Integer orderId) {
     this.orderId = orderId;
     return this;
@@ -1662,6 +1683,7 @@ public class Order {
         Objects.equals(this.orderDropOffLocation, order.orderDropOffLocation) &&
         Objects.equals(this.fulfillmentStatus, order.fulfillmentStatus) &&
         Objects.equals(this.orderBatchInfo, order.orderBatchInfo) &&
+        Objects.equals(this.createdCampaignVoucherId, order.createdCampaignVoucherId) &&
         Objects.equals(this.orderId, order.orderId) &&
         Objects.equals(this.localOrderId, order.localOrderId) &&
         Objects.equals(this.deliveryType, order.deliveryType) &&
@@ -1696,7 +1718,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId, receiptCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, createdCampaignVoucherId, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId, receiptCode);
   }
 
 
@@ -1725,6 +1747,7 @@ public class Order {
     sb.append("    orderDropOffLocation: ").append(toIndentedString(orderDropOffLocation)).append("\n");
     sb.append("    fulfillmentStatus: ").append(toIndentedString(fulfillmentStatus)).append("\n");
     sb.append("    orderBatchInfo: ").append(toIndentedString(orderBatchInfo)).append("\n");
+    sb.append("    createdCampaignVoucherId: ").append(toIndentedString(createdCampaignVoucherId)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    localOrderId: ").append(toIndentedString(localOrderId)).append("\n");
     sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");

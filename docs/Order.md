@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **orderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order |  [optional]
 **fulfillmentStatus** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order |  [optional]
 **orderBatchInfo** | [**OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information |  [optional]
+**createdCampaignVoucherId** | **Integer** | The id of the campaign voucher that was created from this order |  [optional]
 **orderId** | **Integer** | Order identifier |  [optional]
 **localOrderId** | **String** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) |  [optional]
 **deliveryType** | [**DeliveryTypeEnum**](#DeliveryTypeEnum) | Delivery type |  [optional]
