@@ -31,7 +31,7 @@ import java.util.Map;
  * When orders are accepted, and no lead time is specified by the operator, this is the lead time that will be  applied to the order.
  */
 @ApiModel(description = "When orders are accepted, and no lead time is specified by the operator, this is the lead time that will be  applied to the order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
 public class OrderLeadTimes {
   @SerializedName("LeadTimeMinutes")
   private Map<String, Integer> leadTimeMinutes = null;

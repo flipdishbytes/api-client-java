@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu
  */
 @ApiModel(description = "Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
 public class Menu {
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -167,6 +167,9 @@ public class Menu {
 
   @SerializedName("TaxType")
   private TaxTypeEnum taxType = null;
+
+  @SerializedName("IsIntegrated")
+  private Boolean isIntegrated = null;
 
   public Menu menuId(Integer menuId) {
     this.menuId = menuId;
@@ -418,6 +421,24 @@ public class Menu {
     this.taxType = taxType;
   }
 
+  public Menu isIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+    return this;
+  }
+
+   /**
+   * Flag to indicate if the menu is integrated (contains metadata)
+   * @return isIntegrated
+  **/
+  @ApiModelProperty(value = "Flag to indicate if the menu is integrated (contains metadata)")
+  public Boolean isIsIntegrated() {
+    return isIntegrated;
+  }
+
+  public void setIsIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -440,12 +461,13 @@ public class Menu {
         Objects.equals(this.appId, menu.appId) &&
         Objects.equals(this.displaySectionLinks, menu.displaySectionLinks) &&
         Objects.equals(this.menuSectionBehaviour, menu.menuSectionBehaviour) &&
-        Objects.equals(this.taxType, menu.taxType);
+        Objects.equals(this.taxType, menu.taxType) &&
+        Objects.equals(this.isIntegrated, menu.isIntegrated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuId, modifiedTime, versionNumber, imageName, imageUrl, name, locked, menuSections, taxRates, appId, displaySectionLinks, menuSectionBehaviour, taxType);
+    return Objects.hash(menuId, modifiedTime, versionNumber, imageName, imageUrl, name, locked, menuSections, taxRates, appId, displaySectionLinks, menuSectionBehaviour, taxType, isIntegrated);
   }
 
 
@@ -467,6 +489,7 @@ public class Menu {
     sb.append("    displaySectionLinks: ").append(toIndentedString(displaySectionLinks)).append("\n");
     sb.append("    menuSectionBehaviour: ").append(toIndentedString(menuSectionBehaviour)).append("\n");
     sb.append("    taxType: ").append(toIndentedString(taxType)).append("\n");
+    sb.append("    isIntegrated: ").append(toIndentedString(isIntegrated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

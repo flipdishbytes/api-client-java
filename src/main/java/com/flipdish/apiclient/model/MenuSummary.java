@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu Summary
  */
 @ApiModel(description = "Menu Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
 public class MenuSummary {
   @SerializedName("MenuId")
   private Integer menuId = null;
@@ -53,6 +53,9 @@ public class MenuSummary {
 
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
+
+  @SerializedName("IsIntegrated")
+  private Boolean isIntegrated = null;
 
   public MenuSummary menuId(Integer menuId) {
     this.menuId = menuId;
@@ -188,6 +191,24 @@ public class MenuSummary {
     this.storeNames = storeNames;
   }
 
+  public MenuSummary isIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+    return this;
+  }
+
+   /**
+   * Flag to indicate if the menu is integrated (contains metadata)
+   * @return isIntegrated
+  **/
+  @ApiModelProperty(value = "Flag to indicate if the menu is integrated (contains metadata)")
+  public Boolean isIsIntegrated() {
+    return isIntegrated;
+  }
+
+  public void setIsIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -204,12 +225,13 @@ public class MenuSummary {
         Objects.equals(this.menuUrl, menuSummary.menuUrl) &&
         Objects.equals(this.name, menuSummary.name) &&
         Objects.equals(this.locked, menuSummary.locked) &&
-        Objects.equals(this.storeNames, menuSummary.storeNames);
+        Objects.equals(this.storeNames, menuSummary.storeNames) &&
+        Objects.equals(this.isIntegrated, menuSummary.isIntegrated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuId, modifiedTime, versionNumber, menuUrl, name, locked, storeNames);
+    return Objects.hash(menuId, modifiedTime, versionNumber, menuUrl, name, locked, storeNames, isIntegrated);
   }
 
 
@@ -225,6 +247,7 @@ public class MenuSummary {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
+    sb.append("    isIntegrated: ").append(toIndentedString(isIntegrated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

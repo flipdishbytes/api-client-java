@@ -32,7 +32,7 @@ import java.util.List;
  * Create menu object
  */
 @ApiModel(description = "Create menu object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
 public class CreateFullMenu {
   @SerializedName("Name")
   private String name = null;
@@ -148,6 +148,9 @@ public class CreateFullMenu {
 
   @SerializedName("TaxType")
   private TaxTypeEnum taxType = null;
+
+  @SerializedName("IsIntegrated")
+  private Boolean isIntegrated = null;
 
   public CreateFullMenu name(String name) {
     this.name = name;
@@ -291,6 +294,24 @@ public class CreateFullMenu {
     this.taxType = taxType;
   }
 
+  public CreateFullMenu isIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+    return this;
+  }
+
+   /**
+   * Flag to indicate if the menu is integrated (contains metadata)
+   * @return isIntegrated
+  **/
+  @ApiModelProperty(value = "Flag to indicate if the menu is integrated (contains metadata)")
+  public Boolean isIsIntegrated() {
+    return isIntegrated;
+  }
+
+  public void setIsIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -307,12 +328,13 @@ public class CreateFullMenu {
         Objects.equals(this.taxRates, createFullMenu.taxRates) &&
         Objects.equals(this.displaySectionLinks, createFullMenu.displaySectionLinks) &&
         Objects.equals(this.menuSectionBehaviour, createFullMenu.menuSectionBehaviour) &&
-        Objects.equals(this.taxType, createFullMenu.taxType);
+        Objects.equals(this.taxType, createFullMenu.taxType) &&
+        Objects.equals(this.isIntegrated, createFullMenu.isIntegrated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, imageUrl, menuSections, taxRates, displaySectionLinks, menuSectionBehaviour, taxType);
+    return Objects.hash(name, imageUrl, menuSections, taxRates, displaySectionLinks, menuSectionBehaviour, taxType, isIntegrated);
   }
 
 
@@ -328,6 +350,7 @@ public class CreateFullMenu {
     sb.append("    displaySectionLinks: ").append(toIndentedString(displaySectionLinks)).append("\n");
     sb.append("    menuSectionBehaviour: ").append(toIndentedString(menuSectionBehaviour)).append("\n");
     sb.append("    taxType: ").append(toIndentedString(taxType)).append("\n");
+    sb.append("    isIntegrated: ").append(toIndentedString(isIntegrated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

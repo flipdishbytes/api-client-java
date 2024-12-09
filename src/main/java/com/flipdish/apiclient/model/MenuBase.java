@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu base
  */
 @ApiModel(description = "Menu base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-06T12:54:38.694Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
 public class MenuBase {
   @SerializedName("DisplaySectionLinks")
   private Boolean displaySectionLinks = null;
@@ -133,6 +133,9 @@ public class MenuBase {
   @SerializedName("TaxType")
   private TaxTypeEnum taxType = null;
 
+  @SerializedName("IsIntegrated")
+  private Boolean isIntegrated = null;
+
   public MenuBase displaySectionLinks(Boolean displaySectionLinks) {
     this.displaySectionLinks = displaySectionLinks;
     return this;
@@ -187,6 +190,24 @@ public class MenuBase {
     this.taxType = taxType;
   }
 
+  public MenuBase isIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+    return this;
+  }
+
+   /**
+   * Flag to indicate if the menu is integrated (contains metadata)
+   * @return isIntegrated
+  **/
+  @ApiModelProperty(value = "Flag to indicate if the menu is integrated (contains metadata)")
+  public Boolean isIsIntegrated() {
+    return isIntegrated;
+  }
+
+  public void setIsIntegrated(Boolean isIntegrated) {
+    this.isIntegrated = isIntegrated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -199,12 +220,13 @@ public class MenuBase {
     MenuBase menuBase = (MenuBase) o;
     return Objects.equals(this.displaySectionLinks, menuBase.displaySectionLinks) &&
         Objects.equals(this.menuSectionBehaviour, menuBase.menuSectionBehaviour) &&
-        Objects.equals(this.taxType, menuBase.taxType);
+        Objects.equals(this.taxType, menuBase.taxType) &&
+        Objects.equals(this.isIntegrated, menuBase.isIntegrated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(displaySectionLinks, menuSectionBehaviour, taxType);
+    return Objects.hash(displaySectionLinks, menuSectionBehaviour, taxType, isIntegrated);
   }
 
 
@@ -216,6 +238,7 @@ public class MenuBase {
     sb.append("    displaySectionLinks: ").append(toIndentedString(displaySectionLinks)).append("\n");
     sb.append("    menuSectionBehaviour: ").append(toIndentedString(menuSectionBehaviour)).append("\n");
     sb.append("    taxType: ").append(toIndentedString(taxType)).append("\n");
+    sb.append("    isIntegrated: ").append(toIndentedString(isIntegrated)).append("\n");
     sb.append("}");
     return sb.toString();
   }
