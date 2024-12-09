@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T10:26:28.878Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T12:23:18.562Z")
 public class RestApiArrayResultOauthClientRedirectUri {
   @SerializedName("Data")
   private List<OauthClientRedirectUri> data = new ArrayList<OauthClientRedirectUri>();
