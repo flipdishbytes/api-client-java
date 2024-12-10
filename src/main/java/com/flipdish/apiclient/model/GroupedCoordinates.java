@@ -28,7 +28,7 @@ import java.io.IOException;
  * Describes coordinates that have a group
  */
 @ApiModel(description = "Describes coordinates that have a group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T12:23:18.562Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-10T13:56:52.592Z")
 public class GroupedCoordinates {
   @SerializedName("Latitude")
   private Double latitude = null;

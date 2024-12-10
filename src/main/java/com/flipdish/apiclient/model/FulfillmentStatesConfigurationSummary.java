@@ -31,7 +31,7 @@ import java.util.List;
  * Fulfillment configuration header information
  */
 @ApiModel(description = "Fulfillment configuration header information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T12:23:18.562Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-10T13:56:52.592Z")
 public class FulfillmentStatesConfigurationSummary {
   @SerializedName("AppId")
   private String appId = null;

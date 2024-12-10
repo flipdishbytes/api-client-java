@@ -28,7 +28,7 @@ import java.io.IOException;
  * Defines a customer create model
  */
 @ApiModel(description = "Defines a customer create model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-09T12:23:18.562Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-10T13:56:52.592Z")
 public class CustomerCreateModel {
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
