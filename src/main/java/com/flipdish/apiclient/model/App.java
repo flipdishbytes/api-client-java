@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-13T13:55:38.072Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-13T14:18:55.615Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -516,9 +516,6 @@ public class App {
   @SerializedName("OrgId")
   private String orgId = null;
 
-  @SerializedName("SmsRestaurantName")
-  private String smsRestaurantName = null;
-
   @SerializedName("Name")
   private String name = null;
 
@@ -879,24 +876,6 @@ public class App {
     this.orgId = orgId;
   }
 
-  public App smsRestaurantName(String smsRestaurantName) {
-    this.smsRestaurantName = smsRestaurantName;
-    return this;
-  }
-
-   /**
-   * SMS Restaurant Name
-   * @return smsRestaurantName
-  **/
-  @ApiModelProperty(value = "SMS Restaurant Name")
-  public String getSmsRestaurantName() {
-    return smsRestaurantName;
-  }
-
-  public void setSmsRestaurantName(String smsRestaurantName) {
-    this.smsRestaurantName = smsRestaurantName;
-  }
-
   public App name(String name) {
     this.name = name;
     return this;
@@ -1083,7 +1062,6 @@ public class App {
         Objects.equals(this.mapSouthWest, app.mapSouthWest) &&
         Objects.equals(this.googleMapsApiKeyWeb, app.googleMapsApiKeyWeb) &&
         Objects.equals(this.orgId, app.orgId) &&
-        Objects.equals(this.smsRestaurantName, app.smsRestaurantName) &&
         Objects.equals(this.name, app.name) &&
         Objects.equals(this.hostName, app.hostName) &&
         Objects.equals(this.mainColor, app.mainColor) &&
@@ -1097,7 +1075,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
+    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1120,7 +1098,6 @@ public class App {
     sb.append("    mapSouthWest: ").append(toIndentedString(mapSouthWest)).append("\n");
     sb.append("    googleMapsApiKeyWeb: ").append(toIndentedString(googleMapsApiKeyWeb)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
-    sb.append("    smsRestaurantName: ").append(toIndentedString(smsRestaurantName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");

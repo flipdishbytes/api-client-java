@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **mapSouthWest** | [**Coordinates**](Coordinates.md) | South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App. |  [optional]
 **googleMapsApiKeyWeb** | **String** | Key to be passed with Google Maps requests |  [optional]
 **orgId** | **String** | Org Id |  [optional]
-**smsRestaurantName** | **String** | SMS Restaurant Name |  [optional]
 **name** | **String** | App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites. |  [optional]
 **hostName** | **String** | HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on. |  [optional]
 **mainColor** | **String** | Main color of the web / Android / iOS applications |  [optional]
