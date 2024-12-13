@@ -168,6 +168,21 @@ public class TeammatesApiTest {
      *          if the Api call fails
      */
     @Test
+    public void teammatesAcceptInvitationsTest() throws Exception {
+        api.teammatesAcceptInvitations();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void teammatesPendingInvitationsTest() throws Exception {
         RestApiArrayResultPendingInvitation response = api.teammatesPendingInvitations();
 

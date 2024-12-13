@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * HttpPostedFileBase
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-10T13:56:52.592Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-13T10:34:03.335Z")
 public class HttpPostedFileBase {
   @SerializedName("ContentLength")
   private Integer contentLength = null;
