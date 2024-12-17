@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu Checkpoint
  */
 @ApiModel(description = "Menu Checkpoint")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-13T14:18:55.615Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-17T11:10:30.796Z")
 public class MenuCheckpoint {
   @SerializedName("MenuCheckpointId")
   private Integer menuCheckpointId = null;
