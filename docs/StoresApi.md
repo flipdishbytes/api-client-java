@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 [**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
-[**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**setPreOrderEnabled**](StoresApi.md#setPreOrderEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 [**storesSetPropertyId**](StoresApi.md#storesSetPropertyId) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**supportedSalesChannelsTypes**](StoresApi.md#supportedSalesChannelsTypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1615,9 +1615,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setPreOrdeEnabled"></a>
-# **setPreOrdeEnabled**
-> RestApiArrayResultRestApiDefaultResponse setPreOrdeEnabled(storeId, deliveryType, enabled)
+<a name="setPreOrderEnabled"></a>
+# **setPreOrderEnabled**
+> RestApiArrayResultRestApiDefaultResponse setPreOrderEnabled(storeId, deliveryType, enabled)
 
 
 
@@ -1641,10 +1641,10 @@ Integer storeId = 56; // Integer |
 String deliveryType = "deliveryType_example"; // String | 
 Boolean enabled = true; // Boolean | 
 try {
-    RestApiArrayResultRestApiDefaultResponse result = apiInstance.setPreOrdeEnabled(storeId, deliveryType, enabled);
+    RestApiArrayResultRestApiDefaultResponse result = apiInstance.setPreOrderEnabled(storeId, deliveryType, enabled);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StoresApi#setPreOrdeEnabled");
+    System.err.println("Exception when calling StoresApi#setPreOrderEnabled");
     e.printStackTrace();
 }
 ```

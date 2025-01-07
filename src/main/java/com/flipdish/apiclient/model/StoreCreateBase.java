@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Create Base
  */
 @ApiModel(description = "Store Create Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-12-17T11:10:30.796Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-07T13:35:16.731Z")
 public class StoreCreateBase {
   @SerializedName("Name")
   private String name = null;
@@ -92,6 +92,9 @@ public class StoreCreateBase {
 
   @SerializedName("SalesChannelType")
   private SalesChannelTypeEnum salesChannelType = null;
+
+  @SerializedName("PhoneNumber")
+  private String phoneNumber = null;
 
   public StoreCreateBase name(String name) {
     this.name = name;
@@ -165,6 +168,24 @@ public class StoreCreateBase {
     this.salesChannelType = salesChannelType;
   }
 
+  public StoreCreateBase phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Phone Number
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "Phone Number")
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -178,12 +199,13 @@ public class StoreCreateBase {
     return Objects.equals(this.name, storeCreateBase.name) &&
         Objects.equals(this.emailAddress, storeCreateBase.emailAddress) &&
         Objects.equals(this.staffLanguage, storeCreateBase.staffLanguage) &&
-        Objects.equals(this.salesChannelType, storeCreateBase.salesChannelType);
+        Objects.equals(this.salesChannelType, storeCreateBase.salesChannelType) &&
+        Objects.equals(this.phoneNumber, storeCreateBase.phoneNumber);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, emailAddress, staffLanguage, salesChannelType);
+    return Objects.hash(name, emailAddress, staffLanguage, salesChannelType, phoneNumber);
   }
 
 
@@ -196,6 +218,7 @@ public class StoreCreateBase {
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    staffLanguage: ").append(toIndentedString(staffLanguage)).append("\n");
     sb.append("    salesChannelType: ").append(toIndentedString(salesChannelType)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

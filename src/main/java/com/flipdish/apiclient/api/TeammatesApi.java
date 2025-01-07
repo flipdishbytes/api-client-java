@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CreateTeammate;
 import com.flipdish.apiclient.model.RestApiArrayResultPendingInvitation;
+import com.flipdish.apiclient.model.RestApiArrayResultRedeemInvitationResult;
 import com.flipdish.apiclient.model.RestApiArrayResultTeammate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -1067,21 +1068,24 @@ public class TeammatesApi {
     /**
      * 
      * 
+     * @return RestApiArrayResultRedeemInvitationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void teammatesAcceptInvitations() throws ApiException {
-        teammatesAcceptInvitationsWithHttpInfo();
+    public RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations() throws ApiException {
+        ApiResponse<RestApiArrayResultRedeemInvitationResult> resp = teammatesAcceptInvitationsWithHttpInfo();
+        return resp.getData();
     }
 
     /**
      * 
      * 
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;RestApiArrayResultRedeemInvitationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> teammatesAcceptInvitationsWithHttpInfo() throws ApiException {
+    public ApiResponse<RestApiArrayResultRedeemInvitationResult> teammatesAcceptInvitationsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = teammatesAcceptInvitationsValidateBeforeCall(null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -1091,7 +1095,7 @@ public class TeammatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call teammatesAcceptInvitationsAsync(final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call teammatesAcceptInvitationsAsync(final ApiCallback<RestApiArrayResultRedeemInvitationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1113,7 +1117,8 @@ public class TeammatesApi {
         }
 
         com.squareup.okhttp.Call call = teammatesAcceptInvitationsValidateBeforeCall(progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

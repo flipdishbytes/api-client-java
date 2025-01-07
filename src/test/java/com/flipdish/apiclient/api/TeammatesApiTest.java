@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.CreateTeammate;
 import com.flipdish.apiclient.model.RestApiArrayResultPendingInvitation;
+import com.flipdish.apiclient.model.RestApiArrayResultRedeemInvitationResult;
 import com.flipdish.apiclient.model.RestApiArrayResultTeammate;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -169,7 +170,7 @@ public class TeammatesApiTest {
      */
     @Test
     public void teammatesAcceptInvitationsTest() throws Exception {
-        api.teammatesAcceptInvitations();
+        RestApiArrayResultRedeemInvitationResult response = api.teammatesAcceptInvitations();
 
         // TODO: test validations
     }

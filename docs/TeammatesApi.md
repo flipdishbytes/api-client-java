@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="teammatesAcceptInvitations"></a>
 # **teammatesAcceptInvitations**
-> teammatesAcceptInvitations()
+> RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations()
 
 
 
@@ -407,7 +407,8 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 TeammatesApi apiInstance = new TeammatesApi();
 try {
-    apiInstance.teammatesAcceptInvitations();
+    RestApiArrayResultRedeemInvitationResult result = apiInstance.teammatesAcceptInvitations();
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TeammatesApi#teammatesAcceptInvitations");
     e.printStackTrace();
@@ -419,7 +420,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
 
 ### Authorization
 
