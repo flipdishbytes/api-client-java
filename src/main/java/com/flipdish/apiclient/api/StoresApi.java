@@ -4082,7 +4082,7 @@ public class StoresApi {
         return call;
     }
     /**
-     * Build call for setPreOrderEnabled
+     * Build call for setPreOrdeEnabled
      * @param storeId  (required)
      * @param deliveryType  (required)
      * @param enabled  (required)
@@ -4091,7 +4091,7 @@ public class StoresApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setPreOrderEnabledCall(Integer storeId, String deliveryType, Boolean enabled, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setPreOrdeEnabledCall(Integer storeId, String deliveryType, Boolean enabled, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -4140,25 +4140,25 @@ public class StoresApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setPreOrderEnabledValidateBeforeCall(Integer storeId, String deliveryType, Boolean enabled, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setPreOrdeEnabledValidateBeforeCall(Integer storeId, String deliveryType, Boolean enabled, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling setPreOrderEnabled(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling setPreOrdeEnabled(Async)");
         }
         
         // verify the required parameter 'deliveryType' is set
         if (deliveryType == null) {
-            throw new ApiException("Missing the required parameter 'deliveryType' when calling setPreOrderEnabled(Async)");
+            throw new ApiException("Missing the required parameter 'deliveryType' when calling setPreOrdeEnabled(Async)");
         }
         
         // verify the required parameter 'enabled' is set
         if (enabled == null) {
-            throw new ApiException("Missing the required parameter 'enabled' when calling setPreOrderEnabled(Async)");
+            throw new ApiException("Missing the required parameter 'enabled' when calling setPreOrdeEnabled(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = setPreOrderEnabledCall(storeId, deliveryType, enabled, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setPreOrdeEnabledCall(storeId, deliveryType, enabled, progressListener, progressRequestListener);
         return call;
 
     }
@@ -4172,8 +4172,8 @@ public class StoresApi {
      * @return RestApiArrayResultRestApiDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultRestApiDefaultResponse setPreOrderEnabled(Integer storeId, String deliveryType, Boolean enabled) throws ApiException {
-        ApiResponse<RestApiArrayResultRestApiDefaultResponse> resp = setPreOrderEnabledWithHttpInfo(storeId, deliveryType, enabled);
+    public RestApiArrayResultRestApiDefaultResponse setPreOrdeEnabled(Integer storeId, String deliveryType, Boolean enabled) throws ApiException {
+        ApiResponse<RestApiArrayResultRestApiDefaultResponse> resp = setPreOrdeEnabledWithHttpInfo(storeId, deliveryType, enabled);
         return resp.getData();
     }
 
@@ -4186,8 +4186,8 @@ public class StoresApi {
      * @return ApiResponse&lt;RestApiArrayResultRestApiDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultRestApiDefaultResponse> setPreOrderEnabledWithHttpInfo(Integer storeId, String deliveryType, Boolean enabled) throws ApiException {
-        com.squareup.okhttp.Call call = setPreOrderEnabledValidateBeforeCall(storeId, deliveryType, enabled, null, null);
+    public ApiResponse<RestApiArrayResultRestApiDefaultResponse> setPreOrdeEnabledWithHttpInfo(Integer storeId, String deliveryType, Boolean enabled) throws ApiException {
+        com.squareup.okhttp.Call call = setPreOrdeEnabledValidateBeforeCall(storeId, deliveryType, enabled, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultRestApiDefaultResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -4202,7 +4202,7 @@ public class StoresApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setPreOrderEnabledAsync(Integer storeId, String deliveryType, Boolean enabled, final ApiCallback<RestApiArrayResultRestApiDefaultResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call setPreOrdeEnabledAsync(Integer storeId, String deliveryType, Boolean enabled, final ApiCallback<RestApiArrayResultRestApiDefaultResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4223,7 +4223,7 @@ public class StoresApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setPreOrderEnabledValidateBeforeCall(storeId, deliveryType, enabled, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setPreOrdeEnabledValidateBeforeCall(storeId, deliveryType, enabled, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultRestApiDefaultResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

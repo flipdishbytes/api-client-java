@@ -589,11 +589,11 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
-    public void setPreOrderEnabledTest() throws Exception {
+    public void setPreOrdeEnabledTest() throws Exception {
         Integer storeId = null;
         String deliveryType = null;
         Boolean enabled = null;
-        RestApiArrayResultRestApiDefaultResponse response = api.setPreOrderEnabled(storeId, deliveryType, enabled);
+        RestApiArrayResultRestApiDefaultResponse response = api.setPreOrdeEnabled(storeId, deliveryType, enabled);
 
         // TODO: test validations
     }
