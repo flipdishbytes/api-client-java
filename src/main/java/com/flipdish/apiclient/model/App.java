@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-10T09:26:40.172Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-14T10:05:27.223Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -40,8 +40,14 @@ public class App {
   @SerializedName("HasIosApp")
   private Boolean hasIosApp = null;
 
+  @SerializedName("IosAppStoreUrl")
+  private String iosAppStoreUrl = null;
+
   @SerializedName("HasAndroidApp")
   private Boolean hasAndroidApp = null;
+
+  @SerializedName("AndroidPlayStoreUrl")
+  private String androidPlayStoreUrl = null;
 
   @SerializedName("LogoImageUrl")
   private String logoImageUrl = null;
@@ -631,6 +637,24 @@ public class App {
     this.hasIosApp = hasIosApp;
   }
 
+  public App iosAppStoreUrl(String iosAppStoreUrl) {
+    this.iosAppStoreUrl = iosAppStoreUrl;
+    return this;
+  }
+
+   /**
+   * IOS App Store URL
+   * @return iosAppStoreUrl
+  **/
+  @ApiModelProperty(value = "IOS App Store URL")
+  public String getIosAppStoreUrl() {
+    return iosAppStoreUrl;
+  }
+
+  public void setIosAppStoreUrl(String iosAppStoreUrl) {
+    this.iosAppStoreUrl = iosAppStoreUrl;
+  }
+
   public App hasAndroidApp(Boolean hasAndroidApp) {
     this.hasAndroidApp = hasAndroidApp;
     return this;
@@ -647,6 +671,24 @@ public class App {
 
   public void setHasAndroidApp(Boolean hasAndroidApp) {
     this.hasAndroidApp = hasAndroidApp;
+  }
+
+  public App androidPlayStoreUrl(String androidPlayStoreUrl) {
+    this.androidPlayStoreUrl = androidPlayStoreUrl;
+    return this;
+  }
+
+   /**
+   * Android Play Store URL
+   * @return androidPlayStoreUrl
+  **/
+  @ApiModelProperty(value = "Android Play Store URL")
+  public String getAndroidPlayStoreUrl() {
+    return androidPlayStoreUrl;
+  }
+
+  public void setAndroidPlayStoreUrl(String androidPlayStoreUrl) {
+    this.androidPlayStoreUrl = androidPlayStoreUrl;
   }
 
   public App logoImageUrl(String logoImageUrl) {
@@ -1071,7 +1113,9 @@ public class App {
     App app = (App) o;
     return Objects.equals(this.appId, app.appId) &&
         Objects.equals(this.hasIosApp, app.hasIosApp) &&
+        Objects.equals(this.iosAppStoreUrl, app.iosAppStoreUrl) &&
         Objects.equals(this.hasAndroidApp, app.hasAndroidApp) &&
+        Objects.equals(this.androidPlayStoreUrl, app.androidPlayStoreUrl) &&
         Objects.equals(this.logoImageUrl, app.logoImageUrl) &&
         Objects.equals(this.languages, app.languages) &&
         Objects.equals(this.availableAppLanguages, app.availableAppLanguages) &&
@@ -1097,7 +1141,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, hasAndroidApp, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
+    return Objects.hash(appId, hasIosApp, iosAppStoreUrl, hasAndroidApp, androidPlayStoreUrl, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1108,7 +1152,9 @@ public class App {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    hasIosApp: ").append(toIndentedString(hasIosApp)).append("\n");
+    sb.append("    iosAppStoreUrl: ").append(toIndentedString(iosAppStoreUrl)).append("\n");
     sb.append("    hasAndroidApp: ").append(toIndentedString(hasAndroidApp)).append("\n");
+    sb.append("    androidPlayStoreUrl: ").append(toIndentedString(androidPlayStoreUrl)).append("\n");
     sb.append("    logoImageUrl: ").append(toIndentedString(logoImageUrl)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    availableAppLanguages: ").append(toIndentedString(availableAppLanguages)).append("\n");
