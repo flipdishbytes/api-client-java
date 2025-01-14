@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsSalesLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-14T10:05:27.223Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-14T13:06:04.270Z")
 public class PayoutReport3DetailsSalesLine {
   @SerializedName("Online")
   private Double online = null;
