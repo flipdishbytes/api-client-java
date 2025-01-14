@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-14T13:06:04.270Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-14T15:38:53.878Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -48,6 +48,9 @@ public class App {
 
   @SerializedName("AndroidPlayStoreUrl")
   private String androidPlayStoreUrl = null;
+
+  @SerializedName("DisplayDeliveryRestaurantScreen")
+  private Boolean displayDeliveryRestaurantScreen = null;
 
   @SerializedName("LogoImageUrl")
   private String logoImageUrl = null;
@@ -691,6 +694,24 @@ public class App {
     this.androidPlayStoreUrl = androidPlayStoreUrl;
   }
 
+  public App displayDeliveryRestaurantScreen(Boolean displayDeliveryRestaurantScreen) {
+    this.displayDeliveryRestaurantScreen = displayDeliveryRestaurantScreen;
+    return this;
+  }
+
+   /**
+   * Display delivery restaurant screen
+   * @return displayDeliveryRestaurantScreen
+  **/
+  @ApiModelProperty(value = "Display delivery restaurant screen")
+  public Boolean isDisplayDeliveryRestaurantScreen() {
+    return displayDeliveryRestaurantScreen;
+  }
+
+  public void setDisplayDeliveryRestaurantScreen(Boolean displayDeliveryRestaurantScreen) {
+    this.displayDeliveryRestaurantScreen = displayDeliveryRestaurantScreen;
+  }
+
   public App logoImageUrl(String logoImageUrl) {
     this.logoImageUrl = logoImageUrl;
     return this;
@@ -1116,6 +1137,7 @@ public class App {
         Objects.equals(this.iosAppStoreUrl, app.iosAppStoreUrl) &&
         Objects.equals(this.hasAndroidApp, app.hasAndroidApp) &&
         Objects.equals(this.androidPlayStoreUrl, app.androidPlayStoreUrl) &&
+        Objects.equals(this.displayDeliveryRestaurantScreen, app.displayDeliveryRestaurantScreen) &&
         Objects.equals(this.logoImageUrl, app.logoImageUrl) &&
         Objects.equals(this.languages, app.languages) &&
         Objects.equals(this.availableAppLanguages, app.availableAppLanguages) &&
@@ -1141,7 +1163,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, iosAppStoreUrl, hasAndroidApp, androidPlayStoreUrl, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
+    return Objects.hash(appId, hasIosApp, iosAppStoreUrl, hasAndroidApp, androidPlayStoreUrl, displayDeliveryRestaurantScreen, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1155,6 +1177,7 @@ public class App {
     sb.append("    iosAppStoreUrl: ").append(toIndentedString(iosAppStoreUrl)).append("\n");
     sb.append("    hasAndroidApp: ").append(toIndentedString(hasAndroidApp)).append("\n");
     sb.append("    androidPlayStoreUrl: ").append(toIndentedString(androidPlayStoreUrl)).append("\n");
+    sb.append("    displayDeliveryRestaurantScreen: ").append(toIndentedString(displayDeliveryRestaurantScreen)).append("\n");
     sb.append("    logoImageUrl: ").append(toIndentedString(logoImageUrl)).append("\n");
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("    availableAppLanguages: ").append(toIndentedString(availableAppLanguages)).append("\n");
