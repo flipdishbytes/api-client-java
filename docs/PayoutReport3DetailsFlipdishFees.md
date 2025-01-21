@@ -23,6 +23,13 @@ Name | Type | Description | Notes
 **vat** | **Double** |  |  [optional]
 **total** | **Double** |  |  [optional]
 **thirdPartyIntegrationFeesAndTips** | **Double** |  |  [optional]
+**webAndAppCardOnXOrders** | **Double** |  |  [optional]
+**webAndAppCashOnXOrders** | **Double** |  |  [optional]
+**kioskCardOnXOrders** | **Double** |  |  [optional]
+**kioskCashOnXOrders** | **Double** |  |  [optional]
+**qropCardOnXOrders** | **Double** |  |  [optional]
+**qropCashOnXOrders** | **Double** |  |  [optional]
+**posCardOnXOrders** | **Double** |  |  [optional]
 
 
 
