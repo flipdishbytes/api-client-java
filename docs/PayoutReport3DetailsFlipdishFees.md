@@ -23,13 +23,13 @@ Name | Type | Description | Notes
 **vat** | **Double** |  |  [optional]
 **total** | **Double** |  |  [optional]
 **thirdPartyIntegrationFeesAndTips** | **Double** |  |  [optional]
-**webAndAppCardOnXOrders** | **Double** |  |  [optional]
-**webAndAppCashOnXOrders** | **Double** |  |  [optional]
-**kioskCardOnXOrders** | **Double** |  |  [optional]
-**kioskCashOnXOrders** | **Double** |  |  [optional]
-**qropCardOnXOrders** | **Double** |  |  [optional]
-**qropCashOnXOrders** | **Double** |  |  [optional]
-**posCardOnXOrders** | **Double** |  |  [optional]
+**webAndAppCardOnXOrders** | **Integer** |  |  [optional]
+**webAndAppCashOnXOrders** | **Integer** |  |  [optional]
+**kioskCardOnXOrders** | **Integer** |  |  [optional]
+**kioskCashOnXOrders** | **Integer** |  |  [optional]
+**qropCardOnXOrders** | **Integer** |  |  [optional]
+**qropCashOnXOrders** | **Integer** |  |  [optional]
+**posCardOnXOrders** | **Integer** |  |  [optional]
 
 
 

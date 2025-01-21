@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-21T08:41:43.305Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-21T10:48:18.259Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
@@ -87,25 +87,25 @@ public class PayoutReport3DetailsFlipdishFees {
   private Double thirdPartyIntegrationFeesAndTips = null;
 
   @SerializedName("WebAndAppCardOnXOrders")
-  private Double webAndAppCardOnXOrders = null;
+  private Integer webAndAppCardOnXOrders = null;
 
   @SerializedName("WebAndAppCashOnXOrders")
-  private Double webAndAppCashOnXOrders = null;
+  private Integer webAndAppCashOnXOrders = null;
 
   @SerializedName("KioskCardOnXOrders")
-  private Double kioskCardOnXOrders = null;
+  private Integer kioskCardOnXOrders = null;
 
   @SerializedName("KioskCashOnXOrders")
-  private Double kioskCashOnXOrders = null;
+  private Integer kioskCashOnXOrders = null;
 
   @SerializedName("QropCardOnXOrders")
-  private Double qropCardOnXOrders = null;
+  private Integer qropCardOnXOrders = null;
 
   @SerializedName("QropCashOnXOrders")
-  private Double qropCashOnXOrders = null;
+  private Integer qropCashOnXOrders = null;
 
   @SerializedName("PosCardOnXOrders")
-  private Double posCardOnXOrders = null;
+  private Integer posCardOnXOrders = null;
 
   public PayoutReport3DetailsFlipdishFees webAndAppCash(Double webAndAppCash) {
     this.webAndAppCash = webAndAppCash;
@@ -449,7 +449,7 @@ public class PayoutReport3DetailsFlipdishFees {
     this.thirdPartyIntegrationFeesAndTips = thirdPartyIntegrationFeesAndTips;
   }
 
-  public PayoutReport3DetailsFlipdishFees webAndAppCardOnXOrders(Double webAndAppCardOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees webAndAppCardOnXOrders(Integer webAndAppCardOnXOrders) {
     this.webAndAppCardOnXOrders = webAndAppCardOnXOrders;
     return this;
   }
@@ -459,15 +459,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return webAndAppCardOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getWebAndAppCardOnXOrders() {
+  public Integer getWebAndAppCardOnXOrders() {
     return webAndAppCardOnXOrders;
   }
 
-  public void setWebAndAppCardOnXOrders(Double webAndAppCardOnXOrders) {
+  public void setWebAndAppCardOnXOrders(Integer webAndAppCardOnXOrders) {
     this.webAndAppCardOnXOrders = webAndAppCardOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees webAndAppCashOnXOrders(Double webAndAppCashOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees webAndAppCashOnXOrders(Integer webAndAppCashOnXOrders) {
     this.webAndAppCashOnXOrders = webAndAppCashOnXOrders;
     return this;
   }
@@ -477,15 +477,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return webAndAppCashOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getWebAndAppCashOnXOrders() {
+  public Integer getWebAndAppCashOnXOrders() {
     return webAndAppCashOnXOrders;
   }
 
-  public void setWebAndAppCashOnXOrders(Double webAndAppCashOnXOrders) {
+  public void setWebAndAppCashOnXOrders(Integer webAndAppCashOnXOrders) {
     this.webAndAppCashOnXOrders = webAndAppCashOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees kioskCardOnXOrders(Double kioskCardOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees kioskCardOnXOrders(Integer kioskCardOnXOrders) {
     this.kioskCardOnXOrders = kioskCardOnXOrders;
     return this;
   }
@@ -495,15 +495,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return kioskCardOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getKioskCardOnXOrders() {
+  public Integer getKioskCardOnXOrders() {
     return kioskCardOnXOrders;
   }
 
-  public void setKioskCardOnXOrders(Double kioskCardOnXOrders) {
+  public void setKioskCardOnXOrders(Integer kioskCardOnXOrders) {
     this.kioskCardOnXOrders = kioskCardOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees kioskCashOnXOrders(Double kioskCashOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees kioskCashOnXOrders(Integer kioskCashOnXOrders) {
     this.kioskCashOnXOrders = kioskCashOnXOrders;
     return this;
   }
@@ -513,15 +513,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return kioskCashOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getKioskCashOnXOrders() {
+  public Integer getKioskCashOnXOrders() {
     return kioskCashOnXOrders;
   }
 
-  public void setKioskCashOnXOrders(Double kioskCashOnXOrders) {
+  public void setKioskCashOnXOrders(Integer kioskCashOnXOrders) {
     this.kioskCashOnXOrders = kioskCashOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees qropCardOnXOrders(Double qropCardOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees qropCardOnXOrders(Integer qropCardOnXOrders) {
     this.qropCardOnXOrders = qropCardOnXOrders;
     return this;
   }
@@ -531,15 +531,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return qropCardOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getQropCardOnXOrders() {
+  public Integer getQropCardOnXOrders() {
     return qropCardOnXOrders;
   }
 
-  public void setQropCardOnXOrders(Double qropCardOnXOrders) {
+  public void setQropCardOnXOrders(Integer qropCardOnXOrders) {
     this.qropCardOnXOrders = qropCardOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees qropCashOnXOrders(Double qropCashOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees qropCashOnXOrders(Integer qropCashOnXOrders) {
     this.qropCashOnXOrders = qropCashOnXOrders;
     return this;
   }
@@ -549,15 +549,15 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return qropCashOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getQropCashOnXOrders() {
+  public Integer getQropCashOnXOrders() {
     return qropCashOnXOrders;
   }
 
-  public void setQropCashOnXOrders(Double qropCashOnXOrders) {
+  public void setQropCashOnXOrders(Integer qropCashOnXOrders) {
     this.qropCashOnXOrders = qropCashOnXOrders;
   }
 
-  public PayoutReport3DetailsFlipdishFees posCardOnXOrders(Double posCardOnXOrders) {
+  public PayoutReport3DetailsFlipdishFees posCardOnXOrders(Integer posCardOnXOrders) {
     this.posCardOnXOrders = posCardOnXOrders;
     return this;
   }
@@ -567,11 +567,11 @@ public class PayoutReport3DetailsFlipdishFees {
    * @return posCardOnXOrders
   **/
   @ApiModelProperty(value = "")
-  public Double getPosCardOnXOrders() {
+  public Integer getPosCardOnXOrders() {
     return posCardOnXOrders;
   }
 
-  public void setPosCardOnXOrders(Double posCardOnXOrders) {
+  public void setPosCardOnXOrders(Integer posCardOnXOrders) {
     this.posCardOnXOrders = posCardOnXOrders;
   }
 
