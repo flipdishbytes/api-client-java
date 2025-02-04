@@ -32,10 +32,13 @@ import org.threeten.bp.OffsetDateTime;
  * Store Address Updated Event
  */
 @ApiModel(description = "Store Address Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-29T12:28:36.375Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-04T15:31:22.912Z")
 public class StoreAddressUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -83,6 +86,24 @@ public class StoreAddressUpdatedEvent {
 
   public void setEventName(String eventName) {
     this.eventName = eventName;
+  }
+
+  public StoreAddressUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Organisation Id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Organisation Id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
   }
 
   public StoreAddressUpdatedEvent storeId(Integer storeId) {
@@ -276,6 +297,7 @@ public class StoreAddressUpdatedEvent {
     }
     StoreAddressUpdatedEvent storeAddressUpdatedEvent = (StoreAddressUpdatedEvent) o;
     return Objects.equals(this.eventName, storeAddressUpdatedEvent.eventName) &&
+        Objects.equals(this.orgId, storeAddressUpdatedEvent.orgId) &&
         Objects.equals(this.storeId, storeAddressUpdatedEvent.storeId) &&
         Objects.equals(this.storeGroupId, storeAddressUpdatedEvent.storeGroupId) &&
         Objects.equals(this.user, storeAddressUpdatedEvent.user) &&
@@ -290,7 +312,7 @@ public class StoreAddressUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, storeGroupId, user, description, storeAddress, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, storeGroupId, user, description, storeAddress, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -300,6 +322,7 @@ public class StoreAddressUpdatedEvent {
     sb.append("class StoreAddressUpdatedEvent {\n");
     
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");

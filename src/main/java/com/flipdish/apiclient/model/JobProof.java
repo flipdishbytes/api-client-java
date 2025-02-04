@@ -28,7 +28,7 @@ import java.io.IOException;
  * Job Proof
  */
 @ApiModel(description = "Job Proof")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-01-29T12:28:36.375Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-04T15:31:22.912Z")
 public class JobProof {
   @SerializedName("SignatureUrl")
   private String signatureUrl = null;
