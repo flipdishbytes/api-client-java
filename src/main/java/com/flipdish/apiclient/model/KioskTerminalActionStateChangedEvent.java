@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Terminal action state changed
  */
 @ApiModel(description = "Kiosk Terminal action state changed")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class KioskTerminalActionStateChangedEvent {
   @SerializedName("ReaderId")
   private String readerId = null;
@@ -111,6 +111,9 @@ public class KioskTerminalActionStateChangedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -277,6 +280,24 @@ public class KioskTerminalActionStateChangedEvent {
     this.appId = appId;
   }
 
+  public KioskTerminalActionStateChangedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public KioskTerminalActionStateChangedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -314,12 +335,13 @@ public class KioskTerminalActionStateChangedEvent {
         Objects.equals(this.createTime, kioskTerminalActionStateChangedEvent.createTime) &&
         Objects.equals(this.position, kioskTerminalActionStateChangedEvent.position) &&
         Objects.equals(this.appId, kioskTerminalActionStateChangedEvent.appId) &&
+        Objects.equals(this.orgId, kioskTerminalActionStateChangedEvent.orgId) &&
         Objects.equals(this.ipAddress, kioskTerminalActionStateChangedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(readerId, bluetoothTerminalType, actionState, failureCode, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(readerId, bluetoothTerminalType, actionState, failureCode, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -337,6 +359,7 @@ public class KioskTerminalActionStateChangedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

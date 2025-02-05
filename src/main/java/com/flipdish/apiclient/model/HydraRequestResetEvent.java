@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra request reset event
  */
 @ApiModel(description = "Hydra request reset event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class HydraRequestResetEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -50,6 +50,9 @@ public class HydraRequestResetEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -162,6 +165,24 @@ public class HydraRequestResetEvent {
     this.appId = appId;
   }
 
+  public HydraRequestResetEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public HydraRequestResetEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -196,12 +217,13 @@ public class HydraRequestResetEvent {
         Objects.equals(this.createTime, hydraRequestResetEvent.createTime) &&
         Objects.equals(this.position, hydraRequestResetEvent.position) &&
         Objects.equals(this.appId, hydraRequestResetEvent.appId) &&
+        Objects.equals(this.orgId, hydraRequestResetEvent.orgId) &&
         Objects.equals(this.ipAddress, hydraRequestResetEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(user, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -216,6 +238,7 @@ public class HydraRequestResetEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

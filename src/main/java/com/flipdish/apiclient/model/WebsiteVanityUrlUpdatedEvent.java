@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Website vanity url
  */
 @ApiModel(description = "Website vanity url")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class WebsiteVanityUrlUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -56,6 +56,9 @@ public class WebsiteVanityUrlUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -204,6 +207,24 @@ public class WebsiteVanityUrlUpdatedEvent {
     this.appId = appId;
   }
 
+  public WebsiteVanityUrlUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public WebsiteVanityUrlUpdatedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -240,12 +261,13 @@ public class WebsiteVanityUrlUpdatedEvent {
         Objects.equals(this.createTime, websiteVanityUrlUpdatedEvent.createTime) &&
         Objects.equals(this.position, websiteVanityUrlUpdatedEvent.position) &&
         Objects.equals(this.appId, websiteVanityUrlUpdatedEvent.appId) &&
+        Objects.equals(this.orgId, websiteVanityUrlUpdatedEvent.orgId) &&
         Objects.equals(this.ipAddress, websiteVanityUrlUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, vanityUrl, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, user, vanityUrl, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -262,6 +284,7 @@ public class WebsiteVanityUrlUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User created password event
  */
 @ApiModel(description = "User created password event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class UserPasswordCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -53,6 +53,9 @@ public class UserPasswordCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -183,6 +186,24 @@ public class UserPasswordCreatedEvent {
     this.appId = appId;
   }
 
+  public UserPasswordCreatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public UserPasswordCreatedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -218,12 +239,13 @@ public class UserPasswordCreatedEvent {
         Objects.equals(this.createTime, userPasswordCreatedEvent.createTime) &&
         Objects.equals(this.position, userPasswordCreatedEvent.position) &&
         Objects.equals(this.appId, userPasswordCreatedEvent.appId) &&
+        Objects.equals(this.orgId, userPasswordCreatedEvent.orgId) &&
         Objects.equals(this.ipAddress, userPasswordCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -239,6 +261,7 @@ public class UserPasswordCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

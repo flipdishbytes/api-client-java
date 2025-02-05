@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Base Event
  */
 @ApiModel(description = "Base Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class FlipdishEventBase {
   @SerializedName("EventName")
   private String eventName = null;
@@ -46,6 +46,9 @@ public class FlipdishEventBase {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -140,6 +143,24 @@ public class FlipdishEventBase {
     this.appId = appId;
   }
 
+  public FlipdishEventBase orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public FlipdishEventBase ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -173,12 +194,13 @@ public class FlipdishEventBase {
         Objects.equals(this.createTime, flipdishEventBase.createTime) &&
         Objects.equals(this.position, flipdishEventBase.position) &&
         Objects.equals(this.appId, flipdishEventBase.appId) &&
+        Objects.equals(this.orgId, flipdishEventBase.orgId) &&
         Objects.equals(this.ipAddress, flipdishEventBase.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -192,6 +214,7 @@ public class FlipdishEventBase {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

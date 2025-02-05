@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Bluetooth Pairing mode initiated
  */
 @ApiModel(description = "Kiosk Bluetooth Pairing mode initiated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class KioskBluetoothPairingModeEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
@@ -109,6 +109,9 @@ public class KioskBluetoothPairingModeEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -257,6 +260,24 @@ public class KioskBluetoothPairingModeEvent {
     this.appId = appId;
   }
 
+  public KioskBluetoothPairingModeEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public KioskBluetoothPairingModeEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -293,12 +314,13 @@ public class KioskBluetoothPairingModeEvent {
         Objects.equals(this.createTime, kioskBluetoothPairingModeEvent.createTime) &&
         Objects.equals(this.position, kioskBluetoothPairingModeEvent.position) &&
         Objects.equals(this.appId, kioskBluetoothPairingModeEvent.appId) &&
+        Objects.equals(this.orgId, kioskBluetoothPairingModeEvent.orgId) &&
         Objects.equals(this.ipAddress, kioskBluetoothPairingModeEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceId, bluetoothTerminalType, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(deviceId, bluetoothTerminalType, user, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -315,6 +337,7 @@ public class KioskBluetoothPairingModeEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

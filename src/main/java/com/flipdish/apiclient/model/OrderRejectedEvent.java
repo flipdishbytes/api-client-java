@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Rejected Event
  */
 @ApiModel(description = "Order Rejected Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class OrderRejectedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -63,6 +63,9 @@ public class OrderRejectedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -247,6 +250,24 @@ public class OrderRejectedEvent {
     this.appId = appId;
   }
 
+  public OrderRejectedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public OrderRejectedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -285,12 +306,13 @@ public class OrderRejectedEvent {
         Objects.equals(this.createTime, orderRejectedEvent.createTime) &&
         Objects.equals(this.position, orderRejectedEvent.position) &&
         Objects.equals(this.appId, orderRejectedEvent.appId) &&
+        Objects.equals(this.orgId, orderRejectedEvent.orgId) &&
         Objects.equals(this.ipAddress, orderRejectedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, orderRejectedTime, reason, user, order, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, orderRejectedTime, reason, user, order, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -309,6 +331,7 @@ public class OrderRejectedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

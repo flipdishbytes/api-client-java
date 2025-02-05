@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
 **position** | **Integer** | Position |  [optional]
 **appId** | **String** | App id |  [optional]
+**orgId** | **String** | Org id |  [optional]
 **ipAddress** | **String** | Ip Address |  [optional]
 
 

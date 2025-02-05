@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fulfillment status updated event
  */
 @ApiModel(description = "Fulfillment status updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class OrderFulfillmentStatusUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -61,6 +61,9 @@ public class OrderFulfillmentStatusUpdatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -245,6 +248,24 @@ public class OrderFulfillmentStatusUpdatedEvent {
     this.appId = appId;
   }
 
+  public OrderFulfillmentStatusUpdatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public OrderFulfillmentStatusUpdatedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -283,12 +304,13 @@ public class OrderFulfillmentStatusUpdatedEvent {
         Objects.equals(this.createTime, orderFulfillmentStatusUpdatedEvent.createTime) &&
         Objects.equals(this.position, orderFulfillmentStatusUpdatedEvent.position) &&
         Objects.equals(this.appId, orderFulfillmentStatusUpdatedEvent.appId) &&
+        Objects.equals(this.orgId, orderFulfillmentStatusUpdatedEvent.orgId) &&
         Objects.equals(this.ipAddress, orderFulfillmentStatusUpdatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, description, orderId, statusName, statusId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, storeId, description, orderId, statusName, statusId, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -307,6 +329,7 @@ public class OrderFulfillmentStatusUpdatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();

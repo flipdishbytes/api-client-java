@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Event for logging the creating of Locations
  */
 @ApiModel(description = "Event for logging the creating of Locations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:23:37.754Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-05T15:19:42.240Z")
 public class LocationCreatedEvent {
   @SerializedName("LocationId")
   private Integer locationId = null;
@@ -61,6 +61,9 @@ public class LocationCreatedEvent {
 
   @SerializedName("AppId")
   private String appId = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
@@ -245,6 +248,24 @@ public class LocationCreatedEvent {
     this.appId = appId;
   }
 
+  public LocationCreatedEvent orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Org id
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "Org id")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
   public LocationCreatedEvent ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
@@ -283,12 +304,13 @@ public class LocationCreatedEvent {
         Objects.equals(this.createTime, locationCreatedEvent.createTime) &&
         Objects.equals(this.position, locationCreatedEvent.position) &&
         Objects.equals(this.appId, locationCreatedEvent.appId) &&
+        Objects.equals(this.orgId, locationCreatedEvent.orgId) &&
         Objects.equals(this.ipAddress, locationCreatedEvent.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(locationId, locationName, displayOrder, externalLocationId, locationAreaId, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(locationId, locationName, displayOrder, externalLocationId, locationAreaId, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -307,6 +329,7 @@ public class LocationCreatedEvent {
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
