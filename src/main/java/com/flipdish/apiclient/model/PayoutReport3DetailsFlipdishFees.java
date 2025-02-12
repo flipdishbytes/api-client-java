@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-11T16:24:58.787Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-12T15:58:55.291Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
@@ -56,8 +56,14 @@ public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("QropCash")
   private Double qropCash = null;
 
+  @SerializedName("QropCashRevenue")
+  private Double qropCashRevenue = null;
+
   @SerializedName("QropCard")
   private Double qropCard = null;
+
+  @SerializedName("QropCardRevenue")
+  private Double qropCardRevenue = null;
 
   @SerializedName("PosCard")
   private Double posCard = null;
@@ -269,6 +275,24 @@ public class PayoutReport3DetailsFlipdishFees {
     this.qropCash = qropCash;
   }
 
+  public PayoutReport3DetailsFlipdishFees qropCashRevenue(Double qropCashRevenue) {
+    this.qropCashRevenue = qropCashRevenue;
+    return this;
+  }
+
+   /**
+   * Get qropCashRevenue
+   * @return qropCashRevenue
+  **/
+  @ApiModelProperty(value = "")
+  public Double getQropCashRevenue() {
+    return qropCashRevenue;
+  }
+
+  public void setQropCashRevenue(Double qropCashRevenue) {
+    this.qropCashRevenue = qropCashRevenue;
+  }
+
   public PayoutReport3DetailsFlipdishFees qropCard(Double qropCard) {
     this.qropCard = qropCard;
     return this;
@@ -285,6 +309,24 @@ public class PayoutReport3DetailsFlipdishFees {
 
   public void setQropCard(Double qropCard) {
     this.qropCard = qropCard;
+  }
+
+  public PayoutReport3DetailsFlipdishFees qropCardRevenue(Double qropCardRevenue) {
+    this.qropCardRevenue = qropCardRevenue;
+    return this;
+  }
+
+   /**
+   * Get qropCardRevenue
+   * @return qropCardRevenue
+  **/
+  @ApiModelProperty(value = "")
+  public Double getQropCardRevenue() {
+    return qropCardRevenue;
+  }
+
+  public void setQropCardRevenue(Double qropCardRevenue) {
+    this.qropCardRevenue = qropCardRevenue;
   }
 
   public PayoutReport3DetailsFlipdishFees posCard(Double posCard) {
@@ -594,7 +636,9 @@ public class PayoutReport3DetailsFlipdishFees {
         Objects.equals(this.kioskCard, payoutReport3DetailsFlipdishFees.kioskCard) &&
         Objects.equals(this.kioskCardRevenue, payoutReport3DetailsFlipdishFees.kioskCardRevenue) &&
         Objects.equals(this.qropCash, payoutReport3DetailsFlipdishFees.qropCash) &&
+        Objects.equals(this.qropCashRevenue, payoutReport3DetailsFlipdishFees.qropCashRevenue) &&
         Objects.equals(this.qropCard, payoutReport3DetailsFlipdishFees.qropCard) &&
+        Objects.equals(this.qropCardRevenue, payoutReport3DetailsFlipdishFees.qropCardRevenue) &&
         Objects.equals(this.posCard, payoutReport3DetailsFlipdishFees.posCard) &&
         Objects.equals(this.posCardRevenue, payoutReport3DetailsFlipdishFees.posCardRevenue) &&
         Objects.equals(this.posCardOnFlipdishOrders, payoutReport3DetailsFlipdishFees.posCardOnFlipdishOrders) &&
@@ -615,7 +659,7 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @Override
   public int hashCode() {
-    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCashRevenue, kioskCard, kioskCardRevenue, qropCash, qropCard, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, refundedFeesOnRefundedSales, vat, total, thirdPartyIntegrationFeesAndTips, webAndAppCardOnXOrders, webAndAppCashOnXOrders, kioskCardOnXOrders, kioskCashOnXOrders, qropCardOnXOrders, qropCashOnXOrders, posCardOnXOrders);
+    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCashRevenue, kioskCard, kioskCardRevenue, qropCash, qropCashRevenue, qropCard, qropCardRevenue, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, refundedFeesOnRefundedSales, vat, total, thirdPartyIntegrationFeesAndTips, webAndAppCardOnXOrders, webAndAppCashOnXOrders, kioskCardOnXOrders, kioskCashOnXOrders, qropCardOnXOrders, qropCashOnXOrders, posCardOnXOrders);
   }
 
 
@@ -633,7 +677,9 @@ public class PayoutReport3DetailsFlipdishFees {
     sb.append("    kioskCard: ").append(toIndentedString(kioskCard)).append("\n");
     sb.append("    kioskCardRevenue: ").append(toIndentedString(kioskCardRevenue)).append("\n");
     sb.append("    qropCash: ").append(toIndentedString(qropCash)).append("\n");
+    sb.append("    qropCashRevenue: ").append(toIndentedString(qropCashRevenue)).append("\n");
     sb.append("    qropCard: ").append(toIndentedString(qropCard)).append("\n");
+    sb.append("    qropCardRevenue: ").append(toIndentedString(qropCardRevenue)).append("\n");
     sb.append("    posCard: ").append(toIndentedString(posCard)).append("\n");
     sb.append("    posCardRevenue: ").append(toIndentedString(posCardRevenue)).append("\n");
     sb.append("    posCardOnFlipdishOrders: ").append(toIndentedString(posCardOnFlipdishOrders)).append("\n");
