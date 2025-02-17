@@ -57,6 +57,7 @@ Name | Value
 VIEWAPP | &quot;ViewApp&quot;
 CREATEAPP | &quot;CreateApp&quot;
 UPDATEAPP | &quot;UpdateApp&quot;
+VIEWAPPNAME | &quot;ViewAppName&quot;
 EDITAPPASSETS | &quot;EditAppAssets&quot;
 EDITAPPFEATURES | &quot;EditAppFeatures&quot;
 VIEWTEAMMATES | &quot;ViewTeammates&quot;

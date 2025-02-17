@@ -119,6 +119,22 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getAppNameTest() throws Exception {
+        String appId = null;
+        RestApiStringResult response = api.getAppName(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getAppsTest() throws Exception {
         String nameFilter = null;
         Integer page = null;
