@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * SafeWaitHandle
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-21T09:39:08.899Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-02-24T13:37:20.540Z")
 public class SafeWaitHandle {
   @SerializedName("IsInvalid")
   private Boolean isInvalid = null;
