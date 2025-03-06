@@ -30,7 +30,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-05T11:03:26.788Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-06T15:29:18.975Z")
 public class TeammateBase {
   /**
    * App access level
@@ -46,6 +46,8 @@ public class TeammateBase {
     MANAGEDOWNER("ManagedOwner"),
     
     INTEGRATOR("Integrator"),
+    
+    PROPERTYMANAGER("PropertyManager"),
     
     STOREMANAGER("StoreManager"),
     
@@ -105,6 +107,9 @@ public class TeammateBase {
 
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
+
+  @SerializedName("PropertyIds")
+  private List<String> propertyIds = null;
 
   public TeammateBase appAccessLevel(AppAccessLevelEnum appAccessLevel) {
     this.appAccessLevel = appAccessLevel;
@@ -168,6 +173,32 @@ public class TeammateBase {
     this.storeIds = storeIds;
   }
 
+  public TeammateBase propertyIds(List<String> propertyIds) {
+    this.propertyIds = propertyIds;
+    return this;
+  }
+
+  public TeammateBase addPropertyIdsItem(String propertyIdsItem) {
+    if (this.propertyIds == null) {
+      this.propertyIds = new ArrayList<String>();
+    }
+    this.propertyIds.add(propertyIdsItem);
+    return this;
+  }
+
+   /**
+   * Property Ids the user has access to (if HasAccessToAllStores is false)
+   * @return propertyIds
+  **/
+  @ApiModelProperty(value = "Property Ids the user has access to (if HasAccessToAllStores is false)")
+  public List<String> getPropertyIds() {
+    return propertyIds;
+  }
+
+  public void setPropertyIds(List<String> propertyIds) {
+    this.propertyIds = propertyIds;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -180,12 +211,13 @@ public class TeammateBase {
     TeammateBase teammateBase = (TeammateBase) o;
     return Objects.equals(this.appAccessLevel, teammateBase.appAccessLevel) &&
         Objects.equals(this.hasAccessToAllStores, teammateBase.hasAccessToAllStores) &&
-        Objects.equals(this.storeIds, teammateBase.storeIds);
+        Objects.equals(this.storeIds, teammateBase.storeIds) &&
+        Objects.equals(this.propertyIds, teammateBase.propertyIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appAccessLevel, hasAccessToAllStores, storeIds);
+    return Objects.hash(appAccessLevel, hasAccessToAllStores, storeIds, propertyIds);
   }
 
 
@@ -197,6 +229,7 @@ public class TeammateBase {
     sb.append("    appAccessLevel: ").append(toIndentedString(appAccessLevel)).append("\n");
     sb.append("    hasAccessToAllStores: ").append(toIndentedString(hasAccessToAllStores)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
+    sb.append("    propertyIds: ").append(toIndentedString(propertyIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }
