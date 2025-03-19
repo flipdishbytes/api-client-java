@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Delivery Zone Deleted Event
  */
 @ApiModel(description = "Delivery Zone Deleted Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-12T15:19:17.920Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T14:39:19.264Z")
 public class DeliveryZoneDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **storeGroupId** | **Integer** | Store group Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which updated opening hours for this store |  [optional]
 **deliveryType** | [**DeliveryTypeEnum**](#DeliveryTypeEnum) | Type of opening hours Delivery / Pickup |  [optional]
+**deliveryTypeString** | [**DeliveryTypeStringEnum**](#DeliveryTypeStringEnum) | Type of opening hours Delivery / Pickup as a string |  [optional]
 **businessHoursPeriodOld** | [**BusinessHoursPeriod**](BusinessHoursPeriod.md) | The period that was updated |  [optional]
 **businessHoursPeriod** | [**BusinessHoursPeriod**](BusinessHoursPeriod.md) | The new values of the period |  [optional]
 **description** | **String** | Description |  [optional]
@@ -22,6 +23,14 @@ Name | Type | Description | Notes
 
 <a name="DeliveryTypeEnum"></a>
 ## Enum: DeliveryTypeEnum
+Name | Value
+---- | -----
+DELIVERY | &quot;Delivery&quot;
+PICKUP | &quot;Pickup&quot;
+
+
+<a name="DeliveryTypeStringEnum"></a>
+## Enum: DeliveryTypeStringEnum
 Name | Value
 ---- | -----
 DELIVERY | &quot;Delivery&quot;

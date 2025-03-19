@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-12T15:19:17.920Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T14:39:19.264Z")
 public class RestApiArrayResultEmvTerminalWithAssignments {
   @SerializedName("Data")
   private List<EmvTerminalWithAssignments> data = new ArrayList<EmvTerminalWithAssignments>();

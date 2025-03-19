@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Opening Hours Updated Event
  */
 @ApiModel(description = "Store Opening Hours Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-12T15:19:17.920Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T14:39:19.264Z")
 public class StoreOpeningHoursUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -98,6 +98,56 @@ public class StoreOpeningHoursUpdatedEvent {
 
   @SerializedName("DeliveryType")
   private DeliveryTypeEnum deliveryType = null;
+
+  /**
+   * Type of opening hours Delivery / Pickup as a string
+   */
+  @JsonAdapter(DeliveryTypeStringEnum.Adapter.class)
+  public enum DeliveryTypeStringEnum {
+    DELIVERY("Delivery"),
+    
+    PICKUP("Pickup");
+
+    private String value;
+
+    DeliveryTypeStringEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static DeliveryTypeStringEnum fromValue(String text) {
+      for (DeliveryTypeStringEnum b : DeliveryTypeStringEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<DeliveryTypeStringEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final DeliveryTypeStringEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public DeliveryTypeStringEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return DeliveryTypeStringEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("DeliveryTypeString")
+  private DeliveryTypeStringEnum deliveryTypeString = null;
 
   @SerializedName("BusinessHoursPeriodOld")
   private BusinessHoursPeriod businessHoursPeriodOld = null;
@@ -229,6 +279,24 @@ public class StoreOpeningHoursUpdatedEvent {
 
   public void setDeliveryType(DeliveryTypeEnum deliveryType) {
     this.deliveryType = deliveryType;
+  }
+
+  public StoreOpeningHoursUpdatedEvent deliveryTypeString(DeliveryTypeStringEnum deliveryTypeString) {
+    this.deliveryTypeString = deliveryTypeString;
+    return this;
+  }
+
+   /**
+   * Type of opening hours Delivery / Pickup as a string
+   * @return deliveryTypeString
+  **/
+  @ApiModelProperty(value = "Type of opening hours Delivery / Pickup as a string")
+  public DeliveryTypeStringEnum getDeliveryTypeString() {
+    return deliveryTypeString;
+  }
+
+  public void setDeliveryTypeString(DeliveryTypeStringEnum deliveryTypeString) {
+    this.deliveryTypeString = deliveryTypeString;
   }
 
   public StoreOpeningHoursUpdatedEvent businessHoursPeriodOld(BusinessHoursPeriod businessHoursPeriodOld) {
@@ -391,6 +459,7 @@ public class StoreOpeningHoursUpdatedEvent {
         Objects.equals(this.storeGroupId, storeOpeningHoursUpdatedEvent.storeGroupId) &&
         Objects.equals(this.user, storeOpeningHoursUpdatedEvent.user) &&
         Objects.equals(this.deliveryType, storeOpeningHoursUpdatedEvent.deliveryType) &&
+        Objects.equals(this.deliveryTypeString, storeOpeningHoursUpdatedEvent.deliveryTypeString) &&
         Objects.equals(this.businessHoursPeriodOld, storeOpeningHoursUpdatedEvent.businessHoursPeriodOld) &&
         Objects.equals(this.businessHoursPeriod, storeOpeningHoursUpdatedEvent.businessHoursPeriod) &&
         Objects.equals(this.description, storeOpeningHoursUpdatedEvent.description) &&
@@ -403,7 +472,7 @@ public class StoreOpeningHoursUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, orgId, storeId, storeGroupId, user, deliveryType, businessHoursPeriodOld, businessHoursPeriod, description, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, orgId, storeId, storeGroupId, user, deliveryType, deliveryTypeString, businessHoursPeriodOld, businessHoursPeriod, description, flipdishEventId, createTime, position, appId, ipAddress);
   }
 
 
@@ -418,6 +487,7 @@ public class StoreOpeningHoursUpdatedEvent {
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");
+    sb.append("    deliveryTypeString: ").append(toIndentedString(deliveryTypeString)).append("\n");
     sb.append("    businessHoursPeriodOld: ").append(toIndentedString(businessHoursPeriodOld)).append("\n");
     sb.append("    businessHoursPeriod: ").append(toIndentedString(businessHoursPeriod)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
