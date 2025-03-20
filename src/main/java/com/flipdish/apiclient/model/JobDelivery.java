@@ -32,7 +32,7 @@ import java.io.IOException;
  * Job Delivery
  */
 @ApiModel(description = "Job Delivery")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T14:39:19.264Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
 public class JobDelivery {
   @SerializedName("Id")
   private Integer id = null;

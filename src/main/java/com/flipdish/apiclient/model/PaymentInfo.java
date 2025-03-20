@@ -28,7 +28,7 @@ import java.io.IOException;
  * Payment information
  */
 @ApiModel(description = "Payment information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T14:39:19.264Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
 public class PaymentInfo {
   @SerializedName("Paid")
   private Boolean paid = null;
