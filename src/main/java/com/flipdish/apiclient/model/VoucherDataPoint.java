@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * A single data point in timeline graphs related to Vouchers
  */
 @ApiModel(description = "A single data point in timeline graphs related to Vouchers")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class VoucherDataPoint {
   @SerializedName("PeriodStart")
   private OffsetDateTime periodStart = null;

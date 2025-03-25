@@ -28,7 +28,7 @@ import java.io.IOException;
  * Lump discount details
  */
 @ApiModel(description = "Lump discount details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class LumpDiscountDetails {
   @SerializedName("DiscountAmount")
   private Double discountAmount = null;

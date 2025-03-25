@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** | Id of this account |  [optional]
 **storeNames** | **List&lt;String&gt;** | Store Names that are attached to this account |  [optional]
+**storeIds** | **List&lt;Integer&gt;** | Store Ids that are attached to this account |  [optional]
 **accountState** | [**AccountStateEnum**](#AccountStateEnum) | Status of Account |  [optional]
 **currencyCode** | **String** | Currency of Account |  [optional]
 **stripeConnectedAccountInfo** | [**StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) |  [optional]

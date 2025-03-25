@@ -30,7 +30,7 @@ import java.util.List;
  * Describes the configuration of tipping
  */
 @ApiModel(description = "Describes the configuration of tipping")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class TipConfiguration {
   @SerializedName("StoreId")
   private Integer storeId = null;

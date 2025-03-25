@@ -13,7 +13,7 @@
 
 package com.flipdish.apiclient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

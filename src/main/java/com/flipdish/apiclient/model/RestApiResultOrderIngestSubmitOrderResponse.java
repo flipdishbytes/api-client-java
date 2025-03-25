@@ -29,7 +29,7 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class RestApiResultOrderIngestSubmitOrderResponse {
   @SerializedName("Data")
   private OrderIngestSubmitOrderResponse data = null;

@@ -32,13 +32,16 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-20T12:41:04.374Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-25T09:00:30.301Z")
 public class BankAccountSummary {
   @SerializedName("Id")
   private Integer id = null;
 
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
+
+  @SerializedName("StoreIds")
+  private List<Integer> storeIds = null;
 
   /**
    * Status of Account
@@ -214,6 +217,32 @@ public class BankAccountSummary {
 
   public void setStoreNames(List<String> storeNames) {
     this.storeNames = storeNames;
+  }
+
+  public BankAccountSummary storeIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
+    return this;
+  }
+
+  public BankAccountSummary addStoreIdsItem(Integer storeIdsItem) {
+    if (this.storeIds == null) {
+      this.storeIds = new ArrayList<Integer>();
+    }
+    this.storeIds.add(storeIdsItem);
+    return this;
+  }
+
+   /**
+   * Store Ids that are attached to this account
+   * @return storeIds
+  **/
+  @ApiModelProperty(value = "Store Ids that are attached to this account")
+  public List<Integer> getStoreIds() {
+    return storeIds;
+  }
+
+  public void setStoreIds(List<Integer> storeIds) {
+    this.storeIds = storeIds;
   }
 
   public BankAccountSummary accountState(AccountStateEnum accountState) {
@@ -416,6 +445,7 @@ public class BankAccountSummary {
     BankAccountSummary bankAccountSummary = (BankAccountSummary) o;
     return Objects.equals(this.id, bankAccountSummary.id) &&
         Objects.equals(this.storeNames, bankAccountSummary.storeNames) &&
+        Objects.equals(this.storeIds, bankAccountSummary.storeIds) &&
         Objects.equals(this.accountState, bankAccountSummary.accountState) &&
         Objects.equals(this.currencyCode, bankAccountSummary.currencyCode) &&
         Objects.equals(this.stripeConnectedAccountInfo, bankAccountSummary.stripeConnectedAccountInfo) &&
@@ -430,7 +460,7 @@ public class BankAccountSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, storeNames, accountState, currencyCode, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
+    return Objects.hash(id, storeNames, storeIds, accountState, currencyCode, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
   }
 
 
@@ -441,6 +471,7 @@ public class BankAccountSummary {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
+    sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    accountState: ").append(toIndentedString(accountState)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    stripeConnectedAccountInfo: ").append(toIndentedString(stripeConnectedAccountInfo)).append("\n");
