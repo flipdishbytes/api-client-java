@@ -19,6 +19,7 @@ WEB | &quot;Web&quot;
 APP | &quot;App&quot;
 KIOSK | &quot;Kiosk&quot;
 POS | &quot;Pos&quot;
+NONE | &quot;None&quot;
 
 
 
