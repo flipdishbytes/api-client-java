@@ -23,12 +23,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Store Group
  */
 @ApiModel(description = "Store Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-03T14:49:56.858Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-04T11:08:06.739Z")
 public class StoreGroup {
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;
@@ -44,6 +46,9 @@ public class StoreGroup {
 
   @SerializedName("PickupMenuMessage")
   private String pickupMenuMessage = null;
+
+  @SerializedName("BrandIds")
+  private List<String> brandIds = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -410,6 +415,32 @@ public class StoreGroup {
     this.pickupMenuMessage = pickupMenuMessage;
   }
 
+  public StoreGroup brandIds(List<String> brandIds) {
+    this.brandIds = brandIds;
+    return this;
+  }
+
+  public StoreGroup addBrandIdsItem(String brandIdsItem) {
+    if (this.brandIds == null) {
+      this.brandIds = new ArrayList<String>();
+    }
+    this.brandIds.add(brandIdsItem);
+    return this;
+  }
+
+   /**
+   * List of brand ids (AppIds) that are associated with this store group
+   * @return brandIds
+  **/
+  @ApiModelProperty(value = "List of brand ids (AppIds) that are associated with this store group")
+  public List<String> getBrandIds() {
+    return brandIds;
+  }
+
+  public void setBrandIds(List<String> brandIds) {
+    this.brandIds = brandIds;
+  }
+
   public StoreGroup name(String name) {
     this.name = name;
     return this;
@@ -461,13 +492,14 @@ public class StoreGroup {
         Objects.equals(this.generalRatingCount, storeGroup.generalRatingCount) &&
         Objects.equals(this.deliveryMenuMessage, storeGroup.deliveryMenuMessage) &&
         Objects.equals(this.pickupMenuMessage, storeGroup.pickupMenuMessage) &&
+        Objects.equals(this.brandIds, storeGroup.brandIds) &&
         Objects.equals(this.name, storeGroup.name) &&
         Objects.equals(this.currency, storeGroup.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeGroupId, generalRating, generalRatingCount, deliveryMenuMessage, pickupMenuMessage, name, currency);
+    return Objects.hash(storeGroupId, generalRating, generalRatingCount, deliveryMenuMessage, pickupMenuMessage, brandIds, name, currency);
   }
 
 
@@ -481,6 +513,7 @@ public class StoreGroup {
     sb.append("    generalRatingCount: ").append(toIndentedString(generalRatingCount)).append("\n");
     sb.append("    deliveryMenuMessage: ").append(toIndentedString(deliveryMenuMessage)).append("\n");
     sb.append("    pickupMenuMessage: ").append(toIndentedString(pickupMenuMessage)).append("\n");
+    sb.append("    brandIds: ").append(toIndentedString(brandIds)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");

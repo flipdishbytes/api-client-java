@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **generalRatingCount** | **Integer** | Store Group rating count |  [optional]
 **deliveryMenuMessage** | **String** | Delivery menu message |  [optional]
 **pickupMenuMessage** | **String** | Pickup menu message |  [optional]
+**brandIds** | **List&lt;String&gt;** | List of brand ids (AppIds) that are associated with this store group |  [optional]
 **name** | **String** | Store Group Name |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency used by the stores in this group |  [optional]
 
