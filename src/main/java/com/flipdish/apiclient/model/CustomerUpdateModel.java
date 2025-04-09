@@ -28,7 +28,7 @@ import java.io.IOException;
  * Defines a customer update model
  */
 @ApiModel(description = "Defines a customer update model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-04T11:08:06.739Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
 public class CustomerUpdateModel {
   @SerializedName("CashOrdersEnabled")
   private Boolean cashOrdersEnabled = null;

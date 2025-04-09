@@ -32,7 +32,7 @@ import java.util.List;
  * Create a Catalog Group
  */
 @ApiModel(description = "Create a Catalog Group")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-04T11:08:06.739Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
 public class CreateGroup {
   @SerializedName("MinSelectCount")
   private Integer minSelectCount = null;

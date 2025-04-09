@@ -31,7 +31,7 @@ import java.util.List;
  * Order Fulfillment status with configured next actions
  */
 @ApiModel(description = "Order Fulfillment status with configured next actions")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-04T11:08:06.739Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
 public class OrderFulfillmentStatusWithConfigurationActions {
   @SerializedName("DefaultNextStatus")
   private String defaultNextStatus = null;

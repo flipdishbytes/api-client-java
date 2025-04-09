@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout with details broken down by Store
  */
 @ApiModel(description = "Holds the information for a whitelabel payout with details broken down by Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-04T11:08:06.739Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
 public class PayoutDetail {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
