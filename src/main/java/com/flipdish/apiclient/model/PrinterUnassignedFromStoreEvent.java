@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Printer assigned from store event
  */
 @ApiModel(description = "Printer assigned from store event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T07:19:04.756Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T08:01:37.930Z")
 public class PrinterUnassignedFromStoreEvent {
   @SerializedName("EventName")
   private String eventName = null;
