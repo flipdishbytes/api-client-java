@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Group Deleted Event
  */
 @ApiModel(description = "Store Group Deleted Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T07:19:04.756Z")
 public class StoreGroupDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;

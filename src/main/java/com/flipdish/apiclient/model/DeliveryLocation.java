@@ -29,7 +29,7 @@ import java.io.IOException;
  * Delivery location
  */
 @ApiModel(description = "Delivery location")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T07:19:04.756Z")
 public class DeliveryLocation {
   @SerializedName("Coordinates")
   private Coordinates coordinates = null;

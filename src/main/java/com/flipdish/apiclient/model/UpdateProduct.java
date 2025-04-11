@@ -32,7 +32,7 @@ import java.util.List;
  * Update Product
  */
 @ApiModel(description = "Update Product")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T07:19:04.756Z")
 public class UpdateProduct {
   @SerializedName("Sku")
   private String sku = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu element hide
  */
 @ApiModel(description = "Menu element hide")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-09T14:02:08.037Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T07:19:04.756Z")
 public class MenuElementHide {
   @SerializedName("MenuElementId")
   private Integer menuElementId = null;
