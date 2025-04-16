@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Allergen
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T08:01:37.930Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-16T11:36:40.705Z")
 public class Allergen {
   @SerializedName("AllergenId")
   private String allergenId = null;

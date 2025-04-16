@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-11T08:01:37.930Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-16T11:36:40.705Z")
 public class RestApiArrayResultFulfillmentStatesConfigurationSummary {
   @SerializedName("Data")
   private List<FulfillmentStatesConfigurationSummary> data = new ArrayList<FulfillmentStatesConfigurationSummary>();
