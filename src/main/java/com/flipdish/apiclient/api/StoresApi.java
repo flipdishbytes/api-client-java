@@ -3389,6 +3389,7 @@ public class StoresApi {
      * @param appId  (required)
      * @param searchQuery  (optional)
      * @param salesChannelType  (optional)
+     * @param excludeUnpublished  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param progressListener Progress listener
@@ -3396,7 +3397,7 @@ public class StoresApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStoresByAppIdCall(String appId, String searchQuery, String salesChannelType, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStoresByAppIdCall(String appId, String searchQuery, String salesChannelType, Boolean excludeUnpublished, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -3409,6 +3410,8 @@ public class StoresApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("searchQuery", searchQuery));
         if (salesChannelType != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("salesChannelType", salesChannelType));
+        if (excludeUnpublished != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("excludeUnpublished", excludeUnpublished));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -3450,7 +3453,7 @@ public class StoresApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStoresByAppIdValidateBeforeCall(String appId, String searchQuery, String salesChannelType, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStoresByAppIdValidateBeforeCall(String appId, String searchQuery, String salesChannelType, Boolean excludeUnpublished, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -3458,7 +3461,7 @@ public class StoresApi {
         }
         
 
-        com.squareup.okhttp.Call call = getStoresByAppIdCall(appId, searchQuery, salesChannelType, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoresByAppIdCall(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -3469,13 +3472,14 @@ public class StoresApi {
      * @param appId  (required)
      * @param searchQuery  (optional)
      * @param salesChannelType  (optional)
+     * @param excludeUnpublished  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @return RestApiPaginationResultStore
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiPaginationResultStore getStoresByAppId(String appId, String searchQuery, String salesChannelType, Integer page, Integer limit) throws ApiException {
-        ApiResponse<RestApiPaginationResultStore> resp = getStoresByAppIdWithHttpInfo(appId, searchQuery, salesChannelType, page, limit);
+    public RestApiPaginationResultStore getStoresByAppId(String appId, String searchQuery, String salesChannelType, Boolean excludeUnpublished, Integer page, Integer limit) throws ApiException {
+        ApiResponse<RestApiPaginationResultStore> resp = getStoresByAppIdWithHttpInfo(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
         return resp.getData();
     }
 
@@ -3485,13 +3489,14 @@ public class StoresApi {
      * @param appId  (required)
      * @param searchQuery  (optional)
      * @param salesChannelType  (optional)
+     * @param excludeUnpublished  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @return ApiResponse&lt;RestApiPaginationResultStore&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiPaginationResultStore> getStoresByAppIdWithHttpInfo(String appId, String searchQuery, String salesChannelType, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = getStoresByAppIdValidateBeforeCall(appId, searchQuery, salesChannelType, page, limit, null, null);
+    public ApiResponse<RestApiPaginationResultStore> getStoresByAppIdWithHttpInfo(String appId, String searchQuery, String salesChannelType, Boolean excludeUnpublished, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = getStoresByAppIdValidateBeforeCall(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit, null, null);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultStore>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -3502,13 +3507,14 @@ public class StoresApi {
      * @param appId  (required)
      * @param searchQuery  (optional)
      * @param salesChannelType  (optional)
+     * @param excludeUnpublished  (optional)
      * @param page  (optional)
      * @param limit  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoresByAppIdAsync(String appId, String searchQuery, String salesChannelType, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultStore> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoresByAppIdAsync(String appId, String searchQuery, String salesChannelType, Boolean excludeUnpublished, Integer page, Integer limit, final ApiCallback<RestApiPaginationResultStore> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3529,7 +3535,7 @@ public class StoresApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStoresByAppIdValidateBeforeCall(appId, searchQuery, salesChannelType, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoresByAppIdValidateBeforeCall(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiPaginationResultStore>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

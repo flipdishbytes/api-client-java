@@ -28,7 +28,7 @@ import java.io.IOException;
  * Application compliance model
  */
 @ApiModel(description = "Application compliance model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-16T11:36:40.705Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-17T06:46:32.991Z")
 public class AppCompliance {
   @SerializedName("AppId")
   private String appId = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * List&#39;s the issues with the last failed payment intent
  */
 @ApiModel(description = "List's the issues with the last failed payment intent")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-16T11:36:40.705Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-04-17T06:46:32.991Z")
 public class LastPaymentError {
   @SerializedName("Code")
   private String code = null;

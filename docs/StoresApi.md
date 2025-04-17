@@ -1344,7 +1344,7 @@ Name | Type | Description  | Notes
 
 <a name="getStoresByAppId"></a>
 # **getStoresByAppId**
-> RestApiPaginationResultStore getStoresByAppId(appId, searchQuery, salesChannelType, page, limit)
+> RestApiPaginationResultStore getStoresByAppId(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit)
 
 
 
@@ -1367,10 +1367,11 @@ StoresApi apiInstance = new StoresApi();
 String appId = "appId_example"; // String | 
 String searchQuery = "searchQuery_example"; // String | 
 String salesChannelType = "salesChannelType_example"; // String | 
+Boolean excludeUnpublished = true; // Boolean | 
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultStore result = apiInstance.getStoresByAppId(appId, searchQuery, salesChannelType, page, limit);
+    RestApiPaginationResultStore result = apiInstance.getStoresByAppId(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#getStoresByAppId");
@@ -1385,6 +1386,7 @@ Name | Type | Description  | Notes
  **appId** | **String**|  |
  **searchQuery** | **String**|  | [optional]
  **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos, None]
+ **excludeUnpublished** | **Boolean**|  | [optional]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 

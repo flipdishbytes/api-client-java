@@ -503,9 +503,10 @@ public class StoresApiTest {
         String appId = null;
         String searchQuery = null;
         String salesChannelType = null;
+        Boolean excludeUnpublished = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultStore response = api.getStoresByAppId(appId, searchQuery, salesChannelType, page, limit);
+        RestApiPaginationResultStore response = api.getStoresByAppId(appId, searchQuery, salesChannelType, excludeUnpublished, page, limit);
 
         // TODO: test validations
     }
