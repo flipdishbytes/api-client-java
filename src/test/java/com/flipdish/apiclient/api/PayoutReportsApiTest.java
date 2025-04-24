@@ -123,25 +123,6 @@ public class PayoutReportsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void payoutReport3ExportPayoutLedgerEntriesTest() throws Exception {
-        String appId = null;
-        Integer bankAccountId = null;
-        Integer payoutId = null;
-        List<Integer> stores = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutLedgerEntries(appId, bankAccountId, payoutId, stores);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void payoutReport3ExportPayoutOrdersTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
