@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-01T09:29:20.472Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-13T15:46:03.180Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -223,6 +223,10 @@ public class App {
     EDITSTOREKIOSKSETTINGS("EditStoreKioskSettings"),
     
     EDITSTOREORDERCAPACITY("EditStoreOrderCapacity"),
+    
+    ARCHIVESTORES("ArchiveStores"),
+    
+    PUBLISHSTORES("PublishStores"),
     
     UPDATEPRINTERTERMINALSASSIGN("UpdatePrinterTerminalsAssign"),
     

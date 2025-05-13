@@ -99,6 +99,8 @@ EDITSTORESOPENINGHOURSOVERRIDETEMPORARY | &quot;EditStoresOpeningHoursOverrideTe
 UPDATESTORESNAME | &quot;UpdateStoresName&quot;
 EDITSTOREKIOSKSETTINGS | &quot;EditStoreKioskSettings&quot;
 EDITSTOREORDERCAPACITY | &quot;EditStoreOrderCapacity&quot;
+ARCHIVESTORES | &quot;ArchiveStores&quot;
+PUBLISHSTORES | &quot;PublishStores&quot;
 UPDATEPRINTERTERMINALSASSIGN | &quot;UpdatePrinterTerminalsAssign&quot;
 UPDATEPRINTERTERMINALSTOGGLE | &quot;UpdatePrinterTerminalsToggle&quot;
 EDITSTORENOTIFICATIONS | &quot;EditStoreNotifications&quot;
