@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store note
  */
 @ApiModel(description = "Store note")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T15:05:48.422Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T16:39:32.165Z")
 public class StoreNote {
   @SerializedName("UserId")
   private Integer userId = null;

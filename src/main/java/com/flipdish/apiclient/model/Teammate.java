@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T15:05:48.422Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T16:39:32.165Z")
 public class Teammate {
   @SerializedName("TeammateId")
   private String teammateId = null;
@@ -110,8 +110,6 @@ public class Teammate {
     OWNER("Owner"),
     
     STOREOWNER("StoreOwner"),
-    
-    PROPERTYOWNER("PropertyOwner"),
     
     MANAGEDOWNER("ManagedOwner"),
     

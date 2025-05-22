@@ -30,7 +30,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T15:05:48.422Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T16:39:32.165Z")
 public class TeammateBase {
   /**
    * App access level
@@ -42,8 +42,6 @@ public class TeammateBase {
     OWNER("Owner"),
     
     STOREOWNER("StoreOwner"),
-    
-    PROPERTYOWNER("PropertyOwner"),
     
     MANAGEDOWNER("ManagedOwner"),
     

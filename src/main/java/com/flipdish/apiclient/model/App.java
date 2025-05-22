@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T15:05:48.422Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-22T16:39:32.165Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -71,8 +71,6 @@ public class App {
     OWNER("Owner"),
     
     STOREOWNER("StoreOwner"),
-    
-    PROPERTYOWNER("PropertyOwner"),
     
     MANAGEDOWNER("ManagedOwner"),
     
@@ -173,8 +171,6 @@ public class App {
     CREATETEAMMATEONBOARDING("CreateTeammateOnboarding"),
     
     CREATETEAMMATEPROPERTYMANAGER("CreateTeammatePropertyManager"),
-    
-    CREATETEAMMATEPROPERTYOWNER("CreateTeammatePropertyOwner"),
     
     VIEWAPMCONFIGURATIONS("ViewApmConfigurations"),
     
@@ -478,73 +474,7 @@ public class App {
     
     VIEWSUBSCRIPTIONS("ViewSubscriptions"),
     
-    VIEWINVOICES("ViewInvoices"),
-    
-    EDITACCOUNTSBILLS("EditAccountsBills"),
-    
-    VIEWACCOUNTSBILLS("ViewAccountsBills"),
-    
-    EDITACCOUNTSCATEGORIES("EditAccountsCategories"),
-    
-    VIEWACCOUNTSCATEGORIES("ViewAccountsCategories"),
-    
-    EDITACCOUNTSCREDITACCOUNTS("EditAccountsCreditAccounts"),
-    
-    VIEWACCOUNTSCREDITACCOUNTS("ViewAccountsCreditAccounts"),
-    
-    EDITACCOUNTSCREDITBOOKS("EditAccountsCreditBooks"),
-    
-    VIEWACCOUNTSCREDITBOOKS("ViewAccountsCreditBooks"),
-    
-    EDITACCOUNTSEXPENSES("EditAccountsExpenses"),
-    
-    VIEWACCOUNTSEXPENSES("ViewAccountsExpenses"),
-    
-    EDITACCOUNTSTRANSACTIONACCOUNTS("EditAccountsTransactionAccounts"),
-    
-    VIEWACCOUNTSTRANSACTIONACCOUNTS("ViewAccountsTransactionAccounts"),
-    
-    EDITDOCUMENTEXPLORER("EditDocumentExplorer"),
-    
-    VIEWDOCUMENTEXPLORER("ViewDocumentExplorer"),
-    
-    VIEWINVENTORYREPORTS("ViewInventoryReports"),
-    
-    EDITINVENTORYPURCHASEORDERS("EditInventoryPurchaseOrders"),
-    
-    VIEWINVENTORYPURCHASEORDERS("ViewInventoryPurchaseOrders"),
-    
-    EDITINVENTORYSTOCKITEMS("EditInventoryStockItems"),
-    
-    VIEWINVENTORYSTOCKITEMS("ViewInventoryStockItems"),
-    
-    EDITINVENTORYSUPPLIER("EditInventorySupplier"),
-    
-    VIEWINVENTORYSUPPLIER("ViewInventorySupplier"),
-    
-    EDITINVENTORYTRACKINGPROFILES("EditInventoryTrackingProfiles"),
-    
-    VIEWINVENTORYTRACKINGPROFILES("ViewInventoryTrackingProfiles"),
-    
-    VIEWPAYROLLREPORTS("ViewPayrollReports"),
-    
-    EDITPAYROLLHOLIDAY("EditPayrollHoliday"),
-    
-    VIEWPAYROLLHOLIDAY("ViewPayrollHoliday"),
-    
-    EDITPAYROLLROTA("EditPayrollRota"),
-    
-    VIEWPAYROLLROTA("ViewPayrollRota"),
-    
-    EDITPAYROLLSTAFF("EditPayrollStaff"),
-    
-    VIEWPAYROLLSTAFF("ViewPayrollStaff"),
-    
-    VIEWSALESREPORTS("ViewSalesReports"),
-    
-    VIEWCOSTREPORTS("ViewCostReports"),
-    
-    VIEWMENUREPORTS("ViewMenuReports");
+    VIEWINVOICES("ViewInvoices");
 
     private String value;
 

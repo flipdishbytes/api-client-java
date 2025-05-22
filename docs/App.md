@@ -40,7 +40,6 @@ Name | Value
 NONE | &quot;None&quot;
 OWNER | &quot;Owner&quot;
 STOREOWNER | &quot;StoreOwner&quot;
-PROPERTYOWNER | &quot;PropertyOwner&quot;
 MANAGEDOWNER | &quot;ManagedOwner&quot;
 INTEGRATOR | &quot;Integrator&quot;
 PROPERTYMANAGER | &quot;PropertyManager&quot;
@@ -74,7 +73,6 @@ CREATETEAMMATEFINANCEMANAGER | &quot;CreateTeammateFinanceManager&quot;
 CREATETEAMMATEINTEGRATOR | &quot;CreateTeammateIntegrator&quot;
 CREATETEAMMATEONBOARDING | &quot;CreateTeammateOnboarding&quot;
 CREATETEAMMATEPROPERTYMANAGER | &quot;CreateTeammatePropertyManager&quot;
-CREATETEAMMATEPROPERTYOWNER | &quot;CreateTeammatePropertyOwner&quot;
 VIEWAPMCONFIGURATIONS | &quot;ViewApmConfigurations&quot;
 EDITAPMCONFIGURATIONS | &quot;EditApmConfigurations&quot;
 VIEWCAMPAIGNSCONFIGURATIONS | &quot;ViewCampaignsConfigurations&quot;
@@ -227,39 +225,6 @@ UPDATEPAYGREENWHITELABELCONFIGURATION | &quot;UpdatePayGreenWhiteLabelConfigurat
 UPDATEPAYGREENSTORECONFIGURATION | &quot;UpdatePayGreenStoreConfiguration&quot;
 VIEWSUBSCRIPTIONS | &quot;ViewSubscriptions&quot;
 VIEWINVOICES | &quot;ViewInvoices&quot;
-EDITACCOUNTSBILLS | &quot;EditAccountsBills&quot;
-VIEWACCOUNTSBILLS | &quot;ViewAccountsBills&quot;
-EDITACCOUNTSCATEGORIES | &quot;EditAccountsCategories&quot;
-VIEWACCOUNTSCATEGORIES | &quot;ViewAccountsCategories&quot;
-EDITACCOUNTSCREDITACCOUNTS | &quot;EditAccountsCreditAccounts&quot;
-VIEWACCOUNTSCREDITACCOUNTS | &quot;ViewAccountsCreditAccounts&quot;
-EDITACCOUNTSCREDITBOOKS | &quot;EditAccountsCreditBooks&quot;
-VIEWACCOUNTSCREDITBOOKS | &quot;ViewAccountsCreditBooks&quot;
-EDITACCOUNTSEXPENSES | &quot;EditAccountsExpenses&quot;
-VIEWACCOUNTSEXPENSES | &quot;ViewAccountsExpenses&quot;
-EDITACCOUNTSTRANSACTIONACCOUNTS | &quot;EditAccountsTransactionAccounts&quot;
-VIEWACCOUNTSTRANSACTIONACCOUNTS | &quot;ViewAccountsTransactionAccounts&quot;
-EDITDOCUMENTEXPLORER | &quot;EditDocumentExplorer&quot;
-VIEWDOCUMENTEXPLORER | &quot;ViewDocumentExplorer&quot;
-VIEWINVENTORYREPORTS | &quot;ViewInventoryReports&quot;
-EDITINVENTORYPURCHASEORDERS | &quot;EditInventoryPurchaseOrders&quot;
-VIEWINVENTORYPURCHASEORDERS | &quot;ViewInventoryPurchaseOrders&quot;
-EDITINVENTORYSTOCKITEMS | &quot;EditInventoryStockItems&quot;
-VIEWINVENTORYSTOCKITEMS | &quot;ViewInventoryStockItems&quot;
-EDITINVENTORYSUPPLIER | &quot;EditInventorySupplier&quot;
-VIEWINVENTORYSUPPLIER | &quot;ViewInventorySupplier&quot;
-EDITINVENTORYTRACKINGPROFILES | &quot;EditInventoryTrackingProfiles&quot;
-VIEWINVENTORYTRACKINGPROFILES | &quot;ViewInventoryTrackingProfiles&quot;
-VIEWPAYROLLREPORTS | &quot;ViewPayrollReports&quot;
-EDITPAYROLLHOLIDAY | &quot;EditPayrollHoliday&quot;
-VIEWPAYROLLHOLIDAY | &quot;ViewPayrollHoliday&quot;
-EDITPAYROLLROTA | &quot;EditPayrollRota&quot;
-VIEWPAYROLLROTA | &quot;ViewPayrollRota&quot;
-EDITPAYROLLSTAFF | &quot;EditPayrollStaff&quot;
-VIEWPAYROLLSTAFF | &quot;ViewPayrollStaff&quot;
-VIEWSALESREPORTS | &quot;ViewSalesReports&quot;
-VIEWCOSTREPORTS | &quot;ViewCostReports&quot;
-VIEWMENUREPORTS | &quot;ViewMenuReports&quot;
 
 
 <a name="ApplicationCategoryEnum"></a>
