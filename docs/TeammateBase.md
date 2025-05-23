@@ -17,6 +17,7 @@ Name | Value
 NONE | &quot;None&quot;
 OWNER | &quot;Owner&quot;
 STOREOWNER | &quot;StoreOwner&quot;
+PROPERTYOWNER | &quot;PropertyOwner&quot;
 MANAGEDOWNER | &quot;ManagedOwner&quot;
 INTEGRATOR | &quot;Integrator&quot;
 PROPERTYMANAGER | &quot;PropertyManager&quot;

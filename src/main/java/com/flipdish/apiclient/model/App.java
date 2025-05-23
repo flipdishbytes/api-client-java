@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T07:23:07.691Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -71,6 +71,8 @@ public class App {
     OWNER("Owner"),
     
     STOREOWNER("StoreOwner"),
+    
+    PROPERTYOWNER("PropertyOwner"),
     
     MANAGEDOWNER("ManagedOwner"),
     
@@ -171,6 +173,8 @@ public class App {
     CREATETEAMMATEONBOARDING("CreateTeammateOnboarding"),
     
     CREATETEAMMATEPROPERTYMANAGER("CreateTeammatePropertyManager"),
+    
+    CREATETEAMMATEPROPERTYOWNER("CreateTeammatePropertyOwner"),
     
     VIEWAPMCONFIGURATIONS("ViewApmConfigurations"),
     
