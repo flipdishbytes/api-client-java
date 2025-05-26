@@ -27,12 +27,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Create menu section
  */
 @ApiModel(description = "Create menu section")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class CreateFullMenuSection {
   @SerializedName("MenuSectionAvailability")
   private MenuSectionAvailability menuSectionAvailability = null;
@@ -60,6 +61,9 @@ public class CreateFullMenuSection {
 
   @SerializedName("MenuSectionId")
   private Integer menuSectionId = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public CreateFullMenuSection menuSectionAvailability(MenuSectionAvailability menuSectionAvailability) {
     this.menuSectionAvailability = menuSectionAvailability;
@@ -231,6 +235,24 @@ public class CreateFullMenuSection {
     this.menuSectionId = menuSectionId;
   }
 
+  public CreateFullMenuSection publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -249,12 +271,13 @@ public class CreateFullMenuSection {
         Objects.equals(this.isAvailable, createFullMenuSection.isAvailable) &&
         Objects.equals(this.isHiddenFromCustomers, createFullMenuSection.isHiddenFromCustomers) &&
         Objects.equals(this.imageUrl, createFullMenuSection.imageUrl) &&
-        Objects.equals(this.menuSectionId, createFullMenuSection.menuSectionId);
+        Objects.equals(this.menuSectionId, createFullMenuSection.menuSectionId) &&
+        Objects.equals(this.publicId, createFullMenuSection.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuSectionAvailability, menuItems, name, description, displayOrder, isAvailable, isHiddenFromCustomers, imageUrl, menuSectionId);
+    return Objects.hash(menuSectionAvailability, menuItems, name, description, displayOrder, isAvailable, isHiddenFromCustomers, imageUrl, menuSectionId, publicId);
   }
 
 
@@ -272,6 +295,7 @@ public class CreateFullMenuSection {
     sb.append("    isHiddenFromCustomers: ").append(toIndentedString(isHiddenFromCustomers)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuSectionId: ").append(toIndentedString(menuSectionId)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

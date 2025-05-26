@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **minSelectCount** | **Integer** | Minimum items must be selected |  [optional]
 **maxSelectCount** | **Integer** | Maximum number of items can be selected |  [optional]
 **cellLayoutType** | [**CellLayoutTypeEnum**](#CellLayoutTypeEnum) | Small | Medium | Large  Affects the layout of the menu. |  [optional]
+**publicId** | [**UUID**](UUID.md) | Permanent reference to the item. |  [optional]
 
 
 <a name="CellLayoutTypeEnum"></a>

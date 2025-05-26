@@ -26,12 +26,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Create menu item option set item
  */
 @ApiModel(description = "Create menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class CreateFullMenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
@@ -116,6 +117,9 @@ public class CreateFullMenuItemOptionSetItem {
 
   @SerializedName("ImageUrl")
   private String imageUrl = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public CreateFullMenuItemOptionSetItem menuItemOptionSetItemId(Integer menuItemOptionSetItemId) {
     this.menuItemOptionSetItemId = menuItemOptionSetItemId;
@@ -323,6 +327,24 @@ public class CreateFullMenuItemOptionSetItem {
     this.imageUrl = imageUrl;
   }
 
+  public CreateFullMenuItemOptionSetItem publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -343,12 +365,13 @@ public class CreateFullMenuItemOptionSetItem {
         Objects.equals(this.isAvailable, createFullMenuItemOptionSetItem.isAvailable) &&
         Objects.equals(this.displayOrder, createFullMenuItemOptionSetItem.displayOrder) &&
         Objects.equals(this.cellLayoutType, createFullMenuItemOptionSetItem.cellLayoutType) &&
-        Objects.equals(this.imageUrl, createFullMenuItemOptionSetItem.imageUrl);
+        Objects.equals(this.imageUrl, createFullMenuItemOptionSetItem.imageUrl) &&
+        Objects.equals(this.publicId, createFullMenuItemOptionSetItem.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetItemId, metadata, taxRateName, nextMenuItemOptionSetId, name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(menuItemOptionSetItemId, metadata, taxRateName, nextMenuItemOptionSetId, name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl, publicId);
   }
 
 
@@ -368,6 +391,7 @@ public class CreateFullMenuItemOptionSetItem {
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

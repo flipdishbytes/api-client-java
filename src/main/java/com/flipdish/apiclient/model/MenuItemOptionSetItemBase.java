@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class MenuItemOptionSetItemBase {
   @SerializedName("Name")
   private String name = null;
@@ -101,6 +102,9 @@ public class MenuItemOptionSetItemBase {
 
   @SerializedName("ImageUrl")
   private String imageUrl = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public MenuItemOptionSetItemBase name(String name) {
     this.name = name;
@@ -228,6 +232,24 @@ public class MenuItemOptionSetItemBase {
     this.imageUrl = imageUrl;
   }
 
+  public MenuItemOptionSetItemBase publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -244,12 +266,13 @@ public class MenuItemOptionSetItemBase {
         Objects.equals(this.isAvailable, menuItemOptionSetItemBase.isAvailable) &&
         Objects.equals(this.displayOrder, menuItemOptionSetItemBase.displayOrder) &&
         Objects.equals(this.cellLayoutType, menuItemOptionSetItemBase.cellLayoutType) &&
-        Objects.equals(this.imageUrl, menuItemOptionSetItemBase.imageUrl);
+        Objects.equals(this.imageUrl, menuItemOptionSetItemBase.imageUrl) &&
+        Objects.equals(this.publicId, menuItemOptionSetItemBase.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl);
+    return Objects.hash(name, price, depositReturnFee, isAvailable, displayOrder, cellLayoutType, imageUrl, publicId);
   }
 
 
@@ -265,6 +288,7 @@ public class MenuItemOptionSetItemBase {
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

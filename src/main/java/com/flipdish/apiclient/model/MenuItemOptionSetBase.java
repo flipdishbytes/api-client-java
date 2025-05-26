@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Menu item option set
  */
 @ApiModel(description = "Menu item option set")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class MenuItemOptionSetBase {
   @SerializedName("Name")
   private String name = null;
@@ -98,6 +99,9 @@ public class MenuItemOptionSetBase {
 
   @SerializedName("CellLayoutType")
   private CellLayoutTypeEnum cellLayoutType = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public MenuItemOptionSetBase name(String name) {
     this.name = name;
@@ -207,6 +211,24 @@ public class MenuItemOptionSetBase {
     this.cellLayoutType = cellLayoutType;
   }
 
+  public MenuItemOptionSetBase publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -222,12 +244,13 @@ public class MenuItemOptionSetBase {
         Objects.equals(this.displayOrder, menuItemOptionSetBase.displayOrder) &&
         Objects.equals(this.minSelectCount, menuItemOptionSetBase.minSelectCount) &&
         Objects.equals(this.maxSelectCount, menuItemOptionSetBase.maxSelectCount) &&
-        Objects.equals(this.cellLayoutType, menuItemOptionSetBase.cellLayoutType);
+        Objects.equals(this.cellLayoutType, menuItemOptionSetBase.cellLayoutType) &&
+        Objects.equals(this.publicId, menuItemOptionSetBase.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType);
+    return Objects.hash(name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType, publicId);
   }
 
 
@@ -242,6 +265,7 @@ public class MenuItemOptionSetBase {
     sb.append("    minSelectCount: ").append(toIndentedString(minSelectCount)).append("\n");
     sb.append("    maxSelectCount: ").append(toIndentedString(maxSelectCount)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

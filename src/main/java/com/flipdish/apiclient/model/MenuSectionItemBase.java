@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Menu item
  */
 @ApiModel(description = "Menu item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class MenuSectionItemBase {
   @SerializedName("Name")
   private String name = null;
@@ -173,6 +174,9 @@ public class MenuSectionItemBase {
 
   @SerializedName("ExcludeFromVoucherDiscounting")
   private Boolean excludeFromVoucherDiscounting = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public MenuSectionItemBase name(String name) {
     this.name = name;
@@ -426,6 +430,24 @@ public class MenuSectionItemBase {
     this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
   }
 
+  public MenuSectionItemBase publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -449,12 +471,13 @@ public class MenuSectionItemBase {
         Objects.equals(this.imageName, menuSectionItemBase.imageName) &&
         Objects.equals(this.imageUrl, menuSectionItemBase.imageUrl) &&
         Objects.equals(this.menuItemId, menuSectionItemBase.menuItemId) &&
-        Objects.equals(this.excludeFromVoucherDiscounting, menuSectionItemBase.excludeFromVoucherDiscounting);
+        Objects.equals(this.excludeFromVoucherDiscounting, menuSectionItemBase.excludeFromVoucherDiscounting) &&
+        Objects.equals(this.publicId, menuSectionItemBase.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
+    return Objects.hash(name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting, publicId);
   }
 
 
@@ -477,6 +500,7 @@ public class MenuSectionItemBase {
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
     sb.append("    excludeFromVoucherDiscounting: ").append(toIndentedString(excludeFromVoucherDiscounting)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

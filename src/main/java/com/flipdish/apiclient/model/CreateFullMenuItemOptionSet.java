@@ -26,12 +26,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Create menu item option set
  */
 @ApiModel(description = "Create menu item option set")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class CreateFullMenuItemOptionSet {
   @SerializedName("MenuItemOptionSetId")
   private Integer menuItemOptionSetId = null;
@@ -107,6 +108,9 @@ public class CreateFullMenuItemOptionSet {
 
   @SerializedName("CellLayoutType")
   private CellLayoutTypeEnum cellLayoutType = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public CreateFullMenuItemOptionSet menuItemOptionSetId(Integer menuItemOptionSetId) {
     this.menuItemOptionSetId = menuItemOptionSetId;
@@ -260,6 +264,24 @@ public class CreateFullMenuItemOptionSet {
     this.cellLayoutType = cellLayoutType;
   }
 
+  public CreateFullMenuItemOptionSet publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -277,12 +299,13 @@ public class CreateFullMenuItemOptionSet {
         Objects.equals(this.displayOrder, createFullMenuItemOptionSet.displayOrder) &&
         Objects.equals(this.minSelectCount, createFullMenuItemOptionSet.minSelectCount) &&
         Objects.equals(this.maxSelectCount, createFullMenuItemOptionSet.maxSelectCount) &&
-        Objects.equals(this.cellLayoutType, createFullMenuItemOptionSet.cellLayoutType);
+        Objects.equals(this.cellLayoutType, createFullMenuItemOptionSet.cellLayoutType) &&
+        Objects.equals(this.publicId, createFullMenuItemOptionSet.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSetId, menuItemOptionSetItems, name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType);
+    return Objects.hash(menuItemOptionSetId, menuItemOptionSetItems, name, isMasterOptionSet, displayOrder, minSelectCount, maxSelectCount, cellLayoutType, publicId);
   }
 
 
@@ -299,6 +322,7 @@ public class CreateFullMenuItemOptionSet {
     sb.append("    minSelectCount: ").append(toIndentedString(minSelectCount)).append("\n");
     sb.append("    maxSelectCount: ").append(toIndentedString(maxSelectCount)).append("\n");
     sb.append("    cellLayoutType: ").append(toIndentedString(cellLayoutType)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

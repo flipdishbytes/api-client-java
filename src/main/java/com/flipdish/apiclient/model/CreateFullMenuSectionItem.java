@@ -27,12 +27,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Create menu section item
  */
 @ApiModel(description = "Create menu section item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class CreateFullMenuSectionItem {
   @SerializedName("MenuItemOptionSets")
   private List<CreateFullMenuItemOptionSet> menuItemOptionSets = null;
@@ -186,6 +187,9 @@ public class CreateFullMenuSectionItem {
 
   @SerializedName("ExcludeFromVoucherDiscounting")
   private Boolean excludeFromVoucherDiscounting = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public CreateFullMenuSectionItem menuItemOptionSets(List<CreateFullMenuItemOptionSet> menuItemOptionSets) {
     this.menuItemOptionSets = menuItemOptionSets;
@@ -509,6 +513,24 @@ public class CreateFullMenuSectionItem {
     this.excludeFromVoucherDiscounting = excludeFromVoucherDiscounting;
   }
 
+  public CreateFullMenuSectionItem publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -535,12 +557,13 @@ public class CreateFullMenuSectionItem {
         Objects.equals(this.imageName, createFullMenuSectionItem.imageName) &&
         Objects.equals(this.imageUrl, createFullMenuSectionItem.imageUrl) &&
         Objects.equals(this.menuItemId, createFullMenuSectionItem.menuItemId) &&
-        Objects.equals(this.excludeFromVoucherDiscounting, createFullMenuSectionItem.excludeFromVoucherDiscounting);
+        Objects.equals(this.excludeFromVoucherDiscounting, createFullMenuSectionItem.excludeFromVoucherDiscounting) &&
+        Objects.equals(this.publicId, createFullMenuSectionItem.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting);
+    return Objects.hash(menuItemOptionSets, metadata, taxRateName, name, description, spicinessRating, price, depositReturnFee, displayOrder, alcohol, isAvailable, cellLayoutType, disableVouchers, imageName, imageUrl, menuItemId, excludeFromVoucherDiscounting, publicId);
   }
 
 
@@ -566,6 +589,7 @@ public class CreateFullMenuSectionItem {
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuItemId: ").append(toIndentedString(menuItemId)).append("\n");
     sb.append("    excludeFromVoucherDiscounting: ").append(toIndentedString(excludeFromVoucherDiscounting)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

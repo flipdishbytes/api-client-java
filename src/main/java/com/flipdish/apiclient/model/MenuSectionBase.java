@@ -23,12 +23,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Menu section
  */
 @ApiModel(description = "Menu section")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class MenuSectionBase {
   @SerializedName("Name")
   private String name = null;
@@ -50,6 +51,9 @@ public class MenuSectionBase {
 
   @SerializedName("MenuSectionId")
   private Integer menuSectionId = null;
+
+  @SerializedName("PublicId")
+  private UUID publicId = null;
 
   public MenuSectionBase name(String name) {
     this.name = name;
@@ -177,6 +181,24 @@ public class MenuSectionBase {
     this.menuSectionId = menuSectionId;
   }
 
+  public MenuSectionBase publicId(UUID publicId) {
+    this.publicId = publicId;
+    return this;
+  }
+
+   /**
+   * Permanent reference to the item.
+   * @return publicId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Permanent reference to the item.")
+  public UUID getPublicId() {
+    return publicId;
+  }
+
+  public void setPublicId(UUID publicId) {
+    this.publicId = publicId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -193,12 +215,13 @@ public class MenuSectionBase {
         Objects.equals(this.isAvailable, menuSectionBase.isAvailable) &&
         Objects.equals(this.isHiddenFromCustomers, menuSectionBase.isHiddenFromCustomers) &&
         Objects.equals(this.imageUrl, menuSectionBase.imageUrl) &&
-        Objects.equals(this.menuSectionId, menuSectionBase.menuSectionId);
+        Objects.equals(this.menuSectionId, menuSectionBase.menuSectionId) &&
+        Objects.equals(this.publicId, menuSectionBase.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, displayOrder, isAvailable, isHiddenFromCustomers, imageUrl, menuSectionId);
+    return Objects.hash(name, description, displayOrder, isAvailable, isHiddenFromCustomers, imageUrl, menuSectionId, publicId);
   }
 
 
@@ -214,6 +237,7 @@ public class MenuSectionBase {
     sb.append("    isHiddenFromCustomers: ").append(toIndentedString(isHiddenFromCustomers)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    menuSectionId: ").append(toIndentedString(menuSectionId)).append("\n");
+    sb.append("    publicId: ").append(toIndentedString(publicId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Business Hours Override Deleted
  */
 @ApiModel(description = "Store Business Hours Override Deleted")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-23T09:48:56.818Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-05-26T14:54:38.092Z")
 public class StoreBusinessHoursOverrideDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
