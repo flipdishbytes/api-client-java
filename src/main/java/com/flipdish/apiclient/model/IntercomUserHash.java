@@ -28,7 +28,7 @@ import java.io.IOException;
  * Intercom user hash
  */
 @ApiModel(description = "Intercom user hash")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-02T13:12:59.241Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-03T15:41:04.910Z")
 public class IntercomUserHash {
   @SerializedName("UserHash")
   private String userHash = null;
