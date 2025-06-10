@@ -31,7 +31,7 @@ import java.util.List;
  * Owner Entity Configurations
  */
 @ApiModel(description = "Owner Entity Configurations")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-04T09:05:32.558Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-10T15:49:57.411Z")
 public class OwnerEntityConfigurations {
   @SerializedName("Configurations")
   private List<OwnerEntityConfiguration> configurations = null;
