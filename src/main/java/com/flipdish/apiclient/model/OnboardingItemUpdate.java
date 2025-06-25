@@ -28,7 +28,7 @@ import java.io.IOException;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-25T09:54:38.842Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-25T11:18:31.935Z")
 public class OnboardingItemUpdate {
   /**
    * Completion Status for Onboarding Item

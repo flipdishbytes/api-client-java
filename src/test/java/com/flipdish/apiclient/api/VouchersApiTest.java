@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.RestApiArrayResultVoucherDataPoint;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultVoucherSummary;
+import com.flipdish.apiclient.model.RestApiResultVoucher;
 import com.flipdish.apiclient.model.RestApiResultVoucherWithStats;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import com.flipdish.apiclient.model.SetVoucherValidityPeriodsSimplifiedRequest;
@@ -54,6 +55,23 @@ public class VouchersApiTest {
         String appId = null;
         CreateVoucher voucher = null;
         RestApiResultVoucherWithStats response = api.createVoucher(appId, voucher);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getVoucherByCodeTest() throws Exception {
+        String appId = null;
+        String code = null;
+        RestApiResultVoucher response = api.getVoucherByCode(appId, code);
 
         // TODO: test validations
     }
