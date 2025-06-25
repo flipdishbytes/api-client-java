@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PayoutReport3DetailsFlipdishFees
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-25T11:18:31.935Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-06-25T12:28:44.982Z")
 public class PayoutReport3DetailsFlipdishFees {
   @SerializedName("WebAndAppCash")
   private Double webAndAppCash = null;
@@ -85,6 +85,9 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @SerializedName("Vat")
   private Double vat = null;
+
+  @SerializedName("RefundedFeesOnPosSales")
+  private Double refundedFeesOnPosSales = null;
 
   @SerializedName("Total")
   private Double total = null;
@@ -455,6 +458,24 @@ public class PayoutReport3DetailsFlipdishFees {
     this.vat = vat;
   }
 
+  public PayoutReport3DetailsFlipdishFees refundedFeesOnPosSales(Double refundedFeesOnPosSales) {
+    this.refundedFeesOnPosSales = refundedFeesOnPosSales;
+    return this;
+  }
+
+   /**
+   * Get refundedFeesOnPosSales
+   * @return refundedFeesOnPosSales
+  **/
+  @ApiModelProperty(value = "")
+  public Double getRefundedFeesOnPosSales() {
+    return refundedFeesOnPosSales;
+  }
+
+  public void setRefundedFeesOnPosSales(Double refundedFeesOnPosSales) {
+    this.refundedFeesOnPosSales = refundedFeesOnPosSales;
+  }
+
   public PayoutReport3DetailsFlipdishFees total(Double total) {
     this.total = total;
     return this;
@@ -646,6 +667,7 @@ public class PayoutReport3DetailsFlipdishFees {
         Objects.equals(this.otherIntegrationTips, payoutReport3DetailsFlipdishFees.otherIntegrationTips) &&
         Objects.equals(this.refundedFeesOnRefundedSales, payoutReport3DetailsFlipdishFees.refundedFeesOnRefundedSales) &&
         Objects.equals(this.vat, payoutReport3DetailsFlipdishFees.vat) &&
+        Objects.equals(this.refundedFeesOnPosSales, payoutReport3DetailsFlipdishFees.refundedFeesOnPosSales) &&
         Objects.equals(this.total, payoutReport3DetailsFlipdishFees.total) &&
         Objects.equals(this.thirdPartyIntegrationFeesAndTips, payoutReport3DetailsFlipdishFees.thirdPartyIntegrationFeesAndTips) &&
         Objects.equals(this.webAndAppCardOnXOrders, payoutReport3DetailsFlipdishFees.webAndAppCardOnXOrders) &&
@@ -659,7 +681,7 @@ public class PayoutReport3DetailsFlipdishFees {
 
   @Override
   public int hashCode() {
-    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCashRevenue, kioskCard, kioskCardRevenue, qropCash, qropCashRevenue, qropCard, qropCardRevenue, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, refundedFeesOnRefundedSales, vat, total, thirdPartyIntegrationFeesAndTips, webAndAppCardOnXOrders, webAndAppCashOnXOrders, kioskCardOnXOrders, kioskCashOnXOrders, qropCardOnXOrders, qropCashOnXOrders, posCardOnXOrders);
+    return Objects.hash(webAndAppCash, webAndAppCashRevenueIncludingTips, webAndAppCard, webAndAppCardRevenueIncludingTips, kioskCash, kioskCashRevenue, kioskCard, kioskCardRevenue, qropCash, qropCashRevenue, qropCard, qropCardRevenue, posCard, posCardRevenue, posCardOnFlipdishOrders, otherIntegrationFees, otherIntegrationTips, refundedFeesOnRefundedSales, vat, refundedFeesOnPosSales, total, thirdPartyIntegrationFeesAndTips, webAndAppCardOnXOrders, webAndAppCashOnXOrders, kioskCardOnXOrders, kioskCashOnXOrders, qropCardOnXOrders, qropCashOnXOrders, posCardOnXOrders);
   }
 
 
@@ -687,6 +709,7 @@ public class PayoutReport3DetailsFlipdishFees {
     sb.append("    otherIntegrationTips: ").append(toIndentedString(otherIntegrationTips)).append("\n");
     sb.append("    refundedFeesOnRefundedSales: ").append(toIndentedString(refundedFeesOnRefundedSales)).append("\n");
     sb.append("    vat: ").append(toIndentedString(vat)).append("\n");
+    sb.append("    refundedFeesOnPosSales: ").append(toIndentedString(refundedFeesOnPosSales)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("    thirdPartyIntegrationFeesAndTips: ").append(toIndentedString(thirdPartyIntegrationFeesAndTips)).append("\n");
     sb.append("    webAndAppCardOnXOrders: ").append(toIndentedString(webAndAppCardOnXOrders)).append("\n");
