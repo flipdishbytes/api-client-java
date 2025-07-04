@@ -29,7 +29,7 @@ import java.io.IOException;
  * Card reader
  */
 @ApiModel(description = "Card reader")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-04T10:24:46.587Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-04T11:13:48.615Z")
 public class CardReader {
   @SerializedName("Id")
   private String id = null;
