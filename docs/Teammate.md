@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **teammateId** | **String** | Unique indentifier |  [optional]
+**userId** | **Integer** | User ID of the teammate |  [optional]
 **name** | **String** | Name |  [optional]
 **lastActivity** | [**OffsetDateTime**](OffsetDateTime.md) | Last activity |  [optional]
 **appId** | **String** | Access level is for this App |  [optional]

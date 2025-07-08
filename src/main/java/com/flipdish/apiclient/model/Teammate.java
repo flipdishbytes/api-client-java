@@ -31,10 +31,13 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-04T11:13:48.615Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-08T09:27:17.066Z")
 public class Teammate {
   @SerializedName("TeammateId")
   private String teammateId = null;
+
+  @SerializedName("UserId")
+  private Integer userId = null;
 
   @SerializedName("Name")
   private String name = null;
@@ -197,6 +200,24 @@ public class Teammate {
 
   public void setTeammateId(String teammateId) {
     this.teammateId = teammateId;
+  }
+
+  public Teammate userId(Integer userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
+   * User ID of the teammate
+   * @return userId
+  **/
+  @ApiModelProperty(value = "User ID of the teammate")
+  public Integer getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Integer userId) {
+    this.userId = userId;
   }
 
   public Teammate name(String name) {
@@ -388,6 +409,7 @@ public class Teammate {
     }
     Teammate teammate = (Teammate) o;
     return Objects.equals(this.teammateId, teammate.teammateId) &&
+        Objects.equals(this.userId, teammate.userId) &&
         Objects.equals(this.name, teammate.name) &&
         Objects.equals(this.lastActivity, teammate.lastActivity) &&
         Objects.equals(this.appId, teammate.appId) &&
@@ -401,7 +423,7 @@ public class Teammate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(teammateId, name, lastActivity, appId, invitationStatus, email, appAccessLevel, hasAccessToAllStores, storeIds, propertyIds);
+    return Objects.hash(teammateId, userId, name, lastActivity, appId, invitationStatus, email, appAccessLevel, hasAccessToAllStores, storeIds, propertyIds);
   }
 
 
@@ -411,6 +433,7 @@ public class Teammate {
     sb.append("class Teammate {\n");
     
     sb.append("    teammateId: ").append(toIndentedString(teammateId)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    lastActivity: ").append(toIndentedString(lastActivity)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
