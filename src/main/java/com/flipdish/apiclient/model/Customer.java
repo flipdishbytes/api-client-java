@@ -29,10 +29,13 @@ import org.threeten.bp.OffsetDateTime;
  * Defines a customer
  */
 @ApiModel(description = "Defines a customer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-08T09:27:17.066Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
 public class Customer {
   @SerializedName("CustomerId")
   private Integer customerId = null;
+
+  @SerializedName("Name")
+  private String name = null;
 
   @SerializedName("RegistrationDate")
   private OffsetDateTime registrationDate = null;
@@ -65,6 +68,24 @@ public class Customer {
 
   public void setCustomerId(Integer customerId) {
     this.customerId = customerId;
+  }
+
+  public Customer name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Customer name
+   * @return name
+  **/
+  @ApiModelProperty(value = "Customer name")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public Customer registrationDate(OffsetDateTime registrationDate) {
@@ -168,6 +189,7 @@ public class Customer {
     }
     Customer customer = (Customer) o;
     return Objects.equals(this.customerId, customer.customerId) &&
+        Objects.equals(this.name, customer.name) &&
         Objects.equals(this.registrationDate, customer.registrationDate) &&
         Objects.equals(this.phoneNumber, customer.phoneNumber) &&
         Objects.equals(this.cashOrdersEnabled, customer.cashOrdersEnabled) &&
@@ -177,7 +199,7 @@ public class Customer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerId, registrationDate, phoneNumber, cashOrdersEnabled, cardOrdersEnabled, marketingEnabled);
+    return Objects.hash(customerId, name, registrationDate, phoneNumber, cashOrdersEnabled, cardOrdersEnabled, marketingEnabled);
   }
 
 
@@ -187,6 +209,7 @@ public class Customer {
     sb.append("class Customer {\n");
     
     sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    registrationDate: ").append(toIndentedString(registrationDate)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    cashOrdersEnabled: ").append(toIndentedString(cashOrdersEnabled)).append("\n");
