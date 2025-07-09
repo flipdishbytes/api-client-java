@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for creating a LocationArea
  */
 @ApiModel(description = "Input model for creating a LocationArea")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class CreateLocationArea {
   @SerializedName("LocationAreaName")
   private String locationAreaName = null;

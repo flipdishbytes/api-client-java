@@ -32,7 +32,7 @@ import java.util.Map;
  * Store summary
  */
 @ApiModel(description = "Store summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class StoreSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -327,6 +327,12 @@ public class StoreSummary {
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;
 
+  @SerializedName("TaxId")
+  private String taxId = null;
+
+  @SerializedName("PrettyAddress")
+  private String prettyAddress = null;
+
   public StoreSummary id(Integer id) {
     this.id = id;
     return this;
@@ -479,6 +485,42 @@ public class StoreSummary {
     this.storeGroupId = storeGroupId;
   }
 
+  public StoreSummary taxId(String taxId) {
+    this.taxId = taxId;
+    return this;
+  }
+
+   /**
+   * VAT number or generic Tax ID of the store
+   * @return taxId
+  **/
+  @ApiModelProperty(value = "VAT number or generic Tax ID of the store")
+  public String getTaxId() {
+    return taxId;
+  }
+
+  public void setTaxId(String taxId) {
+    this.taxId = taxId;
+  }
+
+  public StoreSummary prettyAddress(String prettyAddress) {
+    this.prettyAddress = prettyAddress;
+    return this;
+  }
+
+   /**
+   * Address of the store
+   * @return prettyAddress
+  **/
+  @ApiModelProperty(value = "Address of the store")
+  public String getPrettyAddress() {
+    return prettyAddress;
+  }
+
+  public void setPrettyAddress(String prettyAddress) {
+    this.prettyAddress = prettyAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -496,12 +538,14 @@ public class StoreSummary {
         Objects.equals(this.currency, storeSummary.currency) &&
         Objects.equals(this.coordinates, storeSummary.coordinates) &&
         Objects.equals(this.storeTimezone, storeSummary.storeTimezone) &&
-        Objects.equals(this.storeGroupId, storeSummary.storeGroupId);
+        Objects.equals(this.storeGroupId, storeSummary.storeGroupId) &&
+        Objects.equals(this.taxId, storeSummary.taxId) &&
+        Objects.equals(this.prettyAddress, storeSummary.prettyAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, menuId, metadata, currency, coordinates, storeTimezone, storeGroupId);
+    return Objects.hash(id, name, menuId, metadata, currency, coordinates, storeTimezone, storeGroupId, taxId, prettyAddress);
   }
 
 
@@ -518,6 +562,8 @@ public class StoreSummary {
     sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
     sb.append("    storeTimezone: ").append(toIndentedString(storeTimezone)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
+    sb.append("    taxId: ").append(toIndentedString(taxId)).append("\n");
+    sb.append("    prettyAddress: ").append(toIndentedString(prettyAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

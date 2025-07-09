@@ -28,7 +28,7 @@ import java.io.IOException;
  * Customer summary
  */
 @ApiModel(description = "Customer summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class CustomerSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -44,6 +44,9 @@ public class CustomerSummary {
 
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
+
+  @SerializedName("LanguagePreference")
+  private String languagePreference = null;
 
   public CustomerSummary id(Integer id) {
     this.id = id;
@@ -135,6 +138,24 @@ public class CustomerSummary {
     this.phoneNumber = phoneNumber;
   }
 
+  public CustomerSummary languagePreference(String languagePreference) {
+    this.languagePreference = languagePreference;
+    return this;
+  }
+
+   /**
+   * Preferred language of the consumer
+   * @return languagePreference
+  **/
+  @ApiModelProperty(value = "Preferred language of the consumer")
+  public String getLanguagePreference() {
+    return languagePreference;
+  }
+
+  public void setLanguagePreference(String languagePreference) {
+    this.languagePreference = languagePreference;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -149,12 +170,13 @@ public class CustomerSummary {
         Objects.equals(this.name, customerSummary.name) &&
         Objects.equals(this.emailAddress, customerSummary.emailAddress) &&
         Objects.equals(this.phoneNumberLocalFormat, customerSummary.phoneNumberLocalFormat) &&
-        Objects.equals(this.phoneNumber, customerSummary.phoneNumber);
+        Objects.equals(this.phoneNumber, customerSummary.phoneNumber) &&
+        Objects.equals(this.languagePreference, customerSummary.languagePreference);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, emailAddress, phoneNumberLocalFormat, phoneNumber);
+    return Objects.hash(id, name, emailAddress, phoneNumberLocalFormat, phoneNumber, languagePreference);
   }
 
 
@@ -168,6 +190,7 @@ public class CustomerSummary {
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    phoneNumberLocalFormat: ").append(toIndentedString(phoneNumberLocalFormat)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    languagePreference: ").append(toIndentedString(languagePreference)).append("\n");
     sb.append("}");
     return sb.toString();
   }

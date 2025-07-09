@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name |  [optional]
 **description** | **String** | Description |  [optional]
 **price** | **Double** | Price |  [optional]
+**taxAmount** | **Double** | Tax currency amount |  [optional]
 **priceIncludingOptionSetItems** | **Double** | Price including option set items |  [optional]
 **menuItemId** | **Integer** | Menu item identifier |  [optional]
 **menuItemDisplayOrder** | **Integer** | Menu item display order |  [optional]

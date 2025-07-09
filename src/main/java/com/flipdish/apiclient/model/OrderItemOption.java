@@ -32,7 +32,7 @@ import java.util.UUID;
  * Order item option
  */
 @ApiModel(description = "Order item option")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class OrderItemOption {
   @SerializedName("Metadata")
   private Map<String, String> metadata = null;
@@ -51,6 +51,9 @@ public class OrderItemOption {
 
   @SerializedName("Price")
   private Double price = null;
+
+  @SerializedName("TaxAmount")
+  private Double taxAmount = null;
 
   @SerializedName("MenuItemOptionDisplayOrder")
   private Integer menuItemOptionDisplayOrder = null;
@@ -177,6 +180,24 @@ public class OrderItemOption {
     this.price = price;
   }
 
+  public OrderItemOption taxAmount(Double taxAmount) {
+    this.taxAmount = taxAmount;
+    return this;
+  }
+
+   /**
+   * Tax currency amount
+   * @return taxAmount
+  **/
+  @ApiModelProperty(value = "Tax currency amount")
+  public Double getTaxAmount() {
+    return taxAmount;
+  }
+
+  public void setTaxAmount(Double taxAmount) {
+    this.taxAmount = taxAmount;
+  }
+
   public OrderItemOption menuItemOptionDisplayOrder(Integer menuItemOptionDisplayOrder) {
     this.menuItemOptionDisplayOrder = menuItemOptionDisplayOrder;
     return this;
@@ -247,6 +268,7 @@ public class OrderItemOption {
         Objects.equals(this.isMasterOptionSetItem, orderItemOption.isMasterOptionSetItem) &&
         Objects.equals(this.name, orderItemOption.name) &&
         Objects.equals(this.price, orderItemOption.price) &&
+        Objects.equals(this.taxAmount, orderItemOption.taxAmount) &&
         Objects.equals(this.menuItemOptionDisplayOrder, orderItemOption.menuItemOptionDisplayOrder) &&
         Objects.equals(this.menuItemOptionSetDisplayOrder, orderItemOption.menuItemOptionSetDisplayOrder) &&
         Objects.equals(this.depositReturnFee, orderItemOption.depositReturnFee);
@@ -254,7 +276,7 @@ public class OrderItemOption {
 
   @Override
   public int hashCode() {
-    return Objects.hash(metadata, menuItemOptionPublicId, menuItemOptionId, isMasterOptionSetItem, name, price, menuItemOptionDisplayOrder, menuItemOptionSetDisplayOrder, depositReturnFee);
+    return Objects.hash(metadata, menuItemOptionPublicId, menuItemOptionId, isMasterOptionSetItem, name, price, taxAmount, menuItemOptionDisplayOrder, menuItemOptionSetDisplayOrder, depositReturnFee);
   }
 
 
@@ -269,6 +291,7 @@ public class OrderItemOption {
     sb.append("    isMasterOptionSetItem: ").append(toIndentedString(isMasterOptionSetItem)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
     sb.append("    menuItemOptionDisplayOrder: ").append(toIndentedString(menuItemOptionDisplayOrder)).append("\n");
     sb.append("    menuItemOptionSetDisplayOrder: ").append(toIndentedString(menuItemOptionSetDisplayOrder)).append("\n");
     sb.append("    depositReturnFee: ").append(toIndentedString(depositReturnFee)).append("\n");

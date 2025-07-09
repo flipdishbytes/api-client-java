@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **isMasterOptionSetItem** | **Boolean** | Is master option set item |  [optional]
 **name** | **String** | Name |  [optional]
 **price** | **Double** | Price |  [optional]
+**taxAmount** | **Double** | Tax currency amount |  [optional]
 **menuItemOptionDisplayOrder** | **Integer** | Menu item option display order |  [optional]
 **menuItemOptionSetDisplayOrder** | **Integer** | Menu item option set display order |  [optional]
 **depositReturnFee** | **Double** | Deposit return fee |  [optional]

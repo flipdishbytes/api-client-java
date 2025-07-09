@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **orderDropOffLocation** | [**OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order |  [optional]
 **fulfillmentStatus** | [**OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order |  [optional]
 **orderBatchInfo** | [**OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information |  [optional]
+**taxItems** | [**List&lt;TaxItem&gt;**](TaxItem.md) | A collection of tax items on the order. |  [optional]
 **createdCampaignVoucherId** | **Integer** | The id of the campaign voucher that was created from this order |  [optional]
 **orderId** | **Integer** | Order identifier |  [optional]
 **localOrderId** | **String** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) |  [optional]
@@ -55,6 +56,7 @@ Name | Type | Description | Notes
 **orderTrackingCode** | **String** | Unique, 6 character long alpha numeric code for tracking. |  [optional]
 **deliveryFeeAreaId** | **Integer** | Delivery area identifier |  [optional]
 **receiptCode** | **String** | Code used to view the order&#39;s receipt |  [optional]
+**totalDepositReturnFeeAmount** | **Double** | This contains the total deposit return fee amount for the order. |  [optional]
 
 
 <a name="DeliveryTypeEnum"></a>

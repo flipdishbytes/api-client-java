@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order summary
  */
 @ApiModel(description = "Order summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class OrderSummary {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -1289,10 +1289,10 @@ public class OrderSummary {
   }
 
    /**
-   * Get deliveryLocation
+   * Delivery location details
    * @return deliveryLocation
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Delivery location details")
   public DeliveryLocation getDeliveryLocation() {
     return deliveryLocation;
   }

@@ -27,6 +27,7 @@ import com.flipdish.apiclient.model.OrderFulfillmentStatusBase;
 import com.flipdish.apiclient.model.OrderItem;
 import com.flipdish.apiclient.model.OrderVoucherSummary;
 import com.flipdish.apiclient.model.StoreSummary;
+import com.flipdish.apiclient.model.TaxItem;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,7 +44,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order
  */
 @ApiModel(description = "Order")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T07:10:47.528Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-09T10:14:03.817Z")
 public class Order {
   @SerializedName("Store")
   private StoreSummary store = null;
@@ -104,6 +105,9 @@ public class Order {
 
   @SerializedName("OrderBatchInfo")
   private OrderBatchSummary orderBatchInfo = null;
+
+  @SerializedName("TaxItems")
+  private List<TaxItem> taxItems = null;
 
   @SerializedName("CreatedCampaignVoucherId")
   private Integer createdCampaignVoucherId = null;
@@ -727,6 +731,9 @@ public class Order {
   @SerializedName("ReceiptCode")
   private String receiptCode = null;
 
+  @SerializedName("TotalDepositReturnFeeAmount")
+  private Double totalDepositReturnFeeAmount = null;
+
   public Order store(StoreSummary store) {
     this.store = store;
     return this;
@@ -1093,6 +1100,32 @@ public class Order {
 
   public void setOrderBatchInfo(OrderBatchSummary orderBatchInfo) {
     this.orderBatchInfo = orderBatchInfo;
+  }
+
+  public Order taxItems(List<TaxItem> taxItems) {
+    this.taxItems = taxItems;
+    return this;
+  }
+
+  public Order addTaxItemsItem(TaxItem taxItemsItem) {
+    if (this.taxItems == null) {
+      this.taxItems = new ArrayList<TaxItem>();
+    }
+    this.taxItems.add(taxItemsItem);
+    return this;
+  }
+
+   /**
+   * A collection of tax items on the order.
+   * @return taxItems
+  **/
+  @ApiModelProperty(value = "A collection of tax items on the order.")
+  public List<TaxItem> getTaxItems() {
+    return taxItems;
+  }
+
+  public void setTaxItems(List<TaxItem> taxItems) {
+    this.taxItems = taxItems;
   }
 
   public Order createdCampaignVoucherId(Integer createdCampaignVoucherId) {
@@ -1653,6 +1686,24 @@ public class Order {
     this.receiptCode = receiptCode;
   }
 
+  public Order totalDepositReturnFeeAmount(Double totalDepositReturnFeeAmount) {
+    this.totalDepositReturnFeeAmount = totalDepositReturnFeeAmount;
+    return this;
+  }
+
+   /**
+   * This contains the total deposit return fee amount for the order.
+   * @return totalDepositReturnFeeAmount
+  **/
+  @ApiModelProperty(value = "This contains the total deposit return fee amount for the order.")
+  public Double getTotalDepositReturnFeeAmount() {
+    return totalDepositReturnFeeAmount;
+  }
+
+  public void setTotalDepositReturnFeeAmount(Double totalDepositReturnFeeAmount) {
+    this.totalDepositReturnFeeAmount = totalDepositReturnFeeAmount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1683,6 +1734,7 @@ public class Order {
         Objects.equals(this.orderDropOffLocation, order.orderDropOffLocation) &&
         Objects.equals(this.fulfillmentStatus, order.fulfillmentStatus) &&
         Objects.equals(this.orderBatchInfo, order.orderBatchInfo) &&
+        Objects.equals(this.taxItems, order.taxItems) &&
         Objects.equals(this.createdCampaignVoucherId, order.createdCampaignVoucherId) &&
         Objects.equals(this.orderId, order.orderId) &&
         Objects.equals(this.localOrderId, order.localOrderId) &&
@@ -1713,12 +1765,13 @@ public class Order {
         Objects.equals(this.totalTax, order.totalTax) &&
         Objects.equals(this.orderTrackingCode, order.orderTrackingCode) &&
         Objects.equals(this.deliveryFeeAreaId, order.deliveryFeeAreaId) &&
-        Objects.equals(this.receiptCode, order.receiptCode);
+        Objects.equals(this.receiptCode, order.receiptCode) &&
+        Objects.equals(this.totalDepositReturnFeeAmount, order.totalDepositReturnFeeAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, createdCampaignVoucherId, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId, receiptCode);
+    return Objects.hash(store, customer, voucher, fees, orderItems, deliveryLocation, customerLocation, maskedPhoneNumber, dropOffLocationId, dropOffLocation, acceptedFor, inFraudZone, unusualHighValueOrder, rejectedByUserId, channelOrderId, channelOrderDisplayId, channel, orderDropOffLocation, fulfillmentStatus, orderBatchInfo, taxItems, createdCampaignVoucherId, orderId, localOrderId, deliveryType, pickupLocationType, tableServiceCatagory, tipAmount, deliveryAmount, orderItemsAmount, serviceChargeAmount, serviceChargePercentage, amount, processingFee, paymentAccountType, paymentAccountDescription, orderState, isPreOrder, placedTime, requestedForTime, chefNote, appType, userRating, paymentStatus, rejectionReason, refundedAmount, deliveryTrackingStatus, driverId, totalTax, orderTrackingCode, deliveryFeeAreaId, receiptCode, totalDepositReturnFeeAmount);
   }
 
 
@@ -1747,6 +1800,7 @@ public class Order {
     sb.append("    orderDropOffLocation: ").append(toIndentedString(orderDropOffLocation)).append("\n");
     sb.append("    fulfillmentStatus: ").append(toIndentedString(fulfillmentStatus)).append("\n");
     sb.append("    orderBatchInfo: ").append(toIndentedString(orderBatchInfo)).append("\n");
+    sb.append("    taxItems: ").append(toIndentedString(taxItems)).append("\n");
     sb.append("    createdCampaignVoucherId: ").append(toIndentedString(createdCampaignVoucherId)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    localOrderId: ").append(toIndentedString(localOrderId)).append("\n");
@@ -1778,6 +1832,7 @@ public class Order {
     sb.append("    orderTrackingCode: ").append(toIndentedString(orderTrackingCode)).append("\n");
     sb.append("    deliveryFeeAreaId: ").append(toIndentedString(deliveryFeeAreaId)).append("\n");
     sb.append("    receiptCode: ").append(toIndentedString(receiptCode)).append("\n");
+    sb.append("    totalDepositReturnFeeAmount: ").append(toIndentedString(totalDepositReturnFeeAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

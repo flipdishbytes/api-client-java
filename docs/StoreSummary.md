@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **coordinates** | [**Coordinates**](Coordinates.md) | Latitude and longitude of the store |  [optional]
 **storeTimezone** | **String** | Timezone of store |  [optional]
 **storeGroupId** | **Integer** | Store group id of store |  [optional]
+**taxId** | **String** | VAT number or generic Tax ID of the store |  [optional]
+**prettyAddress** | **String** | Address of the store |  [optional]
 
 
 <a name="CurrencyEnum"></a>

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **emailAddress** | **String** | Customer email address |  [optional]
 **phoneNumberLocalFormat** | **String** | Customer local phone number |  [optional]
 **phoneNumber** | **String** | Customer phone number |  [optional]
+**languagePreference** | **String** | Preferred language of the consumer |  [optional]
 
 
 
