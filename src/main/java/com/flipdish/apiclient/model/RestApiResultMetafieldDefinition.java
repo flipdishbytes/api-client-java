@@ -29,7 +29,7 @@ import java.io.IOException;
  * Rest api result
  */
 @ApiModel(description = "Rest api result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-10T10:15:46.025Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-10T15:57:19.779Z")
 public class RestApiResultMetafieldDefinition {
   @SerializedName("Data")
   private MetafieldDefinition data = null;
