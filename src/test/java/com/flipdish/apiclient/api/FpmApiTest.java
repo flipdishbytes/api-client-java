@@ -68,4 +68,20 @@ public class FpmApiTest {
         // TODO: test validations
     }
     
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getFpmForStoreTest() throws Exception {
+        Integer storeId = null;
+        TelephonyConfig response = api.getFpmForStore(storeId);
+
+        // TODO: test validations
+    }
+    
 }

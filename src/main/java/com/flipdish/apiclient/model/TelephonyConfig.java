@@ -28,13 +28,63 @@ import java.io.IOException;
  * Phone call
  */
 @ApiModel(description = "Phone call")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-11T06:56:49.011Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-11T10:23:39.380Z")
 public class TelephonyConfig {
   @SerializedName("TelephonyConfigId")
   private Integer telephonyConfigId = null;
 
   @SerializedName("ApmEnabled")
   private Boolean apmEnabled = null;
+
+  /**
+   * Type of telephony service
+   */
+  @JsonAdapter(TypeEnum.Adapter.class)
+  public enum TypeEnum {
+    PRERECORDED("PreRecorded"),
+    
+    VOICEAI("VoiceAI");
+
+    private String value;
+
+    TypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static TypeEnum fromValue(String text) {
+      for (TypeEnum b : TypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<TypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public TypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return TypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("Type")
+  private TypeEnum type = null;
 
   @SerializedName("ConsentEnabled")
   private Boolean consentEnabled = null;
@@ -91,6 +141,24 @@ public class TelephonyConfig {
 
   public void setApmEnabled(Boolean apmEnabled) {
     this.apmEnabled = apmEnabled;
+  }
+
+  public TelephonyConfig type(TypeEnum type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Type of telephony service
+   * @return type
+  **/
+  @ApiModelProperty(value = "Type of telephony service")
+  public TypeEnum getType() {
+    return type;
+  }
+
+  public void setType(TypeEnum type) {
+    this.type = type;
   }
 
   public TelephonyConfig consentEnabled(Boolean consentEnabled) {
@@ -231,6 +299,7 @@ public class TelephonyConfig {
     TelephonyConfig telephonyConfig = (TelephonyConfig) o;
     return Objects.equals(this.telephonyConfigId, telephonyConfig.telephonyConfigId) &&
         Objects.equals(this.apmEnabled, telephonyConfig.apmEnabled) &&
+        Objects.equals(this.type, telephonyConfig.type) &&
         Objects.equals(this.consentEnabled, telephonyConfig.consentEnabled) &&
         Objects.equals(this.phoneNumber, telephonyConfig.phoneNumber) &&
         Objects.equals(this.sendAppLinkSms, telephonyConfig.sendAppLinkSms) &&
@@ -242,7 +311,7 @@ public class TelephonyConfig {
 
   @Override
   public int hashCode() {
-    return Objects.hash(telephonyConfigId, apmEnabled, consentEnabled, phoneNumber, sendAppLinkSms, useCustomAppLinkSmsMessage, useCustomVoiceMessage, appLinkSmsMessage, resendApmMessageAfterDays);
+    return Objects.hash(telephonyConfigId, apmEnabled, type, consentEnabled, phoneNumber, sendAppLinkSms, useCustomAppLinkSmsMessage, useCustomVoiceMessage, appLinkSmsMessage, resendApmMessageAfterDays);
   }
 
 
@@ -253,6 +322,7 @@ public class TelephonyConfig {
     
     sb.append("    telephonyConfigId: ").append(toIndentedString(telephonyConfigId)).append("\n");
     sb.append("    apmEnabled: ").append(toIndentedString(apmEnabled)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    consentEnabled: ").append(toIndentedString(consentEnabled)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    sendAppLinkSms: ").append(toIndentedString(sendAppLinkSms)).append("\n");
