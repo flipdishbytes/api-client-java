@@ -28,7 +28,7 @@ import java.io.IOException;
  * White label configuration details
  */
 @ApiModel(description = "White label configuration details")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-10T15:57:19.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-11T06:56:49.011Z")
 public class WhiteLabelConfig {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
