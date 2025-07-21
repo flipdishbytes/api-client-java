@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **emailRequestMode** | [**EmailRequestModeEnum**](#EmailRequestModeEnum) | Display a popup to users requesting their email address |  [optional]
 **webToAppRedirect** | [**WebToAppRedirectEnum**](#WebToAppRedirectEnum) | Sends users to their native apps or request them to install the pwa |  [optional]
-**addressEntryType** | [**AddressEntryTypeEnum**](#AddressEntryTypeEnum) | Address entry type |  [optional]
+**addressEntryType** | [**AddressEntryTypeEnum**](#AddressEntryTypeEnum) | Address entry type - TextEntryManualDisallowed is the only supported configuration |  [optional]
 **displayDeliveryRestaurantListScreen** | **Boolean** | Display Pickup Restaurant List Screen |  [optional]
 
 

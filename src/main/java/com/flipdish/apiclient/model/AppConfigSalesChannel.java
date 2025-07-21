@@ -28,7 +28,7 @@ import java.io.IOException;
  * App Config Sales Channel
  */
 @ApiModel(description = "App Config Sales Channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-14T09:24:31.639Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-07-21T09:32:45.005Z")
 public class AppConfigSalesChannel {
   /**
    * Display a popup to users requesting their email address
@@ -139,7 +139,7 @@ public class AppConfigSalesChannel {
   private WebToAppRedirectEnum webToAppRedirect = null;
 
   /**
-   * Address entry type
+   * Address entry type - TextEntryManualDisallowed is the only supported configuration
    */
   @JsonAdapter(AddressEntryTypeEnum.Adapter.class)
   public enum AddressEntryTypeEnum {
@@ -235,10 +235,10 @@ public class AppConfigSalesChannel {
   }
 
    /**
-   * Address entry type
+   * Address entry type - TextEntryManualDisallowed is the only supported configuration
    * @return addressEntryType
   **/
-  @ApiModelProperty(value = "Address entry type")
+  @ApiModelProperty(value = "Address entry type - TextEntryManualDisallowed is the only supported configuration")
   public AddressEntryTypeEnum getAddressEntryType() {
     return addressEntryType;
   }
