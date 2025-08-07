@@ -357,6 +357,57 @@ public class MenusApiTest {
     }
     
     /**
+     * PRIVATE API, TEMPORARY ENDPOINT  RMS can check if a white label is migrated to RMS
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void menusIsWhiteLabelMigratedToRmsTest() throws Exception {
+        Integer whiteLabelId = null;
+        String appId = null;
+        Object response = api.menusIsWhiteLabelMigratedToRms(whiteLabelId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * PRIVATE API, TEMPORARY ENDPOINT  RMS can set the white label as migrated to RMS, which will block all Menu editing operations via Zeus
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void menusMarkWhiteLabelAsMigratedToRmsTest() throws Exception {
+        Integer whiteLabelId = null;
+        String appId = null;
+        Object response = api.menusMarkWhiteLabelAsMigratedToRms(whiteLabelId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * PRIVATE API, TEMPORARY ENDPOINT  RMS can set the white label as NOT migrated to RMS, which will unblock all Menu editing operations via Zeus
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void menusMarkWhiteLabelAsNotMigratedToRmsTest() throws Exception {
+        Integer whiteLabelId = null;
+        String appId = null;
+        Object response = api.menusMarkWhiteLabelAsNotMigratedToRms(whiteLabelId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Set if tax shows for a Menu
      *
      * 
