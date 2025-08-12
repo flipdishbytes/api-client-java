@@ -28,7 +28,7 @@ import java.io.IOException;
  * Describes an ID mapping between Flipdish Store and Channel Store
  */
 @ApiModel(description = "Describes an ID mapping between Flipdish Store and Channel Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-08T08:46:10.051Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T10:44:21.052Z")
 public class StoreChannelStoreMapping {
   @SerializedName("ChannelId")
   private Integer channelId = null;

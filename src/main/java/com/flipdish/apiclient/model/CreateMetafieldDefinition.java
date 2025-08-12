@@ -30,7 +30,7 @@ import java.util.List;
  * Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  */
 @ApiModel(description = "Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-08T08:46:10.051Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T10:44:21.052Z")
 public class CreateMetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;

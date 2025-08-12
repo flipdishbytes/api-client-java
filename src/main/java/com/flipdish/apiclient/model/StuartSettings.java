@@ -29,7 +29,7 @@ import java.io.IOException;
  * Stuart settings
  */
 @ApiModel(description = "Stuart settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-08T08:46:10.051Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T10:44:21.052Z")
 public class StuartSettings {
   @SerializedName("ClientId")
   private String clientId = null;

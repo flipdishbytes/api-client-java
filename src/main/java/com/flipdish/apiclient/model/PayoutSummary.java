@@ -28,7 +28,7 @@ import java.io.IOException;
  * Holds the information for a whitelabel payouts summary.
  */
 @ApiModel(description = "Holds the information for a whitelabel payouts summary.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-08T08:46:10.051Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T10:44:21.052Z")
 public class PayoutSummary {
   /**
    * Status of the payout
