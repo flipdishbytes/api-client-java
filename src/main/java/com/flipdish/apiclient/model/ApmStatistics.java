@@ -31,7 +31,7 @@ import java.util.List;
  * APM Statistics
  */
 @ApiModel(description = "APM Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T10:44:21.052Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-12T15:29:11.992Z")
 public class ApmStatistics {
   @SerializedName("EstimatedMinutesSaved")
   private Integer estimatedMinutesSaved = null;
