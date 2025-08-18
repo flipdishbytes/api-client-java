@@ -141,7 +141,7 @@ public class MenuZonesApiTest {
     }
     
     /**
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      *
      * 
      *

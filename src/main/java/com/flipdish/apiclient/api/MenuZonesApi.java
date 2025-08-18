@@ -950,7 +950,7 @@ public class MenuZonesApi {
     }
 
     /**
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      * 
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
@@ -962,7 +962,7 @@ public class MenuZonesApi {
     }
 
     /**
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      * 
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
@@ -976,7 +976,7 @@ public class MenuZonesApi {
     }
 
     /**
-     * Sets a zone to a menu section. (asynchronously)
+     * Assigns a zone to a menu section. (asynchronously)
      * 
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
