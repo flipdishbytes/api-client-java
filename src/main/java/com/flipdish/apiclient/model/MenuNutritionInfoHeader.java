@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * MenuNutritionInfoHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-19T11:32:51.741Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-19T15:26:27.642Z")
 public class MenuNutritionInfoHeader {
   @SerializedName("MenuId")
   private Integer menuId = null;

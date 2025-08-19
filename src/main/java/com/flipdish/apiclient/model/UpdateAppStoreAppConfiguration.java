@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * UpdateAppStoreAppConfiguration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-19T11:32:51.741Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-19T15:26:27.642Z")
 public class UpdateAppStoreAppConfiguration {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
