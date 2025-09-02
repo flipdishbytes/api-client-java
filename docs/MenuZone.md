@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **description** | **String** |  |  [optional]
 **imageName** | **String** |  |  [optional]
 **displayOrder** | **Integer** |  |  [optional]
+**imageUrl** | **String** |  |  [optional]
 
 
 

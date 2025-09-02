@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * MenuZone
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-08-28T07:28:41.195Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-02T15:28:26.212Z")
 public class MenuZone {
   @SerializedName("MenuZoneId")
   private Integer menuZoneId = null;
@@ -46,6 +46,9 @@ public class MenuZone {
 
   @SerializedName("DisplayOrder")
   private Integer displayOrder = null;
+
+  @SerializedName("ImageUrl")
+  private String imageUrl = null;
 
   public MenuZone menuZoneId(Integer menuZoneId) {
     this.menuZoneId = menuZoneId;
@@ -155,6 +158,24 @@ public class MenuZone {
     this.displayOrder = displayOrder;
   }
 
+  public MenuZone imageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+    return this;
+  }
+
+   /**
+   * Get imageUrl
+   * @return imageUrl
+  **/
+  @ApiModelProperty(value = "")
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -170,12 +191,13 @@ public class MenuZone {
         Objects.equals(this.name, menuZone.name) &&
         Objects.equals(this.description, menuZone.description) &&
         Objects.equals(this.imageName, menuZone.imageName) &&
-        Objects.equals(this.displayOrder, menuZone.displayOrder);
+        Objects.equals(this.displayOrder, menuZone.displayOrder) &&
+        Objects.equals(this.imageUrl, menuZone.imageUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(menuZoneId, menuId, name, description, imageName, displayOrder);
+    return Objects.hash(menuZoneId, menuId, name, description, imageName, displayOrder, imageUrl);
   }
 
 
@@ -190,6 +212,7 @@ public class MenuZone {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    imageName: ").append(toIndentedString(imageName)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
+    sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
