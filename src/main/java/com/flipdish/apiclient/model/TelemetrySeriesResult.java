@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * TelemetrySeriesResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-03T15:11:23.316Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-04T10:19:57.134Z")
 public class TelemetrySeriesResult {
   @SerializedName("Timestamps")
   private List<OffsetDateTime> timestamps = null;
