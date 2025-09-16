@@ -27,16 +27,13 @@ import java.io.IOException;
 /**
  * AppStoreAppEntitlements
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-15T09:48:09.203Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-16T13:09:22.573Z")
 public class AppStoreAppEntitlements {
   @SerializedName("EntitlementQuantity")
   private Integer entitlementQuantity = null;
 
   @SerializedName("CurrentUsage")
   private Integer currentUsage = null;
-
-  @SerializedName("CurrentUsageInBrand")
-  private Integer currentUsageInBrand = null;
 
   public AppStoreAppEntitlements entitlementQuantity(Integer entitlementQuantity) {
     this.entitlementQuantity = entitlementQuantity;
@@ -74,24 +71,6 @@ public class AppStoreAppEntitlements {
     this.currentUsage = currentUsage;
   }
 
-  public AppStoreAppEntitlements currentUsageInBrand(Integer currentUsageInBrand) {
-    this.currentUsageInBrand = currentUsageInBrand;
-    return this;
-  }
-
-   /**
-   * Get currentUsageInBrand
-   * @return currentUsageInBrand
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getCurrentUsageInBrand() {
-    return currentUsageInBrand;
-  }
-
-  public void setCurrentUsageInBrand(Integer currentUsageInBrand) {
-    this.currentUsageInBrand = currentUsageInBrand;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -103,13 +82,12 @@ public class AppStoreAppEntitlements {
     }
     AppStoreAppEntitlements appStoreAppEntitlements = (AppStoreAppEntitlements) o;
     return Objects.equals(this.entitlementQuantity, appStoreAppEntitlements.entitlementQuantity) &&
-        Objects.equals(this.currentUsage, appStoreAppEntitlements.currentUsage) &&
-        Objects.equals(this.currentUsageInBrand, appStoreAppEntitlements.currentUsageInBrand);
+        Objects.equals(this.currentUsage, appStoreAppEntitlements.currentUsage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(entitlementQuantity, currentUsage, currentUsageInBrand);
+    return Objects.hash(entitlementQuantity, currentUsage);
   }
 
 
@@ -120,7 +98,6 @@ public class AppStoreAppEntitlements {
     
     sb.append("    entitlementQuantity: ").append(toIndentedString(entitlementQuantity)).append("\n");
     sb.append("    currentUsage: ").append(toIndentedString(currentUsage)).append("\n");
-    sb.append("    currentUsageInBrand: ").append(toIndentedString(currentUsageInBrand)).append("\n");
     sb.append("}");
     return sb.toString();
   }

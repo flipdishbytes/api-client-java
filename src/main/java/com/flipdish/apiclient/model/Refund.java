@@ -28,7 +28,7 @@ import java.io.IOException;
  * Refund
  */
 @ApiModel(description = "Refund")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-15T09:48:09.203Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-16T13:09:22.573Z")
 public class Refund {
   @SerializedName("RefundReason")
   private String refundReason = null;
