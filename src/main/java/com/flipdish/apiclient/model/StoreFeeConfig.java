@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-16T13:09:22.573Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-18T10:17:33.586Z")
 public class StoreFeeConfig {
   @SerializedName("FeeConfigId")
   private Integer feeConfigId = null;
@@ -159,6 +159,12 @@ public class StoreFeeConfig {
 
   @SerializedName("FixedFeeOrderWithGoogle")
   private Double fixedFeeOrderWithGoogle = null;
+
+  @SerializedName("ShouldNotAutoIncreaseBefore")
+  private OffsetDateTime shouldNotAutoIncreaseBefore = null;
+
+  @SerializedName("Reason")
+  private String reason = null;
 
   public StoreFeeConfig feeConfigId(Integer feeConfigId) {
     this.feeConfigId = feeConfigId;
@@ -934,6 +940,42 @@ public class StoreFeeConfig {
     this.fixedFeeOrderWithGoogle = fixedFeeOrderWithGoogle;
   }
 
+  public StoreFeeConfig shouldNotAutoIncreaseBefore(OffsetDateTime shouldNotAutoIncreaseBefore) {
+    this.shouldNotAutoIncreaseBefore = shouldNotAutoIncreaseBefore;
+    return this;
+  }
+
+   /**
+   * Should not auto increase fees before this date
+   * @return shouldNotAutoIncreaseBefore
+  **/
+  @ApiModelProperty(value = "Should not auto increase fees before this date")
+  public OffsetDateTime getShouldNotAutoIncreaseBefore() {
+    return shouldNotAutoIncreaseBefore;
+  }
+
+  public void setShouldNotAutoIncreaseBefore(OffsetDateTime shouldNotAutoIncreaseBefore) {
+    this.shouldNotAutoIncreaseBefore = shouldNotAutoIncreaseBefore;
+  }
+
+  public StoreFeeConfig reason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+
+   /**
+   * Reason for the last fee change (optional)
+   * @return reason
+  **/
+  @ApiModelProperty(value = "Reason for the last fee change (optional)")
+  public String getReason() {
+    return reason;
+  }
+
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -986,12 +1028,14 @@ public class StoreFeeConfig {
         Objects.equals(this.percentFeeCardPosTransaction, storeFeeConfig.percentFeeCardPosTransaction) &&
         Objects.equals(this.fixedFeeCardPosTransaction, storeFeeConfig.fixedFeeCardPosTransaction) &&
         Objects.equals(this.percentFeeOrderWithGoogle, storeFeeConfig.percentFeeOrderWithGoogle) &&
-        Objects.equals(this.fixedFeeOrderWithGoogle, storeFeeConfig.fixedFeeOrderWithGoogle);
+        Objects.equals(this.fixedFeeOrderWithGoogle, storeFeeConfig.fixedFeeOrderWithGoogle) &&
+        Objects.equals(this.shouldNotAutoIncreaseBefore, storeFeeConfig.shouldNotAutoIncreaseBefore) &&
+        Objects.equals(this.reason, storeFeeConfig.reason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery, percentFeeCardPosTransaction, fixedFeeCardPosTransaction, percentFeeOrderWithGoogle, fixedFeeOrderWithGoogle);
+    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery, percentFeeCardPosTransaction, fixedFeeCardPosTransaction, percentFeeOrderWithGoogle, fixedFeeOrderWithGoogle, shouldNotAutoIncreaseBefore, reason);
   }
 
 
@@ -1043,6 +1087,8 @@ public class StoreFeeConfig {
     sb.append("    fixedFeeCardPosTransaction: ").append(toIndentedString(fixedFeeCardPosTransaction)).append("\n");
     sb.append("    percentFeeOrderWithGoogle: ").append(toIndentedString(percentFeeOrderWithGoogle)).append("\n");
     sb.append("    fixedFeeOrderWithGoogle: ").append(toIndentedString(fixedFeeOrderWithGoogle)).append("\n");
+    sb.append("    shouldNotAutoIncreaseBefore: ").append(toIndentedString(shouldNotAutoIncreaseBefore)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
     sb.append("}");
     return sb.toString();
   }
