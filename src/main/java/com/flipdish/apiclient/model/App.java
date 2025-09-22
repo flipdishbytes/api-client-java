@@ -32,7 +32,7 @@ import java.util.List;
  * App
  */
 @ApiModel(description = "App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:31:55.725Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:58:00.526Z")
 public class App {
   @SerializedName("AppId")
   private String appId = null;
@@ -608,6 +608,62 @@ public class App {
   @SerializedName("SmsRestaurantName")
   private String smsRestaurantName = null;
 
+  /**
+   * Web to App Redirect settings
+   */
+  @JsonAdapter(WebToAppRedirectEnum.Adapter.class)
+  public enum WebToAppRedirectEnum {
+    NOREDIRECT("NoRedirect"),
+    
+    REDIRECTONCE("RedirectOnce"),
+    
+    REDIRECTALWAYS("RedirectAlways"),
+    
+    SUGGESTPWA("SuggestPwa"),
+    
+    FORCEPWA("ForcePwa");
+
+    private String value;
+
+    WebToAppRedirectEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static WebToAppRedirectEnum fromValue(String text) {
+      for (WebToAppRedirectEnum b : WebToAppRedirectEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<WebToAppRedirectEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final WebToAppRedirectEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public WebToAppRedirectEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return WebToAppRedirectEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("WebToAppRedirect")
+  private WebToAppRedirectEnum webToAppRedirect = null;
+
   @SerializedName("Name")
   private String name = null;
 
@@ -1040,6 +1096,24 @@ public class App {
     this.smsRestaurantName = smsRestaurantName;
   }
 
+  public App webToAppRedirect(WebToAppRedirectEnum webToAppRedirect) {
+    this.webToAppRedirect = webToAppRedirect;
+    return this;
+  }
+
+   /**
+   * Web to App Redirect settings
+   * @return webToAppRedirect
+  **/
+  @ApiModelProperty(value = "Web to App Redirect settings")
+  public WebToAppRedirectEnum getWebToAppRedirect() {
+    return webToAppRedirect;
+  }
+
+  public void setWebToAppRedirect(WebToAppRedirectEnum webToAppRedirect) {
+    this.webToAppRedirect = webToAppRedirect;
+  }
+
   public App name(String name) {
     this.name = name;
     return this;
@@ -1230,6 +1304,7 @@ public class App {
         Objects.equals(this.googleMapsApiKeyWeb, app.googleMapsApiKeyWeb) &&
         Objects.equals(this.orgId, app.orgId) &&
         Objects.equals(this.smsRestaurantName, app.smsRestaurantName) &&
+        Objects.equals(this.webToAppRedirect, app.webToAppRedirect) &&
         Objects.equals(this.name, app.name) &&
         Objects.equals(this.hostName, app.hostName) &&
         Objects.equals(this.mainColor, app.mainColor) &&
@@ -1243,7 +1318,7 @@ public class App {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, hasIosApp, iosAppStoreUrl, hasAndroidApp, androidPlayStoreUrl, displayDeliveryRestaurantScreen, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
+    return Objects.hash(appId, hasIosApp, iosAppStoreUrl, hasAndroidApp, androidPlayStoreUrl, displayDeliveryRestaurantScreen, logoImageUrl, languages, availableAppLanguages, appAccessLevel, appResourceSet, features, mapCenter, mapNorthEast, mapSouthWest, googleMapsApiKeyWeb, orgId, smsRestaurantName, webToAppRedirect, name, hostName, mainColor, kioskPrimaryColour, applicationCategory, isPanaceaEnabled, panaceaVanityUrl, cookieConsentPromptEnabled, countryId);
   }
 
 
@@ -1270,6 +1345,7 @@ public class App {
     sb.append("    googleMapsApiKeyWeb: ").append(toIndentedString(googleMapsApiKeyWeb)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    smsRestaurantName: ").append(toIndentedString(smsRestaurantName)).append("\n");
+    sb.append("    webToAppRedirect: ").append(toIndentedString(webToAppRedirect)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    mainColor: ").append(toIndentedString(mainColor)).append("\n");

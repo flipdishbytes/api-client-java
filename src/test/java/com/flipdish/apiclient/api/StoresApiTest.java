@@ -38,6 +38,7 @@ import com.flipdish.apiclient.model.RestApiResultCoordinates;
 import com.flipdish.apiclient.model.RestApiResultOrderLeadTimes;
 import com.flipdish.apiclient.model.RestApiResultPreOrderConfig;
 import com.flipdish.apiclient.model.RestApiResultProcessingFeeConfig;
+import com.flipdish.apiclient.model.RestApiResultRestApiDefaultResponse;
 import com.flipdish.apiclient.model.RestApiResultServiceCharge;
 import com.flipdish.apiclient.model.RestApiResultStore;
 import com.flipdish.apiclient.model.RestApiResultStoreAddress;
@@ -48,6 +49,7 @@ import com.flipdish.apiclient.model.StoreAddressBase;
 import com.flipdish.apiclient.model.StoreAddressForm;
 import com.flipdish.apiclient.model.StoreBase;
 import com.flipdish.apiclient.model.StoreCloneSettings;
+import com.flipdish.apiclient.model.StoreCollectionSettings;
 import com.flipdish.apiclient.model.StoreCreateBase;
 import com.flipdish.apiclient.model.StoreDeliveryZoneFeeConfigUpdateRequest;
 import com.flipdish.apiclient.model.StoreFeeConfig;
@@ -595,6 +597,23 @@ public class StoresApiTest {
         String deliveryType = null;
         Boolean enabled = null;
         RestApiArrayResultRestApiDefaultResponse response = api.setPreOrdeEnabled(storeId, deliveryType, enabled);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setStoreCollectionSettingsTest() throws Exception {
+        Integer storeId = null;
+        StoreCollectionSettings settings = null;
+        RestApiResultRestApiDefaultResponse response = api.setStoreCollectionSettings(storeId, settings);
 
         // TODO: test validations
     }

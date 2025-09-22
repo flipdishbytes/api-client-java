@@ -33,7 +33,7 @@ import java.util.UUID;
  * Retention campaign
  */
 @ApiModel(description = "Retention campaign")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:31:55.725Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:58:00.526Z")
 public class RetentionCampaign {
   @SerializedName("CampaignId")
   private Integer campaignId = null;

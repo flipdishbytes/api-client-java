@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**setStoreCollectionSettings**](StoresApi.md#setStoreCollectionSettings) | **POST** /api/v1.0/stores/{storeId}/collectionsettings | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 [**storesSetPropertyId**](StoresApi.md#storesSetPropertyId) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**supportedSalesChannelsTypes**](StoresApi.md#supportedSalesChannelsTypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1670,6 +1671,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setStoreCollectionSettings"></a>
+# **setStoreCollectionSettings**
+> RestApiResultRestApiDefaultResponse setStoreCollectionSettings(storeId, settings)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | 
+StoreCollectionSettings settings = new StoreCollectionSettings(); // StoreCollectionSettings | 
+try {
+    RestApiResultRestApiDefaultResponse result = apiInstance.setStoreCollectionSettings(storeId, settings);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#setStoreCollectionSettings");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**|  |
+ **settings** | [**StoreCollectionSettings**](StoreCollectionSettings.md)|  |
+
+### Return type
+
+[**RestApiResultRestApiDefaultResponse**](RestApiResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="setStoreLeadTimes"></a>
