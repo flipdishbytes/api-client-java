@@ -31,7 +31,7 @@ import java.util.List;
  * Hydra configuration
  */
 @ApiModel(description = "Hydra configuration")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:58:00.526Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-26T13:23:48.873Z")
 public class HydraConfig {
   @SerializedName("MinimumVersion")
   private String minimumVersion = null;

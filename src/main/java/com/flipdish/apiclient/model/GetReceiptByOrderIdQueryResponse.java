@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * GetReceiptByOrderIdQueryResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-22T11:58:00.526Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-26T13:23:48.873Z")
 public class GetReceiptByOrderIdQueryResponse {
   @SerializedName("PreviousOrder")
   private PreviousOrder previousOrder = null;

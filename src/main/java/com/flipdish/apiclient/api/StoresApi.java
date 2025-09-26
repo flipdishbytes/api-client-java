@@ -4240,12 +4240,13 @@ public class StoresApi {
      * Build call for setStoreCollectionSettings
      * @param storeId  (required)
      * @param settings  (required)
+     * @param inheritFromProperty  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setStoreCollectionSettingsCall(Integer storeId, StoreCollectionSettings settings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setStoreCollectionSettingsCall(Integer storeId, StoreCollectionSettings settings, Boolean inheritFromProperty, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = settings;
 
         // create path and map variables
@@ -4254,6 +4255,8 @@ public class StoresApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (inheritFromProperty != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("inheritFromProperty", inheritFromProperty));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4291,7 +4294,7 @@ public class StoresApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setStoreCollectionSettingsValidateBeforeCall(Integer storeId, StoreCollectionSettings settings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setStoreCollectionSettingsValidateBeforeCall(Integer storeId, StoreCollectionSettings settings, Boolean inheritFromProperty, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
@@ -4304,7 +4307,7 @@ public class StoresApi {
         }
         
 
-        com.squareup.okhttp.Call call = setStoreCollectionSettingsCall(storeId, settings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setStoreCollectionSettingsCall(storeId, settings, inheritFromProperty, progressListener, progressRequestListener);
         return call;
 
     }
@@ -4314,11 +4317,12 @@ public class StoresApi {
      * 
      * @param storeId  (required)
      * @param settings  (required)
+     * @param inheritFromProperty  (optional)
      * @return RestApiResultRestApiDefaultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultRestApiDefaultResponse setStoreCollectionSettings(Integer storeId, StoreCollectionSettings settings) throws ApiException {
-        ApiResponse<RestApiResultRestApiDefaultResponse> resp = setStoreCollectionSettingsWithHttpInfo(storeId, settings);
+    public RestApiResultRestApiDefaultResponse setStoreCollectionSettings(Integer storeId, StoreCollectionSettings settings, Boolean inheritFromProperty) throws ApiException {
+        ApiResponse<RestApiResultRestApiDefaultResponse> resp = setStoreCollectionSettingsWithHttpInfo(storeId, settings, inheritFromProperty);
         return resp.getData();
     }
 
@@ -4327,11 +4331,12 @@ public class StoresApi {
      * 
      * @param storeId  (required)
      * @param settings  (required)
+     * @param inheritFromProperty  (optional)
      * @return ApiResponse&lt;RestApiResultRestApiDefaultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultRestApiDefaultResponse> setStoreCollectionSettingsWithHttpInfo(Integer storeId, StoreCollectionSettings settings) throws ApiException {
-        com.squareup.okhttp.Call call = setStoreCollectionSettingsValidateBeforeCall(storeId, settings, null, null);
+    public ApiResponse<RestApiResultRestApiDefaultResponse> setStoreCollectionSettingsWithHttpInfo(Integer storeId, StoreCollectionSettings settings, Boolean inheritFromProperty) throws ApiException {
+        com.squareup.okhttp.Call call = setStoreCollectionSettingsValidateBeforeCall(storeId, settings, inheritFromProperty, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultRestApiDefaultResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -4341,11 +4346,12 @@ public class StoresApi {
      * 
      * @param storeId  (required)
      * @param settings  (required)
+     * @param inheritFromProperty  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setStoreCollectionSettingsAsync(Integer storeId, StoreCollectionSettings settings, final ApiCallback<RestApiResultRestApiDefaultResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call setStoreCollectionSettingsAsync(Integer storeId, StoreCollectionSettings settings, Boolean inheritFromProperty, final ApiCallback<RestApiResultRestApiDefaultResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4366,7 +4372,7 @@ public class StoresApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setStoreCollectionSettingsValidateBeforeCall(storeId, settings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setStoreCollectionSettingsValidateBeforeCall(storeId, settings, inheritFromProperty, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultRestApiDefaultResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

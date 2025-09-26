@@ -613,7 +613,8 @@ public class StoresApiTest {
     public void setStoreCollectionSettingsTest() throws Exception {
         Integer storeId = null;
         StoreCollectionSettings settings = null;
-        RestApiResultRestApiDefaultResponse response = api.setStoreCollectionSettings(storeId, settings);
+        Boolean inheritFromProperty = null;
+        RestApiResultRestApiDefaultResponse response = api.setStoreCollectionSettings(storeId, settings, inheritFromProperty);
 
         // TODO: test validations
     }

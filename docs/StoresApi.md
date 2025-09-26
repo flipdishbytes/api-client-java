@@ -1675,7 +1675,7 @@ Name | Type | Description  | Notes
 
 <a name="setStoreCollectionSettings"></a>
 # **setStoreCollectionSettings**
-> RestApiResultRestApiDefaultResponse setStoreCollectionSettings(storeId, settings)
+> RestApiResultRestApiDefaultResponse setStoreCollectionSettings(storeId, settings, inheritFromProperty)
 
 
 
@@ -1697,8 +1697,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | 
 StoreCollectionSettings settings = new StoreCollectionSettings(); // StoreCollectionSettings | 
+Boolean inheritFromProperty = true; // Boolean | 
 try {
-    RestApiResultRestApiDefaultResponse result = apiInstance.setStoreCollectionSettings(storeId, settings);
+    RestApiResultRestApiDefaultResponse result = apiInstance.setStoreCollectionSettings(storeId, settings, inheritFromProperty);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#setStoreCollectionSettings");
@@ -1712,6 +1713,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storeId** | **Integer**|  |
  **settings** | [**StoreCollectionSettings**](StoreCollectionSettings.md)|  |
+ **inheritFromProperty** | **Boolean**|  | [optional]
 
 ### Return type
 
