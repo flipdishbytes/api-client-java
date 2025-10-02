@@ -30,7 +30,7 @@ import java.util.List;
  * Store Base
  */
 @ApiModel(description = "Store Base")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-26T13:23:48.873Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-02T12:05:45.556Z")
 public class StoreBase {
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
@@ -174,6 +174,56 @@ public class StoreBase {
 
   @SerializedName("SalesChannelTypes")
   private List<SalesChannelTypesEnum> salesChannelTypes = null;
+
+  /**
+   * Gets or Sets inheritanceConfigTypes
+   */
+  @JsonAdapter(InheritanceConfigTypesEnum.Adapter.class)
+  public enum InheritanceConfigTypesEnum {
+    COLLECTIONSETTING("CollectionSetting"),
+    
+    DELIVERYSETTING("DeliverySetting");
+
+    private String value;
+
+    InheritanceConfigTypesEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static InheritanceConfigTypesEnum fromValue(String text) {
+      for (InheritanceConfigTypesEnum b : InheritanceConfigTypesEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<InheritanceConfigTypesEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final InheritanceConfigTypesEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public InheritanceConfigTypesEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return InheritanceConfigTypesEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("InheritanceConfigTypes")
+  private List<InheritanceConfigTypesEnum> inheritanceConfigTypes = null;
 
   public StoreBase phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
@@ -723,6 +773,32 @@ public class StoreBase {
     this.salesChannelTypes = salesChannelTypes;
   }
 
+  public StoreBase inheritanceConfigTypes(List<InheritanceConfigTypesEnum> inheritanceConfigTypes) {
+    this.inheritanceConfigTypes = inheritanceConfigTypes;
+    return this;
+  }
+
+  public StoreBase addInheritanceConfigTypesItem(InheritanceConfigTypesEnum inheritanceConfigTypesItem) {
+    if (this.inheritanceConfigTypes == null) {
+      this.inheritanceConfigTypes = new ArrayList<InheritanceConfigTypesEnum>();
+    }
+    this.inheritanceConfigTypes.add(inheritanceConfigTypesItem);
+    return this;
+  }
+
+   /**
+   * Inheritance Config Types
+   * @return inheritanceConfigTypes
+  **/
+  @ApiModelProperty(value = "Inheritance Config Types")
+  public List<InheritanceConfigTypesEnum> getInheritanceConfigTypes() {
+    return inheritanceConfigTypes;
+  }
+
+  public void setInheritanceConfigTypes(List<InheritanceConfigTypesEnum> inheritanceConfigTypes) {
+    this.inheritanceConfigTypes = inheritanceConfigTypes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -762,12 +838,13 @@ public class StoreBase {
         Objects.equals(this.name, storeBase.name) &&
         Objects.equals(this.emailAddress, storeBase.emailAddress) &&
         Objects.equals(this.staffLanguage, storeBase.staffLanguage) &&
-        Objects.equals(this.salesChannelTypes, storeBase.salesChannelTypes);
+        Objects.equals(this.salesChannelTypes, storeBase.salesChannelTypes) &&
+        Objects.equals(this.inheritanceConfigTypes, storeBase.inheritanceConfigTypes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes);
+    return Objects.hash(phoneNumber, alwaysAppearOpen, preOrderEnabled, takeOutEnabled, tableServiceEnabled, dineInEnabled, allowPreOrdersAndTableService, pickupEnabled, deliveryEnabled, cardOrderDeliveryEnabled, cashOrdersDeliveryEnabled, cardOrdersPickupEnabled, cashOrdersPickupEnabled, tipsEnabled, automaticallyAcceptOrders, openForDelivery, openForPickup, minimumPickupOrderAmount, requireCustomerNameForPickup, gdprCustomerPhoneNumbers, requireCustomerNameForDelivery, allowChefNotes, etaInPickupConfirmationSmsEnabled, etaInDeliveryConfirmationSmsEnabled, isArchived, isPublished, name, emailAddress, staffLanguage, salesChannelTypes, inheritanceConfigTypes);
   }
 
 
@@ -806,6 +883,7 @@ public class StoreBase {
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    staffLanguage: ").append(toIndentedString(staffLanguage)).append("\n");
     sb.append("    salesChannelTypes: ").append(toIndentedString(salesChannelTypes)).append("\n");
+    sb.append("    inheritanceConfigTypes: ").append(toIndentedString(inheritanceConfigTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

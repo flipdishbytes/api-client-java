@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **emailAddress** | **String** | Email address (visible to customers) |  [optional]
 **staffLanguage** | **String** | Staff Language (used for communication with the staff)  Emails, Printouts etc |  [optional]
 **salesChannelTypes** | [**List&lt;SalesChannelTypesEnum&gt;**](#List&lt;SalesChannelTypesEnum&gt;) | Sales Channel Types |  [optional]
+**inheritanceConfigTypes** | [**List&lt;InheritanceConfigTypesEnum&gt;**](#List&lt;InheritanceConfigTypesEnum&gt;) | Inheritance Config Types |  [optional]
 
 
 <a name="List<SalesChannelTypesEnum>"></a>
@@ -45,6 +46,14 @@ APP | &quot;App&quot;
 KIOSK | &quot;Kiosk&quot;
 POS | &quot;Pos&quot;
 NONE | &quot;None&quot;
+
+
+<a name="List<InheritanceConfigTypesEnum>"></a>
+## Enum: List&lt;InheritanceConfigTypesEnum&gt;
+Name | Value
+---- | -----
+COLLECTIONSETTING | &quot;CollectionSetting&quot;
+DELIVERYSETTING | &quot;DeliverySetting&quot;
 
 
 
