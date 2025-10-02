@@ -52,8 +52,7 @@ NONE | &quot;None&quot;
 ## Enum: List&lt;InheritanceConfigTypesEnum&gt;
 Name | Value
 ---- | -----
-COLLECTIONSETTING | &quot;CollectionSetting&quot;
-DELIVERYSETTING | &quot;DeliverySetting&quot;
+COLLECTIONSETTINGS | &quot;CollectionSettings&quot;
 
 
 
