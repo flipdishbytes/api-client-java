@@ -28,7 +28,7 @@ import java.io.IOException;
  * Describes the configuration of OrderBatching
  */
 @ApiModel(description = "Describes the configuration of OrderBatching")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-06T14:51:51.474Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-07T12:53:34.250Z")
 public class SetOrderBatchingConfiguration {
   @SerializedName("BatchIntervalInSeconds")
   private Integer batchIntervalInSeconds = null;

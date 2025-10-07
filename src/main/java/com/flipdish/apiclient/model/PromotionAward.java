@@ -29,7 +29,7 @@ import java.util.UUID;
  * Promotion
  */
 @ApiModel(description = "Promotion")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-06T14:51:51.474Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-07T12:53:34.250Z")
 public class PromotionAward {
   @SerializedName("PromotionAwardId")
   private Integer promotionAwardId = null;
