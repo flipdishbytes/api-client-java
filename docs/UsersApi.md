@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPreviousOrderCountForStore**](UsersApi.md#getPreviousOrderCountForStore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 [**getRoles**](UsersApi.md#getRoles) | **GET** /api/v1.0/users/roles | 
+[**searchUsers**](UsersApi.md#searchUsers) | **GET** /api/v1.0/users/search | 
 
 
 <a name="getPreviousOrderCountForStore"></a>
@@ -98,6 +99,67 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestApiStringArrayResult**](RestApiStringArrayResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="searchUsers"></a>
+# **searchUsers**
+> RestApiPaginationResultUser searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.UsersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+UsersApi apiInstance = new UsersApi();
+String searchQuery = "searchQuery_example"; // String | 
+Boolean hasUserLoggedIn = true; // Boolean | 
+String userDiscriminator = "userDiscriminator_example"; // String | 
+String searchIn = "searchIn_example"; // String | 
+Integer pageIndex = 56; // Integer | 
+Integer pageSize = 56; // Integer | 
+try {
+    RestApiPaginationResultUser result = apiInstance.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UsersApi#searchUsers");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **searchQuery** | **String**|  |
+ **hasUserLoggedIn** | **Boolean**|  | [optional]
+ **userDiscriminator** | **String**|  | [optional] [enum: All, ApplicationUsers, RestaurantUsers, HydraUsers]
+ **searchIn** | **String**|  | [optional] [enum: Generic, Id, Email, Phone, CustomerName, IdOrPhone, IdOrCustomerName]
+ **pageIndex** | **Integer**|  | [optional]
+ **pageSize** | **Integer**|  | [optional]
+
+### Return type
+
+[**RestApiPaginationResultUser**](RestApiPaginationResultUser.md)
 
 ### Authorization
 

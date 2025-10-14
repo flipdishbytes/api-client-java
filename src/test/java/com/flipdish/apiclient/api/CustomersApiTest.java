@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.CustomerUpdateModel;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultCustomer;
+import com.flipdish.apiclient.model.RestApiResultCustomers;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -67,6 +68,23 @@ public class CustomersApiTest {
         String appId = null;
         Integer customerId = null;
         RestApiResultCustomer response = api.getCustomerById(appId, customerId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getCustomersTest() throws Exception {
+        String appId = null;
+        String phoneNumber = null;
+        RestApiResultCustomers response = api.getCustomers(appId, phoneNumber);
 
         // TODO: test validations
     }

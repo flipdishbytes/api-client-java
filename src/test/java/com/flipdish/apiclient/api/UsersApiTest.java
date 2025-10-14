@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
+import com.flipdish.apiclient.model.RestApiPaginationResultUser;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -64,6 +65,27 @@ public class UsersApiTest {
     @Test
     public void getRolesTest() throws Exception {
         RestApiStringArrayResult response = api.getRoles();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void searchUsersTest() throws Exception {
+        String searchQuery = null;
+        Boolean hasUserLoggedIn = null;
+        String userDiscriminator = null;
+        String searchIn = null;
+        Integer pageIndex = null;
+        Integer pageSize = null;
+        RestApiPaginationResultUser response = api.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
 
         // TODO: test validations
     }

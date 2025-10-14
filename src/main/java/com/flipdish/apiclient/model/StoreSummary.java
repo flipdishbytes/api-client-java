@@ -32,7 +32,7 @@ import java.util.Map;
  * Store summary
  */
 @ApiModel(description = "Store summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-07T14:50:50.023Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-14T07:48:13.025Z")
 public class StoreSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -324,6 +324,9 @@ public class StoreSummary {
   @SerializedName("StoreTimezone")
   private String storeTimezone = null;
 
+  @SerializedName("StoreIanaTimezone")
+  private String storeIanaTimezone = null;
+
   @SerializedName("StoreGroupId")
   private Integer storeGroupId = null;
 
@@ -467,6 +470,24 @@ public class StoreSummary {
     this.storeTimezone = storeTimezone;
   }
 
+  public StoreSummary storeIanaTimezone(String storeIanaTimezone) {
+    this.storeIanaTimezone = storeIanaTimezone;
+    return this;
+  }
+
+   /**
+   * IANA Timezone of store
+   * @return storeIanaTimezone
+  **/
+  @ApiModelProperty(value = "IANA Timezone of store")
+  public String getStoreIanaTimezone() {
+    return storeIanaTimezone;
+  }
+
+  public void setStoreIanaTimezone(String storeIanaTimezone) {
+    this.storeIanaTimezone = storeIanaTimezone;
+  }
+
   public StoreSummary storeGroupId(Integer storeGroupId) {
     this.storeGroupId = storeGroupId;
     return this;
@@ -538,6 +559,7 @@ public class StoreSummary {
         Objects.equals(this.currency, storeSummary.currency) &&
         Objects.equals(this.coordinates, storeSummary.coordinates) &&
         Objects.equals(this.storeTimezone, storeSummary.storeTimezone) &&
+        Objects.equals(this.storeIanaTimezone, storeSummary.storeIanaTimezone) &&
         Objects.equals(this.storeGroupId, storeSummary.storeGroupId) &&
         Objects.equals(this.taxId, storeSummary.taxId) &&
         Objects.equals(this.prettyAddress, storeSummary.prettyAddress);
@@ -545,7 +567,7 @@ public class StoreSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, menuId, metadata, currency, coordinates, storeTimezone, storeGroupId, taxId, prettyAddress);
+    return Objects.hash(id, name, menuId, metadata, currency, coordinates, storeTimezone, storeIanaTimezone, storeGroupId, taxId, prettyAddress);
   }
 
 
@@ -561,6 +583,7 @@ public class StoreSummary {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
     sb.append("    storeTimezone: ").append(toIndentedString(storeTimezone)).append("\n");
+    sb.append("    storeIanaTimezone: ").append(toIndentedString(storeIanaTimezone)).append("\n");
     sb.append("    storeGroupId: ").append(toIndentedString(storeGroupId)).append("\n");
     sb.append("    taxId: ").append(toIndentedString(taxId)).append("\n");
     sb.append("    prettyAddress: ").append(toIndentedString(prettyAddress)).append("\n");
