@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Bluetooth Pairing mode initiated
  */
 @ApiModel(description = "Kiosk Bluetooth Pairing mode initiated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T11:32:48.845Z")
 public class KioskBluetoothPairingModeEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;

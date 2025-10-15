@@ -13,10 +13,14 @@
 
 package com.flipdish.apiclient.api;
 
+import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
+import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
+import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultUserSearch;
 import com.flipdish.apiclient.model.RestApiResultUserInfo;
+import com.flipdish.apiclient.model.RestApiResultUserRole;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -64,8 +68,56 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getRestaurantUserAccountsTest() throws Exception {
+        Integer userId = null;
+        RestApiArrayResultUserFlipdishAccount response = api.getRestaurantUserAccounts(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getRestaurantUserStoresTest() throws Exception {
+        Integer userId = null;
+        RestApiArrayResultUserStoreInfo response = api.getRestaurantUserStores(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getRolesTest() throws Exception {
         RestApiStringArrayResult response = api.getRoles();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getRolesAndUnassignedRolesTest() throws Exception {
+        Integer userId = null;
+        RestApiResultUserRole response = api.getRolesAndUnassignedRoles(userId);
 
         // TODO: test validations
     }
@@ -82,6 +134,22 @@ public class UsersApiTest {
     public void getUserByIdTest() throws Exception {
         Integer userId = null;
         RestApiResultUserInfo response = api.getUserById(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUserNotesTest() throws Exception {
+        Integer userId = null;
+        RestApiArrayResultUserNote response = api.getUserNotes(userId);
 
         // TODO: test validations
     }

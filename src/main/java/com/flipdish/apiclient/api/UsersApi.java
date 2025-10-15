@@ -27,10 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
+import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
+import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultUserSearch;
 import com.flipdish.apiclient.model.RestApiResultUserInfo;
+import com.flipdish.apiclient.model.RestApiResultUserRole;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -202,6 +206,258 @@ public class UsersApi {
         return call;
     }
     /**
+     * Build call for getRestaurantUserAccounts
+     * @param userId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getRestaurantUserAccountsCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/RestaurantUserAccounts"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getRestaurantUserAccountsValidateBeforeCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getRestaurantUserAccounts(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getRestaurantUserAccountsCall(userId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return RestApiArrayResultUserFlipdishAccount
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultUserFlipdishAccount getRestaurantUserAccounts(Integer userId) throws ApiException {
+        ApiResponse<RestApiArrayResultUserFlipdishAccount> resp = getRestaurantUserAccountsWithHttpInfo(userId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultUserFlipdishAccount&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultUserFlipdishAccount> getRestaurantUserAccountsWithHttpInfo(Integer userId) throws ApiException {
+        com.squareup.okhttp.Call call = getRestaurantUserAccountsValidateBeforeCall(userId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserFlipdishAccount>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getRestaurantUserAccountsAsync(Integer userId, final ApiCallback<RestApiArrayResultUserFlipdishAccount> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getRestaurantUserAccountsValidateBeforeCall(userId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserFlipdishAccount>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getRestaurantUserStores
+     * @param userId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getRestaurantUserStoresCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/RestaurantUserStores"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getRestaurantUserStoresValidateBeforeCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getRestaurantUserStores(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getRestaurantUserStoresCall(userId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return RestApiArrayResultUserStoreInfo
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultUserStoreInfo getRestaurantUserStores(Integer userId) throws ApiException {
+        ApiResponse<RestApiArrayResultUserStoreInfo> resp = getRestaurantUserStoresWithHttpInfo(userId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultUserStoreInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultUserStoreInfo> getRestaurantUserStoresWithHttpInfo(Integer userId) throws ApiException {
+        com.squareup.okhttp.Call call = getRestaurantUserStoresValidateBeforeCall(userId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserStoreInfo>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getRestaurantUserStoresAsync(Integer userId, final ApiCallback<RestApiArrayResultUserStoreInfo> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getRestaurantUserStoresValidateBeforeCall(userId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserStoreInfo>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getRoles
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -314,6 +570,132 @@ public class UsersApi {
 
         com.squareup.okhttp.Call call = getRolesValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiStringArrayResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getRolesAndUnassignedRoles
+     * @param userId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getRolesAndUnassignedRolesCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/roles"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getRolesAndUnassignedRolesValidateBeforeCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getRolesAndUnassignedRoles(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getRolesAndUnassignedRolesCall(userId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return RestApiResultUserRole
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultUserRole getRolesAndUnassignedRoles(Integer userId) throws ApiException {
+        ApiResponse<RestApiResultUserRole> resp = getRolesAndUnassignedRolesWithHttpInfo(userId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return ApiResponse&lt;RestApiResultUserRole&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultUserRole> getRolesAndUnassignedRolesWithHttpInfo(Integer userId) throws ApiException {
+        com.squareup.okhttp.Call call = getRolesAndUnassignedRolesValidateBeforeCall(userId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultUserRole>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getRolesAndUnassignedRolesAsync(Integer userId, final ApiCallback<RestApiResultUserRole> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getRolesAndUnassignedRolesValidateBeforeCall(userId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultUserRole>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -440,6 +822,132 @@ public class UsersApi {
 
         com.squareup.okhttp.Call call = getUserByIdValidateBeforeCall(userId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultUserInfo>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getUserNotes
+     * @param userId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getUserNotesCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/UserNotes"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getUserNotesValidateBeforeCall(Integer userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getUserNotes(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = getUserNotesCall(userId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return RestApiArrayResultUserNote
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultUserNote getUserNotes(Integer userId) throws ApiException {
+        ApiResponse<RestApiArrayResultUserNote> resp = getUserNotesWithHttpInfo(userId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @return ApiResponse&lt;RestApiArrayResultUserNote&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultUserNote> getUserNotesWithHttpInfo(Integer userId) throws ApiException {
+        com.squareup.okhttp.Call call = getUserNotesValidateBeforeCall(userId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserNote>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getUserNotesAsync(Integer userId, final ApiCallback<RestApiArrayResultUserNote> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getUserNotesValidateBeforeCall(userId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultUserNote>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

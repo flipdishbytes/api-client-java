@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * GoogleLocation
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T11:32:48.845Z")
 public class GoogleLocation {
   @SerializedName("Lat")
   private Float lat = null;

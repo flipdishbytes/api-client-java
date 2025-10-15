@@ -28,7 +28,7 @@ import java.io.IOException;
  * Kiosk level settings
  */
 @ApiModel(description = "Kiosk level settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T11:32:48.845Z")
 public class KioskSettings {
   @SerializedName("HideLogoFromFrontPage")
   private Boolean hideLogoFromFrontPage = null;
