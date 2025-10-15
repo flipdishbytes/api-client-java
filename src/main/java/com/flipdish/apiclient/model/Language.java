@@ -28,7 +28,7 @@ import java.io.IOException;
  * Sorted Language
  */
 @ApiModel(description = "Sorted Language")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-14T07:48:13.025Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
 public class Language {
   @SerializedName("LanguageId")
   private String languageId = null;
@@ -38,6 +38,9 @@ public class Language {
 
   @SerializedName("Name")
   private String name = null;
+
+  @SerializedName("Enabled")
+  private Boolean enabled = null;
 
   public Language languageId(String languageId) {
     this.languageId = languageId;
@@ -93,6 +96,24 @@ public class Language {
     this.name = name;
   }
 
+  public Language enabled(Boolean enabled) {
+    this.enabled = enabled;
+    return this;
+  }
+
+   /**
+   * Is the language enabled for use.
+   * @return enabled
+  **/
+  @ApiModelProperty(value = "Is the language enabled for use.")
+  public Boolean isEnabled() {
+    return enabled;
+  }
+
+  public void setEnabled(Boolean enabled) {
+    this.enabled = enabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,12 +126,13 @@ public class Language {
     Language language = (Language) o;
     return Objects.equals(this.languageId, language.languageId) &&
         Objects.equals(this.displayOrder, language.displayOrder) &&
-        Objects.equals(this.name, language.name);
+        Objects.equals(this.name, language.name) &&
+        Objects.equals(this.enabled, language.enabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(languageId, displayOrder, name);
+    return Objects.hash(languageId, displayOrder, name, enabled);
   }
 
 
@@ -122,6 +144,7 @@ public class Language {
     sb.append("    languageId: ").append(toIndentedString(languageId)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

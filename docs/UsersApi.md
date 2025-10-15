@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPreviousOrderCountForStore**](UsersApi.md#getPreviousOrderCountForStore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 [**getRoles**](UsersApi.md#getRoles) | **GET** /api/v1.0/users/roles | 
+[**getUserById**](UsersApi.md#getUserById) | **GET** /api/v1.0/users/{userId} | 
 [**searchUsers**](UsersApi.md#searchUsers) | **GET** /api/v1.0/users/search | 
 
 
@@ -109,9 +110,60 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="getUserById"></a>
+# **getUserById**
+> RestApiResultUserInfo getUserById(userId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.UsersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+UsersApi apiInstance = new UsersApi();
+Integer userId = 56; // Integer | 
+try {
+    RestApiResultUserInfo result = apiInstance.getUserById(userId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UsersApi#getUserById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **Integer**|  |
+
+### Return type
+
+[**RestApiResultUserInfo**](RestApiResultUserInfo.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="searchUsers"></a>
 # **searchUsers**
-> RestApiPaginationResultUser searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize)
+> RestApiPaginationResultUserSearch searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize)
 
 
 
@@ -138,7 +190,7 @@ String searchIn = "searchIn_example"; // String |
 Integer pageIndex = 56; // Integer | 
 Integer pageSize = 56; // Integer | 
 try {
-    RestApiPaginationResultUser result = apiInstance.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+    RestApiPaginationResultUserSearch result = apiInstance.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#searchUsers");
@@ -159,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiPaginationResultUser**](RestApiPaginationResultUser.md)
+[**RestApiPaginationResultUserSearch**](RestApiPaginationResultUserSearch.md)
 
 ### Authorization
 

@@ -15,7 +15,8 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiPaginationResultUser;
+import com.flipdish.apiclient.model.RestApiPaginationResultUserSearch;
+import com.flipdish.apiclient.model.RestApiResultUserInfo;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -78,6 +79,22 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getUserByIdTest() throws Exception {
+        Integer userId = null;
+        RestApiResultUserInfo response = api.getUserById(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void searchUsersTest() throws Exception {
         String searchQuery = null;
         Boolean hasUserLoggedIn = null;
@@ -85,7 +102,7 @@ public class UsersApiTest {
         String searchIn = null;
         Integer pageIndex = null;
         Integer pageSize = null;
-        RestApiPaginationResultUser response = api.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+        RestApiPaginationResultUserSearch response = api.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
 
         // TODO: test validations
     }

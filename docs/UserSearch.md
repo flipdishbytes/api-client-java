@@ -1,5 +1,5 @@
 
-# User
+# UserSearch
 
 ## Properties
 Name | Type | Description | Notes

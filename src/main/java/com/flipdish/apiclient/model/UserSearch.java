@@ -29,11 +29,11 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * User
+ * User Search Result
  */
-@ApiModel(description = "User")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-14T07:48:13.025Z")
-public class User {
+@ApiModel(description = "User Search Result")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
+public class UserSearch {
   @SerializedName("Id")
   private Integer id = null;
 
@@ -112,7 +112,7 @@ public class User {
   @SerializedName("UserType")
   private String userType = null;
 
-  public User id(Integer id) {
+  public UserSearch id(Integer id) {
     this.id = id;
     return this;
   }
@@ -130,7 +130,7 @@ public class User {
     this.id = id;
   }
 
-  public User phoneNumber(String phoneNumber) {
+  public UserSearch phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
   }
@@ -148,7 +148,7 @@ public class User {
     this.phoneNumber = phoneNumber;
   }
 
-  public User email(String email) {
+  public UserSearch email(String email) {
     this.email = email;
     return this;
   }
@@ -166,7 +166,7 @@ public class User {
     this.email = email;
   }
 
-  public User customerName(String customerName) {
+  public UserSearch customerName(String customerName) {
     this.customerName = customerName;
     return this;
   }
@@ -184,7 +184,7 @@ public class User {
     this.customerName = customerName;
   }
 
-  public User hasLoggedIn(Boolean hasLoggedIn) {
+  public UserSearch hasLoggedIn(Boolean hasLoggedIn) {
     this.hasLoggedIn = hasLoggedIn;
     return this;
   }
@@ -202,7 +202,7 @@ public class User {
     this.hasLoggedIn = hasLoggedIn;
   }
 
-  public User userDiscriminator(UserDiscriminatorEnum userDiscriminator) {
+  public UserSearch userDiscriminator(UserDiscriminatorEnum userDiscriminator) {
     this.userDiscriminator = userDiscriminator;
     return this;
   }
@@ -220,7 +220,7 @@ public class User {
     this.userDiscriminator = userDiscriminator;
   }
 
-  public User tsCreate(OffsetDateTime tsCreate) {
+  public UserSearch tsCreate(OffsetDateTime tsCreate) {
     this.tsCreate = tsCreate;
     return this;
   }
@@ -238,12 +238,12 @@ public class User {
     this.tsCreate = tsCreate;
   }
 
-  public User whiteLabelConfigs(List<UserWhiteLabelConfig> whiteLabelConfigs) {
+  public UserSearch whiteLabelConfigs(List<UserWhiteLabelConfig> whiteLabelConfigs) {
     this.whiteLabelConfigs = whiteLabelConfigs;
     return this;
   }
 
-  public User addWhiteLabelConfigsItem(UserWhiteLabelConfig whiteLabelConfigsItem) {
+  public UserSearch addWhiteLabelConfigsItem(UserWhiteLabelConfig whiteLabelConfigsItem) {
     if (this.whiteLabelConfigs == null) {
       this.whiteLabelConfigs = new ArrayList<UserWhiteLabelConfig>();
     }
@@ -282,16 +282,16 @@ public class User {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    User user = (User) o;
-    return Objects.equals(this.id, user.id) &&
-        Objects.equals(this.phoneNumber, user.phoneNumber) &&
-        Objects.equals(this.email, user.email) &&
-        Objects.equals(this.customerName, user.customerName) &&
-        Objects.equals(this.hasLoggedIn, user.hasLoggedIn) &&
-        Objects.equals(this.userDiscriminator, user.userDiscriminator) &&
-        Objects.equals(this.tsCreate, user.tsCreate) &&
-        Objects.equals(this.whiteLabelConfigs, user.whiteLabelConfigs) &&
-        Objects.equals(this.userType, user.userType);
+    UserSearch userSearch = (UserSearch) o;
+    return Objects.equals(this.id, userSearch.id) &&
+        Objects.equals(this.phoneNumber, userSearch.phoneNumber) &&
+        Objects.equals(this.email, userSearch.email) &&
+        Objects.equals(this.customerName, userSearch.customerName) &&
+        Objects.equals(this.hasLoggedIn, userSearch.hasLoggedIn) &&
+        Objects.equals(this.userDiscriminator, userSearch.userDiscriminator) &&
+        Objects.equals(this.tsCreate, userSearch.tsCreate) &&
+        Objects.equals(this.whiteLabelConfigs, userSearch.whiteLabelConfigs) &&
+        Objects.equals(this.userType, userSearch.userType);
   }
 
   @Override
@@ -303,7 +303,7 @@ public class User {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class User {\n");
+    sb.append("class UserSearch {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");

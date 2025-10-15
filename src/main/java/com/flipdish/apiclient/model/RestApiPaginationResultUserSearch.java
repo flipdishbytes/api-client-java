@@ -15,7 +15,7 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.flipdish.apiclient.model.User;
+import com.flipdish.apiclient.model.UserSearch;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,8 +31,8 @@ import java.util.List;
  * Rest api pagination result
  */
 @ApiModel(description = "Rest api pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-14T07:48:13.025Z")
-public class RestApiPaginationResultUser {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-15T07:07:02.534Z")
+public class RestApiPaginationResultUserSearch {
   @SerializedName("Page")
   private Integer page = null;
 
@@ -43,9 +43,9 @@ public class RestApiPaginationResultUser {
   private Integer totalRecordCount = null;
 
   @SerializedName("Data")
-  private List<User> data = new ArrayList<User>();
+  private List<UserSearch> data = new ArrayList<UserSearch>();
 
-  public RestApiPaginationResultUser page(Integer page) {
+  public RestApiPaginationResultUserSearch page(Integer page) {
     this.page = page;
     return this;
   }
@@ -63,7 +63,7 @@ public class RestApiPaginationResultUser {
     this.page = page;
   }
 
-  public RestApiPaginationResultUser limit(Integer limit) {
+  public RestApiPaginationResultUserSearch limit(Integer limit) {
     this.limit = limit;
     return this;
   }
@@ -81,7 +81,7 @@ public class RestApiPaginationResultUser {
     this.limit = limit;
   }
 
-  public RestApiPaginationResultUser totalRecordCount(Integer totalRecordCount) {
+  public RestApiPaginationResultUserSearch totalRecordCount(Integer totalRecordCount) {
     this.totalRecordCount = totalRecordCount;
     return this;
   }
@@ -99,12 +99,12 @@ public class RestApiPaginationResultUser {
     this.totalRecordCount = totalRecordCount;
   }
 
-  public RestApiPaginationResultUser data(List<User> data) {
+  public RestApiPaginationResultUserSearch data(List<UserSearch> data) {
     this.data = data;
     return this;
   }
 
-  public RestApiPaginationResultUser addDataItem(User dataItem) {
+  public RestApiPaginationResultUserSearch addDataItem(UserSearch dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -114,11 +114,11 @@ public class RestApiPaginationResultUser {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "Generic data object.")
-  public List<User> getData() {
+  public List<UserSearch> getData() {
     return data;
   }
 
-  public void setData(List<User> data) {
+  public void setData(List<UserSearch> data) {
     this.data = data;
   }
 
@@ -131,11 +131,11 @@ public class RestApiPaginationResultUser {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RestApiPaginationResultUser restApiPaginationResultUser = (RestApiPaginationResultUser) o;
-    return Objects.equals(this.page, restApiPaginationResultUser.page) &&
-        Objects.equals(this.limit, restApiPaginationResultUser.limit) &&
-        Objects.equals(this.totalRecordCount, restApiPaginationResultUser.totalRecordCount) &&
-        Objects.equals(this.data, restApiPaginationResultUser.data);
+    RestApiPaginationResultUserSearch restApiPaginationResultUserSearch = (RestApiPaginationResultUserSearch) o;
+    return Objects.equals(this.page, restApiPaginationResultUserSearch.page) &&
+        Objects.equals(this.limit, restApiPaginationResultUserSearch.limit) &&
+        Objects.equals(this.totalRecordCount, restApiPaginationResultUserSearch.totalRecordCount) &&
+        Objects.equals(this.data, restApiPaginationResultUserSearch.data);
   }
 
   @Override
@@ -147,7 +147,7 @@ public class RestApiPaginationResultUser {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RestApiPaginationResultUser {\n");
+    sb.append("class RestApiPaginationResultUserSearch {\n");
     
     sb.append("    page: ").append(toIndentedString(page)).append("\n");
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
