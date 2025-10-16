@@ -369,7 +369,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded, PendingPayment]
  **from** | **OffsetDateTime**|  | [optional]
  **to** | **OffsetDateTime**|  | [optional]
  **page** | **Integer**|  | [optional]
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
  **appId** | **String**|  |
  **searchQuery** | **String**|  | [optional]
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded, PendingPayment]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
  **orderByRequestedForTime** | **Boolean**|  | [optional]
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
  **appId** | **String**|  |
  **searchQuery** | **String**|  | [optional]
  **physicalRestaurantId** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded]
+ **state** | [**List&lt;String&gt;**](String.md)|  | [optional] [enum: Created, PlacedCanBeCancelled, ReadyToProcess, AcceptedByRestaurant, Dispatched, Delivered, Cancelled, ManualReview, RejectedByStore, RejectedByFlipdish, RejectedAutomatically, RejectedAfterBeingAccepted, AcceptedAndRefunded, PendingPayment]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
  **orderByRequestedForTime** | **Boolean**|  | [optional]

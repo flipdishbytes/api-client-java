@@ -125,6 +125,7 @@ REJECTEDBYFLIPDISH | &quot;RejectedByFlipdish&quot;
 REJECTEDAUTOMATICALLY | &quot;RejectedAutomatically&quot;
 REJECTEDAFTERBEINGACCEPTED | &quot;RejectedAfterBeingAccepted&quot;
 ACCEPTEDANDREFUNDED | &quot;AcceptedAndRefunded&quot;
+PENDINGPAYMENT | &quot;PendingPayment&quot;
 
 
 <a name="AppTypeEnum"></a>
