@@ -16,6 +16,7 @@ package com.flipdish.apiclient.api;
 import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
 import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
 import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
+import com.flipdish.apiclient.model.RestApiDefaultResponse;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultUserSearch;
@@ -41,6 +42,72 @@ public class UsersApiTest {
 
     private final UsersApi api = new UsersApi();
 
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void addUserNoteTest() throws Exception {
+        Integer userId = null;
+        String note = null;
+        RestApiDefaultResponse response = api.addUserNote(userId, note);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void addUserToRoleTest() throws Exception {
+        Integer userId = null;
+        String roleName = null;
+        RestApiResultUserRole response = api.addUserToRole(userId, roleName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void anonymizeUserTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.anonymizeUser(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void blockUserPhoneNumberTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.blockUserPhoneNumber(userId);
+
+        // TODO: test validations
+    }
     
     /**
      * 
@@ -163,6 +230,71 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void markUserAsFraudulentTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.markUserAsFraudulent(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void markUserAsSuspiciousTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.markUserAsSuspicious(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void removeUserFromRoleTest() throws Exception {
+        Integer userId = null;
+        String roleName = null;
+        RestApiResultUserRole response = api.removeUserFromRole(userId, roleName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void resetMfaTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.resetMfa(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void searchUsersTest() throws Exception {
         String searchQuery = null;
         Boolean hasUserLoggedIn = null;
@@ -171,6 +303,56 @@ public class UsersApiTest {
         Integer pageIndex = null;
         Integer pageSize = null;
         RestApiPaginationResultUserSearch response = api.searchUsers(searchQuery, hasUserLoggedIn, userDiscriminator, searchIn, pageIndex, pageSize);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setCustomerNameTest() throws Exception {
+        Integer userId = null;
+        String customerName = null;
+        RestApiDefaultResponse response = api.setCustomerName(userId, customerName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setUserLanguageTest() throws Exception {
+        Integer userId = null;
+        String languageId = null;
+        RestApiDefaultResponse response = api.setUserLanguage(userId, languageId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void unblockUserPhoneNumberTest() throws Exception {
+        Integer userId = null;
+        RestApiDefaultResponse response = api.unblockUserPhoneNumber(userId);
 
         // TODO: test validations
     }
