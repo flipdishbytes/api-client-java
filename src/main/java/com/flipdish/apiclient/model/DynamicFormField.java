@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * DynamicFormField
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-16T09:56:40.180Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-20T13:24:20.304Z")
 public class DynamicFormField {
   @SerializedName("Identifier")
   private String identifier = null;
