@@ -31,7 +31,7 @@ import java.util.List;
  * Mobile Apps form submission
  */
 @ApiModel(description = "Mobile Apps form submission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-21T08:28:57.062Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-21T12:33:23.306Z")
 public class MobileAppsSubmissionDetails {
   @SerializedName("MobileAppsSubmissionId")
   private Integer mobileAppsSubmissionId = null;
