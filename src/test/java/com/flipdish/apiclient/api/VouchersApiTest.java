@@ -15,6 +15,7 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.CreateVoucher;
 import com.flipdish.apiclient.model.RestApiArrayResultVoucherDataPoint;
+import com.flipdish.apiclient.model.RestApiArrayResultVoucherSummary;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultVoucherSummary;
@@ -147,6 +148,23 @@ public class VouchersApiTest {
         List<Integer> storeIds = null;
         List<String> channelRestrictions = null;
         RestApiPaginationResultVoucherSummary response = api.getVouchers(appId, pageIndex, pageSize, searchCodes, statusSearch, typeSearch, subTypeSearch, storeIds, channelRestrictions);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getVouchersByCustomerForAppTest() throws Exception {
+        String appId = null;
+        Integer customerId = null;
+        RestApiArrayResultVoucherSummary response = api.getVouchersByCustomerForApp(appId, customerId);
 
         // TODO: test validations
     }

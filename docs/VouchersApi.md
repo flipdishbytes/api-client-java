@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getVoucherStatsById**](VouchersApi.md#getVoucherStatsById) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 [**getVoucherValidityPeriods**](VouchersApi.md#getVoucherValidityPeriods) | **GET** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods | 
 [**getVouchers**](VouchersApi.md#getVouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+[**getVouchersByCustomerForApp**](VouchersApi.md#getVouchersByCustomerForApp) | **GET** /api/v1.0/vouchers/{appId}/customer/{customerId} | 
 [**setVoucherValidityPeriodsSimplified**](VouchersApi.md#setVoucherValidityPeriodsSimplified) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods-simplified | 
 [**updateVoucher**](VouchersApi.md#updateVoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 [**updateVoucherUsage**](VouchersApi.md#updateVoucherUsage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
@@ -336,6 +337,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiPaginationResultVoucherSummary**](RestApiPaginationResultVoucherSummary.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getVouchersByCustomerForApp"></a>
+# **getVouchersByCustomerForApp**
+> RestApiArrayResultVoucherSummary getVouchersByCustomerForApp(appId, customerId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.VouchersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+VouchersApi apiInstance = new VouchersApi();
+String appId = "appId_example"; // String | 
+Integer customerId = 56; // Integer | 
+try {
+    RestApiArrayResultVoucherSummary result = apiInstance.getVouchersByCustomerForApp(appId, customerId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VouchersApi#getVouchersByCustomerForApp");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **customerId** | **Integer**|  |
+
+### Return type
+
+[**RestApiArrayResultVoucherSummary**](RestApiArrayResultVoucherSummary.md)
 
 ### Authorization
 
