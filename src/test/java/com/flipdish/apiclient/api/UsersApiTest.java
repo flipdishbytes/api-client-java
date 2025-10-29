@@ -13,6 +13,7 @@
 
 package com.flipdish.apiclient.api;
 
+import com.flipdish.apiclient.model.RestApiArrayResultFlipdishAccountName;
 import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
 import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
 import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
@@ -262,6 +263,23 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void removeFlipdishAccountIdForUserTest() throws Exception {
+        Integer userId = null;
+        Integer accountId = null;
+        RestApiDefaultResponse response = api.removeFlipdishAccountIdForUser(userId, accountId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void removeUserFromRoleTest() throws Exception {
         Integer userId = null;
         String roleName = null;
@@ -282,6 +300,22 @@ public class UsersApiTest {
     public void resetMfaTest() throws Exception {
         Integer userId = null;
         RestApiDefaultResponse response = api.resetMfa(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void searchFlipdishAccountsTest() throws Exception {
+        String searchPattern = null;
+        RestApiArrayResultFlipdishAccountName response = api.searchFlipdishAccounts(searchPattern);
 
         // TODO: test validations
     }
@@ -320,6 +354,23 @@ public class UsersApiTest {
         Integer userId = null;
         String customerName = null;
         RestApiDefaultResponse response = api.setCustomerName(userId, customerName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setFlipdishAccountIdForUserTest() throws Exception {
+        Integer userId = null;
+        Integer accountId = null;
+        RestApiDefaultResponse response = api.setFlipdishAccountIdForUser(userId, accountId);
 
         // TODO: test validations
     }

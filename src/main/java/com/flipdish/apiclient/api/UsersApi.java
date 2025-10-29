@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.flipdish.apiclient.model.RestApiArrayResultFlipdishAccountName;
 import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
 import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
 import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
@@ -1728,6 +1729,142 @@ public class UsersApi {
         return call;
     }
     /**
+     * Build call for removeFlipdishAccountIdForUser
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call removeFlipdishAccountIdForUserCall(Integer userId, Integer accountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/RemoveFlipdishAccountId/{accountId}"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call removeFlipdishAccountIdForUserValidateBeforeCall(Integer userId, Integer accountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling removeFlipdishAccountIdForUser(Async)");
+        }
+        
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling removeFlipdishAccountIdForUser(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = removeFlipdishAccountIdForUserCall(userId, accountId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @return RestApiDefaultResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiDefaultResponse removeFlipdishAccountIdForUser(Integer userId, Integer accountId) throws ApiException {
+        ApiResponse<RestApiDefaultResponse> resp = removeFlipdishAccountIdForUserWithHttpInfo(userId, accountId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @return ApiResponse&lt;RestApiDefaultResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiDefaultResponse> removeFlipdishAccountIdForUserWithHttpInfo(Integer userId, Integer accountId) throws ApiException {
+        com.squareup.okhttp.Call call = removeFlipdishAccountIdForUserValidateBeforeCall(userId, accountId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call removeFlipdishAccountIdForUserAsync(Integer userId, Integer accountId, final ApiCallback<RestApiDefaultResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = removeFlipdishAccountIdForUserValidateBeforeCall(userId, accountId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for removeUserFromRole
      * @param userId  (required)
      * @param roleName  (required)
@@ -1986,6 +2123,133 @@ public class UsersApi {
 
         com.squareup.okhttp.Call call = resetMfaValidateBeforeCall(userId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for searchFlipdishAccounts
+     * @param searchPattern  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call searchFlipdishAccountsCall(String searchPattern, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/searchFlipdishAccounts";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (searchPattern != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("searchPattern", searchPattern));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call searchFlipdishAccountsValidateBeforeCall(String searchPattern, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'searchPattern' is set
+        if (searchPattern == null) {
+            throw new ApiException("Missing the required parameter 'searchPattern' when calling searchFlipdishAccounts(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = searchFlipdishAccountsCall(searchPattern, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param searchPattern  (required)
+     * @return RestApiArrayResultFlipdishAccountName
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultFlipdishAccountName searchFlipdishAccounts(String searchPattern) throws ApiException {
+        ApiResponse<RestApiArrayResultFlipdishAccountName> resp = searchFlipdishAccountsWithHttpInfo(searchPattern);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param searchPattern  (required)
+     * @return ApiResponse&lt;RestApiArrayResultFlipdishAccountName&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultFlipdishAccountName> searchFlipdishAccountsWithHttpInfo(String searchPattern) throws ApiException {
+        com.squareup.okhttp.Call call = searchFlipdishAccountsValidateBeforeCall(searchPattern, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultFlipdishAccountName>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param searchPattern  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call searchFlipdishAccountsAsync(String searchPattern, final ApiCallback<RestApiArrayResultFlipdishAccountName> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = searchFlipdishAccountsValidateBeforeCall(searchPattern, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultFlipdishAccountName>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2277,6 +2541,142 @@ public class UsersApi {
         }
 
         com.squareup.okhttp.Call call = setCustomerNameValidateBeforeCall(userId, customerName, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for setFlipdishAccountIdForUser
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call setFlipdishAccountIdForUserCall(Integer userId, Integer accountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/users/{userId}/SetFlipdishAccountId/{accountId}"
+            .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call setFlipdishAccountIdForUserValidateBeforeCall(Integer userId, Integer accountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling setFlipdishAccountIdForUser(Async)");
+        }
+        
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling setFlipdishAccountIdForUser(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = setFlipdishAccountIdForUserCall(userId, accountId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @return RestApiDefaultResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiDefaultResponse setFlipdishAccountIdForUser(Integer userId, Integer accountId) throws ApiException {
+        ApiResponse<RestApiDefaultResponse> resp = setFlipdishAccountIdForUserWithHttpInfo(userId, accountId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @return ApiResponse&lt;RestApiDefaultResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiDefaultResponse> setFlipdishAccountIdForUserWithHttpInfo(Integer userId, Integer accountId) throws ApiException {
+        com.squareup.okhttp.Call call = setFlipdishAccountIdForUserValidateBeforeCall(userId, accountId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param userId  (required)
+     * @param accountId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call setFlipdishAccountIdForUserAsync(Integer userId, Integer accountId, final ApiCallback<RestApiDefaultResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = setFlipdishAccountIdForUserValidateBeforeCall(userId, accountId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiDefaultResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
