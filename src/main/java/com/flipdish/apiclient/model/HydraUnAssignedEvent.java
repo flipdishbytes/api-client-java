@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra unassigned event
  */
 @ApiModel(description = "Hydra unassigned event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-29T10:49:33.598Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-30T11:59:09.391Z")
 public class HydraUnAssignedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;

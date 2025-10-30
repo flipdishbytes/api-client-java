@@ -28,7 +28,7 @@ import java.io.IOException;
  * App Config Sales Channel
  */
 @ApiModel(description = "App Config Sales Channel")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-29T10:49:33.598Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-10-30T11:59:09.391Z")
 public class AppConfigSalesChannel {
   /**
    * Display a popup to users requesting their email address
