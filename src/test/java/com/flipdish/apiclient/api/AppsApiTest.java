@@ -233,6 +233,24 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void sendPushNotificationTest() throws Exception {
+        String appId = null;
+        Integer customerId = null;
+        String message = null;
+        api.sendPushNotification(appId, customerId, message);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void setAppConfigTest() throws Exception {
         String appId = null;
         AppConfigUpdateModel appConfigUpdate = null;
