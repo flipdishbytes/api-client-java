@@ -28,13 +28,34 @@ import java.io.IOException;
  * Flipdish Account Name
  */
 @ApiModel(description = "Flipdish Account Name")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-14T10:32:44.707Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-25T14:39:02.883Z")
 public class FlipdishAccountName {
+  @SerializedName("PayeeBankAccountDataId")
+  private Integer payeeBankAccountDataId = null;
+
   @SerializedName("FlipdishAccountId")
   private Integer flipdishAccountId = null;
 
   @SerializedName("Name")
   private String name = null;
+
+  public FlipdishAccountName payeeBankAccountDataId(Integer payeeBankAccountDataId) {
+    this.payeeBankAccountDataId = payeeBankAccountDataId;
+    return this;
+  }
+
+   /**
+   * Payee Bank Account Data Id
+   * @return payeeBankAccountDataId
+  **/
+  @ApiModelProperty(value = "Payee Bank Account Data Id")
+  public Integer getPayeeBankAccountDataId() {
+    return payeeBankAccountDataId;
+  }
+
+  public void setPayeeBankAccountDataId(Integer payeeBankAccountDataId) {
+    this.payeeBankAccountDataId = payeeBankAccountDataId;
+  }
 
   public FlipdishAccountName flipdishAccountId(Integer flipdishAccountId) {
     this.flipdishAccountId = flipdishAccountId;
@@ -82,13 +103,14 @@ public class FlipdishAccountName {
       return false;
     }
     FlipdishAccountName flipdishAccountName = (FlipdishAccountName) o;
-    return Objects.equals(this.flipdishAccountId, flipdishAccountName.flipdishAccountId) &&
+    return Objects.equals(this.payeeBankAccountDataId, flipdishAccountName.payeeBankAccountDataId) &&
+        Objects.equals(this.flipdishAccountId, flipdishAccountName.flipdishAccountId) &&
         Objects.equals(this.name, flipdishAccountName.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flipdishAccountId, name);
+    return Objects.hash(payeeBankAccountDataId, flipdishAccountId, name);
   }
 
 
@@ -97,6 +119,7 @@ public class FlipdishAccountName {
     StringBuilder sb = new StringBuilder();
     sb.append("class FlipdishAccountName {\n");
     
+    sb.append("    payeeBankAccountDataId: ").append(toIndentedString(payeeBankAccountDataId)).append("\n");
     sb.append("    flipdishAccountId: ").append(toIndentedString(flipdishAccountId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");

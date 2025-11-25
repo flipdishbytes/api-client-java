@@ -28,13 +28,34 @@ import java.io.IOException;
  * Flipdish account information associated with a user
  */
 @ApiModel(description = "Flipdish account information associated with a user")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-14T10:32:44.707Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-25T14:39:02.883Z")
 public class UserFlipdishAccount {
+  @SerializedName("PayeeBankAccountDataId")
+  private Integer payeeBankAccountDataId = null;
+
   @SerializedName("FlipdishAccountId")
   private Integer flipdishAccountId = null;
 
   @SerializedName("Name")
   private String name = null;
+
+  public UserFlipdishAccount payeeBankAccountDataId(Integer payeeBankAccountDataId) {
+    this.payeeBankAccountDataId = payeeBankAccountDataId;
+    return this;
+  }
+
+   /**
+   * Payee Bank Account Data Id
+   * @return payeeBankAccountDataId
+  **/
+  @ApiModelProperty(value = "Payee Bank Account Data Id")
+  public Integer getPayeeBankAccountDataId() {
+    return payeeBankAccountDataId;
+  }
+
+  public void setPayeeBankAccountDataId(Integer payeeBankAccountDataId) {
+    this.payeeBankAccountDataId = payeeBankAccountDataId;
+  }
 
   public UserFlipdishAccount flipdishAccountId(Integer flipdishAccountId) {
     this.flipdishAccountId = flipdishAccountId;
@@ -82,13 +103,14 @@ public class UserFlipdishAccount {
       return false;
     }
     UserFlipdishAccount userFlipdishAccount = (UserFlipdishAccount) o;
-    return Objects.equals(this.flipdishAccountId, userFlipdishAccount.flipdishAccountId) &&
+    return Objects.equals(this.payeeBankAccountDataId, userFlipdishAccount.payeeBankAccountDataId) &&
+        Objects.equals(this.flipdishAccountId, userFlipdishAccount.flipdishAccountId) &&
         Objects.equals(this.name, userFlipdishAccount.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flipdishAccountId, name);
+    return Objects.hash(payeeBankAccountDataId, flipdishAccountId, name);
   }
 
 
@@ -97,6 +119,7 @@ public class UserFlipdishAccount {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserFlipdishAccount {\n");
     
+    sb.append("    payeeBankAccountDataId: ").append(toIndentedString(payeeBankAccountDataId)).append("\n");
     sb.append("    flipdishAccountId: ").append(toIndentedString(flipdishAccountId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
