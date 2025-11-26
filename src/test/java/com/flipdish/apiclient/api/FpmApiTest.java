@@ -60,6 +60,22 @@ public class FpmApiTest {
      *          if the Api call fails
      */
     @Test
+    public void deleteFpmForStoreTest() throws Exception {
+        Integer storeId = null;
+        api.deleteFpmForStore(storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void editFpmForStoreTest() throws Exception {
         Integer storeId = null;
         TelephonyConfig telephonyConfig = null;

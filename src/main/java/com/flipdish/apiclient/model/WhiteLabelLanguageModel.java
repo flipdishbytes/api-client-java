@@ -28,7 +28,7 @@ import java.io.IOException;
  * White label language model
  */
 @ApiModel(description = "White label language model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-26T13:30:53.287Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-26T16:26:01.988Z")
 public class WhiteLabelLanguageModel {
   @SerializedName("LanguageId")
   private String languageId = null;
