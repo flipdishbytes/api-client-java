@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for creating a Location
  */
 @ApiModel(description = "Input model for creating a Location")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-26T08:27:47.620Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-26T11:04:33.697Z")
 public class CreateLocation {
   @SerializedName("LocationId")
   private Integer locationId = null;
