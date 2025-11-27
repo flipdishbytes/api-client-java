@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * GetReceiptByOrderIdQueryResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-26T16:26:01.988Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-11-27T09:47:24.015Z")
 public class GetReceiptByOrderIdQueryResponse {
   @SerializedName("PreviousOrder")
   private PreviousOrder previousOrder = null;
@@ -57,6 +57,12 @@ public class GetReceiptByOrderIdQueryResponse {
 
   @SerializedName("PaymentMethodDescription")
   private String paymentMethodDescription = null;
+
+  @SerializedName("OrgId")
+  private String orgId = null;
+
+  @SerializedName("CountryCode")
+  private String countryCode = null;
 
   public GetReceiptByOrderIdQueryResponse previousOrder(PreviousOrder previousOrder) {
     this.previousOrder = previousOrder;
@@ -210,6 +216,42 @@ public class GetReceiptByOrderIdQueryResponse {
     this.paymentMethodDescription = paymentMethodDescription;
   }
 
+  public GetReceiptByOrderIdQueryResponse orgId(String orgId) {
+    this.orgId = orgId;
+    return this;
+  }
+
+   /**
+   * Get orgId
+   * @return orgId
+  **/
+  @ApiModelProperty(value = "")
+  public String getOrgId() {
+    return orgId;
+  }
+
+  public void setOrgId(String orgId) {
+    this.orgId = orgId;
+  }
+
+  public GetReceiptByOrderIdQueryResponse countryCode(String countryCode) {
+    this.countryCode = countryCode;
+    return this;
+  }
+
+   /**
+   * Get countryCode
+   * @return countryCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getCountryCode() {
+    return countryCode;
+  }
+
+  public void setCountryCode(String countryCode) {
+    this.countryCode = countryCode;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -227,12 +269,14 @@ public class GetReceiptByOrderIdQueryResponse {
         Objects.equals(this.logoUrl, getReceiptByOrderIdQueryResponse.logoUrl) &&
         Objects.equals(this.address, getReceiptByOrderIdQueryResponse.address) &&
         Objects.equals(this.vatNumber, getReceiptByOrderIdQueryResponse.vatNumber) &&
-        Objects.equals(this.paymentMethodDescription, getReceiptByOrderIdQueryResponse.paymentMethodDescription);
+        Objects.equals(this.paymentMethodDescription, getReceiptByOrderIdQueryResponse.paymentMethodDescription) &&
+        Objects.equals(this.orgId, getReceiptByOrderIdQueryResponse.orgId) &&
+        Objects.equals(this.countryCode, getReceiptByOrderIdQueryResponse.countryCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(previousOrder, depositReturnFeesSummary, tsRequestedForLocal, tsOrderPlacedLocal, logoUrl, address, vatNumber, paymentMethodDescription);
+    return Objects.hash(previousOrder, depositReturnFeesSummary, tsRequestedForLocal, tsOrderPlacedLocal, logoUrl, address, vatNumber, paymentMethodDescription, orgId, countryCode);
   }
 
 
@@ -249,6 +293,8 @@ public class GetReceiptByOrderIdQueryResponse {
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    vatNumber: ").append(toIndentedString(vatNumber)).append("\n");
     sb.append("    paymentMethodDescription: ").append(toIndentedString(paymentMethodDescription)).append("\n");
+    sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
+    sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **address** | **String** |  |  [optional]
 **vatNumber** | **String** |  |  [optional]
 **paymentMethodDescription** | **String** |  |  [optional]
+**orgId** | **String** |  |  [optional]
+**countryCode** | **String** |  |  [optional]
 
 
 
