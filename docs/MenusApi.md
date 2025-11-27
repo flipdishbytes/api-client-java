@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 <a name="createNewMenuAsync"></a>
 # **createNewMenuAsync**
-> Object createNewMenuAsync(appId, menu)
+> Object createNewMenuAsync(appId, menu, orgId)
 
 Create a new menu asynchronously
 
@@ -119,8 +119,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 MenusApi apiInstance = new MenusApi();
 String appId = "appId_example"; // String | App id
 CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu
+String orgId = "orgId_example"; // String | Org id
 try {
-    Object result = apiInstance.createNewMenuAsync(appId, menu);
+    Object result = apiInstance.createNewMenuAsync(appId, menu, orgId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenusApi#createNewMenuAsync");
@@ -134,6 +135,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**| App id |
  **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu |
+ **orgId** | **String**| Org id | [optional]
 
 ### Return type
 

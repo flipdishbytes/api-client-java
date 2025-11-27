@@ -81,7 +81,8 @@ public class MenusApiTest {
     public void createNewMenuAsyncTest() throws Exception {
         String appId = null;
         CreateFullMenu menu = null;
-        Object response = api.createNewMenuAsync(appId, menu);
+        String orgId = null;
+        Object response = api.createNewMenuAsync(appId, menu, orgId);
 
         // TODO: test validations
     }

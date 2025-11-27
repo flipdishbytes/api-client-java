@@ -219,12 +219,13 @@ public class MenusApi {
      * Build call for createNewMenuAsync
      * @param appId App id (required)
      * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call createNewMenuAsyncCall(String appId, CreateFullMenu menu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call createNewMenuAsyncCall(String appId, CreateFullMenu menu, String orgId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = menu;
 
         // create path and map variables
@@ -233,6 +234,8 @@ public class MenusApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (orgId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("orgId", orgId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -270,7 +273,7 @@ public class MenusApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createNewMenuAsyncValidateBeforeCall(String appId, CreateFullMenu menu, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createNewMenuAsyncValidateBeforeCall(String appId, CreateFullMenu menu, String orgId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -283,7 +286,7 @@ public class MenusApi {
         }
         
 
-        com.squareup.okhttp.Call call = createNewMenuAsyncCall(appId, menu, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createNewMenuAsyncCall(appId, menu, orgId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -293,11 +296,12 @@ public class MenusApi {
      * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object createNewMenuAsync(String appId, CreateFullMenu menu) throws ApiException {
-        ApiResponse<Object> resp = createNewMenuAsyncWithHttpInfo(appId, menu);
+    public Object createNewMenuAsync(String appId, CreateFullMenu menu, String orgId) throws ApiException {
+        ApiResponse<Object> resp = createNewMenuAsyncWithHttpInfo(appId, menu, orgId);
         return resp.getData();
     }
 
@@ -306,11 +310,12 @@ public class MenusApi {
      * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> createNewMenuAsyncWithHttpInfo(String appId, CreateFullMenu menu) throws ApiException {
-        com.squareup.okhttp.Call call = createNewMenuAsyncValidateBeforeCall(appId, menu, null, null);
+    public ApiResponse<Object> createNewMenuAsyncWithHttpInfo(String appId, CreateFullMenu menu, String orgId) throws ApiException {
+        com.squareup.okhttp.Call call = createNewMenuAsyncValidateBeforeCall(appId, menu, orgId, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -320,11 +325,12 @@ public class MenusApi {
      * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
      * @param appId App id (required)
      * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createNewMenuAsyncAsync(String appId, CreateFullMenu menu, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call createNewMenuAsyncAsync(String appId, CreateFullMenu menu, String orgId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -345,7 +351,7 @@ public class MenusApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createNewMenuAsyncValidateBeforeCall(appId, menu, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createNewMenuAsyncValidateBeforeCall(appId, menu, orgId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
