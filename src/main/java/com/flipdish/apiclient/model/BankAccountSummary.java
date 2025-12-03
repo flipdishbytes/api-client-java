@@ -32,7 +32,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-01T11:15:43.812Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-03T09:40:32.348Z")
 public class BankAccountSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -99,6 +99,9 @@ public class BankAccountSummary {
 
   @SerializedName("CurrencyCode")
   private String currencyCode = null;
+
+  @SerializedName("VatNumber")
+  private String vatNumber = null;
 
   @SerializedName("StripeConnectedAccountInfo")
   private StripeConnectedAccountInfo stripeConnectedAccountInfo = null;
@@ -281,6 +284,24 @@ public class BankAccountSummary {
     this.currencyCode = currencyCode;
   }
 
+  public BankAccountSummary vatNumber(String vatNumber) {
+    this.vatNumber = vatNumber;
+    return this;
+  }
+
+   /**
+   * Account Holders Vat Number
+   * @return vatNumber
+  **/
+  @ApiModelProperty(value = "Account Holders Vat Number")
+  public String getVatNumber() {
+    return vatNumber;
+  }
+
+  public void setVatNumber(String vatNumber) {
+    this.vatNumber = vatNumber;
+  }
+
   public BankAccountSummary stripeConnectedAccountInfo(StripeConnectedAccountInfo stripeConnectedAccountInfo) {
     this.stripeConnectedAccountInfo = stripeConnectedAccountInfo;
     return this;
@@ -448,6 +469,7 @@ public class BankAccountSummary {
         Objects.equals(this.storeIds, bankAccountSummary.storeIds) &&
         Objects.equals(this.accountState, bankAccountSummary.accountState) &&
         Objects.equals(this.currencyCode, bankAccountSummary.currencyCode) &&
+        Objects.equals(this.vatNumber, bankAccountSummary.vatNumber) &&
         Objects.equals(this.stripeConnectedAccountInfo, bankAccountSummary.stripeConnectedAccountInfo) &&
         Objects.equals(this.accountName, bankAccountSummary.accountName) &&
         Objects.equals(this.iban, bankAccountSummary.iban) &&
@@ -460,7 +482,7 @@ public class BankAccountSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, storeNames, storeIds, accountState, currencyCode, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
+    return Objects.hash(id, storeNames, storeIds, accountState, currencyCode, vatNumber, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
   }
 
 
@@ -474,6 +496,7 @@ public class BankAccountSummary {
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
     sb.append("    accountState: ").append(toIndentedString(accountState)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    vatNumber: ").append(toIndentedString(vatNumber)).append("\n");
     sb.append("    stripeConnectedAccountInfo: ").append(toIndentedString(stripeConnectedAccountInfo)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    iban: ").append(toIndentedString(iban)).append("\n");
