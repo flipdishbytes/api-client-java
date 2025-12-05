@@ -28,7 +28,7 @@ import java.io.IOException;
  * Flipdish account information associated with a user
  */
 @ApiModel(description = "Flipdish account information associated with a user")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-03T09:40:32.348Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-05T12:31:28.581Z")
 public class UserFlipdishAccount {
   @SerializedName("PayeeBankAccountDataId")
   private Integer payeeBankAccountDataId = null;

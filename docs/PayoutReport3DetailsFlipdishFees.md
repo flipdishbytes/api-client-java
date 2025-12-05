@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **posCardRevenue** | **Double** |  |  [optional]
 **posCardOnFlipdishOrders** | **Double** |  |  [optional]
 **otherIntegrationFees** | **Double** |  |  [optional]
+**otherIntegrationFeesExcludingVat** | **Double** |  |  [optional]
+**otherIntegrationFeesVatAmount** | **Double** |  |  [optional]
 **otherIntegrationTips** | **Double** |  |  [optional]
 **refundedFeesOnRefundedSales** | **Double** |  |  [optional]
 **vat** | **Double** |  |  [optional]

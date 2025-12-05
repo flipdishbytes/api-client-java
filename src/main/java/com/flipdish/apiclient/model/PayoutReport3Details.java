@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * PayoutReport3Details
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-03T09:40:32.348Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-05T12:31:28.581Z")
 public class PayoutReport3Details {
   @SerializedName("Amount")
   private Double amount = null;
