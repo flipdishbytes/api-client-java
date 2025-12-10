@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getCrossSellMenuItems"></a>
 # **getCrossSellMenuItems**
-> RestApiResultCrossSellMenuItems getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId)
+> RestApiResultCrossSellMenuItems getCrossSellMenuItems(appId, menuId, menuItemId, limit, totalValue)
 
 
 
@@ -29,13 +29,13 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CrossSellApi apiInstance = new CrossSellApi();
+String appId = "appId_example"; // String | 
 Integer menuId = 56; // Integer | 
 List<Integer> menuItemId = Arrays.asList(56); // List<Integer> | 
 Integer limit = 56; // Integer | 
 Double totalValue = 3.4D; // Double | 
-String appId = "appId_example"; // String | 
 try {
-    RestApiResultCrossSellMenuItems result = apiInstance.getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
+    RestApiResultCrossSellMenuItems result = apiInstance.getCrossSellMenuItems(appId, menuId, menuItemId, limit, totalValue);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CrossSellApi#getCrossSellMenuItems");
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
  **menuId** | **Integer**|  |
  **menuItemId** | [**List&lt;Integer&gt;**](Integer.md)|  |
  **limit** | **Integer**|  |
  **totalValue** | **Double**|  |
- **appId** | **String**|  |
 
 ### Return type
 

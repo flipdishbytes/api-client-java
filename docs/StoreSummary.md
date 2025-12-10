@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **Integer** | Store identifier |  [optional]
 **name** | **String** | Store name |  [optional]
 **menuId** | **Integer** | Stores menu identifier |  [optional]
+**menuPublishId** | [**UUID**](UUID.md) | Stores menu publish GUID |  [optional]
 **metadata** | **Map&lt;String, String&gt;** | Store metadata |  [optional]
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency which used by the Store |  [optional]
 **coordinates** | [**Coordinates**](Coordinates.md) | Latitude and longitude of the store |  [optional]

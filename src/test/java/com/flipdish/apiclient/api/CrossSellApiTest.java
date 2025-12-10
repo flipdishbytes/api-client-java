@@ -45,12 +45,12 @@ public class CrossSellApiTest {
      */
     @Test
     public void getCrossSellMenuItemsTest() throws Exception {
+        String appId = null;
         Integer menuId = null;
         List<Integer> menuItemId = null;
         Integer limit = null;
         Double totalValue = null;
-        String appId = null;
-        RestApiResultCrossSellMenuItems response = api.getCrossSellMenuItems(menuId, menuItemId, limit, totalValue, appId);
+        RestApiResultCrossSellMenuItems response = api.getCrossSellMenuItems(appId, menuId, menuItemId, limit, totalValue);
 
         // TODO: test validations
     }

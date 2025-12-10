@@ -27,12 +27,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Store summary
  */
 @ApiModel(description = "Store summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-05T12:31:28.581Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-10T16:10:05.121Z")
 public class StoreSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -42,6 +43,9 @@ public class StoreSummary {
 
   @SerializedName("MenuId")
   private Integer menuId = null;
+
+  @SerializedName("MenuPublishId")
+  private UUID menuPublishId = null;
 
   @SerializedName("Metadata")
   private Map<String, String> metadata = null;
@@ -393,6 +397,24 @@ public class StoreSummary {
     this.menuId = menuId;
   }
 
+  public StoreSummary menuPublishId(UUID menuPublishId) {
+    this.menuPublishId = menuPublishId;
+    return this;
+  }
+
+   /**
+   * Stores menu publish GUID
+   * @return menuPublishId
+  **/
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "Stores menu publish GUID")
+  public UUID getMenuPublishId() {
+    return menuPublishId;
+  }
+
+  public void setMenuPublishId(UUID menuPublishId) {
+    this.menuPublishId = menuPublishId;
+  }
+
   public StoreSummary metadata(Map<String, String> metadata) {
     this.metadata = metadata;
     return this;
@@ -576,6 +598,7 @@ public class StoreSummary {
     return Objects.equals(this.id, storeSummary.id) &&
         Objects.equals(this.name, storeSummary.name) &&
         Objects.equals(this.menuId, storeSummary.menuId) &&
+        Objects.equals(this.menuPublishId, storeSummary.menuPublishId) &&
         Objects.equals(this.metadata, storeSummary.metadata) &&
         Objects.equals(this.currency, storeSummary.currency) &&
         Objects.equals(this.coordinates, storeSummary.coordinates) &&
@@ -589,7 +612,7 @@ public class StoreSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, menuId, metadata, currency, coordinates, storeTimezone, storeIanaTimezone, storeGroupId, taxId, prettyAddress, countryCode);
+    return Objects.hash(id, name, menuId, menuPublishId, metadata, currency, coordinates, storeTimezone, storeIanaTimezone, storeGroupId, taxId, prettyAddress, countryCode);
   }
 
 
@@ -601,6 +624,7 @@ public class StoreSummary {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    menuId: ").append(toIndentedString(menuId)).append("\n");
+    sb.append("    menuPublishId: ").append(toIndentedString(menuPublishId)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");

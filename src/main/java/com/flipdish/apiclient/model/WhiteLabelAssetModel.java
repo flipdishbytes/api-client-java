@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * White label asset model
  */
 @ApiModel(description = "White label asset model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-05T12:31:28.581Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-10T16:10:05.121Z")
 public class WhiteLabelAssetModel {
   @SerializedName("WhiteLabelAssetId")
   private Integer whiteLabelAssetId = null;
