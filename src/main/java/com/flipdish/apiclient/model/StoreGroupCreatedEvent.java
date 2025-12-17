@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Group Created Event
  */
 @ApiModel(description = "Store Group Created Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-16T09:41:53.597Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-17T16:13:18.225Z")
 public class StoreGroupCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
