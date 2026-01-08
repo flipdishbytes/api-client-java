@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Holds the information for a whitelabel payout.
  */
 @ApiModel(description = "Holds the information for a whitelabel payout.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-17T16:13:18.225Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-08T18:23:29.468Z")
 public class Payout {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -531,6 +531,9 @@ public class Payout {
 
   @SerializedName("TipsOnPosSales")
   private Double tipsOnPosSales = null;
+
+  @SerializedName("BankAccountHasChanged")
+  private Boolean bankAccountHasChanged = null;
 
   public Payout payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -1324,6 +1327,24 @@ public class Payout {
     this.tipsOnPosSales = tipsOnPosSales;
   }
 
+  public Payout bankAccountHasChanged(Boolean bankAccountHasChanged) {
+    this.bankAccountHasChanged = bankAccountHasChanged;
+    return this;
+  }
+
+   /**
+   * Indicates whether the bank account has changed since the previous payout
+   * @return bankAccountHasChanged
+  **/
+  @ApiModelProperty(value = "Indicates whether the bank account has changed since the previous payout")
+  public Boolean isBankAccountHasChanged() {
+    return bankAccountHasChanged;
+  }
+
+  public void setBankAccountHasChanged(Boolean bankAccountHasChanged) {
+    this.bankAccountHasChanged = bankAccountHasChanged;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1377,12 +1398,13 @@ public class Payout {
         Objects.equals(this.totalThirdPartyFees, payout.totalThirdPartyFees) &&
         Objects.equals(this.posSalesAmount, payout.posSalesAmount) &&
         Objects.equals(this.posSalesTax, payout.posSalesTax) &&
-        Objects.equals(this.tipsOnPosSales, payout.tipsOnPosSales);
+        Objects.equals(this.tipsOnPosSales, payout.tipsOnPosSales) &&
+        Objects.equals(this.bankAccountHasChanged, payout.bankAccountHasChanged);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount, deliveryIntegrationFee, deliveryIntegrationTipFee, totalThirdPartyFees, posSalesAmount, posSalesTax, tipsOnPosSales);
+    return Objects.hash(payoutId, payeeBankAccountId, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, payoutType, currency, cutoffDate, onlineSalesAmount, onlineSalesDeliveryCharges, onlineSalesTips, onlineSalesServiceCharges, onlineSalesRefundedFees, onlineSalesFees, posSalesFees, onlineSalesRefundedAmount, posSalesRefundedAmount, onlineSalesTax, totalOnlineRevenue, cashSalesFees, cashSalesRefundedFees, customerCashFees, salesFeesVat, totalFees, totalOnlineRevenueAdjustments, chargebackAmount, posSalesChargebackAmount, chargebackRefundedFees, totalChargebackCost, totalOtherCharges, openingBalance, closingBalance, payGreenSalesAmount, deliveryIntegrationFee, deliveryIntegrationTipFee, totalThirdPartyFees, posSalesAmount, posSalesTax, tipsOnPosSales, bankAccountHasChanged);
   }
 
 
@@ -1435,6 +1457,7 @@ public class Payout {
     sb.append("    posSalesAmount: ").append(toIndentedString(posSalesAmount)).append("\n");
     sb.append("    posSalesTax: ").append(toIndentedString(posSalesTax)).append("\n");
     sb.append("    tipsOnPosSales: ").append(toIndentedString(tipsOnPosSales)).append("\n");
+    sb.append("    bankAccountHasChanged: ").append(toIndentedString(bankAccountHasChanged)).append("\n");
     sb.append("}");
     return sb.toString();
   }

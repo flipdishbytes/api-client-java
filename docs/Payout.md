@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **posSalesAmount** | **Double** | POS sales amount |  [optional]
 **posSalesTax** | **Double** | POS sales tax |  [optional]
 **tipsOnPosSales** | **Double** | Tips on POS sales |  [optional]
+**bankAccountHasChanged** | **Boolean** | Indicates whether the bank account has changed since the previous payout |  [optional]
 
 
 <a name="PayoutStatusEnum"></a>

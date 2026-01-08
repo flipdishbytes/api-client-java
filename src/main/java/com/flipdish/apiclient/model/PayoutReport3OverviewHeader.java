@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PayoutReport3OverviewHeader
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-12-17T16:13:18.225Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-08T18:23:29.468Z")
 public class PayoutReport3OverviewHeader {
   @SerializedName("PayoutId")
   private Integer payoutId = null;
@@ -65,6 +65,9 @@ public class PayoutReport3OverviewHeader {
 
   @SerializedName("Currency")
   private String currency = null;
+
+  @SerializedName("BankAccountHasChanged")
+  private Boolean bankAccountHasChanged = null;
 
   public PayoutReport3OverviewHeader payoutId(Integer payoutId) {
     this.payoutId = payoutId;
@@ -282,6 +285,24 @@ public class PayoutReport3OverviewHeader {
     this.currency = currency;
   }
 
+  public PayoutReport3OverviewHeader bankAccountHasChanged(Boolean bankAccountHasChanged) {
+    this.bankAccountHasChanged = bankAccountHasChanged;
+    return this;
+  }
+
+   /**
+   * Get bankAccountHasChanged
+   * @return bankAccountHasChanged
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isBankAccountHasChanged() {
+    return bankAccountHasChanged;
+  }
+
+  public void setBankAccountHasChanged(Boolean bankAccountHasChanged) {
+    this.bankAccountHasChanged = bankAccountHasChanged;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -303,12 +324,13 @@ public class PayoutReport3OverviewHeader {
         Objects.equals(this.destinationBank, payoutReport3OverviewHeader.destinationBank) &&
         Objects.equals(this.destinationAccount, payoutReport3OverviewHeader.destinationAccount) &&
         Objects.equals(this.amount, payoutReport3OverviewHeader.amount) &&
-        Objects.equals(this.currency, payoutReport3OverviewHeader.currency);
+        Objects.equals(this.currency, payoutReport3OverviewHeader.currency) &&
+        Objects.equals(this.bankAccountHasChanged, payoutReport3OverviewHeader.bankAccountHasChanged);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutId, bankAccountId, isManualPayout, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, currency);
+    return Objects.hash(payoutId, bankAccountId, isManualPayout, accountName, payoutStatus, createdDate, periodStartTime, periodEndTime, destinationBank, destinationAccount, amount, currency, bankAccountHasChanged);
   }
 
 
@@ -329,6 +351,7 @@ public class PayoutReport3OverviewHeader {
     sb.append("    destinationAccount: ").append(toIndentedString(destinationAccount)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
+    sb.append("    bankAccountHasChanged: ").append(toIndentedString(bankAccountHasChanged)).append("\n");
     sb.append("}");
     return sb.toString();
   }

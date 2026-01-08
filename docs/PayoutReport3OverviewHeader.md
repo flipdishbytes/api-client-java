@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **destinationAccount** | **String** |  |  [optional]
 **amount** | **Double** |  |  [optional]
 **currency** | **String** |  |  [optional]
+**bankAccountHasChanged** | **Boolean** |  |  [optional]
 
 
 
