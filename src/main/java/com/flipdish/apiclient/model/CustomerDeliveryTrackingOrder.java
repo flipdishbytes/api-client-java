@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Defines the order data required for customer driver tracking
  */
 @ApiModel(description = "Defines the order data required for customer driver tracking")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-14T13:06:04.869Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-15T16:56:39.391Z")
 public class CustomerDeliveryTrackingOrder {
   @SerializedName("OrderId")
   private Integer orderId = null;

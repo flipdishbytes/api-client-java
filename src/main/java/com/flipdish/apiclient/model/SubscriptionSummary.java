@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-14T13:06:04.869Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-15T16:56:39.391Z")
 public class SubscriptionSummary {
   @SerializedName("NextInvoiceAmount")
   private Double nextInvoiceAmount = null;
