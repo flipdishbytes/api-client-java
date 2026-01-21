@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **deliveryLocationAddressString** | **String** |  |  [optional]
 **paymentAccountType** | **String** |  |  [optional]
 **orderId** | **Integer** |  |  [optional]
+**receiptCode** | **String** |  |  [optional]
 **restaurantName** | **String** |  |  [optional]
 **localOrderId** | **String** |  |  [optional]
 **tableServiceCategory** | **String** |  |  [optional]

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PreviousOrder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-16T14:29:45.178Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-21T12:22:39.786Z")
 public class PreviousOrder {
   @SerializedName("DeliveryType")
   private String deliveryType = null;
@@ -44,6 +44,9 @@ public class PreviousOrder {
 
   @SerializedName("OrderId")
   private Integer orderId = null;
+
+  @SerializedName("ReceiptCode")
+  private String receiptCode = null;
 
   @SerializedName("RestaurantName")
   private String restaurantName = null;
@@ -443,6 +446,24 @@ public class PreviousOrder {
     this.orderId = orderId;
   }
 
+  public PreviousOrder receiptCode(String receiptCode) {
+    this.receiptCode = receiptCode;
+    return this;
+  }
+
+   /**
+   * Get receiptCode
+   * @return receiptCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getReceiptCode() {
+    return receiptCode;
+  }
+
+  public void setReceiptCode(String receiptCode) {
+    this.receiptCode = receiptCode;
+  }
+
   public PreviousOrder restaurantName(String restaurantName) {
     this.restaurantName = restaurantName;
     return this;
@@ -815,6 +836,7 @@ public class PreviousOrder {
         Objects.equals(this.deliveryLocationAddressString, previousOrder.deliveryLocationAddressString) &&
         Objects.equals(this.paymentAccountType, previousOrder.paymentAccountType) &&
         Objects.equals(this.orderId, previousOrder.orderId) &&
+        Objects.equals(this.receiptCode, previousOrder.receiptCode) &&
         Objects.equals(this.restaurantName, previousOrder.restaurantName) &&
         Objects.equals(this.localOrderId, previousOrder.localOrderId) &&
         Objects.equals(this.tableServiceCategory, previousOrder.tableServiceCategory) &&
@@ -838,7 +860,7 @@ public class PreviousOrder {
 
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, depositReturnFeeAmount, totalTax, totalAmount, items, taxRates, whiteLabelId);
+    return Objects.hash(deliveryType, deliveryLocationAddressString, paymentAccountType, orderId, receiptCode, restaurantName, localOrderId, tableServiceCategory, pickupLocationOptionValue, customerName, phoneNumberInternationalFormatString, deliveryInstructions, currency, processingFee, serviceChargePercentage, serviceChargeAmount, tipAmount, deliveryAmount, depositReturnFeeAmount, totalTax, totalAmount, items, taxRates, whiteLabelId);
   }
 
 
@@ -851,6 +873,7 @@ public class PreviousOrder {
     sb.append("    deliveryLocationAddressString: ").append(toIndentedString(deliveryLocationAddressString)).append("\n");
     sb.append("    paymentAccountType: ").append(toIndentedString(paymentAccountType)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
+    sb.append("    receiptCode: ").append(toIndentedString(receiptCode)).append("\n");
     sb.append("    restaurantName: ").append(toIndentedString(restaurantName)).append("\n");
     sb.append("    localOrderId: ").append(toIndentedString(localOrderId)).append("\n");
     sb.append("    tableServiceCategory: ").append(toIndentedString(tableServiceCategory)).append("\n");
