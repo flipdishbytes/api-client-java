@@ -28,7 +28,7 @@ import java.io.IOException;
  * Rest Api Forbidden Result
  */
 @ApiModel(description = "Rest Api Forbidden Result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-28T11:10:49.800Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-28T15:38:35.428Z")
 public class RestApiForbiddenResult {
   @SerializedName("Message")
   private String message = null;
