@@ -28,7 +28,7 @@ import java.io.IOException;
  * Build result model
  */
 @ApiModel(description = "Build result model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-03T15:43:12.299Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-03T16:32:31.029Z")
 public class BuildResultModel {
   @SerializedName("Message")
   private String message = null;
