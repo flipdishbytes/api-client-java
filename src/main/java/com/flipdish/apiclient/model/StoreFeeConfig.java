@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-01-29T09:02:38.096Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-03T15:43:12.299Z")
 public class StoreFeeConfig {
   @SerializedName("FeeConfigId")
   private Integer feeConfigId = null;
@@ -165,6 +165,30 @@ public class StoreFeeConfig {
 
   @SerializedName("Reason")
   private String reason = null;
+
+  @SerializedName("PercentFeeCardOrdersPhoneAgent")
+  private Double percentFeeCardOrdersPhoneAgent = null;
+
+  @SerializedName("PercentFeeCashOrdersPhoneAgent")
+  private Double percentFeeCashOrdersPhoneAgent = null;
+
+  @SerializedName("FixedFeeCardOrdersPhoneAgent")
+  private Double fixedFeeCardOrdersPhoneAgent = null;
+
+  @SerializedName("FixedFeeCashOrdersPhoneAgent")
+  private Double fixedFeeCashOrdersPhoneAgent = null;
+
+  @SerializedName("PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat")
+  private Double percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = null;
+
+  @SerializedName("PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat")
+  private Double percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = null;
+
+  @SerializedName("FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat")
+  private Double fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = null;
+
+  @SerializedName("FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat")
+  private Double fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = null;
 
   public StoreFeeConfig feeConfigId(Integer feeConfigId) {
     this.feeConfigId = feeConfigId;
@@ -976,6 +1000,150 @@ public class StoreFeeConfig {
     this.reason = reason;
   }
 
+  public StoreFeeConfig percentFeeCardOrdersPhoneAgent(Double percentFeeCardOrdersPhoneAgent) {
+    this.percentFeeCardOrdersPhoneAgent = percentFeeCardOrdersPhoneAgent;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee card orders phone agent.
+   * @return percentFeeCardOrdersPhoneAgent
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee card orders phone agent.")
+  public Double getPercentFeeCardOrdersPhoneAgent() {
+    return percentFeeCardOrdersPhoneAgent;
+  }
+
+  public void setPercentFeeCardOrdersPhoneAgent(Double percentFeeCardOrdersPhoneAgent) {
+    this.percentFeeCardOrdersPhoneAgent = percentFeeCardOrdersPhoneAgent;
+  }
+
+  public StoreFeeConfig percentFeeCashOrdersPhoneAgent(Double percentFeeCashOrdersPhoneAgent) {
+    this.percentFeeCashOrdersPhoneAgent = percentFeeCashOrdersPhoneAgent;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee cash orders phone agent.
+   * @return percentFeeCashOrdersPhoneAgent
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee cash orders phone agent.")
+  public Double getPercentFeeCashOrdersPhoneAgent() {
+    return percentFeeCashOrdersPhoneAgent;
+  }
+
+  public void setPercentFeeCashOrdersPhoneAgent(Double percentFeeCashOrdersPhoneAgent) {
+    this.percentFeeCashOrdersPhoneAgent = percentFeeCashOrdersPhoneAgent;
+  }
+
+  public StoreFeeConfig fixedFeeCardOrdersPhoneAgent(Double fixedFeeCardOrdersPhoneAgent) {
+    this.fixedFeeCardOrdersPhoneAgent = fixedFeeCardOrdersPhoneAgent;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee card orders phone agent.
+   * @return fixedFeeCardOrdersPhoneAgent
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee card orders phone agent.")
+  public Double getFixedFeeCardOrdersPhoneAgent() {
+    return fixedFeeCardOrdersPhoneAgent;
+  }
+
+  public void setFixedFeeCardOrdersPhoneAgent(Double fixedFeeCardOrdersPhoneAgent) {
+    this.fixedFeeCardOrdersPhoneAgent = fixedFeeCardOrdersPhoneAgent;
+  }
+
+  public StoreFeeConfig fixedFeeCashOrdersPhoneAgent(Double fixedFeeCashOrdersPhoneAgent) {
+    this.fixedFeeCashOrdersPhoneAgent = fixedFeeCashOrdersPhoneAgent;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee cash orders phone agent.
+   * @return fixedFeeCashOrdersPhoneAgent
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee cash orders phone agent.")
+  public Double getFixedFeeCashOrdersPhoneAgent() {
+    return fixedFeeCashOrdersPhoneAgent;
+  }
+
+  public void setFixedFeeCashOrdersPhoneAgent(Double fixedFeeCashOrdersPhoneAgent) {
+    this.fixedFeeCashOrdersPhoneAgent = fixedFeeCashOrdersPhoneAgent;
+  }
+
+  public StoreFeeConfig percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat(Double percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee card orders phone agent charged to customer including vat.
+   * @return percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee card orders phone agent charged to customer including vat.")
+  public Double getPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat() {
+    return percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public void setPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat(Double percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public StoreFeeConfig percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat(Double percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+    return this;
+  }
+
+   /**
+   * Gets or sets the percent fee cash orders phone agent charged to customer including vat.
+   * @return percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat
+  **/
+  @ApiModelProperty(value = "Gets or sets the percent fee cash orders phone agent charged to customer including vat.")
+  public Double getPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat() {
+    return percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public void setPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat(Double percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public StoreFeeConfig fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat(Double fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee card orders phone agent charged to customer including vat.
+   * @return fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee card orders phone agent charged to customer including vat.")
+  public Double getFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat() {
+    return fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public void setFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat(Double fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public StoreFeeConfig fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat(Double fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+    return this;
+  }
+
+   /**
+   * Gets or sets the fixed fee cash orders phone agent charged to customer including vat.
+   * @return fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat
+  **/
+  @ApiModelProperty(value = "Gets or sets the fixed fee cash orders phone agent charged to customer including vat.")
+  public Double getFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat() {
+    return fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
+  public void setFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat(Double fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat) {
+    this.fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat = fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1030,12 +1198,20 @@ public class StoreFeeConfig {
         Objects.equals(this.percentFeeOrderWithGoogle, storeFeeConfig.percentFeeOrderWithGoogle) &&
         Objects.equals(this.fixedFeeOrderWithGoogle, storeFeeConfig.fixedFeeOrderWithGoogle) &&
         Objects.equals(this.shouldNotAutoIncreaseBefore, storeFeeConfig.shouldNotAutoIncreaseBefore) &&
-        Objects.equals(this.reason, storeFeeConfig.reason);
+        Objects.equals(this.reason, storeFeeConfig.reason) &&
+        Objects.equals(this.percentFeeCardOrdersPhoneAgent, storeFeeConfig.percentFeeCardOrdersPhoneAgent) &&
+        Objects.equals(this.percentFeeCashOrdersPhoneAgent, storeFeeConfig.percentFeeCashOrdersPhoneAgent) &&
+        Objects.equals(this.fixedFeeCardOrdersPhoneAgent, storeFeeConfig.fixedFeeCardOrdersPhoneAgent) &&
+        Objects.equals(this.fixedFeeCashOrdersPhoneAgent, storeFeeConfig.fixedFeeCashOrdersPhoneAgent) &&
+        Objects.equals(this.percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat, storeFeeConfig.percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) &&
+        Objects.equals(this.percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat, storeFeeConfig.percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat) &&
+        Objects.equals(this.fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat, storeFeeConfig.fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat) &&
+        Objects.equals(this.fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat, storeFeeConfig.fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery, percentFeeCardPosTransaction, fixedFeeCardPosTransaction, percentFeeOrderWithGoogle, fixedFeeOrderWithGoogle, shouldNotAutoIncreaseBefore, reason);
+    return Objects.hash(feeConfigId, storeId, startTime, percentFeeCardOrders, percentFeeCashOrders, percentFeeCardOrdersWeb, percentFeeCashOrdersWeb, percentFeeCardOrdersKiosk, percentFeeCashOrdersKiosk, fixedFeeCardOrdersKiosk, fixedFeeCashOrdersKiosk, percentFeeCardOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrdersKioskChargedToCustomerIncludingVat, percentFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCashOrdersKioskChargedToCustomerIncludingVat, fixedFeeCardOrders, fixedFeeCashOrders, percentFeeCardOrdersChargedToCustomerIncludingVat, fixedFeeCardOrdersChargedToCustomerIncludingVat, percentFeeCashOrdersChargedToCustomerIncludingVat, fixedFeeCashOrdersChargedToCustomerIncludingVat, percentFeeTips, percentFeeTipsCollection, percentFeeTipsDelivery, taxRatePercent, percentFeeCardOrdersLocationService, percentFeeCashOrdersLocationService, fixedFeeCardOrdersLocationService, fixedFeeCashOrdersLocationService, percentFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCardOrdersLocationServiceChargedToCustomerIncludingVat, fixedFeeCashOrdersLocationServiceChargedToCustomerIncludingVat, percentFeeCardOrdersIngest, percentFeeCashOrdersIngest, fixedFeeCardOrdersIngest, fixedFeeCashOrdersIngest, percentFeeDelivery, fixedFeeDelivery, percentFeeCardPosTransaction, fixedFeeCardPosTransaction, percentFeeOrderWithGoogle, fixedFeeOrderWithGoogle, shouldNotAutoIncreaseBefore, reason, percentFeeCardOrdersPhoneAgent, percentFeeCashOrdersPhoneAgent, fixedFeeCardOrdersPhoneAgent, fixedFeeCashOrdersPhoneAgent, percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat, percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat, fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat, fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat);
   }
 
 
@@ -1089,6 +1265,14 @@ public class StoreFeeConfig {
     sb.append("    fixedFeeOrderWithGoogle: ").append(toIndentedString(fixedFeeOrderWithGoogle)).append("\n");
     sb.append("    shouldNotAutoIncreaseBefore: ").append(toIndentedString(shouldNotAutoIncreaseBefore)).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    percentFeeCardOrdersPhoneAgent: ").append(toIndentedString(percentFeeCardOrdersPhoneAgent)).append("\n");
+    sb.append("    percentFeeCashOrdersPhoneAgent: ").append(toIndentedString(percentFeeCashOrdersPhoneAgent)).append("\n");
+    sb.append("    fixedFeeCardOrdersPhoneAgent: ").append(toIndentedString(fixedFeeCardOrdersPhoneAgent)).append("\n");
+    sb.append("    fixedFeeCashOrdersPhoneAgent: ").append(toIndentedString(fixedFeeCashOrdersPhoneAgent)).append("\n");
+    sb.append("    percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat: ").append(toIndentedString(percentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat)).append("\n");
+    sb.append("    percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat: ").append(toIndentedString(percentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat)).append("\n");
+    sb.append("    fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat: ").append(toIndentedString(fixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat)).append("\n");
+    sb.append("    fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat: ").append(toIndentedString(fixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat)).append("\n");
     sb.append("}");
     return sb.toString();
   }
