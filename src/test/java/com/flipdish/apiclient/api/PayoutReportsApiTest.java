@@ -19,6 +19,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3Refunded
 import com.flipdish.apiclient.model.RestApiResultFileCreationResult;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3StorePayouts;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -104,6 +105,25 @@ public class PayoutReportsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getPayoutReport3StoresTest() throws Exception {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> stores = null;
+        RestApiResultPayoutReport3StorePayouts response = api.getPayoutReport3Stores(appId, bankAccountId, payoutId, stores);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void payoutReport3ExportPayoutChargebacksTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;
@@ -167,6 +187,25 @@ public class PayoutReportsApiTest {
         Integer payoutId = null;
         List<Integer> stores = null;
         RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void payoutReport3ExportPayoutStoresTest() throws Exception {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<Integer> stores = null;
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
