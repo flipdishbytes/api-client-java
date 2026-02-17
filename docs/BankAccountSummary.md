@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **accountState** | [**AccountStateEnum**](#AccountStateEnum) | Status of Account |  [optional]
 **currencyCode** | **String** | Currency of Account |  [optional]
 **vatNumber** | **String** | Account Holders Vat Number |  [optional]
+**accountHolderAddress** | **String** | Account Holders Address |  [optional]
+**accountHolderCountryCode** | **String** | Account Holders Country Code |  [optional]
 **stripeConnectedAccountInfo** | [**StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) |  [optional]
 **accountName** | **String** | Name of this account |  [optional]
 **iban** | **String** | IBAN of this account |  [optional]

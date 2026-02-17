@@ -32,7 +32,7 @@ import java.util.List;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-17T11:18:33.323Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-17T14:23:13.239Z")
 public class BankAccountSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -102,6 +102,12 @@ public class BankAccountSummary {
 
   @SerializedName("VatNumber")
   private String vatNumber = null;
+
+  @SerializedName("AccountHolderAddress")
+  private String accountHolderAddress = null;
+
+  @SerializedName("AccountHolderCountryCode")
+  private String accountHolderCountryCode = null;
 
   @SerializedName("StripeConnectedAccountInfo")
   private StripeConnectedAccountInfo stripeConnectedAccountInfo = null;
@@ -302,6 +308,42 @@ public class BankAccountSummary {
     this.vatNumber = vatNumber;
   }
 
+  public BankAccountSummary accountHolderAddress(String accountHolderAddress) {
+    this.accountHolderAddress = accountHolderAddress;
+    return this;
+  }
+
+   /**
+   * Account Holders Address
+   * @return accountHolderAddress
+  **/
+  @ApiModelProperty(value = "Account Holders Address")
+  public String getAccountHolderAddress() {
+    return accountHolderAddress;
+  }
+
+  public void setAccountHolderAddress(String accountHolderAddress) {
+    this.accountHolderAddress = accountHolderAddress;
+  }
+
+  public BankAccountSummary accountHolderCountryCode(String accountHolderCountryCode) {
+    this.accountHolderCountryCode = accountHolderCountryCode;
+    return this;
+  }
+
+   /**
+   * Account Holders Country Code
+   * @return accountHolderCountryCode
+  **/
+  @ApiModelProperty(value = "Account Holders Country Code")
+  public String getAccountHolderCountryCode() {
+    return accountHolderCountryCode;
+  }
+
+  public void setAccountHolderCountryCode(String accountHolderCountryCode) {
+    this.accountHolderCountryCode = accountHolderCountryCode;
+  }
+
   public BankAccountSummary stripeConnectedAccountInfo(StripeConnectedAccountInfo stripeConnectedAccountInfo) {
     this.stripeConnectedAccountInfo = stripeConnectedAccountInfo;
     return this;
@@ -470,6 +512,8 @@ public class BankAccountSummary {
         Objects.equals(this.accountState, bankAccountSummary.accountState) &&
         Objects.equals(this.currencyCode, bankAccountSummary.currencyCode) &&
         Objects.equals(this.vatNumber, bankAccountSummary.vatNumber) &&
+        Objects.equals(this.accountHolderAddress, bankAccountSummary.accountHolderAddress) &&
+        Objects.equals(this.accountHolderCountryCode, bankAccountSummary.accountHolderCountryCode) &&
         Objects.equals(this.stripeConnectedAccountInfo, bankAccountSummary.stripeConnectedAccountInfo) &&
         Objects.equals(this.accountName, bankAccountSummary.accountName) &&
         Objects.equals(this.iban, bankAccountSummary.iban) &&
@@ -482,7 +526,7 @@ public class BankAccountSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, storeNames, storeIds, accountState, currencyCode, vatNumber, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
+    return Objects.hash(id, storeNames, storeIds, accountState, currencyCode, vatNumber, accountHolderAddress, accountHolderCountryCode, stripeConnectedAccountInfo, accountName, iban, swift, nationalClearingCode, populatedAccountFields, rejectionReason, businessType);
   }
 
 
@@ -497,6 +541,8 @@ public class BankAccountSummary {
     sb.append("    accountState: ").append(toIndentedString(accountState)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    vatNumber: ").append(toIndentedString(vatNumber)).append("\n");
+    sb.append("    accountHolderAddress: ").append(toIndentedString(accountHolderAddress)).append("\n");
+    sb.append("    accountHolderCountryCode: ").append(toIndentedString(accountHolderCountryCode)).append("\n");
     sb.append("    stripeConnectedAccountInfo: ").append(toIndentedString(stripeConnectedAccountInfo)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    iban: ").append(toIndentedString(iban)).append("\n");
