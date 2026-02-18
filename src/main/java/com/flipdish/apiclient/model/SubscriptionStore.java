@@ -28,7 +28,7 @@ import java.io.IOException;
  * Subscription Store
  */
 @ApiModel(description = "Subscription Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T12:27:58.932Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T13:37:08.208Z")
 public class SubscriptionStore {
   @SerializedName("Id")
   private Integer id = null;

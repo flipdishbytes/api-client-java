@@ -28,7 +28,7 @@ import java.io.IOException;
  * Information to create a reference to a {System.Text.RegularExpressions.Group}
  */
 @ApiModel(description = "Information to create a reference to a {System.Text.RegularExpressions.Group}")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T12:27:58.932Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T13:37:08.208Z")
 public class CreateGroupReference {
   @SerializedName("CatalogItemId")
   private String catalogItemId = null;

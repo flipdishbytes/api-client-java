@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * An invitation to join a team at Flipdish.
  */
 @ApiModel(description = "An invitation to join a team at Flipdish.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T12:27:58.932Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T13:37:08.208Z")
 public class PendingInvitation {
   @SerializedName("AppName")
   private String appName = null;
