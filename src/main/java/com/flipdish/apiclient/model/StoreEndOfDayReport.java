@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store end of day report
  */
 @ApiModel(description = "Store end of day report")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T14:09:24.140Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-19T10:56:38.173Z")
 public class StoreEndOfDayReport {
   @SerializedName("StoreId")
   private Integer storeId = null;

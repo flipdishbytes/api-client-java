@@ -29,10 +29,13 @@ import org.threeten.bp.OffsetDateTime;
  * Phone call
  */
 @ApiModel(description = "Phone call")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T14:09:24.140Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-19T10:56:38.173Z")
 public class PhoneCall {
   @SerializedName("PhoneCallId")
   private Integer phoneCallId = null;
+
+  @SerializedName("CallSid")
+  private String callSid = null;
 
   @SerializedName("TimeOfCall")
   private OffsetDateTime timeOfCall = null;
@@ -138,6 +141,24 @@ public class PhoneCall {
 
   public void setPhoneCallId(Integer phoneCallId) {
     this.phoneCallId = phoneCallId;
+  }
+
+  public PhoneCall callSid(String callSid) {
+    this.callSid = callSid;
+    return this;
+  }
+
+   /**
+   * Twilio Call SID
+   * @return callSid
+  **/
+  @ApiModelProperty(value = "Twilio Call SID")
+  public String getCallSid() {
+    return callSid;
+  }
+
+  public void setCallSid(String callSid) {
+    this.callSid = callSid;
   }
 
   public PhoneCall timeOfCall(OffsetDateTime timeOfCall) {
@@ -313,6 +334,7 @@ public class PhoneCall {
     }
     PhoneCall phoneCall = (PhoneCall) o;
     return Objects.equals(this.phoneCallId, phoneCall.phoneCallId) &&
+        Objects.equals(this.callSid, phoneCall.callSid) &&
         Objects.equals(this.timeOfCall, phoneCall.timeOfCall) &&
         Objects.equals(this.timeOfCallLocal, phoneCall.timeOfCallLocal) &&
         Objects.equals(this.storeId, phoneCall.storeId) &&
@@ -326,7 +348,7 @@ public class PhoneCall {
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneCallId, timeOfCall, timeOfCallLocal, storeId, storeName, callerName, callerUserId, callerNumber, callLengthInSeconds, callStatus);
+    return Objects.hash(phoneCallId, callSid, timeOfCall, timeOfCallLocal, storeId, storeName, callerName, callerUserId, callerNumber, callLengthInSeconds, callStatus);
   }
 
 
@@ -336,6 +358,7 @@ public class PhoneCall {
     sb.append("class PhoneCall {\n");
     
     sb.append("    phoneCallId: ").append(toIndentedString(phoneCallId)).append("\n");
+    sb.append("    callSid: ").append(toIndentedString(callSid)).append("\n");
     sb.append("    timeOfCall: ").append(toIndentedString(timeOfCall)).append("\n");
     sb.append("    timeOfCallLocal: ").append(toIndentedString(timeOfCallLocal)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");

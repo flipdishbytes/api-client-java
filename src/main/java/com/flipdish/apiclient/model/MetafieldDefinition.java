@@ -30,7 +30,7 @@ import java.util.List;
  * Metafield Definition
  */
 @ApiModel(description = "Metafield Definition")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T14:09:24.140Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-19T10:56:38.173Z")
 public class MetafieldDefinition {
   @SerializedName("IsReadOnly")
   private Boolean isReadOnly = null;

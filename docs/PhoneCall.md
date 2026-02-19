@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **phoneCallId** | **Integer** | Phone call id |  [optional]
+**callSid** | **String** | Twilio Call SID |  [optional]
 **timeOfCall** | [**OffsetDateTime**](OffsetDateTime.md) | Time of the call |  [optional]
 **timeOfCallLocal** | [**OffsetDateTime**](OffsetDateTime.md) | Time of the call, local to the store to which the call was made |  [optional]
 **storeId** | **Integer** | ID of the store that the call was TO |  [optional]

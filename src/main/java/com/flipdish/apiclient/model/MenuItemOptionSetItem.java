@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-18T14:09:24.140Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-19T10:56:38.173Z")
 public class MenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
