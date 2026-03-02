@@ -34,7 +34,7 @@ import org.threeten.bp.OffsetDateTime;
  * WhiteLabelConfig model
  */
 @ApiModel(description = "WhiteLabelConfig model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-23T11:47:17.862Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-02T10:30:04.951Z")
 public class WhiteLabelConfigModel {
   @SerializedName("WhiteLabelLanguages")
   private List<WhiteLabelLanguageModel> whiteLabelLanguages = null;

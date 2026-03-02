@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **taxId** | **String** | VAT number or generic Tax ID of the store |  [optional]
 **prettyAddress** | **String** | Address of the store |  [optional]
 **countryCode** | **String** | Country code of the store address (ISO 3166-1 alpha-2) |  [optional]
+**propertyId** | **String** | Property identifier |  [optional]
 
 
 <a name="CurrencyEnum"></a>

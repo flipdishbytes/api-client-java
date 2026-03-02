@@ -33,7 +33,7 @@ import java.util.UUID;
  * Store summary
  */
 @ApiModel(description = "Store summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-02-23T11:47:17.862Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-02T10:30:04.951Z")
 public class StoreSummary {
   @SerializedName("Id")
   private Integer id = null;
@@ -343,6 +343,9 @@ public class StoreSummary {
   @SerializedName("CountryCode")
   private String countryCode = null;
 
+  @SerializedName("PropertyId")
+  private String propertyId = null;
+
   public StoreSummary id(Integer id) {
     this.id = id;
     return this;
@@ -585,6 +588,24 @@ public class StoreSummary {
     this.countryCode = countryCode;
   }
 
+  public StoreSummary propertyId(String propertyId) {
+    this.propertyId = propertyId;
+    return this;
+  }
+
+   /**
+   * Property identifier
+   * @return propertyId
+  **/
+  @ApiModelProperty(value = "Property identifier")
+  public String getPropertyId() {
+    return propertyId;
+  }
+
+  public void setPropertyId(String propertyId) {
+    this.propertyId = propertyId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -607,12 +628,13 @@ public class StoreSummary {
         Objects.equals(this.storeGroupId, storeSummary.storeGroupId) &&
         Objects.equals(this.taxId, storeSummary.taxId) &&
         Objects.equals(this.prettyAddress, storeSummary.prettyAddress) &&
-        Objects.equals(this.countryCode, storeSummary.countryCode);
+        Objects.equals(this.countryCode, storeSummary.countryCode) &&
+        Objects.equals(this.propertyId, storeSummary.propertyId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, menuId, menuPublishId, metadata, currency, coordinates, storeTimezone, storeIanaTimezone, storeGroupId, taxId, prettyAddress, countryCode);
+    return Objects.hash(id, name, menuId, menuPublishId, metadata, currency, coordinates, storeTimezone, storeIanaTimezone, storeGroupId, taxId, prettyAddress, countryCode, propertyId);
   }
 
 
@@ -634,6 +656,7 @@ public class StoreSummary {
     sb.append("    taxId: ").append(toIndentedString(taxId)).append("\n");
     sb.append("    prettyAddress: ").append(toIndentedString(prettyAddress)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
+    sb.append("    propertyId: ").append(toIndentedString(propertyId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
