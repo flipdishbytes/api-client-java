@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Telephony Config Updated Event
  */
 @ApiModel(description = "Telephony Config Updated Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-10T14:58:20.403Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-11T14:11:09.150Z")
 public class TelephonyConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -44,6 +44,9 @@ public class TelephonyConfigUpdatedEvent {
 
   @SerializedName("TelephonyConfig")
   private TelephonyConfig telephonyConfig = null;
+
+  @SerializedName("PropertyId")
+  private String propertyId = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -133,6 +136,24 @@ public class TelephonyConfigUpdatedEvent {
 
   public void setTelephonyConfig(TelephonyConfig telephonyConfig) {
     this.telephonyConfig = telephonyConfig;
+  }
+
+  public TelephonyConfigUpdatedEvent propertyId(String propertyId) {
+    this.propertyId = propertyId;
+    return this;
+  }
+
+   /**
+   * Property Id
+   * @return propertyId
+  **/
+  @ApiModelProperty(value = "Property Id")
+  public String getPropertyId() {
+    return propertyId;
+  }
+
+  public void setPropertyId(String propertyId) {
+    this.propertyId = propertyId;
   }
 
   public TelephonyConfigUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -257,6 +278,7 @@ public class TelephonyConfigUpdatedEvent {
         Objects.equals(this.description, telephonyConfigUpdatedEvent.description) &&
         Objects.equals(this.storeId, telephonyConfigUpdatedEvent.storeId) &&
         Objects.equals(this.telephonyConfig, telephonyConfigUpdatedEvent.telephonyConfig) &&
+        Objects.equals(this.propertyId, telephonyConfigUpdatedEvent.propertyId) &&
         Objects.equals(this.flipdishEventId, telephonyConfigUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, telephonyConfigUpdatedEvent.createTime) &&
         Objects.equals(this.position, telephonyConfigUpdatedEvent.position) &&
@@ -267,7 +289,7 @@ public class TelephonyConfigUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, storeId, telephonyConfig, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(eventName, description, storeId, telephonyConfig, propertyId, flipdishEventId, createTime, position, appId, orgId, ipAddress);
   }
 
 
@@ -280,6 +302,7 @@ public class TelephonyConfigUpdatedEvent {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    telephonyConfig: ").append(toIndentedString(telephonyConfig)).append("\n");
+    sb.append("    propertyId: ").append(toIndentedString(propertyId)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");

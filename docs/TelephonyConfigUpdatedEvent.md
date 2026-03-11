@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **description** | **String** | Description |  [optional]
 **storeId** | **Integer** | Store Id |  [optional]
 **telephonyConfig** | [**TelephonyConfig**](TelephonyConfig.md) | The telephony config |  [optional]
+**propertyId** | **String** | Property Id |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
 **position** | **Integer** | Position |  [optional]
