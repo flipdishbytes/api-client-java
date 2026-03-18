@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * App Install information
  */
 @ApiModel(description = "App Install information")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-11T14:11:09.150Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T09:57:11.023Z")
 public class AppInstall {
   @SerializedName("Name")
   private String name = null;

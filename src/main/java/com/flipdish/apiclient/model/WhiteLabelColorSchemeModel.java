@@ -28,7 +28,7 @@ import java.io.IOException;
  * White label color scheme model
  */
 @ApiModel(description = "White label color scheme model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-11T14:11:09.150Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T09:57:11.023Z")
 public class WhiteLabelColorSchemeModel {
   @SerializedName("WhiteLabelColorSchemeId")
   private Integer whiteLabelColorSchemeId = null;
