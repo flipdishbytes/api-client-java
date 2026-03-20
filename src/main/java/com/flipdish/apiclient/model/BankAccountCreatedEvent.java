@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class BankAccountCreatedEvent {
   @SerializedName("OrgId")
   private String orgId = null;
@@ -60,6 +60,12 @@ public class BankAccountCreatedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public BankAccountCreatedEvent orgId(String orgId) {
     this.orgId = orgId;
@@ -223,6 +229,42 @@ public class BankAccountCreatedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public BankAccountCreatedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public BankAccountCreatedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +283,14 @@ public class BankAccountCreatedEvent {
         Objects.equals(this.createTime, bankAccountCreatedEvent.createTime) &&
         Objects.equals(this.position, bankAccountCreatedEvent.position) &&
         Objects.equals(this.appId, bankAccountCreatedEvent.appId) &&
-        Objects.equals(this.ipAddress, bankAccountCreatedEvent.ipAddress);
+        Objects.equals(this.ipAddress, bankAccountCreatedEvent.ipAddress) &&
+        Objects.equals(this.activityId, bankAccountCreatedEvent.activityId) &&
+        Objects.equals(this.activityType, bankAccountCreatedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orgId, bankAccount, user, eventName, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(orgId, bankAccount, user, eventName, flipdishEventId, createTime, position, appId, ipAddress, activityId, activityType);
   }
 
 
@@ -264,6 +308,8 @@ public class BankAccountCreatedEvent {
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

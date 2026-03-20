@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User deleted event
  */
 @ApiModel(description = "User deleted event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class UserDeletedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -59,6 +59,12 @@ public class UserDeletedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public UserDeletedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -222,6 +228,42 @@ public class UserDeletedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public UserDeletedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public UserDeletedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -240,12 +282,14 @@ public class UserDeletedEvent {
         Objects.equals(this.position, userDeletedEvent.position) &&
         Objects.equals(this.appId, userDeletedEvent.appId) &&
         Objects.equals(this.orgId, userDeletedEvent.orgId) &&
-        Objects.equals(this.ipAddress, userDeletedEvent.ipAddress);
+        Objects.equals(this.ipAddress, userDeletedEvent.ipAddress) &&
+        Objects.equals(this.activityId, userDeletedEvent.activityId) &&
+        Objects.equals(this.activityType, userDeletedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(eventName, description, user, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -263,6 +307,8 @@ public class UserDeletedEvent {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

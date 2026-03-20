@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher Applied Event
  */
 @ApiModel(description = "Voucher Applied Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class VoucherAppliedEvent {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -58,6 +58,12 @@ public class VoucherAppliedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public VoucherAppliedEvent voucherId(Integer voucherId) {
     this.voucherId = voucherId;
@@ -221,6 +227,42 @@ public class VoucherAppliedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public VoucherAppliedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public VoucherAppliedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -239,12 +281,14 @@ public class VoucherAppliedEvent {
         Objects.equals(this.position, voucherAppliedEvent.position) &&
         Objects.equals(this.appId, voucherAppliedEvent.appId) &&
         Objects.equals(this.orgId, voucherAppliedEvent.orgId) &&
-        Objects.equals(this.ipAddress, voucherAppliedEvent.ipAddress);
+        Objects.equals(this.ipAddress, voucherAppliedEvent.ipAddress) &&
+        Objects.equals(this.activityId, voucherAppliedEvent.activityId) &&
+        Objects.equals(this.activityType, voucherAppliedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, eventName, orderId, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(voucherId, eventName, orderId, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -262,6 +306,8 @@ public class VoucherAppliedEvent {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

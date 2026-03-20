@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Rejected Event
  */
 @ApiModel(description = "Order Rejected Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class OrderRejectedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -69,6 +69,12 @@ public class OrderRejectedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public OrderRejectedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -286,6 +292,42 @@ public class OrderRejectedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public OrderRejectedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public OrderRejectedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -307,12 +349,14 @@ public class OrderRejectedEvent {
         Objects.equals(this.position, orderRejectedEvent.position) &&
         Objects.equals(this.appId, orderRejectedEvent.appId) &&
         Objects.equals(this.orgId, orderRejectedEvent.orgId) &&
-        Objects.equals(this.ipAddress, orderRejectedEvent.ipAddress);
+        Objects.equals(this.ipAddress, orderRejectedEvent.ipAddress) &&
+        Objects.equals(this.activityId, orderRejectedEvent.activityId) &&
+        Objects.equals(this.activityType, orderRejectedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, orderRejectedTime, reason, user, order, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(eventName, description, orderRejectedTime, reason, user, order, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -333,6 +377,8 @@ public class OrderRejectedEvent {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

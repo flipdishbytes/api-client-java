@@ -30,7 +30,7 @@ import java.util.List;
  * Webhook subscription
  */
 @ApiModel(description = "Webhook subscription")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class WebhookSubscription {
   @SerializedName("Id")
   private Integer id = null;

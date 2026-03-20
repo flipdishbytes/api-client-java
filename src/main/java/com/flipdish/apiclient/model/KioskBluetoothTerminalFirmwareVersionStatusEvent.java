@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Kiosk Stripe Terminal Update info received event
  */
 @ApiModel(description = "Kiosk Stripe Terminal Update info received event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
   @SerializedName("DeviceId")
   private String deviceId = null;
@@ -125,6 +125,12 @@ public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public KioskBluetoothTerminalFirmwareVersionStatusEvent deviceId(String deviceId) {
     this.deviceId = deviceId;
@@ -378,6 +384,42 @@ public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
     this.ipAddress = ipAddress;
   }
 
+  public KioskBluetoothTerminalFirmwareVersionStatusEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public KioskBluetoothTerminalFirmwareVersionStatusEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -401,12 +443,14 @@ public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
         Objects.equals(this.position, kioskBluetoothTerminalFirmwareVersionStatusEvent.position) &&
         Objects.equals(this.appId, kioskBluetoothTerminalFirmwareVersionStatusEvent.appId) &&
         Objects.equals(this.orgId, kioskBluetoothTerminalFirmwareVersionStatusEvent.orgId) &&
-        Objects.equals(this.ipAddress, kioskBluetoothTerminalFirmwareVersionStatusEvent.ipAddress);
+        Objects.equals(this.ipAddress, kioskBluetoothTerminalFirmwareVersionStatusEvent.ipAddress) &&
+        Objects.equals(this.activityId, kioskBluetoothTerminalFirmwareVersionStatusEvent.activityId) &&
+        Objects.equals(this.activityType, kioskBluetoothTerminalFirmwareVersionStatusEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceId, serialNumber, hasFirmwareUpdate, hasConfigUpdate, hasKeyUpdate, updateTimeEstimate, userEventInfo, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(deviceId, serialNumber, hasFirmwareUpdate, hasConfigUpdate, hasKeyUpdate, updateTimeEstimate, userEventInfo, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -429,6 +473,8 @@ public class KioskBluetoothTerminalFirmwareVersionStatusEvent {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

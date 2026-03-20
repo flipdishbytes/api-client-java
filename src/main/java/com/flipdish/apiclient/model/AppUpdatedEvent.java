@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Application updated event
  */
 @ApiModel(description = "Application updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class AppUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -72,6 +72,12 @@ public class AppUpdatedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public AppUpdatedEvent eventName(String eventName) {
     this.eventName = eventName;
@@ -307,6 +313,42 @@ public class AppUpdatedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public AppUpdatedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public AppUpdatedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -329,12 +371,14 @@ public class AppUpdatedEvent {
         Objects.equals(this.createTime, appUpdatedEvent.createTime) &&
         Objects.equals(this.position, appUpdatedEvent.position) &&
         Objects.equals(this.appId, appUpdatedEvent.appId) &&
-        Objects.equals(this.ipAddress, appUpdatedEvent.ipAddress);
+        Objects.equals(this.ipAddress, appUpdatedEvent.ipAddress) &&
+        Objects.equals(this.activityId, appUpdatedEvent.activityId) &&
+        Objects.equals(this.activityType, appUpdatedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, description, changes, appName, countryId, user, app, orgId, flipdishEventId, createTime, position, appId, ipAddress);
+    return Objects.hash(eventName, description, changes, appName, countryId, user, app, orgId, flipdishEventId, createTime, position, appId, ipAddress, activityId, activityType);
   }
 
 
@@ -356,6 +400,8 @@ public class AppUpdatedEvent {
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

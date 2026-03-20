@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra assigned event
  */
 @ApiModel(description = "Hydra assigned event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-18T16:12:35.879Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-20T09:09:11.165Z")
 public class HydraAssignedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -60,6 +60,12 @@ public class HydraAssignedEvent {
 
   @SerializedName("IpAddress")
   private String ipAddress = null;
+
+  @SerializedName("ActivityId")
+  private String activityId = null;
+
+  @SerializedName("ActivityType")
+  private String activityType = null;
 
   public HydraAssignedEvent user(UserEventInfo user) {
     this.user = user;
@@ -223,6 +229,42 @@ public class HydraAssignedEvent {
     this.ipAddress = ipAddress;
   }
 
+  public HydraAssignedEvent activityId(String activityId) {
+    this.activityId = activityId;
+    return this;
+  }
+
+   /**
+   * Activity Id
+   * @return activityId
+  **/
+  @ApiModelProperty(value = "Activity Id")
+  public String getActivityId() {
+    return activityId;
+  }
+
+  public void setActivityId(String activityId) {
+    this.activityId = activityId;
+  }
+
+  public HydraAssignedEvent activityType(String activityType) {
+    this.activityType = activityType;
+    return this;
+  }
+
+   /**
+   * Activity Type
+   * @return activityType
+  **/
+  @ApiModelProperty(value = "Activity Type")
+  public String getActivityType() {
+    return activityType;
+  }
+
+  public void setActivityType(String activityType) {
+    this.activityType = activityType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +283,14 @@ public class HydraAssignedEvent {
         Objects.equals(this.position, hydraAssignedEvent.position) &&
         Objects.equals(this.appId, hydraAssignedEvent.appId) &&
         Objects.equals(this.orgId, hydraAssignedEvent.orgId) &&
-        Objects.equals(this.ipAddress, hydraAssignedEvent.ipAddress);
+        Objects.equals(this.ipAddress, hydraAssignedEvent.ipAddress) &&
+        Objects.equals(this.activityId, hydraAssignedEvent.activityId) &&
+        Objects.equals(this.activityType, hydraAssignedEvent.activityType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress);
+    return Objects.hash(user, hydraStatus, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -264,6 +308,8 @@ public class HydraAssignedEvent {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    orgId: ").append(toIndentedString(orgId)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
+    sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    activityType: ").append(toIndentedString(activityType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

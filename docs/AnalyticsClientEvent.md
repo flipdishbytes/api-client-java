@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **appId** | **String** | App id |  [optional]
 **orgId** | **String** | Org id |  [optional]
 **ipAddress** | **String** | Ip Address |  [optional]
+**activityId** | **String** | Activity Id |  [optional]
+**activityType** | **String** | Activity Type |  [optional]
 
 
 
