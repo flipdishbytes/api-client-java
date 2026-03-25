@@ -52,8 +52,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> storeIds = null;
-        List<String> propertyIds = null;
-        RestApiResultPayoutReport3Details response = api.getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds, propertyIds);
+        RestApiResultPayoutReport3Details response = api.getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds);
 
         // TODO: test validations
     }
@@ -90,10 +89,9 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> storeIds = null;
-        List<String> propertyIds = null;
         Integer page = null;
         Integer limit = null;
-        RestApiPaginationResultPayoutReport3RefundedOrder response = api.getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit);
+        RestApiPaginationResultPayoutReport3RefundedOrder response = api.getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, page, limit);
 
         // TODO: test validations
     }
@@ -112,8 +110,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultPayoutReport3StorePayouts response = api.getPayoutReport3Stores(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultPayoutReport3StorePayouts response = api.getPayoutReport3Stores(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
@@ -132,8 +129,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
@@ -152,8 +148,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
@@ -172,8 +167,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
@@ -192,8 +186,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }
@@ -212,8 +205,7 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         List<Integer> stores = null;
-        List<String> propertyIds = null;
-        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores, propertyIds);
+        RestApiResultFileCreationResult response = api.payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores);
 
         // TODO: test validations
     }

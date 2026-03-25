@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getPayoutReport3Details"></a>
 # **getPayoutReport3Details**
-> RestApiResultPayoutReport3Details getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds, propertyIds)
+> RestApiResultPayoutReport3Details getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds)
 
 
 
@@ -41,9 +41,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultPayoutReport3Details result = apiInstance.getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds, propertyIds);
+    RestApiResultPayoutReport3Details result = apiInstance.getPayoutReport3Details(appId, bankAccountId, payoutId, storeIds);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#getPayoutReport3Details");
@@ -59,7 +58,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -131,7 +129,7 @@ Name | Type | Description  | Notes
 
 <a name="getPayoutReport3RefundedOrders"></a>
 # **getPayoutReport3RefundedOrders**
-> RestApiPaginationResultPayoutReport3RefundedOrder getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit)
+> RestApiPaginationResultPayoutReport3RefundedOrder getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, page, limit)
 
 
 
@@ -155,11 +153,10 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> storeIds = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 Integer page = 56; // Integer | 
 Integer limit = 56; // Integer | 
 try {
-    RestApiPaginationResultPayoutReport3RefundedOrder result = apiInstance.getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, propertyIds, page, limit);
+    RestApiPaginationResultPayoutReport3RefundedOrder result = apiInstance.getPayoutReport3RefundedOrders(appId, bankAccountId, payoutId, storeIds, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#getPayoutReport3RefundedOrders");
@@ -175,7 +172,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **storeIds** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 
@@ -194,7 +190,7 @@ Name | Type | Description  | Notes
 
 <a name="getPayoutReport3Stores"></a>
 # **getPayoutReport3Stores**
-> RestApiResultPayoutReport3StorePayouts getPayoutReport3Stores(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultPayoutReport3StorePayouts getPayoutReport3Stores(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -218,9 +214,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultPayoutReport3StorePayouts result = apiInstance.getPayoutReport3Stores(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultPayoutReport3StorePayouts result = apiInstance.getPayoutReport3Stores(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#getPayoutReport3Stores");
@@ -236,7 +231,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -253,7 +247,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutChargebacks"></a>
 # **payoutReport3ExportPayoutChargebacks**
-> RestApiResultFileCreationResult payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -277,9 +271,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutChargebacks(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutChargebacks");
@@ -295,7 +288,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -312,7 +304,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutOrders"></a>
 # **payoutReport3ExportPayoutOrders**
-> RestApiResultFileCreationResult payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -336,9 +328,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutOrders(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutOrders");
@@ -354,7 +345,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -371,7 +361,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutPosSales"></a>
 # **payoutReport3ExportPayoutPosSales**
-> RestApiResultFileCreationResult payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -395,9 +385,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutPosSales(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutPosSales");
@@ -413,7 +402,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -430,7 +418,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutRefundedOrders"></a>
 # **payoutReport3ExportPayoutRefundedOrders**
-> RestApiResultFileCreationResult payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -454,9 +442,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutRefundedOrders(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutRefundedOrders");
@@ -472,7 +459,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 
@@ -489,7 +475,7 @@ Name | Type | Description  | Notes
 
 <a name="payoutReport3ExportPayoutStores"></a>
 # **payoutReport3ExportPayoutStores**
-> RestApiResultFileCreationResult payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores, propertyIds)
+> RestApiResultFileCreationResult payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores)
 
 
 
@@ -513,9 +499,8 @@ String appId = "appId_example"; // String |
 Integer bankAccountId = 56; // Integer | 
 Integer payoutId = 56; // Integer | 
 List<Integer> stores = Arrays.asList(56); // List<Integer> | 
-List<String> propertyIds = Arrays.asList("propertyIds_example"); // List<String> | 
 try {
-    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores, propertyIds);
+    RestApiResultFileCreationResult result = apiInstance.payoutReport3ExportPayoutStores(appId, bankAccountId, payoutId, stores);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PayoutReportsApi#payoutReport3ExportPayoutStores");
@@ -531,7 +516,6 @@ Name | Type | Description  | Notes
  **bankAccountId** | **Integer**|  |
  **payoutId** | **Integer**|  |
  **stores** | [**List&lt;Integer&gt;**](Integer.md)|  | [optional]
- **propertyIds** | [**List&lt;String&gt;**](String.md)|  | [optional]
 
 ### Return type
 

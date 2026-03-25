@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * 
  */
 @ApiModel(description = "")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-25T13:21:02.790Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-25T14:30:05.308Z")
 public class BusinessHoursOverride {
   @SerializedName("BusinessHoursOverrideId")
   private Integer businessHoursOverrideId = null;
