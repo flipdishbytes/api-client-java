@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * User Monthly Commission
  */
 @ApiModel(description = "User Monthly Commission")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-23T17:48:47.036Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-03-25T13:21:02.790Z")
 public class UserMonthlyCommission {
   @SerializedName("UserId")
   private Integer userId = null;
