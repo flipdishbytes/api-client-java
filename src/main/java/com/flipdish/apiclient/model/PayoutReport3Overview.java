@@ -16,7 +16,6 @@ package com.flipdish.apiclient.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.flipdish.apiclient.model.PayoutReport3OverviewHeader;
-import com.flipdish.apiclient.model.PayoutReport3Property;
 import com.flipdish.apiclient.model.PayoutReport3Store;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -32,16 +31,13 @@ import java.util.List;
 /**
  * PayoutReport3Overview
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T15:58:10.122Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T17:05:06.712Z")
 public class PayoutReport3Overview {
   @SerializedName("PayoutReport3OverviewHeader")
   private PayoutReport3OverviewHeader payoutReport3OverviewHeader = null;
 
   @SerializedName("PayoutStores")
   private List<PayoutReport3Store> payoutStores = null;
-
-  @SerializedName("PayoutProperties")
-  private List<PayoutReport3Property> payoutProperties = null;
 
   public PayoutReport3Overview payoutReport3OverviewHeader(PayoutReport3OverviewHeader payoutReport3OverviewHeader) {
     this.payoutReport3OverviewHeader = payoutReport3OverviewHeader;
@@ -87,32 +83,6 @@ public class PayoutReport3Overview {
     this.payoutStores = payoutStores;
   }
 
-  public PayoutReport3Overview payoutProperties(List<PayoutReport3Property> payoutProperties) {
-    this.payoutProperties = payoutProperties;
-    return this;
-  }
-
-  public PayoutReport3Overview addPayoutPropertiesItem(PayoutReport3Property payoutPropertiesItem) {
-    if (this.payoutProperties == null) {
-      this.payoutProperties = new ArrayList<PayoutReport3Property>();
-    }
-    this.payoutProperties.add(payoutPropertiesItem);
-    return this;
-  }
-
-   /**
-   * Get payoutProperties
-   * @return payoutProperties
-  **/
-  @ApiModelProperty(value = "")
-  public List<PayoutReport3Property> getPayoutProperties() {
-    return payoutProperties;
-  }
-
-  public void setPayoutProperties(List<PayoutReport3Property> payoutProperties) {
-    this.payoutProperties = payoutProperties;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -124,13 +94,12 @@ public class PayoutReport3Overview {
     }
     PayoutReport3Overview payoutReport3Overview = (PayoutReport3Overview) o;
     return Objects.equals(this.payoutReport3OverviewHeader, payoutReport3Overview.payoutReport3OverviewHeader) &&
-        Objects.equals(this.payoutStores, payoutReport3Overview.payoutStores) &&
-        Objects.equals(this.payoutProperties, payoutReport3Overview.payoutProperties);
+        Objects.equals(this.payoutStores, payoutReport3Overview.payoutStores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(payoutReport3OverviewHeader, payoutStores, payoutProperties);
+    return Objects.hash(payoutReport3OverviewHeader, payoutStores);
   }
 
 
@@ -141,7 +110,6 @@ public class PayoutReport3Overview {
     
     sb.append("    payoutReport3OverviewHeader: ").append(toIndentedString(payoutReport3OverviewHeader)).append("\n");
     sb.append("    payoutStores: ").append(toIndentedString(payoutStores)).append("\n");
-    sb.append("    payoutProperties: ").append(toIndentedString(payoutProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
