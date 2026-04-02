@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * NutritionInfoV2Allergen
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T17:05:06.712Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T21:18:43.669Z")
 public class NutritionInfoV2Allergen {
   @SerializedName("AllergenId")
   private String allergenId = null;
