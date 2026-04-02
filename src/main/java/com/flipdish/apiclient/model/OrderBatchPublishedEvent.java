@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Batch Published Event
  */
 @ApiModel(description = "Order Batch Published Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T21:30:27.362Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-02T21:53:19.206Z")
 public class OrderBatchPublishedEvent {
   @SerializedName("EventName")
   private String eventName = null;
