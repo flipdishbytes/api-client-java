@@ -354,6 +354,23 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void setThirdPartyIntegrationsTest() throws Exception {
+        String appId = null;
+        Boolean enabled = null;
+        api.setThirdPartyIntegrations(appId, enabled);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void toggleNextGenWebTest() throws Exception {
         String appId = null;
         String hostname = null;
