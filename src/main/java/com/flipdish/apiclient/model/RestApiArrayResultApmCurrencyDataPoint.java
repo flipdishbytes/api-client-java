@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api array result
  */
 @ApiModel(description = "Rest api array result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-08T13:01:55.105Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-08T14:15:17.262Z")
 public class RestApiArrayResultApmCurrencyDataPoint {
   @SerializedName("Data")
   private List<ApmCurrencyDataPoint> data = new ArrayList<ApmCurrencyDataPoint>();
