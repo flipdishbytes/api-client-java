@@ -19,6 +19,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultPayoutReport3Refunded
 import com.flipdish.apiclient.model.RestApiResultFileCreationResult;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Details;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3Overview;
+import com.flipdish.apiclient.model.RestApiResultPayoutReport3PropertyDetails;
 import com.flipdish.apiclient.model.RestApiResultPayoutReport3StorePayouts;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -71,6 +72,26 @@ public class PayoutReportsApiTest {
         Integer bankAccountId = null;
         Integer payoutId = null;
         RestApiResultPayoutReport3Overview response = api.getPayoutReport3Overview(appId, bankAccountId, payoutId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getPayoutReport3PropertyDetailsTest() throws Exception {
+        String appId = null;
+        Integer bankAccountId = null;
+        Integer payoutId = null;
+        List<String> propertyIds = null;
+        List<Integer> storeIds = null;
+        RestApiResultPayoutReport3PropertyDetails response = api.getPayoutReport3PropertyDetails(appId, bankAccountId, payoutId, propertyIds, storeIds);
 
         // TODO: test validations
     }
