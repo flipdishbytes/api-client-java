@@ -13,19 +13,29 @@
 
 package com.flipdish.apiclient.api;
 
+import com.flipdish.apiclient.model.CreateUserDeliveryLocationRequest;
 import com.flipdish.apiclient.model.RestApiArrayResultFlipdishAccountName;
+import com.flipdish.apiclient.model.RestApiArrayResultUserDeliveryLocationAdmin;
 import com.flipdish.apiclient.model.RestApiArrayResultUserFlipdishAccount;
 import com.flipdish.apiclient.model.RestApiArrayResultUserNote;
+import com.flipdish.apiclient.model.RestApiArrayResultUserOrderSummary;
+import com.flipdish.apiclient.model.RestApiArrayResultUserSmsChatItem;
 import com.flipdish.apiclient.model.RestApiArrayResultUserStoreInfo;
 import com.flipdish.apiclient.model.RestApiDefaultResponse;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiPaginationResultUserSearch;
+import com.flipdish.apiclient.model.RestApiResultOrder;
 import com.flipdish.apiclient.model.RestApiResultUserInfo;
+import com.flipdish.apiclient.model.RestApiResultUserPushNotificationSentResult;
 import com.flipdish.apiclient.model.RestApiResultUserRole;
 import com.flipdish.apiclient.model.RestApiStringArrayResult;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.SendUserPushNotificationRequest;
+import com.flipdish.apiclient.model.SendUserSmsRequest;
+import com.flipdish.apiclient.model.SetUserDeliveryLocationCoordinatesRequest;
+import com.flipdish.apiclient.model.SetUserDeliveryLocationFieldRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -106,6 +116,23 @@ public class UsersApiTest {
     public void blockUserPhoneNumberTest() throws Exception {
         Integer userId = null;
         RestApiDefaultResponse response = api.blockUserPhoneNumber(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void createUserDeliveryLocationTest() throws Exception {
+        Integer userId = null;
+        CreateUserDeliveryLocationRequest request = null;
+        RestApiDefaultResponse response = api.createUserDeliveryLocation(userId, request);
 
         // TODO: test validations
     }
@@ -215,9 +242,96 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getUserDeliveryLocationsForAdminTest() throws Exception {
+        Integer userId = null;
+        Integer whiteLabelId = null;
+        RestApiArrayResultUserDeliveryLocationAdmin response = api.getUserDeliveryLocationsForAdmin(userId, whiteLabelId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getUserNotesTest() throws Exception {
         Integer userId = null;
         RestApiArrayResultUserNote response = api.getUserNotes(userId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUserOrderByIdForAdminTest() throws Exception {
+        Integer userId = null;
+        Integer orderId = null;
+        RestApiResultOrder response = api.getUserOrderByIdForAdmin(userId, orderId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUserOrdersForAdminTest() throws Exception {
+        Integer userId = null;
+        Integer skip = null;
+        Integer take = null;
+        Integer whiteLabelId = null;
+        RestApiArrayResultUserOrderSummary response = api.getUserOrdersForAdmin(userId, skip, take, whiteLabelId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUserSmsConversationItemsTest() throws Exception {
+        Integer userId = null;
+        Integer mostRecentCount = null;
+        RestApiArrayResultUserSmsChatItem response = api.getUserSmsConversationItems(userId, mostRecentCount);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void hideUserDeliveryLocationTest() throws Exception {
+        Integer userId = null;
+        Integer deliveryLocationId = null;
+        RestApiDefaultResponse response = api.hideUserDeliveryLocation(userId, deliveryLocationId);
 
         // TODO: test validations
     }
@@ -350,6 +464,40 @@ public class UsersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void sendUserPushNotificationTest() throws Exception {
+        Integer userId = null;
+        SendUserPushNotificationRequest request = null;
+        RestApiResultUserPushNotificationSentResult response = api.sendUserPushNotification(userId, request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void sendUserSmsTest() throws Exception {
+        Integer userId = null;
+        SendUserSmsRequest request = null;
+        RestApiDefaultResponse response = api.sendUserSms(userId, request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void setCustomerNameTest() throws Exception {
         Integer userId = null;
         String customerName = null;
@@ -371,6 +519,42 @@ public class UsersApiTest {
         Integer userId = null;
         Integer accountId = null;
         RestApiDefaultResponse response = api.setFlipdishAccountIdForUser(userId, accountId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setUserDeliveryLocationCoordinatesTest() throws Exception {
+        Integer userId = null;
+        Integer deliveryLocationId = null;
+        SetUserDeliveryLocationCoordinatesRequest request = null;
+        RestApiDefaultResponse response = api.setUserDeliveryLocationCoordinates(userId, deliveryLocationId, request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setUserDeliveryLocationFieldTest() throws Exception {
+        Integer userId = null;
+        Integer deliveryLocationId = null;
+        SetUserDeliveryLocationFieldRequest request = null;
+        RestApiDefaultResponse response = api.setUserDeliveryLocationField(userId, deliveryLocationId, request);
 
         // TODO: test validations
     }

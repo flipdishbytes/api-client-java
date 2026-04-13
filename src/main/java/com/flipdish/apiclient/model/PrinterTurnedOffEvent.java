@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Printer turned off event
  */
 @ApiModel(description = "Printer turned off event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-09T07:31:14.438Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-13T15:11:13.878Z")
 public class PrinterTurnedOffEvent {
   @SerializedName("EventName")
   private String eventName = null;
