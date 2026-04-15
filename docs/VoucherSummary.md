@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **voucherSubType** | [**VoucherSubTypeEnum**](#VoucherSubTypeEnum) | Voucher Sub Type |  [optional]
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
 **isEnabled** | **Boolean** | Is voucher enabled |  [optional]
+**storeNames** | **List&lt;String&gt;** | Store names associated with this voucher |  [optional]
 
 
 <a name="StatusEnum"></a>

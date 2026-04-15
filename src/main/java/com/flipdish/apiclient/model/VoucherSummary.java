@@ -23,12 +23,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Voucher Summary
  */
 @ApiModel(description = "Voucher Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-14T12:10:38.185Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-15T15:21:44.715Z")
 public class VoucherSummary {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -214,6 +216,9 @@ public class VoucherSummary {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
+  @SerializedName("StoreNames")
+  private List<String> storeNames = null;
+
   public VoucherSummary voucherId(Integer voucherId) {
     this.voucherId = voucherId;
     return this;
@@ -340,6 +345,32 @@ public class VoucherSummary {
     this.isEnabled = isEnabled;
   }
 
+  public VoucherSummary storeNames(List<String> storeNames) {
+    this.storeNames = storeNames;
+    return this;
+  }
+
+  public VoucherSummary addStoreNamesItem(String storeNamesItem) {
+    if (this.storeNames == null) {
+      this.storeNames = new ArrayList<String>();
+    }
+    this.storeNames.add(storeNamesItem);
+    return this;
+  }
+
+   /**
+   * Store names associated with this voucher
+   * @return storeNames
+  **/
+  @ApiModelProperty(value = "Store names associated with this voucher")
+  public List<String> getStoreNames() {
+    return storeNames;
+  }
+
+  public void setStoreNames(List<String> storeNames) {
+    this.storeNames = storeNames;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -356,12 +387,13 @@ public class VoucherSummary {
         Objects.equals(this.voucherType, voucherSummary.voucherType) &&
         Objects.equals(this.voucherSubType, voucherSummary.voucherSubType) &&
         Objects.equals(this.description, voucherSummary.description) &&
-        Objects.equals(this.isEnabled, voucherSummary.isEnabled);
+        Objects.equals(this.isEnabled, voucherSummary.isEnabled) &&
+        Objects.equals(this.storeNames, voucherSummary.storeNames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled);
+    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled, storeNames);
   }
 
 
@@ -377,6 +409,7 @@ public class VoucherSummary {
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
+    sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
     sb.append("}");
     return sb.toString();
   }
