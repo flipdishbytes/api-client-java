@@ -202,20 +202,20 @@ public class MenuZonesApi {
     }
     /**
      * Build call for deleteMenuZone
-     * @param menuZoneId The menu zone id. (required)
      * @param menuId  (required)
+     * @param menuZoneId The menu zone id. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteMenuZoneCall(Integer menuZoneId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteMenuZoneCall(Integer menuId, Integer menuZoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}"
-            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -256,20 +256,20 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteMenuZoneValidateBeforeCall(Integer menuZoneId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuZoneId' is set
-        if (menuZoneId == null) {
-            throw new ApiException("Missing the required parameter 'menuZoneId' when calling deleteMenuZone(Async)");
-        }
+    private com.squareup.okhttp.Call deleteMenuZoneValidateBeforeCall(Integer menuId, Integer menuZoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'menuId' is set
         if (menuId == null) {
             throw new ApiException("Missing the required parameter 'menuId' when calling deleteMenuZone(Async)");
         }
         
+        // verify the required parameter 'menuZoneId' is set
+        if (menuZoneId == null) {
+            throw new ApiException("Missing the required parameter 'menuZoneId' when calling deleteMenuZone(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = deleteMenuZoneCall(menuZoneId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteMenuZoneCall(menuId, menuZoneId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -277,37 +277,37 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone.
      * 
-     * @param menuZoneId The menu zone id. (required)
      * @param menuId  (required)
+     * @param menuZoneId The menu zone id. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void deleteMenuZone(Integer menuZoneId, String menuId) throws ApiException {
-        deleteMenuZoneWithHttpInfo(menuZoneId, menuId);
+    public void deleteMenuZone(Integer menuId, Integer menuZoneId) throws ApiException {
+        deleteMenuZoneWithHttpInfo(menuId, menuZoneId);
     }
 
     /**
      * Deletes a menu zone.
      * 
-     * @param menuZoneId The menu zone id. (required)
      * @param menuId  (required)
+     * @param menuZoneId The menu zone id. (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> deleteMenuZoneWithHttpInfo(Integer menuZoneId, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = deleteMenuZoneValidateBeforeCall(menuZoneId, menuId, null, null);
+    public ApiResponse<Void> deleteMenuZoneWithHttpInfo(Integer menuId, Integer menuZoneId) throws ApiException {
+        com.squareup.okhttp.Call call = deleteMenuZoneValidateBeforeCall(menuId, menuZoneId, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Deletes a menu zone. (asynchronously)
      * 
-     * @param menuZoneId The menu zone id. (required)
      * @param menuId  (required)
+     * @param menuZoneId The menu zone id. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteMenuZoneAsync(Integer menuZoneId, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteMenuZoneAsync(Integer menuId, Integer menuZoneId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -328,26 +328,26 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteMenuZoneValidateBeforeCall(menuZoneId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteMenuZoneValidateBeforeCall(menuId, menuZoneId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for deleteMenuZoneImage
-     * @param menuZoneId The zone Id/ (required)
      * @param menuId  (required)
+     * @param menuZoneId The zone Id/ (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteMenuZoneImageCall(Integer menuZoneId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteMenuZoneImageCall(Integer menuId, Integer menuZoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/image"
-            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -388,20 +388,20 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteMenuZoneImageValidateBeforeCall(Integer menuZoneId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuZoneId' is set
-        if (menuZoneId == null) {
-            throw new ApiException("Missing the required parameter 'menuZoneId' when calling deleteMenuZoneImage(Async)");
-        }
+    private com.squareup.okhttp.Call deleteMenuZoneImageValidateBeforeCall(Integer menuId, Integer menuZoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'menuId' is set
         if (menuId == null) {
             throw new ApiException("Missing the required parameter 'menuId' when calling deleteMenuZoneImage(Async)");
         }
         
+        // verify the required parameter 'menuZoneId' is set
+        if (menuZoneId == null) {
+            throw new ApiException("Missing the required parameter 'menuZoneId' when calling deleteMenuZoneImage(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = deleteMenuZoneImageCall(menuZoneId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteMenuZoneImageCall(menuId, menuZoneId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -409,37 +409,37 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone image.
      * 
-     * @param menuZoneId The zone Id/ (required)
      * @param menuId  (required)
+     * @param menuZoneId The zone Id/ (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void deleteMenuZoneImage(Integer menuZoneId, String menuId) throws ApiException {
-        deleteMenuZoneImageWithHttpInfo(menuZoneId, menuId);
+    public void deleteMenuZoneImage(Integer menuId, Integer menuZoneId) throws ApiException {
+        deleteMenuZoneImageWithHttpInfo(menuId, menuZoneId);
     }
 
     /**
      * Deletes a menu zone image.
      * 
-     * @param menuZoneId The zone Id/ (required)
      * @param menuId  (required)
+     * @param menuZoneId The zone Id/ (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> deleteMenuZoneImageWithHttpInfo(Integer menuZoneId, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = deleteMenuZoneImageValidateBeforeCall(menuZoneId, menuId, null, null);
+    public ApiResponse<Void> deleteMenuZoneImageWithHttpInfo(Integer menuId, Integer menuZoneId) throws ApiException {
+        com.squareup.okhttp.Call call = deleteMenuZoneImageValidateBeforeCall(menuId, menuZoneId, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Deletes a menu zone image. (asynchronously)
      * 
-     * @param menuZoneId The zone Id/ (required)
      * @param menuId  (required)
+     * @param menuZoneId The zone Id/ (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteMenuZoneImageAsync(Integer menuZoneId, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteMenuZoneImageAsync(Integer menuId, Integer menuZoneId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -460,28 +460,28 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteMenuZoneImageValidateBeforeCall(menuZoneId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteMenuZoneImageValidateBeforeCall(menuId, menuZoneId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for flipMenuZones
+     * @param menuId  (required)
      * @param menuZoneId Source. (required)
      * @param menuZoneI2 Destination. (required)
-     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call flipMenuZonesCall(Integer menuZoneId, Integer menuZoneI2, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call flipMenuZonesCall(Integer menuId, Integer menuZoneId, Integer menuZoneI2, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
             .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuZoneI2" + "\\}", apiClient.escapeString(menuZoneI2.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuZoneI2" + "\\}", apiClient.escapeString(menuZoneI2.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -522,7 +522,12 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call flipMenuZonesValidateBeforeCall(Integer menuZoneId, Integer menuZoneI2, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call flipMenuZonesValidateBeforeCall(Integer menuId, Integer menuZoneId, Integer menuZoneI2, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling flipMenuZones(Async)");
+        }
         
         // verify the required parameter 'menuZoneId' is set
         if (menuZoneId == null) {
@@ -534,13 +539,8 @@ public class MenuZonesApi {
             throw new ApiException("Missing the required parameter 'menuZoneI2' when calling flipMenuZones(Async)");
         }
         
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling flipMenuZones(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = flipMenuZonesCall(menuZoneId, menuZoneI2, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = flipMenuZonesCall(menuId, menuZoneId, menuZoneI2, progressListener, progressRequestListener);
         return call;
 
     }
@@ -548,40 +548,40 @@ public class MenuZonesApi {
     /**
      * Flips the order of two menu zones.
      * 
+     * @param menuId  (required)
      * @param menuZoneId Source. (required)
      * @param menuZoneI2 Destination. (required)
-     * @param menuId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void flipMenuZones(Integer menuZoneId, Integer menuZoneI2, String menuId) throws ApiException {
-        flipMenuZonesWithHttpInfo(menuZoneId, menuZoneI2, menuId);
+    public void flipMenuZones(Integer menuId, Integer menuZoneId, Integer menuZoneI2) throws ApiException {
+        flipMenuZonesWithHttpInfo(menuId, menuZoneId, menuZoneI2);
     }
 
     /**
      * Flips the order of two menu zones.
      * 
+     * @param menuId  (required)
      * @param menuZoneId Source. (required)
      * @param menuZoneI2 Destination. (required)
-     * @param menuId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> flipMenuZonesWithHttpInfo(Integer menuZoneId, Integer menuZoneI2, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = flipMenuZonesValidateBeforeCall(menuZoneId, menuZoneI2, menuId, null, null);
+    public ApiResponse<Void> flipMenuZonesWithHttpInfo(Integer menuId, Integer menuZoneId, Integer menuZoneI2) throws ApiException {
+        com.squareup.okhttp.Call call = flipMenuZonesValidateBeforeCall(menuId, menuZoneId, menuZoneI2, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Flips the order of two menu zones. (asynchronously)
      * 
+     * @param menuId  (required)
      * @param menuZoneId Source. (required)
      * @param menuZoneI2 Destination. (required)
-     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call flipMenuZonesAsync(Integer menuZoneId, Integer menuZoneI2, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call flipMenuZonesAsync(Integer menuId, Integer menuZoneId, Integer menuZoneI2, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -602,7 +602,7 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = flipMenuZonesValidateBeforeCall(menuZoneId, menuZoneI2, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = flipMenuZonesValidateBeforeCall(menuId, menuZoneId, menuZoneI2, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -870,22 +870,22 @@ public class MenuZonesApi {
     }
     /**
      * Build call for setMenuSectionMenuZone
+     * @param menuId  (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
-     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setMenuSectionMenuZoneCall(Integer menuZoneId, Integer menuSectionId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setMenuSectionMenuZoneCall(Integer menuId, Integer menuZoneId, Integer menuSectionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
             .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuSectionId" + "\\}", apiClient.escapeString(menuSectionId.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuSectionId" + "\\}", apiClient.escapeString(menuSectionId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -926,7 +926,12 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setMenuSectionMenuZoneValidateBeforeCall(Integer menuZoneId, Integer menuSectionId, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setMenuSectionMenuZoneValidateBeforeCall(Integer menuId, Integer menuZoneId, Integer menuSectionId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuSectionMenuZone(Async)");
+        }
         
         // verify the required parameter 'menuZoneId' is set
         if (menuZoneId == null) {
@@ -938,13 +943,8 @@ public class MenuZonesApi {
             throw new ApiException("Missing the required parameter 'menuSectionId' when calling setMenuSectionMenuZone(Async)");
         }
         
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuSectionMenuZone(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = setMenuSectionMenuZoneCall(menuZoneId, menuSectionId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuSectionMenuZoneCall(menuId, menuZoneId, menuSectionId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -952,40 +952,40 @@ public class MenuZonesApi {
     /**
      * Assigns a zone to a menu section.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
-     * @param menuId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void setMenuSectionMenuZone(Integer menuZoneId, Integer menuSectionId, String menuId) throws ApiException {
-        setMenuSectionMenuZoneWithHttpInfo(menuZoneId, menuSectionId, menuId);
+    public void setMenuSectionMenuZone(Integer menuId, Integer menuZoneId, Integer menuSectionId) throws ApiException {
+        setMenuSectionMenuZoneWithHttpInfo(menuId, menuZoneId, menuSectionId);
     }
 
     /**
      * Assigns a zone to a menu section.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
-     * @param menuId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> setMenuSectionMenuZoneWithHttpInfo(Integer menuZoneId, Integer menuSectionId, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = setMenuSectionMenuZoneValidateBeforeCall(menuZoneId, menuSectionId, menuId, null, null);
+    public ApiResponse<Void> setMenuSectionMenuZoneWithHttpInfo(Integer menuId, Integer menuZoneId, Integer menuSectionId) throws ApiException {
+        com.squareup.okhttp.Call call = setMenuSectionMenuZoneValidateBeforeCall(menuId, menuZoneId, menuSectionId, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Assigns a zone to a menu section. (asynchronously)
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
-     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setMenuSectionMenuZoneAsync(Integer menuZoneId, Integer menuSectionId, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call setMenuSectionMenuZoneAsync(Integer menuId, Integer menuZoneId, Integer menuSectionId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1006,27 +1006,27 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setMenuSectionMenuZoneValidateBeforeCall(menuZoneId, menuSectionId, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuSectionMenuZoneValidateBeforeCall(menuId, menuZoneId, menuSectionId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for setMenuZoneDescription
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
-     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setMenuZoneDescriptionCall(Integer menuZoneId, String description, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setMenuZoneDescriptionCall(Integer menuId, Integer menuZoneId, String description, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = description;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/description"
-            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1067,7 +1067,12 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setMenuZoneDescriptionValidateBeforeCall(Integer menuZoneId, String description, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setMenuZoneDescriptionValidateBeforeCall(Integer menuId, Integer menuZoneId, String description, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuZoneDescription(Async)");
+        }
         
         // verify the required parameter 'menuZoneId' is set
         if (menuZoneId == null) {
@@ -1079,13 +1084,8 @@ public class MenuZonesApi {
             throw new ApiException("Missing the required parameter 'description' when calling setMenuZoneDescription(Async)");
         }
         
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuZoneDescription(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = setMenuZoneDescriptionCall(menuZoneId, description, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuZoneDescriptionCall(menuId, menuZoneId, description, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1093,40 +1093,40 @@ public class MenuZonesApi {
     /**
      * Sets the description of a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
-     * @param menuId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void setMenuZoneDescription(Integer menuZoneId, String description, String menuId) throws ApiException {
-        setMenuZoneDescriptionWithHttpInfo(menuZoneId, description, menuId);
+    public void setMenuZoneDescription(Integer menuId, Integer menuZoneId, String description) throws ApiException {
+        setMenuZoneDescriptionWithHttpInfo(menuId, menuZoneId, description);
     }
 
     /**
      * Sets the description of a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
-     * @param menuId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> setMenuZoneDescriptionWithHttpInfo(Integer menuZoneId, String description, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = setMenuZoneDescriptionValidateBeforeCall(menuZoneId, description, menuId, null, null);
+    public ApiResponse<Void> setMenuZoneDescriptionWithHttpInfo(Integer menuId, Integer menuZoneId, String description) throws ApiException {
+        com.squareup.okhttp.Call call = setMenuZoneDescriptionValidateBeforeCall(menuId, menuZoneId, description, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Sets the description of a menu zone. (asynchronously)
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
-     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setMenuZoneDescriptionAsync(Integer menuZoneId, String description, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call setMenuZoneDescriptionAsync(Integer menuId, Integer menuZoneId, String description, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1147,28 +1147,28 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setMenuZoneDescriptionValidateBeforeCall(menuZoneId, description, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuZoneDescriptionValidateBeforeCall(menuId, menuZoneId, description, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for setMenuZoneName
+     * @param menuId  (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
-     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setMenuZoneNameCall(Integer menuZoneId, String menuZoneName, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setMenuZoneNameCall(Integer menuId, Integer menuZoneId, String menuZoneName, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
             .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuZoneName" + "\\}", apiClient.escapeString(menuZoneName.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuZoneName" + "\\}", apiClient.escapeString(menuZoneName.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1209,7 +1209,12 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setMenuZoneNameValidateBeforeCall(Integer menuZoneId, String menuZoneName, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setMenuZoneNameValidateBeforeCall(Integer menuId, Integer menuZoneId, String menuZoneName, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuZoneName(Async)");
+        }
         
         // verify the required parameter 'menuZoneId' is set
         if (menuZoneId == null) {
@@ -1221,13 +1226,8 @@ public class MenuZonesApi {
             throw new ApiException("Missing the required parameter 'menuZoneName' when calling setMenuZoneName(Async)");
         }
         
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setMenuZoneName(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = setMenuZoneNameCall(menuZoneId, menuZoneName, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuZoneNameCall(menuId, menuZoneId, menuZoneName, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1235,40 +1235,40 @@ public class MenuZonesApi {
     /**
      * Sets the name of a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
-     * @param menuId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void setMenuZoneName(Integer menuZoneId, String menuZoneName, String menuId) throws ApiException {
-        setMenuZoneNameWithHttpInfo(menuZoneId, menuZoneName, menuId);
+    public void setMenuZoneName(Integer menuId, Integer menuZoneId, String menuZoneName) throws ApiException {
+        setMenuZoneNameWithHttpInfo(menuId, menuZoneId, menuZoneName);
     }
 
     /**
      * Sets the name of a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
-     * @param menuId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> setMenuZoneNameWithHttpInfo(Integer menuZoneId, String menuZoneName, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = setMenuZoneNameValidateBeforeCall(menuZoneId, menuZoneName, menuId, null, null);
+    public ApiResponse<Void> setMenuZoneNameWithHttpInfo(Integer menuId, Integer menuZoneId, String menuZoneName) throws ApiException {
+        com.squareup.okhttp.Call call = setMenuZoneNameValidateBeforeCall(menuId, menuZoneId, menuZoneName, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Sets the name of a menu zone. (asynchronously)
      * 
+     * @param menuId  (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
-     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setMenuZoneNameAsync(Integer menuZoneId, String menuZoneName, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call setMenuZoneNameAsync(Integer menuId, Integer menuZoneId, String menuZoneName, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1289,7 +1289,7 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setMenuZoneNameValidateBeforeCall(menuZoneId, menuZoneName, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setMenuZoneNameValidateBeforeCall(menuId, menuZoneId, menuZoneName, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1436,21 +1436,21 @@ public class MenuZonesApi {
     }
     /**
      * Build call for uploadMenuZoneImage
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
-     * @param menuId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call uploadMenuZoneImageCall(Integer menuZoneId, List<HttpPostedFileBase> file, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call uploadMenuZoneImageCall(Integer menuId, Integer menuZoneId, List<HttpPostedFileBase> file, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = file;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/menus/{menuId}/zones/{menuZoneId}/image"
-            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()))
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "menuZoneId" + "\\}", apiClient.escapeString(menuZoneId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1491,7 +1491,12 @@ public class MenuZonesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call uploadMenuZoneImageValidateBeforeCall(Integer menuZoneId, List<HttpPostedFileBase> file, String menuId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call uploadMenuZoneImageValidateBeforeCall(Integer menuId, Integer menuZoneId, List<HttpPostedFileBase> file, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling uploadMenuZoneImage(Async)");
+        }
         
         // verify the required parameter 'menuZoneId' is set
         if (menuZoneId == null) {
@@ -1503,13 +1508,8 @@ public class MenuZonesApi {
             throw new ApiException("Missing the required parameter 'file' when calling uploadMenuZoneImage(Async)");
         }
         
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling uploadMenuZoneImage(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = uploadMenuZoneImageCall(menuZoneId, file, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadMenuZoneImageCall(menuId, menuZoneId, file, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1517,40 +1517,40 @@ public class MenuZonesApi {
     /**
      * Uploads an image for a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
-     * @param menuId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void uploadMenuZoneImage(Integer menuZoneId, List<HttpPostedFileBase> file, String menuId) throws ApiException {
-        uploadMenuZoneImageWithHttpInfo(menuZoneId, file, menuId);
+    public void uploadMenuZoneImage(Integer menuId, Integer menuZoneId, List<HttpPostedFileBase> file) throws ApiException {
+        uploadMenuZoneImageWithHttpInfo(menuId, menuZoneId, file);
     }
 
     /**
      * Uploads an image for a menu zone.
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
-     * @param menuId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> uploadMenuZoneImageWithHttpInfo(Integer menuZoneId, List<HttpPostedFileBase> file, String menuId) throws ApiException {
-        com.squareup.okhttp.Call call = uploadMenuZoneImageValidateBeforeCall(menuZoneId, file, menuId, null, null);
+    public ApiResponse<Void> uploadMenuZoneImageWithHttpInfo(Integer menuId, Integer menuZoneId, List<HttpPostedFileBase> file) throws ApiException {
+        com.squareup.okhttp.Call call = uploadMenuZoneImageValidateBeforeCall(menuId, menuZoneId, file, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Uploads an image for a menu zone. (asynchronously)
      * 
+     * @param menuId  (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
-     * @param menuId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call uploadMenuZoneImageAsync(Integer menuZoneId, List<HttpPostedFileBase> file, String menuId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call uploadMenuZoneImageAsync(Integer menuId, Integer menuZoneId, List<HttpPostedFileBase> file, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1571,7 +1571,7 @@ public class MenuZonesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = uploadMenuZoneImageValidateBeforeCall(menuZoneId, file, menuId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadMenuZoneImageValidateBeforeCall(menuId, menuZoneId, file, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

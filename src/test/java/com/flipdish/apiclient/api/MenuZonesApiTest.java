@@ -65,9 +65,9 @@ public class MenuZonesApiTest {
      */
     @Test
     public void deleteMenuZoneTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
-        String menuId = null;
-        api.deleteMenuZone(menuZoneId, menuId);
+        api.deleteMenuZone(menuId, menuZoneId);
 
         // TODO: test validations
     }
@@ -82,9 +82,9 @@ public class MenuZonesApiTest {
      */
     @Test
     public void deleteMenuZoneImageTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
-        String menuId = null;
-        api.deleteMenuZoneImage(menuZoneId, menuId);
+        api.deleteMenuZoneImage(menuId, menuZoneId);
 
         // TODO: test validations
     }
@@ -99,10 +99,10 @@ public class MenuZonesApiTest {
      */
     @Test
     public void flipMenuZonesTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
         Integer menuZoneI2 = null;
-        String menuId = null;
-        api.flipMenuZones(menuZoneId, menuZoneI2, menuId);
+        api.flipMenuZones(menuId, menuZoneId, menuZoneI2);
 
         // TODO: test validations
     }
@@ -150,10 +150,10 @@ public class MenuZonesApiTest {
      */
     @Test
     public void setMenuSectionMenuZoneTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
         Integer menuSectionId = null;
-        String menuId = null;
-        api.setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
+        api.setMenuSectionMenuZone(menuId, menuZoneId, menuSectionId);
 
         // TODO: test validations
     }
@@ -168,10 +168,10 @@ public class MenuZonesApiTest {
      */
     @Test
     public void setMenuZoneDescriptionTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
         String description = null;
-        String menuId = null;
-        api.setMenuZoneDescription(menuZoneId, description, menuId);
+        api.setMenuZoneDescription(menuId, menuZoneId, description);
 
         // TODO: test validations
     }
@@ -186,10 +186,10 @@ public class MenuZonesApiTest {
      */
     @Test
     public void setMenuZoneNameTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
         String menuZoneName = null;
-        String menuId = null;
-        api.setMenuZoneName(menuZoneId, menuZoneName, menuId);
+        api.setMenuZoneName(menuId, menuZoneId, menuZoneName);
 
         // TODO: test validations
     }
@@ -222,10 +222,10 @@ public class MenuZonesApiTest {
      */
     @Test
     public void uploadMenuZoneImageTest() throws Exception {
+        Integer menuId = null;
         Integer menuZoneId = null;
         List<HttpPostedFileBase> file = null;
-        String menuId = null;
-        api.uploadMenuZoneImage(menuZoneId, file, menuId);
+        api.uploadMenuZoneImage(menuId, menuZoneId, file);
 
         // TODO: test validations
     }

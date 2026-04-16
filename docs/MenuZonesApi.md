@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteMenuZone"></a>
 # **deleteMenuZone**
-> deleteMenuZone(menuZoneId, menuId)
+> deleteMenuZone(menuId, menuZoneId)
 
 Deletes a menu zone.
 
@@ -92,10 +92,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The menu zone id.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.deleteMenuZone(menuZoneId, menuId);
+    apiInstance.deleteMenuZone(menuId, menuZoneId);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#deleteMenuZone");
     e.printStackTrace();
@@ -106,8 +106,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The menu zone id. |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -124,7 +124,7 @@ null (empty response body)
 
 <a name="deleteMenuZoneImage"></a>
 # **deleteMenuZoneImage**
-> deleteMenuZoneImage(menuZoneId, menuId)
+> deleteMenuZoneImage(menuId, menuZoneId)
 
 Deletes a menu zone image.
 
@@ -144,10 +144,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The zone Id/
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.deleteMenuZoneImage(menuZoneId, menuId);
+    apiInstance.deleteMenuZoneImage(menuId, menuZoneId);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#deleteMenuZoneImage");
     e.printStackTrace();
@@ -158,8 +158,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The zone Id/ |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -176,7 +176,7 @@ null (empty response body)
 
 <a name="flipMenuZones"></a>
 # **flipMenuZones**
-> flipMenuZones(menuZoneId, menuZoneI2, menuId)
+> flipMenuZones(menuId, menuZoneId, menuZoneI2)
 
 Flips the order of two menu zones.
 
@@ -196,11 +196,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | Source.
 Integer menuZoneI2 = 56; // Integer | Destination.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.flipMenuZones(menuZoneId, menuZoneI2, menuId);
+    apiInstance.flipMenuZones(menuId, menuZoneId, menuZoneI2);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#flipMenuZones");
     e.printStackTrace();
@@ -211,9 +211,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| Source. |
  **menuZoneI2** | **Integer**| Destination. |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 <a name="setMenuSectionMenuZone"></a>
 # **setMenuSectionMenuZone**
-> setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId)
+> setMenuSectionMenuZone(menuId, menuZoneId, menuSectionId)
 
 Assigns a zone to a menu section.
 
@@ -354,11 +354,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The menu id.
 Integer menuSectionId = 56; // Integer | The menu section id.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.setMenuSectionMenuZone(menuZoneId, menuSectionId, menuId);
+    apiInstance.setMenuSectionMenuZone(menuId, menuZoneId, menuSectionId);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#setMenuSectionMenuZone");
     e.printStackTrace();
@@ -369,9 +369,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The menu id. |
  **menuSectionId** | **Integer**| The menu section id. |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -388,7 +388,7 @@ null (empty response body)
 
 <a name="setMenuZoneDescription"></a>
 # **setMenuZoneDescription**
-> setMenuZoneDescription(menuZoneId, description, menuId)
+> setMenuZoneDescription(menuId, menuZoneId, description)
 
 Sets the description of a menu zone.
 
@@ -408,11 +408,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The zone id.
 String description = "description_example"; // String | The new description. Add as a raw string in the request, without any JSON wrapper.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.setMenuZoneDescription(menuZoneId, description, menuId);
+    apiInstance.setMenuZoneDescription(menuId, menuZoneId, description);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#setMenuZoneDescription");
     e.printStackTrace();
@@ -423,9 +423,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The zone id. |
  **description** | **String**| The new description. Add as a raw string in the request, without any JSON wrapper. |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -442,7 +442,7 @@ null (empty response body)
 
 <a name="setMenuZoneName"></a>
 # **setMenuZoneName**
-> setMenuZoneName(menuZoneId, menuZoneName, menuId)
+> setMenuZoneName(menuId, menuZoneId, menuZoneName)
 
 Sets the name of a menu zone.
 
@@ -462,11 +462,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The menu zone id.
 String menuZoneName = "menuZoneName_example"; // String | The new name.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.setMenuZoneName(menuZoneId, menuZoneName, menuId);
+    apiInstance.setMenuZoneName(menuId, menuZoneId, menuZoneName);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#setMenuZoneName");
     e.printStackTrace();
@@ -477,9 +477,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The menu zone id. |
  **menuZoneName** | **String**| The new name. |
- **menuId** | **String**|  |
 
 ### Return type
 
@@ -550,7 +550,7 @@ null (empty response body)
 
 <a name="uploadMenuZoneImage"></a>
 # **uploadMenuZoneImage**
-> uploadMenuZoneImage(menuZoneId, file, menuId)
+> uploadMenuZoneImage(menuId, menuZoneId, file)
 
 Uploads an image for a menu zone.
 
@@ -570,11 +570,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
+Integer menuId = 56; // Integer | 
 Integer menuZoneId = 56; // Integer | The zone id.
 List<HttpPostedFileBase> file = Arrays.asList(new HttpPostedFileBase()); // List<HttpPostedFileBase> | The file to upload.
-String menuId = "menuId_example"; // String | 
 try {
-    apiInstance.uploadMenuZoneImage(menuZoneId, file, menuId);
+    apiInstance.uploadMenuZoneImage(menuId, menuZoneId, file);
 } catch (ApiException e) {
     System.err.println("Exception when calling MenuZonesApi#uploadMenuZoneImage");
     e.printStackTrace();
@@ -585,9 +585,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
  **menuZoneId** | **Integer**| The zone id. |
  **file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)| The file to upload. |
- **menuId** | **String**|  |
 
 ### Return type
 
