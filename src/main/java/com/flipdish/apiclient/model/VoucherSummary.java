@@ -30,7 +30,7 @@ import java.util.List;
  * Voucher Summary
  */
 @ApiModel(description = "Voucher Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-16T09:00:22.302Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T07:41:29.908Z")
 public class VoucherSummary {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -219,6 +219,9 @@ public class VoucherSummary {
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
 
+  @SerializedName("IsAvailableOnAllStores")
+  private Boolean isAvailableOnAllStores = null;
+
   public VoucherSummary voucherId(Integer voucherId) {
     this.voucherId = voucherId;
     return this;
@@ -371,6 +374,24 @@ public class VoucherSummary {
     this.storeNames = storeNames;
   }
 
+  public VoucherSummary isAvailableOnAllStores(Boolean isAvailableOnAllStores) {
+    this.isAvailableOnAllStores = isAvailableOnAllStores;
+    return this;
+  }
+
+   /**
+   * True if the voucher is available on all active stores in the app
+   * @return isAvailableOnAllStores
+  **/
+  @ApiModelProperty(value = "True if the voucher is available on all active stores in the app")
+  public Boolean isIsAvailableOnAllStores() {
+    return isAvailableOnAllStores;
+  }
+
+  public void setIsAvailableOnAllStores(Boolean isAvailableOnAllStores) {
+    this.isAvailableOnAllStores = isAvailableOnAllStores;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -388,12 +409,13 @@ public class VoucherSummary {
         Objects.equals(this.voucherSubType, voucherSummary.voucherSubType) &&
         Objects.equals(this.description, voucherSummary.description) &&
         Objects.equals(this.isEnabled, voucherSummary.isEnabled) &&
-        Objects.equals(this.storeNames, voucherSummary.storeNames);
+        Objects.equals(this.storeNames, voucherSummary.storeNames) &&
+        Objects.equals(this.isAvailableOnAllStores, voucherSummary.isAvailableOnAllStores);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled, storeNames);
+    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled, storeNames, isAvailableOnAllStores);
   }
 
 
@@ -410,6 +432,7 @@ public class VoucherSummary {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
+    sb.append("    isAvailableOnAllStores: ").append(toIndentedString(isAvailableOnAllStores)).append("\n");
     sb.append("}");
     return sb.toString();
   }

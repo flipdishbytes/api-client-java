@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
 **isEnabled** | **Boolean** | Is voucher enabled |  [optional]
 **storeNames** | **List&lt;String&gt;** | Store names associated with this voucher |  [optional]
+**isAvailableOnAllStores** | **Boolean** | True if the voucher is available on all active stores in the app |  [optional]
 
 
 <a name="StatusEnum"></a>
