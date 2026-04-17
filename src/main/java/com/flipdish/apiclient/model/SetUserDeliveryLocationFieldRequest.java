@@ -28,7 +28,7 @@ import java.io.IOException;
  * Update a single delivery location field (matches legacy SetDeliveryLocationInfo names).
  */
 @ApiModel(description = "Update a single delivery location field (matches legacy SetDeliveryLocationInfo names).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T08:50:59.160Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T11:11:05.042Z")
 public class SetUserDeliveryLocationFieldRequest {
   /**
    * Which field to update. Omit or set to null for a validation error.

@@ -29,7 +29,7 @@ import java.io.IOException;
  * Create a delivery location for a user (admin).
  */
 @ApiModel(description = "Create a delivery location for a user (admin).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T08:50:59.160Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T11:11:05.042Z")
 public class CreateUserDeliveryLocationRequest {
   @SerializedName("Building")
   private String building = null;

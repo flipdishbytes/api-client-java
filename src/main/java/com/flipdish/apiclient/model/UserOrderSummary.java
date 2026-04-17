@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * A previous order row for admin user management (structured; no HTML).
  */
 @ApiModel(description = "A previous order row for admin user management (structured; no HTML).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T08:50:59.160Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T11:11:05.042Z")
 public class UserOrderSummary {
   @SerializedName("OrderId")
   private Integer orderId = null;

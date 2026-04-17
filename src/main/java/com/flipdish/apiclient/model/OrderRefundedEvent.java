@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order Refunded Event
  */
 @ApiModel(description = "Order Refunded Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T08:50:59.160Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T11:11:05.042Z")
 public class OrderRefundedEvent {
   @SerializedName("EventName")
   private String eventName = null;

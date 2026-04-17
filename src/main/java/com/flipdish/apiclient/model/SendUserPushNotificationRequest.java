@@ -28,7 +28,7 @@ import java.io.IOException;
  * Send a push notification to a user.
  */
 @ApiModel(description = "Send a push notification to a user.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T08:50:59.160Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-17T11:11:05.042Z")
 public class SendUserPushNotificationRequest {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
