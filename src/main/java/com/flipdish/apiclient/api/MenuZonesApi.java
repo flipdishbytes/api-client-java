@@ -202,7 +202,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for deleteMenuZone
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -277,7 +277,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -288,7 +288,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -301,7 +301,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -334,7 +334,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for deleteMenuZoneImage
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone Id/ (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -409,7 +409,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone image.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone Id/ (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -420,7 +420,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone image.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone Id/ (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -433,7 +433,7 @@ public class MenuZonesApi {
     /**
      * Deletes a menu zone image. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone Id/ (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -870,7 +870,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for setMenuSectionMenuZone
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
      * @param progressListener Progress listener
@@ -952,7 +952,7 @@ public class MenuZonesApi {
     /**
      * Assigns a zone to a menu section.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -964,7 +964,7 @@ public class MenuZonesApi {
     /**
      * Assigns a zone to a menu section.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
      * @return ApiResponse&lt;Void&gt;
@@ -978,7 +978,7 @@ public class MenuZonesApi {
     /**
      * Assigns a zone to a menu section. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu id. (required)
      * @param menuSectionId The menu section id. (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1012,7 +1012,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for setMenuZoneDescription
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      * @param progressListener Progress listener
@@ -1093,7 +1093,7 @@ public class MenuZonesApi {
     /**
      * Sets the description of a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1105,7 +1105,7 @@ public class MenuZonesApi {
     /**
      * Sets the description of a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1119,7 +1119,7 @@ public class MenuZonesApi {
     /**
      * Sets the description of a menu zone. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1153,7 +1153,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for setMenuZoneName
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
      * @param progressListener Progress listener
@@ -1235,7 +1235,7 @@ public class MenuZonesApi {
     /**
      * Sets the name of a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1247,7 +1247,7 @@ public class MenuZonesApi {
     /**
      * Sets the name of a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1261,7 +1261,7 @@ public class MenuZonesApi {
     /**
      * Sets the name of a menu zone. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The menu zone id. (required)
      * @param menuZoneName The new name. (required)
      * @param callback The callback to be executed when the API call finishes
@@ -1436,7 +1436,7 @@ public class MenuZonesApi {
     }
     /**
      * Build call for uploadMenuZoneImage
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
      * @param progressListener Progress listener
@@ -1517,7 +1517,7 @@ public class MenuZonesApi {
     /**
      * Uploads an image for a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1529,7 +1529,7 @@ public class MenuZonesApi {
     /**
      * Uploads an image for a menu zone.
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1543,7 +1543,7 @@ public class MenuZonesApi {
     /**
      * Uploads an image for a menu zone. (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu id. (required)
      * @param menuZoneId The zone id. (required)
      * @param file The file to upload. (required)
      * @param callback The callback to be executed when the API call finishes

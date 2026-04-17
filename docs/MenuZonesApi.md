@@ -92,7 +92,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The menu zone id.
 try {
     apiInstance.deleteMenuZone(menuId, menuZoneId);
@@ -106,7 +106,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The menu zone id. |
 
 ### Return type
@@ -144,7 +144,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The zone Id/
 try {
     apiInstance.deleteMenuZoneImage(menuId, menuZoneId);
@@ -158,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The zone Id/ |
 
 ### Return type
@@ -354,7 +354,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The menu id.
 Integer menuSectionId = 56; // Integer | The menu section id.
 try {
@@ -369,7 +369,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The menu id. |
  **menuSectionId** | **Integer**| The menu section id. |
 
@@ -408,7 +408,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The zone id.
 String description = "description_example"; // String | The new description. Add as a raw string in the request, without any JSON wrapper.
 try {
@@ -423,7 +423,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The zone id. |
  **description** | **String**| The new description. Add as a raw string in the request, without any JSON wrapper. |
 
@@ -462,7 +462,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The menu zone id.
 String menuZoneName = "menuZoneName_example"; // String | The new name.
 try {
@@ -477,7 +477,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The menu zone id. |
  **menuZoneName** | **String**| The new name. |
 
@@ -570,7 +570,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuZonesApi apiInstance = new MenuZonesApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu id.
 Integer menuZoneId = 56; // Integer | The zone id.
 List<HttpPostedFileBase> file = Arrays.asList(new HttpPostedFileBase()); // List<HttpPostedFileBase> | The file to upload.
 try {
@@ -585,7 +585,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu id. |
  **menuZoneId** | **Integer**| The zone id. |
  **file** | [**List&lt;HttpPostedFileBase&gt;**](HttpPostedFileBase.md)| The file to upload. |
 
