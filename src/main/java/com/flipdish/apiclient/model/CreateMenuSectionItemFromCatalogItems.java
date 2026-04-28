@@ -31,7 +31,7 @@ import java.util.List;
  * Add CatalogItems to a Menu
  */
 @ApiModel(description = "Add CatalogItems to a Menu")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-21T07:35:25.693Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
 public class CreateMenuSectionItemFromCatalogItems {
   @SerializedName("MenuCatalogItems")
   private List<MenuCatalogItem> menuCatalogItems = new ArrayList<MenuCatalogItem>();

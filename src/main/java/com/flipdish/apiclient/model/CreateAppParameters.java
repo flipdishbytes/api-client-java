@@ -28,7 +28,7 @@ import java.io.IOException;
  * The parameters required to create a new app.
  */
 @ApiModel(description = "The parameters required to create a new app.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-21T07:35:25.693Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
 public class CreateAppParameters {
   @SerializedName("Name")
   private String name = null;
