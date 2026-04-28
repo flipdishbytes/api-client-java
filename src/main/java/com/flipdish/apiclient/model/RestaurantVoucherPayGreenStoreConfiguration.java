@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * RestaurantVoucherPayGreenStoreConfiguration
+ * RestaurantVoucherPayGreenStoreConfiguration.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "RestaurantVoucherPayGreenStoreConfiguration.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class RestaurantVoucherPayGreenStoreConfiguration {
   @SerializedName("Name")
   private String name = null;
@@ -47,10 +48,10 @@ public class RestaurantVoucherPayGreenStoreConfiguration {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -65,10 +66,10 @@ public class RestaurantVoucherPayGreenStoreConfiguration {
   }
 
    /**
-   * Get active
+   * Active.
    * @return active
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Active.")
   public Boolean isActive() {
     return active;
   }
@@ -83,10 +84,10 @@ public class RestaurantVoucherPayGreenStoreConfiguration {
   }
 
    /**
-   * Get payGreenId
+   * PayGreenId.
    * @return payGreenId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenId.")
   public String getPayGreenId() {
     return payGreenId;
   }
@@ -101,10 +102,10 @@ public class RestaurantVoucherPayGreenStoreConfiguration {
   }
 
    /**
-   * Get payGreenConfigurationId
+   * PayGreenConfigurationId.
    * @return payGreenConfigurationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenConfigurationId.")
   public Integer getPayGreenConfigurationId() {
     return payGreenConfigurationId;
   }

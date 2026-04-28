@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * OrderDropOffLocation
+ * OrderDropOffLocation.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "OrderDropOffLocation.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class OrderDropOffLocation {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -53,10 +54,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get orderId
+   * OrderId.
    * @return orderId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "OrderId.")
   public Integer getOrderId() {
     return orderId;
   }
@@ -71,10 +72,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get locationName
+   * LocationName.
    * @return locationName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "LocationName.")
   public String getLocationName() {
     return locationName;
   }
@@ -89,10 +90,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get locationAreaName
+   * LocationAreaName.
    * @return locationAreaName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "LocationAreaName.")
   public String getLocationAreaName() {
     return locationAreaName;
   }
@@ -107,10 +108,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get locationId
+   * LocationId.
    * @return locationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "LocationId.")
   public Integer getLocationId() {
     return locationId;
   }
@@ -125,10 +126,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get locationAreaId
+   * LocationAreaId.
    * @return locationAreaId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "LocationAreaId.")
   public Integer getLocationAreaId() {
     return locationAreaId;
   }
@@ -143,10 +144,10 @@ public class OrderDropOffLocation {
   }
 
    /**
-   * Get externalLocationId
+   * ExternalLocationId.
    * @return externalLocationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ExternalLocationId.")
   public String getExternalLocationId() {
     return externalLocationId;
   }

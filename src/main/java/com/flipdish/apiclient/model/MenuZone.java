@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * MenuZone
+ * MenuZone.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "MenuZone.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class MenuZone {
   @SerializedName("MenuZoneId")
   private Integer menuZoneId = null;
@@ -56,10 +57,10 @@ public class MenuZone {
   }
 
    /**
-   * Get menuZoneId
+   * MenuZoneId.
    * @return menuZoneId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "MenuZoneId.")
   public Integer getMenuZoneId() {
     return menuZoneId;
   }
@@ -74,10 +75,10 @@ public class MenuZone {
   }
 
    /**
-   * Get menuId
+   * MenuId.
    * @return menuId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "MenuId.")
   public Integer getMenuId() {
     return menuId;
   }
@@ -92,10 +93,10 @@ public class MenuZone {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -110,10 +111,10 @@ public class MenuZone {
   }
 
    /**
-   * Get description
+   * Description.
    * @return description
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Description.")
   public String getDescription() {
     return description;
   }
@@ -128,10 +129,10 @@ public class MenuZone {
   }
 
    /**
-   * Get imageName
+   * ImageName.
    * @return imageName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ImageName.")
   public String getImageName() {
     return imageName;
   }
@@ -146,10 +147,10 @@ public class MenuZone {
   }
 
    /**
-   * Get displayOrder
+   * DisplayOrder.
    * @return displayOrder
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DisplayOrder.")
   public Integer getDisplayOrder() {
     return displayOrder;
   }
@@ -164,10 +165,10 @@ public class MenuZone {
   }
 
    /**
-   * Get imageUrl
+   * ImageUrl.
    * @return imageUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ImageUrl.")
   public String getImageUrl() {
     return imageUrl;
   }

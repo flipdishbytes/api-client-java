@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**building** | **String** |  |  [optional]
-**street** | **String** |  |  [optional]
-**town** | **String** |  |  [optional]
-**postCode** | **String** |  |  [optional]
-**fullAddressJson** | **String** |  |  [optional]
-**deliveryInstructions** | **String** |  |  [optional]
-**coordinates** | [**Coordinates**](Coordinates.md) |  |  [optional]
+**building** | **String** | Building. |  [optional]
+**street** | **String** | Street. |  [optional]
+**town** | **String** | Town. |  [optional]
+**postCode** | **String** | PostCode. |  [optional]
+**fullAddressJson** | **String** | FullAddressJson. |  [optional]
+**deliveryInstructions** | **String** | DeliveryInstructions. |  [optional]
+**coordinates** | [**Coordinates**](Coordinates.md) | Coordinates. |  [optional]
 **isDisplayed** | **Boolean** | Passed through to the same parameter position as legacy admin MVC (maps to IsCustomAddress in map service). |  [optional]
 
 

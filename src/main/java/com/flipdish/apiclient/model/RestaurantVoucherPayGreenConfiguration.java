@@ -28,9 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * RestaurantVoucherPayGreenConfiguration
+ * RestaurantVoucherPayGreenConfiguration.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "RestaurantVoucherPayGreenConfiguration.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class RestaurantVoucherPayGreenConfiguration {
   @SerializedName("Name")
   private String name = null;
@@ -50,10 +51,10 @@ public class RestaurantVoucherPayGreenConfiguration {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -68,10 +69,10 @@ public class RestaurantVoucherPayGreenConfiguration {
   }
 
    /**
-   * Get payGreenId
+   * PayGreenId.
    * @return payGreenId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenId.")
   public String getPayGreenId() {
     return payGreenId;
   }
@@ -86,10 +87,10 @@ public class RestaurantVoucherPayGreenConfiguration {
   }
 
    /**
-   * Get payGreenConfigurationId
+   * PayGreenConfigurationId.
    * @return payGreenConfigurationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenConfigurationId.")
   public Integer getPayGreenConfigurationId() {
     return payGreenConfigurationId;
   }
@@ -112,10 +113,10 @@ public class RestaurantVoucherPayGreenConfiguration {
   }
 
    /**
-   * Get assignedStores
+   * AssignedStores.
    * @return assignedStores
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "AssignedStores.")
   public List<RestaurantVoucherAssignedStore> getAssignedStores() {
     return assignedStores;
   }

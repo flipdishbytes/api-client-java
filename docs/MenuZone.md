@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**menuZoneId** | **Integer** |  |  [optional]
-**menuId** | **Integer** |  |  [optional]
-**name** | **String** |  |  [optional]
-**description** | **String** |  |  [optional]
-**imageName** | **String** |  |  [optional]
-**displayOrder** | **Integer** |  |  [optional]
-**imageUrl** | **String** |  |  [optional]
+**menuZoneId** | **Integer** | MenuZoneId. |  [optional]
+**menuId** | **Integer** | MenuId. |  [optional]
+**name** | **String** | Name. |  [optional]
+**description** | **String** | Description. |  [optional]
+**imageName** | **String** | ImageName. |  [optional]
+**displayOrder** | **Integer** | DisplayOrder. |  [optional]
+**imageUrl** | **String** | ImageUrl. |  [optional]
 
 
 

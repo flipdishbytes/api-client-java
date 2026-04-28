@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * FileCreationResult
+ * FileCreationResult.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "FileCreationResult.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class FileCreationResult {
   @SerializedName("FileId")
   private String fileId = null;
@@ -41,10 +42,10 @@ public class FileCreationResult {
   }
 
    /**
-   * Get fileId
+   * FileId.
    * @return fileId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FileId.")
   public String getFileId() {
     return fileId;
   }
@@ -59,10 +60,10 @@ public class FileCreationResult {
   }
 
    /**
-   * Get location
+   * Location.
    * @return location
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Location.")
   public String getLocation() {
     return location;
   }

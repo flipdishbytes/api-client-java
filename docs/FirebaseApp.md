@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**whitelabelId** | **Integer** |  |  [optional]
-**packageId** | **String** |  |  [optional]
-**firebaseAppId** | **String** |  |  [optional]
-**firebaseProjectId** | **String** |  |  [optional]
+**whitelabelId** | **Integer** | WhitelabelId. |  [optional]
+**packageId** | **String** | PackageId. |  [optional]
+**firebaseAppId** | **String** | FirebaseAppId. |  [optional]
+**firebaseProjectId** | **String** | FirebaseProjectId. |  [optional]
 
 
 

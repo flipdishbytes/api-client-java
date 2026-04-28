@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dayOfWeek** | [**DayOfWeekEnum**](#DayOfWeekEnum) |  |  [optional]
-**startTime** | **String** |  |  [optional]
-**endTime** | **String** |  |  [optional]
+**dayOfWeek** | [**DayOfWeekEnum**](#DayOfWeekEnum) | DayOfWeek. |  [optional]
+**startTime** | **String** | StartTime. |  [optional]
+**endTime** | **String** | EndTime. |  [optional]
 
 
 <a name="DayOfWeekEnum"></a>

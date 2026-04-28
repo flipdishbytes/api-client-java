@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  |  [optional]
-**assignedStores** | **List&lt;Integer&gt;** |  |  [optional]
+**name** | **String** | Name. |  [optional]
+**assignedStores** | **List&lt;Integer&gt;** | AssignedStores. |  [optional]
 
 
 

@@ -29,9 +29,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * TelemetrySeriesResult
+ * TelemetrySeriesResult.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "TelemetrySeriesResult.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class TelemetrySeriesResult {
   @SerializedName("Timestamps")
   private List<OffsetDateTime> timestamps = null;
@@ -53,10 +54,10 @@ public class TelemetrySeriesResult {
   }
 
    /**
-   * Get timestamps
+   * Timestamps.
    * @return timestamps
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Timestamps.")
   public List<OffsetDateTime> getTimestamps() {
     return timestamps;
   }
@@ -79,10 +80,10 @@ public class TelemetrySeriesResult {
   }
 
    /**
-   * Get properties
+   * Properties.
    * @return properties
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Properties.")
   public List<TelemetrySeriesProperty> getProperties() {
     return properties;
   }

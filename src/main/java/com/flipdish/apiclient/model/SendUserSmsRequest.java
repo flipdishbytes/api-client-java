@@ -28,7 +28,7 @@ import java.io.IOException;
  * Send an SMS to a user from admin.
  */
 @ApiModel(description = "Send an SMS to a user from admin.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class SendUserSmsRequest {
   @SerializedName("Message")
   private String message = null;
@@ -45,10 +45,10 @@ public class SendUserSmsRequest {
   }
 
    /**
-   * Get message
+   * Message.
    * @return message
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Message.")
   public String getMessage() {
     return message;
   }
@@ -63,10 +63,10 @@ public class SendUserSmsRequest {
   }
 
    /**
-   * Get whiteLabelId
+   * WhiteLabelId.
    * @return whiteLabelId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "WhiteLabelId.")
   public Integer getWhiteLabelId() {
     return whiteLabelId;
   }
@@ -81,10 +81,10 @@ public class SendUserSmsRequest {
   }
 
    /**
-   * Get fromNumber
+   * FromNumber.
    * @return fromNumber
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FromNumber.")
   public String getFromNumber() {
     return fromNumber;
   }

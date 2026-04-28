@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orgId** | **String** |  |  [optional]
-**brandId** | **String** |  |  [optional]
-**smsServiceType** | [**SmsServiceTypeEnum**](#SmsServiceTypeEnum) |  |  [optional]
-**senderId** | **String** |  |  [optional]
-**username** | **String** |  |  [optional]
-**authToken** | **String** |  |  [optional]
+**orgId** | **String** | OrgId. |  [optional]
+**brandId** | **String** | BrandId. |  [optional]
+**smsServiceType** | [**SmsServiceTypeEnum**](#SmsServiceTypeEnum) | SmsServiceType. |  [optional]
+**senderId** | **String** | SenderId. |  [optional]
+**username** | **String** | Username. |  [optional]
+**authToken** | **String** | AuthToken. |  [optional]
 
 
 <a name="SmsServiceTypeEnum"></a>

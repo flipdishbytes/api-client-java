@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storeId** | **Integer** |  |  [optional]
-**name** | **String** |  |  [optional]
+**storeId** | **Integer** | StoreId. |  [optional]
+**name** | **String** | Name. |  [optional]
 
 
 

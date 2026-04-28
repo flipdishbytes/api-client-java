@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * UpdateStorePayGreenConfigurationRequest
+ * UpdateStorePayGreenConfigurationRequest.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "UpdateStorePayGreenConfigurationRequest.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UpdateStorePayGreenConfigurationRequest {
   @SerializedName("Active")
   private Boolean active = null;
@@ -41,10 +42,10 @@ public class UpdateStorePayGreenConfigurationRequest {
   }
 
    /**
-   * Get active
+   * Active.
    * @return active
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Active.")
   public Boolean isActive() {
     return active;
   }
@@ -59,10 +60,10 @@ public class UpdateStorePayGreenConfigurationRequest {
   }
 
    /**
-   * Get payGreenConfigurationId
+   * PayGreenConfigurationId.
    * @return payGreenConfigurationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenConfigurationId.")
   public Integer getPayGreenConfigurationId() {
     return payGreenConfigurationId;
   }

@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * An SMS conversation item for admin user chat.
  */
 @ApiModel(description = "An SMS conversation item for admin user chat.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UserSmsChatItem {
   @SerializedName("SmsConversationItemId")
   private Integer smsConversationItemId = null;
@@ -52,10 +52,10 @@ public class UserSmsChatItem {
   }
 
    /**
-   * Get smsConversationItemId
+   * SmsConversationItemId.
    * @return smsConversationItemId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "SmsConversationItemId.")
   public Integer getSmsConversationItemId() {
     return smsConversationItemId;
   }
@@ -70,10 +70,10 @@ public class UserSmsChatItem {
   }
 
    /**
-   * Get direction
+   * Direction.
    * @return direction
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Direction.")
   public String getDirection() {
     return direction;
   }
@@ -88,10 +88,10 @@ public class UserSmsChatItem {
   }
 
    /**
-   * Get from
+   * From.
    * @return from
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "From.")
   public String getFrom() {
     return from;
   }
@@ -106,10 +106,10 @@ public class UserSmsChatItem {
   }
 
    /**
-   * Get text
+   * Text.
    * @return text
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Text.")
   public String getText() {
     return text;
   }
@@ -124,10 +124,10 @@ public class UserSmsChatItem {
   }
 
    /**
-   * Get tsSentReceivedUtc
+   * TsSentReceivedUtc.
    * @return tsSentReceivedUtc
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TsSentReceivedUtc.")
   public OffsetDateTime getTsSentReceivedUtc() {
     return tsSentReceivedUtc;
   }

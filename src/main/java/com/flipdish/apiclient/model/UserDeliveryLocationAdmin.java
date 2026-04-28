@@ -29,7 +29,7 @@ import java.io.IOException;
  * Delivery location with identifiers for admin user management.
  */
 @ApiModel(description = "Delivery location with identifiers for admin user management.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UserDeliveryLocationAdmin {
   @SerializedName("DeliveryLocationId")
   private Integer deliveryLocationId = null;
@@ -67,10 +67,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get deliveryLocationId
+   * DeliveryLocationId.
    * @return deliveryLocationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DeliveryLocationId.")
   public Integer getDeliveryLocationId() {
     return deliveryLocationId;
   }
@@ -85,10 +85,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get building
+   * Building.
    * @return building
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Building.")
   public String getBuilding() {
     return building;
   }
@@ -103,10 +103,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get street
+   * Street.
    * @return street
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Street.")
   public String getStreet() {
     return street;
   }
@@ -121,10 +121,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get town
+   * Town.
    * @return town
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Town.")
   public String getTown() {
     return town;
   }
@@ -139,10 +139,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get postCode
+   * PostCode.
    * @return postCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PostCode.")
   public String getPostCode() {
     return postCode;
   }
@@ -157,10 +157,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get deliveryInstructions
+   * DeliveryInstructions.
    * @return deliveryInstructions
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DeliveryInstructions.")
   public String getDeliveryInstructions() {
     return deliveryInstructions;
   }
@@ -175,10 +175,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get autoSelectThisLocation
+   * AutoSelectThisLocation.
    * @return autoSelectThisLocation
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "AutoSelectThisLocation.")
   public Boolean isAutoSelectThisLocation() {
     return autoSelectThisLocation;
   }
@@ -193,10 +193,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get isDisplayed
+   * IsDisplayed.
    * @return isDisplayed
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "IsDisplayed.")
   public Boolean isIsDisplayed() {
     return isDisplayed;
   }
@@ -211,10 +211,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get isConfirmed
+   * IsConfirmed.
    * @return isConfirmed
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "IsConfirmed.")
   public Boolean isIsConfirmed() {
     return isConfirmed;
   }
@@ -229,10 +229,10 @@ public class UserDeliveryLocationAdmin {
   }
 
    /**
-   * Get coordinates
+   * Coordinates.
    * @return coordinates
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Coordinates.")
   public Coordinates getCoordinates() {
     return coordinates;
   }

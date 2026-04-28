@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **field** | [**FieldEnum**](#FieldEnum) | Which field to update. Omit or set to null for a validation error. |  [optional]
-**value** | **String** |  |  [optional]
+**value** | **String** | Value. |  [optional]
 
 
 <a name="FieldEnum"></a>

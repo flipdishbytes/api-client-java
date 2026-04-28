@@ -28,7 +28,7 @@ import java.io.IOException;
  * Period opening and closing balance
  */
 @ApiModel(description = "Period opening and closing balance")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class BalanceDetails {
   @SerializedName("OpeningBalance")
   private Double openingBalance = null;
@@ -42,10 +42,10 @@ public class BalanceDetails {
   }
 
    /**
-   * Get openingBalance
+   * OpeningBalance.
    * @return openingBalance
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "OpeningBalance.")
   public Double getOpeningBalance() {
     return openingBalance;
   }
@@ -60,10 +60,10 @@ public class BalanceDetails {
   }
 
    /**
-   * Get closingBalance
+   * ClosingBalance.
    * @return closingBalance
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "ClosingBalance.")
   public Double getClosingBalance() {
     return closingBalance;
   }

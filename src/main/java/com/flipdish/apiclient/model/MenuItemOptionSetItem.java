@@ -32,7 +32,7 @@ import java.util.UUID;
  * Menu item option set item
  */
 @ApiModel(description = "Menu item option set item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class MenuItemOptionSetItem {
   @SerializedName("MenuItemOptionSetItemId")
   private Integer menuItemOptionSetItemId = null;
@@ -252,10 +252,10 @@ public class MenuItemOptionSetItem {
   }
 
    /**
-   * Get taxRateId
+   * TaxRateId.
    * @return taxRateId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TaxRateId.")
   public Integer getTaxRateId() {
     return taxRateId;
   }
@@ -270,10 +270,10 @@ public class MenuItemOptionSetItem {
   }
 
    /**
-   * Get taxValue
+   * TaxValue.
    * @return taxValue
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TaxValue.")
   public Double getTaxValue() {
     return taxValue;
   }

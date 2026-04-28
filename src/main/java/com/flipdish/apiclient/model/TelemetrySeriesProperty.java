@@ -27,9 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TelemetrySeriesProperty
+ * TelemetrySeriesProperty.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "TelemetrySeriesProperty.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class TelemetrySeriesProperty {
   @SerializedName("Name")
   private String name = null;
@@ -52,10 +53,10 @@ public class TelemetrySeriesProperty {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -70,10 +71,10 @@ public class TelemetrySeriesProperty {
   }
 
    /**
-   * Get type
+   * Type.
    * @return type
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Type.")
   public String getType() {
     return type;
   }
@@ -96,10 +97,10 @@ public class TelemetrySeriesProperty {
   }
 
    /**
-   * Get intValues
+   * IntValues.
    * @return intValues
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "IntValues.")
   public List<Integer> getIntValues() {
     return intValues;
   }
@@ -122,10 +123,10 @@ public class TelemetrySeriesProperty {
   }
 
    /**
-   * Get stringValues
+   * StringValues.
    * @return stringValues
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "StringValues.")
   public List<String> getStringValues() {
     return stringValues;
   }
@@ -148,10 +149,10 @@ public class TelemetrySeriesProperty {
   }
 
    /**
-   * Get doubleValues
+   * DoubleValues.
    * @return doubleValues
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DoubleValues.")
   public List<Double> getDoubleValues() {
     return doubleValues;
   }

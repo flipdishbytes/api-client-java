@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  |  [optional]
-**whiteLabelId** | **Integer** |  |  [optional]
-**fromNumber** | **String** |  |  [optional]
+**message** | **String** | Message. |  [optional]
+**whiteLabelId** | **Integer** | WhiteLabelId. |  [optional]
+**fromNumber** | **String** | FromNumber. |  [optional]
 
 
 

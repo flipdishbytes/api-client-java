@@ -29,7 +29,7 @@ import java.io.IOException;
  * Create a delivery location for a user (admin).
  */
 @ApiModel(description = "Create a delivery location for a user (admin).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class CreateUserDeliveryLocationRequest {
   @SerializedName("Building")
   private String building = null;
@@ -61,10 +61,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get building
+   * Building.
    * @return building
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Building.")
   public String getBuilding() {
     return building;
   }
@@ -79,10 +79,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get street
+   * Street.
    * @return street
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Street.")
   public String getStreet() {
     return street;
   }
@@ -97,10 +97,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get town
+   * Town.
    * @return town
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Town.")
   public String getTown() {
     return town;
   }
@@ -115,10 +115,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get postCode
+   * PostCode.
    * @return postCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PostCode.")
   public String getPostCode() {
     return postCode;
   }
@@ -133,10 +133,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get fullAddressJson
+   * FullAddressJson.
    * @return fullAddressJson
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FullAddressJson.")
   public String getFullAddressJson() {
     return fullAddressJson;
   }
@@ -151,10 +151,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get deliveryInstructions
+   * DeliveryInstructions.
    * @return deliveryInstructions
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DeliveryInstructions.")
   public String getDeliveryInstructions() {
     return deliveryInstructions;
   }
@@ -169,10 +169,10 @@ public class CreateUserDeliveryLocationRequest {
   }
 
    /**
-   * Get coordinates
+   * Coordinates.
    * @return coordinates
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Coordinates.")
   public Coordinates getCoordinates() {
     return coordinates;
   }

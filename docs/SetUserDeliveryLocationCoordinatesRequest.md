@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**latitude** | **Double** |  |  [optional]
-**longitude** | **Double** |  |  [optional]
+**latitude** | **Double** | Latitude. |  [optional]
+**longitude** | **Double** | Longitude. |  [optional]
 
 
 

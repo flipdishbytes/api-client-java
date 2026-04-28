@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * RestaurantVoucherPayGreenConfigurationSummary
+ * RestaurantVoucherPayGreenConfigurationSummary.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "RestaurantVoucherPayGreenConfigurationSummary.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class RestaurantVoucherPayGreenConfigurationSummary {
   @SerializedName("Name")
   private String name = null;
@@ -41,10 +42,10 @@ public class RestaurantVoucherPayGreenConfigurationSummary {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -59,10 +60,10 @@ public class RestaurantVoucherPayGreenConfigurationSummary {
   }
 
    /**
-   * Get payGreenConfigurationId
+   * PayGreenConfigurationId.
    * @return payGreenConfigurationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PayGreenConfigurationId.")
   public Integer getPayGreenConfigurationId() {
     return payGreenConfigurationId;
   }

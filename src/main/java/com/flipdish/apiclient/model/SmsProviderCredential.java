@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SmsProviderCredential
+ * SmsProviderCredential.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "SmsProviderCredential.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class SmsProviderCredential {
   @SerializedName("OrgId")
   private String orgId = null;
@@ -36,7 +37,7 @@ public class SmsProviderCredential {
   private String brandId = null;
 
   /**
-   * Gets or Sets smsServiceType
+   * SmsServiceType.
    */
   @JsonAdapter(SmsServiceTypeEnum.Adapter.class)
   public enum SmsServiceTypeEnum {
@@ -104,10 +105,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get orgId
+   * OrgId.
    * @return orgId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "OrgId.")
   public String getOrgId() {
     return orgId;
   }
@@ -122,10 +123,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get brandId
+   * BrandId.
    * @return brandId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "BrandId.")
   public String getBrandId() {
     return brandId;
   }
@@ -140,10 +141,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get smsServiceType
+   * SmsServiceType.
    * @return smsServiceType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "SmsServiceType.")
   public SmsServiceTypeEnum getSmsServiceType() {
     return smsServiceType;
   }
@@ -158,10 +159,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get senderId
+   * SenderId.
    * @return senderId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "SenderId.")
   public String getSenderId() {
     return senderId;
   }
@@ -176,10 +177,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get username
+   * Username.
    * @return username
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Username.")
   public String getUsername() {
     return username;
   }
@@ -194,10 +195,10 @@ public class SmsProviderCredential {
   }
 
    /**
-   * Get authToken
+   * AuthToken.
    * @return authToken
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "AuthToken.")
   public String getAuthToken() {
     return authToken;
   }

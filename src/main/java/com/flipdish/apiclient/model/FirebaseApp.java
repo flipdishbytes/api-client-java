@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * FirebaseApp
+ * FirebaseApp.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "FirebaseApp.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class FirebaseApp {
   @SerializedName("WhitelabelId")
   private Integer whitelabelId = null;
@@ -47,10 +48,10 @@ public class FirebaseApp {
   }
 
    /**
-   * Get whitelabelId
+   * WhitelabelId.
    * @return whitelabelId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "WhitelabelId.")
   public Integer getWhitelabelId() {
     return whitelabelId;
   }
@@ -65,10 +66,10 @@ public class FirebaseApp {
   }
 
    /**
-   * Get packageId
+   * PackageId.
    * @return packageId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PackageId.")
   public String getPackageId() {
     return packageId;
   }
@@ -83,10 +84,10 @@ public class FirebaseApp {
   }
 
    /**
-   * Get firebaseAppId
+   * FirebaseAppId.
    * @return firebaseAppId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FirebaseAppId.")
   public String getFirebaseAppId() {
     return firebaseAppId;
   }
@@ -101,10 +102,10 @@ public class FirebaseApp {
   }
 
    /**
-   * Get firebaseProjectId
+   * FirebaseProjectId.
    * @return firebaseProjectId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FirebaseProjectId.")
   public String getFirebaseProjectId() {
     return firebaseProjectId;
   }

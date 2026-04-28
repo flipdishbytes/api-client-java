@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fileId** | **String** |  |  [optional]
-**location** | **String** |  |  [optional]
+**fileId** | **String** | FileId. |  [optional]
+**location** | **String** | Location. |  [optional]
 
 
 

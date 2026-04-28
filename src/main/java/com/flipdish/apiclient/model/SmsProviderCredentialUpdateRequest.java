@@ -25,9 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SmsProviderCredentialUpdateRequest
+ * SmsProviderCredentialUpdateRequest.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "SmsProviderCredentialUpdateRequest.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class SmsProviderCredentialUpdateRequest {
   @SerializedName("SenderId")
   private String senderId = null;
@@ -44,10 +45,10 @@ public class SmsProviderCredentialUpdateRequest {
   }
 
    /**
-   * Get senderId
+   * SenderId.
    * @return senderId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "SenderId.")
   public String getSenderId() {
     return senderId;
   }
@@ -62,10 +63,10 @@ public class SmsProviderCredentialUpdateRequest {
   }
 
    /**
-   * Get username
+   * Username.
    * @return username
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Username.")
   public String getUsername() {
     return username;
   }
@@ -80,10 +81,10 @@ public class SmsProviderCredentialUpdateRequest {
   }
 
    /**
-   * Get authToken
+   * AuthToken.
    * @return authToken
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "AuthToken.")
   public String getAuthToken() {
     return authToken;
   }

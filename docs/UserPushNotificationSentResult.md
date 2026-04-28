@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tokenCount** | **Integer** |  |  [optional]
+**tokenCount** | **Integer** | TokenCount. |  [optional]
 
 
 

@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * A previous order row for admin user management (structured; no HTML).
  */
 @ApiModel(description = "A previous order row for admin user management (structured; no HTML).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UserOrderSummary {
   @SerializedName("OrderId")
   private Integer orderId = null;
@@ -70,10 +70,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get orderId
+   * OrderId.
    * @return orderId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "OrderId.")
   public Integer getOrderId() {
     return orderId;
   }
@@ -88,10 +88,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get tsOrderPlacedUtc
+   * TsOrderPlacedUtc.
    * @return tsOrderPlacedUtc
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TsOrderPlacedUtc.")
   public OffsetDateTime getTsOrderPlacedUtc() {
     return tsOrderPlacedUtc;
   }
@@ -106,10 +106,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get tsUpdateUtc
+   * TsUpdateUtc.
    * @return tsUpdateUtc
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TsUpdateUtc.")
   public OffsetDateTime getTsUpdateUtc() {
     return tsUpdateUtc;
   }
@@ -124,10 +124,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get restaurantName
+   * RestaurantName.
    * @return restaurantName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "RestaurantName.")
   public String getRestaurantName() {
     return restaurantName;
   }
@@ -142,10 +142,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get foodAmount
+   * FoodAmount.
    * @return foodAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "FoodAmount.")
   public Double getFoodAmount() {
     return foodAmount;
   }
@@ -160,10 +160,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get tipAmount
+   * TipAmount.
    * @return tipAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TipAmount.")
   public Double getTipAmount() {
     return tipAmount;
   }
@@ -178,10 +178,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get totalRestaurantAmount
+   * TotalRestaurantAmount.
    * @return totalRestaurantAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "TotalRestaurantAmount.")
   public Double getTotalRestaurantAmount() {
     return totalRestaurantAmount;
   }
@@ -196,10 +196,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get isoCurrency
+   * IsoCurrency.
    * @return isoCurrency
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "IsoCurrency.")
   public String getIsoCurrency() {
     return isoCurrency;
   }
@@ -214,10 +214,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get deliveryType
+   * DeliveryType.
    * @return deliveryType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DeliveryType.")
   public String getDeliveryType() {
     return deliveryType;
   }
@@ -232,10 +232,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get orderState
+   * OrderState.
    * @return orderState
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "OrderState.")
   public String getOrderState() {
     return orderState;
   }
@@ -250,10 +250,10 @@ public class UserOrderSummary {
   }
 
    /**
-   * Get paymentAccountDescription
+   * PaymentAccountDescription.
    * @return paymentAccountDescription
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "PaymentAccountDescription.")
   public String getPaymentAccountDescription() {
     return paymentAccountDescription;
   }

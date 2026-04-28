@@ -4,11 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**smsConversationItemId** | **Integer** |  |  [optional]
-**direction** | **String** |  |  [optional]
-**from** | **String** |  |  [optional]
-**text** | **String** |  |  [optional]
-**tsSentReceivedUtc** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**smsConversationItemId** | **Integer** | SmsConversationItemId. |  [optional]
+**direction** | **String** | Direction. |  [optional]
+**from** | **String** | From. |  [optional]
+**text** | **String** | Text. |  [optional]
+**tsSentReceivedUtc** | [**OffsetDateTime**](OffsetDateTime.md) | TsSentReceivedUtc. |  [optional]
 
 
 

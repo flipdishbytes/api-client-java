@@ -27,9 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * NutritionInfoItemAddUpdateLabelModel
+ * NutritionInfoItemAddUpdateLabelModel.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "NutritionInfoItemAddUpdateLabelModel.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class NutritionInfoItemAddUpdateLabelModel {
   @SerializedName("Name")
   private String name = null;
@@ -46,10 +47,10 @@ public class NutritionInfoItemAddUpdateLabelModel {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -72,10 +73,10 @@ public class NutritionInfoItemAddUpdateLabelModel {
   }
 
    /**
-   * Get values
+   * Values.
    * @return values
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Values.")
   public List<String> getValues() {
     return values;
   }
@@ -90,10 +91,10 @@ public class NutritionInfoItemAddUpdateLabelModel {
   }
 
    /**
-   * Get iconUrl
+   * IconUrl.
    * @return iconUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "IconUrl.")
   public String getIconUrl() {
     return iconUrl;
   }

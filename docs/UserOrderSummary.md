@@ -4,17 +4,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderId** | **Integer** |  |  [optional]
-**tsOrderPlacedUtc** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**tsUpdateUtc** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**restaurantName** | **String** |  |  [optional]
-**foodAmount** | **Double** |  |  [optional]
-**tipAmount** | **Double** |  |  [optional]
-**totalRestaurantAmount** | **Double** |  |  [optional]
-**isoCurrency** | **String** |  |  [optional]
-**deliveryType** | **String** |  |  [optional]
-**orderState** | **String** |  |  [optional]
-**paymentAccountDescription** | **String** |  |  [optional]
+**orderId** | **Integer** | OrderId. |  [optional]
+**tsOrderPlacedUtc** | [**OffsetDateTime**](OffsetDateTime.md) | TsOrderPlacedUtc. |  [optional]
+**tsUpdateUtc** | [**OffsetDateTime**](OffsetDateTime.md) | TsUpdateUtc. |  [optional]
+**restaurantName** | **String** | RestaurantName. |  [optional]
+**foodAmount** | **Double** | FoodAmount. |  [optional]
+**tipAmount** | **Double** | TipAmount. |  [optional]
+**totalRestaurantAmount** | **Double** | TotalRestaurantAmount. |  [optional]
+**isoCurrency** | **String** | IsoCurrency. |  [optional]
+**deliveryType** | **String** | DeliveryType. |  [optional]
+**orderState** | **String** | OrderState. |  [optional]
+**paymentAccountDescription** | **String** | PaymentAccountDescription. |  [optional]
 
 
 

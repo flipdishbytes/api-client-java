@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**active** | **Boolean** |  |  [optional]
-**payGreenConfigurationId** | **Integer** |  |  [optional]
+**active** | **Boolean** | Active. |  [optional]
+**payGreenConfigurationId** | **Integer** | PayGreenConfigurationId. |  [optional]
 
 
 

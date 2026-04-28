@@ -25,12 +25,13 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ValidityPeriod
+ * ValidityPeriod.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "ValidityPeriod.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class ValidityPeriod {
   /**
-   * Gets or Sets dayOfWeek
+   * DayOfWeek.
    */
   @JsonAdapter(DayOfWeekEnum.Adapter.class)
   public enum DayOfWeekEnum {
@@ -101,10 +102,10 @@ public class ValidityPeriod {
   }
 
    /**
-   * Get dayOfWeek
+   * DayOfWeek.
    * @return dayOfWeek
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "DayOfWeek.")
   public DayOfWeekEnum getDayOfWeek() {
     return dayOfWeek;
   }
@@ -119,10 +120,10 @@ public class ValidityPeriod {
   }
 
    /**
-   * Get startTime
+   * StartTime.
    * @return startTime
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "StartTime.")
   public String getStartTime() {
     return startTime;
   }
@@ -137,10 +138,10 @@ public class ValidityPeriod {
   }
 
    /**
-   * Get endTime
+   * EndTime.
    * @return endTime
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "EndTime.")
   public String getEndTime() {
     return endTime;
   }

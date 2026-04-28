@@ -28,9 +28,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * TelemetrySeriesQueryParameters
+ * TelemetrySeriesQueryParameters.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "TelemetrySeriesQueryParameters.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class TelemetrySeriesQueryParameters {
   @SerializedName("KioskId")
   private String kioskId = null;
@@ -50,10 +51,10 @@ public class TelemetrySeriesQueryParameters {
   }
 
    /**
-   * Get kioskId
+   * KioskId.
    * @return kioskId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "KioskId.")
   public String getKioskId() {
     return kioskId;
   }
@@ -76,10 +77,10 @@ public class TelemetrySeriesQueryParameters {
   }
 
    /**
-   * Get variables
+   * Variables.
    * @return variables
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Variables.")
   public List<String> getVariables() {
     return variables;
   }
@@ -94,10 +95,10 @@ public class TelemetrySeriesQueryParameters {
   }
 
    /**
-   * Get startDate
+   * StartDate.
    * @return startDate
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "StartDate.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -112,10 +113,10 @@ public class TelemetrySeriesQueryParameters {
   }
 
    /**
-   * Get endDate
+   * EndDate.
    * @return endDate
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "EndDate.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }

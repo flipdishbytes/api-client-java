@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  |  [optional]
-**payGreenConfigurationId** | **Integer** |  |  [optional]
+**name** | **String** | Name. |  [optional]
+**payGreenConfigurationId** | **Integer** | PayGreenConfigurationId. |  [optional]
 
 
 

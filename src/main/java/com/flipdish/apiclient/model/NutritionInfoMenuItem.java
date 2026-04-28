@@ -29,9 +29,10 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * NutritionInfoMenuItem
+ * NutritionInfoMenuItem.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "NutritionInfoMenuItem.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class NutritionInfoMenuItem {
   @SerializedName("PublicId")
   private UUID publicId = null;

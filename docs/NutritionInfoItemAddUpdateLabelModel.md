@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  |  [optional]
-**values** | **List&lt;String&gt;** |  |  [optional]
-**iconUrl** | **String** |  |  [optional]
+**name** | **String** | Name. |  [optional]
+**values** | **List&lt;String&gt;** | Values. |  [optional]
+**iconUrl** | **String** | IconUrl. |  [optional]
 
 
 

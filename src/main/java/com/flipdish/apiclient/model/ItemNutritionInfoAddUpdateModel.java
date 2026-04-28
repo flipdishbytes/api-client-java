@@ -28,9 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ItemNutritionInfoAddUpdateModel
+ * ItemNutritionInfoAddUpdateModel.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "ItemNutritionInfoAddUpdateModel.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class ItemNutritionInfoAddUpdateModel {
   @SerializedName("Labels")
   private List<NutritionInfoItemAddUpdateLabelModel> labels = null;
@@ -49,10 +50,10 @@ public class ItemNutritionInfoAddUpdateModel {
   }
 
    /**
-   * Get labels
+   * Labels.
    * @return labels
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Labels.")
   public List<NutritionInfoItemAddUpdateLabelModel> getLabels() {
     return labels;
   }

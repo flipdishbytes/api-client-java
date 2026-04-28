@@ -30,9 +30,10 @@ import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * UpcomingInvoice
+ * UpcomingInvoice.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "UpcomingInvoice.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UpcomingInvoice {
   @SerializedName("Amount")
   private Double amount = null;

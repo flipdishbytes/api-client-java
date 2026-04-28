@@ -27,9 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * UpdatePayGreenConfigurationRequest
+ * UpdatePayGreenConfigurationRequest.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@ApiModel(description = "UpdatePayGreenConfigurationRequest.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class UpdatePayGreenConfigurationRequest {
   @SerializedName("Name")
   private String name = null;
@@ -43,10 +44,10 @@ public class UpdatePayGreenConfigurationRequest {
   }
 
    /**
-   * Get name
+   * Name.
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Name.")
   public String getName() {
     return name;
   }
@@ -69,10 +70,10 @@ public class UpdatePayGreenConfigurationRequest {
   }
 
    /**
-   * Get assignedStores
+   * AssignedStores.
    * @return assignedStores
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "AssignedStores.")
   public List<Integer> getAssignedStores() {
     return assignedStores;
   }

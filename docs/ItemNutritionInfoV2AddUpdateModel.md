@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allergenIds** | **List&lt;String&gt;** |  |  [optional]
+**allergenIds** | **List&lt;String&gt;** | AllergenIds. |  [optional]
 
 
 

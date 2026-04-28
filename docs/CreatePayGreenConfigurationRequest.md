@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  |  [optional]
-**payGreenId** | **String** |  |  [optional]
-**payGreenPrivateKey** | **String** |  |  [optional]
-**assignedStores** | **List&lt;Integer&gt;** |  |  [optional]
+**name** | **String** | Name. |  [optional]
+**payGreenId** | **String** | PayGreenId. |  [optional]
+**payGreenPrivateKey** | **String** | PayGreenPrivateKey. |  [optional]
+**assignedStores** | **List&lt;Integer&gt;** | AssignedStores. |  [optional]
 
 
 

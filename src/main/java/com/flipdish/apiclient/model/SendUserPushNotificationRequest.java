@@ -28,7 +28,7 @@ import java.io.IOException;
  * Send a push notification to a user.
  */
 @ApiModel(description = "Send a push notification to a user.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T11:47:17.486Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T15:51:04.861Z")
 public class SendUserPushNotificationRequest {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
@@ -42,10 +42,10 @@ public class SendUserPushNotificationRequest {
   }
 
    /**
-   * Get whiteLabelId
+   * WhiteLabelId.
    * @return whiteLabelId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "WhiteLabelId.")
   public Integer getWhiteLabelId() {
     return whiteLabelId;
   }
@@ -60,10 +60,10 @@ public class SendUserPushNotificationRequest {
   }
 
    /**
-   * Get message
+   * Message.
    * @return message
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Message.")
   public String getMessage() {
     return message;
   }
