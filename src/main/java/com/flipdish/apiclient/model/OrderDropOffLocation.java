@@ -28,7 +28,7 @@ import java.io.IOException;
  * OrderDropOffLocation.
  */
 @ApiModel(description = "OrderDropOffLocation.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-29T09:12:32.448Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-29T11:37:50.429Z")
 public class OrderDropOffLocation {
   @SerializedName("OrderId")
   private Integer orderId = null;

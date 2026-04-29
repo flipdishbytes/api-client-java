@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Subscription Summary
  */
 @ApiModel(description = "Subscription Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-29T09:12:32.448Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-29T11:37:50.429Z")
 public class SubscriptionSummary {
   @SerializedName("NextInvoiceAmount")
   private Double nextInvoiceAmount = null;
@@ -447,10 +447,10 @@ public class SubscriptionSummary {
   }
 
    /**
-   * Get name
+   * Name
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Name")
   public String getName() {
     return name;
   }

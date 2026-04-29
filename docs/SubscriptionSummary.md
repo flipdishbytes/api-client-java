@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **nextInvoiceAmount** | **Double** | Next invoice amount |  [optional]
 **nextInvoiceBillingDate** | [**OffsetDateTime**](OffsetDateTime.md) | Next invoice billing date |  [optional]
 **subscriptionId** | **String** | The subscription identifier | 
-**name** | **String** |  | 
+**name** | **String** | Name | 
 **status** | [**StatusEnum**](#StatusEnum) | Status | 
 **currency** | [**CurrencyEnum**](#CurrencyEnum) | Currency | 
 **user** | **String** | User | 
