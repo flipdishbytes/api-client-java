@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * FieldGroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-29T15:11:53.409Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-30T10:07:34.851Z")
 public class FieldGroup {
   @SerializedName("Name")
   private String name = null;
