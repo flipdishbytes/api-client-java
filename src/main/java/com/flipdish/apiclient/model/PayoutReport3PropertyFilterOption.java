@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * PayoutReport3PropertyFilterOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-30T10:07:34.851Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-01T10:43:15.902Z")
 public class PayoutReport3PropertyFilterOption {
   @SerializedName("PropertyId")
   private String propertyId = null;
