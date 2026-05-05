@@ -30,7 +30,7 @@ import java.util.List;
  * Menu Items for Cross-Sell
  */
 @ApiModel(description = "Menu Items for Cross-Sell")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-01T10:43:15.902Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-05T09:29:23.560Z")
 public class CrossSellMenuItems {
   @SerializedName("MenuItemIds")
   private List<Integer> menuItemIds = null;

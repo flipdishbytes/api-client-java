@@ -28,7 +28,7 @@ import java.io.IOException;
  * Send an SMS to a user from admin.
  */
 @ApiModel(description = "Send an SMS to a user from admin.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-01T10:43:15.902Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-05T09:29:23.560Z")
 public class SendUserSmsRequest {
   @SerializedName("Message")
   private String message = null;
