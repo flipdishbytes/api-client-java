@@ -29,7 +29,7 @@ import java.io.IOException;
  * Delivery location with identifiers for admin user management.
  */
 @ApiModel(description = "Delivery location with identifiers for admin user management.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T08:30:17.651Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T13:39:31.727Z")
 public class UserDeliveryLocationAdmin {
   @SerializedName("DeliveryLocationId")
   private Integer deliveryLocationId = null;

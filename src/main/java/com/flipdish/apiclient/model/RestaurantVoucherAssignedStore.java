@@ -28,7 +28,7 @@ import java.io.IOException;
  * RestaurantVoucherAssignedStore.
  */
 @ApiModel(description = "RestaurantVoucherAssignedStore.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T08:30:17.651Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T13:39:31.727Z")
 public class RestaurantVoucherAssignedStore {
   @SerializedName("StoreId")
   private Integer storeId = null;
