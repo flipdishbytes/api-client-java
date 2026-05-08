@@ -36,7 +36,7 @@ import java.io.IOException;
  * Payout details for a single store
  */
 @ApiModel(description = "Payout details for a single store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-07T08:33:16.201Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T08:30:17.651Z")
 public class PayoutStore {
   @SerializedName("StoreId")
   private Integer storeId = null;

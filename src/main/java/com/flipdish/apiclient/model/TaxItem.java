@@ -28,7 +28,7 @@ import java.io.IOException;
  * A collection of tax items on the order.
  */
 @ApiModel(description = "A collection of tax items on the order.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-07T08:33:16.201Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T08:30:17.651Z")
 public class TaxItem {
   @SerializedName("Name")
   private String name = null;
