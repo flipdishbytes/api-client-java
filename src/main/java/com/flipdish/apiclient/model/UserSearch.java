@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * User Search Result
  */
 @ApiModel(description = "User Search Result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T13:39:31.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
 public class UserSearch {
   @SerializedName("Id")
   private Integer id = null;

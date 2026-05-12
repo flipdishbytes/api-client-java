@@ -28,7 +28,7 @@ import java.io.IOException;
  * EMV Payment Terminal
  */
 @ApiModel(description = "EMV Payment Terminal")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-08T13:39:31.727Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
 public class EmvTerminalWithAssignments {
   @SerializedName("EmvTerminalId")
   private String emvTerminalId = null;
