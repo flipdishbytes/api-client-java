@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a website image
  */
 @ApiModel(description = "Represents a website image")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
 public class WebsiteImage {
   @SerializedName("ImageId")
   private Integer imageId = null;

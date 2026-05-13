@@ -296,8 +296,8 @@ public class UsersApiTest {
         Integer userId = null;
         Integer skip = null;
         Integer take = null;
-        Integer whiteLabelId = null;
-        RestApiArrayResultUserOrderSummary response = api.getUserOrdersForAdmin(userId, skip, take, whiteLabelId);
+        String brandId = null;
+        RestApiArrayResultUserOrderSummary response = api.getUserOrdersForAdmin(userId, skip, take, brandId);
 
         // TODO: test validations
     }

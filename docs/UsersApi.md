@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 <a name="getUserOrdersForAdmin"></a>
 # **getUserOrdersForAdmin**
-> RestApiArrayResultUserOrderSummary getUserOrdersForAdmin(userId, skip, take, whiteLabelId)
+> RestApiArrayResultUserOrderSummary getUserOrdersForAdmin(userId, skip, take, brandId)
 
 
 
@@ -785,9 +785,9 @@ UsersApi apiInstance = new UsersApi();
 Integer userId = 56; // Integer | 
 Integer skip = 56; // Integer | 
 Integer take = 56; // Integer | 
-Integer whiteLabelId = 56; // Integer | 
+String brandId = "brandId_example"; // String | 
 try {
-    RestApiArrayResultUserOrderSummary result = apiInstance.getUserOrdersForAdmin(userId, skip, take, whiteLabelId);
+    RestApiArrayResultUserOrderSummary result = apiInstance.getUserOrdersForAdmin(userId, skip, take, brandId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#getUserOrdersForAdmin");
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
  **userId** | **Integer**|  |
  **skip** | **Integer**|  | [optional]
  **take** | **Integer**|  | [optional]
- **whiteLabelId** | **Integer**|  | [optional]
+ **brandId** | **String**|  | [optional]
 
 ### Return type
 

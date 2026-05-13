@@ -28,7 +28,7 @@ import java.io.IOException;
  * Initiate card reader Payment process request
  */
 @ApiModel(description = "Initiate card reader Payment process request")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
 public class ProcessPaymentIntentRequest {
   @SerializedName("PaymentIntentId")
   private String paymentIntentId = null;

@@ -1894,13 +1894,13 @@ public class UsersApi {
      * @param userId  (required)
      * @param skip  (optional)
      * @param take  (optional)
-     * @param whiteLabelId  (optional)
+     * @param brandId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUserOrdersForAdminCall(Integer userId, Integer skip, Integer take, Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUserOrdersForAdminCall(Integer userId, Integer skip, Integer take, String brandId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1913,8 +1913,8 @@ public class UsersApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("skip", skip));
         if (take != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("take", take));
-        if (whiteLabelId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("whiteLabelId", whiteLabelId));
+        if (brandId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("brandId", brandId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1952,7 +1952,7 @@ public class UsersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUserOrdersForAdminValidateBeforeCall(Integer userId, Integer skip, Integer take, Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUserOrdersForAdminValidateBeforeCall(Integer userId, Integer skip, Integer take, String brandId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -1960,7 +1960,7 @@ public class UsersApi {
         }
         
 
-        com.squareup.okhttp.Call call = getUserOrdersForAdminCall(userId, skip, take, whiteLabelId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUserOrdersForAdminCall(userId, skip, take, brandId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1971,12 +1971,12 @@ public class UsersApi {
      * @param userId  (required)
      * @param skip  (optional)
      * @param take  (optional)
-     * @param whiteLabelId  (optional)
+     * @param brandId  (optional)
      * @return RestApiArrayResultUserOrderSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultUserOrderSummary getUserOrdersForAdmin(Integer userId, Integer skip, Integer take, Integer whiteLabelId) throws ApiException {
-        ApiResponse<RestApiArrayResultUserOrderSummary> resp = getUserOrdersForAdminWithHttpInfo(userId, skip, take, whiteLabelId);
+    public RestApiArrayResultUserOrderSummary getUserOrdersForAdmin(Integer userId, Integer skip, Integer take, String brandId) throws ApiException {
+        ApiResponse<RestApiArrayResultUserOrderSummary> resp = getUserOrdersForAdminWithHttpInfo(userId, skip, take, brandId);
         return resp.getData();
     }
 
@@ -1986,12 +1986,12 @@ public class UsersApi {
      * @param userId  (required)
      * @param skip  (optional)
      * @param take  (optional)
-     * @param whiteLabelId  (optional)
+     * @param brandId  (optional)
      * @return ApiResponse&lt;RestApiArrayResultUserOrderSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultUserOrderSummary> getUserOrdersForAdminWithHttpInfo(Integer userId, Integer skip, Integer take, Integer whiteLabelId) throws ApiException {
-        com.squareup.okhttp.Call call = getUserOrdersForAdminValidateBeforeCall(userId, skip, take, whiteLabelId, null, null);
+    public ApiResponse<RestApiArrayResultUserOrderSummary> getUserOrdersForAdminWithHttpInfo(Integer userId, Integer skip, Integer take, String brandId) throws ApiException {
+        com.squareup.okhttp.Call call = getUserOrdersForAdminValidateBeforeCall(userId, skip, take, brandId, null, null);
         Type localVarReturnType = new TypeToken<RestApiArrayResultUserOrderSummary>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -2002,12 +2002,12 @@ public class UsersApi {
      * @param userId  (required)
      * @param skip  (optional)
      * @param take  (optional)
-     * @param whiteLabelId  (optional)
+     * @param brandId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUserOrdersForAdminAsync(Integer userId, Integer skip, Integer take, Integer whiteLabelId, final ApiCallback<RestApiArrayResultUserOrderSummary> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUserOrdersForAdminAsync(Integer userId, Integer skip, Integer take, String brandId, final ApiCallback<RestApiArrayResultUserOrderSummary> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2028,7 +2028,7 @@ public class UsersApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUserOrdersForAdminValidateBeforeCall(userId, skip, take, whiteLabelId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUserOrdersForAdminValidateBeforeCall(userId, skip, take, brandId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultUserOrderSummary>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

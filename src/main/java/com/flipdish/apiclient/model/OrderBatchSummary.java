@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Order batch info
  */
 @ApiModel(description = "Order batch info")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
 public class OrderBatchSummary {
   @SerializedName("Id")
   private Integer id = null;

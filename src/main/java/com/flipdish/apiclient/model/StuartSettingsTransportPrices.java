@@ -28,7 +28,7 @@ import java.io.IOException;
  * If the order exceeds are certain amount this configuration will determine a new vehicle type
  */
 @ApiModel(description = "If the order exceeds are certain amount this configuration will determine a new vehicle type")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
 public class StuartSettingsTransportPrices {
   @SerializedName("Bike")
   private Double bike = null;

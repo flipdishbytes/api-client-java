@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher Applied Event
  */
 @ApiModel(description = "Voucher Applied Event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-12T10:24:55.735Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
 public class VoucherAppliedEvent {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
