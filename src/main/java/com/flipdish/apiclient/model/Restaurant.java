@@ -31,7 +31,7 @@ import java.util.List;
  * Restaurant search result
  */
 @ApiModel(description = "Restaurant search result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:32:45.642Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T11:53:56.239Z")
 public class Restaurant {
   @SerializedName("WhiteLabelConfigs")
   private List<WhiteLabelConfig> whiteLabelConfigs = null;
