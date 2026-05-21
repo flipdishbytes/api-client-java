@@ -28,7 +28,7 @@ import java.io.IOException;
  * Set delivery location coordinates.
  */
 @ApiModel(description = "Set delivery location coordinates.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-20T14:29:14.092Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-21T09:00:36.300Z")
 public class SetUserDeliveryLocationCoordinatesRequest {
   @SerializedName("Latitude")
   private Double latitude = null;
