@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * DynamicFormRules
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-22T12:32:26.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-25T09:47:21.321Z")
 public class DynamicFormRules {
   @SerializedName("MaxLength")
   private DynamicFormRule maxLength = null;
