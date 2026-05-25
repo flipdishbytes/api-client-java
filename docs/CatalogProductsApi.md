@@ -4,21 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveProduct**](CatalogProductsApi.md#archiveProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | Archive Product
-[**createProduct**](CatalogProductsApi.md#createProduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a Product
-[**duplicateProduct**](CatalogProductsApi.md#duplicateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | Duplicate Product
-[**getProductById**](CatalogProductsApi.md#getProductById) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
-[**getProducts**](CatalogProductsApi.md#getProducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
-[**updateProduct**](CatalogProductsApi.md#updateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
+[**archiveProduct**](CatalogProductsApi.md#archiveProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | 
+[**createProduct**](CatalogProductsApi.md#createProduct) | **POST** /api/v1.0/{appId}/catalog/products | 
+[**duplicateProduct**](CatalogProductsApi.md#duplicateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | 
+[**getProductById**](CatalogProductsApi.md#getProductById) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
+[**getProducts**](CatalogProductsApi.md#getProducts) | **GET** /api/v1.0/{appId}/catalog/products | 
+[**updateProduct**](CatalogProductsApi.md#updateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
 
 
 <a name="archiveProduct"></a>
 # **archiveProduct**
 > archiveProduct(appId, catalogItemId)
 
-Archive Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -70,9 +68,7 @@ null (empty response body)
 # **createProduct**
 > RestApiResultProduct createProduct(appId, createProduct)
 
-Create a Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -125,9 +121,7 @@ Name | Type | Description  | Notes
 # **duplicateProduct**
 > duplicateProduct(appId, catalogItemId)
 
-Duplicate Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -179,9 +173,7 @@ null (empty response body)
 # **getProductById**
 > Product getProductById(appId, catalogItemId)
 
-Get Product by Id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -234,9 +226,7 @@ Name | Type | Description  | Notes
 # **getProducts**
 > RestApiPaginationResultProduct getProducts(appId, productTypes, searchTerm, page, limit)
 
-Get paginated products by app name id filtered by types
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -295,9 +285,7 @@ Name | Type | Description  | Notes
 # **updateProduct**
 > updateProduct(appId, catalogItemId, updateProduct)
 
-Update Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

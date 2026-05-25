@@ -610,6 +610,23 @@ public class StoresApiTest {
      *          if the Api call fails
      */
     @Test
+    public void setPropertyIdTest() throws Exception {
+        Integer storeId = null;
+        String propertyId = null;
+        api.setPropertyId(storeId, propertyId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void setStoreCollectionSettingsTest() throws Exception {
         Integer storeId = null;
         StoreCollectionSettings settings = null;
@@ -632,23 +649,6 @@ public class StoresApiTest {
         Integer storeId = null;
         LeadTime leadTime = null;
         RestApiResultOrderLeadTimes response = api.setStoreLeadTimes(storeId, leadTime);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void storesSetPropertyIdTest() throws Exception {
-        Integer storeId = null;
-        String propertyId = null;
-        Object response = api.storesSetPropertyId(storeId, propertyId);
 
         // TODO: test validations
     }
@@ -769,7 +769,7 @@ public class StoresApiTest {
     public void updateStoreAddressFormTest() throws Exception {
         Integer storeId = null;
         StoreAddressForm address = null;
-        Object response = api.updateStoreAddressForm(storeId, address);
+        api.updateStoreAddressForm(storeId, address);
 
         // TODO: test validations
     }

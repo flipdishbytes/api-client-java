@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CatalogImage;
 import java.io.File;
-import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
@@ -139,8 +138,8 @@ public class CatalogImagesApi {
     }
 
     /**
-     * Upload a Catalog Image
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param image Catalog image (required)
      * @return CatalogImage
@@ -152,8 +151,8 @@ public class CatalogImagesApi {
     }
 
     /**
-     * Upload a Catalog Image
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
+     * 
      * @param appId  (required)
      * @param image Catalog image (required)
      * @return ApiResponse&lt;CatalogImage&gt;
@@ -166,8 +165,8 @@ public class CatalogImagesApi {
     }
 
     /**
-     * Upload a Catalog Image (asynchronously)
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     *  (asynchronously)
+     * 
      * @param appId  (required)
      * @param image Catalog image (required)
      * @param callback The callback to be executed when the API call finishes

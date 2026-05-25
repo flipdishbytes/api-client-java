@@ -66,14 +66,14 @@ public class DriversApi {
     }
 
     /**
-     * Build call for driversAddDriverNotificationToken
+     * Build call for addDriverNotificationToken
      * @param updateDriverToken  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversAddDriverNotificationTokenCall(UpdateDriverNotificationToken updateDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call addDriverNotificationTokenCall(UpdateDriverNotificationToken updateDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = updateDriverToken;
 
         // create path and map variables
@@ -118,15 +118,15 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversAddDriverNotificationTokenValidateBeforeCall(UpdateDriverNotificationToken updateDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call addDriverNotificationTokenValidateBeforeCall(UpdateDriverNotificationToken updateDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'updateDriverToken' is set
         if (updateDriverToken == null) {
-            throw new ApiException("Missing the required parameter 'updateDriverToken' when calling driversAddDriverNotificationToken(Async)");
+            throw new ApiException("Missing the required parameter 'updateDriverToken' when calling addDriverNotificationToken(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversAddDriverNotificationTokenCall(updateDriverToken, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = addDriverNotificationTokenCall(updateDriverToken, progressListener, progressRequestListener);
         return call;
 
     }
@@ -138,8 +138,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversAddDriverNotificationToken(UpdateDriverNotificationToken updateDriverToken) throws ApiException {
-        ApiResponse<Object> resp = driversAddDriverNotificationTokenWithHttpInfo(updateDriverToken);
+    public Object addDriverNotificationToken(UpdateDriverNotificationToken updateDriverToken) throws ApiException {
+        ApiResponse<Object> resp = addDriverNotificationTokenWithHttpInfo(updateDriverToken);
         return resp.getData();
     }
 
@@ -150,8 +150,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversAddDriverNotificationTokenWithHttpInfo(UpdateDriverNotificationToken updateDriverToken) throws ApiException {
-        com.squareup.okhttp.Call call = driversAddDriverNotificationTokenValidateBeforeCall(updateDriverToken, null, null);
+    public ApiResponse<Object> addDriverNotificationTokenWithHttpInfo(UpdateDriverNotificationToken updateDriverToken) throws ApiException {
+        com.squareup.okhttp.Call call = addDriverNotificationTokenValidateBeforeCall(updateDriverToken, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -164,7 +164,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversAddDriverNotificationTokenAsync(UpdateDriverNotificationToken updateDriverToken, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call addDriverNotificationTokenAsync(UpdateDriverNotificationToken updateDriverToken, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -185,19 +185,19 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversAddDriverNotificationTokenValidateBeforeCall(updateDriverToken, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = addDriverNotificationTokenValidateBeforeCall(updateDriverToken, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversDeleteDriverProfileImage
+     * Build call for deleteDriverProfileImage
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversDeleteDriverProfileImageCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteDriverProfileImageCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -242,10 +242,10 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversDeleteDriverProfileImageValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deleteDriverProfileImageValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = driversDeleteDriverProfileImageCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteDriverProfileImageCall(progressListener, progressRequestListener);
         return call;
 
     }
@@ -256,8 +256,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversDeleteDriverProfileImage() throws ApiException {
-        ApiResponse<Object> resp = driversDeleteDriverProfileImageWithHttpInfo();
+    public Object deleteDriverProfileImage() throws ApiException {
+        ApiResponse<Object> resp = deleteDriverProfileImageWithHttpInfo();
         return resp.getData();
     }
 
@@ -267,8 +267,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversDeleteDriverProfileImageWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = driversDeleteDriverProfileImageValidateBeforeCall(null, null);
+    public ApiResponse<Object> deleteDriverProfileImageWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = deleteDriverProfileImageValidateBeforeCall(null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -280,7 +280,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversDeleteDriverProfileImageAsync(final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteDriverProfileImageAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -301,20 +301,20 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversDeleteDriverProfileImageValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteDriverProfileImageValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversDriverLogin
+     * Build call for driverLogin
      * @param driverLoginModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversDriverLoginCall(DriverLoginModel driverLoginModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call driverLoginCall(DriverLoginModel driverLoginModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = driverLoginModel;
 
         // create path and map variables
@@ -359,15 +359,15 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversDriverLoginValidateBeforeCall(DriverLoginModel driverLoginModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call driverLoginValidateBeforeCall(DriverLoginModel driverLoginModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'driverLoginModel' is set
         if (driverLoginModel == null) {
-            throw new ApiException("Missing the required parameter 'driverLoginModel' when calling driversDriverLogin(Async)");
+            throw new ApiException("Missing the required parameter 'driverLoginModel' when calling driverLogin(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversDriverLoginCall(driverLoginModel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = driverLoginCall(driverLoginModel, progressListener, progressRequestListener);
         return call;
 
     }
@@ -379,8 +379,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversDriverLogin(DriverLoginModel driverLoginModel) throws ApiException {
-        ApiResponse<Object> resp = driversDriverLoginWithHttpInfo(driverLoginModel);
+    public Object driverLogin(DriverLoginModel driverLoginModel) throws ApiException {
+        ApiResponse<Object> resp = driverLoginWithHttpInfo(driverLoginModel);
         return resp.getData();
     }
 
@@ -391,8 +391,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversDriverLoginWithHttpInfo(DriverLoginModel driverLoginModel) throws ApiException {
-        com.squareup.okhttp.Call call = driversDriverLoginValidateBeforeCall(driverLoginModel, null, null);
+    public ApiResponse<Object> driverLoginWithHttpInfo(DriverLoginModel driverLoginModel) throws ApiException {
+        com.squareup.okhttp.Call call = driverLoginValidateBeforeCall(driverLoginModel, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -405,7 +405,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversDriverLoginAsync(DriverLoginModel driverLoginModel, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call driverLoginAsync(DriverLoginModel driverLoginModel, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -426,20 +426,20 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversDriverLoginValidateBeforeCall(driverLoginModel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = driverLoginValidateBeforeCall(driverLoginModel, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversDriverRequestLoginCodeSms
+     * Build call for driverRequestLoginCodeSms
      * @param driverRequestLoginPinModel  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversDriverRequestLoginCodeSmsCall(DriverRequestLoginPinModel driverRequestLoginPinModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call driverRequestLoginCodeSmsCall(DriverRequestLoginPinModel driverRequestLoginPinModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = driverRequestLoginPinModel;
 
         // create path and map variables
@@ -484,15 +484,15 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversDriverRequestLoginCodeSmsValidateBeforeCall(DriverRequestLoginPinModel driverRequestLoginPinModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call driverRequestLoginCodeSmsValidateBeforeCall(DriverRequestLoginPinModel driverRequestLoginPinModel, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'driverRequestLoginPinModel' is set
         if (driverRequestLoginPinModel == null) {
-            throw new ApiException("Missing the required parameter 'driverRequestLoginPinModel' when calling driversDriverRequestLoginCodeSms(Async)");
+            throw new ApiException("Missing the required parameter 'driverRequestLoginPinModel' when calling driverRequestLoginCodeSms(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversDriverRequestLoginCodeSmsCall(driverRequestLoginPinModel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = driverRequestLoginCodeSmsCall(driverRequestLoginPinModel, progressListener, progressRequestListener);
         return call;
 
     }
@@ -504,8 +504,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversDriverRequestLoginCodeSms(DriverRequestLoginPinModel driverRequestLoginPinModel) throws ApiException {
-        ApiResponse<Object> resp = driversDriverRequestLoginCodeSmsWithHttpInfo(driverRequestLoginPinModel);
+    public Object driverRequestLoginCodeSms(DriverRequestLoginPinModel driverRequestLoginPinModel) throws ApiException {
+        ApiResponse<Object> resp = driverRequestLoginCodeSmsWithHttpInfo(driverRequestLoginPinModel);
         return resp.getData();
     }
 
@@ -516,8 +516,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversDriverRequestLoginCodeSmsWithHttpInfo(DriverRequestLoginPinModel driverRequestLoginPinModel) throws ApiException {
-        com.squareup.okhttp.Call call = driversDriverRequestLoginCodeSmsValidateBeforeCall(driverRequestLoginPinModel, null, null);
+    public ApiResponse<Object> driverRequestLoginCodeSmsWithHttpInfo(DriverRequestLoginPinModel driverRequestLoginPinModel) throws ApiException {
+        com.squareup.okhttp.Call call = driverRequestLoginCodeSmsValidateBeforeCall(driverRequestLoginPinModel, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -530,7 +530,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversDriverRequestLoginCodeSmsAsync(DriverRequestLoginPinModel driverRequestLoginPinModel, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call driverRequestLoginCodeSmsAsync(DriverRequestLoginPinModel driverRequestLoginPinModel, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -551,19 +551,19 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversDriverRequestLoginCodeSmsValidateBeforeCall(driverRequestLoginPinModel, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = driverRequestLoginCodeSmsValidateBeforeCall(driverRequestLoginPinModel, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversGetDriverProfile
+     * Build call for getDriverProfile
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversGetDriverProfileCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getDriverProfileCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -608,10 +608,10 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversGetDriverProfileValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getDriverProfileValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = driversGetDriverProfileCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDriverProfileCall(progressListener, progressRequestListener);
         return call;
 
     }
@@ -622,8 +622,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversGetDriverProfile() throws ApiException {
-        ApiResponse<Object> resp = driversGetDriverProfileWithHttpInfo();
+    public Object getDriverProfile() throws ApiException {
+        ApiResponse<Object> resp = getDriverProfileWithHttpInfo();
         return resp.getData();
     }
 
@@ -633,8 +633,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversGetDriverProfileWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = driversGetDriverProfileValidateBeforeCall(null, null);
+    public ApiResponse<Object> getDriverProfileWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getDriverProfileValidateBeforeCall(null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -646,7 +646,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversGetDriverProfileAsync(final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDriverProfileAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -667,19 +667,19 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversGetDriverProfileValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDriverProfileValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversGetStoresForDriver
+     * Build call for getStoresForDriver
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversGetStoresForDriverCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStoresForDriverCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -724,10 +724,10 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversGetStoresForDriverValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStoresForDriverValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = driversGetStoresForDriverCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoresForDriverCall(progressListener, progressRequestListener);
         return call;
 
     }
@@ -738,8 +738,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversGetStoresForDriver() throws ApiException {
-        ApiResponse<Object> resp = driversGetStoresForDriverWithHttpInfo();
+    public Object getStoresForDriver() throws ApiException {
+        ApiResponse<Object> resp = getStoresForDriverWithHttpInfo();
         return resp.getData();
     }
 
@@ -749,8 +749,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversGetStoresForDriverWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = driversGetStoresForDriverValidateBeforeCall(null, null);
+    public ApiResponse<Object> getStoresForDriverWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getStoresForDriverValidateBeforeCall(null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -762,7 +762,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversGetStoresForDriverAsync(final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStoresForDriverAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -783,20 +783,20 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversGetStoresForDriverValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStoresForDriverValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversRemoveDriverNotificationToken
+     * Build call for removeDriverNotificationToken
      * @param removeDriverToken  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversRemoveDriverNotificationTokenCall(UpdateDriverNotificationToken removeDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call removeDriverNotificationTokenCall(UpdateDriverNotificationToken removeDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = removeDriverToken;
 
         // create path and map variables
@@ -841,15 +841,15 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversRemoveDriverNotificationTokenValidateBeforeCall(UpdateDriverNotificationToken removeDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call removeDriverNotificationTokenValidateBeforeCall(UpdateDriverNotificationToken removeDriverToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'removeDriverToken' is set
         if (removeDriverToken == null) {
-            throw new ApiException("Missing the required parameter 'removeDriverToken' when calling driversRemoveDriverNotificationToken(Async)");
+            throw new ApiException("Missing the required parameter 'removeDriverToken' when calling removeDriverNotificationToken(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversRemoveDriverNotificationTokenCall(removeDriverToken, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = removeDriverNotificationTokenCall(removeDriverToken, progressListener, progressRequestListener);
         return call;
 
     }
@@ -861,8 +861,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversRemoveDriverNotificationToken(UpdateDriverNotificationToken removeDriverToken) throws ApiException {
-        ApiResponse<Object> resp = driversRemoveDriverNotificationTokenWithHttpInfo(removeDriverToken);
+    public Object removeDriverNotificationToken(UpdateDriverNotificationToken removeDriverToken) throws ApiException {
+        ApiResponse<Object> resp = removeDriverNotificationTokenWithHttpInfo(removeDriverToken);
         return resp.getData();
     }
 
@@ -873,8 +873,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversRemoveDriverNotificationTokenWithHttpInfo(UpdateDriverNotificationToken removeDriverToken) throws ApiException {
-        com.squareup.okhttp.Call call = driversRemoveDriverNotificationTokenValidateBeforeCall(removeDriverToken, null, null);
+    public ApiResponse<Object> removeDriverNotificationTokenWithHttpInfo(UpdateDriverNotificationToken removeDriverToken) throws ApiException {
+        com.squareup.okhttp.Call call = removeDriverNotificationTokenValidateBeforeCall(removeDriverToken, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -887,7 +887,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversRemoveDriverNotificationTokenAsync(UpdateDriverNotificationToken removeDriverToken, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call removeDriverNotificationTokenAsync(UpdateDriverNotificationToken removeDriverToken, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -908,13 +908,13 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversRemoveDriverNotificationTokenValidateBeforeCall(removeDriverToken, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = removeDriverNotificationTokenValidateBeforeCall(removeDriverToken, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversSetDriverPresenceForStore
+     * Build call for setDriverPresenceForStore
      * @param storeId  (required)
      * @param presence  (required)
      * @param progressListener Progress listener
@@ -922,7 +922,7 @@ public class DriversApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversSetDriverPresenceForStoreCall(Integer storeId, String presence, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setDriverPresenceForStoreCall(Integer storeId, String presence, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -969,20 +969,20 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversSetDriverPresenceForStoreValidateBeforeCall(Integer storeId, String presence, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setDriverPresenceForStoreValidateBeforeCall(Integer storeId, String presence, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling driversSetDriverPresenceForStore(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling setDriverPresenceForStore(Async)");
         }
         
         // verify the required parameter 'presence' is set
         if (presence == null) {
-            throw new ApiException("Missing the required parameter 'presence' when calling driversSetDriverPresenceForStore(Async)");
+            throw new ApiException("Missing the required parameter 'presence' when calling setDriverPresenceForStore(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversSetDriverPresenceForStoreCall(storeId, presence, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setDriverPresenceForStoreCall(storeId, presence, progressListener, progressRequestListener);
         return call;
 
     }
@@ -995,8 +995,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversSetDriverPresenceForStore(Integer storeId, String presence) throws ApiException {
-        ApiResponse<Object> resp = driversSetDriverPresenceForStoreWithHttpInfo(storeId, presence);
+    public Object setDriverPresenceForStore(Integer storeId, String presence) throws ApiException {
+        ApiResponse<Object> resp = setDriverPresenceForStoreWithHttpInfo(storeId, presence);
         return resp.getData();
     }
 
@@ -1008,8 +1008,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversSetDriverPresenceForStoreWithHttpInfo(Integer storeId, String presence) throws ApiException {
-        com.squareup.okhttp.Call call = driversSetDriverPresenceForStoreValidateBeforeCall(storeId, presence, null, null);
+    public ApiResponse<Object> setDriverPresenceForStoreWithHttpInfo(Integer storeId, String presence) throws ApiException {
+        com.squareup.okhttp.Call call = setDriverPresenceForStoreValidateBeforeCall(storeId, presence, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1023,7 +1023,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversSetDriverPresenceForStoreAsync(Integer storeId, String presence, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call setDriverPresenceForStoreAsync(Integer storeId, String presence, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1044,19 +1044,19 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversSetDriverPresenceForStoreValidateBeforeCall(storeId, presence, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setDriverPresenceForStoreValidateBeforeCall(storeId, presence, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversSetDriverProfileImage
+     * Build call for setDriverProfileImage
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversSetDriverProfileImageCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call setDriverProfileImageCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1101,10 +1101,10 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversSetDriverProfileImageValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call setDriverProfileImageValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = driversSetDriverProfileImageCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setDriverProfileImageCall(progressListener, progressRequestListener);
         return call;
 
     }
@@ -1115,8 +1115,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversSetDriverProfileImage() throws ApiException {
-        ApiResponse<Object> resp = driversSetDriverProfileImageWithHttpInfo();
+    public Object setDriverProfileImage() throws ApiException {
+        ApiResponse<Object> resp = setDriverProfileImageWithHttpInfo();
         return resp.getData();
     }
 
@@ -1126,8 +1126,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversSetDriverProfileImageWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = driversSetDriverProfileImageValidateBeforeCall(null, null);
+    public ApiResponse<Object> setDriverProfileImageWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = setDriverProfileImageValidateBeforeCall(null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1139,7 +1139,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversSetDriverProfileImageAsync(final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call setDriverProfileImageAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1160,13 +1160,13 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversSetDriverProfileImageValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = setDriverProfileImageValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversUpdateDeliveryTrackingStatus
+     * Build call for updateDeliveryTrackingStatus
      * @param orderId  (required)
      * @param deliveryTrackingStatus  (required)
      * @param progressListener Progress listener
@@ -1174,7 +1174,7 @@ public class DriversApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversUpdateDeliveryTrackingStatusCall(Integer orderId, String deliveryTrackingStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call updateDeliveryTrackingStatusCall(Integer orderId, String deliveryTrackingStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1221,20 +1221,20 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversUpdateDeliveryTrackingStatusValidateBeforeCall(Integer orderId, String deliveryTrackingStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateDeliveryTrackingStatusValidateBeforeCall(Integer orderId, String deliveryTrackingStatus, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'orderId' is set
         if (orderId == null) {
-            throw new ApiException("Missing the required parameter 'orderId' when calling driversUpdateDeliveryTrackingStatus(Async)");
+            throw new ApiException("Missing the required parameter 'orderId' when calling updateDeliveryTrackingStatus(Async)");
         }
         
         // verify the required parameter 'deliveryTrackingStatus' is set
         if (deliveryTrackingStatus == null) {
-            throw new ApiException("Missing the required parameter 'deliveryTrackingStatus' when calling driversUpdateDeliveryTrackingStatus(Async)");
+            throw new ApiException("Missing the required parameter 'deliveryTrackingStatus' when calling updateDeliveryTrackingStatus(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversUpdateDeliveryTrackingStatusCall(orderId, deliveryTrackingStatus, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateDeliveryTrackingStatusCall(orderId, deliveryTrackingStatus, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1247,8 +1247,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversUpdateDeliveryTrackingStatus(Integer orderId, String deliveryTrackingStatus) throws ApiException {
-        ApiResponse<Object> resp = driversUpdateDeliveryTrackingStatusWithHttpInfo(orderId, deliveryTrackingStatus);
+    public Object updateDeliveryTrackingStatus(Integer orderId, String deliveryTrackingStatus) throws ApiException {
+        ApiResponse<Object> resp = updateDeliveryTrackingStatusWithHttpInfo(orderId, deliveryTrackingStatus);
         return resp.getData();
     }
 
@@ -1260,8 +1260,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversUpdateDeliveryTrackingStatusWithHttpInfo(Integer orderId, String deliveryTrackingStatus) throws ApiException {
-        com.squareup.okhttp.Call call = driversUpdateDeliveryTrackingStatusValidateBeforeCall(orderId, deliveryTrackingStatus, null, null);
+    public ApiResponse<Object> updateDeliveryTrackingStatusWithHttpInfo(Integer orderId, String deliveryTrackingStatus) throws ApiException {
+        com.squareup.okhttp.Call call = updateDeliveryTrackingStatusValidateBeforeCall(orderId, deliveryTrackingStatus, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1275,7 +1275,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversUpdateDeliveryTrackingStatusAsync(Integer orderId, String deliveryTrackingStatus, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateDeliveryTrackingStatusAsync(Integer orderId, String deliveryTrackingStatus, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1296,20 +1296,20 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversUpdateDeliveryTrackingStatusValidateBeforeCall(orderId, deliveryTrackingStatus, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateDeliveryTrackingStatusValidateBeforeCall(orderId, deliveryTrackingStatus, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for driversUpdateDriverProfile
+     * Build call for updateDriverProfile
      * @param updateDriverProfile  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call driversUpdateDriverProfileCall(UpdateDriverProfileModel updateDriverProfile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call updateDriverProfileCall(UpdateDriverProfileModel updateDriverProfile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = updateDriverProfile;
 
         // create path and map variables
@@ -1354,15 +1354,15 @@ public class DriversApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call driversUpdateDriverProfileValidateBeforeCall(UpdateDriverProfileModel updateDriverProfile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call updateDriverProfileValidateBeforeCall(UpdateDriverProfileModel updateDriverProfile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'updateDriverProfile' is set
         if (updateDriverProfile == null) {
-            throw new ApiException("Missing the required parameter 'updateDriverProfile' when calling driversUpdateDriverProfile(Async)");
+            throw new ApiException("Missing the required parameter 'updateDriverProfile' when calling updateDriverProfile(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = driversUpdateDriverProfileCall(updateDriverProfile, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateDriverProfileCall(updateDriverProfile, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1374,8 +1374,8 @@ public class DriversApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object driversUpdateDriverProfile(UpdateDriverProfileModel updateDriverProfile) throws ApiException {
-        ApiResponse<Object> resp = driversUpdateDriverProfileWithHttpInfo(updateDriverProfile);
+    public Object updateDriverProfile(UpdateDriverProfileModel updateDriverProfile) throws ApiException {
+        ApiResponse<Object> resp = updateDriverProfileWithHttpInfo(updateDriverProfile);
         return resp.getData();
     }
 
@@ -1386,8 +1386,8 @@ public class DriversApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> driversUpdateDriverProfileWithHttpInfo(UpdateDriverProfileModel updateDriverProfile) throws ApiException {
-        com.squareup.okhttp.Call call = driversUpdateDriverProfileValidateBeforeCall(updateDriverProfile, null, null);
+    public ApiResponse<Object> updateDriverProfileWithHttpInfo(UpdateDriverProfileModel updateDriverProfile) throws ApiException {
+        com.squareup.okhttp.Call call = updateDriverProfileValidateBeforeCall(updateDriverProfile, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1400,7 +1400,7 @@ public class DriversApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call driversUpdateDriverProfileAsync(UpdateDriverProfileModel updateDriverProfile, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call updateDriverProfileAsync(UpdateDriverProfileModel updateDriverProfile, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1421,7 +1421,7 @@ public class DriversApi {
             };
         }
 
-        com.squareup.okhttp.Call call = driversUpdateDriverProfileValidateBeforeCall(updateDriverProfile, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = updateDriverProfileValidateBeforeCall(updateDriverProfile, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

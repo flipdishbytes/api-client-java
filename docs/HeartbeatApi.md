@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="headHostname"></a>
 # **headHostname**
-> Object headHostname()
+> RestApiStringResult headHostname()
 
 
 
@@ -33,7 +33,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HeartbeatApi apiInstance = new HeartbeatApi();
 try {
-    Object result = apiInstance.headHostname();
+    RestApiStringResult result = apiInstance.headHostname();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling HeartbeatApi#headHostname");
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 
 <a name="hostname"></a>
 # **hostname**
-> Object hostname()
+> RestApiStringResult hostname()
 
 
 
@@ -127,7 +127,7 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 HeartbeatApi apiInstance = new HeartbeatApi();
 try {
-    Object result = apiInstance.hostname();
+    RestApiStringResult result = apiInstance.hostname();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling HeartbeatApi#hostname");
@@ -140,7 +140,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**RestApiStringResult**](RestApiStringResult.md)
 
 ### Authorization
 

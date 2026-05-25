@@ -38,7 +38,7 @@ public class MenusNutritionInfoV2ApiTest {
 
     
     /**
-     * Add or update menuitem nutrition info by menu item&#39;s publicId
+     * 
      *
      * 
      *
@@ -57,7 +57,7 @@ public class MenusNutritionInfoV2ApiTest {
     }
     
     /**
-     * Add or update menuitem option set item&#39;s nutrition info by its publicId
+     * 
      *
      * 
      *
@@ -76,7 +76,7 @@ public class MenusNutritionInfoV2ApiTest {
     }
     
     /**
-     * Get allergens
+     * 
      *
      * 
      *
@@ -93,7 +93,7 @@ public class MenusNutritionInfoV2ApiTest {
     }
     
     /**
-     * Get menu nutrition by menuId
+     * 
      *
      * 
      *

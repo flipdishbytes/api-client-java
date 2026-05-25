@@ -8,20 +8,20 @@ Method | HTTP request | Description
 [**attachStoreToKiosk**](HydraApi.md#attachStoreToKiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 [**attachStoreToTerminal**](HydraApi.md#attachStoreToTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**cancelEmvPayment**](HydraApi.md#cancelEmvPayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
+[**createEmv**](HydraApi.md#createEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
+[**deleteEmv**](HydraApi.md#deleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+[**detachStoreFromKiosk**](HydraApi.md#detachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
 [**detachStoreFromTerminal**](HydraApi.md#detachStoreFromTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
 [**getAblyToken**](HydraApi.md#getAblyToken) | **GET** /api/v1.0/hydra/ably_token | 
 [**getAttachedDevice**](HydraApi.md#getAttachedDevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
 [**getAttachedDevices**](HydraApi.md#getAttachedDevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
 [**getEMVTerminalDetails**](HydraApi.md#getEMVTerminalDetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 [**getEmvOrderState**](HydraApi.md#getEmvOrderState) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
+[**getEmvsForAppId**](HydraApi.md#getEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | 
 [**getKioskCashPaymentSettings**](HydraApi.md#getKioskCashPaymentSettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 [**getKioskSettings**](HydraApi.md#getKioskSettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 [**getRegistration**](HydraApi.md#getRegistration) | **GET** /api/v1.0/hydra/registration | 
 [**getSettings**](HydraApi.md#getSettings) | **GET** /api/v1.0/hydra/settings | 
-[**hydraCreateEmv**](HydraApi.md#hydraCreateEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
-[**hydraDeleteEmv**](HydraApi.md#hydraDeleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
-[**hydraDetachStoreFromKiosk**](HydraApi.md#hydraDetachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
-[**hydraGetEmvsForAppId**](HydraApi.md#hydraGetEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | 
 [**loginWithDeviceId**](HydraApi.md#loginWithDeviceId) | **POST** /api/v1.0/hydra/{deviceId}/login | 
 [**register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
 [**unAssign**](HydraApi.md#unAssign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
@@ -236,6 +236,166 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="createEmv"></a>
+# **createEmv**
+> Integer createEmv(appId, emv)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+EmvTerminal emv = new EmvTerminal(); // EmvTerminal | 
+try {
+    Integer result = apiInstance.createEmv(appId, emv);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#createEmv");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **emv** | [**EmvTerminal**](EmvTerminal.md)|  |
+
+### Return type
+
+**Integer**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="deleteEmv"></a>
+# **deleteEmv**
+> deleteEmv(appId, id)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+Integer id = 56; // Integer | 
+try {
+    apiInstance.deleteEmv(appId, id);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#deleteEmv");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **id** | **Integer**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="detachStoreFromKiosk"></a>
+# **detachStoreFromKiosk**
+> RestApiResultHydraStatus detachStoreFromKiosk(appId, storeId, deviceId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+Integer storeId = 56; // Integer | 
+String deviceId = "deviceId_example"; // String | 
+try {
+    RestApiResultHydraStatus result = apiInstance.detachStoreFromKiosk(appId, storeId, deviceId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#detachStoreFromKiosk");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **storeId** | **Integer**|  |
+ **deviceId** | **String**|  |
+
+### Return type
+
+[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
 
 ### Authorization
 
@@ -569,6 +729,57 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="getEmvsForAppId"></a>
+# **getEmvsForAppId**
+> RestApiArrayResultEmvTerminalWithAssignments getEmvsForAppId(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.HydraApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+HydraApi apiInstance = new HydraApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiArrayResultEmvTerminalWithAssignments result = apiInstance.getEmvsForAppId(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling HydraApi#getEmvsForAppId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiArrayResultEmvTerminalWithAssignments**](RestApiArrayResultEmvTerminalWithAssignments.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getKioskCashPaymentSettings"></a>
 # **getKioskCashPaymentSettings**
 > RestApiArrayResultKioskCashPaymentSettings getKioskCashPaymentSettings(appId, deviceId)
@@ -759,218 +970,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestApiResultHydraConfig**](RestApiResultHydraConfig.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="hydraCreateEmv"></a>
-# **hydraCreateEmv**
-> Object hydraCreateEmv(appId, emv)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.HydraApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-HydraApi apiInstance = new HydraApi();
-String appId = "appId_example"; // String | 
-EmvTerminal emv = new EmvTerminal(); // EmvTerminal | 
-try {
-    Object result = apiInstance.hydraCreateEmv(appId, emv);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling HydraApi#hydraCreateEmv");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **emv** | [**EmvTerminal**](EmvTerminal.md)|  |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="hydraDeleteEmv"></a>
-# **hydraDeleteEmv**
-> Object hydraDeleteEmv(appId, id)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.HydraApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-HydraApi apiInstance = new HydraApi();
-String appId = "appId_example"; // String | 
-Integer id = 56; // Integer | 
-try {
-    Object result = apiInstance.hydraDeleteEmv(appId, id);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling HydraApi#hydraDeleteEmv");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **id** | **Integer**|  |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="hydraDetachStoreFromKiosk"></a>
-# **hydraDetachStoreFromKiosk**
-> RestApiResultHydraStatus hydraDetachStoreFromKiosk(appId, storeId, deviceId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.HydraApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-HydraApi apiInstance = new HydraApi();
-String appId = "appId_example"; // String | 
-Integer storeId = 56; // Integer | 
-String deviceId = "deviceId_example"; // String | 
-try {
-    RestApiResultHydraStatus result = apiInstance.hydraDetachStoreFromKiosk(appId, storeId, deviceId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling HydraApi#hydraDetachStoreFromKiosk");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **storeId** | **Integer**|  |
- **deviceId** | **String**|  |
-
-### Return type
-
-[**RestApiResultHydraStatus**](RestApiResultHydraStatus.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="hydraGetEmvsForAppId"></a>
-# **hydraGetEmvsForAppId**
-> RestApiArrayResultEmvTerminalWithAssignments hydraGetEmvsForAppId(appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.HydraApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-HydraApi apiInstance = new HydraApi();
-String appId = "appId_example"; // String | 
-try {
-    RestApiArrayResultEmvTerminalWithAssignments result = apiInstance.hydraGetEmvsForAppId(appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling HydraApi#hydraGetEmvsForAppId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiArrayResultEmvTerminalWithAssignments**](RestApiArrayResultEmvTerminalWithAssignments.md)
 
 ### Authorization
 

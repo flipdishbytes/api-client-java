@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**createMenuAvailabilityForDay**](MenuSectionsApi.md#createMenuAvailabilityForDay) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 [**createMenuSection**](MenuSectionsApi.md#createMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
 [**createMenuSectionAvailability**](MenuSectionsApi.md#createMenuSectionAvailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
-[**deleteMenuSection**](MenuSectionsApi.md#deleteMenuSection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-[**deleteMenuSectionImage**](MenuSectionsApi.md#deleteMenuSectionImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+[**deleteMenuSection**](MenuSectionsApi.md#deleteMenuSection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | 
+[**deleteMenuSectionImage**](MenuSectionsApi.md#deleteMenuSectionImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 [**getMenuSectionById**](MenuSectionsApi.md#getMenuSectionById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 [**getMenuSections**](MenuSectionsApi.md#getMenuSections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-[**menuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menuSectionsSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
+[**setItemDisplayOrders**](MenuSectionsApi.md#setItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | 
 [**updateMenuSection**](MenuSectionsApi.md#updateMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
-[**uploadMenuSectionImage**](MenuSectionsApi.md#uploadMenuSectionImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+[**uploadMenuSectionImage**](MenuSectionsApi.md#uploadMenuSectionImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 
 
 <a name="cloneMenuSection"></a>
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 # **deleteMenuSection**
 > deleteMenuSection(menuId, menuSectionId)
 
-Delete menu section
+
 
 ### Example
 ```java
@@ -257,8 +257,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuSectionsApi apiInstance = new MenuSectionsApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuId = 56; // Integer | 
+Integer menuSectionId = 56; // Integer | 
 try {
     apiInstance.deleteMenuSection(menuId, menuSectionId);
 } catch (ApiException e) {
@@ -271,8 +271,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menuSectionId** | **Integer**| Menu section identifier |
+ **menuId** | **Integer**|  |
+ **menuSectionId** | **Integer**|  |
 
 ### Return type
 
@@ -291,7 +291,7 @@ null (empty response body)
 # **deleteMenuSectionImage**
 > deleteMenuSectionImage(menuId, menuSectionId)
 
-Delete menu section image
+
 
 ### Example
 ```java
@@ -309,8 +309,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuSectionsApi apiInstance = new MenuSectionsApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuId = 56; // Integer | 
+Integer menuSectionId = 56; // Integer | 
 try {
     apiInstance.deleteMenuSectionImage(menuId, menuSectionId);
 } catch (ApiException e) {
@@ -323,8 +323,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menuSectionId** | **Integer**| Menu section identifier |
+ **menuId** | **Integer**|  |
+ **menuSectionId** | **Integer**|  |
 
 ### Return type
 
@@ -443,11 +443,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="menuSectionsSetItemDisplayOrders"></a>
-# **menuSectionsSetItemDisplayOrders**
-> menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders)
+<a name="setItemDisplayOrders"></a>
+# **setItemDisplayOrders**
+> setItemDisplayOrders(menuId, menuSectionId, displayOrders)
 
-Re-arrange Items within a Section
+
 
 ### Example
 ```java
@@ -465,13 +465,13 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuSectionsApi apiInstance = new MenuSectionsApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer menuSectionId = 56; // Integer | Menu section identifier
-MenuObjectDisplayOrders displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | Item Ids and their new display order
+Integer menuId = 56; // Integer | 
+Integer menuSectionId = 56; // Integer | 
+MenuObjectDisplayOrders displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | 
 try {
-    apiInstance.menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
+    apiInstance.setItemDisplayOrders(menuId, menuSectionId, displayOrders);
 } catch (ApiException e) {
-    System.err.println("Exception when calling MenuSectionsApi#menuSectionsSetItemDisplayOrders");
+    System.err.println("Exception when calling MenuSectionsApi#setItemDisplayOrders");
     e.printStackTrace();
 }
 ```
@@ -480,9 +480,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menuSectionId** | **Integer**| Menu section identifier |
- **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)| Item Ids and their new display order |
+ **menuId** | **Integer**|  |
+ **menuSectionId** | **Integer**|  |
+ **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)|  |
 
 ### Return type
 
@@ -557,7 +557,7 @@ null (empty response body)
 # **uploadMenuSectionImage**
 > RestApiStringResult uploadMenuSectionImage(menuId, menuSectionId, image)
 
-Upload menu section image
+
 
 ### Example
 ```java
@@ -575,8 +575,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuSectionsApi apiInstance = new MenuSectionsApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuId = 56; // Integer | 
+Integer menuSectionId = 56; // Integer | 
 File image = new File("/path/to/file.txt"); // File | Menu section image
 try {
     RestApiStringResult result = apiInstance.uploadMenuSectionImage(menuId, menuSectionId, image);
@@ -591,8 +591,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menuSectionId** | **Integer**| Menu section identifier |
+ **menuId** | **Integer**|  |
+ **menuSectionId** | **Integer**|  |
  **image** | **File**| Menu section image |
 
 ### Return type

@@ -46,10 +46,10 @@ public class StuartApiTest {
      *          if the Api call fails
      */
     @Test
-    public void stuartCancelJobTest() throws Exception {
+    public void cancelJobTest() throws Exception {
         Integer jobId = null;
         Integer storeId = null;
-        Object response = api.stuartCancelJob(jobId, storeId);
+        api.cancelJob(jobId, storeId);
 
         // TODO: test validations
     }
@@ -63,10 +63,10 @@ public class StuartApiTest {
      *          if the Api call fails
      */
     @Test
-    public void stuartGetJobTest() throws Exception {
+    public void getJobTest() throws Exception {
         Integer jobId = null;
         Integer storeId = null;
-        RestApiResultJobResponse response = api.stuartGetJob(jobId, storeId);
+        RestApiResultJobResponse response = api.getJob(jobId, storeId);
 
         // TODO: test validations
     }
@@ -80,9 +80,9 @@ public class StuartApiTest {
      *          if the Api call fails
      */
     @Test
-    public void stuartGetStuartSettingsTest() throws Exception {
+    public void getStuartSettingsTest() throws Exception {
         Integer storeId = null;
-        RestApiResultStuartSettings response = api.stuartGetStuartSettings(storeId);
+        RestApiResultStuartSettings response = api.getStuartSettings(storeId);
 
         // TODO: test validations
     }
@@ -96,10 +96,10 @@ public class StuartApiTest {
      *          if the Api call fails
      */
     @Test
-    public void stuartPostStuartSettingsTest() throws Exception {
+    public void postStuartSettingsTest() throws Exception {
         Integer storeId = null;
         StuartSettings stuartSettings = null;
-        Object response = api.stuartPostStuartSettings(storeId, stuartSettings);
+        Object response = api.postStuartSettings(storeId, stuartSettings);
 
         // TODO: test validations
     }

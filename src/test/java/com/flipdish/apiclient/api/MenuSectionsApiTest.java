@@ -116,7 +116,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Delete menu section
+     * 
      *
      * 
      *
@@ -133,7 +133,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Delete menu section image
+     * 
      *
      * 
      *
@@ -183,7 +183,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Re-arrange Items within a Section
+     * 
      *
      * 
      *
@@ -191,11 +191,11 @@ public class MenuSectionsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void menuSectionsSetItemDisplayOrdersTest() throws Exception {
+    public void setItemDisplayOrdersTest() throws Exception {
         Integer menuId = null;
         Integer menuSectionId = null;
         MenuObjectDisplayOrders displayOrders = null;
-        api.menuSectionsSetItemDisplayOrders(menuId, menuSectionId, displayOrders);
+        api.setItemDisplayOrders(menuId, menuSectionId, displayOrders);
 
         // TODO: test validations
     }
@@ -220,7 +220,7 @@ public class MenuSectionsApiTest {
     }
     
     /**
-     * Upload menu section image
+     * 
      *
      * 
      *

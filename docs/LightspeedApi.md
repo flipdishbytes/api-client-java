@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**lightspeedGenerateMenu**](LightspeedApi.md#lightspeedGenerateMenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
-[**lightspeedGetStoreSettings**](LightspeedApi.md#lightspeedGetStoreSettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
-[**lightspeedSaveStoreSettings**](LightspeedApi.md#lightspeedSaveStoreSettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+[**generateMenu**](LightspeedApi.md#generateMenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
+[**getStoreSettings**](LightspeedApi.md#getStoreSettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
+[**saveStoreSettings**](LightspeedApi.md#saveStoreSettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 
 
-<a name="lightspeedGenerateMenu"></a>
-# **lightspeedGenerateMenu**
-> Object lightspeedGenerateMenu(storeId)
+<a name="generateMenu"></a>
+# **generateMenu**
+> generateMenu(storeId)
 
 
 
@@ -33,10 +33,9 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 LightspeedApi apiInstance = new LightspeedApi();
 Integer storeId = 56; // Integer | 
 try {
-    Object result = apiInstance.lightspeedGenerateMenu(storeId);
-    System.out.println(result);
+    apiInstance.generateMenu(storeId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling LightspeedApi#lightspeedGenerateMenu");
+    System.err.println("Exception when calling LightspeedApi#generateMenu");
     e.printStackTrace();
 }
 ```
@@ -49,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+null (empty response body)
 
 ### Authorization
 
@@ -60,9 +59,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="lightspeedGetStoreSettings"></a>
-# **lightspeedGetStoreSettings**
-> RestApiResultLightspeedSettings lightspeedGetStoreSettings(storeId)
+<a name="getStoreSettings"></a>
+# **getStoreSettings**
+> RestApiResultLightspeedSettings getStoreSettings(storeId)
 
 
 
@@ -84,10 +83,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 LightspeedApi apiInstance = new LightspeedApi();
 Integer storeId = 56; // Integer | 
 try {
-    RestApiResultLightspeedSettings result = apiInstance.lightspeedGetStoreSettings(storeId);
+    RestApiResultLightspeedSettings result = apiInstance.getStoreSettings(storeId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling LightspeedApi#lightspeedGetStoreSettings");
+    System.err.println("Exception when calling LightspeedApi#getStoreSettings");
     e.printStackTrace();
 }
 ```
@@ -111,9 +110,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="lightspeedSaveStoreSettings"></a>
-# **lightspeedSaveStoreSettings**
-> RestApiResultLightspeedSettings lightspeedSaveStoreSettings(storeId, lightspeedSettings)
+<a name="saveStoreSettings"></a>
+# **saveStoreSettings**
+> RestApiResultLightspeedSettings saveStoreSettings(storeId, lightspeedSettings)
 
 
 
@@ -136,10 +135,10 @@ LightspeedApi apiInstance = new LightspeedApi();
 Integer storeId = 56; // Integer | 
 LightspeedSettings lightspeedSettings = new LightspeedSettings(); // LightspeedSettings | 
 try {
-    RestApiResultLightspeedSettings result = apiInstance.lightspeedSaveStoreSettings(storeId, lightspeedSettings);
+    RestApiResultLightspeedSettings result = apiInstance.saveStoreSettings(storeId, lightspeedSettings);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling LightspeedApi#lightspeedSaveStoreSettings");
+    System.err.println("Exception when calling LightspeedApi#saveStoreSettings");
     e.printStackTrace();
 }
 ```

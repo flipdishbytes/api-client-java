@@ -47,9 +47,9 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversAddDriverNotificationTokenTest() throws Exception {
+    public void addDriverNotificationTokenTest() throws Exception {
         UpdateDriverNotificationToken updateDriverToken = null;
-        Object response = api.driversAddDriverNotificationToken(updateDriverToken);
+        Object response = api.addDriverNotificationToken(updateDriverToken);
 
         // TODO: test validations
     }
@@ -63,8 +63,8 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversDeleteDriverProfileImageTest() throws Exception {
-        Object response = api.driversDeleteDriverProfileImage();
+    public void deleteDriverProfileImageTest() throws Exception {
+        Object response = api.deleteDriverProfileImage();
 
         // TODO: test validations
     }
@@ -78,9 +78,9 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversDriverLoginTest() throws Exception {
+    public void driverLoginTest() throws Exception {
         DriverLoginModel driverLoginModel = null;
-        Object response = api.driversDriverLogin(driverLoginModel);
+        Object response = api.driverLogin(driverLoginModel);
 
         // TODO: test validations
     }
@@ -94,9 +94,9 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversDriverRequestLoginCodeSmsTest() throws Exception {
+    public void driverRequestLoginCodeSmsTest() throws Exception {
         DriverRequestLoginPinModel driverRequestLoginPinModel = null;
-        Object response = api.driversDriverRequestLoginCodeSms(driverRequestLoginPinModel);
+        Object response = api.driverRequestLoginCodeSms(driverRequestLoginPinModel);
 
         // TODO: test validations
     }
@@ -110,8 +110,8 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversGetDriverProfileTest() throws Exception {
-        Object response = api.driversGetDriverProfile();
+    public void getDriverProfileTest() throws Exception {
+        Object response = api.getDriverProfile();
 
         // TODO: test validations
     }
@@ -125,8 +125,8 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversGetStoresForDriverTest() throws Exception {
-        Object response = api.driversGetStoresForDriver();
+    public void getStoresForDriverTest() throws Exception {
+        Object response = api.getStoresForDriver();
 
         // TODO: test validations
     }
@@ -140,9 +140,9 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversRemoveDriverNotificationTokenTest() throws Exception {
+    public void removeDriverNotificationTokenTest() throws Exception {
         UpdateDriverNotificationToken removeDriverToken = null;
-        Object response = api.driversRemoveDriverNotificationToken(removeDriverToken);
+        Object response = api.removeDriverNotificationToken(removeDriverToken);
 
         // TODO: test validations
     }
@@ -156,10 +156,10 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversSetDriverPresenceForStoreTest() throws Exception {
+    public void setDriverPresenceForStoreTest() throws Exception {
         Integer storeId = null;
         String presence = null;
-        Object response = api.driversSetDriverPresenceForStore(storeId, presence);
+        Object response = api.setDriverPresenceForStore(storeId, presence);
 
         // TODO: test validations
     }
@@ -173,8 +173,8 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversSetDriverProfileImageTest() throws Exception {
-        Object response = api.driversSetDriverProfileImage();
+    public void setDriverProfileImageTest() throws Exception {
+        Object response = api.setDriverProfileImage();
 
         // TODO: test validations
     }
@@ -188,10 +188,10 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversUpdateDeliveryTrackingStatusTest() throws Exception {
+    public void updateDeliveryTrackingStatusTest() throws Exception {
         Integer orderId = null;
         String deliveryTrackingStatus = null;
-        Object response = api.driversUpdateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
+        Object response = api.updateDeliveryTrackingStatus(orderId, deliveryTrackingStatus);
 
         // TODO: test validations
     }
@@ -205,9 +205,9 @@ public class DriversApiTest {
      *          if the Api call fails
      */
     @Test
-    public void driversUpdateDriverProfileTest() throws Exception {
+    public void updateDriverProfileTest() throws Exception {
         UpdateDriverProfileModel updateDriverProfile = null;
-        Object response = api.driversUpdateDriverProfile(updateDriverProfile);
+        Object response = api.updateDriverProfile(updateDriverProfile);
 
         // TODO: test validations
     }

@@ -15,7 +15,6 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.CatalogImage;
 import java.io.File;
-import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -37,9 +36,9 @@ public class CatalogImagesApiTest {
 
     
     /**
-     * Upload a Catalog Image
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails

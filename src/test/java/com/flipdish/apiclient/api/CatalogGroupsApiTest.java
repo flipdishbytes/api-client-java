@@ -40,9 +40,9 @@ public class CatalogGroupsApiTest {
 
     
     /**
-     * Archive Catalog Group
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -57,9 +57,9 @@ public class CatalogGroupsApiTest {
     }
     
     /**
-     * Create a Catalog Group
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -74,9 +74,9 @@ public class CatalogGroupsApiTest {
     }
     
     /**
-     * Duplicate Catalog Group
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -91,9 +91,9 @@ public class CatalogGroupsApiTest {
     }
     
     /**
-     * Get group by Id
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -108,9 +108,9 @@ public class CatalogGroupsApiTest {
     }
     
     /**
-     * Get paginated groups by app name id filtered by types
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -128,9 +128,9 @@ public class CatalogGroupsApiTest {
     }
     
     /**
-     * Update Catalog Group
+     * 
      *
-     * [BETA - this endpoint is under development, do not use it in your production system]
+     * 
      *
      * @throws Exception
      *          if the Api call fails

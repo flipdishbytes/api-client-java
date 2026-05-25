@@ -53,7 +53,7 @@ public class MenusApiTest {
 
     
     /**
-     * Clone a menu, (without attaching stores)
+     * 
      *
      * 
      *
@@ -70,9 +70,9 @@ public class MenusApiTest {
     }
     
     /**
-     * Create a new menu asynchronously
+     * 
      *
-     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -88,9 +88,9 @@ public class MenusApiTest {
     }
     
     /**
-     * Create a new menu
+     * 
      *
-     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
+     * 
      *
      * @throws Exception
      *          if the Api call fails
@@ -105,7 +105,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Mark a Menu as Deleted
+     * 
      *
      * 
      *
@@ -121,7 +121,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Delete menu image
+     * 
      *
      * 
      *
@@ -137,7 +137,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Delete menu item metadata
+     * 
      *
      * 
      *
@@ -156,6 +156,23 @@ public class MenusApiTest {
     }
     
     /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteTaxRateTest() throws Exception {
+        Integer menuId = null;
+        Integer taxId = null;
+        api.deleteTaxRate(menuId, taxId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get all menu metadata by menu ID and store ID
      *
      * 
@@ -168,6 +185,23 @@ public class MenusApiTest {
         Integer menuId = null;
         Integer storeId = null;
         RestApiArrayResultAllMetadataResult response = api.getAllMenuMetadataByMenuIdAndStoreId(menuId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getMenuBulkShowHideTest() throws Exception {
+        Integer menuId = null;
+        Boolean isAvailable = null;
+        RestApiArrayResultMenuElementListResponse response = api.getMenuBulkShowHide(menuId, isAvailable);
 
         // TODO: test validations
     }
@@ -324,127 +358,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-     *
      * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusDeleteTaxRateTest() throws Exception {
-        Integer menuId = null;
-        Integer taxId = null;
-        api.menusDeleteTaxRate(menuId, taxId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get bulk show/hide menu items and option set items
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusGetMenuBulkShowHideTest() throws Exception {
-        Integer menuId = null;
-        Boolean isAvailable = null;
-        RestApiArrayResultMenuElementListResponse response = api.menusGetMenuBulkShowHide(menuId, isAvailable);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Set if tax shows for a Menu
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusSetDisplayOnMenuTaxTest() throws Exception {
-        Integer menuId = null;
-        Boolean show = null;
-        api.menusSetDisplayOnMenuTax(menuId, show);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Re-arrange Sections within a Menu
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusSetItemDisplayOrdersTest() throws Exception {
-        Integer menuId = null;
-        MenuObjectDisplayOrders displayOrders = null;
-        api.menusSetItemDisplayOrders(menuId, displayOrders);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Bulk show/hide menu items or option set items
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusShowHideBulkItemsTest() throws Exception {
-        Integer menuId = null;
-        List<MenuElementHide> menuElements = null;
-        Boolean isAvailable = null;
-        RestApiArrayResultMenuElementEditResponse response = api.menusShowHideBulkItems(menuId, menuElements, isAvailable);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Set the type of Tax on a Menu
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusUpdateTaxTypeTest() throws Exception {
-        Integer menuId = null;
-        String type = null;
-        api.menusUpdateTaxType(menuId, type);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Add/Update a Tax Rate
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void menusUpsertTaxRateTest() throws Exception {
-        Integer menuId = null;
-        MenuTaxRate taxRate = null;
-        MenuTaxRate response = api.menusUpsertTaxRate(menuId, taxRate);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Restore a Menu to a checkpoint
      *
      * 
      *
@@ -461,7 +375,41 @@ public class MenusApiTest {
     }
     
     /**
-     * Update menu item metadata
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setDisplayOnMenuTaxTest() throws Exception {
+        Integer menuId = null;
+        Boolean show = null;
+        api.setDisplayOnMenuTax(menuId, show);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setItemDisplayOrdersTest() throws Exception {
+        Integer menuId = null;
+        MenuObjectDisplayOrders displayOrders = null;
+        api.setItemDisplayOrders(menuId, displayOrders);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
      *
      * 
      *
@@ -480,7 +428,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Update menu item option set item metadata
+     * 
      *
      * 
      *
@@ -499,7 +447,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Lock/Unlock a Menu for Editing
+     * 
      *
      * 
      *
@@ -516,7 +464,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Set Menus Name
+     * 
      *
      * 
      *
@@ -533,7 +481,25 @@ public class MenusApiTest {
     }
     
     /**
-     * Update menu
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void showHideBulkItemsTest() throws Exception {
+        Integer menuId = null;
+        List<MenuElementHide> menuElements = null;
+        Boolean isAvailable = null;
+        RestApiArrayResultMenuElementEditResponse response = api.showHideBulkItems(menuId, menuElements, isAvailable);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
      *
      * 
      *
@@ -550,7 +516,24 @@ public class MenusApiTest {
     }
     
     /**
-     * Upload menu image
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void updateTaxTypeTest() throws Exception {
+        Integer menuId = null;
+        String type = null;
+        api.updateTaxType(menuId, type);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
      *
      * 
      *
@@ -567,7 +550,7 @@ public class MenusApiTest {
     }
     
     /**
-     * Create a new menu from xlsx file.
+     * 
      *
      * 
      *
@@ -579,6 +562,23 @@ public class MenusApiTest {
         String appId = null;
         File menu = null;
         Integer response = api.uploadNewMenuForApp(appId, menu);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void upsertTaxRateTest() throws Exception {
+        Integer menuId = null;
+        MenuTaxRate taxRate = null;
+        MenuTaxRate response = api.upsertTaxRate(menuId, taxRate);
 
         // TODO: test validations
     }

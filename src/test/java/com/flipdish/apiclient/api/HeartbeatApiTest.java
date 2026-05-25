@@ -45,7 +45,7 @@ public class HeartbeatApiTest {
      */
     @Test
     public void headHostnameTest() throws Exception {
-        Object response = api.headHostname();
+        RestApiStringResult response = api.headHostname();
 
         // TODO: test validations
     }
@@ -75,7 +75,7 @@ public class HeartbeatApiTest {
      */
     @Test
     public void hostnameTest() throws Exception {
-        Object response = api.hostname();
+        RestApiStringResult response = api.hostname();
 
         // TODO: test validations
     }

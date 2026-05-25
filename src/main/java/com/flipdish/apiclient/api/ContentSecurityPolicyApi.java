@@ -63,14 +63,14 @@ public class ContentSecurityPolicyApi {
     }
 
     /**
-     * Build call for contentSecurityPolicyReport
+     * Build call for report
      * @param request  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call contentSecurityPolicyReportCall(CspReportRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call reportCall(CspReportRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = request;
 
         // create path and map variables
@@ -115,15 +115,15 @@ public class ContentSecurityPolicyApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call contentSecurityPolicyReportValidateBeforeCall(CspReportRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call reportValidateBeforeCall(CspReportRequest request, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'request' is set
         if (request == null) {
-            throw new ApiException("Missing the required parameter 'request' when calling contentSecurityPolicyReport(Async)");
+            throw new ApiException("Missing the required parameter 'request' when calling report(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = contentSecurityPolicyReportCall(request, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = reportCall(request, progressListener, progressRequestListener);
         return call;
 
     }
@@ -132,25 +132,22 @@ public class ContentSecurityPolicyApi {
      * 
      * 
      * @param request  (required)
-     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object contentSecurityPolicyReport(CspReportRequest request) throws ApiException {
-        ApiResponse<Object> resp = contentSecurityPolicyReportWithHttpInfo(request);
-        return resp.getData();
+    public void report(CspReportRequest request) throws ApiException {
+        reportWithHttpInfo(request);
     }
 
     /**
      * 
      * 
      * @param request  (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> contentSecurityPolicyReportWithHttpInfo(CspReportRequest request) throws ApiException {
-        com.squareup.okhttp.Call call = contentSecurityPolicyReportValidateBeforeCall(request, null, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+    public ApiResponse<Void> reportWithHttpInfo(CspReportRequest request) throws ApiException {
+        com.squareup.okhttp.Call call = reportValidateBeforeCall(request, null, null);
+        return apiClient.execute(call);
     }
 
     /**
@@ -161,7 +158,7 @@ public class ContentSecurityPolicyApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call contentSecurityPolicyReportAsync(CspReportRequest request, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call reportAsync(CspReportRequest request, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -182,9 +179,8 @@ public class ContentSecurityPolicyApi {
             };
         }
 
-        com.squareup.okhttp.Call call = contentSecurityPolicyReportValidateBeforeCall(request, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        com.squareup.okhttp.Call call = reportValidateBeforeCall(request, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
         return call;
     }
 }

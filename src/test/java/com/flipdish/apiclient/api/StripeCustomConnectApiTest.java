@@ -136,11 +136,10 @@ public class StripeCustomConnectApiTest {
      *          if the Api call fails
      */
     @Test
-    public void setBankAccountBusinessTypeTest() throws Exception {
+    public void refreshTest() throws Exception {
+        Integer linkRequestId = null;
         String appId = null;
-        Integer bankAccountId = null;
-        String businessType = null;
-        RestApiResultBankAccountDetail response = api.setBankAccountBusinessType(appId, bankAccountId, businessType);
+        Object response = api.refresh(linkRequestId, appId);
 
         // TODO: test validations
     }
@@ -154,10 +153,11 @@ public class StripeCustomConnectApiTest {
      *          if the Api call fails
      */
     @Test
-    public void stripeCustomConnectRefreshTest() throws Exception {
-        Integer linkRequestId = null;
+    public void setBankAccountBusinessTypeTest() throws Exception {
         String appId = null;
-        Object response = api.stripeCustomConnectRefresh(linkRequestId, appId);
+        Integer bankAccountId = null;
+        String businessType = null;
+        RestApiResultBankAccountDetail response = api.setBankAccountBusinessType(appId, bankAccountId, businessType);
 
         // TODO: test validations
     }

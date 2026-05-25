@@ -66,9 +66,9 @@ public class MenusNutritionInfoV2Api {
 
     /**
      * Build call for addOrUpdateMenuItemNutritionInfoV2
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -152,11 +152,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem nutrition info by menu item&#39;s publicId
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * 
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -167,11 +167,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem nutrition info by menu item&#39;s publicId
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * 
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -183,11 +183,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem nutrition info by menu item&#39;s publicId (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -221,9 +221,9 @@ public class MenusNutritionInfoV2Api {
     }
     /**
      * Build call for addOrUpdateMenuItemOptionSetItemNutritionInfoV2
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item option set item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -307,11 +307,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem option set item&#39;s nutrition info by its publicId
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item option set item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * 
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -322,11 +322,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem option set item&#39;s nutrition info by its publicId
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item option set item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * 
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -338,11 +338,11 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Add or update menuitem option set item&#39;s nutrition info by its publicId (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param publicId Menu item option set item&#39;s publicId (required)
-     * @param addOrUpdateModel Allergen ids (required)
+     * @param menuId  (required)
+     * @param publicId  (required)
+     * @param addOrUpdateModel  (required)
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -445,7 +445,7 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get allergens
+     * 
      * 
      * @param appId  (required)
      * @param languageId  (optional)
@@ -458,7 +458,7 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get allergens
+     * 
      * 
      * @param appId  (required)
      * @param languageId  (optional)
@@ -472,7 +472,7 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get allergens (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
      * @param languageId  (optional)
@@ -509,7 +509,7 @@ public class MenusNutritionInfoV2Api {
     /**
      * Build call for getMenuNutritionInfoV2ByMenuId
      * @param appId  (required)
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param languageId  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -584,10 +584,10 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get menu nutrition by menuId
+     * 
      * 
      * @param appId  (required)
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param languageId  (optional)
      * @return RestApiResultNutritionInfoV2
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -598,10 +598,10 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get menu nutrition by menuId
+     * 
      * 
      * @param appId  (required)
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param languageId  (optional)
      * @return ApiResponse&lt;RestApiResultNutritionInfoV2&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -613,10 +613,10 @@ public class MenusNutritionInfoV2Api {
     }
 
     /**
-     * Get menu nutrition by menuId (asynchronously)
+     *  (asynchronously)
      * 
      * @param appId  (required)
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param languageId  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

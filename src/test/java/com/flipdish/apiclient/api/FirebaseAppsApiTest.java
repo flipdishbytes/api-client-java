@@ -44,9 +44,9 @@ public class FirebaseAppsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void firebaseAppsAddFirebaseAppTest() throws Exception {
+    public void addFirebaseAppTest() throws Exception {
         FirebaseApp firebaseApp = null;
-        Object response = api.firebaseAppsAddFirebaseApp(firebaseApp);
+        Object response = api.addFirebaseApp(firebaseApp);
 
         // TODO: test validations
     }
@@ -60,9 +60,9 @@ public class FirebaseAppsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void firebaseAppsDeleteFirebaseAppTest() throws Exception {
+    public void deleteFirebaseAppTest() throws Exception {
         Integer whiteLabelId = null;
-        Object response = api.firebaseAppsDeleteFirebaseApp(whiteLabelId);
+        Object response = api.deleteFirebaseApp(whiteLabelId);
 
         // TODO: test validations
     }
@@ -76,9 +76,9 @@ public class FirebaseAppsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void firebaseAppsGetFirebaseAppTest() throws Exception {
+    public void getFirebaseAppTest() throws Exception {
         Integer whitelabelId = null;
-        Object response = api.firebaseAppsGetFirebaseApp(whitelabelId);
+        api.getFirebaseApp(whitelabelId);
 
         // TODO: test validations
     }

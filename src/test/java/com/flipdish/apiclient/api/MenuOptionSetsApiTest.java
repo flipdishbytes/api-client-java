@@ -40,7 +40,7 @@ public class MenuOptionSetsApiTest {
 
     
     /**
-     * Create menu item option set
+     * 
      *
      * 
      *
@@ -59,7 +59,7 @@ public class MenuOptionSetsApiTest {
     }
     
     /**
-     * Delete menu item option set
+     * 
      *
      * 
      *
@@ -78,7 +78,7 @@ public class MenuOptionSetsApiTest {
     }
     
     /**
-     * Delete option set image
+     * 
      *
      * 
      *
@@ -134,7 +134,7 @@ public class MenuOptionSetsApiTest {
     }
     
     /**
-     * Update menu item option set
+     * 
      *
      * 
      *
@@ -154,7 +154,7 @@ public class MenuOptionSetsApiTest {
     }
     
     /**
-     * Upload menu item option set image
+     * 
      *
      * 
      *

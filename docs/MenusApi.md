@@ -4,13 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | Clone a menu, (without attaching stores)
-[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
-[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | Mark a Menu as Deleted
-[**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
-[**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
+[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | 
+[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | 
+[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | 
+[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | 
+[**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | 
+[**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | 
+[**deleteTaxRate**](MenusApi.md#deleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | 
 [**getAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getAllMenuMetadataByMenuIdAndStoreId) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
+[**getMenuBulkShowHide**](MenusApi.md#getMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
 [**getMenuById**](MenusApi.md#getMenuById) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 [**getMenuItemMetadata**](MenusApi.md#getMenuItemMetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**getMenuItemMetadataByKey**](MenusApi.md#getMenuItemMetadataByKey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
@@ -20,28 +22,26 @@ Method | HTTP request | Description
 [**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | Get menus tax details
 [**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | Get menus by appId
 [**getMenusCheckpoints**](MenusApi.md#getMenusCheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | Get a Menus Checkpoints
-[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-[**menusGetMenuBulkShowHide**](MenusApi.md#menusGetMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
-[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | Set if tax shows for a Menu
-[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
-[**menusShowHideBulkItems**](MenusApi.md#menusShowHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
-[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | Set the type of Tax on a Menu
-[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | Add/Update a Tax Rate
-[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | Restore a Menu to a checkpoint
-[**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
-[**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | Lock/Unlock a Menu for Editing
-[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | Set Menus Name
-[**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
-[**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
-[**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
+[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | 
+[**setDisplayOnMenuTax**](MenusApi.md#setDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | 
+[**setItemDisplayOrders**](MenusApi.md#setItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | 
+[**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | 
+[**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | 
+[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | 
+[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | 
+[**showHideBulkItems**](MenusApi.md#showHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
+[**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | 
+[**updateTaxType**](MenusApi.md#updateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | 
+[**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | 
+[**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | 
+[**upsertTaxRate**](MenusApi.md#upsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | 
 
 
 <a name="createDraftMenuFromExistingMenu"></a>
 # **createDraftMenuFromExistingMenu**
 > RestApiResultMenu createDraftMenuFromExistingMenu(menuId, newName)
 
-Clone a menu, (without attaching stores)
+
 
 ### Example
 ```java
@@ -59,8 +59,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-String newName = "newName_example"; // String | Name of the new Menu
+Integer menuId = 56; // Integer | 
+String newName = "newName_example"; // String | 
 try {
     RestApiResultMenu result = apiInstance.createDraftMenuFromExistingMenu(menuId, newName);
     System.out.println(result);
@@ -74,8 +74,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **newName** | **String**| Name of the new Menu |
+ **menuId** | **Integer**|  |
+ **newName** | **String**|  |
 
 ### Return type
 
@@ -94,9 +94,7 @@ Name | Type | Description  | Notes
 # **createNewMenuAsync**
 > Object createNewMenuAsync(appId, menu, orgId)
 
-Create a new menu asynchronously
 
-You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```java
@@ -114,9 +112,9 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-String appId = "appId_example"; // String | App id
-CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu
-String orgId = "orgId_example"; // String | Org id
+String appId = "appId_example"; // String | 
+CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | 
+String orgId = "orgId_example"; // String | 
 try {
     Object result = apiInstance.createNewMenuAsync(appId, menu, orgId);
     System.out.println(result);
@@ -130,9 +128,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App id |
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu |
- **orgId** | **String**| Org id | [optional]
+ **appId** | **String**|  |
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)|  |
+ **orgId** | **String**|  | [optional]
 
 ### Return type
 
@@ -151,9 +149,7 @@ Name | Type | Description  | Notes
 # **createNewMenuForApp**
 > Integer createNewMenuForApp(appId, menu)
 
-Create a new menu
 
-[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```java
@@ -171,8 +167,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-String appId = "appId_example"; // String | App identifier
-CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | Menu. If empty the system will create a menu with default items
+String appId = "appId_example"; // String | 
+CreateFullMenu menu = new CreateFullMenu(); // CreateFullMenu | 
 try {
     Integer result = apiInstance.createNewMenuForApp(appId, menu);
     System.out.println(result);
@@ -186,8 +182,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App identifier |
- **menu** | [**CreateFullMenu**](CreateFullMenu.md)| Menu. If empty the system will create a menu with default items |
+ **appId** | **String**|  |
+ **menu** | [**CreateFullMenu**](CreateFullMenu.md)|  |
 
 ### Return type
 
@@ -206,7 +202,7 @@ Name | Type | Description  | Notes
 # **deleteMenu**
 > deleteMenu(menuId)
 
-Mark a Menu as Deleted
+
 
 ### Example
 ```java
@@ -224,7 +220,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu Identifier
+Integer menuId = 56; // Integer | 
 try {
     apiInstance.deleteMenu(menuId);
 } catch (ApiException e) {
@@ -237,7 +233,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu Identifier |
+ **menuId** | **Integer**|  |
 
 ### Return type
 
@@ -256,7 +252,7 @@ null (empty response body)
 # **deleteMenuImage**
 > deleteMenuImage(menuId)
 
-Delete menu image
+
 
 ### Example
 ```java
@@ -274,7 +270,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
+Integer menuId = 56; // Integer | 
 try {
     apiInstance.deleteMenuImage(menuId);
 } catch (ApiException e) {
@@ -287,7 +283,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
+ **menuId** | **Integer**|  |
 
 ### Return type
 
@@ -306,7 +302,7 @@ null (empty response body)
 # **deleteMenuItemMetadata**
 > deleteMenuItemMetadata(menuId, storeId, menuItemId, key)
 
-Delete menu item metadata
+
 
 ### Example
 ```java
@@ -324,10 +320,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer storeId = 56; // Integer | Store identifier
-Integer menuItemId = 56; // Integer | Menu item identifier
-String key = "key_example"; // String | Metadata key
+Integer menuId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
+Integer menuItemId = 56; // Integer | 
+String key = "key_example"; // String | 
 try {
     apiInstance.deleteMenuItemMetadata(menuId, storeId, menuItemId, key);
 } catch (ApiException e) {
@@ -340,10 +336,62 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **storeId** | **Integer**| Store identifier |
- **menuItemId** | **Integer**| Menu item identifier |
- **key** | **String**| Metadata key |
+ **menuId** | **Integer**|  |
+ **storeId** | **Integer**|  |
+ **menuItemId** | **Integer**|  |
+ **key** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="deleteTaxRate"></a>
+# **deleteTaxRate**
+> deleteTaxRate(menuId, taxId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+Integer taxId = 56; // Integer | 
+try {
+    apiInstance.deleteTaxRate(menuId, taxId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#deleteTaxRate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **taxId** | **Integer**|  |
 
 ### Return type
 
@@ -401,6 +449,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultAllMetadataResult**](RestApiArrayResultAllMetadataResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getMenuBulkShowHide"></a>
+# **getMenuBulkShowHide**
+> RestApiArrayResultMenuElementListResponse getMenuBulkShowHide(menuId, isAvailable)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+Boolean isAvailable = true; // Boolean | 
+try {
+    RestApiArrayResultMenuElementListResponse result = apiInstance.getMenuBulkShowHide(menuId, isAvailable);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#getMenuBulkShowHide");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **isAvailable** | **Boolean**|  |
+
+### Return type
+
+[**RestApiArrayResultMenuElementListResponse**](RestApiArrayResultMenuElementListResponse.md)
 
 ### Authorization
 
@@ -884,380 +985,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="menusDeleteTaxRate"></a>
-# **menusDeleteTaxRate**
-> menusDeleteTaxRate(menuId, taxId)
-
-Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer taxId = 56; // Integer | Id of Menu Tax to be removed
-try {
-    apiInstance.menusDeleteTaxRate(menuId, taxId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusDeleteTaxRate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **taxId** | **Integer**| Id of Menu Tax to be removed |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusGetMenuBulkShowHide"></a>
-# **menusGetMenuBulkShowHide**
-> RestApiArrayResultMenuElementListResponse menusGetMenuBulkShowHide(menuId, isAvailable)
-
-Get bulk show/hide menu items and option set items
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu id
-Boolean isAvailable = true; // Boolean | Is available flag
-try {
-    RestApiArrayResultMenuElementListResponse result = apiInstance.menusGetMenuBulkShowHide(menuId, isAvailable);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusGetMenuBulkShowHide");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu id |
- **isAvailable** | **Boolean**| Is available flag |
-
-### Return type
-
-[**RestApiArrayResultMenuElementListResponse**](RestApiArrayResultMenuElementListResponse.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusSetDisplayOnMenuTax"></a>
-# **menusSetDisplayOnMenuTax**
-> menusSetDisplayOnMenuTax(menuId, show)
-
-Set if tax shows for a Menu
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Boolean show = true; // Boolean | Boolean show or dont show tax (Exclusive tax type can only ever be TRUE)
-try {
-    apiInstance.menusSetDisplayOnMenuTax(menuId, show);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusSetDisplayOnMenuTax");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **show** | **Boolean**| Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusSetItemDisplayOrders"></a>
-# **menusSetItemDisplayOrders**
-> menusSetItemDisplayOrders(menuId, displayOrders)
-
-Re-arrange Sections within a Menu
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-MenuObjectDisplayOrders displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | Section Ids and their new display order
-try {
-    apiInstance.menusSetItemDisplayOrders(menuId, displayOrders);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusSetItemDisplayOrders");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)| Section Ids and their new display order |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusShowHideBulkItems"></a>
-# **menusShowHideBulkItems**
-> RestApiArrayResultMenuElementEditResponse menusShowHideBulkItems(menuId, menuElements, isAvailable)
-
-Bulk show/hide menu items or option set items
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu id
-List<MenuElementHide> menuElements = Arrays.asList(new MenuElementHide()); // List<MenuElementHide> | Elements to be show/hide
-Boolean isAvailable = true; // Boolean | Is available flag
-try {
-    RestApiArrayResultMenuElementEditResponse result = apiInstance.menusShowHideBulkItems(menuId, menuElements, isAvailable);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusShowHideBulkItems");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu id |
- **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)| Elements to be show/hide |
- **isAvailable** | **Boolean**| Is available flag |
-
-### Return type
-
-[**RestApiArrayResultMenuElementEditResponse**](RestApiArrayResultMenuElementEditResponse.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusUpdateTaxType"></a>
-# **menusUpdateTaxType**
-> menusUpdateTaxType(menuId, type)
-
-Set the type of Tax on a Menu
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-String type = "type_example"; // String | Type of Tax
-try {
-    apiInstance.menusUpdateTaxType(menuId, type);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusUpdateTaxType");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **type** | **String**| Type of Tax | [enum: IncludedInBasePrice, ExcludedFromBasePrice]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="menusUpsertTaxRate"></a>
-# **menusUpsertTaxRate**
-> MenuTaxRate menusUpsertTaxRate(menuId, taxRate)
-
-Add/Update a Tax Rate
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.MenusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-MenuTaxRate taxRate = new MenuTaxRate(); // MenuTaxRate | Tax rate to add/update
-try {
-    MenuTaxRate result = apiInstance.menusUpsertTaxRate(menuId, taxRate);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MenusApi#menusUpsertTaxRate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)| Tax rate to add/update |
-
-### Return type
-
-[**MenuTaxRate**](MenuTaxRate.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
 <a name="restoreAMenuCheckpoint"></a>
 # **restoreAMenuCheckpoint**
 > restoreAMenuCheckpoint(menuId, checkpointId)
 
-Restore a Menu to a checkpoint
+
 
 ### Example
 ```java
@@ -1275,8 +1007,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer checkpointId = 56; // Integer | Checkpoint to restore menu to
+Integer menuId = 56; // Integer | 
+Integer checkpointId = 56; // Integer | 
 try {
     apiInstance.restoreAMenuCheckpoint(menuId, checkpointId);
 } catch (ApiException e) {
@@ -1289,8 +1021,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **checkpointId** | **Integer**| Checkpoint to restore menu to |
+ **menuId** | **Integer**|  |
+ **checkpointId** | **Integer**|  |
 
 ### Return type
 
@@ -1305,11 +1037,11 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setMenuItemMetadata"></a>
-# **setMenuItemMetadata**
-> setMenuItemMetadata(menuId, storeId, menuItemId, metadata)
+<a name="setDisplayOnMenuTax"></a>
+# **setDisplayOnMenuTax**
+> setDisplayOnMenuTax(menuId, show)
 
-Update menu item metadata
+
 
 ### Example
 ```java
@@ -1327,10 +1059,114 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer storeId = 56; // Integer | Store identifier
-Integer menuItemId = 56; // Integer | Menu item identifier
-Metadata metadata = new Metadata(); // Metadata | Metadata object
+Integer menuId = 56; // Integer | 
+Boolean show = true; // Boolean | 
+try {
+    apiInstance.setDisplayOnMenuTax(menuId, show);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#setDisplayOnMenuTax");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **show** | **Boolean**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setItemDisplayOrders"></a>
+# **setItemDisplayOrders**
+> setItemDisplayOrders(menuId, displayOrders)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+MenuObjectDisplayOrders displayOrders = new MenuObjectDisplayOrders(); // MenuObjectDisplayOrders | 
+try {
+    apiInstance.setItemDisplayOrders(menuId, displayOrders);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#setItemDisplayOrders");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **displayOrders** | [**MenuObjectDisplayOrders**](MenuObjectDisplayOrders.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="setMenuItemMetadata"></a>
+# **setMenuItemMetadata**
+> setMenuItemMetadata(menuId, storeId, menuItemId, metadata)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
+Integer menuItemId = 56; // Integer | 
+Metadata metadata = new Metadata(); // Metadata | 
 try {
     apiInstance.setMenuItemMetadata(menuId, storeId, menuItemId, metadata);
 } catch (ApiException e) {
@@ -1343,10 +1179,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **storeId** | **Integer**| Store identifier |
- **menuItemId** | **Integer**| Menu item identifier |
- **metadata** | [**Metadata**](Metadata.md)| Metadata object |
+ **menuId** | **Integer**|  |
+ **storeId** | **Integer**|  |
+ **menuItemId** | **Integer**|  |
+ **metadata** | [**Metadata**](Metadata.md)|  |
 
 ### Return type
 
@@ -1365,7 +1201,7 @@ null (empty response body)
 # **setMenuItemOptionSetItemMetadata**
 > setMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata)
 
-Update menu item option set item metadata
+
 
 ### Example
 ```java
@@ -1383,10 +1219,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Integer storeId = 56; // Integer | Store identifier
-Integer optionSetItemId = 56; // Integer | Menu item option set item identifier
-Metadata metadata = new Metadata(); // Metadata | Metadata object
+Integer menuId = 56; // Integer | 
+Integer storeId = 56; // Integer | 
+Integer optionSetItemId = 56; // Integer | 
+Metadata metadata = new Metadata(); // Metadata | 
 try {
     apiInstance.setMenuItemOptionSetItemMetadata(menuId, storeId, optionSetItemId, metadata);
 } catch (ApiException e) {
@@ -1399,10 +1235,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **storeId** | **Integer**| Store identifier |
- **optionSetItemId** | **Integer**| Menu item option set item identifier |
- **metadata** | [**Metadata**](Metadata.md)| Metadata object |
+ **menuId** | **Integer**|  |
+ **storeId** | **Integer**|  |
+ **optionSetItemId** | **Integer**|  |
+ **metadata** | [**Metadata**](Metadata.md)|  |
 
 ### Return type
 
@@ -1421,7 +1257,7 @@ null (empty response body)
 # **setMenuLock**
 > setMenuLock(menuId, locked)
 
-Lock/Unlock a Menu for Editing
+
 
 ### Example
 ```java
@@ -1439,8 +1275,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-Boolean locked = true; // Boolean | True: Locks menu for editing, False: Unlocks for editing
+Integer menuId = 56; // Integer | 
+Boolean locked = true; // Boolean | 
 try {
     apiInstance.setMenuLock(menuId, locked);
 } catch (ApiException e) {
@@ -1453,8 +1289,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **locked** | **Boolean**| True: Locks menu for editing, False: Unlocks for editing |
+ **menuId** | **Integer**|  |
+ **locked** | **Boolean**|  |
 
 ### Return type
 
@@ -1473,7 +1309,7 @@ null (empty response body)
 # **setMenuName**
 > setMenuName(menuId, name)
 
-Set Menus Name
+
 
 ### Example
 ```java
@@ -1491,8 +1327,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-String name = "name_example"; // String | Name to set for this Menu
+Integer menuId = 56; // Integer | 
+String name = "name_example"; // String | 
 try {
     apiInstance.setMenuName(menuId, name);
 } catch (ApiException e) {
@@ -1505,12 +1341,67 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **name** | **String**| Name to set for this Menu |
+ **menuId** | **Integer**|  |
+ **name** | **String**|  |
 
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="showHideBulkItems"></a>
+# **showHideBulkItems**
+> RestApiArrayResultMenuElementEditResponse showHideBulkItems(menuId, menuElements, isAvailable)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+List<MenuElementHide> menuElements = Arrays.asList(new MenuElementHide()); // List<MenuElementHide> | 
+Boolean isAvailable = true; // Boolean | 
+try {
+    RestApiArrayResultMenuElementEditResponse result = apiInstance.showHideBulkItems(menuId, menuElements, isAvailable);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#showHideBulkItems");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **menuElements** | [**List&lt;MenuElementHide&gt;**](MenuElementHide.md)|  |
+ **isAvailable** | **Boolean**|  |
+
+### Return type
+
+[**RestApiArrayResultMenuElementEditResponse**](RestApiArrayResultMenuElementEditResponse.md)
 
 ### Authorization
 
@@ -1525,7 +1416,7 @@ null (empty response body)
 # **updateMenu**
 > updateMenu(menuId, menu)
 
-Update menu
+
 
 ### Example
 ```java
@@ -1543,8 +1434,8 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
-MenuBase menu = new MenuBase(); // MenuBase | Full menu data
+Integer menuId = 56; // Integer | 
+MenuBase menu = new MenuBase(); // MenuBase | 
 try {
     apiInstance.updateMenu(menuId, menu);
 } catch (ApiException e) {
@@ -1557,8 +1448,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
- **menu** | [**MenuBase**](MenuBase.md)| Full menu data |
+ **menuId** | **Integer**|  |
+ **menu** | [**MenuBase**](MenuBase.md)|  |
 
 ### Return type
 
@@ -1573,11 +1464,11 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="uploadMenuImage"></a>
-# **uploadMenuImage**
-> RestApiStringResult uploadMenuImage(menuId, image)
+<a name="updateTaxType"></a>
+# **updateTaxType**
+> updateTaxType(menuId, type)
 
-Upload menu image
+
 
 ### Example
 ```java
@@ -1595,7 +1486,59 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-Integer menuId = 56; // Integer | Menu identifier
+Integer menuId = 56; // Integer | 
+String type = "type_example"; // String | 
+try {
+    apiInstance.updateTaxType(menuId, type);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#updateTaxType");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **type** | **String**|  | [enum: IncludedInBasePrice, ExcludedFromBasePrice]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="uploadMenuImage"></a>
+# **uploadMenuImage**
+> RestApiStringResult uploadMenuImage(menuId, image)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
 File image = new File("/path/to/file.txt"); // File | Menu image
 try {
     RestApiStringResult result = apiInstance.uploadMenuImage(menuId, image);
@@ -1610,7 +1553,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**| Menu identifier |
+ **menuId** | **Integer**|  |
  **image** | **File**| Menu image |
 
 ### Return type
@@ -1630,7 +1573,7 @@ Name | Type | Description  | Notes
 # **uploadNewMenuForApp**
 > Integer uploadNewMenuForApp(appId, menu)
 
-Create a new menu from xlsx file.
+
 
 ### Example
 ```java
@@ -1648,7 +1591,7 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenusApi apiInstance = new MenusApi();
-String appId = "appId_example"; // String | App identifier
+String appId = "appId_example"; // String | 
 File menu = new File("/path/to/file.txt"); // File | Uploaded xlsx menu
 try {
     Integer result = apiInstance.uploadNewMenuForApp(appId, menu);
@@ -1663,7 +1606,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**| App identifier |
+ **appId** | **String**|  |
  **menu** | **File**| Uploaded xlsx menu |
 
 ### Return type
@@ -1677,5 +1620,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="upsertTaxRate"></a>
+# **upsertTaxRate**
+> MenuTaxRate upsertTaxRate(menuId, taxRate)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.MenusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+MenusApi apiInstance = new MenusApi();
+Integer menuId = 56; // Integer | 
+MenuTaxRate taxRate = new MenuTaxRate(); // MenuTaxRate | 
+try {
+    MenuTaxRate result = apiInstance.upsertTaxRate(menuId, taxRate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MenusApi#upsertTaxRate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menuId** | **Integer**|  |
+ **taxRate** | [**MenuTaxRate**](MenuTaxRate.md)|  |
+
+### Return type
+
+[**MenuTaxRate**](MenuTaxRate.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 

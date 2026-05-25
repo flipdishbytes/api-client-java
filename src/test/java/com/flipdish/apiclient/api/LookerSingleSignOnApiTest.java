@@ -14,7 +14,6 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.DashboardEmbed;
-import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;

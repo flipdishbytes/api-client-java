@@ -68,11 +68,11 @@ public class MenuOptionSetItemsApi {
 
     /**
      * Build call for addMenuItemOptionSetItem
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItem Option set item (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItem  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -161,13 +161,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Create menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItem Option set item (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItem  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -177,13 +177,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Create menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItem Option set item (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItem  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -194,13 +194,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Create menu item option set item (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItem Option set item (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItem  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -233,11 +233,11 @@ public class MenuOptionSetItemsApi {
     }
     /**
      * Build call for deleteOptionSetItemImage
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -327,13 +327,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item image
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteOptionSetItemImage(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, Integer optionSetId, Integer menuItemOptionSetItemId) throws ApiException {
@@ -341,13 +341,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item image
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -357,13 +357,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item image (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -717,11 +717,11 @@ public class MenuOptionSetItemsApi {
     }
     /**
      * Build call for removeMenuItemOptionSetItem
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -811,13 +811,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void removeMenuItemOptionSetItem(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, Integer optionSetId, Integer menuItemOptionSetItemId) throws ApiException {
@@ -825,13 +825,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -841,13 +841,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Delete menu item option set item (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -879,12 +879,12 @@ public class MenuOptionSetItemsApi {
     }
     /**
      * Build call for setOptionSetItemTax
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param menuSectionId  (required)
      * @param menuSectionItemId  (required)
      * @param optionSetId  (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param taxRateId Tax Rate to use (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param taxRateId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -980,14 +980,14 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Set Tax Rate on OptionSetItem
      * 
-     * @param menuId Menu identifier (required)
+     * 
+     * @param menuId  (required)
      * @param menuSectionId  (required)
      * @param menuSectionItemId  (required)
      * @param optionSetId  (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param taxRateId Tax Rate to use (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param taxRateId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void setOptionSetItemTax(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, Integer optionSetId, Integer menuItemOptionSetItemId, Integer taxRateId) throws ApiException {
@@ -995,14 +995,14 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Set Tax Rate on OptionSetItem
      * 
-     * @param menuId Menu identifier (required)
+     * 
+     * @param menuId  (required)
      * @param menuSectionId  (required)
      * @param menuSectionItemId  (required)
      * @param optionSetId  (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param taxRateId Tax Rate to use (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param taxRateId  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1012,14 +1012,14 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Set Tax Rate on OptionSetItem (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
+     * @param menuId  (required)
      * @param menuSectionId  (required)
      * @param menuSectionItemId  (required)
      * @param optionSetId  (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param taxRateId Tax Rate to use (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param taxRateId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1051,13 +1051,13 @@ public class MenuOptionSetItemsApi {
     }
     /**
      * Build call for updateMenuItemOptionSetItem
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param menuItemOptionSetItem  (required)
+     * @param undoAfter  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -1154,15 +1154,15 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Update menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param menuItemOptionSetItem  (required)
+     * @param undoAfter  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateMenuItemOptionSetItem(Integer menuId, Integer menuSectionId, Integer menuSectionItemId, Integer optionSetId, Integer menuItemOptionSetItemId, MenuItemOptionSetItemBase menuItemOptionSetItem, Double undoAfter) throws ApiException {
@@ -1170,15 +1170,15 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Update menu item option set item
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param menuItemOptionSetItem  (required)
+     * @param undoAfter  (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1188,15 +1188,15 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Update menu item option set item (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
-     * @param menuItemOptionSetItem Option set item (delta) (required)
-     * @param undoAfter An optional time period, in hours, after which the hide-section operation will be undone. (optional)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
+     * @param menuItemOptionSetItem  (required)
+     * @param undoAfter  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1228,11 +1228,11 @@ public class MenuOptionSetItemsApi {
     }
     /**
      * Build call for uploadOptionSetItemImage
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param image Option set item image (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1330,13 +1330,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Upload menu item option set item image
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param image Option set item image (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1347,13 +1347,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Upload menu item option set item image
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * 
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param image Option set item image (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1365,13 +1365,13 @@ public class MenuOptionSetItemsApi {
     }
 
     /**
-     * Upload menu item option set item image (asynchronously)
+     *  (asynchronously)
      * 
-     * @param menuId Menu identifier (required)
-     * @param menuSectionId Menu section identifier (required)
-     * @param menuSectionItemId Menu section item identifier (required)
-     * @param optionSetId Option set identifier (required)
-     * @param menuItemOptionSetItemId Option set item identifier (required)
+     * @param menuId  (required)
+     * @param menuSectionId  (required)
+     * @param menuSectionItemId  (required)
+     * @param optionSetId  (required)
+     * @param menuItemOptionSetItemId  (required)
      * @param image Option set item image (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

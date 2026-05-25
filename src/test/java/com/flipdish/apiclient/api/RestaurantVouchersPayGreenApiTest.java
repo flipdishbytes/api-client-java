@@ -71,7 +71,7 @@ public class RestaurantVouchersPayGreenApiTest {
     public void deletePayGreenConfigurationTest() throws Exception {
         String appId = null;
         Integer paygreenConfigurationId = null;
-        Object response = api.deletePayGreenConfiguration(appId, paygreenConfigurationId);
+        api.deletePayGreenConfiguration(appId, paygreenConfigurationId);
 
         // TODO: test validations
     }
