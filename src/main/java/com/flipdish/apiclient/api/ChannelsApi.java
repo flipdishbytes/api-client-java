@@ -447,10 +447,12 @@ public class ChannelsApi {
      * @param appId  (required)
      * @param channelId  (required)
      * @param storeId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void attachStoreToSalesChannel(String appId, Integer channelId, Integer storeId) throws ApiException {
-        attachStoreToSalesChannelWithHttpInfo(appId, channelId, storeId);
+    public Object attachStoreToSalesChannel(String appId, Integer channelId, Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = attachStoreToSalesChannelWithHttpInfo(appId, channelId, storeId);
+        return resp.getData();
     }
 
     /**
@@ -459,12 +461,13 @@ public class ChannelsApi {
      * @param appId  (required)
      * @param channelId  (required)
      * @param storeId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> attachStoreToSalesChannelWithHttpInfo(String appId, Integer channelId, Integer storeId) throws ApiException {
+    public ApiResponse<Object> attachStoreToSalesChannelWithHttpInfo(String appId, Integer channelId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = attachStoreToSalesChannelValidateBeforeCall(appId, channelId, storeId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -477,7 +480,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call attachStoreToSalesChannelAsync(String appId, Integer channelId, Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call attachStoreToSalesChannelAsync(String appId, Integer channelId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -499,7 +502,8 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = attachStoreToSalesChannelValidateBeforeCall(appId, channelId, storeId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
@@ -581,10 +585,12 @@ public class ChannelsApi {
      * 
      * @param appId  (required)
      * @param channelId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void detachAllStoresFromSalesChannel(String appId, Integer channelId) throws ApiException {
-        detachAllStoresFromSalesChannelWithHttpInfo(appId, channelId);
+    public Object detachAllStoresFromSalesChannel(String appId, Integer channelId) throws ApiException {
+        ApiResponse<Object> resp = detachAllStoresFromSalesChannelWithHttpInfo(appId, channelId);
+        return resp.getData();
     }
 
     /**
@@ -592,12 +598,13 @@ public class ChannelsApi {
      * 
      * @param appId  (required)
      * @param channelId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> detachAllStoresFromSalesChannelWithHttpInfo(String appId, Integer channelId) throws ApiException {
+    public ApiResponse<Object> detachAllStoresFromSalesChannelWithHttpInfo(String appId, Integer channelId) throws ApiException {
         com.squareup.okhttp.Call call = detachAllStoresFromSalesChannelValidateBeforeCall(appId, channelId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -609,7 +616,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call detachAllStoresFromSalesChannelAsync(String appId, Integer channelId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call detachAllStoresFromSalesChannelAsync(String appId, Integer channelId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -631,7 +638,8 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = detachAllStoresFromSalesChannelValidateBeforeCall(appId, channelId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
@@ -721,10 +729,12 @@ public class ChannelsApi {
      * @param appId  (required)
      * @param channelId  (required)
      * @param storeId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void detachStoreFromSalesChannel(String appId, Integer channelId, Integer storeId) throws ApiException {
-        detachStoreFromSalesChannelWithHttpInfo(appId, channelId, storeId);
+    public Object detachStoreFromSalesChannel(String appId, Integer channelId, Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = detachStoreFromSalesChannelWithHttpInfo(appId, channelId, storeId);
+        return resp.getData();
     }
 
     /**
@@ -733,12 +743,13 @@ public class ChannelsApi {
      * @param appId  (required)
      * @param channelId  (required)
      * @param storeId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> detachStoreFromSalesChannelWithHttpInfo(String appId, Integer channelId, Integer storeId) throws ApiException {
+    public ApiResponse<Object> detachStoreFromSalesChannelWithHttpInfo(String appId, Integer channelId, Integer storeId) throws ApiException {
         com.squareup.okhttp.Call call = detachStoreFromSalesChannelValidateBeforeCall(appId, channelId, storeId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -751,7 +762,7 @@ public class ChannelsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call detachStoreFromSalesChannelAsync(String appId, Integer channelId, Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call detachStoreFromSalesChannelAsync(String appId, Integer channelId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -773,7 +784,8 @@ public class ChannelsApi {
         }
 
         com.squareup.okhttp.Call call = detachStoreFromSalesChannelValidateBeforeCall(appId, channelId, storeId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

@@ -15,11 +15,8 @@ package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.OnboardingConfigUpdate;
 import com.flipdish.apiclient.model.OnboardingItemUpdate;
-import com.flipdish.apiclient.model.RestApiArrayResultOnboardingConfig;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultOnboardingConfig;
-import com.flipdish.apiclient.model.RestApiResultOnboardingProcess;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -48,9 +45,9 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getOnboardingConfigTest() throws Exception {
+    public void onboardingGetOnboardingConfigTest() throws Exception {
         String appId = null;
-        RestApiResultOnboardingConfig response = api.getOnboardingConfig(appId);
+        Object response = api.onboardingGetOnboardingConfig(appId);
 
         // TODO: test validations
     }
@@ -64,9 +61,9 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getOnboardingConfigsTest() throws Exception {
+    public void onboardingGetOnboardingConfigsTest() throws Exception {
         String appId = null;
-        RestApiArrayResultOnboardingConfig response = api.getOnboardingConfigs(appId);
+        Object response = api.onboardingGetOnboardingConfigs(appId);
 
         // TODO: test validations
     }
@@ -80,29 +77,11 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getOnboardingItemsTest() throws Exception {
-        String appId = null;
-        Integer storeId = null;
-        Integer milestoneId = null;
-        RestApiResultOnboardingProcess response = api.getOnboardingItems(appId, storeId, milestoneId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getOnboardingItemsV2Test() throws Exception {
+    public void onboardingGetOnboardingItemsTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         Integer milestoneId = null;
-        RestApiResultOnboardingProcess response = api.getOnboardingItemsV2(appId, storeId, milestoneId);
+        Object response = api.onboardingGetOnboardingItems(appId, storeId, milestoneId);
 
         // TODO: test validations
     }
@@ -116,10 +95,28 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateOnboardingConfigTest() throws Exception {
+    public void onboardingGetOnboardingItemsV2Test() throws Exception {
+        String appId = null;
+        Integer storeId = null;
+        Integer milestoneId = null;
+        Object response = api.onboardingGetOnboardingItemsV2(appId, storeId, milestoneId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void onboardingUpdateOnboardingConfigTest() throws Exception {
         String appId = null;
         OnboardingConfigUpdate configUpdate = null;
-        api.updateOnboardingConfig(appId, configUpdate);
+        Object response = api.onboardingUpdateOnboardingConfig(appId, configUpdate);
 
         // TODO: test validations
     }
@@ -133,11 +130,11 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateOnboardingConfigByIdTest() throws Exception {
+    public void onboardingUpdateOnboardingConfigByIdTest() throws Exception {
         String appId = null;
         Integer configId = null;
         OnboardingConfigUpdate configUpdate = null;
-        api.updateOnboardingConfigById(appId, configId, configUpdate);
+        Object response = api.onboardingUpdateOnboardingConfigById(appId, configId, configUpdate);
 
         // TODO: test validations
     }
@@ -151,12 +148,12 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateOnboardingItemTest() throws Exception {
+    public void onboardingUpdateOnboardingItemTest() throws Exception {
         String appId = null;
         Integer storeId = null;
         Integer onboardingItemId = null;
         OnboardingItemUpdate itemUpdate = null;
-        api.updateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
+        Object response = api.onboardingUpdateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
 
         // TODO: test validations
     }
@@ -170,12 +167,12 @@ public class OnboardingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateOnboardingItemV2Test() throws Exception {
+    public void onboardingUpdateOnboardingItemV2Test() throws Exception {
         String appId = null;
         Integer onboardingItemId = null;
         OnboardingItemUpdate itemUpdate = null;
         Integer storeId = null;
-        api.updateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
+        Object response = api.onboardingUpdateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
 
         // TODO: test validations
     }

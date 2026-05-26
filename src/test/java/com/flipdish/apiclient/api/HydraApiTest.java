@@ -126,58 +126,6 @@ public class HydraApiTest {
      *          if the Api call fails
      */
     @Test
-    public void createEmvTest() throws Exception {
-        String appId = null;
-        EmvTerminal emv = null;
-        Integer response = api.createEmv(appId, emv);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void deleteEmvTest() throws Exception {
-        String appId = null;
-        Integer id = null;
-        api.deleteEmv(appId, id);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void detachStoreFromKioskTest() throws Exception {
-        String appId = null;
-        Integer storeId = null;
-        String deviceId = null;
-        RestApiResultHydraStatus response = api.detachStoreFromKiosk(appId, storeId, deviceId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void detachStoreFromTerminalTest() throws Exception {
         String appId = null;
         String deviceId = null;
@@ -284,22 +232,6 @@ public class HydraApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getEmvsForAppIdTest() throws Exception {
-        String appId = null;
-        RestApiArrayResultEmvTerminalWithAssignments response = api.getEmvsForAppId(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void getKioskCashPaymentSettingsTest() throws Exception {
         String appId = null;
         String deviceId = null;
@@ -351,6 +283,74 @@ public class HydraApiTest {
     @Test
     public void getSettingsTest() throws Exception {
         RestApiResultHydraConfig response = api.getSettings();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void hydraCreateEmvTest() throws Exception {
+        String appId = null;
+        EmvTerminal emv = null;
+        Object response = api.hydraCreateEmv(appId, emv);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void hydraDeleteEmvTest() throws Exception {
+        String appId = null;
+        Integer id = null;
+        Object response = api.hydraDeleteEmv(appId, id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void hydraDetachStoreFromKioskTest() throws Exception {
+        String appId = null;
+        Integer storeId = null;
+        String deviceId = null;
+        RestApiResultHydraStatus response = api.hydraDetachStoreFromKiosk(appId, storeId, deviceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void hydraGetEmvsForAppIdTest() throws Exception {
+        String appId = null;
+        RestApiArrayResultEmvTerminalWithAssignments response = api.hydraGetEmvsForAppId(appId);
 
         // TODO: test validations
     }

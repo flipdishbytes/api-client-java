@@ -29,11 +29,8 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.OnboardingConfigUpdate;
 import com.flipdish.apiclient.model.OnboardingItemUpdate;
-import com.flipdish.apiclient.model.RestApiArrayResultOnboardingConfig;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
-import com.flipdish.apiclient.model.RestApiResultOnboardingConfig;
-import com.flipdish.apiclient.model.RestApiResultOnboardingProcess;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 
 import java.lang.reflect.Type;
@@ -67,14 +64,14 @@ public class OnboardingApi {
     }
 
     /**
-     * Build call for getOnboardingConfig
+     * Build call for onboardingGetOnboardingConfig
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingConfigCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingConfigCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -120,15 +117,15 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOnboardingConfigValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingGetOnboardingConfigValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getOnboardingConfig(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingGetOnboardingConfig(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getOnboardingConfigCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigCall(appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -137,11 +134,11 @@ public class OnboardingApi {
      * 
      * 
      * @param appId  (required)
-     * @return RestApiResultOnboardingConfig
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultOnboardingConfig getOnboardingConfig(String appId) throws ApiException {
-        ApiResponse<RestApiResultOnboardingConfig> resp = getOnboardingConfigWithHttpInfo(appId);
+    public Object onboardingGetOnboardingConfig(String appId) throws ApiException {
+        ApiResponse<Object> resp = onboardingGetOnboardingConfigWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -149,12 +146,12 @@ public class OnboardingApi {
      * 
      * 
      * @param appId  (required)
-     * @return ApiResponse&lt;RestApiResultOnboardingConfig&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultOnboardingConfig> getOnboardingConfigWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getOnboardingConfigValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingConfig>(){}.getType();
+    public ApiResponse<Object> onboardingGetOnboardingConfigWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -166,7 +163,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingConfigAsync(String appId, final ApiCallback<RestApiResultOnboardingConfig> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingConfigAsync(String appId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,20 +184,20 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOnboardingConfigValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingConfig>(){}.getType();
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getOnboardingConfigs
+     * Build call for onboardingGetOnboardingConfigs
      * @param appId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingConfigsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingConfigsCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -246,15 +243,15 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOnboardingConfigsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingGetOnboardingConfigsValidateBeforeCall(String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getOnboardingConfigs(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingGetOnboardingConfigs(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getOnboardingConfigsCall(appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigsCall(appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -263,11 +260,11 @@ public class OnboardingApi {
      * 
      * 
      * @param appId  (required)
-     * @return RestApiArrayResultOnboardingConfig
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiArrayResultOnboardingConfig getOnboardingConfigs(String appId) throws ApiException {
-        ApiResponse<RestApiArrayResultOnboardingConfig> resp = getOnboardingConfigsWithHttpInfo(appId);
+    public Object onboardingGetOnboardingConfigs(String appId) throws ApiException {
+        ApiResponse<Object> resp = onboardingGetOnboardingConfigsWithHttpInfo(appId);
         return resp.getData();
     }
 
@@ -275,12 +272,12 @@ public class OnboardingApi {
      * 
      * 
      * @param appId  (required)
-     * @return ApiResponse&lt;RestApiArrayResultOnboardingConfig&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiArrayResultOnboardingConfig> getOnboardingConfigsWithHttpInfo(String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getOnboardingConfigsValidateBeforeCall(appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultOnboardingConfig>(){}.getType();
+    public ApiResponse<Object> onboardingGetOnboardingConfigsWithHttpInfo(String appId) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigsValidateBeforeCall(appId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -292,7 +289,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingConfigsAsync(String appId, final ApiCallback<RestApiArrayResultOnboardingConfig> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingConfigsAsync(String appId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -313,13 +310,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOnboardingConfigsValidateBeforeCall(appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultOnboardingConfig>(){}.getType();
+        com.squareup.okhttp.Call call = onboardingGetOnboardingConfigsValidateBeforeCall(appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getOnboardingItems
+     * Build call for onboardingGetOnboardingItems
      * @param appId  (required)
      * @param storeId  (required)
      * @param milestoneId  (optional)
@@ -328,7 +325,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingItemsCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingItemsCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -377,20 +374,20 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOnboardingItemsValidateBeforeCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingGetOnboardingItemsValidateBeforeCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getOnboardingItems(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingGetOnboardingItems(Async)");
         }
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling getOnboardingItems(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling onboardingGetOnboardingItems(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getOnboardingItemsCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -401,11 +398,11 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param storeId  (required)
      * @param milestoneId  (optional)
-     * @return RestApiResultOnboardingProcess
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultOnboardingProcess getOnboardingItems(String appId, Integer storeId, Integer milestoneId) throws ApiException {
-        ApiResponse<RestApiResultOnboardingProcess> resp = getOnboardingItemsWithHttpInfo(appId, storeId, milestoneId);
+    public Object onboardingGetOnboardingItems(String appId, Integer storeId, Integer milestoneId) throws ApiException {
+        ApiResponse<Object> resp = onboardingGetOnboardingItemsWithHttpInfo(appId, storeId, milestoneId);
         return resp.getData();
     }
 
@@ -415,12 +412,12 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param storeId  (required)
      * @param milestoneId  (optional)
-     * @return ApiResponse&lt;RestApiResultOnboardingProcess&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultOnboardingProcess> getOnboardingItemsWithHttpInfo(String appId, Integer storeId, Integer milestoneId) throws ApiException {
-        com.squareup.okhttp.Call call = getOnboardingItemsValidateBeforeCall(appId, storeId, milestoneId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingProcess>(){}.getType();
+    public ApiResponse<Object> onboardingGetOnboardingItemsWithHttpInfo(String appId, Integer storeId, Integer milestoneId) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsValidateBeforeCall(appId, storeId, milestoneId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -434,7 +431,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingItemsAsync(String appId, Integer storeId, Integer milestoneId, final ApiCallback<RestApiResultOnboardingProcess> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingItemsAsync(String appId, Integer storeId, Integer milestoneId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -455,13 +452,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOnboardingItemsValidateBeforeCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingProcess>(){}.getType();
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsValidateBeforeCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getOnboardingItemsV2
+     * Build call for onboardingGetOnboardingItemsV2
      * @param appId  (required)
      * @param storeId  (optional)
      * @param milestoneId  (optional)
@@ -470,7 +467,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingItemsV2Call(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingItemsV2Call(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -520,15 +517,15 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getOnboardingItemsV2ValidateBeforeCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingGetOnboardingItemsV2ValidateBeforeCall(String appId, Integer storeId, Integer milestoneId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling getOnboardingItemsV2(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingGetOnboardingItemsV2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getOnboardingItemsV2Call(appId, storeId, milestoneId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsV2Call(appId, storeId, milestoneId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -539,11 +536,11 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param storeId  (optional)
      * @param milestoneId  (optional)
-     * @return RestApiResultOnboardingProcess
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultOnboardingProcess getOnboardingItemsV2(String appId, Integer storeId, Integer milestoneId) throws ApiException {
-        ApiResponse<RestApiResultOnboardingProcess> resp = getOnboardingItemsV2WithHttpInfo(appId, storeId, milestoneId);
+    public Object onboardingGetOnboardingItemsV2(String appId, Integer storeId, Integer milestoneId) throws ApiException {
+        ApiResponse<Object> resp = onboardingGetOnboardingItemsV2WithHttpInfo(appId, storeId, milestoneId);
         return resp.getData();
     }
 
@@ -553,12 +550,12 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param storeId  (optional)
      * @param milestoneId  (optional)
-     * @return ApiResponse&lt;RestApiResultOnboardingProcess&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultOnboardingProcess> getOnboardingItemsV2WithHttpInfo(String appId, Integer storeId, Integer milestoneId) throws ApiException {
-        com.squareup.okhttp.Call call = getOnboardingItemsV2ValidateBeforeCall(appId, storeId, milestoneId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingProcess>(){}.getType();
+    public ApiResponse<Object> onboardingGetOnboardingItemsV2WithHttpInfo(String appId, Integer storeId, Integer milestoneId) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsV2ValidateBeforeCall(appId, storeId, milestoneId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -572,7 +569,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getOnboardingItemsV2Async(String appId, Integer storeId, Integer milestoneId, final ApiCallback<RestApiResultOnboardingProcess> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingGetOnboardingItemsV2Async(String appId, Integer storeId, Integer milestoneId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -593,13 +590,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getOnboardingItemsV2ValidateBeforeCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultOnboardingProcess>(){}.getType();
+        com.squareup.okhttp.Call call = onboardingGetOnboardingItemsV2ValidateBeforeCall(appId, storeId, milestoneId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for updateOnboardingConfig
+     * Build call for onboardingUpdateOnboardingConfig
      * @param appId  (required)
      * @param configUpdate  (required)
      * @param progressListener Progress listener
@@ -607,7 +604,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingConfigCall(String appId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingConfigCall(String appId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = configUpdate;
 
         // create path and map variables
@@ -653,20 +650,20 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateOnboardingConfigValidateBeforeCall(String appId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingUpdateOnboardingConfigValidateBeforeCall(String appId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling updateOnboardingConfig(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingUpdateOnboardingConfig(Async)");
         }
         
         // verify the required parameter 'configUpdate' is set
         if (configUpdate == null) {
-            throw new ApiException("Missing the required parameter 'configUpdate' when calling updateOnboardingConfig(Async)");
+            throw new ApiException("Missing the required parameter 'configUpdate' when calling onboardingUpdateOnboardingConfig(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateOnboardingConfigCall(appId, configUpdate, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigCall(appId, configUpdate, progressListener, progressRequestListener);
         return call;
 
     }
@@ -676,10 +673,12 @@ public class OnboardingApi {
      * 
      * @param appId  (required)
      * @param configUpdate  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateOnboardingConfig(String appId, OnboardingConfigUpdate configUpdate) throws ApiException {
-        updateOnboardingConfigWithHttpInfo(appId, configUpdate);
+    public Object onboardingUpdateOnboardingConfig(String appId, OnboardingConfigUpdate configUpdate) throws ApiException {
+        ApiResponse<Object> resp = onboardingUpdateOnboardingConfigWithHttpInfo(appId, configUpdate);
+        return resp.getData();
     }
 
     /**
@@ -687,12 +686,13 @@ public class OnboardingApi {
      * 
      * @param appId  (required)
      * @param configUpdate  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateOnboardingConfigWithHttpInfo(String appId, OnboardingConfigUpdate configUpdate) throws ApiException {
-        com.squareup.okhttp.Call call = updateOnboardingConfigValidateBeforeCall(appId, configUpdate, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> onboardingUpdateOnboardingConfigWithHttpInfo(String appId, OnboardingConfigUpdate configUpdate) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigValidateBeforeCall(appId, configUpdate, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -704,7 +704,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingConfigAsync(String appId, OnboardingConfigUpdate configUpdate, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingConfigAsync(String appId, OnboardingConfigUpdate configUpdate, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -725,12 +725,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateOnboardingConfigValidateBeforeCall(appId, configUpdate, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigValidateBeforeCall(appId, configUpdate, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for updateOnboardingConfigById
+     * Build call for onboardingUpdateOnboardingConfigById
      * @param appId  (required)
      * @param configId  (required)
      * @param configUpdate  (required)
@@ -739,7 +740,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingConfigByIdCall(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingConfigByIdCall(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = configUpdate;
 
         // create path and map variables
@@ -786,25 +787,25 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateOnboardingConfigByIdValidateBeforeCall(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingUpdateOnboardingConfigByIdValidateBeforeCall(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling updateOnboardingConfigById(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingUpdateOnboardingConfigById(Async)");
         }
         
         // verify the required parameter 'configId' is set
         if (configId == null) {
-            throw new ApiException("Missing the required parameter 'configId' when calling updateOnboardingConfigById(Async)");
+            throw new ApiException("Missing the required parameter 'configId' when calling onboardingUpdateOnboardingConfigById(Async)");
         }
         
         // verify the required parameter 'configUpdate' is set
         if (configUpdate == null) {
-            throw new ApiException("Missing the required parameter 'configUpdate' when calling updateOnboardingConfigById(Async)");
+            throw new ApiException("Missing the required parameter 'configUpdate' when calling onboardingUpdateOnboardingConfigById(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateOnboardingConfigByIdCall(appId, configId, configUpdate, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigByIdCall(appId, configId, configUpdate, progressListener, progressRequestListener);
         return call;
 
     }
@@ -815,10 +816,12 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param configId  (required)
      * @param configUpdate  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateOnboardingConfigById(String appId, Integer configId, OnboardingConfigUpdate configUpdate) throws ApiException {
-        updateOnboardingConfigByIdWithHttpInfo(appId, configId, configUpdate);
+    public Object onboardingUpdateOnboardingConfigById(String appId, Integer configId, OnboardingConfigUpdate configUpdate) throws ApiException {
+        ApiResponse<Object> resp = onboardingUpdateOnboardingConfigByIdWithHttpInfo(appId, configId, configUpdate);
+        return resp.getData();
     }
 
     /**
@@ -827,12 +830,13 @@ public class OnboardingApi {
      * @param appId  (required)
      * @param configId  (required)
      * @param configUpdate  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateOnboardingConfigByIdWithHttpInfo(String appId, Integer configId, OnboardingConfigUpdate configUpdate) throws ApiException {
-        com.squareup.okhttp.Call call = updateOnboardingConfigByIdValidateBeforeCall(appId, configId, configUpdate, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> onboardingUpdateOnboardingConfigByIdWithHttpInfo(String appId, Integer configId, OnboardingConfigUpdate configUpdate) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigByIdValidateBeforeCall(appId, configId, configUpdate, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -845,7 +849,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingConfigByIdAsync(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingConfigByIdAsync(String appId, Integer configId, OnboardingConfigUpdate configUpdate, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -866,12 +870,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateOnboardingConfigByIdValidateBeforeCall(appId, configId, configUpdate, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingConfigByIdValidateBeforeCall(appId, configId, configUpdate, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for updateOnboardingItem
+     * Build call for onboardingUpdateOnboardingItem
      * @param appId  (required)
      * @param storeId  (required)
      * @param onboardingItemId  (required)
@@ -881,7 +886,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingItemCall(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingItemCall(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = itemUpdate;
 
         // create path and map variables
@@ -929,30 +934,30 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateOnboardingItemValidateBeforeCall(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingUpdateOnboardingItemValidateBeforeCall(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling updateOnboardingItem(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingUpdateOnboardingItem(Async)");
         }
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling updateOnboardingItem(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling onboardingUpdateOnboardingItem(Async)");
         }
         
         // verify the required parameter 'onboardingItemId' is set
         if (onboardingItemId == null) {
-            throw new ApiException("Missing the required parameter 'onboardingItemId' when calling updateOnboardingItem(Async)");
+            throw new ApiException("Missing the required parameter 'onboardingItemId' when calling onboardingUpdateOnboardingItem(Async)");
         }
         
         // verify the required parameter 'itemUpdate' is set
         if (itemUpdate == null) {
-            throw new ApiException("Missing the required parameter 'itemUpdate' when calling updateOnboardingItem(Async)");
+            throw new ApiException("Missing the required parameter 'itemUpdate' when calling onboardingUpdateOnboardingItem(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateOnboardingItemCall(appId, storeId, onboardingItemId, itemUpdate, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemCall(appId, storeId, onboardingItemId, itemUpdate, progressListener, progressRequestListener);
         return call;
 
     }
@@ -964,10 +969,12 @@ public class OnboardingApi {
      * @param storeId  (required)
      * @param onboardingItemId  (required)
      * @param itemUpdate  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateOnboardingItem(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate) throws ApiException {
-        updateOnboardingItemWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+    public Object onboardingUpdateOnboardingItem(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate) throws ApiException {
+        ApiResponse<Object> resp = onboardingUpdateOnboardingItemWithHttpInfo(appId, storeId, onboardingItemId, itemUpdate);
+        return resp.getData();
     }
 
     /**
@@ -977,12 +984,13 @@ public class OnboardingApi {
      * @param storeId  (required)
      * @param onboardingItemId  (required)
      * @param itemUpdate  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateOnboardingItemWithHttpInfo(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate) throws ApiException {
-        com.squareup.okhttp.Call call = updateOnboardingItemValidateBeforeCall(appId, storeId, onboardingItemId, itemUpdate, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> onboardingUpdateOnboardingItemWithHttpInfo(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemValidateBeforeCall(appId, storeId, onboardingItemId, itemUpdate, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -996,7 +1004,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingItemAsync(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingItemAsync(String appId, Integer storeId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1017,12 +1025,13 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateOnboardingItemValidateBeforeCall(appId, storeId, onboardingItemId, itemUpdate, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemValidateBeforeCall(appId, storeId, onboardingItemId, itemUpdate, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for updateOnboardingItemV2
+     * Build call for onboardingUpdateOnboardingItemV2
      * @param appId  (required)
      * @param onboardingItemId  (required)
      * @param itemUpdate  (required)
@@ -1032,7 +1041,7 @@ public class OnboardingApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingItemV2Call(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingItemV2Call(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = itemUpdate;
 
         // create path and map variables
@@ -1081,25 +1090,25 @@ public class OnboardingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateOnboardingItemV2ValidateBeforeCall(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call onboardingUpdateOnboardingItemV2ValidateBeforeCall(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling updateOnboardingItemV2(Async)");
+            throw new ApiException("Missing the required parameter 'appId' when calling onboardingUpdateOnboardingItemV2(Async)");
         }
         
         // verify the required parameter 'onboardingItemId' is set
         if (onboardingItemId == null) {
-            throw new ApiException("Missing the required parameter 'onboardingItemId' when calling updateOnboardingItemV2(Async)");
+            throw new ApiException("Missing the required parameter 'onboardingItemId' when calling onboardingUpdateOnboardingItemV2(Async)");
         }
         
         // verify the required parameter 'itemUpdate' is set
         if (itemUpdate == null) {
-            throw new ApiException("Missing the required parameter 'itemUpdate' when calling updateOnboardingItemV2(Async)");
+            throw new ApiException("Missing the required parameter 'itemUpdate' when calling onboardingUpdateOnboardingItemV2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = updateOnboardingItemV2Call(appId, onboardingItemId, itemUpdate, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemV2Call(appId, onboardingItemId, itemUpdate, storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1111,10 +1120,12 @@ public class OnboardingApi {
      * @param onboardingItemId  (required)
      * @param itemUpdate  (required)
      * @param storeId  (optional)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void updateOnboardingItemV2(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId) throws ApiException {
-        updateOnboardingItemV2WithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+    public Object onboardingUpdateOnboardingItemV2(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = onboardingUpdateOnboardingItemV2WithHttpInfo(appId, onboardingItemId, itemUpdate, storeId);
+        return resp.getData();
     }
 
     /**
@@ -1124,12 +1135,13 @@ public class OnboardingApi {
      * @param onboardingItemId  (required)
      * @param itemUpdate  (required)
      * @param storeId  (optional)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> updateOnboardingItemV2WithHttpInfo(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = updateOnboardingItemV2ValidateBeforeCall(appId, onboardingItemId, itemUpdate, storeId, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> onboardingUpdateOnboardingItemV2WithHttpInfo(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemV2ValidateBeforeCall(appId, onboardingItemId, itemUpdate, storeId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -1143,7 +1155,7 @@ public class OnboardingApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call updateOnboardingItemV2Async(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call onboardingUpdateOnboardingItemV2Async(String appId, Integer onboardingItemId, OnboardingItemUpdate itemUpdate, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1164,8 +1176,9 @@ public class OnboardingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = updateOnboardingItemV2ValidateBeforeCall(appId, onboardingItemId, itemUpdate, storeId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = onboardingUpdateOnboardingItemV2ValidateBeforeCall(appId, onboardingItemId, itemUpdate, storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
 }

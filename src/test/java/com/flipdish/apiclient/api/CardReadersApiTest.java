@@ -86,6 +86,23 @@ public class CardReadersApiTest {
      *          if the Api call fails
      */
     @Test
+    public void cardReadersGetReaderTest() throws Exception {
+        String readerId = null;
+        String appId = null;
+        RestApiResultCardReader response = api.cardReadersGetReader(readerId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void generateStripeTerminalLocationTest() throws Exception {
         GeoPointRequest geoPointRequest = null;
         String appId = null;
@@ -107,23 +124,6 @@ public class CardReadersApiTest {
         String appId = null;
         String deviceId = null;
         RestApiResultBluetoothTerminalStatus response = api.getBluetoothTerminalStatus(appId, deviceId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getReaderTest() throws Exception {
-        String readerId = null;
-        String appId = null;
-        RestApiResultCardReader response = api.getReader(readerId, appId);
 
         // TODO: test validations
     }

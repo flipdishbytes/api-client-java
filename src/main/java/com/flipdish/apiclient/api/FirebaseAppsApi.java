@@ -63,14 +63,14 @@ public class FirebaseAppsApi {
     }
 
     /**
-     * Build call for addFirebaseApp
+     * Build call for firebaseAppsAddFirebaseApp
      * @param firebaseApp  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call addFirebaseAppCall(FirebaseApp firebaseApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsAddFirebaseAppCall(FirebaseApp firebaseApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = firebaseApp;
 
         // create path and map variables
@@ -115,15 +115,15 @@ public class FirebaseAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call addFirebaseAppValidateBeforeCall(FirebaseApp firebaseApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call firebaseAppsAddFirebaseAppValidateBeforeCall(FirebaseApp firebaseApp, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'firebaseApp' is set
         if (firebaseApp == null) {
-            throw new ApiException("Missing the required parameter 'firebaseApp' when calling addFirebaseApp(Async)");
+            throw new ApiException("Missing the required parameter 'firebaseApp' when calling firebaseAppsAddFirebaseApp(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = addFirebaseAppCall(firebaseApp, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = firebaseAppsAddFirebaseAppCall(firebaseApp, progressListener, progressRequestListener);
         return call;
 
     }
@@ -135,8 +135,8 @@ public class FirebaseAppsApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object addFirebaseApp(FirebaseApp firebaseApp) throws ApiException {
-        ApiResponse<Object> resp = addFirebaseAppWithHttpInfo(firebaseApp);
+    public Object firebaseAppsAddFirebaseApp(FirebaseApp firebaseApp) throws ApiException {
+        ApiResponse<Object> resp = firebaseAppsAddFirebaseAppWithHttpInfo(firebaseApp);
         return resp.getData();
     }
 
@@ -147,8 +147,8 @@ public class FirebaseAppsApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> addFirebaseAppWithHttpInfo(FirebaseApp firebaseApp) throws ApiException {
-        com.squareup.okhttp.Call call = addFirebaseAppValidateBeforeCall(firebaseApp, null, null);
+    public ApiResponse<Object> firebaseAppsAddFirebaseAppWithHttpInfo(FirebaseApp firebaseApp) throws ApiException {
+        com.squareup.okhttp.Call call = firebaseAppsAddFirebaseAppValidateBeforeCall(firebaseApp, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -161,7 +161,7 @@ public class FirebaseAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call addFirebaseAppAsync(FirebaseApp firebaseApp, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsAddFirebaseAppAsync(FirebaseApp firebaseApp, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -182,20 +182,20 @@ public class FirebaseAppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = addFirebaseAppValidateBeforeCall(firebaseApp, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = firebaseAppsAddFirebaseAppValidateBeforeCall(firebaseApp, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for deleteFirebaseApp
+     * Build call for firebaseAppsDeleteFirebaseApp
      * @param whiteLabelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteFirebaseAppCall(Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsDeleteFirebaseAppCall(Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -241,15 +241,15 @@ public class FirebaseAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteFirebaseAppValidateBeforeCall(Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call firebaseAppsDeleteFirebaseAppValidateBeforeCall(Integer whiteLabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'whiteLabelId' is set
         if (whiteLabelId == null) {
-            throw new ApiException("Missing the required parameter 'whiteLabelId' when calling deleteFirebaseApp(Async)");
+            throw new ApiException("Missing the required parameter 'whiteLabelId' when calling firebaseAppsDeleteFirebaseApp(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = deleteFirebaseAppCall(whiteLabelId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = firebaseAppsDeleteFirebaseAppCall(whiteLabelId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -261,8 +261,8 @@ public class FirebaseAppsApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object deleteFirebaseApp(Integer whiteLabelId) throws ApiException {
-        ApiResponse<Object> resp = deleteFirebaseAppWithHttpInfo(whiteLabelId);
+    public Object firebaseAppsDeleteFirebaseApp(Integer whiteLabelId) throws ApiException {
+        ApiResponse<Object> resp = firebaseAppsDeleteFirebaseAppWithHttpInfo(whiteLabelId);
         return resp.getData();
     }
 
@@ -273,8 +273,8 @@ public class FirebaseAppsApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> deleteFirebaseAppWithHttpInfo(Integer whiteLabelId) throws ApiException {
-        com.squareup.okhttp.Call call = deleteFirebaseAppValidateBeforeCall(whiteLabelId, null, null);
+    public ApiResponse<Object> firebaseAppsDeleteFirebaseAppWithHttpInfo(Integer whiteLabelId) throws ApiException {
+        com.squareup.okhttp.Call call = firebaseAppsDeleteFirebaseAppValidateBeforeCall(whiteLabelId, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -287,7 +287,7 @@ public class FirebaseAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteFirebaseAppAsync(Integer whiteLabelId, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsDeleteFirebaseAppAsync(Integer whiteLabelId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -308,20 +308,20 @@ public class FirebaseAppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteFirebaseAppValidateBeforeCall(whiteLabelId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = firebaseAppsDeleteFirebaseAppValidateBeforeCall(whiteLabelId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getFirebaseApp
+     * Build call for firebaseAppsGetFirebaseApp
      * @param whitelabelId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getFirebaseAppCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -367,15 +367,15 @@ public class FirebaseAppsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getFirebaseAppValidateBeforeCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call firebaseAppsGetFirebaseAppValidateBeforeCall(Integer whitelabelId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'whitelabelId' is set
         if (whitelabelId == null) {
-            throw new ApiException("Missing the required parameter 'whitelabelId' when calling getFirebaseApp(Async)");
+            throw new ApiException("Missing the required parameter 'whitelabelId' when calling firebaseAppsGetFirebaseApp(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getFirebaseAppCall(whitelabelId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = firebaseAppsGetFirebaseAppCall(whitelabelId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -384,22 +384,25 @@ public class FirebaseAppsApi {
      * 
      * 
      * @param whitelabelId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getFirebaseApp(Integer whitelabelId) throws ApiException {
-        getFirebaseAppWithHttpInfo(whitelabelId);
+    public Object firebaseAppsGetFirebaseApp(Integer whitelabelId) throws ApiException {
+        ApiResponse<Object> resp = firebaseAppsGetFirebaseAppWithHttpInfo(whitelabelId);
+        return resp.getData();
     }
 
     /**
      * 
      * 
      * @param whitelabelId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getFirebaseAppWithHttpInfo(Integer whitelabelId) throws ApiException {
-        com.squareup.okhttp.Call call = getFirebaseAppValidateBeforeCall(whitelabelId, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> firebaseAppsGetFirebaseAppWithHttpInfo(Integer whitelabelId) throws ApiException {
+        com.squareup.okhttp.Call call = firebaseAppsGetFirebaseAppValidateBeforeCall(whitelabelId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -410,7 +413,7 @@ public class FirebaseAppsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getFirebaseAppAsync(Integer whitelabelId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call firebaseAppsGetFirebaseAppAsync(Integer whitelabelId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -431,8 +434,9 @@ public class FirebaseAppsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getFirebaseAppValidateBeforeCall(whitelabelId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = firebaseAppsGetFirebaseAppValidateBeforeCall(whitelabelId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
 }

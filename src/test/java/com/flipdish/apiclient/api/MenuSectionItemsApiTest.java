@@ -42,7 +42,7 @@ public class MenuSectionItemsApiTest {
 
     
     /**
-     * 
+     * Clone menu section item
      *
      * 
      *
@@ -60,7 +60,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Create menu section item
      *
      * 
      *
@@ -78,9 +78,9 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Create menu section items from a list of Catalog Items
      *
-     * 
+     * BETA - this endpoint is under development, do not use it in your production system
      *
      * @throws Exception
      *          if the Api call fails
@@ -96,7 +96,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Delete menu section item
      *
      * 
      *
@@ -114,7 +114,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Delete menu section item image
      *
      * 
      *
@@ -167,7 +167,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Move an Item within a menu
      *
      * 
      *
@@ -186,7 +186,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Set tax rate for menu item
      *
      * 
      *
@@ -205,7 +205,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Update menu section item
      *
      * 
      *
@@ -225,7 +225,7 @@ public class MenuSectionItemsApiTest {
     }
     
     /**
-     * 
+     * Upload menu section item image
      *
      * 
      *

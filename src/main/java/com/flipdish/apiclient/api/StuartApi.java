@@ -65,7 +65,7 @@ public class StuartApi {
     }
 
     /**
-     * Build call for cancelJob
+     * Build call for stuartCancelJob
      * @param jobId  (required)
      * @param storeId  (required)
      * @param progressListener Progress listener
@@ -73,7 +73,7 @@ public class StuartApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call cancelJobCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call stuartCancelJobCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -121,20 +121,20 @@ public class StuartApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call cancelJobValidateBeforeCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call stuartCancelJobValidateBeforeCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'jobId' is set
         if (jobId == null) {
-            throw new ApiException("Missing the required parameter 'jobId' when calling cancelJob(Async)");
+            throw new ApiException("Missing the required parameter 'jobId' when calling stuartCancelJob(Async)");
         }
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling cancelJob(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling stuartCancelJob(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = cancelJobCall(jobId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartCancelJobCall(jobId, storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -144,10 +144,12 @@ public class StuartApi {
      * 
      * @param jobId  (required)
      * @param storeId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void cancelJob(Integer jobId, Integer storeId) throws ApiException {
-        cancelJobWithHttpInfo(jobId, storeId);
+    public Object stuartCancelJob(Integer jobId, Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = stuartCancelJobWithHttpInfo(jobId, storeId);
+        return resp.getData();
     }
 
     /**
@@ -155,12 +157,13 @@ public class StuartApi {
      * 
      * @param jobId  (required)
      * @param storeId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> cancelJobWithHttpInfo(Integer jobId, Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = cancelJobValidateBeforeCall(jobId, storeId, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> stuartCancelJobWithHttpInfo(Integer jobId, Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = stuartCancelJobValidateBeforeCall(jobId, storeId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -172,7 +175,7 @@ public class StuartApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call cancelJobAsync(Integer jobId, Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call stuartCancelJobAsync(Integer jobId, Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -193,12 +196,13 @@ public class StuartApi {
             };
         }
 
-        com.squareup.okhttp.Call call = cancelJobValidateBeforeCall(jobId, storeId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = stuartCancelJobValidateBeforeCall(jobId, storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getJob
+     * Build call for stuartGetJob
      * @param jobId  (required)
      * @param storeId  (required)
      * @param progressListener Progress listener
@@ -206,7 +210,7 @@ public class StuartApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getJobCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call stuartGetJobCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -254,20 +258,20 @@ public class StuartApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getJobValidateBeforeCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call stuartGetJobValidateBeforeCall(Integer jobId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'jobId' is set
         if (jobId == null) {
-            throw new ApiException("Missing the required parameter 'jobId' when calling getJob(Async)");
+            throw new ApiException("Missing the required parameter 'jobId' when calling stuartGetJob(Async)");
         }
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling getJob(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling stuartGetJob(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getJobCall(jobId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartGetJobCall(jobId, storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -280,8 +284,8 @@ public class StuartApi {
      * @return RestApiResultJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultJobResponse getJob(Integer jobId, Integer storeId) throws ApiException {
-        ApiResponse<RestApiResultJobResponse> resp = getJobWithHttpInfo(jobId, storeId);
+    public RestApiResultJobResponse stuartGetJob(Integer jobId, Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultJobResponse> resp = stuartGetJobWithHttpInfo(jobId, storeId);
         return resp.getData();
     }
 
@@ -293,8 +297,8 @@ public class StuartApi {
      * @return ApiResponse&lt;RestApiResultJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultJobResponse> getJobWithHttpInfo(Integer jobId, Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = getJobValidateBeforeCall(jobId, storeId, null, null);
+    public ApiResponse<RestApiResultJobResponse> stuartGetJobWithHttpInfo(Integer jobId, Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = stuartGetJobValidateBeforeCall(jobId, storeId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultJobResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -308,7 +312,7 @@ public class StuartApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getJobAsync(Integer jobId, Integer storeId, final ApiCallback<RestApiResultJobResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call stuartGetJobAsync(Integer jobId, Integer storeId, final ApiCallback<RestApiResultJobResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -329,20 +333,20 @@ public class StuartApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getJobValidateBeforeCall(jobId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartGetJobValidateBeforeCall(jobId, storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultJobResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getStuartSettings
+     * Build call for stuartGetStuartSettings
      * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStuartSettingsCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call stuartGetStuartSettingsCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -388,15 +392,15 @@ public class StuartApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStuartSettingsValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call stuartGetStuartSettingsValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling getStuartSettings(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling stuartGetStuartSettings(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getStuartSettingsCall(storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartGetStuartSettingsCall(storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -408,8 +412,8 @@ public class StuartApi {
      * @return RestApiResultStuartSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultStuartSettings getStuartSettings(Integer storeId) throws ApiException {
-        ApiResponse<RestApiResultStuartSettings> resp = getStuartSettingsWithHttpInfo(storeId);
+    public RestApiResultStuartSettings stuartGetStuartSettings(Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultStuartSettings> resp = stuartGetStuartSettingsWithHttpInfo(storeId);
         return resp.getData();
     }
 
@@ -420,8 +424,8 @@ public class StuartApi {
      * @return ApiResponse&lt;RestApiResultStuartSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultStuartSettings> getStuartSettingsWithHttpInfo(Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = getStuartSettingsValidateBeforeCall(storeId, null, null);
+    public ApiResponse<RestApiResultStuartSettings> stuartGetStuartSettingsWithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = stuartGetStuartSettingsValidateBeforeCall(storeId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultStuartSettings>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -434,7 +438,7 @@ public class StuartApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStuartSettingsAsync(Integer storeId, final ApiCallback<RestApiResultStuartSettings> callback) throws ApiException {
+    public com.squareup.okhttp.Call stuartGetStuartSettingsAsync(Integer storeId, final ApiCallback<RestApiResultStuartSettings> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -455,13 +459,13 @@ public class StuartApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStuartSettingsValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartGetStuartSettingsValidateBeforeCall(storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultStuartSettings>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for postStuartSettings
+     * Build call for stuartPostStuartSettings
      * @param storeId  (required)
      * @param stuartSettings  (required)
      * @param progressListener Progress listener
@@ -469,7 +473,7 @@ public class StuartApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postStuartSettingsCall(Integer storeId, StuartSettings stuartSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call stuartPostStuartSettingsCall(Integer storeId, StuartSettings stuartSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = stuartSettings;
 
         // create path and map variables
@@ -515,20 +519,20 @@ public class StuartApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postStuartSettingsValidateBeforeCall(Integer storeId, StuartSettings stuartSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call stuartPostStuartSettingsValidateBeforeCall(Integer storeId, StuartSettings stuartSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling postStuartSettings(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling stuartPostStuartSettings(Async)");
         }
         
         // verify the required parameter 'stuartSettings' is set
         if (stuartSettings == null) {
-            throw new ApiException("Missing the required parameter 'stuartSettings' when calling postStuartSettings(Async)");
+            throw new ApiException("Missing the required parameter 'stuartSettings' when calling stuartPostStuartSettings(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = postStuartSettingsCall(storeId, stuartSettings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartPostStuartSettingsCall(storeId, stuartSettings, progressListener, progressRequestListener);
         return call;
 
     }
@@ -541,8 +545,8 @@ public class StuartApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Object postStuartSettings(Integer storeId, StuartSettings stuartSettings) throws ApiException {
-        ApiResponse<Object> resp = postStuartSettingsWithHttpInfo(storeId, stuartSettings);
+    public Object stuartPostStuartSettings(Integer storeId, StuartSettings stuartSettings) throws ApiException {
+        ApiResponse<Object> resp = stuartPostStuartSettingsWithHttpInfo(storeId, stuartSettings);
         return resp.getData();
     }
 
@@ -554,8 +558,8 @@ public class StuartApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Object> postStuartSettingsWithHttpInfo(Integer storeId, StuartSettings stuartSettings) throws ApiException {
-        com.squareup.okhttp.Call call = postStuartSettingsValidateBeforeCall(storeId, stuartSettings, null, null);
+    public ApiResponse<Object> stuartPostStuartSettingsWithHttpInfo(Integer storeId, StuartSettings stuartSettings) throws ApiException {
+        com.squareup.okhttp.Call call = stuartPostStuartSettingsValidateBeforeCall(storeId, stuartSettings, null, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -569,7 +573,7 @@ public class StuartApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postStuartSettingsAsync(Integer storeId, StuartSettings stuartSettings, final ApiCallback<Object> callback) throws ApiException {
+    public com.squareup.okhttp.Call stuartPostStuartSettingsAsync(Integer storeId, StuartSettings stuartSettings, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -590,7 +594,7 @@ public class StuartApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postStuartSettingsValidateBeforeCall(storeId, stuartSettings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = stuartPostStuartSettingsValidateBeforeCall(storeId, stuartSettings, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

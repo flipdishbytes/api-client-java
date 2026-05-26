@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelCurrentlyInitiatedBluetoothDeviceUpdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
 [**cancelReaderAction**](CardReadersApi.md#cancelReaderAction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+[**cardReadersGetReader**](CardReadersApi.md#cardReadersGetReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 [**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
-[**getReader**](CardReadersApi.md#getReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 [**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 [**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -102,6 +102,59 @@ try {
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CardReadersApi#cancelReaderAction");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **readerId** | **String**|  |
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultCardReader**](RestApiResultCardReader.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="cardReadersGetReader"></a>
+# **cardReadersGetReader**
+> RestApiResultCardReader cardReadersGetReader(readerId, appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CardReadersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CardReadersApi apiInstance = new CardReadersApi();
+String readerId = "readerId_example"; // String | 
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultCardReader result = apiInstance.cardReadersGetReader(readerId, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CardReadersApi#cardReadersGetReader");
     e.printStackTrace();
 }
 ```
@@ -222,59 +275,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultBluetoothTerminalStatus**](RestApiResultBluetoothTerminalStatus.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getReader"></a>
-# **getReader**
-> RestApiResultCardReader getReader(readerId, appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.CardReadersApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-CardReadersApi apiInstance = new CardReadersApi();
-String readerId = "readerId_example"; // String | 
-String appId = "appId_example"; // String | 
-try {
-    RestApiResultCardReader result = apiInstance.getReader(readerId, appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CardReadersApi#getReader");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **readerId** | **String**|  |
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiResultCardReader**](RestApiResultCardReader.md)
 
 ### Authorization
 

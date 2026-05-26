@@ -81,8 +81,8 @@ public class MenusApi {
 
     /**
      * Build call for createDraftMenuFromExistingMenu
-     * @param menuId  (required)
-     * @param newName  (required)
+     * @param menuId Menu identifier (required)
+     * @param newName Name of the new Menu (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -154,10 +154,10 @@ public class MenusApi {
     }
 
     /**
+     * Clone a menu, (without attaching stores)
      * 
-     * 
-     * @param menuId  (required)
-     * @param newName  (required)
+     * @param menuId Menu identifier (required)
+     * @param newName Name of the new Menu (required)
      * @return RestApiResultMenu
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -167,10 +167,10 @@ public class MenusApi {
     }
 
     /**
+     * Clone a menu, (without attaching stores)
      * 
-     * 
-     * @param menuId  (required)
-     * @param newName  (required)
+     * @param menuId Menu identifier (required)
+     * @param newName Name of the new Menu (required)
      * @return ApiResponse&lt;RestApiResultMenu&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -181,10 +181,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Clone a menu, (without attaching stores) (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param newName  (required)
+     * @param menuId Menu identifier (required)
+     * @param newName Name of the new Menu (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -217,9 +217,9 @@ public class MenusApi {
     }
     /**
      * Build call for createNewMenuAsync
-     * @param appId  (required)
-     * @param menu  (required)
-     * @param orgId  (optional)
+     * @param appId App id (required)
+     * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -292,11 +292,11 @@ public class MenusApi {
     }
 
     /**
-     * 
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
-     * @param orgId  (optional)
+     * Create a new menu asynchronously
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
+     * @param appId App id (required)
+     * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -306,11 +306,11 @@ public class MenusApi {
     }
 
     /**
-     * 
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
-     * @param orgId  (optional)
+     * Create a new menu asynchronously
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
+     * @param appId App id (required)
+     * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -321,11 +321,11 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
-     * @param orgId  (optional)
+     * Create a new menu asynchronously (asynchronously)
+     * You must listen to the webhook menu.async_creation.completed to know when the menu is ready
+     * @param appId App id (required)
+     * @param menu Menu (required)
+     * @param orgId Org id (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -358,8 +358,8 @@ public class MenusApi {
     }
     /**
      * Build call for createNewMenuForApp
-     * @param appId  (required)
-     * @param menu  (required)
+     * @param appId App identifier (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -433,10 +433,10 @@ public class MenusApi {
     }
 
     /**
-     * 
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
+     * Create a new menu
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
+     * @param appId App identifier (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @return Integer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -448,10 +448,10 @@ public class MenusApi {
     }
 
     /**
-     * 
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
+     * Create a new menu
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
+     * @param appId App identifier (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @return ApiResponse&lt;Integer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @deprecated
@@ -464,10 +464,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param appId  (required)
-     * @param menu  (required)
+     * Create a new menu (asynchronously)
+     * [DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
+     * @param appId App identifier (required)
+     * @param menu Menu. If empty the system will create a menu with default items (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -502,7 +502,7 @@ public class MenusApi {
     }
     /**
      * Build call for deleteMenu
-     * @param menuId  (required)
+     * @param menuId Menu Identifier (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -568,9 +568,9 @@ public class MenusApi {
     }
 
     /**
+     * Mark a Menu as Deleted
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu Identifier (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteMenu(Integer menuId) throws ApiException {
@@ -578,9 +578,9 @@ public class MenusApi {
     }
 
     /**
+     * Mark a Menu as Deleted
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu Identifier (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -590,9 +590,9 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Mark a Menu as Deleted (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu Identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -624,7 +624,7 @@ public class MenusApi {
     }
     /**
      * Build call for deleteMenuImage
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -690,9 +690,9 @@ public class MenusApi {
     }
 
     /**
+     * Delete menu image
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteMenuImage(Integer menuId) throws ApiException {
@@ -700,9 +700,9 @@ public class MenusApi {
     }
 
     /**
+     * Delete menu image
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -712,9 +712,9 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Delete menu image (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -746,10 +746,10 @@ public class MenusApi {
     }
     /**
      * Build call for deleteMenuItemMetadata
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param key  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param key Metadata key (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -833,12 +833,12 @@ public class MenusApi {
     }
 
     /**
+     * Delete menu item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param key  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param key Metadata key (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteMenuItemMetadata(Integer menuId, Integer storeId, Integer menuItemId, String key) throws ApiException {
@@ -846,12 +846,12 @@ public class MenusApi {
     }
 
     /**
+     * Delete menu item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param key  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param key Metadata key (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -861,12 +861,12 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Delete menu item metadata (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param key  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param key Metadata key (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -893,138 +893,6 @@ public class MenusApi {
         }
 
         com.squareup.okhttp.Call call = deleteMenuItemMetadataValidateBeforeCall(menuId, storeId, menuItemId, key, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for deleteTaxRate
-     * @param menuId  (required)
-     * @param taxId  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call deleteTaxRateCall(Integer menuId, Integer taxId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/tax/{taxId}"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
-            .replaceAll("\\{" + "taxId" + "\\}", apiClient.escapeString(taxId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteTaxRateValidateBeforeCall(Integer menuId, Integer taxId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling deleteTaxRate(Async)");
-        }
-        
-        // verify the required parameter 'taxId' is set
-        if (taxId == null) {
-            throw new ApiException("Missing the required parameter 'taxId' when calling deleteTaxRate(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = deleteTaxRateCall(menuId, taxId, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param taxId  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void deleteTaxRate(Integer menuId, Integer taxId) throws ApiException {
-        deleteTaxRateWithHttpInfo(menuId, taxId);
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param taxId  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> deleteTaxRateWithHttpInfo(Integer menuId, Integer taxId) throws ApiException {
-        com.squareup.okhttp.Call call = deleteTaxRateValidateBeforeCall(menuId, taxId, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param taxId  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call deleteTaxRateAsync(Integer menuId, Integer taxId, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = deleteTaxRateValidateBeforeCall(menuId, taxId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1161,143 +1029,6 @@ public class MenusApi {
 
         com.squareup.okhttp.Call call = getAllMenuMetadataByMenuIdAndStoreIdValidateBeforeCall(menuId, storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiArrayResultAllMetadataResult>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getMenuBulkShowHide
-     * @param menuId  (required)
-     * @param isAvailable  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getMenuBulkShowHideCall(Integer menuId, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide/list"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (isAvailable != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("isAvailable", isAvailable));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getMenuBulkShowHideValidateBeforeCall(Integer menuId, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling getMenuBulkShowHide(Async)");
-        }
-        
-        // verify the required parameter 'isAvailable' is set
-        if (isAvailable == null) {
-            throw new ApiException("Missing the required parameter 'isAvailable' when calling getMenuBulkShowHide(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = getMenuBulkShowHideCall(menuId, isAvailable, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
-     * @return RestApiArrayResultMenuElementListResponse
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiArrayResultMenuElementListResponse getMenuBulkShowHide(Integer menuId, Boolean isAvailable) throws ApiException {
-        ApiResponse<RestApiArrayResultMenuElementListResponse> resp = getMenuBulkShowHideWithHttpInfo(menuId, isAvailable);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
-     * @return ApiResponse&lt;RestApiArrayResultMenuElementListResponse&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiArrayResultMenuElementListResponse> getMenuBulkShowHideWithHttpInfo(Integer menuId, Boolean isAvailable) throws ApiException {
-        com.squareup.okhttp.Call call = getMenuBulkShowHideValidateBeforeCall(menuId, isAvailable, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementListResponse>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param isAvailable  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getMenuBulkShowHideAsync(Integer menuId, Boolean isAvailable, final ApiCallback<RestApiArrayResultMenuElementListResponse> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getMenuBulkShowHideValidateBeforeCall(menuId, isAvailable, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementListResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2506,9 +2237,954 @@ public class MenusApi {
         return call;
     }
     /**
+     * Build call for menusDeleteTaxRate
+     * @param menuId Menu identifier (required)
+     * @param taxId Id of Menu Tax to be removed (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusDeleteTaxRateCall(Integer menuId, Integer taxId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/tax/{taxId}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "taxId" + "\\}", apiClient.escapeString(taxId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusDeleteTaxRateValidateBeforeCall(Integer menuId, Integer taxId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusDeleteTaxRate(Async)");
+        }
+        
+        // verify the required parameter 'taxId' is set
+        if (taxId == null) {
+            throw new ApiException("Missing the required parameter 'taxId' when calling menusDeleteTaxRate(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusDeleteTaxRateCall(menuId, taxId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxId Id of Menu Tax to be removed (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void menusDeleteTaxRate(Integer menuId, Integer taxId) throws ApiException {
+        menusDeleteTaxRateWithHttpInfo(menuId, taxId);
+    }
+
+    /**
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxId Id of Menu Tax to be removed (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> menusDeleteTaxRateWithHttpInfo(Integer menuId, Integer taxId) throws ApiException {
+        com.squareup.okhttp.Call call = menusDeleteTaxRateValidateBeforeCall(menuId, taxId, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached (asynchronously)
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxId Id of Menu Tax to be removed (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusDeleteTaxRateAsync(Integer menuId, Integer taxId, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusDeleteTaxRateValidateBeforeCall(menuId, taxId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for menusGetMenuBulkShowHide
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusGetMenuBulkShowHideCall(Integer menuId, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide/list"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (isAvailable != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("isAvailable", isAvailable));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusGetMenuBulkShowHideValidateBeforeCall(Integer menuId, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusGetMenuBulkShowHide(Async)");
+        }
+        
+        // verify the required parameter 'isAvailable' is set
+        if (isAvailable == null) {
+            throw new ApiException("Missing the required parameter 'isAvailable' when calling menusGetMenuBulkShowHide(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusGetMenuBulkShowHideCall(menuId, isAvailable, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get bulk show/hide menu items and option set items
+     * 
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
+     * @return RestApiArrayResultMenuElementListResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultMenuElementListResponse menusGetMenuBulkShowHide(Integer menuId, Boolean isAvailable) throws ApiException {
+        ApiResponse<RestApiArrayResultMenuElementListResponse> resp = menusGetMenuBulkShowHideWithHttpInfo(menuId, isAvailable);
+        return resp.getData();
+    }
+
+    /**
+     * Get bulk show/hide menu items and option set items
+     * 
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
+     * @return ApiResponse&lt;RestApiArrayResultMenuElementListResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultMenuElementListResponse> menusGetMenuBulkShowHideWithHttpInfo(Integer menuId, Boolean isAvailable) throws ApiException {
+        com.squareup.okhttp.Call call = menusGetMenuBulkShowHideValidateBeforeCall(menuId, isAvailable, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementListResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get bulk show/hide menu items and option set items (asynchronously)
+     * 
+     * @param menuId Menu id (required)
+     * @param isAvailable Is available flag (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusGetMenuBulkShowHideAsync(Integer menuId, Boolean isAvailable, final ApiCallback<RestApiArrayResultMenuElementListResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusGetMenuBulkShowHideValidateBeforeCall(menuId, isAvailable, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementListResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for menusSetDisplayOnMenuTax
+     * @param menuId Menu identifier (required)
+     * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusSetDisplayOnMenuTaxCall(Integer menuId, Boolean show, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/tax/show/{show}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "show" + "\\}", apiClient.escapeString(show.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusSetDisplayOnMenuTaxValidateBeforeCall(Integer menuId, Boolean show, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusSetDisplayOnMenuTax(Async)");
+        }
+        
+        // verify the required parameter 'show' is set
+        if (show == null) {
+            throw new ApiException("Missing the required parameter 'show' when calling menusSetDisplayOnMenuTax(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusSetDisplayOnMenuTaxCall(menuId, show, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Set if tax shows for a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void menusSetDisplayOnMenuTax(Integer menuId, Boolean show) throws ApiException {
+        menusSetDisplayOnMenuTaxWithHttpInfo(menuId, show);
+    }
+
+    /**
+     * Set if tax shows for a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> menusSetDisplayOnMenuTaxWithHttpInfo(Integer menuId, Boolean show) throws ApiException {
+        com.squareup.okhttp.Call call = menusSetDisplayOnMenuTaxValidateBeforeCall(menuId, show, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Set if tax shows for a Menu (asynchronously)
+     * 
+     * @param menuId Menu identifier (required)
+     * @param show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusSetDisplayOnMenuTaxAsync(Integer menuId, Boolean show, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusSetDisplayOnMenuTaxValidateBeforeCall(menuId, show, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for menusSetItemDisplayOrders
+     * @param menuId Menu identifier (required)
+     * @param displayOrders Section Ids and their new display order (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusSetItemDisplayOrdersCall(Integer menuId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = displayOrders;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/sectiondisplayorders"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusSetItemDisplayOrdersValidateBeforeCall(Integer menuId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusSetItemDisplayOrders(Async)");
+        }
+        
+        // verify the required parameter 'displayOrders' is set
+        if (displayOrders == null) {
+            throw new ApiException("Missing the required parameter 'displayOrders' when calling menusSetItemDisplayOrders(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusSetItemDisplayOrdersCall(menuId, displayOrders, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Re-arrange Sections within a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param displayOrders Section Ids and their new display order (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void menusSetItemDisplayOrders(Integer menuId, MenuObjectDisplayOrders displayOrders) throws ApiException {
+        menusSetItemDisplayOrdersWithHttpInfo(menuId, displayOrders);
+    }
+
+    /**
+     * Re-arrange Sections within a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param displayOrders Section Ids and their new display order (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> menusSetItemDisplayOrdersWithHttpInfo(Integer menuId, MenuObjectDisplayOrders displayOrders) throws ApiException {
+        com.squareup.okhttp.Call call = menusSetItemDisplayOrdersValidateBeforeCall(menuId, displayOrders, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Re-arrange Sections within a Menu (asynchronously)
+     * 
+     * @param menuId Menu identifier (required)
+     * @param displayOrders Section Ids and their new display order (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusSetItemDisplayOrdersAsync(Integer menuId, MenuObjectDisplayOrders displayOrders, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusSetItemDisplayOrdersValidateBeforeCall(menuId, displayOrders, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for menusShowHideBulkItems
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusShowHideBulkItemsCall(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = menuElements;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (isAvailable != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("isAvailable", isAvailable));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusShowHideBulkItemsValidateBeforeCall(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusShowHideBulkItems(Async)");
+        }
+        
+        // verify the required parameter 'menuElements' is set
+        if (menuElements == null) {
+            throw new ApiException("Missing the required parameter 'menuElements' when calling menusShowHideBulkItems(Async)");
+        }
+        
+        // verify the required parameter 'isAvailable' is set
+        if (isAvailable == null) {
+            throw new ApiException("Missing the required parameter 'isAvailable' when calling menusShowHideBulkItems(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusShowHideBulkItemsCall(menuId, menuElements, isAvailable, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Bulk show/hide menu items or option set items
+     * 
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
+     * @return RestApiArrayResultMenuElementEditResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultMenuElementEditResponse menusShowHideBulkItems(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable) throws ApiException {
+        ApiResponse<RestApiArrayResultMenuElementEditResponse> resp = menusShowHideBulkItemsWithHttpInfo(menuId, menuElements, isAvailable);
+        return resp.getData();
+    }
+
+    /**
+     * Bulk show/hide menu items or option set items
+     * 
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
+     * @return ApiResponse&lt;RestApiArrayResultMenuElementEditResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultMenuElementEditResponse> menusShowHideBulkItemsWithHttpInfo(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable) throws ApiException {
+        com.squareup.okhttp.Call call = menusShowHideBulkItemsValidateBeforeCall(menuId, menuElements, isAvailable, null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementEditResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Bulk show/hide menu items or option set items (asynchronously)
+     * 
+     * @param menuId Menu id (required)
+     * @param menuElements Elements to be show/hide (required)
+     * @param isAvailable Is available flag (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusShowHideBulkItemsAsync(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ApiCallback<RestApiArrayResultMenuElementEditResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusShowHideBulkItemsValidateBeforeCall(menuId, menuElements, isAvailable, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementEditResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for menusUpdateTaxType
+     * @param menuId Menu identifier (required)
+     * @param type Type of Tax (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusUpdateTaxTypeCall(Integer menuId, String type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/tax/type/{type}"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
+            .replaceAll("\\{" + "type" + "\\}", apiClient.escapeString(type.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusUpdateTaxTypeValidateBeforeCall(Integer menuId, String type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusUpdateTaxType(Async)");
+        }
+        
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling menusUpdateTaxType(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusUpdateTaxTypeCall(menuId, type, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Set the type of Tax on a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param type Type of Tax (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void menusUpdateTaxType(Integer menuId, String type) throws ApiException {
+        menusUpdateTaxTypeWithHttpInfo(menuId, type);
+    }
+
+    /**
+     * Set the type of Tax on a Menu
+     * 
+     * @param menuId Menu identifier (required)
+     * @param type Type of Tax (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> menusUpdateTaxTypeWithHttpInfo(Integer menuId, String type) throws ApiException {
+        com.squareup.okhttp.Call call = menusUpdateTaxTypeValidateBeforeCall(menuId, type, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Set the type of Tax on a Menu (asynchronously)
+     * 
+     * @param menuId Menu identifier (required)
+     * @param type Type of Tax (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusUpdateTaxTypeAsync(Integer menuId, String type, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusUpdateTaxTypeValidateBeforeCall(menuId, type, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for menusUpsertTaxRate
+     * @param menuId Menu identifier (required)
+     * @param taxRate Tax rate to add/update (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call menusUpsertTaxRateCall(Integer menuId, MenuTaxRate taxRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = taxRate;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/menus/{menuId}/taxrate"
+            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call menusUpsertTaxRateValidateBeforeCall(Integer menuId, MenuTaxRate taxRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'menuId' is set
+        if (menuId == null) {
+            throw new ApiException("Missing the required parameter 'menuId' when calling menusUpsertTaxRate(Async)");
+        }
+        
+        // verify the required parameter 'taxRate' is set
+        if (taxRate == null) {
+            throw new ApiException("Missing the required parameter 'taxRate' when calling menusUpsertTaxRate(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = menusUpsertTaxRateCall(menuId, taxRate, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Add/Update a Tax Rate
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxRate Tax rate to add/update (required)
+     * @return MenuTaxRate
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public MenuTaxRate menusUpsertTaxRate(Integer menuId, MenuTaxRate taxRate) throws ApiException {
+        ApiResponse<MenuTaxRate> resp = menusUpsertTaxRateWithHttpInfo(menuId, taxRate);
+        return resp.getData();
+    }
+
+    /**
+     * Add/Update a Tax Rate
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxRate Tax rate to add/update (required)
+     * @return ApiResponse&lt;MenuTaxRate&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<MenuTaxRate> menusUpsertTaxRateWithHttpInfo(Integer menuId, MenuTaxRate taxRate) throws ApiException {
+        com.squareup.okhttp.Call call = menusUpsertTaxRateValidateBeforeCall(menuId, taxRate, null, null);
+        Type localVarReturnType = new TypeToken<MenuTaxRate>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Add/Update a Tax Rate (asynchronously)
+     * 
+     * @param menuId Menu identifier (required)
+     * @param taxRate Tax rate to add/update (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call menusUpsertTaxRateAsync(Integer menuId, MenuTaxRate taxRate, final ApiCallback<MenuTaxRate> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = menusUpsertTaxRateValidateBeforeCall(menuId, taxRate, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<MenuTaxRate>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for restoreAMenuCheckpoint
-     * @param menuId  (required)
-     * @param checkpointId  (required)
+     * @param menuId Menu identifier (required)
+     * @param checkpointId Checkpoint to restore menu to (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2580,10 +3256,10 @@ public class MenusApi {
     }
 
     /**
+     * Restore a Menu to a checkpoint
      * 
-     * 
-     * @param menuId  (required)
-     * @param checkpointId  (required)
+     * @param menuId Menu identifier (required)
+     * @param checkpointId Checkpoint to restore menu to (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void restoreAMenuCheckpoint(Integer menuId, Integer checkpointId) throws ApiException {
@@ -2591,10 +3267,10 @@ public class MenusApi {
     }
 
     /**
+     * Restore a Menu to a checkpoint
      * 
-     * 
-     * @param menuId  (required)
-     * @param checkpointId  (required)
+     * @param menuId Menu identifier (required)
+     * @param checkpointId Checkpoint to restore menu to (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -2604,10 +3280,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Restore a Menu to a checkpoint (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param checkpointId  (required)
+     * @param menuId Menu identifier (required)
+     * @param checkpointId Checkpoint to restore menu to (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2638,274 +3314,11 @@ public class MenusApi {
         return call;
     }
     /**
-     * Build call for setDisplayOnMenuTax
-     * @param menuId  (required)
-     * @param show  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call setDisplayOnMenuTaxCall(Integer menuId, Boolean show, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/tax/show/{show}"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
-            .replaceAll("\\{" + "show" + "\\}", apiClient.escapeString(show.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setDisplayOnMenuTaxValidateBeforeCall(Integer menuId, Boolean show, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setDisplayOnMenuTax(Async)");
-        }
-        
-        // verify the required parameter 'show' is set
-        if (show == null) {
-            throw new ApiException("Missing the required parameter 'show' when calling setDisplayOnMenuTax(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = setDisplayOnMenuTaxCall(menuId, show, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param show  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void setDisplayOnMenuTax(Integer menuId, Boolean show) throws ApiException {
-        setDisplayOnMenuTaxWithHttpInfo(menuId, show);
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param show  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> setDisplayOnMenuTaxWithHttpInfo(Integer menuId, Boolean show) throws ApiException {
-        com.squareup.okhttp.Call call = setDisplayOnMenuTaxValidateBeforeCall(menuId, show, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param show  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call setDisplayOnMenuTaxAsync(Integer menuId, Boolean show, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = setDisplayOnMenuTaxValidateBeforeCall(menuId, show, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for setItemDisplayOrders
-     * @param menuId  (required)
-     * @param displayOrders  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call setItemDisplayOrdersCall(Integer menuId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = displayOrders;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/sectiondisplayorders"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setItemDisplayOrdersValidateBeforeCall(Integer menuId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setItemDisplayOrders(Async)");
-        }
-        
-        // verify the required parameter 'displayOrders' is set
-        if (displayOrders == null) {
-            throw new ApiException("Missing the required parameter 'displayOrders' when calling setItemDisplayOrders(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = setItemDisplayOrdersCall(menuId, displayOrders, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param displayOrders  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void setItemDisplayOrders(Integer menuId, MenuObjectDisplayOrders displayOrders) throws ApiException {
-        setItemDisplayOrdersWithHttpInfo(menuId, displayOrders);
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param displayOrders  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> setItemDisplayOrdersWithHttpInfo(Integer menuId, MenuObjectDisplayOrders displayOrders) throws ApiException {
-        com.squareup.okhttp.Call call = setItemDisplayOrdersValidateBeforeCall(menuId, displayOrders, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param displayOrders  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call setItemDisplayOrdersAsync(Integer menuId, MenuObjectDisplayOrders displayOrders, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = setItemDisplayOrdersValidateBeforeCall(menuId, displayOrders, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
      * Build call for setMenuItemMetadata
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param metadata Metadata object (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -2988,12 +3401,12 @@ public class MenusApi {
     }
 
     /**
+     * Update menu item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param metadata Metadata object (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void setMenuItemMetadata(Integer menuId, Integer storeId, Integer menuItemId, Metadata metadata) throws ApiException {
@@ -3001,12 +3414,12 @@ public class MenusApi {
     }
 
     /**
+     * Update menu item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param metadata Metadata object (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3016,12 +3429,12 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Update menu item metadata (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param menuItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param menuItemId Menu item identifier (required)
+     * @param metadata Metadata object (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3053,10 +3466,10 @@ public class MenusApi {
     }
     /**
      * Build call for setMenuItemOptionSetItemMetadata
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param optionSetItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param optionSetItemId Menu item option set item identifier (required)
+     * @param metadata Metadata object (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3139,12 +3552,12 @@ public class MenusApi {
     }
 
     /**
+     * Update menu item option set item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param optionSetItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param optionSetItemId Menu item option set item identifier (required)
+     * @param metadata Metadata object (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void setMenuItemOptionSetItemMetadata(Integer menuId, Integer storeId, Integer optionSetItemId, Metadata metadata) throws ApiException {
@@ -3152,12 +3565,12 @@ public class MenusApi {
     }
 
     /**
+     * Update menu item option set item metadata
      * 
-     * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param optionSetItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param optionSetItemId Menu item option set item identifier (required)
+     * @param metadata Metadata object (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3167,12 +3580,12 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Update menu item option set item metadata (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param storeId  (required)
-     * @param optionSetItemId  (required)
-     * @param metadata  (required)
+     * @param menuId Menu identifier (required)
+     * @param storeId Store identifier (required)
+     * @param optionSetItemId Menu item option set item identifier (required)
+     * @param metadata Metadata object (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3204,8 +3617,8 @@ public class MenusApi {
     }
     /**
      * Build call for setMenuLock
-     * @param menuId  (required)
-     * @param locked  (required)
+     * @param menuId Menu identifier (required)
+     * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3276,10 +3689,10 @@ public class MenusApi {
     }
 
     /**
+     * Lock/Unlock a Menu for Editing
      * 
-     * 
-     * @param menuId  (required)
-     * @param locked  (required)
+     * @param menuId Menu identifier (required)
+     * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void setMenuLock(Integer menuId, Boolean locked) throws ApiException {
@@ -3287,10 +3700,10 @@ public class MenusApi {
     }
 
     /**
+     * Lock/Unlock a Menu for Editing
      * 
-     * 
-     * @param menuId  (required)
-     * @param locked  (required)
+     * @param menuId Menu identifier (required)
+     * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3300,10 +3713,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Lock/Unlock a Menu for Editing (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param locked  (required)
+     * @param menuId Menu identifier (required)
+     * @param locked True: Locks menu for editing, False: Unlocks for editing (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3335,8 +3748,8 @@ public class MenusApi {
     }
     /**
      * Build call for setMenuName
-     * @param menuId  (required)
-     * @param name  (required)
+     * @param menuId Menu identifier (required)
+     * @param name Name to set for this Menu (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3407,10 +3820,10 @@ public class MenusApi {
     }
 
     /**
+     * Set Menus Name
      * 
-     * 
-     * @param menuId  (required)
-     * @param name  (required)
+     * @param menuId Menu identifier (required)
+     * @param name Name to set for this Menu (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void setMenuName(Integer menuId, String name) throws ApiException {
@@ -3418,10 +3831,10 @@ public class MenusApi {
     }
 
     /**
+     * Set Menus Name
      * 
-     * 
-     * @param menuId  (required)
-     * @param name  (required)
+     * @param menuId Menu identifier (required)
+     * @param name Name to set for this Menu (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3431,10 +3844,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Set Menus Name (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param name  (required)
+     * @param menuId Menu identifier (required)
+     * @param name Name to set for this Menu (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3465,155 +3878,9 @@ public class MenusApi {
         return call;
     }
     /**
-     * Build call for showHideBulkItems
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call showHideBulkItemsCall(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = menuElements;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/bulkshowhide"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (isAvailable != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("isAvailable", isAvailable));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call showHideBulkItemsValidateBeforeCall(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling showHideBulkItems(Async)");
-        }
-        
-        // verify the required parameter 'menuElements' is set
-        if (menuElements == null) {
-            throw new ApiException("Missing the required parameter 'menuElements' when calling showHideBulkItems(Async)");
-        }
-        
-        // verify the required parameter 'isAvailable' is set
-        if (isAvailable == null) {
-            throw new ApiException("Missing the required parameter 'isAvailable' when calling showHideBulkItems(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = showHideBulkItemsCall(menuId, menuElements, isAvailable, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
-     * @return RestApiArrayResultMenuElementEditResponse
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiArrayResultMenuElementEditResponse showHideBulkItems(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable) throws ApiException {
-        ApiResponse<RestApiArrayResultMenuElementEditResponse> resp = showHideBulkItemsWithHttpInfo(menuId, menuElements, isAvailable);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
-     * @return ApiResponse&lt;RestApiArrayResultMenuElementEditResponse&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiArrayResultMenuElementEditResponse> showHideBulkItemsWithHttpInfo(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable) throws ApiException {
-        com.squareup.okhttp.Call call = showHideBulkItemsValidateBeforeCall(menuId, menuElements, isAvailable, null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementEditResponse>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param menuElements  (required)
-     * @param isAvailable  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call showHideBulkItemsAsync(Integer menuId, List<MenuElementHide> menuElements, Boolean isAvailable, final ApiCallback<RestApiArrayResultMenuElementEditResponse> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = showHideBulkItemsValidateBeforeCall(menuId, menuElements, isAvailable, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultMenuElementEditResponse>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
      * Build call for updateMenu
-     * @param menuId  (required)
-     * @param menu  (required)
+     * @param menuId Menu identifier (required)
+     * @param menu Full menu data (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -3684,10 +3951,10 @@ public class MenusApi {
     }
 
     /**
+     * Update menu
      * 
-     * 
-     * @param menuId  (required)
-     * @param menu  (required)
+     * @param menuId Menu identifier (required)
+     * @param menu Full menu data (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void updateMenu(Integer menuId, MenuBase menu) throws ApiException {
@@ -3695,10 +3962,10 @@ public class MenusApi {
     }
 
     /**
+     * Update menu
      * 
-     * 
-     * @param menuId  (required)
-     * @param menu  (required)
+     * @param menuId Menu identifier (required)
+     * @param menu Full menu data (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -3708,10 +3975,10 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Update menu (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menu  (required)
+     * @param menuId Menu identifier (required)
+     * @param menu Full menu data (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3742,140 +4009,8 @@ public class MenusApi {
         return call;
     }
     /**
-     * Build call for updateTaxType
-     * @param menuId  (required)
-     * @param type  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call updateTaxTypeCall(Integer menuId, String type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/tax/type/{type}"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()))
-            .replaceAll("\\{" + "type" + "\\}", apiClient.escapeString(type.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateTaxTypeValidateBeforeCall(Integer menuId, String type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling updateTaxType(Async)");
-        }
-        
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling updateTaxType(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = updateTaxTypeCall(menuId, type, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param type  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void updateTaxType(Integer menuId, String type) throws ApiException {
-        updateTaxTypeWithHttpInfo(menuId, type);
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param type  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> updateTaxTypeWithHttpInfo(Integer menuId, String type) throws ApiException {
-        com.squareup.okhttp.Call call = updateTaxTypeValidateBeforeCall(menuId, type, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param type  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call updateTaxTypeAsync(Integer menuId, String type, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = updateTaxTypeValidateBeforeCall(menuId, type, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
      * Build call for uploadMenuImage
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param image Menu image (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -3949,9 +4084,9 @@ public class MenusApi {
     }
 
     /**
+     * Upload menu image
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param image Menu image (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3962,9 +4097,9 @@ public class MenusApi {
     }
 
     /**
+     * Upload menu image
      * 
-     * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param image Menu image (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -3976,9 +4111,9 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Upload menu image (asynchronously)
      * 
-     * @param menuId  (required)
+     * @param menuId Menu identifier (required)
      * @param image Menu image (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4012,7 +4147,7 @@ public class MenusApi {
     }
     /**
      * Build call for uploadNewMenuForApp
-     * @param appId  (required)
+     * @param appId App identifier (required)
      * @param menu Uploaded xlsx menu (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -4086,9 +4221,9 @@ public class MenusApi {
     }
 
     /**
+     * Create a new menu from xlsx file.
      * 
-     * 
-     * @param appId  (required)
+     * @param appId App identifier (required)
      * @param menu Uploaded xlsx menu (required)
      * @return Integer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4099,9 +4234,9 @@ public class MenusApi {
     }
 
     /**
+     * Create a new menu from xlsx file.
      * 
-     * 
-     * @param appId  (required)
+     * @param appId App identifier (required)
      * @param menu Uploaded xlsx menu (required)
      * @return ApiResponse&lt;Integer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -4113,9 +4248,9 @@ public class MenusApi {
     }
 
     /**
-     *  (asynchronously)
+     * Create a new menu from xlsx file. (asynchronously)
      * 
-     * @param appId  (required)
+     * @param appId App identifier (required)
      * @param menu Uploaded xlsx menu (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -4144,141 +4279,6 @@ public class MenusApi {
 
         com.squareup.okhttp.Call call = uploadNewMenuForAppValidateBeforeCall(appId, menu, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<Integer>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for upsertTaxRate
-     * @param menuId  (required)
-     * @param taxRate  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call upsertTaxRateCall(Integer menuId, MenuTaxRate taxRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = taxRate;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/menus/{menuId}/taxrate"
-            .replaceAll("\\{" + "menuId" + "\\}", apiClient.escapeString(menuId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call upsertTaxRateValidateBeforeCall(Integer menuId, MenuTaxRate taxRate, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'menuId' is set
-        if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling upsertTaxRate(Async)");
-        }
-        
-        // verify the required parameter 'taxRate' is set
-        if (taxRate == null) {
-            throw new ApiException("Missing the required parameter 'taxRate' when calling upsertTaxRate(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = upsertTaxRateCall(menuId, taxRate, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param taxRate  (required)
-     * @return MenuTaxRate
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public MenuTaxRate upsertTaxRate(Integer menuId, MenuTaxRate taxRate) throws ApiException {
-        ApiResponse<MenuTaxRate> resp = upsertTaxRateWithHttpInfo(menuId, taxRate);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param menuId  (required)
-     * @param taxRate  (required)
-     * @return ApiResponse&lt;MenuTaxRate&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<MenuTaxRate> upsertTaxRateWithHttpInfo(Integer menuId, MenuTaxRate taxRate) throws ApiException {
-        com.squareup.okhttp.Call call = upsertTaxRateValidateBeforeCall(menuId, taxRate, null, null);
-        Type localVarReturnType = new TypeToken<MenuTaxRate>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param menuId  (required)
-     * @param taxRate  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call upsertTaxRateAsync(Integer menuId, MenuTaxRate taxRate, final ApiCallback<MenuTaxRate> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = upsertTaxRateValidateBeforeCall(menuId, taxRate, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<MenuTaxRate>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

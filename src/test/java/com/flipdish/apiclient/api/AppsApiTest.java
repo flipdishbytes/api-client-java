@@ -54,6 +54,23 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void appsSetPropertyIdTest() throws Exception {
+        String appId = null;
+        String orgId = null;
+        Object response = api.appsSetPropertyId(appId, orgId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void createAppTest() throws Exception {
         CreateAppParameters parameters = null;
         RestApiStringResult response = api.createApp(parameters);
@@ -324,23 +341,6 @@ public class AppsApiTest {
         String appId = null;
         String vanityUrl = null;
         RestApiStringResult response = api.setPanaceaVanityUrl(appId, vanityUrl);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void setPropertyIdTest() throws Exception {
-        String appId = null;
-        String orgId = null;
-        api.setPropertyId(appId, orgId);
 
         // TODO: test validations
     }

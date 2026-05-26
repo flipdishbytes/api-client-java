@@ -101,22 +101,6 @@ public class OAuthClientsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getApplicationsTest() throws Exception {
-        String appId = null;
-        api.getApplications(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void getOAuthAppsTest() throws Exception {
         String appId = null;
         String oauthAppName = null;
@@ -189,6 +173,22 @@ public class OAuthClientsApiTest {
         String oauthAppId = null;
         String appId = null;
         RestApiArrayResultOauthClientRedirectUri response = api.getRedirectUris(oauthAppId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void oAuthClientsGetApplicationsTest() throws Exception {
+        String appId = null;
+        Object response = api.oAuthClientsGetApplications(appId);
 
         // TODO: test validations
     }

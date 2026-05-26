@@ -88,7 +88,7 @@ public class ChannelsApiTest {
         String appId = null;
         Integer channelId = null;
         Integer storeId = null;
-        api.attachStoreToSalesChannel(appId, channelId, storeId);
+        Object response = api.attachStoreToSalesChannel(appId, channelId, storeId);
 
         // TODO: test validations
     }
@@ -105,7 +105,7 @@ public class ChannelsApiTest {
     public void detachAllStoresFromSalesChannelTest() throws Exception {
         String appId = null;
         Integer channelId = null;
-        api.detachAllStoresFromSalesChannel(appId, channelId);
+        Object response = api.detachAllStoresFromSalesChannel(appId, channelId);
 
         // TODO: test validations
     }
@@ -123,7 +123,7 @@ public class ChannelsApiTest {
         String appId = null;
         Integer channelId = null;
         Integer storeId = null;
-        api.detachStoreFromSalesChannel(appId, channelId, storeId);
+        Object response = api.detachStoreFromSalesChannel(appId, channelId, storeId);
 
         // TODO: test validations
     }

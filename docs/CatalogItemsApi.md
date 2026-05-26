@@ -4,19 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveCatalogItem**](CatalogItemsApi.md#archiveCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | 
-[**createCatalogItem**](CatalogItemsApi.md#createCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items | 
-[**duplicateCatalogItem**](CatalogItemsApi.md#duplicateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | 
-[**getCatalogItemById**](CatalogItemsApi.md#getCatalogItemById) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
-[**getItems**](CatalogItemsApi.md#getItems) | **GET** /api/v1.0/{appId}/catalog/items | 
-[**updateCatalogItem**](CatalogItemsApi.md#updateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | 
+[**archiveCatalogItem**](CatalogItemsApi.md#archiveCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
+[**createCatalogItem**](CatalogItemsApi.md#createCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
+[**duplicateCatalogItem**](CatalogItemsApi.md#duplicateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
+[**getCatalogItemById**](CatalogItemsApi.md#getCatalogItemById) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
+[**getItems**](CatalogItemsApi.md#getItems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
+[**updateCatalogItem**](CatalogItemsApi.md#updateCatalogItem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
 
 
 <a name="archiveCatalogItem"></a>
 # **archiveCatalogItem**
 > archiveCatalogItem(appId, catalogItemId)
 
+Archive Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -68,7 +70,9 @@ null (empty response body)
 # **createCatalogItem**
 > RestApiResultCatalogItem createCatalogItem(appId, createCatalogItem)
 
+Create a Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -121,7 +125,9 @@ Name | Type | Description  | Notes
 # **duplicateCatalogItem**
 > duplicateCatalogItem(appId, catalogItemId)
 
+Duplicate Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -173,7 +179,9 @@ null (empty response body)
 # **getCatalogItemById**
 > CatalogItem getCatalogItemById(appId, catalogItemId)
 
+Get item by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -226,7 +234,9 @@ Name | Type | Description  | Notes
 # **getItems**
 > RestApiPaginationResultCatalogItem getItems(appId, itemTypes, searchTerm, page, limit)
 
+Get paginated items by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -285,7 +295,9 @@ Name | Type | Description  | Notes
 # **updateCatalogItem**
 > updateCatalogItem(appId, catalogItemId, updateCatalogItem)
 
+Update Catalog Item
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

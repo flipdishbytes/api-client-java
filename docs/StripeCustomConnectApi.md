@@ -9,8 +9,8 @@ Method | HTTP request | Description
 [**createStripeConnectedAccountLink**](StripeCustomConnectApi.md#createStripeConnectedAccountLink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
 [**getCustomConnect**](StripeCustomConnectApi.md#getCustomConnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
 [**getVerificationStatus**](StripeCustomConnectApi.md#getVerificationStatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
-[**refresh**](StripeCustomConnectApi.md#refresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
+[**stripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripeCustomConnectRefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
 [**updatePayoutSchedule**](StripeCustomConnectApi.md#updatePayoutSchedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
 
@@ -282,59 +282,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="refresh"></a>
-# **refresh**
-> Object refresh(linkRequestId, appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.StripeCustomConnectApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-StripeCustomConnectApi apiInstance = new StripeCustomConnectApi();
-Integer linkRequestId = 56; // Integer | 
-String appId = "appId_example"; // String | 
-try {
-    Object result = apiInstance.refresh(linkRequestId, appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling StripeCustomConnectApi#refresh");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **linkRequestId** | **Integer**|  |
- **appId** | **String**|  |
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
 <a name="setBankAccountBusinessType"></a>
 # **setBankAccountBusinessType**
 > RestApiResultBankAccountDetail setBankAccountBusinessType(appId, bankAccountId, businessType)
@@ -388,6 +335,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="stripeCustomConnectRefresh"></a>
+# **stripeCustomConnectRefresh**
+> Object stripeCustomConnectRefresh(linkRequestId, appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StripeCustomConnectApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StripeCustomConnectApi apiInstance = new StripeCustomConnectApi();
+Integer linkRequestId = 56; // Integer | 
+String appId = "appId_example"; // String | 
+try {
+    Object result = apiInstance.stripeCustomConnectRefresh(linkRequestId, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StripeCustomConnectApi#stripeCustomConnectRefresh");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **linkRequestId** | **Integer**|  |
+ **appId** | **String**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="updateBankAccountDetails"></a>

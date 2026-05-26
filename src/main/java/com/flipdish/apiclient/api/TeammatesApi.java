@@ -70,258 +70,6 @@ public class TeammatesApi {
     }
 
     /**
-     * Build call for acceptInvitation
-     * @param otc  (required)
-     * @param appId  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call acceptInvitationCall(String otc, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/{appId}/teammates/accept/{otc}"
-            .replaceAll("\\{" + "otc" + "\\}", apiClient.escapeString(otc.toString()))
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call acceptInvitationValidateBeforeCall(String otc, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'otc' is set
-        if (otc == null) {
-            throw new ApiException("Missing the required parameter 'otc' when calling acceptInvitation(Async)");
-        }
-        
-        // verify the required parameter 'appId' is set
-        if (appId == null) {
-            throw new ApiException("Missing the required parameter 'appId' when calling acceptInvitation(Async)");
-        }
-        
-
-        com.squareup.okhttp.Call call = acceptInvitationCall(otc, appId, progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @param otc  (required)
-     * @param appId  (required)
-     * @return RestApiResultAcceptInvitationResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiResultAcceptInvitationResult acceptInvitation(String otc, String appId) throws ApiException {
-        ApiResponse<RestApiResultAcceptInvitationResult> resp = acceptInvitationWithHttpInfo(otc, appId);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @param otc  (required)
-     * @param appId  (required)
-     * @return ApiResponse&lt;RestApiResultAcceptInvitationResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiResultAcceptInvitationResult> acceptInvitationWithHttpInfo(String otc, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = acceptInvitationValidateBeforeCall(otc, appId, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultAcceptInvitationResult>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param otc  (required)
-     * @param appId  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call acceptInvitationAsync(String otc, String appId, final ApiCallback<RestApiResultAcceptInvitationResult> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = acceptInvitationValidateBeforeCall(otc, appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultAcceptInvitationResult>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for acceptInvitations
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call acceptInvitationsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/teammates/acceptInvitations";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call acceptInvitationsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-
-        com.squareup.okhttp.Call call = acceptInvitationsCall(progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @return RestApiArrayResultRedeemInvitationResult
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiArrayResultRedeemInvitationResult acceptInvitations() throws ApiException {
-        ApiResponse<RestApiArrayResultRedeemInvitationResult> resp = acceptInvitationsWithHttpInfo();
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @return ApiResponse&lt;RestApiArrayResultRedeemInvitationResult&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiArrayResultRedeemInvitationResult> acceptInvitationsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = acceptInvitationsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call acceptInvitationsAsync(final ApiCallback<RestApiArrayResultRedeemInvitationResult> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = acceptInvitationsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
      * Build call for createTeammate
      * @param appId  (required)
      * @param teammate  (required)
@@ -928,11 +676,11 @@ public class TeammatesApi {
      * 
      * @param appId  (required)
      * @param teammate  (required)
-     * @return RestApiResultTeammate
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultTeammate grantaccess(String appId, CreateTeammate teammate) throws ApiException {
-        ApiResponse<RestApiResultTeammate> resp = grantaccessWithHttpInfo(appId, teammate);
+    public Object grantaccess(String appId, CreateTeammate teammate) throws ApiException {
+        ApiResponse<Object> resp = grantaccessWithHttpInfo(appId, teammate);
         return resp.getData();
     }
 
@@ -941,12 +689,12 @@ public class TeammatesApi {
      * 
      * @param appId  (required)
      * @param teammate  (required)
-     * @return ApiResponse&lt;RestApiResultTeammate&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultTeammate> grantaccessWithHttpInfo(String appId, CreateTeammate teammate) throws ApiException {
+    public ApiResponse<Object> grantaccessWithHttpInfo(String appId, CreateTeammate teammate) throws ApiException {
         com.squareup.okhttp.Call call = grantaccessValidateBeforeCall(appId, teammate, null, null);
-        Type localVarReturnType = new TypeToken<RestApiResultTeammate>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -959,7 +707,7 @@ public class TeammatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call grantaccessAsync(String appId, CreateTeammate teammate, final ApiCallback<RestApiResultTeammate> callback) throws ApiException {
+    public com.squareup.okhttp.Call grantaccessAsync(String appId, CreateTeammate teammate, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -981,123 +729,7 @@ public class TeammatesApi {
         }
 
         com.squareup.okhttp.Call call = grantaccessValidateBeforeCall(appId, teammate, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiResultTeammate>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for pendingInvitations
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call pendingInvitationsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/api/v1.0/teammates/pending-invitations";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "text/json", "application/xml", "text/xml"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "oauth2" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call pendingInvitationsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-
-        com.squareup.okhttp.Call call = pendingInvitationsCall(progressListener, progressRequestListener);
-        return call;
-
-    }
-
-    /**
-     * 
-     * 
-     * @return RestApiArrayResultPendingInvitation
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public RestApiArrayResultPendingInvitation pendingInvitations() throws ApiException {
-        ApiResponse<RestApiArrayResultPendingInvitation> resp = pendingInvitationsWithHttpInfo();
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * 
-     * @return ApiResponse&lt;RestApiArrayResultPendingInvitation&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<RestApiArrayResultPendingInvitation> pendingInvitationsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = pendingInvitationsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingInvitation>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * 
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call pendingInvitationsAsync(final ApiCallback<RestApiArrayResultPendingInvitation> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = pendingInvitationsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingInvitation>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1234,6 +866,374 @@ public class TeammatesApi {
 
         com.squareup.okhttp.Call call = redeemInvitationValidateBeforeCall(otc, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultRedeemInvitationResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for teammatesAcceptInvitation
+     * @param otc  (required)
+     * @param appId  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call teammatesAcceptInvitationCall(String otc, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/{appId}/teammates/accept/{otc}"
+            .replaceAll("\\{" + "otc" + "\\}", apiClient.escapeString(otc.toString()))
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call teammatesAcceptInvitationValidateBeforeCall(String otc, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'otc' is set
+        if (otc == null) {
+            throw new ApiException("Missing the required parameter 'otc' when calling teammatesAcceptInvitation(Async)");
+        }
+        
+        // verify the required parameter 'appId' is set
+        if (appId == null) {
+            throw new ApiException("Missing the required parameter 'appId' when calling teammatesAcceptInvitation(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationCall(otc, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param otc  (required)
+     * @param appId  (required)
+     * @return RestApiResultAcceptInvitationResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiResultAcceptInvitationResult teammatesAcceptInvitation(String otc, String appId) throws ApiException {
+        ApiResponse<RestApiResultAcceptInvitationResult> resp = teammatesAcceptInvitationWithHttpInfo(otc, appId);
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param otc  (required)
+     * @param appId  (required)
+     * @return ApiResponse&lt;RestApiResultAcceptInvitationResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiResultAcceptInvitationResult> teammatesAcceptInvitationWithHttpInfo(String otc, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationValidateBeforeCall(otc, appId, null, null);
+        Type localVarReturnType = new TypeToken<RestApiResultAcceptInvitationResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param otc  (required)
+     * @param appId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call teammatesAcceptInvitationAsync(String otc, String appId, final ApiCallback<RestApiResultAcceptInvitationResult> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationValidateBeforeCall(otc, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiResultAcceptInvitationResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for teammatesAcceptInvitations
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call teammatesAcceptInvitationsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/teammates/acceptInvitations";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call teammatesAcceptInvitationsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationsCall(progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @return RestApiArrayResultRedeemInvitationResult
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations() throws ApiException {
+        ApiResponse<RestApiArrayResultRedeemInvitationResult> resp = teammatesAcceptInvitationsWithHttpInfo();
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @return ApiResponse&lt;RestApiArrayResultRedeemInvitationResult&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultRedeemInvitationResult> teammatesAcceptInvitationsWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationsValidateBeforeCall(null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call teammatesAcceptInvitationsAsync(final ApiCallback<RestApiArrayResultRedeemInvitationResult> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = teammatesAcceptInvitationsValidateBeforeCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultRedeemInvitationResult>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for teammatesPendingInvitations
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call teammatesPendingInvitationsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/api/v1.0/teammates/pending-invitations";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "text/json", "application/xml", "text/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "oauth2" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call teammatesPendingInvitationsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = teammatesPendingInvitationsCall(progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 
+     * 
+     * @return RestApiArrayResultPendingInvitation
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public RestApiArrayResultPendingInvitation teammatesPendingInvitations() throws ApiException {
+        ApiResponse<RestApiArrayResultPendingInvitation> resp = teammatesPendingInvitationsWithHttpInfo();
+        return resp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @return ApiResponse&lt;RestApiArrayResultPendingInvitation&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<RestApiArrayResultPendingInvitation> teammatesPendingInvitationsWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = teammatesPendingInvitationsValidateBeforeCall(null, null);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingInvitation>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call teammatesPendingInvitationsAsync(final ApiCallback<RestApiArrayResultPendingInvitation> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = teammatesPendingInvitationsValidateBeforeCall(progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<RestApiArrayResultPendingInvitation>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

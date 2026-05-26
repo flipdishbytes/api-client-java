@@ -40,7 +40,7 @@ public class MenuOptionSetItemsApiTest {
 
     
     /**
-     * 
+     * Create menu item option set item
      *
      * 
      *
@@ -60,7 +60,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * 
+     * Delete menu item option set item image
      *
      * 
      *
@@ -119,7 +119,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * 
+     * Delete menu item option set item
      *
      * 
      *
@@ -139,7 +139,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * 
+     * Set Tax Rate on OptionSetItem
      *
      * 
      *
@@ -160,7 +160,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * 
+     * Update menu item option set item
      *
      * 
      *
@@ -182,7 +182,7 @@ public class MenuOptionSetItemsApiTest {
     }
     
     /**
-     * 
+     * Upload menu item option set item image
      *
      * 
      *

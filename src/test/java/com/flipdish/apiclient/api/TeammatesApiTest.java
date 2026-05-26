@@ -51,38 +51,6 @@ public class TeammatesApiTest {
      *          if the Api call fails
      */
     @Test
-    public void acceptInvitationTest() throws Exception {
-        String otc = null;
-        String appId = null;
-        RestApiResultAcceptInvitationResult response = api.acceptInvitation(otc, appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void acceptInvitationsTest() throws Exception {
-        RestApiArrayResultRedeemInvitationResult response = api.acceptInvitations();
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void createTeammateTest() throws Exception {
         String appId = null;
         CreateTeammate teammate = null;
@@ -153,22 +121,7 @@ public class TeammatesApiTest {
     public void grantaccessTest() throws Exception {
         String appId = null;
         CreateTeammate teammate = null;
-        RestApiResultTeammate response = api.grantaccess(appId, teammate);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void pendingInvitationsTest() throws Exception {
-        RestApiArrayResultPendingInvitation response = api.pendingInvitations();
+        Object response = api.grantaccess(appId, teammate);
 
         // TODO: test validations
     }
@@ -186,6 +139,53 @@ public class TeammatesApiTest {
         String otc = null;
         String appId = null;
         RestApiResultRedeemInvitationResult response = api.redeemInvitation(otc, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void teammatesAcceptInvitationTest() throws Exception {
+        String otc = null;
+        String appId = null;
+        RestApiResultAcceptInvitationResult response = api.teammatesAcceptInvitation(otc, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void teammatesAcceptInvitationsTest() throws Exception {
+        RestApiArrayResultRedeemInvitationResult response = api.teammatesAcceptInvitations();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void teammatesPendingInvitationsTest() throws Exception {
+        RestApiArrayResultPendingInvitation response = api.teammatesPendingInvitations();
 
         // TODO: test validations
     }

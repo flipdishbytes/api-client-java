@@ -4,14 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uploadCatalogImage**](CatalogImagesApi.md#uploadCatalogImage) | **POST** /api/v1.0/{appId}/catalog/images | 
+[**uploadCatalogImage**](CatalogImagesApi.md#uploadCatalogImage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
 
 
 <a name="uploadCatalogImage"></a>
 # **uploadCatalogImage**
 > CatalogImage uploadCatalogImage(appId, image)
 
+Upload a Catalog Image
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

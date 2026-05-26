@@ -4,70 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOnboardingConfig**](OnboardingApi.md#getOnboardingConfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
-[**getOnboardingConfigs**](OnboardingApi.md#getOnboardingConfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
-[**getOnboardingItems**](OnboardingApi.md#getOnboardingItems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
-[**getOnboardingItemsV2**](OnboardingApi.md#getOnboardingItemsV2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
-[**updateOnboardingConfig**](OnboardingApi.md#updateOnboardingConfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
-[**updateOnboardingConfigById**](OnboardingApi.md#updateOnboardingConfigById) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
-[**updateOnboardingItem**](OnboardingApi.md#updateOnboardingItem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-[**updateOnboardingItemV2**](OnboardingApi.md#updateOnboardingItemV2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
+[**onboardingGetOnboardingConfig**](OnboardingApi.md#onboardingGetOnboardingConfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
+[**onboardingGetOnboardingConfigs**](OnboardingApi.md#onboardingGetOnboardingConfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
+[**onboardingGetOnboardingItems**](OnboardingApi.md#onboardingGetOnboardingItems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+[**onboardingGetOnboardingItemsV2**](OnboardingApi.md#onboardingGetOnboardingItemsV2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
+[**onboardingUpdateOnboardingConfig**](OnboardingApi.md#onboardingUpdateOnboardingConfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+[**onboardingUpdateOnboardingConfigById**](OnboardingApi.md#onboardingUpdateOnboardingConfigById) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
+[**onboardingUpdateOnboardingItem**](OnboardingApi.md#onboardingUpdateOnboardingItem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+[**onboardingUpdateOnboardingItemV2**](OnboardingApi.md#onboardingUpdateOnboardingItemV2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
 
 
-<a name="getOnboardingConfig"></a>
-# **getOnboardingConfig**
-> RestApiResultOnboardingConfig getOnboardingConfig(appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.OnboardingApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-OnboardingApi apiInstance = new OnboardingApi();
-String appId = "appId_example"; // String | 
-try {
-    RestApiResultOnboardingConfig result = apiInstance.getOnboardingConfig(appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#getOnboardingConfig");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiResultOnboardingConfig**](RestApiResultOnboardingConfig.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getOnboardingConfigs"></a>
-# **getOnboardingConfigs**
-> RestApiArrayResultOnboardingConfig getOnboardingConfigs(appId)
+<a name="onboardingGetOnboardingConfig"></a>
+# **onboardingGetOnboardingConfig**
+> Object onboardingGetOnboardingConfig(appId)
 
 
 
@@ -89,10 +38,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 OnboardingApi apiInstance = new OnboardingApi();
 String appId = "appId_example"; // String | 
 try {
-    RestApiArrayResultOnboardingConfig result = apiInstance.getOnboardingConfigs(appId);
+    Object result = apiInstance.onboardingGetOnboardingConfig(appId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#getOnboardingConfigs");
+    System.err.println("Exception when calling OnboardingApi#onboardingGetOnboardingConfig");
     e.printStackTrace();
 }
 ```
@@ -105,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiArrayResultOnboardingConfig**](RestApiArrayResultOnboardingConfig.md)
+**Object**
 
 ### Authorization
 
@@ -116,9 +65,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getOnboardingItems"></a>
-# **getOnboardingItems**
-> RestApiResultOnboardingProcess getOnboardingItems(appId, storeId, milestoneId)
+<a name="onboardingGetOnboardingConfigs"></a>
+# **onboardingGetOnboardingConfigs**
+> Object onboardingGetOnboardingConfigs(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.OnboardingApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+OnboardingApi apiInstance = new OnboardingApi();
+String appId = "appId_example"; // String | 
+try {
+    Object result = apiInstance.onboardingGetOnboardingConfigs(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OnboardingApi#onboardingGetOnboardingConfigs");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="onboardingGetOnboardingItems"></a>
+# **onboardingGetOnboardingItems**
+> Object onboardingGetOnboardingItems(appId, storeId, milestoneId)
 
 
 
@@ -142,10 +142,10 @@ String appId = "appId_example"; // String |
 Integer storeId = 56; // Integer | 
 Integer milestoneId = 56; // Integer | 
 try {
-    RestApiResultOnboardingProcess result = apiInstance.getOnboardingItems(appId, storeId, milestoneId);
+    Object result = apiInstance.onboardingGetOnboardingItems(appId, storeId, milestoneId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#getOnboardingItems");
+    System.err.println("Exception when calling OnboardingApi#onboardingGetOnboardingItems");
     e.printStackTrace();
 }
 ```
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultOnboardingProcess**](RestApiResultOnboardingProcess.md)
+**Object**
 
 ### Authorization
 
@@ -171,9 +171,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getOnboardingItemsV2"></a>
-# **getOnboardingItemsV2**
-> RestApiResultOnboardingProcess getOnboardingItemsV2(appId, storeId, milestoneId)
+<a name="onboardingGetOnboardingItemsV2"></a>
+# **onboardingGetOnboardingItemsV2**
+> Object onboardingGetOnboardingItemsV2(appId, storeId, milestoneId)
 
 
 
@@ -197,10 +197,10 @@ String appId = "appId_example"; // String |
 Integer storeId = 56; // Integer | 
 Integer milestoneId = 56; // Integer | 
 try {
-    RestApiResultOnboardingProcess result = apiInstance.getOnboardingItemsV2(appId, storeId, milestoneId);
+    Object result = apiInstance.onboardingGetOnboardingItemsV2(appId, storeId, milestoneId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#getOnboardingItemsV2");
+    System.err.println("Exception when calling OnboardingApi#onboardingGetOnboardingItemsV2");
     e.printStackTrace();
 }
 ```
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultOnboardingProcess**](RestApiResultOnboardingProcess.md)
+**Object**
 
 ### Authorization
 
@@ -226,9 +226,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateOnboardingConfig"></a>
-# **updateOnboardingConfig**
-> updateOnboardingConfig(appId, configUpdate)
+<a name="onboardingUpdateOnboardingConfig"></a>
+# **onboardingUpdateOnboardingConfig**
+> Object onboardingUpdateOnboardingConfig(appId, configUpdate)
 
 
 
@@ -251,9 +251,10 @@ OnboardingApi apiInstance = new OnboardingApi();
 String appId = "appId_example"; // String | 
 OnboardingConfigUpdate configUpdate = new OnboardingConfigUpdate(); // OnboardingConfigUpdate | 
 try {
-    apiInstance.updateOnboardingConfig(appId, configUpdate);
+    Object result = apiInstance.onboardingUpdateOnboardingConfig(appId, configUpdate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#updateOnboardingConfig");
+    System.err.println("Exception when calling OnboardingApi#onboardingUpdateOnboardingConfig");
     e.printStackTrace();
 }
 ```
@@ -267,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -278,9 +279,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateOnboardingConfigById"></a>
-# **updateOnboardingConfigById**
-> updateOnboardingConfigById(appId, configId, configUpdate)
+<a name="onboardingUpdateOnboardingConfigById"></a>
+# **onboardingUpdateOnboardingConfigById**
+> Object onboardingUpdateOnboardingConfigById(appId, configId, configUpdate)
 
 
 
@@ -304,9 +305,10 @@ String appId = "appId_example"; // String |
 Integer configId = 56; // Integer | 
 OnboardingConfigUpdate configUpdate = new OnboardingConfigUpdate(); // OnboardingConfigUpdate | 
 try {
-    apiInstance.updateOnboardingConfigById(appId, configId, configUpdate);
+    Object result = apiInstance.onboardingUpdateOnboardingConfigById(appId, configId, configUpdate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#updateOnboardingConfigById");
+    System.err.println("Exception when calling OnboardingApi#onboardingUpdateOnboardingConfigById");
     e.printStackTrace();
 }
 ```
@@ -321,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -332,9 +334,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateOnboardingItem"></a>
-# **updateOnboardingItem**
-> updateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate)
+<a name="onboardingUpdateOnboardingItem"></a>
+# **onboardingUpdateOnboardingItem**
+> Object onboardingUpdateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate)
 
 
 
@@ -359,9 +361,10 @@ Integer storeId = 56; // Integer |
 Integer onboardingItemId = 56; // Integer | 
 OnboardingItemUpdate itemUpdate = new OnboardingItemUpdate(); // OnboardingItemUpdate | 
 try {
-    apiInstance.updateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
+    Object result = apiInstance.onboardingUpdateOnboardingItem(appId, storeId, onboardingItemId, itemUpdate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#updateOnboardingItem");
+    System.err.println("Exception when calling OnboardingApi#onboardingUpdateOnboardingItem");
     e.printStackTrace();
 }
 ```
@@ -377,7 +380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -388,9 +391,9 @@ null (empty response body)
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="updateOnboardingItemV2"></a>
-# **updateOnboardingItemV2**
-> updateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId)
+<a name="onboardingUpdateOnboardingItemV2"></a>
+# **onboardingUpdateOnboardingItemV2**
+> Object onboardingUpdateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId)
 
 
 
@@ -415,9 +418,10 @@ Integer onboardingItemId = 56; // Integer |
 OnboardingItemUpdate itemUpdate = new OnboardingItemUpdate(); // OnboardingItemUpdate | 
 Integer storeId = 56; // Integer | 
 try {
-    apiInstance.updateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
+    Object result = apiInstance.onboardingUpdateOnboardingItemV2(appId, onboardingItemId, itemUpdate, storeId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling OnboardingApi#updateOnboardingItemV2");
+    System.err.println("Exception when calling OnboardingApi#onboardingUpdateOnboardingItemV2");
     e.printStackTrace();
 }
 ```
@@ -433,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

@@ -4,19 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | 
-[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | 
-[**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | 
-[**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
-[**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | 
-[**updateGroup**](CatalogGroupsApi.md#updateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
+[**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
+[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+[**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+[**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
+[**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
+[**updateGroup**](CatalogGroupsApi.md#updateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
 
 
 <a name="archiveGroup"></a>
 # **archiveGroup**
 > archiveGroup(appId, catalogItemId)
 
+Archive Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -68,7 +70,9 @@ null (empty response body)
 # **createGroup**
 > RestApiResultGroup createGroup(appId, createGroup)
 
+Create a Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -121,7 +125,9 @@ Name | Type | Description  | Notes
 # **duplicateGroup**
 > duplicateGroup(appId, catalogItemId)
 
+Duplicate Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -173,7 +179,9 @@ null (empty response body)
 # **getGroupById**
 > Group getGroupById(appId, catalogItemId)
 
+Get group by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -226,7 +234,9 @@ Name | Type | Description  | Notes
 # **getGroups**
 > RestApiPaginationResultGroup getGroups(appId, groupTypes, searchTerm, page, limit)
 
+Get paginated groups by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java
@@ -285,7 +295,9 @@ Name | Type | Description  | Notes
 # **updateGroup**
 > updateGroup(appId, catalogItemId, updateGroup)
 
+Update Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```java

@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | 
-[**deleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteOptionSetItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
+[**addMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#addMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
+[**deleteOptionSetItemImage**](MenuOptionSetItemsApi.md#deleteOptionSetItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 [**getMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**getMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
-[**removeMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removeMenuItemOptionSetItem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
-[**setOptionSetItemTax**](MenuOptionSetItemsApi.md#setOptionSetItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | 
-[**updateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updateMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | 
-[**uploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadOptionSetItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | 
+[**removeMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removeMenuItemOptionSetItem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
+[**setOptionSetItemTax**](MenuOptionSetItemsApi.md#setOptionSetItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
+[**updateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updateMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
+[**uploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadOptionSetItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
 
 <a name="addMenuItemOptionSetItem"></a>
 # **addMenuItemOptionSetItem**
 > Object addMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem)
 
-
+Create menu item option set item
 
 ### Example
 ```java
@@ -36,11 +36,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-Integer menuSectionItemId = 56; // Integer | 
-Integer optionSetId = 56; // Integer | 
-MenuItemOptionSetItemBase menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | 
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuSectionItemId = 56; // Integer | Menu section item identifier
+Integer optionSetId = 56; // Integer | Option set identifier
+MenuItemOptionSetItemBase menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item
 try {
     Object result = apiInstance.addMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItem);
     System.out.println(result);
@@ -54,11 +54,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
- **menuSectionItemId** | **Integer**|  |
- **optionSetId** | **Integer**|  |
- **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)|  |
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **menuSectionItemId** | **Integer**| Menu section item identifier |
+ **optionSetId** | **Integer**| Option set identifier |
+ **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item |
 
 ### Return type
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 # **deleteOptionSetItemImage**
 > deleteOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId)
 
-
+Delete menu item option set item image
 
 ### Example
 ```java
@@ -95,11 +95,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-Integer menuSectionItemId = 56; // Integer | 
-Integer optionSetId = 56; // Integer | 
-Integer menuItemOptionSetItemId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuSectionItemId = 56; // Integer | Menu section item identifier
+Integer optionSetId = 56; // Integer | Option set identifier
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
 try {
     apiInstance.deleteOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
 } catch (ApiException e) {
@@ -112,11 +112,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
- **menuSectionItemId** | **Integer**|  |
- **optionSetId** | **Integer**|  |
- **menuItemOptionSetItemId** | **Integer**|  |
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **menuSectionItemId** | **Integer**| Menu section item identifier |
+ **optionSetId** | **Integer**| Option set identifier |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
 
 ### Return type
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 # **removeMenuItemOptionSetItem**
 > removeMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId)
 
-
+Delete menu item option set item
 
 ### Example
 ```java
@@ -269,11 +269,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-Integer menuSectionItemId = 56; // Integer | 
-Integer optionSetId = 56; // Integer | 
-Integer menuItemOptionSetItemId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuSectionItemId = 56; // Integer | Menu section item identifier
+Integer optionSetId = 56; // Integer | Option set identifier
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
 try {
     apiInstance.removeMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId);
 } catch (ApiException e) {
@@ -286,11 +286,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
- **menuSectionItemId** | **Integer**|  |
- **optionSetId** | **Integer**|  |
- **menuItemOptionSetItemId** | **Integer**|  |
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **menuSectionItemId** | **Integer**| Menu section item identifier |
+ **optionSetId** | **Integer**| Option set identifier |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
 
 ### Return type
 
@@ -309,7 +309,7 @@ null (empty response body)
 # **setOptionSetItemTax**
 > setOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId)
 
-
+Set Tax Rate on OptionSetItem
 
 ### Example
 ```java
@@ -327,12 +327,12 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu identifier
 Integer menuSectionId = 56; // Integer | 
 Integer menuSectionItemId = 56; // Integer | 
 Integer optionSetId = 56; // Integer | 
-Integer menuItemOptionSetItemId = 56; // Integer | 
-Integer taxRateId = 56; // Integer | 
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
+Integer taxRateId = 56; // Integer | Tax Rate to use
 try {
     apiInstance.setOptionSetItemTax(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, taxRateId);
 } catch (ApiException e) {
@@ -345,12 +345,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
+ **menuId** | **Integer**| Menu identifier |
  **menuSectionId** | **Integer**|  |
  **menuSectionItemId** | **Integer**|  |
  **optionSetId** | **Integer**|  |
- **menuItemOptionSetItemId** | **Integer**|  |
- **taxRateId** | **Integer**|  |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
+ **taxRateId** | **Integer**| Tax Rate to use |
 
 ### Return type
 
@@ -369,7 +369,7 @@ null (empty response body)
 # **updateMenuItemOptionSetItem**
 > updateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem, undoAfter)
 
-
+Update menu item option set item
 
 ### Example
 ```java
@@ -387,13 +387,13 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-Integer menuSectionItemId = 56; // Integer | 
-Integer optionSetId = 56; // Integer | 
-Integer menuItemOptionSetItemId = 56; // Integer | 
-MenuItemOptionSetItemBase menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | 
-Double undoAfter = 3.4D; // Double | 
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuSectionItemId = 56; // Integer | Menu section item identifier
+Integer optionSetId = 56; // Integer | Option set identifier
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
+MenuItemOptionSetItemBase menuItemOptionSetItem = new MenuItemOptionSetItemBase(); // MenuItemOptionSetItemBase | Option set item (delta)
+Double undoAfter = 3.4D; // Double | An optional time period, in hours, after which the hide-section operation will be undone.
 try {
     apiInstance.updateMenuItemOptionSetItem(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, menuItemOptionSetItem, undoAfter);
 } catch (ApiException e) {
@@ -406,13 +406,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
- **menuSectionItemId** | **Integer**|  |
- **optionSetId** | **Integer**|  |
- **menuItemOptionSetItemId** | **Integer**|  |
- **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)|  |
- **undoAfter** | **Double**|  | [optional]
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **menuSectionItemId** | **Integer**| Menu section item identifier |
+ **optionSetId** | **Integer**| Option set identifier |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
+ **menuItemOptionSetItem** | [**MenuItemOptionSetItemBase**](MenuItemOptionSetItemBase.md)| Option set item (delta) |
+ **undoAfter** | **Double**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional]
 
 ### Return type
 
@@ -431,7 +431,7 @@ null (empty response body)
 # **uploadOptionSetItemImage**
 > RestApiStringResult uploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image)
 
-
+Upload menu item option set item image
 
 ### Example
 ```java
@@ -449,11 +449,11 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MenuOptionSetItemsApi apiInstance = new MenuOptionSetItemsApi();
-Integer menuId = 56; // Integer | 
-Integer menuSectionId = 56; // Integer | 
-Integer menuSectionItemId = 56; // Integer | 
-Integer optionSetId = 56; // Integer | 
-Integer menuItemOptionSetItemId = 56; // Integer | 
+Integer menuId = 56; // Integer | Menu identifier
+Integer menuSectionId = 56; // Integer | Menu section identifier
+Integer menuSectionItemId = 56; // Integer | Menu section item identifier
+Integer optionSetId = 56; // Integer | Option set identifier
+Integer menuItemOptionSetItemId = 56; // Integer | Option set item identifier
 File image = new File("/path/to/file.txt"); // File | Option set item image
 try {
     RestApiStringResult result = apiInstance.uploadOptionSetItemImage(menuId, menuSectionId, menuSectionItemId, optionSetId, menuItemOptionSetItemId, image);
@@ -468,11 +468,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menuId** | **Integer**|  |
- **menuSectionId** | **Integer**|  |
- **menuSectionItemId** | **Integer**|  |
- **optionSetId** | **Integer**|  |
- **menuItemOptionSetItemId** | **Integer**|  |
+ **menuId** | **Integer**| Menu identifier |
+ **menuSectionId** | **Integer**| Menu section identifier |
+ **menuSectionItemId** | **Integer**| Menu section item identifier |
+ **optionSetId** | **Integer**| Option set identifier |
+ **menuItemOptionSetItemId** | **Integer**| Option set item identifier |
  **image** | **File**| Option set item image |
 
 ### Return type

@@ -68,9 +68,9 @@ public class WhiteLabelConfigApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getPlayStoreConfigTest() throws Exception {
+    public void getAppStoreConfigTest() throws Exception {
         String appId = null;
-        RestApiResultPlayStoreConfigModel response = api.getPlayStoreConfig(appId);
+        RestApiResultAppStoreConfigModel response = api.getAppStoreConfig(appId);
 
         // TODO: test validations
     }
@@ -84,9 +84,9 @@ public class WhiteLabelConfigApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getWhiteLabelAppStoreConfigTest() throws Exception {
+    public void getPlayStoreConfigTest() throws Exception {
         String appId = null;
-        RestApiResultAppStoreConfigModel response = api.getWhiteLabelAppStoreConfig(appId);
+        RestApiResultPlayStoreConfigModel response = api.getPlayStoreConfig(appId);
 
         // TODO: test validations
     }
@@ -132,10 +132,42 @@ public class WhiteLabelConfigApiTest {
      *          if the Api call fails
      */
     @Test
+    public void healthCheckTest() throws Exception {
+        String response = api.healthCheck();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void updateAppGeneralConfigTest() throws Exception {
         String appId = null;
         AppGeneralConfigModel appGeneralConfig = null;
         RestApiResultAppGeneralConfigModel response = api.updateAppGeneralConfig(appId, appGeneralConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void updateAppStoreConfigTest() throws Exception {
+        String appId = null;
+        AppStoreConfigModel appStoreConfig = null;
+        RestApiResultAppStoreConfigModel response = api.updateAppStoreConfig(appId, appStoreConfig);
 
         // TODO: test validations
     }
@@ -166,42 +198,10 @@ public class WhiteLabelConfigApiTest {
      *          if the Api call fails
      */
     @Test
-    public void updateWhiteLabelAppStoreConfigTest() throws Exception {
-        String appId = null;
-        AppStoreConfigModel appStoreConfig = null;
-        RestApiResultAppStoreConfigModel response = api.updateWhiteLabelAppStoreConfig(appId, appStoreConfig);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void uploadAppStoreIconTest() throws Exception {
         String appId = null;
         HttpPostedFileBase file = null;
         RestApiResultAssetResultModel response = api.uploadAppStoreIcon(appId, file);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void whiteLabelConfigHealthCheckTest() throws Exception {
-        String response = api.whiteLabelConfigHealthCheck();
 
         // TODO: test validations
     }

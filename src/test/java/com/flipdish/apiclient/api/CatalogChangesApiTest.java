@@ -38,9 +38,9 @@ public class CatalogChangesApiTest {
 
     
     /**
-     * 
+     * Get menu pending changes from Catalog groups and items
      *
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      *
      * @throws Exception
      *          if the Api call fails
@@ -58,7 +58,7 @@ public class CatalogChangesApiTest {
     }
     
     /**
-     * 
+     * Get menu pending changes summaries by appId
      *
      * 
      *
@@ -74,9 +74,9 @@ public class CatalogChangesApiTest {
     }
     
     /**
-     * 
+     * Update menus with the pending changes from Catalog groups and items
      *
-     * 
+     * [BETA - this endpoint is under development, do not use it in your production system]
      *
      * @throws Exception
      *          if the Api call fails

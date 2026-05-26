@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**report**](ContentSecurityPolicyApi.md#report) | **POST** /api/v1.0/csp/report | 
+[**contentSecurityPolicyReport**](ContentSecurityPolicyApi.md#contentSecurityPolicyReport) | **POST** /api/v1.0/csp/report | 
 
 
-<a name="report"></a>
-# **report**
-> report(request)
+<a name="contentSecurityPolicyReport"></a>
+# **contentSecurityPolicyReport**
+> Object contentSecurityPolicyReport(request)
 
 
 
@@ -31,9 +31,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 ContentSecurityPolicyApi apiInstance = new ContentSecurityPolicyApi();
 CspReportRequest request = new CspReportRequest(); // CspReportRequest | 
 try {
-    apiInstance.report(request);
+    Object result = apiInstance.contentSecurityPolicyReport(request);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ContentSecurityPolicyApi#report");
+    System.err.println("Exception when calling ContentSecurityPolicyApi#contentSecurityPolicyReport");
     e.printStackTrace();
 }
 ```
@@ -46,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

@@ -44,6 +44,21 @@ public class WhiteLabelBuildsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void healthCheckTest() throws Exception {
+        String response = api.healthCheck();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void submitAndroidAppsTest() throws Exception {
         String whiteLabelIds = null;
         String branch = null;
@@ -105,21 +120,6 @@ public class WhiteLabelBuildsApiTest {
         String branch = null;
         Boolean submitForReview = null;
         RestApiResultBuildResultModel response = api.submitIosBuild(appId, buildType, branch, submitForReview);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void whiteLabelBuildsHealthCheckTest() throws Exception {
-        String response = api.whiteLabelBuildsHealthCheck();
 
         // TODO: test validations
     }

@@ -4,117 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**acceptInvitation**](TeammatesApi.md#acceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
-[**acceptInvitations**](TeammatesApi.md#acceptInvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 [**createTeammate**](TeammatesApi.md#createTeammate) | **POST** /api/v1.0/{appId}/teammates | 
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
 [**grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
-[**pendingInvitations**](TeammatesApi.md#pendingInvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+[**teammatesAcceptInvitations**](TeammatesApi.md#teammatesAcceptInvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
+[**teammatesPendingInvitations**](TeammatesApi.md#teammatesPendingInvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
-
-<a name="acceptInvitation"></a>
-# **acceptInvitation**
-> RestApiResultAcceptInvitationResult acceptInvitation(otc, appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.TeammatesApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-TeammatesApi apiInstance = new TeammatesApi();
-String otc = "otc_example"; // String | 
-String appId = "appId_example"; // String | 
-try {
-    RestApiResultAcceptInvitationResult result = apiInstance.acceptInvitation(otc, appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TeammatesApi#acceptInvitation");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **otc** | **String**|  |
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="acceptInvitations"></a>
-# **acceptInvitations**
-> RestApiArrayResultRedeemInvitationResult acceptInvitations()
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.TeammatesApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-TeammatesApi apiInstance = new TeammatesApi();
-try {
-    RestApiArrayResultRedeemInvitationResult result = apiInstance.acceptInvitations();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TeammatesApi#acceptInvitations");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="createTeammate"></a>
 # **createTeammate**
@@ -327,7 +227,7 @@ Name | Type | Description  | Notes
 
 <a name="grantaccess"></a>
 # **grantaccess**
-> RestApiResultTeammate grantaccess(appId, teammate)
+> Object grantaccess(appId, teammate)
 
 
 
@@ -350,7 +250,7 @@ TeammatesApi apiInstance = new TeammatesApi();
 String appId = "appId_example"; // String | 
 CreateTeammate teammate = new CreateTeammate(); // CreateTeammate | 
 try {
-    RestApiResultTeammate result = apiInstance.grantaccess(appId, teammate);
+    Object result = apiInstance.grantaccess(appId, teammate);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TeammatesApi#grantaccess");
@@ -367,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestApiResultTeammate**](RestApiResultTeammate.md)
+**Object**
 
 ### Authorization
 
@@ -376,53 +276,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="pendingInvitations"></a>
-# **pendingInvitations**
-> RestApiArrayResultPendingInvitation pendingInvitations()
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.TeammatesApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-TeammatesApi apiInstance = new TeammatesApi();
-try {
-    RestApiArrayResultPendingInvitation result = apiInstance.pendingInvitations();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling TeammatesApi#pendingInvitations");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestApiArrayResultPendingInvitation**](RestApiArrayResultPendingInvitation.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="redeemInvitation"></a>
@@ -468,6 +321,153 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="teammatesAcceptInvitation"></a>
+# **teammatesAcceptInvitation**
+> RestApiResultAcceptInvitationResult teammatesAcceptInvitation(otc, appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.TeammatesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+TeammatesApi apiInstance = new TeammatesApi();
+String otc = "otc_example"; // String | 
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultAcceptInvitationResult result = apiInstance.teammatesAcceptInvitation(otc, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TeammatesApi#teammatesAcceptInvitation");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **String**|  |
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultAcceptInvitationResult**](RestApiResultAcceptInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="teammatesAcceptInvitations"></a>
+# **teammatesAcceptInvitations**
+> RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations()
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.TeammatesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+TeammatesApi apiInstance = new TeammatesApi();
+try {
+    RestApiArrayResultRedeemInvitationResult result = apiInstance.teammatesAcceptInvitations();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TeammatesApi#teammatesAcceptInvitations");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestApiArrayResultRedeemInvitationResult**](RestApiArrayResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="teammatesPendingInvitations"></a>
+# **teammatesPendingInvitations**
+> RestApiArrayResultPendingInvitation teammatesPendingInvitations()
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.TeammatesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+TeammatesApi apiInstance = new TeammatesApi();
+try {
+    RestApiArrayResultPendingInvitation result = apiInstance.teammatesPendingInvitations();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TeammatesApi#teammatesPendingInvitations");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestApiArrayResultPendingInvitation**](RestApiArrayResultPendingInvitation.md)
 
 ### Authorization
 

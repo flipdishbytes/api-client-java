@@ -125,23 +125,23 @@ public class HeartbeatApi {
     /**
      * 
      * 
-     * @return RestApiStringResult
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiStringResult headHostname() throws ApiException {
-        ApiResponse<RestApiStringResult> resp = headHostnameWithHttpInfo();
+    public Object headHostname() throws ApiException {
+        ApiResponse<Object> resp = headHostnameWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * 
      * 
-     * @return ApiResponse&lt;RestApiStringResult&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiStringResult> headHostnameWithHttpInfo() throws ApiException {
+    public ApiResponse<Object> headHostnameWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = headHostnameValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -152,7 +152,7 @@ public class HeartbeatApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headHostnameAsync(final ApiCallback<RestApiStringResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call headHostnameAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -174,7 +174,7 @@ public class HeartbeatApi {
         }
 
         com.squareup.okhttp.Call call = headHostnameValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -357,23 +357,23 @@ public class HeartbeatApi {
     /**
      * 
      * 
-     * @return RestApiStringResult
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiStringResult hostname() throws ApiException {
-        ApiResponse<RestApiStringResult> resp = hostnameWithHttpInfo();
+    public Object hostname() throws ApiException {
+        ApiResponse<Object> resp = hostnameWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * 
      * 
-     * @return ApiResponse&lt;RestApiStringResult&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiStringResult> hostnameWithHttpInfo() throws ApiException {
+    public ApiResponse<Object> hostnameWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = hostnameValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -384,7 +384,7 @@ public class HeartbeatApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call hostnameAsync(final ApiCallback<RestApiStringResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call hostnameAsync(final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -406,7 +406,7 @@ public class HeartbeatApi {
         }
 
         com.squareup.okhttp.Call call = hostnameValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<RestApiStringResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

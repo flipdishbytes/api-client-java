@@ -141,8 +141,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Archive Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -152,8 +152,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Archive Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -165,8 +165,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Archive Product (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -272,8 +272,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Create a Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createProduct  (required)
      * @return RestApiResultProduct
@@ -285,8 +285,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Create a Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createProduct  (required)
      * @return ApiResponse&lt;RestApiResultProduct&gt;
@@ -299,8 +299,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Create a Product (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createProduct  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -408,8 +408,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Duplicate Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -419,8 +419,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Duplicate Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -432,8 +432,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Duplicate Product (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -540,8 +540,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Get Product by Id
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return Product
@@ -553,8 +553,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Get Product by Id
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Product&gt;
@@ -567,8 +567,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get Product by Id (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -686,8 +686,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Get paginated products by app name id filtered by types
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param productTypes  (required)
      * @param searchTerm  (optional)
@@ -702,8 +702,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Get paginated products by app name id filtered by types
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param productTypes  (required)
      * @param searchTerm  (optional)
@@ -719,8 +719,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get paginated products by app name id filtered by types (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param productTypes  (required)
      * @param searchTerm  (optional)
@@ -837,8 +837,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Update Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateProduct  (required)
@@ -849,8 +849,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     * 
-     * 
+     * Update Product
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateProduct  (required)
@@ -863,8 +863,8 @@ public class CatalogProductsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Update Product (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateProduct  (required)

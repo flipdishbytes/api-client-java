@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.flipdish.apiclient.model.CustomerCreateModel;
 import com.flipdish.apiclient.model.CustomerUpdateModel;
+import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultCustomer;
 import com.flipdish.apiclient.model.RestApiResultCustomers;

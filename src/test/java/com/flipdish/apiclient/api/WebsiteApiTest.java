@@ -67,22 +67,6 @@ public class WebsiteApiTest {
      *          if the Api call fails
      */
     @Test
-    public void checkNowTest() throws Exception {
-        String appId = null;
-        api.checkNow(appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void deleteTestimonialTest() throws Exception {
         String appId = null;
         Integer testimonialId = null;
@@ -173,6 +157,22 @@ public class WebsiteApiTest {
         String imageLocation = null;
         File image = null;
         RestApiResultWebsiteImage response = api.uploadWebsiteImage(appId, imageLocation, image);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void websiteCheckNowTest() throws Exception {
+        String appId = null;
+        api.websiteCheckNow(appId);
 
         // TODO: test validations
     }

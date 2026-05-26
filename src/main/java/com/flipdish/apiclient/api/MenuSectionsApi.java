@@ -644,8 +644,8 @@ public class MenuSectionsApi {
     }
     /**
      * Build call for deleteMenuSection
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -717,10 +717,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Delete menu section
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteMenuSection(Integer menuId, Integer menuSectionId) throws ApiException {
@@ -728,10 +728,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Delete menu section
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -741,10 +741,10 @@ public class MenuSectionsApi {
     }
 
     /**
-     *  (asynchronously)
+     * Delete menu section (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -776,8 +776,8 @@ public class MenuSectionsApi {
     }
     /**
      * Build call for deleteMenuSectionImage
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -849,10 +849,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Delete menu section image
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void deleteMenuSectionImage(Integer menuId, Integer menuSectionId) throws ApiException {
@@ -860,10 +860,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Delete menu section image
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -873,10 +873,10 @@ public class MenuSectionsApi {
     }
 
     /**
-     *  (asynchronously)
+     * Delete menu section image (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1169,16 +1169,16 @@ public class MenuSectionsApi {
         return call;
     }
     /**
-     * Build call for setItemDisplayOrders
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
-     * @param displayOrders  (required)
+     * Build call for menuSectionsSetItemDisplayOrders
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
+     * @param displayOrders Item Ids and their new display order (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call setItemDisplayOrdersCall(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call menuSectionsSetItemDisplayOrdersCall(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = displayOrders;
 
         // create path and map variables
@@ -1225,66 +1225,66 @@ public class MenuSectionsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call setItemDisplayOrdersValidateBeforeCall(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call menuSectionsSetItemDisplayOrdersValidateBeforeCall(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'menuId' is set
         if (menuId == null) {
-            throw new ApiException("Missing the required parameter 'menuId' when calling setItemDisplayOrders(Async)");
+            throw new ApiException("Missing the required parameter 'menuId' when calling menuSectionsSetItemDisplayOrders(Async)");
         }
         
         // verify the required parameter 'menuSectionId' is set
         if (menuSectionId == null) {
-            throw new ApiException("Missing the required parameter 'menuSectionId' when calling setItemDisplayOrders(Async)");
+            throw new ApiException("Missing the required parameter 'menuSectionId' when calling menuSectionsSetItemDisplayOrders(Async)");
         }
         
         // verify the required parameter 'displayOrders' is set
         if (displayOrders == null) {
-            throw new ApiException("Missing the required parameter 'displayOrders' when calling setItemDisplayOrders(Async)");
+            throw new ApiException("Missing the required parameter 'displayOrders' when calling menuSectionsSetItemDisplayOrders(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = setItemDisplayOrdersCall(menuId, menuSectionId, displayOrders, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = menuSectionsSetItemDisplayOrdersCall(menuId, menuSectionId, displayOrders, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
+     * Re-arrange Items within a Section
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
-     * @param displayOrders  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
+     * @param displayOrders Item Ids and their new display order (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void setItemDisplayOrders(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders) throws ApiException {
-        setItemDisplayOrdersWithHttpInfo(menuId, menuSectionId, displayOrders);
+    public void menuSectionsSetItemDisplayOrders(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders) throws ApiException {
+        menuSectionsSetItemDisplayOrdersWithHttpInfo(menuId, menuSectionId, displayOrders);
     }
 
     /**
+     * Re-arrange Items within a Section
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
-     * @param displayOrders  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
+     * @param displayOrders Item Ids and their new display order (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> setItemDisplayOrdersWithHttpInfo(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders) throws ApiException {
-        com.squareup.okhttp.Call call = setItemDisplayOrdersValidateBeforeCall(menuId, menuSectionId, displayOrders, null, null);
+    public ApiResponse<Void> menuSectionsSetItemDisplayOrdersWithHttpInfo(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders) throws ApiException {
+        com.squareup.okhttp.Call call = menuSectionsSetItemDisplayOrdersValidateBeforeCall(menuId, menuSectionId, displayOrders, null, null);
         return apiClient.execute(call);
     }
 
     /**
-     *  (asynchronously)
+     * Re-arrange Items within a Section (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
-     * @param displayOrders  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
+     * @param displayOrders Item Ids and their new display order (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call setItemDisplayOrdersAsync(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call menuSectionsSetItemDisplayOrdersAsync(Integer menuId, Integer menuSectionId, MenuObjectDisplayOrders displayOrders, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1305,7 +1305,7 @@ public class MenuSectionsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = setItemDisplayOrdersValidateBeforeCall(menuId, menuSectionId, displayOrders, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = menuSectionsSetItemDisplayOrdersValidateBeforeCall(menuId, menuSectionId, displayOrders, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1458,8 +1458,8 @@ public class MenuSectionsApi {
     }
     /**
      * Build call for uploadMenuSectionImage
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param image Menu section image (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -1539,10 +1539,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Upload menu section image
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param image Menu section image (required)
      * @return RestApiStringResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1553,10 +1553,10 @@ public class MenuSectionsApi {
     }
 
     /**
+     * Upload menu section image
      * 
-     * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param image Menu section image (required)
      * @return ApiResponse&lt;RestApiStringResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1568,10 +1568,10 @@ public class MenuSectionsApi {
     }
 
     /**
-     *  (asynchronously)
+     * Upload menu section image (asynchronously)
      * 
-     * @param menuId  (required)
-     * @param menuSectionId  (required)
+     * @param menuId Menu identifier (required)
+     * @param menuSectionId Menu section identifier (required)
      * @param image Menu section image (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

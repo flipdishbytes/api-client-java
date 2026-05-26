@@ -141,8 +141,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Archive Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -152,8 +152,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Archive Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -165,8 +165,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Archive Catalog Group (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -272,8 +272,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Create a Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createGroup  (required)
      * @return RestApiResultGroup
@@ -285,8 +285,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Create a Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createGroup  (required)
      * @return ApiResponse&lt;RestApiResultGroup&gt;
@@ -299,8 +299,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Create a Catalog Group (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param createGroup  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -408,8 +408,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Duplicate Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -419,8 +419,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Duplicate Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -432,8 +432,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Duplicate Catalog Group (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -540,8 +540,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Get group by Id
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return Group
@@ -553,8 +553,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Get group by Id
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @return ApiResponse&lt;Group&gt;
@@ -567,8 +567,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get group by Id (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -686,8 +686,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Get paginated groups by app name id filtered by types
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param groupTypes  (required)
      * @param searchTerm  (optional)
@@ -702,8 +702,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Get paginated groups by app name id filtered by types
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param groupTypes  (required)
      * @param searchTerm  (optional)
@@ -719,8 +719,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get paginated groups by app name id filtered by types (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param groupTypes  (required)
      * @param searchTerm  (optional)
@@ -837,8 +837,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Update Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateGroup  (required)
@@ -849,8 +849,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     * 
-     * 
+     * Update Catalog Group
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateGroup  (required)
@@ -863,8 +863,8 @@ public class CatalogGroupsApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Update Catalog Group (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param catalogItemId  (required)
      * @param updateGroup  (required)

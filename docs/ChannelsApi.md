@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 <a name="attachStoreToSalesChannel"></a>
 # **attachStoreToSalesChannel**
-> attachStoreToSalesChannel(appId, channelId, storeId)
+> Object attachStoreToSalesChannel(appId, channelId, storeId)
 
 
 
@@ -152,7 +152,8 @@ String appId = "appId_example"; // String |
 Integer channelId = 56; // Integer | 
 Integer storeId = 56; // Integer | 
 try {
-    apiInstance.attachStoreToSalesChannel(appId, channelId, storeId);
+    Object result = apiInstance.attachStoreToSalesChannel(appId, channelId, storeId);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#attachStoreToSalesChannel");
     e.printStackTrace();
@@ -169,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -182,7 +183,7 @@ null (empty response body)
 
 <a name="detachAllStoresFromSalesChannel"></a>
 # **detachAllStoresFromSalesChannel**
-> detachAllStoresFromSalesChannel(appId, channelId)
+> Object detachAllStoresFromSalesChannel(appId, channelId)
 
 
 
@@ -205,7 +206,8 @@ ChannelsApi apiInstance = new ChannelsApi();
 String appId = "appId_example"; // String | 
 Integer channelId = 56; // Integer | 
 try {
-    apiInstance.detachAllStoresFromSalesChannel(appId, channelId);
+    Object result = apiInstance.detachAllStoresFromSalesChannel(appId, channelId);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#detachAllStoresFromSalesChannel");
     e.printStackTrace();
@@ -221,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -234,7 +236,7 @@ null (empty response body)
 
 <a name="detachStoreFromSalesChannel"></a>
 # **detachStoreFromSalesChannel**
-> detachStoreFromSalesChannel(appId, channelId, storeId)
+> Object detachStoreFromSalesChannel(appId, channelId, storeId)
 
 
 
@@ -258,7 +260,8 @@ String appId = "appId_example"; // String |
 Integer channelId = 56; // Integer | 
 Integer storeId = 56; // Integer | 
 try {
-    apiInstance.detachStoreFromSalesChannel(appId, channelId, storeId);
+    Object result = apiInstance.detachStoreFromSalesChannel(appId, channelId, storeId);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ChannelsApi#detachStoreFromSalesChannel");
     e.printStackTrace();
@@ -275,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

@@ -45,9 +45,9 @@ public class LightspeedApiTest {
      *          if the Api call fails
      */
     @Test
-    public void generateMenuTest() throws Exception {
+    public void lightspeedGenerateMenuTest() throws Exception {
         Integer storeId = null;
-        api.generateMenu(storeId);
+        Object response = api.lightspeedGenerateMenu(storeId);
 
         // TODO: test validations
     }
@@ -61,9 +61,9 @@ public class LightspeedApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getStoreSettingsTest() throws Exception {
+    public void lightspeedGetStoreSettingsTest() throws Exception {
         Integer storeId = null;
-        RestApiResultLightspeedSettings response = api.getStoreSettings(storeId);
+        RestApiResultLightspeedSettings response = api.lightspeedGetStoreSettings(storeId);
 
         // TODO: test validations
     }
@@ -77,10 +77,10 @@ public class LightspeedApiTest {
      *          if the Api call fails
      */
     @Test
-    public void saveStoreSettingsTest() throws Exception {
+    public void lightspeedSaveStoreSettingsTest() throws Exception {
         Integer storeId = null;
         LightspeedSettings lightspeedSettings = null;
-        RestApiResultLightspeedSettings response = api.saveStoreSettings(storeId, lightspeedSettings);
+        RestApiResultLightspeedSettings response = api.lightspeedSaveStoreSettings(storeId, lightspeedSettings);
 
         // TODO: test validations
     }

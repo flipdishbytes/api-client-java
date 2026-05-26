@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelJob**](StuartApi.md#cancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-[**getJob**](StuartApi.md#getJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
-[**getStuartSettings**](StuartApi.md#getStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
-[**postStuartSettings**](StuartApi.md#postStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+[**stuartCancelJob**](StuartApi.md#stuartCancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+[**stuartGetJob**](StuartApi.md#stuartGetJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+[**stuartGetStuartSettings**](StuartApi.md#stuartGetStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+[**stuartPostStuartSettings**](StuartApi.md#stuartPostStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 
 
-<a name="cancelJob"></a>
-# **cancelJob**
-> cancelJob(jobId, storeId)
+<a name="stuartCancelJob"></a>
+# **stuartCancelJob**
+> Object stuartCancelJob(jobId, storeId)
 
 
 
@@ -35,9 +35,10 @@ StuartApi apiInstance = new StuartApi();
 Integer jobId = 56; // Integer | 
 Integer storeId = 56; // Integer | 
 try {
-    apiInstance.cancelJob(jobId, storeId);
+    Object result = apiInstance.stuartCancelJob(jobId, storeId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StuartApi#cancelJob");
+    System.err.println("Exception when calling StuartApi#stuartCancelJob");
     e.printStackTrace();
 }
 ```
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -62,9 +63,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getJob"></a>
-# **getJob**
-> RestApiResultJobResponse getJob(jobId, storeId)
+<a name="stuartGetJob"></a>
+# **stuartGetJob**
+> RestApiResultJobResponse stuartGetJob(jobId, storeId)
 
 
 
@@ -87,10 +88,10 @@ StuartApi apiInstance = new StuartApi();
 Integer jobId = 56; // Integer | 
 Integer storeId = 56; // Integer | 
 try {
-    RestApiResultJobResponse result = apiInstance.getJob(jobId, storeId);
+    RestApiResultJobResponse result = apiInstance.stuartGetJob(jobId, storeId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StuartApi#getJob");
+    System.err.println("Exception when calling StuartApi#stuartGetJob");
     e.printStackTrace();
 }
 ```
@@ -115,9 +116,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getStuartSettings"></a>
-# **getStuartSettings**
-> RestApiResultStuartSettings getStuartSettings(storeId)
+<a name="stuartGetStuartSettings"></a>
+# **stuartGetStuartSettings**
+> RestApiResultStuartSettings stuartGetStuartSettings(storeId)
 
 
 
@@ -139,10 +140,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 StuartApi apiInstance = new StuartApi();
 Integer storeId = 56; // Integer | 
 try {
-    RestApiResultStuartSettings result = apiInstance.getStuartSettings(storeId);
+    RestApiResultStuartSettings result = apiInstance.stuartGetStuartSettings(storeId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StuartApi#getStuartSettings");
+    System.err.println("Exception when calling StuartApi#stuartGetStuartSettings");
     e.printStackTrace();
 }
 ```
@@ -166,9 +167,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="postStuartSettings"></a>
-# **postStuartSettings**
-> Object postStuartSettings(storeId, stuartSettings)
+<a name="stuartPostStuartSettings"></a>
+# **stuartPostStuartSettings**
+> Object stuartPostStuartSettings(storeId, stuartSettings)
 
 
 
@@ -191,10 +192,10 @@ StuartApi apiInstance = new StuartApi();
 Integer storeId = 56; // Integer | 
 StuartSettings stuartSettings = new StuartSettings(); // StuartSettings | 
 try {
-    Object result = apiInstance.postStuartSettings(storeId, stuartSettings);
+    Object result = apiInstance.stuartPostStuartSettings(storeId, stuartSettings);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling StuartApi#postStuartSettings");
+    System.err.println("Exception when calling StuartApi#stuartPostStuartSettings");
     e.printStackTrace();
 }
 ```

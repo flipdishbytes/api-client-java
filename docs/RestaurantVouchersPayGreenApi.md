@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 <a name="deletePayGreenConfiguration"></a>
 # **deletePayGreenConfiguration**
-> deletePayGreenConfiguration(appId, paygreenConfigurationId)
+> Object deletePayGreenConfiguration(appId, paygreenConfigurationId)
 
 
 
@@ -93,7 +93,8 @@ RestaurantVouchersPayGreenApi apiInstance = new RestaurantVouchersPayGreenApi();
 String appId = "appId_example"; // String | 
 Integer paygreenConfigurationId = 56; // Integer | 
 try {
-    apiInstance.deletePayGreenConfiguration(appId, paygreenConfigurationId);
+    Object result = apiInstance.deletePayGreenConfiguration(appId, paygreenConfigurationId);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RestaurantVouchersPayGreenApi#deletePayGreenConfiguration");
     e.printStackTrace();
@@ -109,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

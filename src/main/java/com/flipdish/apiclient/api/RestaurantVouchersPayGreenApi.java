@@ -283,10 +283,12 @@ public class RestaurantVouchersPayGreenApi {
      * 
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void deletePayGreenConfiguration(String appId, Integer paygreenConfigurationId) throws ApiException {
-        deletePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
+    public Object deletePayGreenConfiguration(String appId, Integer paygreenConfigurationId) throws ApiException {
+        ApiResponse<Object> resp = deletePayGreenConfigurationWithHttpInfo(appId, paygreenConfigurationId);
+        return resp.getData();
     }
 
     /**
@@ -294,12 +296,13 @@ public class RestaurantVouchersPayGreenApi {
      * 
      * @param appId  (required)
      * @param paygreenConfigurationId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> deletePayGreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
+    public ApiResponse<Object> deletePayGreenConfigurationWithHttpInfo(String appId, Integer paygreenConfigurationId) throws ApiException {
         com.squareup.okhttp.Call call = deletePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -311,7 +314,7 @@ public class RestaurantVouchersPayGreenApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deletePayGreenConfigurationAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deletePayGreenConfigurationAsync(String appId, Integer paygreenConfigurationId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -333,7 +336,8 @@ public class RestaurantVouchersPayGreenApi {
         }
 
         com.squareup.okhttp.Call call = deletePayGreenConfigurationValidateBeforeCall(appId, paygreenConfigurationId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

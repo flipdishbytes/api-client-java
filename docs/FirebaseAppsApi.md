@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addFirebaseApp**](FirebaseAppsApi.md#addFirebaseApp) | **POST** /api/v1.0/FirebaseApp | 
-[**deleteFirebaseApp**](FirebaseAppsApi.md#deleteFirebaseApp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
-[**getFirebaseApp**](FirebaseAppsApi.md#getFirebaseApp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
+[**firebaseAppsAddFirebaseApp**](FirebaseAppsApi.md#firebaseAppsAddFirebaseApp) | **POST** /api/v1.0/FirebaseApp | 
+[**firebaseAppsDeleteFirebaseApp**](FirebaseAppsApi.md#firebaseAppsDeleteFirebaseApp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
+[**firebaseAppsGetFirebaseApp**](FirebaseAppsApi.md#firebaseAppsGetFirebaseApp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 
 
-<a name="addFirebaseApp"></a>
-# **addFirebaseApp**
-> Object addFirebaseApp(firebaseApp)
+<a name="firebaseAppsAddFirebaseApp"></a>
+# **firebaseAppsAddFirebaseApp**
+> Object firebaseAppsAddFirebaseApp(firebaseApp)
 
 
 
@@ -33,10 +33,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 FirebaseAppsApi apiInstance = new FirebaseAppsApi();
 FirebaseApp firebaseApp = new FirebaseApp(); // FirebaseApp | 
 try {
-    Object result = apiInstance.addFirebaseApp(firebaseApp);
+    Object result = apiInstance.firebaseAppsAddFirebaseApp(firebaseApp);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling FirebaseAppsApi#addFirebaseApp");
+    System.err.println("Exception when calling FirebaseAppsApi#firebaseAppsAddFirebaseApp");
     e.printStackTrace();
 }
 ```
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="deleteFirebaseApp"></a>
-# **deleteFirebaseApp**
-> Object deleteFirebaseApp(whiteLabelId)
+<a name="firebaseAppsDeleteFirebaseApp"></a>
+# **firebaseAppsDeleteFirebaseApp**
+> Object firebaseAppsDeleteFirebaseApp(whiteLabelId)
 
 
 
@@ -84,10 +84,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 FirebaseAppsApi apiInstance = new FirebaseAppsApi();
 Integer whiteLabelId = 56; // Integer | 
 try {
-    Object result = apiInstance.deleteFirebaseApp(whiteLabelId);
+    Object result = apiInstance.firebaseAppsDeleteFirebaseApp(whiteLabelId);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling FirebaseAppsApi#deleteFirebaseApp");
+    System.err.println("Exception when calling FirebaseAppsApi#firebaseAppsDeleteFirebaseApp");
     e.printStackTrace();
 }
 ```
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getFirebaseApp"></a>
-# **getFirebaseApp**
-> getFirebaseApp(whitelabelId)
+<a name="firebaseAppsGetFirebaseApp"></a>
+# **firebaseAppsGetFirebaseApp**
+> Object firebaseAppsGetFirebaseApp(whitelabelId)
 
 
 
@@ -135,9 +135,10 @@ oauth2.setAccessToken("YOUR ACCESS TOKEN");
 FirebaseAppsApi apiInstance = new FirebaseAppsApi();
 Integer whitelabelId = 56; // Integer | 
 try {
-    apiInstance.getFirebaseApp(whitelabelId);
+    Object result = apiInstance.firebaseAppsGetFirebaseApp(whitelabelId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling FirebaseAppsApi#getFirebaseApp");
+    System.err.println("Exception when calling FirebaseAppsApi#firebaseAppsGetFirebaseApp");
     e.printStackTrace();
 }
 ```
@@ -150,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 

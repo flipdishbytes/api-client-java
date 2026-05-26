@@ -44,9 +44,9 @@ public class ContentSecurityPolicyApiTest {
      *          if the Api call fails
      */
     @Test
-    public void reportTest() throws Exception {
+    public void contentSecurityPolicyReportTest() throws Exception {
         CspReportRequest request = null;
-        api.report(request);
+        Object response = api.contentSecurityPolicyReport(request);
 
         // TODO: test validations
     }

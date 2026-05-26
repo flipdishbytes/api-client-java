@@ -64,14 +64,14 @@ public class LightspeedApi {
     }
 
     /**
-     * Build call for generateMenu
+     * Build call for lightspeedGenerateMenu
      * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call generateMenuCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedGenerateMenuCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -117,15 +117,15 @@ public class LightspeedApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call generateMenuValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call lightspeedGenerateMenuValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling generateMenu(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling lightspeedGenerateMenu(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = generateMenuCall(storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = lightspeedGenerateMenuCall(storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -134,22 +134,25 @@ public class LightspeedApi {
      * 
      * 
      * @param storeId  (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void generateMenu(Integer storeId) throws ApiException {
-        generateMenuWithHttpInfo(storeId);
+    public Object lightspeedGenerateMenu(Integer storeId) throws ApiException {
+        ApiResponse<Object> resp = lightspeedGenerateMenuWithHttpInfo(storeId);
+        return resp.getData();
     }
 
     /**
      * 
      * 
      * @param storeId  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> generateMenuWithHttpInfo(Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = generateMenuValidateBeforeCall(storeId, null, null);
-        return apiClient.execute(call);
+    public ApiResponse<Object> lightspeedGenerateMenuWithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = lightspeedGenerateMenuValidateBeforeCall(storeId, null, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -160,7 +163,7 @@ public class LightspeedApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call generateMenuAsync(Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedGenerateMenuAsync(Integer storeId, final ApiCallback<Object> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -181,19 +184,20 @@ public class LightspeedApi {
             };
         }
 
-        com.squareup.okhttp.Call call = generateMenuValidateBeforeCall(storeId, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        com.squareup.okhttp.Call call = lightspeedGenerateMenuValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for getStoreSettings
+     * Build call for lightspeedGetStoreSettings
      * @param storeId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStoreSettingsCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedGetStoreSettingsCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -239,15 +243,15 @@ public class LightspeedApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStoreSettingsValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call lightspeedGetStoreSettingsValidateBeforeCall(Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling getStoreSettings(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling lightspeedGetStoreSettings(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = getStoreSettingsCall(storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = lightspeedGetStoreSettingsCall(storeId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -259,8 +263,8 @@ public class LightspeedApi {
      * @return RestApiResultLightspeedSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultLightspeedSettings getStoreSettings(Integer storeId) throws ApiException {
-        ApiResponse<RestApiResultLightspeedSettings> resp = getStoreSettingsWithHttpInfo(storeId);
+    public RestApiResultLightspeedSettings lightspeedGetStoreSettings(Integer storeId) throws ApiException {
+        ApiResponse<RestApiResultLightspeedSettings> resp = lightspeedGetStoreSettingsWithHttpInfo(storeId);
         return resp.getData();
     }
 
@@ -271,8 +275,8 @@ public class LightspeedApi {
      * @return ApiResponse&lt;RestApiResultLightspeedSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultLightspeedSettings> getStoreSettingsWithHttpInfo(Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = getStoreSettingsValidateBeforeCall(storeId, null, null);
+    public ApiResponse<RestApiResultLightspeedSettings> lightspeedGetStoreSettingsWithHttpInfo(Integer storeId) throws ApiException {
+        com.squareup.okhttp.Call call = lightspeedGetStoreSettingsValidateBeforeCall(storeId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultLightspeedSettings>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -285,7 +289,7 @@ public class LightspeedApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStoreSettingsAsync(Integer storeId, final ApiCallback<RestApiResultLightspeedSettings> callback) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedGetStoreSettingsAsync(Integer storeId, final ApiCallback<RestApiResultLightspeedSettings> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -306,13 +310,13 @@ public class LightspeedApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStoreSettingsValidateBeforeCall(storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = lightspeedGetStoreSettingsValidateBeforeCall(storeId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultLightspeedSettings>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for saveStoreSettings
+     * Build call for lightspeedSaveStoreSettings
      * @param storeId  (required)
      * @param lightspeedSettings  (required)
      * @param progressListener Progress listener
@@ -320,7 +324,7 @@ public class LightspeedApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call saveStoreSettingsCall(Integer storeId, LightspeedSettings lightspeedSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedSaveStoreSettingsCall(Integer storeId, LightspeedSettings lightspeedSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = lightspeedSettings;
 
         // create path and map variables
@@ -366,20 +370,20 @@ public class LightspeedApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call saveStoreSettingsValidateBeforeCall(Integer storeId, LightspeedSettings lightspeedSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call lightspeedSaveStoreSettingsValidateBeforeCall(Integer storeId, LightspeedSettings lightspeedSettings, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'storeId' is set
         if (storeId == null) {
-            throw new ApiException("Missing the required parameter 'storeId' when calling saveStoreSettings(Async)");
+            throw new ApiException("Missing the required parameter 'storeId' when calling lightspeedSaveStoreSettings(Async)");
         }
         
         // verify the required parameter 'lightspeedSettings' is set
         if (lightspeedSettings == null) {
-            throw new ApiException("Missing the required parameter 'lightspeedSettings' when calling saveStoreSettings(Async)");
+            throw new ApiException("Missing the required parameter 'lightspeedSettings' when calling lightspeedSaveStoreSettings(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = saveStoreSettingsCall(storeId, lightspeedSettings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = lightspeedSaveStoreSettingsCall(storeId, lightspeedSettings, progressListener, progressRequestListener);
         return call;
 
     }
@@ -392,8 +396,8 @@ public class LightspeedApi {
      * @return RestApiResultLightspeedSettings
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultLightspeedSettings saveStoreSettings(Integer storeId, LightspeedSettings lightspeedSettings) throws ApiException {
-        ApiResponse<RestApiResultLightspeedSettings> resp = saveStoreSettingsWithHttpInfo(storeId, lightspeedSettings);
+    public RestApiResultLightspeedSettings lightspeedSaveStoreSettings(Integer storeId, LightspeedSettings lightspeedSettings) throws ApiException {
+        ApiResponse<RestApiResultLightspeedSettings> resp = lightspeedSaveStoreSettingsWithHttpInfo(storeId, lightspeedSettings);
         return resp.getData();
     }
 
@@ -405,8 +409,8 @@ public class LightspeedApi {
      * @return ApiResponse&lt;RestApiResultLightspeedSettings&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultLightspeedSettings> saveStoreSettingsWithHttpInfo(Integer storeId, LightspeedSettings lightspeedSettings) throws ApiException {
-        com.squareup.okhttp.Call call = saveStoreSettingsValidateBeforeCall(storeId, lightspeedSettings, null, null);
+    public ApiResponse<RestApiResultLightspeedSettings> lightspeedSaveStoreSettingsWithHttpInfo(Integer storeId, LightspeedSettings lightspeedSettings) throws ApiException {
+        com.squareup.okhttp.Call call = lightspeedSaveStoreSettingsValidateBeforeCall(storeId, lightspeedSettings, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultLightspeedSettings>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -420,7 +424,7 @@ public class LightspeedApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call saveStoreSettingsAsync(Integer storeId, LightspeedSettings lightspeedSettings, final ApiCallback<RestApiResultLightspeedSettings> callback) throws ApiException {
+    public com.squareup.okhttp.Call lightspeedSaveStoreSettingsAsync(Integer storeId, LightspeedSettings lightspeedSettings, final ApiCallback<RestApiResultLightspeedSettings> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -441,7 +445,7 @@ public class LightspeedApi {
             };
         }
 
-        com.squareup.okhttp.Call call = saveStoreSettingsValidateBeforeCall(storeId, lightspeedSettings, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = lightspeedSaveStoreSettingsValidateBeforeCall(storeId, lightspeedSettings, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultLightspeedSettings>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

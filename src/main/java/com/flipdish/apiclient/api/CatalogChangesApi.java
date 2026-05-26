@@ -144,8 +144,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get menu pending changes from Catalog groups and items
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
      * @param catalogItemId  (optional)
@@ -160,8 +160,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Get menu pending changes from Catalog groups and items
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
      * @param catalogItemId  (optional)
@@ -177,8 +177,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Get menu pending changes from Catalog groups and items (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param menuId  (optional)
      * @param catalogItemId  (optional)
@@ -282,7 +282,7 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
+     * Get menu pending changes summaries by appId
      * 
      * @param appId  (required)
      * @return RestApiArrayResultPendingMenuChangesSummaries
@@ -294,7 +294,7 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
+     * Get menu pending changes summaries by appId
      * 
      * @param appId  (required)
      * @return ApiResponse&lt;RestApiArrayResultPendingMenuChangesSummaries&gt;
@@ -307,7 +307,7 @@ public class CatalogChangesApi {
     }
 
     /**
-     *  (asynchronously)
+     * Get menu pending changes summaries by appId (asynchronously)
      * 
      * @param appId  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -414,8 +414,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Update menus with the pending changes from Catalog groups and items
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param publishMenuChanges  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -425,8 +425,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     * 
-     * 
+     * Update menus with the pending changes from Catalog groups and items
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param publishMenuChanges  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -438,8 +438,8 @@ public class CatalogChangesApi {
     }
 
     /**
-     *  (asynchronously)
-     * 
+     * Update menus with the pending changes from Catalog groups and items (asynchronously)
+     * [BETA - this endpoint is under development, do not use it in your production system]
      * @param appId  (required)
      * @param publishMenuChanges  (required)
      * @param callback The callback to be executed when the API call finishes

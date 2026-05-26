@@ -34,9 +34,9 @@ Method | HTTP request | Description
 [**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
-[**setPropertyId**](StoresApi.md#setPropertyId) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**setStoreCollectionSettings**](StoresApi.md#setStoreCollectionSettings) | **POST** /api/v1.0/stores/{storeId}/collectionsettings | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+[**storesSetPropertyId**](StoresApi.md#storesSetPropertyId) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**supportedSalesChannelsTypes**](StoresApi.md#supportedSalesChannelsTypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 [**unpublishStore**](StoresApi.md#unpublishStore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 [**updatePreOrderConfig**](StoresApi.md#updatePreOrderConfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
@@ -1673,58 +1673,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="setPropertyId"></a>
-# **setPropertyId**
-> setPropertyId(storeId, propertyId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.StoresApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-StoresApi apiInstance = new StoresApi();
-Integer storeId = 56; // Integer | 
-String propertyId = "propertyId_example"; // String | 
-try {
-    apiInstance.setPropertyId(storeId, propertyId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling StoresApi#setPropertyId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **storeId** | **Integer**|  |
- **propertyId** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
 <a name="setStoreCollectionSettings"></a>
 # **setStoreCollectionSettings**
 > RestApiResultRestApiDefaultResponse setStoreCollectionSettings(storeId, settings, inheritFromProperty)
@@ -1831,6 +1779,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="storesSetPropertyId"></a>
+# **storesSetPropertyId**
+> Object storesSetPropertyId(storeId, propertyId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.StoresApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+StoresApi apiInstance = new StoresApi();
+Integer storeId = 56; // Integer | 
+String propertyId = "propertyId_example"; // String | 
+try {
+    Object result = apiInstance.storesSetPropertyId(storeId, propertyId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling StoresApi#storesSetPropertyId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storeId** | **Integer**|  |
+ **propertyId** | **String**|  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="supportedSalesChannelsTypes"></a>
@@ -2155,7 +2156,7 @@ Name | Type | Description  | Notes
 
 <a name="updateStoreAddressForm"></a>
 # **updateStoreAddressForm**
-> updateStoreAddressForm(storeId, address)
+> Object updateStoreAddressForm(storeId, address)
 
 
 
@@ -2178,7 +2179,8 @@ StoresApi apiInstance = new StoresApi();
 Integer storeId = 56; // Integer | 
 StoreAddressForm address = new StoreAddressForm(); // StoreAddressForm | 
 try {
-    apiInstance.updateStoreAddressForm(storeId, address);
+    Object result = apiInstance.updateStoreAddressForm(storeId, address);
+    System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling StoresApi#updateStoreAddressForm");
     e.printStackTrace();
@@ -2194,7 +2196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
