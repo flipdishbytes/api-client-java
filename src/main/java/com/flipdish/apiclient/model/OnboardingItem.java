@@ -31,7 +31,7 @@ import java.util.List;
  * An item that represents an action to be completed by the user.
  */
 @ApiModel(description = "An item that represents an action to be completed by the user.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-25T10:18:55.676Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-26T09:00:09.094Z")
 public class OnboardingItem {
   @SerializedName("OnboardingItemId")
   private Integer onboardingItemId = null;
