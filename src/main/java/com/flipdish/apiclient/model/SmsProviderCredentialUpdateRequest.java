@@ -28,7 +28,7 @@ import java.io.IOException;
  * SmsProviderCredentialUpdateRequest.
  */
 @ApiModel(description = "SmsProviderCredentialUpdateRequest.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-26T14:22:14.365Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-03T16:47:07.306Z")
 public class SmsProviderCredentialUpdateRequest {
   @SerializedName("SenderId")
   private String senderId = null;

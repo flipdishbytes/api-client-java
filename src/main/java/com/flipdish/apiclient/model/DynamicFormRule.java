@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * DynamicFormRule
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-26T14:22:14.365Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-03T16:47:07.306Z")
 public class DynamicFormRule {
   @SerializedName("Value")
   private Object value = null;
