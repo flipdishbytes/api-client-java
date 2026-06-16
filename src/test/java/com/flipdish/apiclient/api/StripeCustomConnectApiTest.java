@@ -119,23 +119,6 @@ public class StripeCustomConnectApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getVerificationStatusTest() throws Exception {
-        String appId = null;
-        String stripeConnectedAccountId = null;
-        RestApiResultStripeConnectedAccount response = api.getVerificationStatus(appId, stripeConnectedAccountId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void setBankAccountBusinessTypeTest() throws Exception {
         String appId = null;
         Integer bankAccountId = null;

@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**createStripeConnectedAccount**](StripeCustomConnectApi.md#createStripeConnectedAccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | 
 [**createStripeConnectedAccountLink**](StripeCustomConnectApi.md#createStripeConnectedAccountLink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
 [**getCustomConnect**](StripeCustomConnectApi.md#getCustomConnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
-[**getVerificationStatus**](StripeCustomConnectApi.md#getVerificationStatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
 [**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
 [**stripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripeCustomConnectRefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
@@ -219,59 +218,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiArrayResultStripeCustomConnectedAccount**](RestApiArrayResultStripeCustomConnectedAccount.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="getVerificationStatus"></a>
-# **getVerificationStatus**
-> RestApiResultStripeConnectedAccount getVerificationStatus(appId, stripeConnectedAccountId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.StripeCustomConnectApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-StripeCustomConnectApi apiInstance = new StripeCustomConnectApi();
-String appId = "appId_example"; // String | 
-String stripeConnectedAccountId = "stripeConnectedAccountId_example"; // String | 
-try {
-    RestApiResultStripeConnectedAccount result = apiInstance.getVerificationStatus(appId, stripeConnectedAccountId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling StripeCustomConnectApi#getVerificationStatus");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **stripeConnectedAccountId** | **String**|  |
-
-### Return type
-
-[**RestApiResultStripeConnectedAccount**](RestApiResultStripeConnectedAccount.md)
 
 ### Authorization
 
