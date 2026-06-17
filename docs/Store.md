@@ -196,6 +196,7 @@ APP | &quot;App&quot;
 KIOSK | &quot;Kiosk&quot;
 POS | &quot;Pos&quot;
 NONE | &quot;None&quot;
+PHONEAGENT | &quot;PhoneAgent&quot;
 
 
 <a name="List<InheritanceConfigTypesEnum>"></a>

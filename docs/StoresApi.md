@@ -1114,7 +1114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **storeNameQuery** | **String**|  | [optional]
- **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos, None]
+ **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos, None, PhoneAgent]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
 
@@ -1386,7 +1386,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **appId** | **String**|  |
  **searchQuery** | **String**|  | [optional]
- **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos, None]
+ **salesChannelType** | **String**|  | [optional] [enum: Web, App, Kiosk, Pos, None, PhoneAgent]
  **excludeUnpublished** | **Boolean**|  | [optional]
  **page** | **Integer**|  | [optional]
  **limit** | **Integer**|  | [optional]
