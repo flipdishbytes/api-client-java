@@ -31,7 +31,7 @@ import java.util.List;
  * ItemNutritionInfoAddUpdateModel.
  */
 @ApiModel(description = "ItemNutritionInfoAddUpdateModel.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-17T09:33:26.595Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-22T13:22:01.499Z")
 public class ItemNutritionInfoAddUpdateModel {
   @SerializedName("Labels")
   private List<NutritionInfoItemAddUpdateLabelModel> labels = null;

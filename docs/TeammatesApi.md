@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
 [**grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**teammateMobileRedirect**](TeammatesApi.md#teammateMobileRedirect) | **GET** /api/v1.0/teammates/mobile-redirect | 
 [**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**teammatesAcceptInvitations**](TeammatesApi.md#teammatesAcceptInvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 [**teammatesPendingInvitations**](TeammatesApi.md#teammatesPendingInvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
@@ -321,6 +322,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultRedeemInvitationResult**](RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="teammateMobileRedirect"></a>
+# **teammateMobileRedirect**
+> Object teammateMobileRedirect(portalUrl)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.TeammatesApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+TeammatesApi apiInstance = new TeammatesApi();
+String portalUrl = "portalUrl_example"; // String | 
+try {
+    Object result = apiInstance.teammateMobileRedirect(portalUrl);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling TeammatesApi#teammateMobileRedirect");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **portalUrl** | **String**|  |
+
+### Return type
+
+**Object**
 
 ### Authorization
 

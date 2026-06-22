@@ -152,6 +152,22 @@ public class TeammatesApiTest {
      *          if the Api call fails
      */
     @Test
+    public void teammateMobileRedirectTest() throws Exception {
+        String portalUrl = null;
+        Object response = api.teammateMobileRedirect(portalUrl);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void teammatesAcceptInvitationTest() throws Exception {
         String otc = null;
         String appId = null;
