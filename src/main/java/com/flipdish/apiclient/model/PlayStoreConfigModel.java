@@ -28,7 +28,7 @@ import java.io.IOException;
  * Play Store configuration model
  */
 @ApiModel(description = "Play Store configuration model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-22T13:22:01.499Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-24T12:30:52.880Z")
 public class PlayStoreConfigModel {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
@@ -237,10 +237,10 @@ public class PlayStoreConfigModel {
   }
 
    /**
-   * Play Console account  0: UK, 1: IE
+   * Play Console account: 0 &#x3D; IE, 1 &#x3D; UK, 2 &#x3D; IE2
    * @return playConsoleAccount
   **/
-  @ApiModelProperty(value = "Play Console account  0: UK, 1: IE")
+  @ApiModelProperty(value = "Play Console account: 0 = IE, 1 = UK, 2 = IE2")
   public Integer getPlayConsoleAccount() {
     return playConsoleAccount;
   }

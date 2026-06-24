@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **marketingUrl** | **String** | Marketing URL |  [optional]
 **privacyUrl** | **String** | Privacy URL |  [optional]
 **supportUrl** | **String** | Support URL |  [optional]
-**playConsoleAccount** | **Integer** | Play Console account  0: UK, 1: IE |  [optional]
+**playConsoleAccount** | **Integer** | Play Console account: 0 &#x3D; IE, 1 &#x3D; UK, 2 &#x3D; IE2 |  [optional]
 **releaseNotes** | **String** | Release notes |  [optional]
 **storeIcon** | **String** | Store icon URL |  [optional]
 **readyToPublishAndroid** | **Boolean** | Ready to publish Android |  [optional]
