@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="attachBankAccountToStore"></a>
 # **attachBankAccountToStore**
-> attachBankAccountToStore(appId, bankAccountId, storeId)
+> attachBankAccountToStore(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail)
 
 
 
@@ -40,8 +40,9 @@ BankAccountApi apiInstance = new BankAccountApi();
 String appId = "appId_example"; // String | 
 Integer bankAccountId = 56; // Integer | 
 Integer storeId = 56; // Integer | 
+Boolean skipBankAccountUpdateWarningEmail = true; // Boolean | 
 try {
-    apiInstance.attachBankAccountToStore(appId, bankAccountId, storeId);
+    apiInstance.attachBankAccountToStore(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
 } catch (ApiException e) {
     System.err.println("Exception when calling BankAccountApi#attachBankAccountToStore");
     e.printStackTrace();
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **appId** | **String**|  |
  **bankAccountId** | **Integer**|  |
  **storeId** | **Integer**|  |
+ **skipBankAccountUpdateWarningEmail** | **Boolean**|  | [optional]
 
 ### Return type
 

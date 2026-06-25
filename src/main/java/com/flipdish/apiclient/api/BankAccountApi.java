@@ -71,12 +71,13 @@ public class BankAccountApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param storeId  (required)
+     * @param skipBankAccountUpdateWarningEmail  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call attachBankAccountToStoreCall(String appId, Integer bankAccountId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call attachBankAccountToStoreCall(String appId, Integer bankAccountId, Integer storeId, Boolean skipBankAccountUpdateWarningEmail, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -87,6 +88,8 @@ public class BankAccountApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (skipBankAccountUpdateWarningEmail != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("skipBankAccountUpdateWarningEmail", skipBankAccountUpdateWarningEmail));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -124,7 +127,7 @@ public class BankAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call attachBankAccountToStoreValidateBeforeCall(String appId, Integer bankAccountId, Integer storeId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call attachBankAccountToStoreValidateBeforeCall(String appId, Integer bankAccountId, Integer storeId, Boolean skipBankAccountUpdateWarningEmail, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
@@ -142,7 +145,7 @@ public class BankAccountApi {
         }
         
 
-        com.squareup.okhttp.Call call = attachBankAccountToStoreCall(appId, bankAccountId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = attachBankAccountToStoreCall(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail, progressListener, progressRequestListener);
         return call;
 
     }
@@ -153,10 +156,11 @@ public class BankAccountApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param storeId  (required)
+     * @param skipBankAccountUpdateWarningEmail  (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void attachBankAccountToStore(String appId, Integer bankAccountId, Integer storeId) throws ApiException {
-        attachBankAccountToStoreWithHttpInfo(appId, bankAccountId, storeId);
+    public void attachBankAccountToStore(String appId, Integer bankAccountId, Integer storeId, Boolean skipBankAccountUpdateWarningEmail) throws ApiException {
+        attachBankAccountToStoreWithHttpInfo(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
     }
 
     /**
@@ -165,11 +169,12 @@ public class BankAccountApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param storeId  (required)
+     * @param skipBankAccountUpdateWarningEmail  (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> attachBankAccountToStoreWithHttpInfo(String appId, Integer bankAccountId, Integer storeId) throws ApiException {
-        com.squareup.okhttp.Call call = attachBankAccountToStoreValidateBeforeCall(appId, bankAccountId, storeId, null, null);
+    public ApiResponse<Void> attachBankAccountToStoreWithHttpInfo(String appId, Integer bankAccountId, Integer storeId, Boolean skipBankAccountUpdateWarningEmail) throws ApiException {
+        com.squareup.okhttp.Call call = attachBankAccountToStoreValidateBeforeCall(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail, null, null);
         return apiClient.execute(call);
     }
 
@@ -179,11 +184,12 @@ public class BankAccountApi {
      * @param appId  (required)
      * @param bankAccountId  (required)
      * @param storeId  (required)
+     * @param skipBankAccountUpdateWarningEmail  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call attachBankAccountToStoreAsync(String appId, Integer bankAccountId, Integer storeId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call attachBankAccountToStoreAsync(String appId, Integer bankAccountId, Integer storeId, Boolean skipBankAccountUpdateWarningEmail, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -204,7 +210,7 @@ public class BankAccountApi {
             };
         }
 
-        com.squareup.okhttp.Call call = attachBankAccountToStoreValidateBeforeCall(appId, bankAccountId, storeId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = attachBankAccountToStoreValidateBeforeCall(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

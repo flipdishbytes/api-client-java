@@ -31,7 +31,7 @@ import java.util.List;
  * A list of orders.
  */
 @ApiModel(description = "A list of orders.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-24T12:30:52.880Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-06-25T08:36:12.188Z")
 public class OrderList {
   @SerializedName("Orders")
   private List<OrderReference> orders = null;

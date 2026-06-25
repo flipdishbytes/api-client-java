@@ -52,7 +52,8 @@ public class BankAccountApiTest {
         String appId = null;
         Integer bankAccountId = null;
         Integer storeId = null;
-        api.attachBankAccountToStore(appId, bankAccountId, storeId);
+        Boolean skipBankAccountUpdateWarningEmail = null;
+        api.attachBankAccountToStore(appId, bankAccountId, storeId, skipBankAccountUpdateWarningEmail);
 
         // TODO: test validations
     }
