@@ -33,7 +33,7 @@ import java.util.UUID;
  * Store summary
  */
 @ApiModel(description = "Store summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-06T13:05:45.851Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-16T13:26:25.079Z")
 public class StoreSummary {
   @SerializedName("Id")
   private Integer id = null;
