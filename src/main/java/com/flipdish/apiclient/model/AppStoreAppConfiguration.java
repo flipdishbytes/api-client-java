@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * AppStoreAppConfiguration
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-16T13:26:25.079Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T10:31:32.150Z")
 public class AppStoreAppConfiguration {
   @SerializedName("Id")
   private String id = null;
@@ -247,6 +247,8 @@ public class AppStoreAppConfiguration {
     STOREMANAGER("StoreManager"),
     
     STORESTAFF("StoreStaff"),
+    
+    STAFFMEMBER("StaffMember"),
     
     STOREREADONLYACCESS("StoreReadOnlyAccess"),
     

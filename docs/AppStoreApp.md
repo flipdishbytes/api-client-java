@@ -67,6 +67,7 @@ INTEGRATOR | &quot;Integrator&quot;
 PROPERTYMANAGER | &quot;PropertyManager&quot;
 STOREMANAGER | &quot;StoreManager&quot;
 STORESTAFF | &quot;StoreStaff&quot;
+STAFFMEMBER | &quot;StaffMember&quot;
 STOREREADONLYACCESS | &quot;StoreReadOnlyAccess&quot;
 FINANCEMANGER | &quot;FinanceManger&quot;
 
