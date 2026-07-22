@@ -30,13 +30,16 @@ import java.util.List;
  * Hydra status
  */
 @ApiModel(description = "Hydra status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T11:37:37.223Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T12:23:57.260Z")
 public class HydraStatus {
   @SerializedName("AppId")
   private String appId = null;
 
   @SerializedName("StoreIds")
   private List<Integer> storeIds = null;
+
+  @SerializedName("PropertyIds")
+  private List<String> propertyIds = null;
 
   @SerializedName("IsRegistered")
   private Boolean isRegistered = null;
@@ -99,6 +102,9 @@ public class HydraStatus {
   @SerializedName("UserType")
   private UserTypeEnum userType = null;
 
+  @SerializedName("HydraUserId")
+  private Integer hydraUserId = null;
+
   public HydraStatus appId(String appId) {
     this.appId = appId;
     return this;
@@ -141,6 +147,32 @@ public class HydraStatus {
 
   public void setStoreIds(List<Integer> storeIds) {
     this.storeIds = storeIds;
+  }
+
+  public HydraStatus propertyIds(List<String> propertyIds) {
+    this.propertyIds = propertyIds;
+    return this;
+  }
+
+  public HydraStatus addPropertyIdsItem(String propertyIdsItem) {
+    if (this.propertyIds == null) {
+      this.propertyIds = new ArrayList<String>();
+    }
+    this.propertyIds.add(propertyIdsItem);
+    return this;
+  }
+
+   /**
+   * AuthZ Property ids for assigned stores
+   * @return propertyIds
+  **/
+  @ApiModelProperty(value = "AuthZ Property ids for assigned stores")
+  public List<String> getPropertyIds() {
+    return propertyIds;
+  }
+
+  public void setPropertyIds(List<String> propertyIds) {
+    this.propertyIds = propertyIds;
   }
 
   public HydraStatus isRegistered(Boolean isRegistered) {
@@ -225,6 +257,24 @@ public class HydraStatus {
     this.userType = userType;
   }
 
+  public HydraStatus hydraUserId(Integer hydraUserId) {
+    this.hydraUserId = hydraUserId;
+    return this;
+  }
+
+   /**
+   * Zeus Hydra user id
+   * @return hydraUserId
+  **/
+  @ApiModelProperty(value = "Zeus Hydra user id")
+  public Integer getHydraUserId() {
+    return hydraUserId;
+  }
+
+  public void setHydraUserId(Integer hydraUserId) {
+    this.hydraUserId = hydraUserId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -237,15 +287,17 @@ public class HydraStatus {
     HydraStatus hydraStatus = (HydraStatus) o;
     return Objects.equals(this.appId, hydraStatus.appId) &&
         Objects.equals(this.storeIds, hydraStatus.storeIds) &&
+        Objects.equals(this.propertyIds, hydraStatus.propertyIds) &&
         Objects.equals(this.isRegistered, hydraStatus.isRegistered) &&
         Objects.equals(this.pinCode, hydraStatus.pinCode) &&
         Objects.equals(this.images, hydraStatus.images) &&
-        Objects.equals(this.userType, hydraStatus.userType);
+        Objects.equals(this.userType, hydraStatus.userType) &&
+        Objects.equals(this.hydraUserId, hydraStatus.hydraUserId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, storeIds, isRegistered, pinCode, images, userType);
+    return Objects.hash(appId, storeIds, propertyIds, isRegistered, pinCode, images, userType, hydraUserId);
   }
 
 
@@ -256,10 +308,12 @@ public class HydraStatus {
     
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    storeIds: ").append(toIndentedString(storeIds)).append("\n");
+    sb.append("    propertyIds: ").append(toIndentedString(propertyIds)).append("\n");
     sb.append("    isRegistered: ").append(toIndentedString(isRegistered)).append("\n");
     sb.append("    pinCode: ").append(toIndentedString(pinCode)).append("\n");
     sb.append("    images: ").append(toIndentedString(images)).append("\n");
     sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
+    sb.append("    hydraUserId: ").append(toIndentedString(hydraUserId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
