@@ -28,7 +28,7 @@ import java.io.IOException;
  * Delivery Zone
  */
 @ApiModel(description = "Delivery Zone")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T10:31:32.150Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T11:37:37.223Z")
 public class DeliveryZone {
   @SerializedName("Id")
   private Integer id = null;
