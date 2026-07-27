@@ -30,7 +30,7 @@ import java.util.List;
  * Hydra status
  */
 @ApiModel(description = "Hydra status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T12:23:57.260Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-27T09:27:46.362Z")
 public class HydraStatus {
   @SerializedName("AppId")
   private String appId = null;
@@ -51,7 +51,7 @@ public class HydraStatus {
   private List<String> images = null;
 
   /**
-   * Hydra User Type
+   * Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.
    */
   @JsonAdapter(UserTypeEnum.Adapter.class)
   public enum UserTypeEnum {
@@ -101,6 +101,58 @@ public class HydraStatus {
 
   @SerializedName("UserType")
   private UserTypeEnum userType = null;
+
+  /**
+   * Hydra device type (Kiosk / Terminal), serialized as string.
+   */
+  @JsonAdapter(DeviceTypeEnum.Adapter.class)
+  public enum DeviceTypeEnum {
+    KIOSK("Kiosk"),
+    
+    TERMINAL("Terminal"),
+    
+    LEGACYPRINTER("LegacyPrinter");
+
+    private String value;
+
+    DeviceTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static DeviceTypeEnum fromValue(String text) {
+      for (DeviceTypeEnum b : DeviceTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<DeviceTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final DeviceTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public DeviceTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return DeviceTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("DeviceType")
+  private DeviceTypeEnum deviceType = null;
 
   @SerializedName("HydraUserId")
   private Integer hydraUserId = null;
@@ -245,16 +297,34 @@ public class HydraStatus {
   }
 
    /**
-   * Hydra User Type
+   * Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.
    * @return userType
   **/
-  @ApiModelProperty(value = "Hydra User Type")
+  @ApiModelProperty(value = "Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.")
   public UserTypeEnum getUserType() {
     return userType;
   }
 
   public void setUserType(UserTypeEnum userType) {
     this.userType = userType;
+  }
+
+  public HydraStatus deviceType(DeviceTypeEnum deviceType) {
+    this.deviceType = deviceType;
+    return this;
+  }
+
+   /**
+   * Hydra device type (Kiosk / Terminal), serialized as string.
+   * @return deviceType
+  **/
+  @ApiModelProperty(value = "Hydra device type (Kiosk / Terminal), serialized as string.")
+  public DeviceTypeEnum getDeviceType() {
+    return deviceType;
+  }
+
+  public void setDeviceType(DeviceTypeEnum deviceType) {
+    this.deviceType = deviceType;
   }
 
   public HydraStatus hydraUserId(Integer hydraUserId) {
@@ -292,12 +362,13 @@ public class HydraStatus {
         Objects.equals(this.pinCode, hydraStatus.pinCode) &&
         Objects.equals(this.images, hydraStatus.images) &&
         Objects.equals(this.userType, hydraStatus.userType) &&
+        Objects.equals(this.deviceType, hydraStatus.deviceType) &&
         Objects.equals(this.hydraUserId, hydraStatus.hydraUserId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, storeIds, propertyIds, isRegistered, pinCode, images, userType, hydraUserId);
+    return Objects.hash(appId, storeIds, propertyIds, isRegistered, pinCode, images, userType, deviceType, hydraUserId);
   }
 
 
@@ -313,6 +384,7 @@ public class HydraStatus {
     sb.append("    pinCode: ").append(toIndentedString(pinCode)).append("\n");
     sb.append("    images: ").append(toIndentedString(images)).append("\n");
     sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
+    sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
     sb.append("    hydraUserId: ").append(toIndentedString(hydraUserId)).append("\n");
     sb.append("}");
     return sb.toString();

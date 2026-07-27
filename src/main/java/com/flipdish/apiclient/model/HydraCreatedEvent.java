@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra device created event (pin-stage / pre-register).
  */
 @ApiModel(description = "Hydra device created event (pin-stage / pre-register).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T12:23:57.260Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-27T09:27:46.362Z")
 public class HydraCreatedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
@@ -43,7 +43,7 @@ public class HydraCreatedEvent {
   private Integer hydraUserId = null;
 
   /**
-   * Hydra user type (Kiosk / Terminal)
+   * Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.
    */
   @JsonAdapter(UserTypeEnum.Adapter.class)
   public enum UserTypeEnum {
@@ -93,6 +93,58 @@ public class HydraCreatedEvent {
 
   @SerializedName("UserType")
   private UserTypeEnum userType = null;
+
+  /**
+   * Hydra device type (Kiosk / Terminal), serialized as string.
+   */
+  @JsonAdapter(DeviceTypeEnum.Adapter.class)
+  public enum DeviceTypeEnum {
+    KIOSK("Kiosk"),
+    
+    TERMINAL("Terminal"),
+    
+    LEGACYPRINTER("LegacyPrinter");
+
+    private String value;
+
+    DeviceTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static DeviceTypeEnum fromValue(String text) {
+      for (DeviceTypeEnum b : DeviceTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<DeviceTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final DeviceTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public DeviceTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return DeviceTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("DeviceType")
+  private DeviceTypeEnum deviceType = null;
 
   @SerializedName("EventName")
   private String eventName = null;
@@ -181,16 +233,34 @@ public class HydraCreatedEvent {
   }
 
    /**
-   * Hydra user type (Kiosk / Terminal)
+   * Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.
    * @return userType
   **/
-  @ApiModelProperty(value = "Hydra user type (Kiosk / Terminal)")
+  @ApiModelProperty(value = "Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.")
   public UserTypeEnum getUserType() {
     return userType;
   }
 
   public void setUserType(UserTypeEnum userType) {
     this.userType = userType;
+  }
+
+  public HydraCreatedEvent deviceType(DeviceTypeEnum deviceType) {
+    this.deviceType = deviceType;
+    return this;
+  }
+
+   /**
+   * Hydra device type (Kiosk / Terminal), serialized as string.
+   * @return deviceType
+  **/
+  @ApiModelProperty(value = "Hydra device type (Kiosk / Terminal), serialized as string.")
+  public DeviceTypeEnum getDeviceType() {
+    return deviceType;
+  }
+
+  public void setDeviceType(DeviceTypeEnum deviceType) {
+    this.deviceType = deviceType;
   }
 
   public HydraCreatedEvent eventName(String eventName) {
@@ -369,6 +439,7 @@ public class HydraCreatedEvent {
         Objects.equals(this.deviceId, hydraCreatedEvent.deviceId) &&
         Objects.equals(this.hydraUserId, hydraCreatedEvent.hydraUserId) &&
         Objects.equals(this.userType, hydraCreatedEvent.userType) &&
+        Objects.equals(this.deviceType, hydraCreatedEvent.deviceType) &&
         Objects.equals(this.eventName, hydraCreatedEvent.eventName) &&
         Objects.equals(this.flipdishEventId, hydraCreatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, hydraCreatedEvent.createTime) &&
@@ -382,7 +453,7 @@ public class HydraCreatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, deviceId, hydraUserId, userType, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
+    return Objects.hash(user, deviceId, hydraUserId, userType, deviceType, eventName, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -395,6 +466,7 @@ public class HydraCreatedEvent {
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
     sb.append("    hydraUserId: ").append(toIndentedString(hydraUserId)).append("\n");
     sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
+    sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");

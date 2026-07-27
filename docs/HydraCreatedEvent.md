@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 **user** | [**UserEventInfo**](UserEventInfo.md) | Optional user who triggered creation (may be null for device self-create). |  [optional]
 **deviceId** | **String** | Device id |  [optional]
 **hydraUserId** | **Integer** | Zeus Hydra user id |  [optional]
-**userType** | [**UserTypeEnum**](#UserTypeEnum) | Hydra user type (Kiosk / Terminal) |  [optional]
+**userType** | [**UserTypeEnum**](#UserTypeEnum) | Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}. |  [optional]
+**deviceType** | [**DeviceTypeEnum**](#DeviceTypeEnum) | Hydra device type (Kiosk / Terminal), serialized as string. |  [optional]
 **eventName** | **String** | The event name |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
 **createTime** | [**OffsetDateTime**](OffsetDateTime.md) | The time of creation of the event |  [optional]
@@ -21,6 +22,15 @@ Name | Type | Description | Notes
 
 <a name="UserTypeEnum"></a>
 ## Enum: UserTypeEnum
+Name | Value
+---- | -----
+KIOSK | &quot;Kiosk&quot;
+TERMINAL | &quot;Terminal&quot;
+LEGACYPRINTER | &quot;LegacyPrinter&quot;
+
+
+<a name="DeviceTypeEnum"></a>
+## Enum: DeviceTypeEnum
 Name | Value
 ---- | -----
 KIOSK | &quot;Kiosk&quot;

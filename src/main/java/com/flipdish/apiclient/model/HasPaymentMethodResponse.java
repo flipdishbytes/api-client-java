@@ -28,7 +28,7 @@ import java.io.IOException;
  * Has Payment Method Response
  */
 @ApiModel(description = "Has Payment Method Response")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T12:23:57.260Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-27T09:27:46.362Z")
 public class HasPaymentMethodResponse {
   @SerializedName("HasPaymentMethod")
   private Boolean hasPaymentMethod = null;

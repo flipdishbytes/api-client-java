@@ -28,7 +28,7 @@ import java.io.IOException;
  * Store Collection Settings
  */
 @ApiModel(description = "Store Collection Settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-22T12:23:57.260Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-07-27T09:27:46.362Z")
 public class StoreCollectionSettings {
   @SerializedName("PickupEnabled")
   private Boolean pickupEnabled = null;
