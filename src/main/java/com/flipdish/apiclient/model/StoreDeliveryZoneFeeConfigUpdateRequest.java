@@ -31,7 +31,7 @@ import java.util.List;
  * Request to update store delivery zone fee config
  */
 @ApiModel(description = "Request to update store delivery zone fee config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-10T19:32:46.914Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-14T13:20:28.902Z")
 public class StoreDeliveryZoneFeeConfigUpdateRequest {
   @SerializedName("DeliveryZoneFees")
   private List<StoreDeliveryZoneFeeConfig> deliveryZoneFees = null;

@@ -30,7 +30,7 @@ import java.util.List;
  * Validation error result
  */
 @ApiModel(description = "Validation error result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-10T19:32:46.914Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-14T13:20:28.902Z")
 public class ValidationErrorResult {
   @SerializedName("FieldName")
   private String fieldName = null;

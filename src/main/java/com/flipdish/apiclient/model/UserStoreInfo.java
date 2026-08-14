@@ -28,7 +28,7 @@ import java.io.IOException;
  * Stores that the user is associated with
  */
 @ApiModel(description = "Stores that the user is associated with")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-10T19:32:46.914Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-14T13:20:28.902Z")
 public class UserStoreInfo {
   @SerializedName("PropertyId")
   private String propertyId = null;
