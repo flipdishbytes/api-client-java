@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents information about a Stripe connected account associated with a bank account
  */
 @ApiModel(description = "Represents information about a Stripe connected account associated with a bank account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-14T13:20:28.902Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-24T09:27:04.163Z")
 public class StripeConnectedAccountInfo {
   /**
    * Stripe connected account status
@@ -212,6 +212,9 @@ public class StripeConnectedAccountInfo {
   @SerializedName("PaymentsEnabled")
   private Boolean paymentsEnabled = null;
 
+  @SerializedName("DisabledReason")
+  private String disabledReason = null;
+
   public StripeConnectedAccountInfo accountStatus(AccountStatusEnum accountStatus) {
     this.accountStatus = accountStatus;
     return this;
@@ -338,6 +341,24 @@ public class StripeConnectedAccountInfo {
     this.paymentsEnabled = paymentsEnabled;
   }
 
+  public StripeConnectedAccountInfo disabledReason(String disabledReason) {
+    this.disabledReason = disabledReason;
+    return this;
+  }
+
+   /**
+   * If the Stripe connected account is disabled, this is Stripe&#39;s raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other.
+   * @return disabledReason
+  **/
+  @ApiModelProperty(value = "If the Stripe connected account is disabled, this is Stripe's raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other.")
+  public String getDisabledReason() {
+    return disabledReason;
+  }
+
+  public void setDisabledReason(String disabledReason) {
+    this.disabledReason = disabledReason;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -354,12 +375,13 @@ public class StripeConnectedAccountInfo {
         Objects.equals(this.payoutScheduleInterval, stripeConnectedAccountInfo.payoutScheduleInterval) &&
         Objects.equals(this.payoutsEnabled, stripeConnectedAccountInfo.payoutsEnabled) &&
         Objects.equals(this.payoutsPaused, stripeConnectedAccountInfo.payoutsPaused) &&
-        Objects.equals(this.paymentsEnabled, stripeConnectedAccountInfo.paymentsEnabled);
+        Objects.equals(this.paymentsEnabled, stripeConnectedAccountInfo.paymentsEnabled) &&
+        Objects.equals(this.disabledReason, stripeConnectedAccountInfo.disabledReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountStatus, stripeId, cardPaymentStatus, payoutScheduleInterval, payoutsEnabled, payoutsPaused, paymentsEnabled);
+    return Objects.hash(accountStatus, stripeId, cardPaymentStatus, payoutScheduleInterval, payoutsEnabled, payoutsPaused, paymentsEnabled, disabledReason);
   }
 
 
@@ -375,6 +397,7 @@ public class StripeConnectedAccountInfo {
     sb.append("    payoutsEnabled: ").append(toIndentedString(payoutsEnabled)).append("\n");
     sb.append("    payoutsPaused: ").append(toIndentedString(payoutsPaused)).append("\n");
     sb.append("    paymentsEnabled: ").append(toIndentedString(paymentsEnabled)).append("\n");
+    sb.append("    disabledReason: ").append(toIndentedString(disabledReason)).append("\n");
     sb.append("}");
     return sb.toString();
   }
