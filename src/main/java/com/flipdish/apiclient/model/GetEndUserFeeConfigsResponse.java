@@ -31,7 +31,7 @@ import java.util.List;
  * The current end user fee configs for a Store, one per channel and payment method
  */
 @ApiModel(description = "The current end user fee configs for a Store, one per channel and payment method")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-08-31T14:50:29.012Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-02T13:00:43.517Z")
 public class GetEndUserFeeConfigsResponse {
   @SerializedName("EndUserFees")
   private List<EndUserFeeConfig> endUserFees = null;
@@ -71,10 +71,10 @@ public class GetEndUserFeeConfigsResponse {
   }
 
    /**
-   * Whether the V2 (tiered) fee calculation is enabled for this Store, per the backend_finance_UseV2FeeCalculation Split.io flag
+   * Whether the V2 (tiered) fee calculation is enabled for this Store
    * @return isV2FeeCalculationEnabled
   **/
-  @ApiModelProperty(value = "Whether the V2 (tiered) fee calculation is enabled for this Store, per the backend_finance_UseV2FeeCalculation Split.io flag")
+  @ApiModelProperty(value = "Whether the V2 (tiered) fee calculation is enabled for this Store")
   public Boolean isIsV2FeeCalculationEnabled() {
     return isV2FeeCalculationEnabled;
   }

@@ -18,7 +18,9 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultEndUserFeeConfig;
 import com.flipdish.apiclient.model.RestApiResultGetEndUserFeeConfigsResponse;
+import com.flipdish.apiclient.model.RestApiResultSetV2FeeCalculationRequest;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
+import com.flipdish.apiclient.model.SetV2FeeCalculationRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -68,6 +70,24 @@ public class EndUserFeesApiTest {
         String appId = null;
         Integer storeId = null;
         RestApiResultGetEndUserFeeConfigsResponse response = api.getEndUserFeesForStore(appId, storeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void setV2FeeCalculationTest() throws Exception {
+        SetV2FeeCalculationRequest input = null;
+        String appId = null;
+        Integer storeId = null;
+        RestApiResultSetV2FeeCalculationRequest response = api.setV2FeeCalculation(input, appId, storeId);
 
         // TODO: test validations
     }
