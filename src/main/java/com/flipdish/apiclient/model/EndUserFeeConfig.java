@@ -28,7 +28,7 @@ import java.io.IOException;
  * Tiered end user fee config for a given order channel and payment method
  */
 @ApiModel(description = "Tiered end user fee config for a given order channel and payment method")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
 public class EndUserFeeConfig {
   /**
    * The order channel this fee config applies to

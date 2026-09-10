@@ -30,7 +30,7 @@ import java.util.List;
  * Voucher Summary
  */
 @ApiModel(description = "Voucher Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
 public class VoucherSummary {
   @SerializedName("VoucherId")
   private Integer voucherId = null;
@@ -216,11 +216,72 @@ public class VoucherSummary {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
 
+  @SerializedName("IsPromoted")
+  private Boolean isPromoted = null;
+
   @SerializedName("StoreNames")
   private List<String> storeNames = null;
 
   @SerializedName("IsAvailableOnAllStores")
   private Boolean isAvailableOnAllStores = null;
+
+  /**
+   * Gets or Sets channelRestrictions
+   */
+  @JsonAdapter(ChannelRestrictionsEnum.Adapter.class)
+  public enum ChannelRestrictionsEnum {
+    IOS("Ios"),
+    
+    ANDROID("Android"),
+    
+    WEB("Web"),
+    
+    KIOSK("Kiosk"),
+    
+    POS("Pos"),
+    
+    GOOGLE("Google");
+
+    private String value;
+
+    ChannelRestrictionsEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ChannelRestrictionsEnum fromValue(String text) {
+      for (ChannelRestrictionsEnum b : ChannelRestrictionsEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ChannelRestrictionsEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ChannelRestrictionsEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ChannelRestrictionsEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return ChannelRestrictionsEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("ChannelRestrictions")
+  private List<ChannelRestrictionsEnum> channelRestrictions = null;
 
   public VoucherSummary voucherId(Integer voucherId) {
     this.voucherId = voucherId;
@@ -348,6 +409,24 @@ public class VoucherSummary {
     this.isEnabled = isEnabled;
   }
 
+  public VoucherSummary isPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+    return this;
+  }
+
+   /**
+   * Marks the voucher as promoted
+   * @return isPromoted
+  **/
+  @ApiModelProperty(value = "Marks the voucher as promoted")
+  public Boolean isIsPromoted() {
+    return isPromoted;
+  }
+
+  public void setIsPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+  }
+
   public VoucherSummary storeNames(List<String> storeNames) {
     this.storeNames = storeNames;
     return this;
@@ -392,6 +471,32 @@ public class VoucherSummary {
     this.isAvailableOnAllStores = isAvailableOnAllStores;
   }
 
+  public VoucherSummary channelRestrictions(List<ChannelRestrictionsEnum> channelRestrictions) {
+    this.channelRestrictions = channelRestrictions;
+    return this;
+  }
+
+  public VoucherSummary addChannelRestrictionsItem(ChannelRestrictionsEnum channelRestrictionsItem) {
+    if (this.channelRestrictions == null) {
+      this.channelRestrictions = new ArrayList<ChannelRestrictionsEnum>();
+    }
+    this.channelRestrictions.add(channelRestrictionsItem);
+    return this;
+  }
+
+   /**
+   * Channels the voucher is restricted to
+   * @return channelRestrictions
+  **/
+  @ApiModelProperty(value = "Channels the voucher is restricted to")
+  public List<ChannelRestrictionsEnum> getChannelRestrictions() {
+    return channelRestrictions;
+  }
+
+  public void setChannelRestrictions(List<ChannelRestrictionsEnum> channelRestrictions) {
+    this.channelRestrictions = channelRestrictions;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -409,13 +514,15 @@ public class VoucherSummary {
         Objects.equals(this.voucherSubType, voucherSummary.voucherSubType) &&
         Objects.equals(this.description, voucherSummary.description) &&
         Objects.equals(this.isEnabled, voucherSummary.isEnabled) &&
+        Objects.equals(this.isPromoted, voucherSummary.isPromoted) &&
         Objects.equals(this.storeNames, voucherSummary.storeNames) &&
-        Objects.equals(this.isAvailableOnAllStores, voucherSummary.isAvailableOnAllStores);
+        Objects.equals(this.isAvailableOnAllStores, voucherSummary.isAvailableOnAllStores) &&
+        Objects.equals(this.channelRestrictions, voucherSummary.channelRestrictions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled, storeNames, isAvailableOnAllStores);
+    return Objects.hash(voucherId, code, status, voucherType, voucherSubType, description, isEnabled, isPromoted, storeNames, isAvailableOnAllStores, channelRestrictions);
   }
 
 
@@ -431,8 +538,10 @@ public class VoucherSummary {
     sb.append("    voucherSubType: ").append(toIndentedString(voucherSubType)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
+    sb.append("    isPromoted: ").append(toIndentedString(isPromoted)).append("\n");
     sb.append("    storeNames: ").append(toIndentedString(storeNames)).append("\n");
     sb.append("    isAvailableOnAllStores: ").append(toIndentedString(isAvailableOnAllStores)).append("\n");
+    sb.append("    channelRestrictions: ").append(toIndentedString(channelRestrictions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

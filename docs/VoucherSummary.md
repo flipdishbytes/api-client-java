@@ -11,8 +11,10 @@ Name | Type | Description | Notes
 **voucherSubType** | [**VoucherSubTypeEnum**](#VoucherSubTypeEnum) | Voucher Sub Type |  [optional]
 **description** | **String** | Voucher Description (Visible on printout) |  [optional]
 **isEnabled** | **Boolean** | Is voucher enabled |  [optional]
+**isPromoted** | **Boolean** | Marks the voucher as promoted |  [optional]
 **storeNames** | **List&lt;String&gt;** | Store names associated with this voucher |  [optional]
 **isAvailableOnAllStores** | **Boolean** | True if the voucher is available on all active stores in the app |  [optional]
+**channelRestrictions** | [**List&lt;ChannelRestrictionsEnum&gt;**](#List&lt;ChannelRestrictionsEnum&gt;) | Channels the voucher is restricted to |  [optional]
 
 
 <a name="StatusEnum"></a>
@@ -48,6 +50,18 @@ LOYALTY25 | &quot;Loyalty25&quot;
 RETENTION | &quot;Retention&quot;
 SECONDARYRETENTION | &quot;SecondaryRetention&quot;
 CUSTOM | &quot;Custom&quot;
+
+
+<a name="List<ChannelRestrictionsEnum>"></a>
+## Enum: List&lt;ChannelRestrictionsEnum&gt;
+Name | Value
+---- | -----
+IOS | &quot;Ios&quot;
+ANDROID | &quot;Android&quot;
+WEB | &quot;Web&quot;
+KIOSK | &quot;Kiosk&quot;
+POS | &quot;Pos&quot;
+GOOGLE | &quot;Google&quot;
 
 
 

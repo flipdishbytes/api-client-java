@@ -28,7 +28,7 @@ import java.io.IOException;
  * UpdateStorePayGreenConfigurationRequest.
  */
 @ApiModel(description = "UpdateStorePayGreenConfigurationRequest.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
 public class UpdateStorePayGreenConfigurationRequest {
   @SerializedName("Active")
   private Boolean active = null;

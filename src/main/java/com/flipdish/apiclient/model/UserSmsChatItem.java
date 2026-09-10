@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * An SMS conversation item for admin user chat.
  */
 @ApiModel(description = "An SMS conversation item for admin user chat.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
 public class UserSmsChatItem {
   @SerializedName("SmsConversationItemId")
   private Integer smsConversationItemId = null;

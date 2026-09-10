@@ -28,7 +28,7 @@ import java.io.IOException;
  * App general configuration model
  */
 @ApiModel(description = "App general configuration model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
 public class AppGeneralConfigModel {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
