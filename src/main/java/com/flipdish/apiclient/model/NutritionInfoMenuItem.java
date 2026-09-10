@@ -32,7 +32,7 @@ import java.util.UUID;
  * NutritionInfoMenuItem.
  */
 @ApiModel(description = "NutritionInfoMenuItem.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-02T13:00:43.517Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
 public class NutritionInfoMenuItem {
   @SerializedName("PublicId")
   private UUID publicId = null;

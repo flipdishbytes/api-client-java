@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
  * Create Voucher
  */
 @ApiModel(description = "Create Voucher")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-02T13:00:43.517Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
 public class CreateVoucher {
   /**
    * Voucher Type
@@ -153,6 +153,9 @@ public class CreateVoucher {
 
   @SerializedName("IsDiscoverable")
   private Boolean isDiscoverable = null;
+
+  @SerializedName("IsPromoted")
+  private Boolean isPromoted = null;
 
   @SerializedName("ForceDiscount")
   private Boolean forceDiscount = null;
@@ -676,6 +679,24 @@ public class CreateVoucher {
     this.isDiscoverable = isDiscoverable;
   }
 
+  public CreateVoucher isPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+    return this;
+  }
+
+   /**
+   * Marks the voucher as promoted
+   * @return isPromoted
+  **/
+  @ApiModelProperty(value = "Marks the voucher as promoted")
+  public Boolean isIsPromoted() {
+    return isPromoted;
+  }
+
+  public void setIsPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+  }
+
   public CreateVoucher forceDiscount(Boolean forceDiscount) {
     this.forceDiscount = forceDiscount;
     return this;
@@ -867,6 +888,7 @@ public class CreateVoucher {
         Objects.equals(this.isValidOncePerCustomer, createVoucher.isValidOncePerCustomer) &&
         Objects.equals(this.isValidOnlyOnce, createVoucher.isValidOnlyOnce) &&
         Objects.equals(this.isDiscoverable, createVoucher.isDiscoverable) &&
+        Objects.equals(this.isPromoted, createVoucher.isPromoted) &&
         Objects.equals(this.forceDiscount, createVoucher.forceDiscount) &&
         Objects.equals(this.startDate, createVoucher.startDate) &&
         Objects.equals(this.expiryDate, createVoucher.expiryDate) &&
@@ -879,7 +901,7 @@ public class CreateVoucher {
 
   @Override
   public int hashCode() {
-    return Objects.hash(voucherType, promotion, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, isDiscoverable, forceDiscount, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
+    return Objects.hash(voucherType, promotion, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, isDiscoverable, isPromoted, forceDiscount, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
   }
 
 
@@ -909,6 +931,7 @@ public class CreateVoucher {
     sb.append("    isValidOncePerCustomer: ").append(toIndentedString(isValidOncePerCustomer)).append("\n");
     sb.append("    isValidOnlyOnce: ").append(toIndentedString(isValidOnlyOnce)).append("\n");
     sb.append("    isDiscoverable: ").append(toIndentedString(isDiscoverable)).append("\n");
+    sb.append("    isPromoted: ").append(toIndentedString(isPromoted)).append("\n");
     sb.append("    forceDiscount: ").append(toIndentedString(forceDiscount)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");

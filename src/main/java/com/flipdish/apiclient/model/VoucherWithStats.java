@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
  * Voucher With Statistics
  */
 @ApiModel(description = "Voucher With Statistics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-02T13:00:43.517Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T10:55:45.762Z")
 public class VoucherWithStats {
   @SerializedName("TotalUsed")
   private Integer totalUsed = null;
@@ -502,6 +502,9 @@ public class VoucherWithStats {
 
   @SerializedName("IsDiscoverable")
   private Boolean isDiscoverable = null;
+
+  @SerializedName("IsPromoted")
+  private Boolean isPromoted = null;
 
   @SerializedName("ForceDiscount")
   private Boolean forceDiscount = null;
@@ -1195,6 +1198,24 @@ public class VoucherWithStats {
     this.isDiscoverable = isDiscoverable;
   }
 
+  public VoucherWithStats isPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+    return this;
+  }
+
+   /**
+   * Marks the voucher as promoted
+   * @return isPromoted
+  **/
+  @ApiModelProperty(value = "Marks the voucher as promoted")
+  public Boolean isIsPromoted() {
+    return isPromoted;
+  }
+
+  public void setIsPromoted(Boolean isPromoted) {
+    this.isPromoted = isPromoted;
+  }
+
   public VoucherWithStats forceDiscount(Boolean forceDiscount) {
     this.forceDiscount = forceDiscount;
     return this;
@@ -1395,6 +1416,7 @@ public class VoucherWithStats {
         Objects.equals(this.isValidOncePerCustomer, voucherWithStats.isValidOncePerCustomer) &&
         Objects.equals(this.isValidOnlyOnce, voucherWithStats.isValidOnlyOnce) &&
         Objects.equals(this.isDiscoverable, voucherWithStats.isDiscoverable) &&
+        Objects.equals(this.isPromoted, voucherWithStats.isPromoted) &&
         Objects.equals(this.forceDiscount, voucherWithStats.forceDiscount) &&
         Objects.equals(this.startDate, voucherWithStats.startDate) &&
         Objects.equals(this.expiryDate, voucherWithStats.expiryDate) &&
@@ -1407,7 +1429,7 @@ public class VoucherWithStats {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, isDiscoverable, forceDiscount, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
+    return Objects.hash(totalUsed, totalCustomers, totalAmountFromOrders, totalDiscounted, averageOrderSize, voucherId, status, voucherType, currency, storeNames, promotionDetails, creditNoteDetails, lumpDiscountDetails, percentDiscountDetails, code, description, stores, validOnOrdersOver, takesPriority, isEnabled, isAutomaticallyApplied, includeDeliveryFee, isValidForDeliveryOrders, isValidForPickupOrders, isValidForOrdersPayedOnline, isValidForOrdersPayedByCash, isValidForFirstOrderOnly, isValidOncePerCustomer, isValidOnlyOnce, isDiscoverable, isPromoted, forceDiscount, startDate, expiryDate, channelRestrictions, validityPeriods, voucherSubType, customerId, maxRedemptions);
   }
 
 
@@ -1446,6 +1468,7 @@ public class VoucherWithStats {
     sb.append("    isValidOncePerCustomer: ").append(toIndentedString(isValidOncePerCustomer)).append("\n");
     sb.append("    isValidOnlyOnce: ").append(toIndentedString(isValidOnlyOnce)).append("\n");
     sb.append("    isDiscoverable: ").append(toIndentedString(isDiscoverable)).append("\n");
+    sb.append("    isPromoted: ").append(toIndentedString(isPromoted)).append("\n");
     sb.append("    forceDiscount: ").append(toIndentedString(forceDiscount)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    expiryDate: ").append(toIndentedString(expiryDate)).append("\n");
