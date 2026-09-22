@@ -28,7 +28,7 @@ import java.io.IOException;
  * Rest api unauthorized result
  */
 @ApiModel(description = "Rest api unauthorized result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T13:15:56.886Z")
 public class RestApiUnauthorizedResult {
   @SerializedName("Message")
   private String message = null;

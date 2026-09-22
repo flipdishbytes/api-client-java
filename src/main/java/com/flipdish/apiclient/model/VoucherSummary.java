@@ -30,7 +30,7 @@ import java.util.List;
  * Voucher Summary
  */
 @ApiModel(description = "Voucher Summary")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T13:15:56.886Z")
 public class VoucherSummary {
   @SerializedName("VoucherId")
   private Integer voucherId = null;

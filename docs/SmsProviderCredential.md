@@ -20,6 +20,7 @@ NEXMO | &quot;Nexmo&quot;
 TWILIO | &quot;Twilio&quot;
 DEFAULT | &quot;Default&quot;
 MESSAGEBIRD | &quot;MessageBird&quot;
+COMMUNICATIONSERVICE | &quot;CommunicationService&quot;
 
 
 

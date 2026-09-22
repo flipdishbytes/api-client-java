@@ -28,7 +28,7 @@ import java.io.IOException;
  * Driver Login model
  */
 @ApiModel(description = "Driver Login model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-10T14:21:39.207Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T13:15:56.886Z")
 public class DriverLoginModel {
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
