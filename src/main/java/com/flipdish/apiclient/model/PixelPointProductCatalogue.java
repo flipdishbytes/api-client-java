@@ -31,7 +31,7 @@ import java.util.Map;
  * Catalogue of PixelPoint products uploaded for a store
  */
 @ApiModel(description = "Catalogue of PixelPoint products uploaded for a store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T13:15:56.886Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T13:38:45.461Z")
 public class PixelPointProductCatalogue {
   @SerializedName("Products")
   private Map<String, String> products = new HashMap<String, String>();

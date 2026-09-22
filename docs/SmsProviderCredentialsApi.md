@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orgId** | **String**|  |
  **brandId** | **String**|  |
- **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird, CommunicationService]
+ **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird]
  **withFallback** | **Boolean**|  | [optional]
 
 ### Return type
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orgId** | **String**|  |
  **brandId** | **String**|  |
- **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird, CommunicationService]
+ **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird]
 
 ### Return type
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orgId** | **String**|  |
  **brandId** | **String**|  |
- **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird, CommunicationService]
+ **serviceType** | **String**|  | [enum: Nexmo, Twilio, Default, MessageBird]
  **credential** | [**SmsProviderCredentialUpdateRequest**](SmsProviderCredentialUpdateRequest.md)|  |
 
 ### Return type
