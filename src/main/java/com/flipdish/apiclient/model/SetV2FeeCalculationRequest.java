@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for setting whether the V2 (tiered) fee calculation is enabled for a Store
  */
 @ApiModel(description = "Input model for setting whether the V2 (tiered) fee calculation is enabled for a Store")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T14:11:22.255Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
 public class SetV2FeeCalculationRequest {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;

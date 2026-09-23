@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * User created password event
  */
 @ApiModel(description = "User created password event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T14:11:22.255Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
 public class UserPasswordCreatedEvent {
   @SerializedName("EventName")
   private String eventName = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Result of sending push notification.
  */
 @ApiModel(description = "Result of sending push notification.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T14:11:22.255Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
 public class UserPushNotificationSentResult {
   @SerializedName("TokenCount")
   private Integer tokenCount = null;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Delivery and pickup menu messages for a customer
  */
 @ApiModel(description = "Delivery and pickup menu messages for a customer")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-22T14:11:22.255Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
 public class CustomerMessages {
   @SerializedName("DeliveryMenuMessage")
   private String deliveryMenuMessage = null;
