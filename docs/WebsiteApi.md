@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**getIndexConfiguration**](WebsiteApi.md#getIndexConfiguration) | **GET** /api/v1.0/{appId}/website/index | 
 [**setIndexConfiguration**](WebsiteApi.md#setIndexConfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 [**uploadWebsiteImage**](WebsiteApi.md#uploadWebsiteImage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
-[**websiteCheckNow**](WebsiteApi.md#websiteCheckNow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 
 
 <a name="addTestimonial"></a>
@@ -383,55 +382,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="websiteCheckNow"></a>
-# **websiteCheckNow**
-> websiteCheckNow(appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.WebsiteApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WebsiteApi apiInstance = new WebsiteApi();
-String appId = "appId_example"; // String | 
-try {
-    apiInstance.websiteCheckNow(appId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WebsiteApi#websiteCheckNow");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Job Address
  */
 @ApiModel(description = "Job Address")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-25T10:49:23.170Z")
 public class JobAddress {
   @SerializedName("Street")
   private String street = null;

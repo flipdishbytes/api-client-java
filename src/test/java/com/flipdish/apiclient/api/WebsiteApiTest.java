@@ -161,20 +161,4 @@ public class WebsiteApiTest {
         // TODO: test validations
     }
     
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void websiteCheckNowTest() throws Exception {
-        String appId = null;
-        api.websiteCheckNow(appId);
-
-        // TODO: test validations
-    }
-    
 }

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Play Store configuration model
  */
 @ApiModel(description = "Play Store configuration model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-25T10:49:23.170Z")
 public class PlayStoreConfigModel {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;

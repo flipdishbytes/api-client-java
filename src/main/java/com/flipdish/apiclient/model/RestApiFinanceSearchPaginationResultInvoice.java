@@ -31,7 +31,7 @@ import java.util.List;
  * Rest api finance search pagination result
  */
 @ApiModel(description = "Rest api finance search pagination result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-25T10:49:23.170Z")
 public class RestApiFinanceSearchPaginationResultInvoice {
   @SerializedName("NextPage")
   private String nextPage = null;

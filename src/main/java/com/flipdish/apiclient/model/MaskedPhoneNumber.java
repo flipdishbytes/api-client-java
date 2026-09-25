@@ -28,7 +28,7 @@ import java.io.IOException;
  * Represents a masked phone number
  */
 @ApiModel(description = "Represents a masked phone number")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-23T14:47:51.958Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-25T10:49:23.170Z")
 public class MaskedPhoneNumber {
   @SerializedName("IsEnabled")
   private Boolean isEnabled = null;
