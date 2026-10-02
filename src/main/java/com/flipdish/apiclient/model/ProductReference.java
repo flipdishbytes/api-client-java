@@ -29,7 +29,7 @@ import java.io.IOException;
  * Catalog Item associated
  */
 @ApiModel(description = "Catalog Item associated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-28T21:29:38.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
 public class ProductReference {
   @SerializedName("Item")
   private Product item = null;

@@ -33,7 +33,7 @@ import java.util.UUID;
  * Create menu section
  */
 @ApiModel(description = "Create menu section")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-28T21:29:38.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
 public class CreateFullMenuSection {
   @SerializedName("MenuSectionAvailability")
   private MenuSectionAvailability menuSectionAvailability = null;

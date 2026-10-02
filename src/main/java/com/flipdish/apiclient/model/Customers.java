@@ -31,7 +31,7 @@ import java.util.List;
  * Defines a list of customers
  */
 @ApiModel(description = "Defines a list of customers")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-28T21:29:38.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
 public class Customers {
   @SerializedName("Items")
   private List<Customer> items = null;

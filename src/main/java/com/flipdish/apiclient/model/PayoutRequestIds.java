@@ -30,7 +30,7 @@ import java.util.List;
  * Payout Request ids for filtering on Payouts
  */
 @ApiModel(description = "Payout Request ids for filtering on Payouts")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-09-28T21:29:38.563Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
 public class PayoutRequestIds {
   @SerializedName("BankAccountIds")
   private List<Integer> bankAccountIds = null;
