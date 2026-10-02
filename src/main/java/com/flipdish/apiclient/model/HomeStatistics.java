@@ -31,7 +31,7 @@ import java.util.List;
  * Home statitstics
  */
 @ApiModel(description = "Home statitstics")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:34:31.740Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:42:11.036Z")
 public class HomeStatistics {
   @SerializedName("TotalMoneySaved")
   private List<CurrencyData> totalMoneySaved = null;
