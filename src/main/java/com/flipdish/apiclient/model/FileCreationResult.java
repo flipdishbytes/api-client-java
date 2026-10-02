@@ -28,7 +28,7 @@ import java.io.IOException;
  * FileCreationResult.
  */
 @ApiModel(description = "FileCreationResult.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:34:31.740Z")
 public class FileCreationResult {
   @SerializedName("FileId")
   private String fileId = null;

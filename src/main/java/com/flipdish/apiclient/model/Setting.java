@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Setting
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:17:47.056Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-02T07:34:31.740Z")
 public class Setting {
   @SerializedName("Key")
   private String key = null;
