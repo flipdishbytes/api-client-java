@@ -31,7 +31,7 @@ import java.util.List;
  * The current end user fee configs for a Store, one per channel and payment method
  */
 @ApiModel(description = "The current end user fee configs for a Store, one per channel and payment method")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-06T19:00:21.497Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-06T20:03:17.520Z")
 public class GetEndUserFeeConfigsResponse {
   @SerializedName("EndUserFees")
   private List<EndUserFeeConfig> endUserFees = null;
