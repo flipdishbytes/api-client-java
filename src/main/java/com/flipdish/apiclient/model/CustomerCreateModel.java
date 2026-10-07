@@ -28,7 +28,7 @@ import java.io.IOException;
  * Defines a customer create model
  */
 @ApiModel(description = "Defines a customer create model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-06T20:03:17.520Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-07T08:53:45.479Z")
 public class CustomerCreateModel {
   @SerializedName("PhoneNumber")
   private String phoneNumber = null;
@@ -104,6 +104,9 @@ public class CustomerCreateModel {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("MarketingEnabled")
+  private Boolean marketingEnabled = null;
+
   public CustomerCreateModel phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
@@ -158,6 +161,24 @@ public class CustomerCreateModel {
     this.name = name;
   }
 
+  public CustomerCreateModel marketingEnabled(Boolean marketingEnabled) {
+    this.marketingEnabled = marketingEnabled;
+    return this;
+  }
+
+   /**
+   * Get marketingEnabled
+   * @return marketingEnabled
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isMarketingEnabled() {
+    return marketingEnabled;
+  }
+
+  public void setMarketingEnabled(Boolean marketingEnabled) {
+    this.marketingEnabled = marketingEnabled;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -170,12 +191,13 @@ public class CustomerCreateModel {
     CustomerCreateModel customerCreateModel = (CustomerCreateModel) o;
     return Objects.equals(this.phoneNumber, customerCreateModel.phoneNumber) &&
         Objects.equals(this.appType, customerCreateModel.appType) &&
-        Objects.equals(this.name, customerCreateModel.name);
+        Objects.equals(this.name, customerCreateModel.name) &&
+        Objects.equals(this.marketingEnabled, customerCreateModel.marketingEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, appType, name);
+    return Objects.hash(phoneNumber, appType, name, marketingEnabled);
   }
 
 
@@ -187,6 +209,7 @@ public class CustomerCreateModel {
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    appType: ").append(toIndentedString(appType)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    marketingEnabled: ").append(toIndentedString(marketingEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

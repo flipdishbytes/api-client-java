@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** | Customer Phone Number |  [optional]
 **appType** | [**AppTypeEnum**](#AppTypeEnum) | Customer AppType |  [optional]
 **name** | **String** | Customer Name |  [optional]
+**marketingEnabled** | **Boolean** |  |  [optional]
 
 
 <a name="AppTypeEnum"></a>
