@@ -28,7 +28,7 @@ import java.io.IOException;
  * Input model for setting an end user fee config
  */
 @ApiModel(description = "Input model for setting an end user fee config")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-08T13:28:54.405Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-08T14:19:18.932Z")
 public class CreateEndUserFeeConfig {
   /**
    * The order channel this fee config applies to
