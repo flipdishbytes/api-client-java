@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * AppStoreAppConfigurationSummary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-08T14:19:18.932Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-09T12:02:56.273Z")
 public class AppStoreAppConfigurationSummary {
   @SerializedName("Id")
   private String id = null;

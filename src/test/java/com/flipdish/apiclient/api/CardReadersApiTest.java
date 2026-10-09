@@ -20,6 +20,7 @@ import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultBluetoothTerminalStatus;
 import com.flipdish.apiclient.model.RestApiResultCardReader;
+import com.flipdish.apiclient.model.RestApiResultKioskStripeLocation;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalConnectionToken;
 import com.flipdish.apiclient.model.RestApiResultStripeTerminalLocation;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
@@ -124,6 +125,23 @@ public class CardReadersApiTest {
         String appId = null;
         String deviceId = null;
         RestApiResultBluetoothTerminalStatus response = api.getBluetoothTerminalStatus(appId, deviceId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getKioskStripeLocationTest() throws Exception {
+        String appId = null;
+        String deviceId = null;
+        RestApiResultKioskStripeLocation response = api.getKioskStripeLocation(appId, deviceId);
 
         // TODO: test validations
     }

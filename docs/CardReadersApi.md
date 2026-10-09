@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**cardReadersGetReader**](CardReadersApi.md#cardReadersGetReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 [**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+[**getKioskStripeLocation**](CardReadersApi.md#getKioskStripeLocation) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/stripe-location | 
 [**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 [**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 [**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -275,6 +276,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultBluetoothTerminalStatus**](RestApiResultBluetoothTerminalStatus.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getKioskStripeLocation"></a>
+# **getKioskStripeLocation**
+> RestApiResultKioskStripeLocation getKioskStripeLocation(appId, deviceId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.CardReadersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+CardReadersApi apiInstance = new CardReadersApi();
+String appId = "appId_example"; // String | 
+String deviceId = "deviceId_example"; // String | 
+try {
+    RestApiResultKioskStripeLocation result = apiInstance.getKioskStripeLocation(appId, deviceId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CardReadersApi#getKioskStripeLocation");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **deviceId** | **String**|  |
+
+### Return type
+
+[**RestApiResultKioskStripeLocation**](RestApiResultKioskStripeLocation.md)
 
 ### Authorization
 
