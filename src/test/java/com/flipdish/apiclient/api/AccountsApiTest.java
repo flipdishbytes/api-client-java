@@ -18,10 +18,7 @@ import com.flipdish.apiclient.model.ChangePasswordModel;
 import com.flipdish.apiclient.model.CreateAccountModel;
 import com.flipdish.apiclient.model.CreateBasicAccountModel;
 import com.flipdish.apiclient.model.LoginModel;
-import com.flipdish.apiclient.model.LoginWithPinModel;
 import com.flipdish.apiclient.model.PasswordResetModel;
-import com.flipdish.apiclient.model.RequestLoginPinModel;
-import com.flipdish.apiclient.model.RequestLoginPinResponse;
 import com.flipdish.apiclient.model.RequestPasswordResetModel;
 import com.flipdish.apiclient.model.RequestPasswordResetPinResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultLocalisedTimeZone;
@@ -199,22 +196,6 @@ public class AccountsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void loginWithPinTest() throws Exception {
-        LoginWithPinModel loginModel = null;
-        api.loginWithPin(loginModel);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void logoutTest() throws Exception {
         api.logout();
 
@@ -249,22 +230,6 @@ public class AccountsApiTest {
     public void recaptchaValidateTest() throws Exception {
         String token = null;
         api.recaptchaValidate(token);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void requestLoginPinTest() throws Exception {
-        RequestLoginPinModel requestLoginPinRequest = null;
-        RequestLoginPinResponse response = api.requestLoginPin(requestLoginPinRequest);
 
         // TODO: test validations
     }

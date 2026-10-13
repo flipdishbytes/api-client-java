@@ -28,7 +28,7 @@ import java.io.IOException;
  * Stripe Terminal location used by a kiosk&#39;s card readers
  */
 @ApiModel(description = "Stripe Terminal location used by a kiosk's card readers")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-09T12:02:56.273Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-13T14:45:26.342Z")
 public class KioskStripeLocation {
   @SerializedName("DeviceId")
   private String deviceId = null;
