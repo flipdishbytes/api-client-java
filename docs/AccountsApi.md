@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**answerSignUpQuestion**](AccountsApi.md#answerSignUpQuestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 [**changePassword**](AccountsApi.md#changePassword) | **PUT** /api/v1.0/accounts/password | 
-[**changePasswordWithPin**](AccountsApi.md#changePasswordWithPin) | **PUT** /api/v1.0/accounts/password/pin | 
 [**createAccount**](AccountsApi.md#createAccount) | **POST** /api/v1.0/accounts | 
 [**createBasicAccount**](AccountsApi.md#createBasicAccount) | **POST** /api/v1.0/accounts/basic-account | 
 [**getAccountDetails**](AccountsApi.md#getAccountDetails) | **GET** /api/v1.0/accounts | 
@@ -17,7 +16,6 @@ Method | HTTP request | Description
 [**passwordResetWithToken**](AccountsApi.md#passwordResetWithToken) | **POST** /api/v1.0/accounts/password | 
 [**recaptchaValidate**](AccountsApi.md#recaptchaValidate) | **POST** /api/v1.0/accounts/recaptcha | 
 [**requestPasswordReset**](AccountsApi.md#requestPasswordReset) | **POST** /api/v1.0/accounts/passwordreset | 
-[**sendPinForPasswordReset**](AccountsApi.md#sendPinForPasswordReset) | **POST** /api/v1.0/accounts/password/resetpin | 
 [**skipSignupStep**](AccountsApi.md#skipSignupStep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 [**updateAccount**](AccountsApi.md#updateAccount) | **PUT** /api/v1.0/accounts | 
 
@@ -110,56 +108,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **changePasswordModel** | [**ChangePasswordModel**](ChangePasswordModel.md)|  |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="changePasswordWithPin"></a>
-# **changePasswordWithPin**
-> changePasswordWithPin(changePasswordModel)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AccountsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AccountsApi apiInstance = new AccountsApi();
-SetPasswordWithPinModel changePasswordModel = new SetPasswordWithPinModel(); // SetPasswordWithPinModel | 
-try {
-    apiInstance.changePasswordWithPin(changePasswordModel);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountsApi#changePasswordWithPin");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **changePasswordModel** | [**SetPasswordWithPinModel**](SetPasswordWithPinModel.md)|  |
 
 ### Return type
 
@@ -651,57 +599,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="sendPinForPasswordReset"></a>
-# **sendPinForPasswordReset**
-> RequestPasswordResetPinResponse sendPinForPasswordReset(requestPasswordResetRequest)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.AccountsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-AccountsApi apiInstance = new AccountsApi();
-RequestPasswordResetModel requestPasswordResetRequest = new RequestPasswordResetModel(); // RequestPasswordResetModel | 
-try {
-    RequestPasswordResetPinResponse result = apiInstance.sendPinForPasswordReset(requestPasswordResetRequest);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountsApi#sendPinForPasswordReset");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestPasswordResetRequest** | [**RequestPasswordResetModel**](RequestPasswordResetModel.md)|  |
-
-### Return type
-
-[**RequestPasswordResetPinResponse**](RequestPasswordResetPinResponse.md)
 
 ### Authorization
 

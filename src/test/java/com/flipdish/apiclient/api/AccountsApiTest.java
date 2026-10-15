@@ -20,13 +20,11 @@ import com.flipdish.apiclient.model.CreateBasicAccountModel;
 import com.flipdish.apiclient.model.LoginModel;
 import com.flipdish.apiclient.model.PasswordResetModel;
 import com.flipdish.apiclient.model.RequestPasswordResetModel;
-import com.flipdish.apiclient.model.RequestPasswordResetPinResponse;
 import com.flipdish.apiclient.model.RestApiArrayResultLocalisedTimeZone;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
 import com.flipdish.apiclient.model.RestApiResultAccountDetail;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
-import com.flipdish.apiclient.model.SetPasswordWithPinModel;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -74,22 +72,6 @@ public class AccountsApiTest {
     public void changePasswordTest() throws Exception {
         ChangePasswordModel changePasswordModel = null;
         api.changePassword(changePasswordModel);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void changePasswordWithPinTest() throws Exception {
-        SetPasswordWithPinModel changePasswordModel = null;
-        api.changePasswordWithPin(changePasswordModel);
 
         // TODO: test validations
     }
@@ -246,22 +228,6 @@ public class AccountsApiTest {
     public void requestPasswordResetTest() throws Exception {
         RequestPasswordResetModel requestPasswordResetModel = null;
         api.requestPasswordReset(requestPasswordResetModel);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void sendPinForPasswordResetTest() throws Exception {
-        RequestPasswordResetModel requestPasswordResetRequest = null;
-        RequestPasswordResetPinResponse response = api.sendPinForPasswordReset(requestPasswordResetRequest);
 
         // TODO: test validations
     }
