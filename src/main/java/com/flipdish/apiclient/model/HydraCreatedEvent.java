@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Hydra device created event (pin-stage / pre-register).
  */
 @ApiModel(description = "Hydra device created event (pin-stage / pre-register).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-15T10:38:45.524Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-19T10:19:44.170Z")
 public class HydraCreatedEvent {
   @SerializedName("User")
   private UserEventInfo user = null;
