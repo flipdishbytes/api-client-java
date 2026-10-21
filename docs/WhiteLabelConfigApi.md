@@ -5,15 +5,15 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAppGeneralConfig**](WhiteLabelConfigApi.md#getAppGeneralConfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/general | 
-[**getAppStoreConfig**](WhiteLabelConfigApi.md#getAppStoreConfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**getPlayStoreConfig**](WhiteLabelConfigApi.md#getPlayStoreConfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+[**getWhiteLabelAppStoreConfig**](WhiteLabelConfigApi.md#getWhiteLabelAppStoreConfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**getWhiteLabelConfig**](WhiteLabelConfigApi.md#getWhiteLabelConfig) | **GET** /api/v1.0/whitelabelconfig/id/{wlid} | 
 [**getWhiteLabelConfigByAppNameId**](WhiteLabelConfigApi.md#getWhiteLabelConfigByAppNameId) | **GET** /api/v1.0/whitelabelconfig/name/{appId} | 
-[**healthCheck**](WhiteLabelConfigApi.md#healthCheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 [**updateAppGeneralConfig**](WhiteLabelConfigApi.md#updateAppGeneralConfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/general | 
-[**updateAppStoreConfig**](WhiteLabelConfigApi.md#updateAppStoreConfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**updatePlayStoreConfig**](WhiteLabelConfigApi.md#updatePlayStoreConfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+[**updateWhiteLabelAppStoreConfig**](WhiteLabelConfigApi.md#updateWhiteLabelAppStoreConfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 [**uploadAppStoreIcon**](WhiteLabelConfigApi.md#uploadAppStoreIcon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
+[**whiteLabelConfigHealthCheck**](WhiteLabelConfigApi.md#whiteLabelConfigHealthCheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 
 
 <a name="getAppGeneralConfig"></a>
@@ -67,57 +67,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="getAppStoreConfig"></a>
-# **getAppStoreConfig**
-> RestApiResultAppStoreConfigModel getAppStoreConfig(appId)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
-String appId = "appId_example"; // String | 
-try {
-    RestApiResultAppStoreConfigModel result = apiInstance.getAppStoreConfig(appId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WhiteLabelConfigApi#getAppStoreConfig");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
 <a name="getPlayStoreConfig"></a>
 # **getPlayStoreConfig**
 > RestApiResultPlayStoreConfigModel getPlayStoreConfig(appId)
@@ -159,6 +108,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultPlayStoreConfigModel**](RestApiResultPlayStoreConfigModel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getWhiteLabelAppStoreConfig"></a>
+# **getWhiteLabelAppStoreConfig**
+> RestApiResultAppStoreConfigModel getWhiteLabelAppStoreConfig(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultAppStoreConfigModel result = apiInstance.getWhiteLabelAppStoreConfig(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WhiteLabelConfigApi#getWhiteLabelAppStoreConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
 
 ### Authorization
 
@@ -271,53 +271,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
-<a name="healthCheck"></a>
-# **healthCheck**
-> String healthCheck()
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
-try {
-    String result = apiInstance.healthCheck();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WhiteLabelConfigApi#healthCheck");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**String**
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
 <a name="updateAppGeneralConfig"></a>
 # **updateAppGeneralConfig**
 > RestApiResultAppGeneralConfigModel updateAppGeneralConfig(appId, appGeneralConfig)
@@ -361,59 +314,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultAppGeneralConfigModel**](RestApiResultAppGeneralConfigModel.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-<a name="updateAppStoreConfig"></a>
-# **updateAppStoreConfig**
-> RestApiResultAppStoreConfigModel updateAppStoreConfig(appId, appStoreConfig)
-
-
-
-### Example
-```java
-// Import classes:
-//import com.flipdish.apiclient.ApiClient;
-//import com.flipdish.apiclient.ApiException;
-//import com.flipdish.apiclient.Configuration;
-//import com.flipdish.apiclient.auth.*;
-//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: oauth2
-OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
-oauth2.setAccessToken("YOUR ACCESS TOKEN");
-
-WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
-String appId = "appId_example"; // String | 
-AppStoreConfigModel appStoreConfig = new AppStoreConfigModel(); // AppStoreConfigModel | 
-try {
-    RestApiResultAppStoreConfigModel result = apiInstance.updateAppStoreConfig(appId, appStoreConfig);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling WhiteLabelConfigApi#updateAppStoreConfig");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **appStoreConfig** | [**AppStoreConfigModel**](AppStoreConfigModel.md)|  |
-
-### Return type
-
-[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
 
 ### Authorization
 
@@ -477,6 +377,59 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="updateWhiteLabelAppStoreConfig"></a>
+# **updateWhiteLabelAppStoreConfig**
+> RestApiResultAppStoreConfigModel updateWhiteLabelAppStoreConfig(appId, appStoreConfig)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
+String appId = "appId_example"; // String | 
+AppStoreConfigModel appStoreConfig = new AppStoreConfigModel(); // AppStoreConfigModel | 
+try {
+    RestApiResultAppStoreConfigModel result = apiInstance.updateWhiteLabelAppStoreConfig(appId, appStoreConfig);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WhiteLabelConfigApi#updateWhiteLabelAppStoreConfig");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **appStoreConfig** | [**AppStoreConfigModel**](AppStoreConfigModel.md)|  |
+
+### Return type
+
+[**RestApiResultAppStoreConfigModel**](RestApiResultAppStoreConfigModel.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="uploadAppStoreIcon"></a>
 # **uploadAppStoreIcon**
 > RestApiResultAssetResultModel uploadAppStoreIcon(appId, file)
@@ -528,5 +481,52 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="whiteLabelConfigHealthCheck"></a>
+# **whiteLabelConfigHealthCheck**
+> String whiteLabelConfigHealthCheck()
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.WhiteLabelConfigApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+WhiteLabelConfigApi apiInstance = new WhiteLabelConfigApi();
+try {
+    String result = apiInstance.whiteLabelConfigHealthCheck();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WhiteLabelConfigApi#whiteLabelConfigHealthCheck");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
