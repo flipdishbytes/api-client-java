@@ -30,7 +30,7 @@ import java.util.List;
  * CreatePayGreenConfigurationRequest.
  */
 @ApiModel(description = "CreatePayGreenConfigurationRequest.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-21T14:06:55.577Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-22T11:36:01.009Z")
 public class CreatePayGreenConfigurationRequest {
   @SerializedName("Name")
   private String name = null;

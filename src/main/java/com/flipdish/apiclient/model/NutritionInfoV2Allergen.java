@@ -28,7 +28,7 @@ import java.io.IOException;
  * NutritionInfoV2Allergen.
  */
 @ApiModel(description = "NutritionInfoV2Allergen.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-21T14:06:55.577Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-22T11:36:01.009Z")
 public class NutritionInfoV2Allergen {
   @SerializedName("AllergenId")
   private String allergenId = null;
