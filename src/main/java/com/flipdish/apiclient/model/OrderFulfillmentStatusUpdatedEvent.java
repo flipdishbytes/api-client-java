@@ -15,6 +15,8 @@ package com.flipdish.apiclient.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.flipdish.apiclient.model.FulfillmentStatusEventCustomer;
+import com.flipdish.apiclient.model.FulfillmentStatusEventStore;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Fulfillment status updated event
  */
 @ApiModel(description = "Fulfillment status updated event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-22T11:36:01.009Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-29T06:31:26.381Z")
 public class OrderFulfillmentStatusUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -49,6 +51,15 @@ public class OrderFulfillmentStatusUpdatedEvent {
 
   @SerializedName("StatusId")
   private String statusId = null;
+
+  @SerializedName("Customer")
+  private FulfillmentStatusEventCustomer customer = null;
+
+  @SerializedName("Store")
+  private FulfillmentStatusEventStore store = null;
+
+  @SerializedName("AppType")
+  private String appType = null;
 
   @SerializedName("FlipdishEventId")
   private UUID flipdishEventId = null;
@@ -180,6 +191,60 @@ public class OrderFulfillmentStatusUpdatedEvent {
 
   public void setStatusId(String statusId) {
     this.statusId = statusId;
+  }
+
+  public OrderFulfillmentStatusUpdatedEvent customer(FulfillmentStatusEventCustomer customer) {
+    this.customer = customer;
+    return this;
+  }
+
+   /**
+   * Optional slim customer (Id + language) for push / notification consumers
+   * @return customer
+  **/
+  @ApiModelProperty(value = "Optional slim customer (Id + language) for push / notification consumers")
+  public FulfillmentStatusEventCustomer getCustomer() {
+    return customer;
+  }
+
+  public void setCustomer(FulfillmentStatusEventCustomer customer) {
+    this.customer = customer;
+  }
+
+  public OrderFulfillmentStatusUpdatedEvent store(FulfillmentStatusEventStore store) {
+    this.store = store;
+    return this;
+  }
+
+   /**
+   * Optional slim store (Name); StoreId remains top-level
+   * @return store
+  **/
+  @ApiModelProperty(value = "Optional slim store (Name); StoreId remains top-level")
+  public FulfillmentStatusEventStore getStore() {
+    return store;
+  }
+
+  public void setStore(FulfillmentStatusEventStore store) {
+    this.store = store;
+  }
+
+  public OrderFulfillmentStatusUpdatedEvent appType(String appType) {
+    this.appType = appType;
+    return this;
+  }
+
+   /**
+   * Order app type (e.g. Ios, Android) when known
+   * @return appType
+  **/
+  @ApiModelProperty(value = "Order app type (e.g. Ios, Android) when known")
+  public String getAppType() {
+    return appType;
+  }
+
+  public void setAppType(String appType) {
+    this.appType = appType;
   }
 
   public OrderFulfillmentStatusUpdatedEvent flipdishEventId(UUID flipdishEventId) {
@@ -342,6 +407,9 @@ public class OrderFulfillmentStatusUpdatedEvent {
         Objects.equals(this.orderId, orderFulfillmentStatusUpdatedEvent.orderId) &&
         Objects.equals(this.statusName, orderFulfillmentStatusUpdatedEvent.statusName) &&
         Objects.equals(this.statusId, orderFulfillmentStatusUpdatedEvent.statusId) &&
+        Objects.equals(this.customer, orderFulfillmentStatusUpdatedEvent.customer) &&
+        Objects.equals(this.store, orderFulfillmentStatusUpdatedEvent.store) &&
+        Objects.equals(this.appType, orderFulfillmentStatusUpdatedEvent.appType) &&
         Objects.equals(this.flipdishEventId, orderFulfillmentStatusUpdatedEvent.flipdishEventId) &&
         Objects.equals(this.createTime, orderFulfillmentStatusUpdatedEvent.createTime) &&
         Objects.equals(this.position, orderFulfillmentStatusUpdatedEvent.position) &&
@@ -354,7 +422,7 @@ public class OrderFulfillmentStatusUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, description, orderId, statusName, statusId, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
+    return Objects.hash(eventName, storeId, description, orderId, statusName, statusId, customer, store, appType, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -369,6 +437,9 @@ public class OrderFulfillmentStatusUpdatedEvent {
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    statusName: ").append(toIndentedString(statusName)).append("\n");
     sb.append("    statusId: ").append(toIndentedString(statusId)).append("\n");
+    sb.append("    customer: ").append(toIndentedString(customer)).append("\n");
+    sb.append("    store: ").append(toIndentedString(store)).append("\n");
+    sb.append("    appType: ").append(toIndentedString(appType)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
