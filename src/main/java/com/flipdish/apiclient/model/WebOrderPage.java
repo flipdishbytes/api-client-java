@@ -28,7 +28,7 @@ import java.io.IOException;
  * The page on the app&#39;s website that hosts web ordering
  */
 @ApiModel(description = "The page on the app's website that hosts web ordering")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-02T13:07:09.448Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-02T13:24:55.487Z")
 public class WebOrderPage {
   @SerializedName("OrderPagePath")
   private String orderPagePath = null;

@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * PayoutReport3StorePayouts
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-02T13:07:09.448Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-02T13:24:55.487Z")
 public class PayoutReport3StorePayouts {
   @SerializedName("Stores")
   private List<PayoutReport3StorePayout> stores = null;
