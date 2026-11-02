@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * WaitHandle
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-10-29T06:31:26.381Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-02T12:41:28.271Z")
 public class WaitHandle {
   @SerializedName("Handle")
   private Object handle = null;
