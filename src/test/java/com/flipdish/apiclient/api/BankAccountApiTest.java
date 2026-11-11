@@ -102,9 +102,9 @@ public class BankAccountApiTest {
      */
     @Test
     public void getBankAccountByIdTest() throws Exception {
-        Integer bankAccountId = null;
         String appId = null;
-        RestApiResultBankAccountDetail response = api.getBankAccountById(bankAccountId, appId);
+        Integer bankAccountId = null;
+        RestApiResultBankAccountDetail response = api.getBankAccountById(appId, bankAccountId);
 
         // TODO: test validations
     }

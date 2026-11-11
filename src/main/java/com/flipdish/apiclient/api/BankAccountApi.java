@@ -483,20 +483,20 @@ public class BankAccountApi {
     }
     /**
      * Build call for getBankAccountById
-     * @param bankAccountId  (required)
      * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getBankAccountByIdCall(Integer bankAccountId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getBankAccountByIdCall(String appId, Integer bankAccountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/api/v1.0/{appId}/bankaccounts/{bankAccountId}"
-            .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()))
-            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()));
+            .replaceAll("\\{" + "appId" + "\\}", apiClient.escapeString(appId.toString()))
+            .replaceAll("\\{" + "bankAccountId" + "\\}", apiClient.escapeString(bankAccountId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -537,20 +537,20 @@ public class BankAccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getBankAccountByIdValidateBeforeCall(Integer bankAccountId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'bankAccountId' is set
-        if (bankAccountId == null) {
-            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getBankAccountById(Async)");
-        }
+    private com.squareup.okhttp.Call getBankAccountByIdValidateBeforeCall(String appId, Integer bankAccountId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'appId' is set
         if (appId == null) {
             throw new ApiException("Missing the required parameter 'appId' when calling getBankAccountById(Async)");
         }
         
+        // verify the required parameter 'bankAccountId' is set
+        if (bankAccountId == null) {
+            throw new ApiException("Missing the required parameter 'bankAccountId' when calling getBankAccountById(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = getBankAccountByIdCall(bankAccountId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getBankAccountByIdCall(appId, bankAccountId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -558,26 +558,26 @@ public class BankAccountApi {
     /**
      * 
      * 
-     * @param bankAccountId  (required)
      * @param appId  (required)
+     * @param bankAccountId  (required)
      * @return RestApiResultBankAccountDetail
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RestApiResultBankAccountDetail getBankAccountById(Integer bankAccountId, String appId) throws ApiException {
-        ApiResponse<RestApiResultBankAccountDetail> resp = getBankAccountByIdWithHttpInfo(bankAccountId, appId);
+    public RestApiResultBankAccountDetail getBankAccountById(String appId, Integer bankAccountId) throws ApiException {
+        ApiResponse<RestApiResultBankAccountDetail> resp = getBankAccountByIdWithHttpInfo(appId, bankAccountId);
         return resp.getData();
     }
 
     /**
      * 
      * 
-     * @param bankAccountId  (required)
      * @param appId  (required)
+     * @param bankAccountId  (required)
      * @return ApiResponse&lt;RestApiResultBankAccountDetail&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RestApiResultBankAccountDetail> getBankAccountByIdWithHttpInfo(Integer bankAccountId, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = getBankAccountByIdValidateBeforeCall(bankAccountId, appId, null, null);
+    public ApiResponse<RestApiResultBankAccountDetail> getBankAccountByIdWithHttpInfo(String appId, Integer bankAccountId) throws ApiException {
+        com.squareup.okhttp.Call call = getBankAccountByIdValidateBeforeCall(appId, bankAccountId, null, null);
         Type localVarReturnType = new TypeToken<RestApiResultBankAccountDetail>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -585,13 +585,13 @@ public class BankAccountApi {
     /**
      *  (asynchronously)
      * 
-     * @param bankAccountId  (required)
      * @param appId  (required)
+     * @param bankAccountId  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getBankAccountByIdAsync(Integer bankAccountId, String appId, final ApiCallback<RestApiResultBankAccountDetail> callback) throws ApiException {
+    public com.squareup.okhttp.Call getBankAccountByIdAsync(String appId, Integer bankAccountId, final ApiCallback<RestApiResultBankAccountDetail> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -612,7 +612,7 @@ public class BankAccountApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getBankAccountByIdValidateBeforeCall(bankAccountId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getBankAccountByIdValidateBeforeCall(appId, bankAccountId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RestApiResultBankAccountDetail>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

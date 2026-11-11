@@ -178,7 +178,7 @@ null (empty response body)
 
 <a name="getBankAccountById"></a>
 # **getBankAccountById**
-> RestApiResultBankAccountDetail getBankAccountById(bankAccountId, appId)
+> RestApiResultBankAccountDetail getBankAccountById(appId, bankAccountId)
 
 
 
@@ -198,10 +198,10 @@ OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
 oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
 BankAccountApi apiInstance = new BankAccountApi();
-Integer bankAccountId = 56; // Integer | 
 String appId = "appId_example"; // String | 
+Integer bankAccountId = 56; // Integer | 
 try {
-    RestApiResultBankAccountDetail result = apiInstance.getBankAccountById(bankAccountId, appId);
+    RestApiResultBankAccountDetail result = apiInstance.getBankAccountById(appId, bankAccountId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling BankAccountApi#getBankAccountById");
@@ -213,8 +213,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankAccountId** | **Integer**|  |
  **appId** | **String**|  |
+ **bankAccountId** | **Integer**|  |
 
 ### Return type
 
