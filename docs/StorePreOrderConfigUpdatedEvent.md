@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **storeId** | **Integer** | Store Id |  [optional]
 **user** | [**UserEventInfo**](UserEventInfo.md) | User which deleted delivery zone for this store |  [optional]
 **description** | **String** | Description |  [optional]
+**deliveryType** | [**DeliveryTypeEnum**](#DeliveryTypeEnum) | Type of pre order configuration Delivery / Pickup |  [optional]
 **preOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md) | Pre Order Configuration |  [optional]
 **oldPreOrderConfig** | [**PreOrderConfig**](PreOrderConfig.md) | Old Pre Order Configuration |  [optional]
 **flipdishEventId** | [**UUID**](UUID.md) | The identitfier of the event |  [optional]
@@ -18,6 +19,14 @@ Name | Type | Description | Notes
 **ipAddress** | **String** | Ip Address |  [optional]
 **activityId** | **String** | Activity Id |  [optional]
 **activityType** | **String** | Activity Type |  [optional]
+
+
+<a name="DeliveryTypeEnum"></a>
+## Enum: DeliveryTypeEnum
+Name | Value
+---- | -----
+DELIVERY | &quot;Delivery&quot;
+PICKUP | &quot;Pickup&quot;
 
 
 

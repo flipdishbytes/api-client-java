@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store Pre order config updated
  */
 @ApiModel(description = "Store Pre order config updated")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-12T16:17:44.419Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-16T14:51:05.989Z")
 public class StorePreOrderConfigUpdatedEvent {
   @SerializedName("EventName")
   private String eventName = null;
@@ -45,6 +45,56 @@ public class StorePreOrderConfigUpdatedEvent {
 
   @SerializedName("Description")
   private String description = null;
+
+  /**
+   * Type of pre order configuration Delivery / Pickup
+   */
+  @JsonAdapter(DeliveryTypeEnum.Adapter.class)
+  public enum DeliveryTypeEnum {
+    DELIVERY("Delivery"),
+    
+    PICKUP("Pickup");
+
+    private String value;
+
+    DeliveryTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static DeliveryTypeEnum fromValue(String text) {
+      for (DeliveryTypeEnum b : DeliveryTypeEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<DeliveryTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final DeliveryTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public DeliveryTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return DeliveryTypeEnum.fromValue(String.valueOf(value));
+      }
+    }
+  }
+
+  @SerializedName("DeliveryType")
+  private DeliveryTypeEnum deliveryType = null;
 
   @SerializedName("PreOrderConfig")
   private PreOrderConfig preOrderConfig = null;
@@ -146,6 +196,24 @@ public class StorePreOrderConfigUpdatedEvent {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public StorePreOrderConfigUpdatedEvent deliveryType(DeliveryTypeEnum deliveryType) {
+    this.deliveryType = deliveryType;
+    return this;
+  }
+
+   /**
+   * Type of pre order configuration Delivery / Pickup
+   * @return deliveryType
+  **/
+  @ApiModelProperty(value = "Type of pre order configuration Delivery / Pickup")
+  public DeliveryTypeEnum getDeliveryType() {
+    return deliveryType;
+  }
+
+  public void setDeliveryType(DeliveryTypeEnum deliveryType) {
+    this.deliveryType = deliveryType;
   }
 
   public StorePreOrderConfigUpdatedEvent preOrderConfig(PreOrderConfig preOrderConfig) {
@@ -342,6 +410,7 @@ public class StorePreOrderConfigUpdatedEvent {
         Objects.equals(this.storeId, storePreOrderConfigUpdatedEvent.storeId) &&
         Objects.equals(this.user, storePreOrderConfigUpdatedEvent.user) &&
         Objects.equals(this.description, storePreOrderConfigUpdatedEvent.description) &&
+        Objects.equals(this.deliveryType, storePreOrderConfigUpdatedEvent.deliveryType) &&
         Objects.equals(this.preOrderConfig, storePreOrderConfigUpdatedEvent.preOrderConfig) &&
         Objects.equals(this.oldPreOrderConfig, storePreOrderConfigUpdatedEvent.oldPreOrderConfig) &&
         Objects.equals(this.flipdishEventId, storePreOrderConfigUpdatedEvent.flipdishEventId) &&
@@ -356,7 +425,7 @@ public class StorePreOrderConfigUpdatedEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventName, storeId, user, description, preOrderConfig, oldPreOrderConfig, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
+    return Objects.hash(eventName, storeId, user, description, deliveryType, preOrderConfig, oldPreOrderConfig, flipdishEventId, createTime, position, appId, orgId, ipAddress, activityId, activityType);
   }
 
 
@@ -369,6 +438,7 @@ public class StorePreOrderConfigUpdatedEvent {
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");
     sb.append("    preOrderConfig: ").append(toIndentedString(preOrderConfig)).append("\n");
     sb.append("    oldPreOrderConfig: ").append(toIndentedString(oldPreOrderConfig)).append("\n");
     sb.append("    flipdishEventId: ").append(toIndentedString(flipdishEventId)).append("\n");
