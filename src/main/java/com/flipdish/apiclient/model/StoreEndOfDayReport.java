@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Store end of day report
  */
 @ApiModel(description = "Store end of day report")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-16T14:51:05.989Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-17T16:25:39.614Z")
 public class StoreEndOfDayReport {
   @SerializedName("StoreId")
   private Integer storeId = null;
@@ -371,6 +371,15 @@ public class StoreEndOfDayReport {
 
   @SerializedName("CashOrderValueExcludingDeliveryFees")
   private Double cashOrderValueExcludingDeliveryFees = null;
+
+  @SerializedName("UserEndFee")
+  private Double userEndFee = null;
+
+  @SerializedName("CashUserEndFee")
+  private Double cashUserEndFee = null;
+
+  @SerializedName("PaidOnlineUserEndFee")
+  private Double paidOnlineUserEndFee = null;
 
   @SerializedName("StartTime")
   private OffsetDateTime startTime = null;
@@ -810,6 +819,60 @@ public class StoreEndOfDayReport {
     this.cashOrderValueExcludingDeliveryFees = cashOrderValueExcludingDeliveryFees;
   }
 
+  public StoreEndOfDayReport userEndFee(Double userEndFee) {
+    this.userEndFee = userEndFee;
+    return this;
+  }
+
+   /**
+   * Total user end fee (processing fee charged to the customer, including VAT)
+   * @return userEndFee
+  **/
+  @ApiModelProperty(value = "Total user end fee (processing fee charged to the customer, including VAT)")
+  public Double getUserEndFee() {
+    return userEndFee;
+  }
+
+  public void setUserEndFee(Double userEndFee) {
+    this.userEndFee = userEndFee;
+  }
+
+  public StoreEndOfDayReport cashUserEndFee(Double cashUserEndFee) {
+    this.cashUserEndFee = cashUserEndFee;
+    return this;
+  }
+
+   /**
+   * User end fee charged on cash orders
+   * @return cashUserEndFee
+  **/
+  @ApiModelProperty(value = "User end fee charged on cash orders")
+  public Double getCashUserEndFee() {
+    return cashUserEndFee;
+  }
+
+  public void setCashUserEndFee(Double cashUserEndFee) {
+    this.cashUserEndFee = cashUserEndFee;
+  }
+
+  public StoreEndOfDayReport paidOnlineUserEndFee(Double paidOnlineUserEndFee) {
+    this.paidOnlineUserEndFee = paidOnlineUserEndFee;
+    return this;
+  }
+
+   /**
+   * User end fee charged on paid online (card) orders
+   * @return paidOnlineUserEndFee
+  **/
+  @ApiModelProperty(value = "User end fee charged on paid online (card) orders")
+  public Double getPaidOnlineUserEndFee() {
+    return paidOnlineUserEndFee;
+  }
+
+  public void setPaidOnlineUserEndFee(Double paidOnlineUserEndFee) {
+    this.paidOnlineUserEndFee = paidOnlineUserEndFee;
+  }
+
   public StoreEndOfDayReport startTime(OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
@@ -880,13 +943,16 @@ public class StoreEndOfDayReport {
         Objects.equals(this.cashOrderValue, storeEndOfDayReport.cashOrderValue) &&
         Objects.equals(this.paidOnlineOrderValueExcludingDeliveryFees, storeEndOfDayReport.paidOnlineOrderValueExcludingDeliveryFees) &&
         Objects.equals(this.cashOrderValueExcludingDeliveryFees, storeEndOfDayReport.cashOrderValueExcludingDeliveryFees) &&
+        Objects.equals(this.userEndFee, storeEndOfDayReport.userEndFee) &&
+        Objects.equals(this.cashUserEndFee, storeEndOfDayReport.cashUserEndFee) &&
+        Objects.equals(this.paidOnlineUserEndFee, storeEndOfDayReport.paidOnlineUserEndFee) &&
         Objects.equals(this.startTime, storeEndOfDayReport.startTime) &&
         Objects.equals(this.endTime, storeEndOfDayReport.endTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, storeName, currency, orderCount, orderValue, orderValueExcludingDeliveryFees, collectionOrderCount, collectionCashOrderCount, collectionPaidOnlineOrderCount, collectionOrderValue, collectionCashOrderValue, collectionPaidOnlineOrderValue, deliveryOrderCount, deliveryCashOrderCount, deliveryPaidOnlineOrderCount, deliveryOrderValue, deliveryCashOrderValue, deliveryPaidOnlineOrderValue, paidOnlineOrderCount, cashOrderCount, paidOnlineOrderValue, cashOrderValue, paidOnlineOrderValueExcludingDeliveryFees, cashOrderValueExcludingDeliveryFees, startTime, endTime);
+    return Objects.hash(storeId, storeName, currency, orderCount, orderValue, orderValueExcludingDeliveryFees, collectionOrderCount, collectionCashOrderCount, collectionPaidOnlineOrderCount, collectionOrderValue, collectionCashOrderValue, collectionPaidOnlineOrderValue, deliveryOrderCount, deliveryCashOrderCount, deliveryPaidOnlineOrderCount, deliveryOrderValue, deliveryCashOrderValue, deliveryPaidOnlineOrderValue, paidOnlineOrderCount, cashOrderCount, paidOnlineOrderValue, cashOrderValue, paidOnlineOrderValueExcludingDeliveryFees, cashOrderValueExcludingDeliveryFees, userEndFee, cashUserEndFee, paidOnlineUserEndFee, startTime, endTime);
   }
 
 
@@ -919,6 +985,9 @@ public class StoreEndOfDayReport {
     sb.append("    cashOrderValue: ").append(toIndentedString(cashOrderValue)).append("\n");
     sb.append("    paidOnlineOrderValueExcludingDeliveryFees: ").append(toIndentedString(paidOnlineOrderValueExcludingDeliveryFees)).append("\n");
     sb.append("    cashOrderValueExcludingDeliveryFees: ").append(toIndentedString(cashOrderValueExcludingDeliveryFees)).append("\n");
+    sb.append("    userEndFee: ").append(toIndentedString(userEndFee)).append("\n");
+    sb.append("    cashUserEndFee: ").append(toIndentedString(cashUserEndFee)).append("\n");
+    sb.append("    paidOnlineUserEndFee: ").append(toIndentedString(paidOnlineUserEndFee)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
     sb.append("}");

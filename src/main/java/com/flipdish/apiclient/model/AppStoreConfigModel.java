@@ -28,7 +28,7 @@ import java.io.IOException;
  * App Store configuration model
  */
 @ApiModel(description = "App Store configuration model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-16T14:51:05.989Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-17T16:25:39.614Z")
 public class AppStoreConfigModel {
   @SerializedName("WhiteLabelId")
   private Integer whiteLabelId = null;
