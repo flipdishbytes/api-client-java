@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
  * Menu bulk event
  */
 @ApiModel(description = "Menu bulk event")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T09:37:36.310Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
 public class MenuBulkEditEvent {
   @SerializedName("EventName")
   private String eventName = null;

@@ -30,7 +30,7 @@ import java.util.List;
  * Hydra status
  */
 @ApiModel(description = "Hydra status")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T09:37:36.310Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
 public class HydraStatus {
   @SerializedName("AppId")
   private String appId = null;

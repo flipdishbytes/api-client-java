@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * DepositReturnFeesSummary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T09:37:36.310Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
 public class DepositReturnFeesSummary {
   @SerializedName("Count")
   private Integer count = null;
