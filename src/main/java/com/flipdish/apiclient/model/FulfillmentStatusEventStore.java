@@ -28,7 +28,7 @@ import java.io.IOException;
  * Slim store on fulfillment status updated (name only).
  */
 @ApiModel(description = "Slim store on fulfillment status updated (name only).")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-17T16:25:39.614Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T09:37:36.310Z")
 public class FulfillmentStatusEventStore {
   @SerializedName("Name")
   private String name = null;

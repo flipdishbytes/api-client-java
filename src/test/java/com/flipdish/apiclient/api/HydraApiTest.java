@@ -14,7 +14,6 @@
 package com.flipdish.apiclient.api;
 
 import com.flipdish.apiclient.model.EmvTerminal;
-import com.flipdish.apiclient.model.HydraRegistrationRequest;
 import com.flipdish.apiclient.model.KioskSettings;
 import com.flipdish.apiclient.model.RestApiArrayResultEmvTerminalWithAssignments;
 import com.flipdish.apiclient.model.RestApiArrayResultKioskCashPaymentSettings;
@@ -60,24 +59,6 @@ public class HydraApiTest {
         Integer hydraConfigId = null;
         Integer emvTerminalId = null;
         api.assignEmv(appId, hydraConfigId, emvTerminalId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void attachStoreToKioskTest() throws Exception {
-        String appId = null;
-        Integer storeId = null;
-        String deviceId = null;
-        RestApiResultHydraStatus response = api.attachStoreToKiosk(appId, storeId, deviceId);
 
         // TODO: test validations
     }
@@ -330,24 +311,6 @@ public class HydraApiTest {
      *          if the Api call fails
      */
     @Test
-    public void hydraDetachStoreFromKioskTest() throws Exception {
-        String appId = null;
-        Integer storeId = null;
-        String deviceId = null;
-        RestApiResultHydraStatus response = api.hydraDetachStoreFromKiosk(appId, storeId, deviceId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
     public void hydraGetEmvsForAppIdTest() throws Exception {
         String appId = null;
         RestApiArrayResultEmvTerminalWithAssignments response = api.hydraGetEmvsForAppId(appId);
@@ -369,40 +332,6 @@ public class HydraApiTest {
         String hydraUserType = null;
         String serialNumber = null;
         api.loginWithDeviceId(deviceId, hydraUserType, serialNumber);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void registerTest() throws Exception {
-        String appId = null;
-        HydraRegistrationRequest hydraRegistration = null;
-        RestApiResultHydraStatus response = api.register(appId, hydraRegistration);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void unAssignTest() throws Exception {
-        String appId = null;
-        String deviceId = null;
-        api.unAssign(appId, deviceId);
 
         // TODO: test validations
     }
