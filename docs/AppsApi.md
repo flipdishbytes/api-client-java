@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**appsSetPropertyId**](AppsApi.md#appsSetPropertyId) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**createApp**](AppsApi.md#createApp) | **POST** /api/v1.0/apps | 
+[**deleteAppHomeScreenBackground**](AppsApi.md#deleteAppHomeScreenBackground) | **DELETE** /api/v1.0/apps/{appId}/home-screen-background | 
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**getAppMobileSettings**](AppsApi.md#getAppMobileSettings) | **GET** /api/v1.0/apps/{appId}/mobile-app-settings | 
 [**getAppName**](AppsApi.md#getAppName) | **GET** /api/v1.0/apps/{appId}/name | 
 [**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
 [**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
@@ -19,11 +21,13 @@ Method | HTTP request | Description
 [**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**setAppMobileSettings**](AppsApi.md#setAppMobileSettings) | **POST** /api/v1.0/apps/{appId}/mobile-app-settings | 
 [**setAppStoreName**](AppsApi.md#setAppStoreName) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 [**setThirdPartyIntegrations**](AppsApi.md#setThirdPartyIntegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 [**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+[**uploadAppHomeScreenBackground**](AppsApi.md#uploadAppHomeScreenBackground) | **POST** /api/v1.0/apps/{appId}/home-screen-background | 
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
 
@@ -131,6 +135,56 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="deleteAppHomeScreenBackground"></a>
+# **deleteAppHomeScreenBackground**
+> deleteAppHomeScreenBackground(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+try {
+    apiInstance.deleteAppHomeScreenBackground(appId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#deleteAppHomeScreenBackground");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="getApp"></a>
 # **getApp**
 > RestApiResultApp getApp(appId)
@@ -223,6 +277,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestApiResultDnsRecordInformation**](RestApiResultDnsRecordInformation.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="getAppMobileSettings"></a>
+# **getAppMobileSettings**
+> RestApiResultMobileAppSettings getAppMobileSettings(appId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+try {
+    RestApiResultMobileAppSettings result = apiInstance.getAppMobileSettings(appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#getAppMobileSettings");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**RestApiResultMobileAppSettings**](RestApiResultMobileAppSettings.md)
 
 ### Authorization
 
@@ -807,6 +912,58 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="setAppMobileSettings"></a>
+# **setAppMobileSettings**
+> setAppMobileSettings(appId, update)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+MobileAppSettingsUpdateModel update = new MobileAppSettingsUpdateModel(); // MobileAppSettingsUpdateModel | 
+try {
+    apiInstance.setAppMobileSettings(appId, update);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#setAppMobileSettings");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **update** | [**MobileAppSettingsUpdateModel**](MobileAppSettingsUpdateModel.md)|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="setAppStoreName"></a>
 # **setAppStoreName**
 > setAppStoreName(appId, appStoreName)
@@ -1072,6 +1229,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="uploadAppHomeScreenBackground"></a>
+# **uploadAppHomeScreenBackground**
+> uploadAppHomeScreenBackground(appId, image)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.flipdish.apiclient.ApiClient;
+//import com.flipdish.apiclient.ApiException;
+//import com.flipdish.apiclient.Configuration;
+//import com.flipdish.apiclient.auth.*;
+//import com.flipdish.apiclient.api.AppsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2
+OAuth oauth2 = (OAuth) defaultClient.getAuthentication("oauth2");
+oauth2.setAccessToken("YOUR ACCESS TOKEN");
+
+AppsApi apiInstance = new AppsApi();
+String appId = "appId_example"; // String | 
+File image = new File("/path/to/file.txt"); // File | Home screen background
+try {
+    apiInstance.uploadAppHomeScreenBackground(appId, image);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppsApi#uploadAppHomeScreenBackground");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **image** | **File**| Home screen background |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="uploadAppLogo"></a>

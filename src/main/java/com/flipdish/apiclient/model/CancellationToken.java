@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * CancellationToken
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-23T13:17:24.182Z")
 public class CancellationToken {
   @SerializedName("IsCancellationRequested")
   private Boolean isCancellationRequested = null;

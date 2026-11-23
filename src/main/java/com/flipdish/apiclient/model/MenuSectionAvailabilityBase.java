@@ -28,7 +28,7 @@ import java.io.IOException;
  * Menu section availability
  */
 @ApiModel(description = "Menu section availability")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-23T13:17:24.182Z")
 public class MenuSectionAvailabilityBase {
   /**
    * Availability mode

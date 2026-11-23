@@ -18,6 +18,7 @@ import com.flipdish.apiclient.model.AppLookup;
 import com.flipdish.apiclient.model.CreateAppParameters;
 import java.io.File;
 import com.flipdish.apiclient.model.Language;
+import com.flipdish.apiclient.model.MobileAppSettingsUpdateModel;
 import com.flipdish.apiclient.model.RestApiArrayResultSupportedCountry;
 import com.flipdish.apiclient.model.RestApiErrorResult;
 import com.flipdish.apiclient.model.RestApiForbiddenResult;
@@ -25,6 +26,7 @@ import com.flipdish.apiclient.model.RestApiPaginationResultApp;
 import com.flipdish.apiclient.model.RestApiResultApp;
 import com.flipdish.apiclient.model.RestApiResultAppCompliance;
 import com.flipdish.apiclient.model.RestApiResultDnsRecordInformation;
+import com.flipdish.apiclient.model.RestApiResultMobileAppSettings;
 import com.flipdish.apiclient.model.RestApiStringResult;
 import com.flipdish.apiclient.model.RestApiUnauthorizedResult;
 import org.junit.Test;
@@ -87,6 +89,22 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void deleteAppHomeScreenBackgroundTest() throws Exception {
+        String appId = null;
+        api.deleteAppHomeScreenBackground(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getAppTest() throws Exception {
         String appId = null;
         RestApiResultApp response = api.getApp(appId);
@@ -106,6 +124,22 @@ public class AppsApiTest {
     public void getAppHostnameStatusTest() throws Exception {
         String appId = null;
         RestApiResultDnsRecordInformation response = api.getAppHostnameStatus(appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getAppMobileSettingsTest() throws Exception {
+        String appId = null;
+        RestApiResultMobileAppSettings response = api.getAppMobileSettings(appId);
 
         // TODO: test validations
     }
@@ -303,6 +337,23 @@ public class AppsApiTest {
      *          if the Api call fails
      */
     @Test
+    public void setAppMobileSettingsTest() throws Exception {
+        String appId = null;
+        MobileAppSettingsUpdateModel update = null;
+        api.setAppMobileSettings(appId, update);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void setAppStoreNameTest() throws Exception {
         String appId = null;
         String appStoreName = null;
@@ -377,6 +428,23 @@ public class AppsApiTest {
         String vanityUrl = null;
         Boolean isNextGenWeb = null;
         RestApiStringResult response = api.toggleNextGenWeb(appId, hostname, vanityUrl, isNextGenWeb);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadAppHomeScreenBackgroundTest() throws Exception {
+        String appId = null;
+        File image = null;
+        api.uploadAppHomeScreenBackground(appId, image);
 
         // TODO: test validations
     }

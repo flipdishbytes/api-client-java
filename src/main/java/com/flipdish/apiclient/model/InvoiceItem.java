@@ -29,7 +29,7 @@ import java.io.IOException;
  * Invoice Item
  */
 @ApiModel(description = "Invoice Item")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-18T12:38:23.281Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-23T13:17:24.182Z")
 public class InvoiceItem {
   @SerializedName("Description")
   private String description = null;
