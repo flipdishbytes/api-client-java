@@ -30,7 +30,7 @@ import java.util.List;
  * Result of registering a Hydra device to an app and stores
  */
 @ApiModel(description = "Result of registering a Hydra device to an app and stores")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-23T13:17:24.182Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-24T14:23:22.079Z")
 public class HydraRegistrationStatus {
   @SerializedName("DeviceId")
   private String deviceId = null;

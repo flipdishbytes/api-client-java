@@ -29,7 +29,7 @@ import java.io.IOException;
  * Settings of the mobile apps of an App
  */
 @ApiModel(description = "Settings of the mobile apps of an App")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-23T13:17:24.182Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-11-24T14:23:22.079Z")
 public class MobileAppSettings {
   @SerializedName("ShowHomeScreenLogo")
   private Boolean showHomeScreenLogo = null;
